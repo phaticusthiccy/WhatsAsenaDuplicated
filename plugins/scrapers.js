@@ -176,3 +176,22 @@ Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: 'Youtubedan video 
         await reply.delete();
     });
 }));
+
+Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: 'Youtubeda arama yapar.'}, (async (message, match) => { 
+    if (match[1] === '') return await message.sendMessage('*Lütfen bir kelime yazın!*');    
+    var reply = await message.reply('```Videolar getiriyorum...```');
+
+    try {
+        var arama = await yts(match[1]);
+    } catch {
+        return await message.sendMessage('*Hiçbir şey bulamadım :(*\n');
+    }
+    
+    var mesaj = '';
+    arama.all.map((video) => {
+        mesaj += '*' + video.title + '* - ' + video.url + '\n'
+    });
+
+    await message.sendMessage(mesaj);
+    await reply.delete();
+}));
