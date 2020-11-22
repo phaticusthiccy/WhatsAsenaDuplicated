@@ -1,0 +1,57 @@
+{
+    "name": "WhatsAsena",
+    "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp.",
+    "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
+    "keywords": ["whatsapp", "userbot", "Asena"],
+    "repository": "https://github.com/Quiec/WhatsAsena",
+    "website":   "https://quiec.tech",
+    "success_url": "https://t.me/AsenaSupport",
+    "stack": "container",
+    "env": {
+        "ASENA_SESSION": {
+            "description": "Qr.Js ile oluşturduğunuz özel session kodu.",
+            "required": true
+        },
+        "LANGUAGE": {
+            "description": "Botun dili.",
+            "required": true,
+            "value": "tr"
+        },
+        "HANDLERS": {
+            "description": "Komutlar için.",
+            "required": true,
+            "value": "^[.!;]"
+        },
+        "SEND_READ": {
+            "description": "Görüldü atmak istiyorsanız true yazın.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU": {
+            "description": "Herokuda çalışıyorsa true yazın.",
+            "required": true,
+            "value": "true"
+        },
+        "HEROKU_API_KEY": {
+            "description": "Herokuda API Keyiniz.",
+            "required": true
+        },
+        "HEROKU_APP_NAME": {
+            "description": "Herokuda uygulama adı.",
+            "required": true
+        },
+        "DEBUG": {
+            "description": "Geliştiricilere özeldir.",
+            "required": true,
+            "value": "false"
+        }
+    },
+    "addons": [{
+      "plan": "heroku-postgresql"
+    }],
+    "buildpacks": [{
+      "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+    }, {
+      "url": "heroku-community/apt"
+      }]
+  }
