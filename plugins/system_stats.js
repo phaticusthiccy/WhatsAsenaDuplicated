@@ -9,7 +9,7 @@ WhatsAsena - Yusuf Usta
 const Asena = require('../events');
 const {MessageType, aesDecrypt} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
-const Config = require('../Config');
+const Config = require('../config');
 
 Asena.addCommand({pattern: 'alive', fromMe: true, desc: 'Bot çalışıyor mu?'}, (async (message, match) => {
     await message.sendMessage(
