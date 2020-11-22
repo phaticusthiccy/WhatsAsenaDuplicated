@@ -1,20 +1,21 @@
 FROM node:15.2.0-alpine3.10
 
 RUN apk add --no-cache --update \
+    libwebp \
+    libwebp-tools \
+    libwebp-dev \
     ffmpeg \
     libwebp \
     postgresql \
     sudo \
     git \
     neofetch \
-    libwebp \
     libffi \
     libc-dev \
     gcc \
     libxslt-dev \
     libjpeg \
     libpng \
-    libwebp-dev \
     libffi \
     libffi-dev \
     libc-dev \
