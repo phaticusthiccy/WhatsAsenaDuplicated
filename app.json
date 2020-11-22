@@ -44,6 +44,10 @@
             "description": "Geliştiricilere özeldir.",
             "required": true,
             "value": "false"
+        },
+        "REMOVE_BG_API_KEY": {
+            "description": "Fotoğrafların arkaplanını kaldırır.",
+            "required": false
         }
     },
     "addons": [{

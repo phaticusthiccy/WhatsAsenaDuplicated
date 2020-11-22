@@ -26,7 +26,6 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: 'Yanıt verdiğiniz fo
     });
 
     if (message.reply_message.video === false && message.reply_message.image) {
-        
         execFile(cwebp, [location, '-o', 'output.webp'], async err => {
             if (err) {
                 throw err;

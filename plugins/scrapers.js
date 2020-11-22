@@ -42,7 +42,7 @@ Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: 'Google çeviri ile
     if ('text' in ceviri) {
         return await message.reply('*▶️ Dil:* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
         + '*◀️ Çevirilen Dil*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
-        + '*🔎 Çeviri:* ```' + ceviri.text + '```')
+        + '*🔎 Çeviri:* ```' + ceviri.text + '```');
     } else {
         return await message.reply('*❌ Çeviri de bir hata oluştu!*')
     }

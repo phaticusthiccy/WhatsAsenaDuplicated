@@ -169,7 +169,7 @@ ${chalk.blue.italic('ℹ️  WhatsApp\'a bağlanılıyor... Lütfen bekleyin.')}
                             await command.function(whats, match);
                         } catch (error) {
                             await conn.sendMessage(conn.user.jid, '*-- HATA RAPORU [WHATSASENA] --*' + 
-                            '\*WhatsAsena bir hata gerçekleşti!*'+
+                            '\n*WhatsAsena bir hata gerçekleşti!*'+
                             '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
                             '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
                             '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._\n\n' +

@@ -39,7 +39,3 @@ Asena.addCommand({pattern: 'asena', fromMe: true}, (async (message, match) => {
         CMD_HELP, MessageType.text
     );
 }));
-
-Asena.addCommand({pattern: 'test', fromMe: true}, (async (message, match) => {
-    Asena2.commands;
-}))

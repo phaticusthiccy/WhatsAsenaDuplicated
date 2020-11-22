@@ -28,6 +28,7 @@
     "dotenv": "^8.2.0",
     "exchange-rates-api": "^1.0.2",
     "fluent-ffmpeg": "^2.1.2",
+    "form-data": "^3.0.0",
     "google-tts-api": "0.0.5",
     "got": "^11.8.0",
     "heroku-client": "^3.1.0",
