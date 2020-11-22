@@ -49,7 +49,6 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: 'Güncelleme yapar
             git.pull((async (err, update) => {
                 if(update && update.summary.changes) {
                     await message.sendMessage('*✅ Güncelleme başarılı oldu!*\n__Herokuya yükleniyor__', MessageType.text);
-                    exec('npm install').stderr.pipe(process.stderr);
                 } else if (err) {
                     await message.sendMessage('*❌ Güncelleme başarısız oldu!*\n*Hata:* ```' + err + '```', MessageType.text);
                 }
