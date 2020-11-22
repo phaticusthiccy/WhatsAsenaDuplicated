@@ -26,7 +26,7 @@ Asena.addCommand({pattern: 'update$', fromMe: true, desc: 'Güncelleme denetler.
         var degisiklikler = '*Bot için yeni güncelleme mevcut!*\n\nDeğişiklikler:\n```';
         commits['all'].map(
             (commit) => {
-                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>';
+                degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
             }
         );
         

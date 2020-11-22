@@ -9,7 +9,7 @@ WhatsAsena - Yusuf Usta
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const fs = require('fs');
-const ffmpeg = require('js-ffmpeg');
+const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
 
@@ -36,10 +36,11 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: 'Yanıt verdiğiniz fo
         });
         return;
     }
-    
-    await ffmpeg.ffmpeg(location, 
-        ["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 512x512"], 
-        'sticker.webp').success(async function (data) {
+
+    ffmpeg(location)
+        .outputOptions(["-y", "-vcodec libwebp", "-lossless 1", "-qscale 1", "-preset default", "-loop 0", "-an", "-vsync 0", "-s 512x512"])
+        .save('sticker.webp')
+        .on('end', async () => {
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
             await info.delete();
         });
