@@ -11,7 +11,7 @@ const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
-const {WAConnection, MessageType, Mimetype} = require('@adiwajshing/baileys');
+const {WAConnection, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
 const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
@@ -46,8 +46,10 @@ async function whatsAsena () {
     const Session = new StringSession();
 
     conn.logger.level = 'warn';
+    var nodb;
 
     if (StrSes_Db.length < 1) {
+        nodb = true;
         conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
     } else {
         conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
@@ -95,6 +97,12 @@ ${chalk.blue.italic('ℹ️  WhatsApp\'a bağlanılıyor... Lütfen bekleyin.')}
     });
     
     conn.on('message-new', async msg => {
+        if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
+        
+        if (config.NO_ONLINE) {
+            await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
+        }
+
         if (msg.messageStubType === 32 || msg.messageStubType === 28) {
             // Görüşürüz Mesajı
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
@@ -148,7 +156,7 @@ ${chalk.blue.italic('ℹ️  WhatsApp\'a bağlanılıyor... Lütfen bekleyin.')}
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
                         }
-
+                        
                         var match = text_msg.match(command.pattern);
                         
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
@@ -182,7 +190,15 @@ ${chalk.blue.italic('ℹ️  WhatsApp\'a bağlanılıyor... Lütfen bekleyin.')}
         )
     });
 
-    await conn.connect();
+    try {
+        await conn.connect();
+    } catch {
+        if (!nodb) {
+            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
+            conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
+            await conn.connect();
+        }
+    }
 }
 
 whatsAsena();

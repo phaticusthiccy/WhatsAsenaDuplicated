@@ -53,7 +53,7 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
     if (!filtreler) return; 
     filtreler.map(
         async (filter) => {
-            pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : '\\b' + filter.dataValues.pattern, 'g');
+            pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b' + filter.dataValues.pattern), 'g');
             if (pattern.test(message.message)) {
                 await message.reply(filter.dataValues.text);
             }

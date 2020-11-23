@@ -48,6 +48,11 @@
         "REMOVE_BG_API_KEY": {
             "description": "Fotoğrafların arkaplanını kaldırır.",
             "required": false
+        },
+        "NO_ONLINE": {
+            "description": "Çevrimiçi görünmek istemiyorsanız true yazın.",
+            "required": false,
+            "value": "true"
         }
     },
     "addons": [{

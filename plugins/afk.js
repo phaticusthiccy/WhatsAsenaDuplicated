@@ -54,7 +54,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
 }));
 
 Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
-    if (AFK.isAfk && !message.message.includes('Artık AFK\'yım!') && !message.message.includes('Bip bop! Bu bir bot. Sahibim şu an burada değil.')) {
+    if (AFK.isAfk && !message.message.includes('Artık AFK\'yım!') && !message.message.includes('Bip bop! Bu bir bot. Sahibim şu an burada değil.') &&  !message.message.includes('*-- HATA RAPORU [WHATSASENA] --*')) {
         AFK.lastseen = 0;
         AFK.reason = false;
         AFK.isAfk = false;
