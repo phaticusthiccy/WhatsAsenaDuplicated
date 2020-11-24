@@ -12,7 +12,8 @@ const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const Config = require('../config');
 const exec = require('child_process').exec;
-const Heroku = require('heroku-client')
+const Heroku = require('heroku-client');
+const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 
 Asena.addCommand({pattern: 'update$', fromMe: true, desc: 'Güncelleme denetler.'}, (async (message, match) => {
@@ -46,20 +47,22 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: 'Güncelleme yapar
     } else {
         var guncelleme = await message.reply('_Güncelleme yapılıyor..._');
         if (Config.HEROKU.HEROKU) {
-            git.pull((async (err, update) => {
-                if(update && update.summary.changes) {
-                    await message.sendMessage('*✅ Güncelleme başarılı oldu!*\n_Herokuya yükleniyor_', MessageType.text);
-                } else if (err) {
-                    await message.sendMessage('*❌ Güncelleme başarısız oldu!*\n*Hata:* ```' + err + '```', MessageType.text);
-                }
-            }));
+            try {
+                var app = await heroku.get('/apps/' + Config.HEROKU.APP_NAME)
+            } catch {
+                return await message.sendMessage('*❌ Heroku bilgileriniz yanlış!*', MessageType.text);
+            }
 
-            var app = await heroku.get('/apps/' + Config.HEROKU.APP_NAME)
+            git.fetch('upstream', Config.BRANCH);
+            git.reset('hard', ['FETCH_HEAD']);
+
             var git_url = app.git_url.replace(
                 "https://", "https://api:" + Config.HEROKU.API_KEY + "@"
             )
-
-            await git.addRemote('heroku', git_url);
+            
+            try {
+                await git.addRemote('heroku', git_url);
+            } catch { console.log('heroku remote ekli'); }
             await git.push('heroku', Config.BRANCH);
             
             await message.sendMessage('*✅ Güncelleme başarılı oldu!*', MessageType.text);
