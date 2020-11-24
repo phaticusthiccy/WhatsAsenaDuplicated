@@ -148,10 +148,8 @@ Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: 'Yazdığınız şa
                 });
             writer.addTag();
 
-            await reply.delete();
             reply = await message.reply('```Şarkınız yükleniyor...```');
             await message.sendMessage(Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
-            await reply.delete();
         });
 }));
 
