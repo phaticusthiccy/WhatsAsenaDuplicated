@@ -196,7 +196,11 @@ ${chalk.blue.italic('ℹ️  WhatsApp\'a bağlanılıyor... Lütfen bekleyin.')}
         if (!nodb) {
             console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
             conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
-            await conn.connect();
+            try {
+                await conn.connect();
+            } catch {
+                return;
+            }
         }
     }
 }

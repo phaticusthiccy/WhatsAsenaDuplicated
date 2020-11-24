@@ -126,7 +126,7 @@ Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: 'Yazdığınız şa
     let arama = await yts(match[1]);
     arama = arama.all;
     if(arama.length < 1) return await message.sendMessage('*Hiçbir şey bulamadım :(*\n');
-    var reply = await message.reply('```Şarkınız indiriliyor...```');
+    var reply = await message.sendMessage('```Şarkınız indiriliyor...```');
 
     let title = arama[0].title.replace(' ', '+');
     let stream = ytdl(arama[0].videoId, {

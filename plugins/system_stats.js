@@ -20,6 +20,6 @@ Asena.addCommand({pattern: 'alive', fromMe: true, desc: 'Bot çalışıyor mu?'}
 Asena.addCommand({pattern: 'sysd', fromMe: true, desc: 'Sistem özelliklerini söyler.'}, (async (message, match) => {
     const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
     await message.sendMessage(
-        child, MessageType.text
+        '```' + child + '```', MessageType.text
     );
 }));

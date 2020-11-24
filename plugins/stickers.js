@@ -15,7 +15,7 @@ const cwebp = require('cwebp-bin');
 
 Asena.addCommand({pattern: 'sticker', fromMe: true, desc: 'Yanıt verdiğiniz fotoğraf veya videoyu sticker yapın.'}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('*Bir fotoğraf veya videoya yanıt verin!*');
-    var info = await message.reply('```Medya indiriliyor & sticker yapılıyor...```');
+    var info = await message.sendMessage('```Medya indiriliyor & sticker yapılıyor...```');
     
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
