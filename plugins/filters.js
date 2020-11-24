@@ -55,7 +55,7 @@ Asena.addCommand({on: 'text', fromMe: false}, (async (message, match) => {
         async (filter) => {
             pattern = new RegExp(filter.dataValues.regex ? filter.dataValues.pattern : ('\\b(' + filter.dataValues.pattern + ')\\b'), 'gm');
             if (pattern.test(message.message)) {
-                await message.reply(filter.dataValues.text);
+                await message.sendMessage(filter.dataValues.text, MessageType.text, {quoted: message.data});
             }
         }
     );

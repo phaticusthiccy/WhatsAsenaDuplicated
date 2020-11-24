@@ -34,21 +34,21 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
         if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
             message.mention.map(async (jid) => {
                 if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
-                    await message.reply('```Bip bop! Bu bir bot. Sahibim şu an burada değil.```\n' + 
+                    await message.sendMessage('```Bip bop! Bu bir bot. Sahibim şu an burada değil.```\n' + 
                     (AFK.reason !== false ? '\n*Sebep:* ```' + AFK.reason + '```' : '') + 
-                    (AFK.lastseen !== 0 ? '\n*Son Görülme:* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''));            
+                    (AFK.lastseen !== 0 ? '\n*Son Görülme:* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});            
                 }
             })
         } else if (message.jid.includes('-') && message.reply_message !== false) {
             if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
-                await message.reply('```Bip bop! Bu bir bot. Sahibim şu an burada değil.```\n' + 
+                await message.sendMessage('```Bip bop! Bu bir bot. Sahibim şu an burada değil.```\n' + 
                     (AFK.reason !== false ? '\n*Sebep:* ```' + AFK.reason + '```' : '') + 
-                    (AFK.lastseen !== 0 ? '\n*Son Görülme:* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''));
+                    (AFK.lastseen !== 0 ? '\n*Son Görülme:* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});
             }
         } else {
-            await message.reply('```Bip bop! Bu bir bot. Sahibim şu an burada değil.```\n' + 
+            await message.sendMessage('```Bip bop! Bu bir bot. Sahibim şu an burada değil.```\n' + 
             (AFK.reason !== false ? '\n*Sebep:* ```' + AFK.reason + '```' : '') + 
-            (AFK.lastseen !== 0 ? '\n*Son Görülme:* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''));    
+            (AFK.lastseen !== 0 ? '\n*Son Görülme:* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});    
         }
     }
 }));
