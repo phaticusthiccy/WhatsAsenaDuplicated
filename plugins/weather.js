@@ -15,20 +15,14 @@ Asena.addCommand({pattern: 'weather ?(.*)', desc: 'Hava durumu getirir.', usage:
 	const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
 	try {
 		const response = await got(url);
-	} catch {
-		return await message.reply('```Böyle bir şehir bulamadım. 😖```');
-	}
-	
-	const json = JSON.parse(response.body);
-
-	if (response.statusCode === 200) {
-		return await message.reply('*📍 Konum:* ```' + match[1] + '```\n\n' +
+		const json = JSON.parse(response.body);
+		if (response.statusCode === 200) return await message.reply('*📍 Konum:* ```' + match[1] + '```\n\n' +
 		'*☀ Sıcaklık:* ```' + json.main.temp_max + '°```\n' + 
 		'*ℹ Açıklama:* ```' + json.weather[0].description + '```\n' +
 		'*☀ Nem:* ```%' + json.main.humidity + '```\n' + 
 		'*💨 Rüzgar Hızı:* ```' + json.wind.speed + 'm/s```\n' + 
 		'*☁ Bulut:* ```%' + json.clouds.all + '```\n');
-	} else {
+	} catch {
 		return await message.reply('```Böyle bir şehir bulamadım. 😖```');
 	}
 });

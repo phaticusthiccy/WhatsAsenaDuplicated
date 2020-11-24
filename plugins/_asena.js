@@ -35,7 +35,7 @@ Asena.addCommand({pattern: 'asena', fromMe: true}, (async (message, match) => {
         }
     );
     
-    await message.sendMessage(
-        CMD_HELP, MessageType.text
+    await message.client.sendMessage(
+        message.jid, CMD_HELP, MessageType.text
     );
 }));

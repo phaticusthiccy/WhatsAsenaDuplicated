@@ -32,7 +32,6 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: 'Yanıt verdiğiniz fo
             }
         
             await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
-            return await info.delete();        
         });
         return;
     }
