@@ -9,7 +9,10 @@ WhatsAsena - Yusuf Usta
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 
-Asena.addCommand({pattern: 'tagall', fromMe: true, desc: 'Gruptaki herkesi etiketler.'}, (async (message, match) => {
+const Language = require('../language');
+const Lang = Language.getString('tagall');
+
+Asena.addCommand({pattern: 'tagall', fromMe: true, desc: Lang.TAGALL_DESC}, (async (message, match) => {
     grup = await message.client.groupMetadata(message.jid);
     var jids = [];
     mesaj = '';

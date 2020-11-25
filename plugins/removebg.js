@@ -17,11 +17,14 @@ const {promisify} = require('util');
 
 const pipeline = promisify(stream.pipeline);
 
-Asena.addCommand({pattern: 'removebg ?(.*)', fromMe: true, desc: 'Fotoğrafın arka-planını siler.'}, (async (message, match) => {    
-    if (message.reply_message === false || message.reply_message.image === false) return await message.sendMessage('*Bana bir fotoğraf ver!*');
-    if (Config.RBG_API_KEY === false) return await message.sendMessage('*API Keyiniz Yok!*\nremove.bg adresinden alabilirsiniz.');
+const Language = require('../language');
+const Lang = Language.getString('removebg');
+
+Asena.addCommand({pattern: 'removebg ?(.*)', fromMe: true, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+    if (message.reply_message === false || message.reply_message.image === false) return await message.sendMessage(Lang.NEED_PHOTO);
+    if (Config.RBG_API_KEY === false) return await message.sendMessage(Lang.NO_API_KEY);
     
-    var load = await message.reply('```Arkaplan kaldırılıyor...```');
+    var load = await message.reply(Lang.RBGING);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
             remoteJid: message.reply_message.jid,

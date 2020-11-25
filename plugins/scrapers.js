@@ -31,26 +31,27 @@ const spotifyApi = new SpotifyWebApi({
     clientSecret: '0e8439a1280a43aba9a5bc0a16f3f009'
 });
 //=====================================================================================
+const Language = require('../language');
+const Lang = Language.getString('scrapers');
 
-
-Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: 'Google çeviri ile çeviri yapar. Bir mesaja yanıt vermeniz gerekmektedir.', usage: '.trt tr it (Türkçeden İtalyaca Çeviri)', fromMe: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
     if (!message.reply_message) {
-        return await message.reply('```Lütfen bir mesaja yanıt verin!```');
+        return await message.reply(Lang.NEED_REPLY);
     }
 
     ceviri = await translatte(message.reply_message.message, {from: match[1] === '' ? 'auto' : match[1], to: match[2] === '' ? config.LANG : match[2]});
     if ('text' in ceviri) {
-        return await message.reply('*▶️ Dil:* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
-        + '*◀️ Çevirilen Dil*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
-        + '*🔎 Çeviri:* ```' + ceviri.text + '```');
+        return await message.reply('*▶️ ' + Lang.LANG + ':* ```' + (match[1] === '' ? 'auto' : match[1]) + '```\n'
+        + '*◀️ ' + Lang.FROM + '*: ```' + (match[2] === '' ? config.LANG : match[2]) + '```\n'
+        + '*🔎 ' + Lang.RESULT + ':* ```' + ceviri.text + '```');
     } else {
-        return await message.reply('*❌ Çeviri de bir hata oluştu!*')
+        return await message.reply(Lang.TRANSLATE_ERROR)
     }
 }));
 
 Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
     if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
-        return await message.reply('```Sözdizimi hatası!```');
+        return await message.reply(Lang.CURRENCY_ERROR);
     }
     let opts = {
         amount: parseFloat(match[1]).toFixed(2).replace(/\.0+$/,''),
@@ -64,15 +65,15 @@ Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*)
     }
     catch(err) {
         if (err instanceof ExchangeRatesError) 
-            await message.reply("```Döviz dönüşümü yapılamadı, yanlış birim yazdınız!```")
+            await message.reply(Lang.INVALID_CURRENCY)
         else {
-            await message.reply("```Bir hata oluştu, döviz dönüşümü yapılamadı!```")
+            await message.reply(Lang.UNKNOWN_ERROR)
             console.log(err)
         }
     }
 }));
 
-Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: 'Yazıyı sese çevirir.'}, (async (message, match) => {
+Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
     if(match[1] === undefined || match[1] == "")
         return;
     
@@ -95,7 +96,7 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: 'Yazıyı sese çevir
     const file = fs.createWriteStream(filePath);
     const request = https.get(url, async response => {
         if (response.statusCode !== 200) {
-            await message.reply("```Hata, yazdığınız cümlenin konuşma sentezi yapılamadı!```")
+            await message.reply(Lang.TTS_ERROR)
             fs.unlink(filePath, async () => {})
             return;
         }
@@ -113,7 +114,7 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: 'Yazıyı sese çevir
     let error = async function(err) {
         console.log(err)
         fs.unlink(filePath, async () => {
-            await message.reply("```Hata, yazdığınız cümlenin konuşma sentezi yapılamadı!```")
+            await message.reply(Lang.TTS_ERROR)
         });
     }
     request.on('error', error)
@@ -121,12 +122,12 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: 'Yazıyı sese çevir
     request.end();
 }));
 
-Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: 'Yazdığınız şarkıyı yükler.'}, (async (message, match) => { 
-    if (match[1] === '') return await message.sendMessage('*Lütfen bir şarkı yazın!*\n*Örnek:* ```.song flört - rasta baba```');    
+Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_TEXT_SONG);    
     let arama = await yts(match[1]);
     arama = arama.all;
-    if(arama.length < 1) return await message.sendMessage('*Hiçbir şey bulamadım :(*\n');
-    var reply = await message.sendMessage('```Şarkınız indiriliyor...```');
+    if(arama.length < 1) return await message.sendMessage(Lang.NO_RESULT);
+    var reply = await message.sendMessage(Lang.DOWNLOADING_SONG);
 
     let title = arama[0].title.replace(' ', '+');
     let stream = ytdl(arama[0].videoId, {
@@ -148,41 +149,41 @@ Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: 'Yazdığınız şa
                 });
             writer.addTag();
 
-            reply = await message.reply('```Şarkınız yükleniyor...```');
+            reply = await message.reply(Lang.UPLOADING_SONG);
             await message.sendMessage(Buffer.from(writer.arrayBuffer), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: false});
         });
 }));
 
-Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: 'Youtubedan video indirir.'}, (async (message, match) => { 
-    if (match[1] === '') return await message.sendMessage('*Lütfen bir video adresi yazın!*\n*Örnek:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```');    
+Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_VIDEO);    
     
     try {
         var arama = await yts({videoId: ytdl.getURLVideoID(match[1])});
     } catch {
-        return await message.sendMessage('*Hiçbir şey bulamadım :(*\n');
+        return await message.sendMessage(Lang.NO_RESULT);
     }
 
-    var reply = await message.reply('```Videonuz indiriliyor...```');
+    var reply = await message.reply(Lang.DOWNLOADING_VIDEO);
 
     var yt = ytdl(arama.videoId, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
     yt.pipe(fs.createWriteStream('./' + arama.videoId + '.mp4'));
 
     yt.on('end', async () => {
         await reply.delete();
-        reply = await message.reply('```Videonuz yükleniyor...```');
+        reply = await message.reply(Lang.UPLOADING_VIDEO);
         await message.sendMessage(fs.readFileSync('./' + arama.videoId + '.mp4'), MessageType.video, {mimetype: Mimetype.mp4});
         await reply.delete();
     });
 }));
 
-Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: 'Youtubeda arama yapar.'}, (async (message, match) => { 
-    if (match[1] === '') return await message.sendMessage('*Lütfen bir kelime yazın!*');    
-    var reply = await message.reply('```Videolar getiriyorum...```');
+Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_WORDS);    
+    var reply = await message.reply(Lang.GETTING_VIDEOS);
 
     try {
         var arama = await yts(match[1]);
     } catch {
-        return await message.sendMessage('*Hiçbir şey bulamadım :(*\n');
+        return await message.sendMessage(Lang.NOT_FOUND);
     }
     
     var mesaj = '';

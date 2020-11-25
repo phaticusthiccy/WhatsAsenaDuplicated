@@ -10,40 +10,43 @@ const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const sql = require('./sql/greetings');
 
-Asena.addCommand({pattern: 'welcome$', fromMe: true, desc: 'Hoşgeldin mesajı ayarlar. Eğer mesaj yazmazsanız hoşgeldin mesajını getirir.'}, (async (message, match) => {
+const Language = require('../language');
+const Lang = Language.getString('greetings');
+
+Asena.addCommand({pattern: 'welcome$', fromMe: true, desc: Lang.WELCOME_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid);
     if (hg === false) {
-        await message.sendMessage('*Hoşgeldin mesajı ayarlamadınız!*\n**Ayarlamak için:** ```.welcome hoşgeldin mesajınız```');
+        await message.sendMessage(Lang.NOT_SET_WELCOME);
     } else {
-        await message.sendMessage('*✅ Hoşgeldin mesajı ayarlanmış!*\n*Mesaj:* ```' + hg.message + '```');
+        await message.sendMessage(Lang.WELCOME_ALREADY_SETTED + hg.message + '```');
     }
 }));
 
 Asena.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
-        return await message.sendMessage('**Hoşgeldin mesajı ayarlayabilmek için mesaj yazmanız gerekmekte.**\n**Örnek:** ```.welcome HOŞGELDİN!```');
+        return await message.sendMessage(Lang.NEED_WELCOME_TEXT);
     } else {
-        if (match[1] === 'sil') { await message.sendMessage('*✅ Hoşgeldin mesajını başarıyla silindi!*'); return await sql.deleteMessage(message.jid, 'welcome'); }
+        if (match[1] === 'sil') { await message.sendMessage(Lang.WELCOME_DELETED); return await sql.deleteMessage(message.jid, 'welcome'); }
         await sql.setMessage(message.jid, 'welcome', match[1]);
-        return await message.sendMessage('*✅ Hoşgeldin mesajını başarıyla ayarlandı!*')
+        return await message.sendMessage(Lang.WELCOME_SETTED)
     }
 }));
 
-Asena.addCommand({pattern: 'goodbye$', fromMe: true, desc: 'Görüşürüz mesajı ayarlar. Eğer mesaj yazmazsanız görüşürüz mesajını getirir.'}, (async (message, match) => {
+Asena.addCommand({pattern: 'goodbye$', fromMe: true, desc: Lang.GOODBYE_DESC}, (async (message, match) => {
     var hg = await sql.getMessage(message.jid, 'goodbye');
     if (hg === false) {
-        await message.sendMessage('*Görüşürüz mesajı ayarlamadınız!*\n*Ayarlamak için:* ```.goodbye Görüşürüz mesajınız```')
+        await message.sendMessage(Lang.NOT_SET_GOODBYE)
     } else {
-        await message.sendMessage('*✅ Görüşürüz mesajı ayarlanmış!*\n*Mesaj:* ```' + hg.message + '```');
+        await message.sendMessage(Lang.GOODBYE_ALREADY_SETTED + hg.message + '```');
     }
 }));
 
 Asena.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     if (match[1] === '') {
-        return await message.sendMessage('*Görüşürüz mesajı ayarlayabilmek için mesaj yazmanız gerekmekte.*\n*Örnek:* ```.goodbye Görüşürüz!```');
+        return await message.sendMessage(Lang.NEED_GOODBYE_TEXT);
     } else {
-        if (match[1] === 'sil') { await message.sendMessage('*✅ Görüşürüz mesajını başarıyla silindi!*'); return await sql.deleteMessage(message.jid, 'goodbye'); }
+        if (match[1] === 'sil') { await message.sendMessage(Lang.GOODBYE_DELETED); return await sql.deleteMessage(message.jid, 'goodbye'); }
         await sql.setMessage(message.jid, 'goodbye', match[1]);
-        return await message.sendMessage('*✅ Görüşürüz mesajını başarıyla ayarlandı!*')
+        return await message.sendMessage(Lang.GOODBYE_SETTED)
     }
 }));

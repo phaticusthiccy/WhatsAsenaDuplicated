@@ -10,16 +10,18 @@ const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 
 const fs = require('fs');
+const Language = require('../language');
+const Lang = Language.getString('profile');
 
-Asena.addCommand({pattern: 'kickme', fromMe: true, desc: 'Yazdığınız gruptan sizi çıkarır.', onlyGroup: true}, (async (message, match) => {    
-    await message.sendMessage('```Güle Güle! Ben gidiyorum 🤠```');
+Asena.addCommand({pattern: 'kickme', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {    
+    await message.sendMessage(Lang.KICKME);
     await message.client.groupLeave(message.jid);
 }));
 
-Asena.addCommand({pattern: 'pp', fromMe: true, desc: 'Yanıt verdiğiniz fotoğrafı profil fotoğrafınız yapar.'}, (async (message, match) => {    
-    if (message.reply_message === false || message.reply_message.image === false) return await message.sendMessage('*Bana bir fotoğraf ver!*');
+Asena.addCommand({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (message, match) => {    
+    if (message.reply_message === false || message.reply_message.image === false) return await message.sendMessage(Lang.NEED_PHOTO);
     
-    var load = await message.reply('```Profil fotoğrafı yapılıyor...```');
+    var load = await message.reply(Lang.PPING);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
             remoteJid: message.reply_message.jid,

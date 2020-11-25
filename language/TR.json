@@ -1,0 +1,156 @@
+{
+    "__ASENAJSON__": true,
+    "LANGUAGE": "Türkçe",
+    "LANGCODE": "tr",
+    "AUTHOR": "AsenaDev",
+    "STRINGS": { 
+        "_asena": {
+            "COMMAND": "Komut",
+            "DESC": "Açıklama",
+            "EXAMPLE": "Örnek"
+        },
+        "admin": {
+            "BAN_DESC": "Gruptan kişi banlar. Yanıt verin ya da komutun yanına kişiyi etiketleyin.",
+            "IM_NOT_ADMIN": "*Bu grupta admin değilim!*",
+            "BANNED": "gruptan çıkarıldı!",
+            "GIVE_ME_USER": "*Bana bir kullanıcı ver!*",
+            "ADD_DESC": "Gruba kişi ekler.",
+            "ADDED": "gruba eklendi!",
+            "ALREADY_PROMOTED": "```Zaten admin olan birisini nasıl admin yapayım?```",
+            "PROMOTED": "```, admin yapıldı!```",
+            "PROMOTE_DESC": "Herhangi bir kişiyi admin yapar.",
+            "DEMOTE_DESC": "Herhangi bir adminden yetkisini düşürür.",
+            "ALREADY_NOT_ADMIN": "```Zaten admin olmayan birisini nasıl yetkisini alayım?```",
+            "DEMOTED": "```, yetkisi düşürüldü!```",
+            "MUTE_DESC": "Grubu sohbetini kapatır. Yalnızca adminler mesaj gönderebilir.",
+            "MUTED": "```Grup sohbeti kapatıldı!```",
+            "UNMUTE_DESC": "Grubu sohbetini açar. Herkes mesaj gönderebilir.",
+            "UNMUTED": "```Grup sohbeti açıldı!```",
+            "INVITE_DESC": "Grubun davet linkini getirir.",
+            "INVITE": "```Davet linki:```" 
+        },
+        "afk": {
+            "AFK_DESC": "Sizi AFK yapar.",
+            "IM_AFK": "*Artık AFK'yım!*",
+            "IM_AFK_NOMD": "Artık AFK'yım!",
+            "REASON": "Sebep",
+            "LAST_SEEN": "Son Görülme",
+            "IM_NOT_AFK": "```Artık AFK değilim!```",
+            "AFK_TEXT": "```Bip bop! Bu bir bot. Sahibim şu an burada değil.```",
+            "AFK_TEXT_NOMD": "Bip bop! Bu bir bot. Sahibim şu an burada değil.",
+            "HOUR": "saat",
+            "MINUTE": "dakika",
+            "SECOND": "saniye"
+        },
+        "evaluators": {
+            "TERM_DESC": "Sunucuda shellinde komut çalıştırmanıza imkan tanır.",
+            "GIVE_ME_CODE": "*Bana bir kod ver!*"
+        },
+        "filters": {
+            "FILTER_DESC": "Filtre ekler. Yazdığınız filtreyi birisi yazarsa yazdığınıı cevabı gönderir. Eğer sadece filter yazarsanız eklediğiniz filtreleri getirir.",
+            "NO_FILTER": "*❌ Bu sohbette hiç filter yok!*",
+            "FILTERS": "*🔎 Bu sohbetdeki filtreleriniz:*",
+            "NEED_REPLY": "*❌ Lütfen cevap yazın!*\n*Örnek:*",
+            "FILTERED": "*✅ Başarılı bir şekilde* ```{}``` *filtresi ayarlandı!*",
+            "STOP_DESC": "Ekledğiniz filtreyi durdurur.",
+            "NEED_FILTER": "*❌ Lütfen bir filtre yazın!*\n*Örnek:*",
+            "ALREADY_NO_FILTER": "*❌ Zaten böyle bir filtre yok!*",
+            "DELETED": "*✅ Filtreniz başarılı bir şekilde silindi!*"
+        },
+        "greetings": {
+            "WELCOME_DESC": "Hoşgeldin mesajı ayarlar. Eğer mesaj yazmazsanız hoşgeldin mesajını getirir.",
+            "NOT_SET_WELCOME": "*Hoşgeldin mesajı ayarlamadınız!*\n**Ayarlamak için:** ```.welcome hoşgeldin mesajınız```",
+            "WELCOME_ALREADY_SETTED": "*✅ Hoşgeldin mesajı ayarlanmış!*\n*Mesaj:* ```",
+            "NEED_WELCOME_TEXT": "*Hoşgeldin mesajı ayarlayabilmek için mesaj yazmanız gerekmekte.*\n*Örnek:* ```.welcome HOŞGELDİN!```",
+            "WELCOME_DELETED": "*✅ Hoşgeldin mesajını başarıyla silindi!*",
+            "WELCOME_SETTED": "*✅ Hoşgeldin mesajını başarıyla ayarlandı!*",
+            "GOODBYE_DESC": "Görüşürüz mesajı ayarlar. Eğer mesaj yazmazsanız görüşürüz mesajını getirir.",
+            "NOT_SET_GOODBYE": "*Görüşürüz mesajı ayarlamadınız!*\n*Ayarlamak için:* ```.goodbye Görüşürüz mesajınız```",
+            "GOODBYE_ALREADY_SETTED": "*✅ Görüşürüz mesajı ayarlanmış!*\n*Mesaj:* ```",
+            "NEED_GOODBYE_TEXT": "*Görüşürüz mesajı ayarlayabilmek için mesaj yazmanız gerekmekte.*\n*Örnek:* ```.goodbye Görüşürüz!```",
+            "GOODBYE_DELETED": "*✅ Görüşürüz mesajını başarıyla silindi!*",
+            "GOODBYE_SETTED": "*✅ Görüşürüz mesajını başarıyla ayarlandı!*"
+        },
+        "profile": {
+            "KICKME_DESC": "Yazdığınız gruptan sizi çıkarır.",
+            "KICKME": "```Güle Güle! Ben gidiyorum 🤠```",
+            "PP_DESC": "Yanıt verdiğiniz fotoğrafı profil fotoğrafınız yapar.",
+            "NEED_PHOTO": "*Bana bir fotoğraf ver!*",
+            "PPING": "```Profil fotoğrafı yapılıyor...```"
+        },
+        "removebg": {
+            "REMOVEBG_DESC": "Fotoğrafın arka-planını siler.",
+            "NEED_PHOTO":"*Bana bir fotoğraf ver!*",
+            "NO_API_KEY": "*API Keyiniz Yok!*\nremove.bg adresinden alabilirsiniz.",
+            "RBGING": "```Arkaplan kaldırılıyor...```"
+        },
+        "scrapers": {
+            "TRANSLATE_DESC": "Google çeviri ile çeviri yapar. Bir mesaja yanıt vermeniz gerekmektedir.",
+            "TRANSLATE_USAGE": ".trt tr it (Türkçeden İtalyaca Çeviri)",
+            "NEED_REPLY": "```Lütfen bir mesaja yanıt verin!```",
+            "LANG": "Dil",
+            "FROM": "Çevirilen Dil",
+            "RESULT": "Çeviri",
+            "TRANSLATE_ERROR": "*❌ Çeviri de bir hata oluştu!*",
+            "CURRENCY_ERROR": "```Sözdizimi hatası! Örnek: .currency 1 TRY USD```",
+            "INVALID_CURRENCY": "```Döviz dönüşümü yapılamadı, yanlış birim yazdınız!```",
+            "UNKNOWN_ERROR": "```Bir hata oluştu, döviz dönüşümü yapılamadı!```",
+            "TTS_DESC": "Yazıyı sese çevirir.",
+            "TTS_ERROR": "```Hata, yazdığınız cümlenin konuşma sentezi yapılamadı!```",
+            "SONG_DESC": "Yazdığınız şarkıyı yükler.",
+            "NEED_TEXT_SONG": "*Lütfen bir şarkı yazın!*\n*Örnek:* ```.song flört - rasta baba```",
+            "NO_RESULT": "*Hiçbir şey bulamadım :(*",
+            "DOWNLOADING_SONG": "```Şarkınız indiriliyor...```",
+            "UPLOADING_SONG": "```Şarkınız yükleniyor...```",
+            "VIDEO_DESC": "Youtubedan video indirir.",
+            "NEED_VIDEO": "*Lütfen bir video adresi yazın!*\n*Örnek:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
+            "DOWNLOADING_VIDEO": "```Videonuz indiriliyor...```",
+            "UPLOADING_VIDEO": "```Videonuz yükleniyor...```",
+            "YT_DESC": "Youtubeda arama yapar.",
+            "NEED_WORDS": "```Lütfen birkaç kelime yazın!```",
+            "GETTING_VIDEOS": "```Videolar getiriyorum...```",
+            "NOT_FOUND": "*Hiçbir şey bulamadım :(*"
+        },
+        "sticker": {
+            "STICKER_DESC": "Yanıt verdiğiniz fotoğraf veya videoyu sticker yapın.",
+            "NEED_REPLY": "*Bir fotoğraf veya videoya yanıt verin!*",
+            "DOWNLOADING": "```Medya indiriliyor & sticker yapılıyor...```"
+        },
+        "system_stats": {
+            "ALIVE_DESC": "Bot çalışıyor mu?",
+            "SYSD_DESC": "Sistem özelliklerini söyler."
+        },
+        "tagall": {
+            "TAGALL_DESC": "Gruptaki herkesi etiketler."
+        },
+        "updater": {
+            "UPDATER_DESC": "Güncelleme denetler.",
+            "UPDATE": "*Botunuz tamamen güncel!*",
+            "NEW_UPDATE": "*Bot için yeni güncelleme mevcut!*\n\nDeğişiklikler:\n```",
+            "UPDATE_NOW_DESC": "Güncelleme yapar.",
+            "UPDATING": "_Güncelleme yapılıyor..._",
+            "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
+            "UPDATED": "✅ Güncelleme başarılı oldu!*",
+            "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*\n_Değişiklikler yeniden başlatmanız gerekmektedir._"
+        },
+        "weather": {
+            "WEATHER_DESC": "Hava durumu getirir.",
+            "NEED_LOCATION": "*Lütfen bir konum yazın!*\n*Örnek:* ```.weather Bakü```",
+            "LOCATION": "Konum",
+            "TEMP": "Sıcaklık",
+            "DESC": "Açıklama",
+            "HUMI": "Nem",
+            "WIND": "Rüzgar Hızı",
+            "CLOUD": "Bulut",
+            "NOT_FOUND": "```Böyle bir şehir bulamadım. 😖```"
+        },
+        "web": {
+            "SPEEDTEST_DESC": "İndirme ve Yükleme hızını ölçer.",
+            "SPEEDTESTING": "```Hız testi yapılıyor...```",
+            "SPEEDTEST_RESULT": "*Hız testi yapıldı!*",
+            "UPLOAD": "Yükleme",
+            "DOWNLOAD": "İndirme",
+            "PING_DESC": "Pinginizi ölçer."
+        }
+    }
+}

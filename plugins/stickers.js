@@ -13,9 +13,12 @@ const ffmpeg = require('fluent-ffmpeg');
 const {execFile} = require('child_process');
 const cwebp = require('cwebp-bin');
 
-Asena.addCommand({pattern: 'sticker', fromMe: true, desc: 'Yanıt verdiğiniz fotoğraf veya videoyu sticker yapın.'}, (async (message, match) => {    
-    if (message.reply_message === false) return await message.sendMessage('*Bir fotoğraf veya videoya yanıt verin!*');
-    var info = await message.sendMessage('```Medya indiriliyor & sticker yapılıyor...```');
+const Language = require('../language');
+const Lang = Language.getString('sticker');
+
+Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (async (message, match) => {    
+    if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
+    var info = await message.sendMessage(Lang.DOWNLOADING);
     
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {

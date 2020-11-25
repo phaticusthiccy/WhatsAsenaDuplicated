@@ -9,6 +9,9 @@ WhatsAsena - Yusuf Usta
 const Asena = require('../events');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
+const Language = require('../language');
+
+const Lang = Language.getString('_asena');
 
 Asena.addCommand({pattern: 'asena', fromMe: true}, (async (message, match) => {
     var CMD_HELP = '';
@@ -29,9 +32,9 @@ Asena.addCommand({pattern: 'asena', fromMe: true}, (async (message, match) => {
             } else {
                 HANDLER = '.';
             }
-            CMD_HELP += '*🛠 Komut:* ```' + (match.length >= 3 ? (HANDLER + match[2]) : command.pattern) + (command.desc === '' ? '```\n\n' : '```\n');
-            if (command.desc !== '') CMD_HELP += '*💬 Açıklama:* ```' + command.desc + (command.usage === '' ? '```\n\n' : '```\n');
-            if (command.usage !== '') CMD_HELP += '*⌨️ Örnek:* ```' + command.usage + '```\n\n';
+            CMD_HELP += '*🛠 ' + Lang.COMMAND + ':* ```' + (match.length >= 3 ? (HANDLER + match[2]) : command.pattern) + (command.desc === '' ? '```\n\n' : '```\n');
+            if (command.desc !== '') CMD_HELP += '*💬 ' + Lang.DESC + ':* ```' + command.desc + (command.usage === '' ? '```\n\n' : '```\n');
+            if (command.usage !== '') CMD_HELP += '*⌨️ ' + Lang.EXAMPLE + ':* ```' + command.usage + '```\n\n';
         }
     );
     

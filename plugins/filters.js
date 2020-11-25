@@ -9,41 +9,43 @@ WhatsAsena - Yusuf Usta
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const FilterDb = require('./sql/filters');
-const filters = require('./sql/filters');
 
-Asena.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: 'Filtre ekler. Yazdığınız filtreyi birisi yazarsa yazdığınıı cevabı gönderir. Eğer sadece filter yazarsanız eklediğiniz filtreleri getirir.', usage: '.filter "merhaba" "merhaba, nasılsın?"'}, (async (message, match) => {
+const Language = require('../language');
+const Lang = Language.getString('filters');
+
+Asena.addCommand({pattern: 'filter ?(.*)', fromMe: true, desc: Lang.FILTER_DESC, usage: '.filter "merhaba" "merhaba, nasılsın?"'}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
 
     if (match === null) {
         filtreler = await FilterDb.getFilter(message.jid);
         if (filtreler === false) {
-            await message.sendMessage('*❌ Bu sohbette hiç filter yok!*')
+            await message.sendMessage(Lang.NO_FILTER)
         } else {
-            var mesaj = '*🔎 Bu sohbetdeki filtreleriniz:*\n';
+            var mesaj = Lang.FILTERS + '\n';
             filtreler.map((filter) => mesaj += '```' + filter.dataValues.pattern + '```\n');
             await message.sendMessage(mesaj);
         }
     } else {
         if (match.length < 2) {
-            return await message.sendMessage('*❌ Lütfen cevap yazın!*\n*Örnek:* ```.filter "sa" "as"');
+            return await message.sendMessage(Lang.NEED_REPLY + ' ```.filter "sa" "as"');
         }
         await FilterDb.setFilter(message.jid, match[0].replace(/['"“]+/g, ''), match[1].replace(/['"“]+/g, ''), match[0][0] === "'" ? true : false);
-        await message.sendMessage('*✅ Başarılı bir şekilde* ```' + match[0].replace(/['"]+/g, '') + '``` *filtresi ayarlandı!*');
+        await message.sendMessage(Lang.FILTERED.format(match[0].replace(/['"]+/g, '')));
     }
 }));
 
-Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: "Ekledğiniz filtreyi durdurur.", usage: '.stop "merhaba"'}, (async (message, match) => {
+Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, usage: '.stop "merhaba"'}, (async (message, match) => {
     match = match[1].match(/[\'\"\“](.*?)[\'\"\“]/gsm);
     if (match === null) {
-        return await message.sendMessage('*❌ Lütfen bir filtre yazın!*\n*Örnek:* ```.stop "merhaba"```')
+        return await message.sendMessage(Lang.NEED_REPLY + '\n*Örnek:* ```.stop "merhaba"```')
     }
 
     del = await FilterDb.deleteFilter(message.jid, match[0].replace(/['"“]+/g, ''));
     
     if (!del) {
-        await message.sendMessage('*❌ Zaten böyle bir filtre yok!*')
+        await message.sendMessage(Lang.ALREADY_NO_FILTER)
     } else {
-        await message.sendMessage('*✅ Filtreniz başarılı bir şekilde silindi!*')
+        await message.sendMessage(Lang.DELETED)
     }
 }));
 

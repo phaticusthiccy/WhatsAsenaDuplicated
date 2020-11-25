@@ -10,6 +10,9 @@ const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const speedTest = require('speedtest-net');
 
+const Language = require('../language');
+const Lang = Language.getString('web');
+
 // https://github.com/ddsol/speedtest.net/blob/master/bin/index.js#L86
 function speedText(speed) {
     let bits = speed * 8;
@@ -23,22 +26,22 @@ function speedText(speed) {
 
     return `${bits.toFixed(places[unit])} ${units[unit]}bps`;
 }
-Asena.addCommand({pattern: 'speedtest', fromMe: true, deleteCommand: false, desc: 'İndirme ve Yükleme hızını ölçer.'}, (async (message, match) => {
-    var msg = await message.reply('```Hız testi yapılıyor...```');
+Asena.addCommand({pattern: 'speedtest', fromMe: true, deleteCommand: false, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
+    var msg = await message.reply(Lang.SPEEDTESTING);
     await message.delete();
     var st = await speedTest({acceptLicense: true, acceptGdpr: true});
     
-    await message.sendMessage('*Hız testi yapıldı!*\n\n' + 
+    await message.sendMessage(Lang.SPEEDTEST_RESULT + '\n\n' + 
     '*ISP:* ```' + st.isp + '```\n' +
     '*Ping:* ```' + st.ping.latency + 'ms```\n' +
-    '*Yükleme:* ```' + speedText(st.upload.bandwidth) + '```\n' +
-    '*İndirme:* ```' + speedText(st.download.bandwidth) + '```\n'
+    '*' + Lang.UPLOAD + ':* ```' + speedText(st.upload.bandwidth) + '```\n' +
+    '*' + Lang.DOWNLOAD + ':* ```' + speedText(st.download.bandwidth) + '```\n'
     );
 
     await msg.delete();
 }));
 
-Asena.addCommand({pattern: 'ping', fromMe: true, deleteCommand: false, desc: 'Pinginizi ölçer.'}, (async (message, match) => {
+Asena.addCommand({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
   var start = new Date().getTime();
   var msg = await message.reply('```Ping!```');
   var end = new Date().getTime();

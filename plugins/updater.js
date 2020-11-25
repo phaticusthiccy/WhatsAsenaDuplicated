@@ -16,15 +16,18 @@ const Heroku = require('heroku-client');
 const { PassThrough } = require('stream');
 const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 
-Asena.addCommand({pattern: 'update$', fromMe: true, desc: 'Güncelleme denetler.'}, (async (message, match) => {
+const Language = require('../language');
+const Lang = Language.getString('updater');
+
+Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
         await message.sendMessage(
-            '*Botunuz tamamen güncel!*', MessageType.text
+            Lang.UPDATE, MessageType.text
         );    
     } else {
-        var degisiklikler = '*Bot için yeni güncelleme mevcut!*\n\nDeğişiklikler:\n```';
+        var degisiklikler = Lang.NEW_UPDATE;
         commits['all'].map(
             (commit) => {
                 degisiklikler += '🔹 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
@@ -37,20 +40,20 @@ Asena.addCommand({pattern: 'update$', fromMe: true, desc: 'Güncelleme denetler.
     }
 }));
 
-Asena.addCommand({pattern: 'update now$', fromMe: true, desc: 'Güncelleme yapar.', dontAddCommandList: true}, (async (message, match) => {
+Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DESC, dontAddCommandList: true}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
     if (commits.total === 0) {
         return await message.sendMessage(
-            '*Botunuz tamamen güncel!*', MessageType.text
+            Lang.UPDATE, MessageType.text
         );    
     } else {
-        var guncelleme = await message.reply('_Güncelleme yapılıyor..._');
+        var guncelleme = await message.reply(Lang.UPDATING);
         if (Config.HEROKU.HEROKU) {
             try {
                 var app = await heroku.get('/apps/' + Config.HEROKU.APP_NAME)
             } catch {
-                return await message.sendMessage('*❌ Heroku bilgileriniz yanlış!*', MessageType.text);
+                return await message.sendMessage(Lang.INVALID_HEROKU, MessageType.text);
             }
 
             git.fetch('upstream', Config.BRANCH);
@@ -65,11 +68,11 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: 'Güncelleme yapar
             } catch { console.log('heroku remote ekli'); }
             await git.push('heroku', Config.BRANCH);
             
-            await message.sendMessage('*✅ Güncelleme başarılı oldu!*', MessageType.text);
+            await message.sendMessage(Lang.UPDATED, MessageType.text);
         } else {
             git.pull((async (err, update) => {
                 if(update && update.summary.changes) {
-                    await message.sendMessage('*✅ Güncelleme başarılı oldu!*\n_Değişiklikler yeniden başlatmanız gerekmektedir._', MessageType.text);
+                    await message.sendMessage(Lang.UPDATED_LOCAL, MessageType.text);
                     exec('npm install').stderr.pipe(process.stderr);
                 } else if (err) {
                     await message.sendMessage('*❌ Güncelleme başarısız oldu!*\n*Hata:* ```' + err + '```', MessageType.text);

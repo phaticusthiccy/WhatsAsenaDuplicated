@@ -11,13 +11,16 @@ const {MessageType, aesDecrypt} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
 
-Asena.addCommand({pattern: 'alive', fromMe: true, desc: 'Bot çalışıyor mu?'}, (async (message, match) => {
+const Language = require('../language');
+const Lang = Language.getString('system_stats');
+
+Asena.addCommand({pattern: 'alive', fromMe: true, desc: Lang.ALIVE_DESC}, (async (message, match) => {
     await message.sendMessage(
         '```Tanrı Türk\'ü Korusun. 🐺 Asena çalışıyor...```\n\n*Version:* ```'+Config.VERSION+'```\n*Telegram Grubu:* https://t.me/AsenaSupport\n*Telegram Kanalı:* https://t.me/WhatsAsena' , MessageType.text
     );
 }));
 
-Asena.addCommand({pattern: 'sysd', fromMe: true, desc: 'Sistem özelliklerini söyler.'}, (async (message, match) => {
+Asena.addCommand({pattern: 'sysd', fromMe: true, desc: Lang.SYSD_DESC}, (async (message, match) => {
     const child = spawnSync('neofetch', ['--stdout']).stdout.toString('utf-8')
     await message.sendMessage(
         '```' + child + '```', MessageType.text

@@ -11,9 +11,12 @@ const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
 
-Asena.addCommand({pattern: 'term ?(.*)', fromMe: true, desc: 'Sunucuda shellinde komut çalıştırmanıza imkan tanır.', usage: '.term ls'}, (async (message, match) => {    
+const Language = require('../language');
+const Lang = Language.getString('evaluators');
+
+Asena.addCommand({pattern: 'term ?(.*)', fromMe: true, desc: Lang.TERM_DESC, usage: '.term ls'}, (async (message, match) => {    
     var user = os.userInfo().username;
-    if (match[1] === '') return await message.sendMessage('*Bana bir kod ver!*');
+    if (match[1] === '') return await message.sendMessage(Lang.GIVE_ME_CODE);
 
     exec(match[1], async (err, stdout, stderr) => {
         if (err) {

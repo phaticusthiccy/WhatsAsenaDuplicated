@@ -19,9 +19,9 @@ DATABASE_URL = process.env.DATABASE_URL === undefined ? './whatsasena.db' : proc
 DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBUG);
 
 module.exports = {
-    VERSION: 'v0.7.4 Public Beta',
+    VERSION: 'v0.8.0 Public Beta',
     SESSION: process.env.ASENA_SESSION === undefined ? '' : process.env.ASENA_SESSION,
-    LANG: process.env.LANGUAGE === undefined ? 'tr' : process.env.LANGUAGE,
+    LANG: process.env.LANGUAGE === undefined ? 'en' : process.env.LANGUAGE,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.!;]' : process.env.HANDLERS,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',

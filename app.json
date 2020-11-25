@@ -13,7 +13,7 @@
             "required": true
         },
         "LANGUAGE": {
-            "description": "Botun dili.",
+            "description": "Botun dili. Bot language. Azerice => az, English => en, Türkçe => tr",
             "required": true,
             "value": "tr"
         },
@@ -33,11 +33,11 @@
             "value": "true"
         },
         "HEROKU_API_KEY": {
-            "description": "Herokuda API Keyiniz.",
+            "description": "Herokuda API Keyiniz. Heroku API Key.",
             "required": true
         },
         "HEROKU_APP_NAME": {
-            "description": "Herokuda uygulama adı.",
+            "description": "Herokuda uygulama adı. Heroku APP Name.",
             "required": true
         },
         "DEBUG": {

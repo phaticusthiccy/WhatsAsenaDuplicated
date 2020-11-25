@@ -1,0 +1,156 @@
+{
+    "__ASENAJSON__": true,
+    "LANGUAGE": "Türkcə",
+    "LANGCODE": "Tr",
+    "AUTHOR": "AsenaDev",
+    "STRINGS": {
+        "_asena": {
+            "COMMAND": "Əmr",
+            "DESC": "Açığlama",
+            "EXAMPLE": "Nümunə"
+        },
+        "admin": {
+            "BAN_DESC": "Grupdan şəxsi banlayır. Cavap verin (reply) yada əmrin yanına şəxs adı yazın",
+            "IM_NOT_ADMIN": "*Bu grupda admin deyiləm!*",
+            "BANNED": "Grupdan çıxarıldı!",
+            "GIVE_ME_USER": "*Mənə bir isdifadəçi ver!*",
+            "ADD_DESC": "Grupa adam əlavə edər.",
+            "ADDED": "Grupa əlavə edildi!",
+            "ALREADY_PROMOTED": "Onsuzda admin olan birisini, necə admin edim ?",
+            "PROMOTED": "```, admin edildi!```",
+            "PROMOTE_DESC": "Hər hansısa şəxsi admin edər.",
+            "DEMOTE_DESC": "Hər hansısa bir adamdan adminlik hüququnu alar.",
+            "ALREADY_NOT_ADMIN": "```Admin olmayan birindən, adminliyini necə alım? ```",
+            "DEMOTED": "```, adminlik hüququ alındı! ```",
+            "MUTE_DESC": "Grup söhbətini bağlıyar. Təkcə adminlər mesaj göndərə bilər.",
+            "MUTED": "```Grup söhbəti bağlandı! ```",
+            "UNMUTE_DESC": "Grup söhbətini açar. Hərkəs mesaj göndərə bilər.",
+            "UNMUTED": "```Grup söhbəti açıldı!```",
+            "INVITE_DESC": "Grupun dəvət linkini gətirir.",
+            "INVITE": "``` Dəvət linki: ```"
+        },
+        "afk": {
+            "AFK_DESC": "Sizi AFK edər.",
+            "IM_AFK": "*Artığ AFK’yam!*",
+            "IM_AFK_NOMD": "Artığ AFK’yam!",
+            "REASON": "Səbəb",
+            "LAST_SEEN": "Son görülmə",
+            "IM_NOT_AFK": "```Artığ AFK deyiləm!```",
+            "AFK_TEXT": "```Bip bop! Bu bir bot. Sahibim hal hazırda burda deyil.```",
+            "AFK_TEXT_NOMD": "Bip bop! Bu bir bot. Sahibim hal hazırda burda deyil.",
+            "HOUR": "saat",
+            "MINUTE": "dəqiqə",
+            "SECOND": "saniyə"
+        },
+        "evaluators": {
+            "TERM_DESC": "Server’də shellində əmr işlətməyinizə imkan verər.",
+            "GIVE_ME_CODE": "*Mənə bir kod ver!*"
+        },
+        "filters": {
+            "FILTER_DESC": "Filter əlavə edər. Yazdığın filter'i biri yazsa, yazdığınız cavabı göndərər. Əgər sadəcə filter yazsanız, yazılan filter'ləri göstərər.",
+            "NO_FILTER": "*❌ Bu grupda filter yoxdur!*",
+            "FILTERS": "*🔎 Bu söhbətdəki filter'ləriniz:*",
+            "NEED_REPLY": "*❌ Zəhmət olmasa cavab yazın!*\n*Nümunə:*",
+            "FILTERED": "*✅* ```{}``` *filter'i müvəffəqiyyətlə yazıldı!*",
+            "STOP_DESC": "Əlavə etdiyiniz filter'i dayandırar.",
+            "NEED_FILTER": "*❌ Zəhmət olmasa filter yazın!*\n*Nümunə:*",
+            "ALREADY_NO_FILTER": "*❌ Onsuzda belə bir filter yoxdur!*",
+            "DELETED": "*✅ Filter'iniz müvəffəqiyyətlə silindi!*"
+        },
+        "greetings": {
+            "WELCOME_DESC": "Xoşgəldin mesajını tənzimləyər. Əgər mesaj yazmazsanız xoşgəldin mesajını göstərər.",
+            "NOT_SET_WELCOME": "*Xoşgəldin mesajını tənzimləməmisiniz!*\n**Tənzimləmək üçün:** ```.welcome \"xoşgəldin mesajınız\"```",
+            "WELCOME_ALREADY_SETTED": "*✅ Xoşgəldin mesajı tənzimləndi!*\n*Mesaj:* ```",
+            "NEED_WELCOME_TEXT": "*Xoşgəldin mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.welcome \"XOŞGƏLDİN!\"```",
+            "WELCOME_DELETED": "*✅ Xoşgəldin mesajınız müvəffəqiyyətlə silindi!*",
+            "WELCOME_SETTED": "*✅ Xoşgəldin mesajı müvəffəqiyyətlə redaktə olundu!*",
+            "GOODBYE_DESC": "Sağollaşma mesajı əlavə edər. Əgər mesaj yazmasanız sağollaşma mesajını göstərər.",
+            "NOT_SET_GOODBYE": "*Sağollaşma mesajını tənzimləmədiniz!*\n*Tənzimləmək üçün:* ``.goodbye \"Sağollaşma mesajınız\"```",
+            "GOODBYE_ALREADY_SETTED": "*✅ Sağollaşma mesajı tənzimlənib!*\n*Mesaj:* ```",
+            "NEED_GOODBYE_TEXT": "*Sağollaşma mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.goodbye \"Görüşənədək!\"```",
+            "GOODBYE_DELETED": "*✅ Sağollaşma mesajı müvəffəqiyyətlə silindi!*",
+            "GOODBYE_SETTED": "*✅ Sağollaşma mesajı müvəffəqiyyətlə düzəldildi!*"
+        },
+        "profile": {
+            "KICKME_DESC": "Yazdığınız grupdan sizi çıxardar.",
+            "KICKME": "```Görüşənədək! Mən gedirəm 🤠```",
+            "PP_DESC": "Cavabladığınız şəkili profil şəkliniz edər.",
+            "NEED_PHOTO": "*Mənə bir şəkil ver!*",
+            "PPING": "```Profil şəkili dəyişdirilir...```"
+        },
+        "removebg": {
+            "REMOVEBG_DESC": "Şəklin arxa-planını silər.",
+            "NEED_PHOTO": "*Mənə bir şəkil ver!*",
+            "NO_API_KEY": "*API Key'iniz yoxdur!*\nremove.bg adresindən alabilərsiniz.",
+            "RBGING": "```Arxaplan silinir...``"
+        },
+        "scrapers": {
+            "TRANSLATE_DESC": "Google tərcümə ilə tərcümə edər. Bir mesaja cavab verməyiniz lazımdır.",
+            "TRANSLATE_USAGE": ".trt tr it (Türkçədən İtalyancaya tərcümə)",
+            "NEED_REPLY": "```Xaiş edirəm bir mesaja cavap verin!```",
+            "LANG": "Dil",
+            "FROM": "Tərcümə edilən dil",
+            "RESULT": "Tərcümə",
+            "TRANSLATE_ERROR": "*❌ Tərcümədə bir xəta başverdi!*",
+            "CURRENCY_ERROR": "```Söz düzümü xətası! Nümunə: .currency 1 TRY USD```",
+            "INVALID_CURRENCY": "```Valyuta konvertasiyası uğursuz oldu, səhv valutya yazdınız!```",
+            "UNKNOWN_ERROR": "```Xəta baş verdi, valyuta çevrilməsi uğursuz oldu!```",
+            "TTS_DESC": "Yazıyı səsə çevirər.",
+            "TTS_ERROR": "```Xəta, cümlənizin nitq sintezi prosesdən keçmədi!```",
+            "SONG_DESC": "Yazdığınız musiqini yükləyər.",
+            "NEED_TEXT_SONG": "*Xaiş bir mahnı yazın!*\n*Nümunə:* ```.song flört - rasta baba```",
+            "NO_RESULT": "*Heçbir şey tapabilmədim :(*",
+            "DOWNLOADING_SONG": "```Mahnınız yüklənilir...```",
+            "UPLOADING_SONG": "```Mahnınız yüklənilir...```",
+            "VIDEO_DESC": "YouTube'dan Video yükləyər.",
+            "NEED_VIDEO": "*Xaiş bir Video adresi yazın!*\n*Nümunə:* ``.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
+            "DOWNLOADING_VIDEO": "```Videonuz yüklənilir...```",
+            "UPLOADING_VIDEO": "```Videonuz yüklənilir...```",
+            "YT_DESC": "YouTube'dan axtarış edər.",
+            "NEED_WORDS": "```Xahiş edirəm bir neçə söz yazın!```",
+            "GETTING_VIDEOS": "```Videoları gətirirəm```",
+            "NOT_FOUND": "*Heçbir şey tapabilmədim :(*"
+        },
+        "sticker": {
+            "STICKER_DESC": "Cavap verdiyiniz şəkili vəya videoyu Sticker çevirin.",
+            "NEED_REPLY": "*Bir fotoya vəya videoya cavab verin!*",
+            "DOWNLOADING": "```Medya yüklənilir və sticker'ə çevrilir...```"
+        },
+        "system_stats": {
+            "ALIVE_DESC": "Bot işləyir mi?",
+            "SYSD_DESC": "Sistem xüsusiyyətlərini deyər."
+        },
+        "tagall": {
+            "TAGALL_DESC": "Grupdaki hərkəsi etiketləyər."
+        },
+        "updater": {
+            "UPDATER_DESC": "Yenilənmələri axtarar.",
+            "UPDATE": "*Botunuz tamamilə yenidir!*",
+            "NEW_UPDATE": "*Bot üçün yenilənmə mövcuddur!*\n\nDəyişikliklər:\n```",
+            "UPDATE_NOW_DESC": "Yenilənməni edər.",
+            "UPDATING": "_Yenilənir..._",
+            "INVALID_HEROKU": "*❌ Heroku məlumatlarınız yanlışdır!*",
+            "UPDATED": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*",
+            "UPDATED_LOCAL": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*\n_Dəyişikliklər üçün yenidən başlatmalısınız._"
+        },
+        "weather": {
+            "WEATHER_DESC": "Hava şəraitini gətirər.",
+            "NEED_LOCATION": "*Xaiş edilir bir yer yazın!*\n*Nümunə:* ```.weather Bakı```",
+            "LOCATION": "Yer",
+            "TEMP": "İstilik",
+            "DESC": "Açıqlama",
+            "HUMI": "Nəmişlik",
+            "WIND": "Külək sürəti",
+            "CLOUD": "Bulud",
+            "NOT_FOUND": "```Belə bir şəhər tapa bilmədim 😣 ```"
+        },
+        "web": {
+            "SPEEDTEST_DESC": "Yükləmə və endirmə sürətini ölçər.",
+            "SPEEDTESTING": "```Sürəti testi edirəm... ```",
+            "SPEEDTEST_RESULT": "*Sürəti testi elədim!*",
+            "UPLOAD": "Yükləmə",
+            "DOWNLOAD": "Endirmə",
+            "PING_DESC": "Ping'inizi ölçər."
+        }
+    }
+}
