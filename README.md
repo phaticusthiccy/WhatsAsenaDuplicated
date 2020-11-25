@@ -16,7 +16,7 @@
 ![Docker Pulls](https://img.shields.io/docker/pulls/fusuf/whatsasena?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/fusuf/whatsasena?style=flat-square)
 
 ## 🇬🇧 English Support 
-As of version 0.8, we added English language support. When deploying Heroku, only write `en` to LANGUAGE.
+As of version 0.8, we added English language support. When deploying Heroku, only write `EN` to LANGUAGE. [Also for support & help please come our Telegram group.](https://t.me/AsenaSupport)
 
 > [Install Guide](https://github.com/Quiec/WhatsAsena/wiki/Set-Up)
 
