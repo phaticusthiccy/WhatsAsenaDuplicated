@@ -15,7 +15,7 @@
         "LANGUAGE": {
             "description": "Botun dili. Bot language. Azerice => az, English => en, Türkçe => tr",
             "required": true,
-            "value": "tr"
+            "value": "TR"
         },
         "HANDLERS": {
             "description": "Komutlar için.",
