@@ -13,7 +13,14 @@
 </p>
 
 ----
-![Docker Pulls](https://img.shields.io/docker/pulls/fusuf/WhatsAsena?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/fusuf/WhatsAsena?style=flat-square)
+![Docker Pulls](https://img.shields.io/docker/pulls/fusuf/whatsasena?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/fusuf/whatsasena?style=flat-square)
+
+## 🇬🇧 English Support 
+As of version 0.8, we added English language support. When deploying Heroku, only write `en` to LANGUAGE.
+
+> [Install Guide](https://github.com/Quiec/WhatsAsena/wiki/Set-Up)
+
+> Həm də Azərbaycan dilində AZ yazmaq kifayətdir.
 
 ## 🔎 WhatsAsena nedir?
 **WhatsAsena,** [Yusuf Usta](https://github.com/Quiec) tarafından yazılmış WhatsApp yardımcı bir bottur. Hesabınıza giriş yapmaz; WhatsApp Web API üzerine yazılmıştır.
