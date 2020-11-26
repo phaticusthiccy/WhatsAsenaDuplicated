@@ -13,7 +13,7 @@
             "required": true
         },
         "LANGUAGE": {
-            "description": "Botun dili. Bot language. Azerice => az, English => en, Türkçe => tr",
+            "description": "Botun dili. Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml",
             "required": true,
             "value": "TR"
         },
@@ -46,7 +46,7 @@
             "value": "false"
         },
         "REMOVE_BG_API_KEY": {
-            "description": "Fotoğrafların arkaplanını kaldırır.",
+            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
             "required": false
         },
         "NO_ONLINE": {

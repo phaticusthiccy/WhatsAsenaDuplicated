@@ -22,6 +22,8 @@ As of version 0.8, we added English language support. When deploying Heroku, onl
 
 > Həm də Azərbaycan dilində AZ yazmaq kifayətdir.
 
+> [You can translate other languages from Crowdin](https://crowdin.com/project/whatsasena)
+
 ## 🔎 WhatsAsena nedir?
 **WhatsAsena,** [Yusuf Usta](https://github.com/Quiec) tarafından yazılmış WhatsApp yardımcı bir bottur. Hesabınıza giriş yapmaz; WhatsApp Web API üzerine yazılmıştır.
 

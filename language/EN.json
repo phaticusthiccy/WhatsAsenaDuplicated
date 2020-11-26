@@ -66,7 +66,7 @@
             "WELCOME_SETTED": "*✅ Welcome message has been set successfully!*",
             "GOODBYE_DESC": "Sets the goodbye message. If you leave blank, it show's the goodbye message.",
             "NOT_SET_GOODBYE": "*You didn't set a goodbye message!*\n*To set:* ```.goodbye Your Goodbye Message```",
-            "GOODBYE_ALREADY_SETTED": "*✅ Welcome message has been set.!*\n*Message:* ```",
+            "GOODBYE_ALREADY_SETTED": "*✅ Goodbye message has been set.!*\n*Message:* ```",
             "NEED_GOODBYE_TEXT": "*You must write a message to set up the goodbye message.*\n*Example:* ```.goodbye Goodbye!```",
             "GOODBYE_DELETED": "*✅ Goodbye message has been deleted successfully!*",
             "GOODBYE_SETTED": "*✅ Goodbye message has been setted successfully!*"
