@@ -34,6 +34,8 @@ const spotifyApi = new SpotifyWebApi({
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
+const wiki = require('wikijs').default;
+
 Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
     if (!message.reply_message) {
         return await message.reply(Lang.NEED_REPLY);
@@ -192,5 +194,17 @@ Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async
     });
 
     await message.sendMessage(mesaj);
+    await reply.delete();
+}));
+
+Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_WORDS);    
+    var reply = await message.reply(Lang.SEARCHING);
+
+    var arama = await wiki({ apiUrl: 'https://' + config.LANG + '.wikipedia.org/w/api.php' })
+        .page(match[1]);
+
+    var info = await arama.rawContent();
+    await message.reply(info);
     await reply.delete();
 }));

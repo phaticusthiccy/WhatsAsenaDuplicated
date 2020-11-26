@@ -109,7 +109,9 @@
             "YT_DESC": "YouTube'dan axtarış edər.",
             "NEED_WORDS": "```Xahiş edirəm bir neçə söz yazın!```",
             "GETTING_VIDEOS": "```Videoları gətirirəm```",
-            "NOT_FOUND": "*Heçbir şey tapabilmədim :(*"
+            "NOT_FOUND": "*Heçbir şey tapabilmədim :(*",
+            "SEARCHING": "*🔎 İstintaq...*",
+            "WIKI_DESC": "Vikipediyada axtarış aparır."
         },
         "sticker": {
             "STICKER_DESC": "Cavap verdiyiniz şəkili vəya videoyu Sticker çevirin.",

@@ -109,7 +109,9 @@
             "YT_DESC": "It searchs on YouTube.",
             "NEED_WORDS": "```Please write a few words!```",
             "GETTING_VIDEOS": "```I'm bringing videos...```",
-            "NOT_FOUND": "*I couldn't find anything :(*"
+            "NOT_FOUND": "*I couldn't find anything :(*",
+            "SEARCHING": "*🔎 Researching...*",
+            "WIKI_DESC": "Searches Wikipedia."
         },
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",

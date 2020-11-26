@@ -109,7 +109,9 @@
             "YT_DESC": "Youtubeda arama yapar.",
             "NEED_WORDS": "```Lütfen birkaç kelime yazın!```",
             "GETTING_VIDEOS": "```Videolar getiriyorum...```",
-            "NOT_FOUND": "*Hiçbir şey bulamadım :(*"
+            "NOT_FOUND": "*Hiçbir şey bulamadım :(*",
+            "SEARCHING": "*🔎 Araştırılıyor...*",
+            "WIKI_DESC": "Wikipedia'da arama yapar."
         },
         "sticker": {
             "STICKER_DESC": "Yanıt verdiğiniz fotoğraf veya videoyu sticker yapın.",

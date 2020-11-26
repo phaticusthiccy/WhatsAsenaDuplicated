@@ -18,7 +18,7 @@ const Lang = Language.getString('sticker');
 
 Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
-    var info = await message.sendMessage(Lang.DOWNLOADING);
+    await message.sendMessage(Lang.DOWNLOADING);
     
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
@@ -44,6 +44,5 @@ Asena.addCommand({pattern: 'sticker', fromMe: true, desc: Lang.STICKER_DESC}, (a
         .save('sticker.webp')
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
-            await info.delete();
         });
 }));
