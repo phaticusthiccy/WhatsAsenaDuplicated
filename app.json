@@ -12,6 +12,10 @@
             "description": "Qr.Js ile oluşturduğunuz özel session kodu.",
             "required": true
         },
+        "SUDO": {
+            "description": "Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
+            "required": false
+        },
         "LANGUAGE": {
             "description": "Botun dili. Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml",
             "required": true,
