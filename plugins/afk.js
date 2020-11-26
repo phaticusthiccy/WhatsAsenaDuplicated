@@ -57,7 +57,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
 }));
 
 Asena.addCommand({on: 'text', fromMe: true, deleteCommand: false}, (async (message, match) => {
-    if (AFK.isAfk && !message.message.includes(Lang.IM_AFK_NOMD) && !message.message.includes(Lang.AFK_TEXT_NOMD) &&  !message.message.includes('*-- HATA RAPORU [WHATSASENA] --*')) {
+    if (AFK.isAfk && !message.message.includes(Lang.IM_AFK_NOMD) && !message.message.includes(Lang.AFK_TEXT_NOMD) &&  !message.message.includes('*-- HATA RAPORU [WHATSASENA] --*') && !message.message.includes('ERROR REPORT [WHATSASENA]')) {
         AFK.lastseen = 0;
         AFK.reason = false;
         AFK.isAfk = false;
