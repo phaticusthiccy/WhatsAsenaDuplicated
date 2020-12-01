@@ -46,6 +46,11 @@
             "TERM_DESC": "Server’də shellində əmr işlətməyinizə imkan verər.",
             "GIVE_ME_CODE": "*Mənə bir kod ver!*"
         },
+        "nekobin": {
+            "NEKO_DESC": "Cavablandırılan mesajlar nekobin.com saytına əlavə olunacaq",
+            "NEED_REPLY": "```Xaiş edirəm bir mesaja cavap verin!```",
+            "MUST_TEXT": "```Cavab mətn olmalıdır```"
+        },
         "filters": {
             "FILTER_DESC": "Filter əlavə edər. Yazdığın filter'i biri yazsa, yazdığınız cavabı göndərər. Əgər sadəcə filter yazsanız, yazılan filter'ləri göstərər.",
             "NO_FILTER": "*❌ Bu grupda filter yoxdur!*",

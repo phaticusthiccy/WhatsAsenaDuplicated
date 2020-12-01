@@ -46,6 +46,11 @@
             "TERM_DESC": "Sunucuda shellinde komut çalıştırmanıza imkan tanır.",
             "GIVE_ME_CODE": "*Bana bir kod ver!*"
         },
+        "nekobin": {
+            "NEKO_DESC": "Cevaplanan mesajlar nekobin.com'a eklenecektir.",
+            "NEED_REPLY": "```Lütfen bir mesaja yanıt verin!```",
+            "MUST_TEXT": "```Lütfen herhangi bir mesajı yanıtlayın```"
+        },
         "filters": {
             "FILTER_DESC": "Filtre ekler. Yazdığınız filtreyi birisi yazarsa yazdığınıı cevabı gönderir. Eğer sadece filter yazarsanız eklediğiniz filtreleri getirir.",
             "NO_FILTER": "*❌ Bu sohbette hiç filter yok!*",

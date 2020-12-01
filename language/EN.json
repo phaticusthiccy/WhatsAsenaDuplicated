@@ -46,6 +46,11 @@
             "TERM_DESC": "Allows to run the command on the server's shell.",
             "GIVE_ME_CODE": "*Give me a code!*"
         },
+        "nekobin": {
+            "NEKO_DESC": "Replied messages will be added to nekobin.com",
+            "NEED_REPLY": "```Please reply to any message!```",
+            "MUST_TEXT": "```The reply must be a text```"
+        },
         "filters": {
             "FILTER_DESC": "It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",
             "NO_FILTER": "*❌ There are no filters in this chat!*",
