@@ -118,7 +118,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
                 var response = await got(plugin.dataValues.url);
                 if (response.statusCode == 200) {
                     fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
-
+                    require('./plugins/' + plugin.dataValues.name + '.js');
                 }     
             }
         });
