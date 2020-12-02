@@ -3,24 +3,24 @@
   <h1>🐺 WhatsAsena</h1>
 </div>
 <p align="center">
-    WhatsAsena project - Makes it easy and fun to use Whatsapp. Actually first userbot for Whatsapp
+    WhatsAsena project - Makes it easy and fun to use Whatsapp. Also first userbot for Whatsapp
     <br>
         Reserved |
         Reserved |
-        <a href="https://t.me/WHATSASENA">Telegram Kanalı</a> |
-        <a href="https://t.me/AsenaSupport">Telegram Grubu</a> |
+        <a href="https://t.me/WHATSASENA">Telegram Channel</a> |
+        <a href="https://t.me/AsenaSupport">Telegram Group</a> |
     <br>
 </p>
 
 ----
 ![Docker Pulls](https://img.shields.io/docker/pulls/fusuf/whatsasena?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/fusuf/whatsasena?style=flat-square)
 
-## 🇬🇧 English Support 
-As of version 0.8, we added English language support. When deploying Heroku, only write `EN` to LANGUAGE. [Also for support & help please come our Telegram group.](https://t.me/AsenaSupport)
+## 📢 Guide
+> [Also for support & help please come our Telegram group.](https://t.me/AsenaSupport)
 
-> [Install Guide](https://github.com/Quiec/WhatsAsena/wiki/Set-Up)
+> [Install Guide/Kurulum Yardımcısı/Qurulum Müavin](https://github.com/Quiec/WhatsAsena/wiki)
 
-> Həm də Azərbaycan dilində AZ yazmaq kifayətdir.
+> [Video Guide](https://www.youtube.com/watch?v=029KmetlKPU)
 
 > [You can translate other languages from Crowdin](https://crowdin.com/project/whatsasena)
 
