@@ -57,6 +57,11 @@
             "description": "Çevrimiçi görünmek istemiyorsanız true yazın.",
             "required": false,
             "value": "true"
+        },
+        "COFFEEHOUSE_API_KEY": {
+            "description": "CoffeeHouse API Key. Need for Lydia. https://coffeehouse.intellivoid.net/",
+            "required": false,
+            "value": "true"
         }
     },
     "addons": [{
