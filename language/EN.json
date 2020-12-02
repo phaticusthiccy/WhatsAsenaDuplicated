@@ -7,7 +7,22 @@
         "_asena": {
             "COMMAND": "Command",
             "DESC": "Description",
-            "EXAMPLE": "Example"
+            "EXAMPLE": "Example",
+            "NOT_FOUND": "*I couldn't find a command like this*"
+        },
+        "_plugin": {
+            "INSTALL_DESC": "Plugin installs.",
+            "NEED_URL": "Please enter a URL! Example:",
+            "INVALID_URL": "```Please enter a valid url!```",
+            "INVALID_PLUGIN": "*❌ Your plugin is invalid!*\n*Error:*",
+            "INSTALLED": "*✅ Plugin has been successfully installed!*",
+            "PLUGIN_DESC": "Shows the plugins you have installed.",
+            "INSTALLED_FROM_REMOTE": "*Plugins you install externally:*",
+            "NO_PLUGIN": "*You have not installed any external plugins!*",
+            "REMOVE_DESC": "Removes the plugin.",
+            "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Maybe you have installed such a plugin, or maybe not. But it sure isn't right now.```",
+            "DELETED": "*✅ Module successfully deleted! You must restart for the changes to take effect.*"
         },
         "admin": {
             "BAN_DESC": "Ban someone in the group. Reply to message or tag a person to use command.",
@@ -27,7 +42,7 @@
             "UNMUTE_DESC": "Unmute the group chat. Anyone can send a message.",
             "UNMUTED": "```The group chat has unmuted!```",
             "INVITE_DESC": "Provides the group's invitation link.",
-            "INVITE": "` ` `Invitation link: ` ` `"
+            "INVITE": "```Invitation link: ```"
         },
         "afk": {
             "AFK_DESC": "It makes you AFK.",
@@ -47,9 +62,9 @@
             "GIVE_ME_CODE": "*Give me a code!*"
         },
         "nekobin": {
-            "NEKO_DESC": "Replied messages will be added to nekobin.com",
-            "NEED_REPLY": "```Please reply to any message!```",
-            "MUST_TEXT": "```The reply must be a text```"
+            "NEKO_DESC": "Replied messages will be added to nekobin.com.",
+            "NEED_REPLY": "```Please reply to a message!```",
+            "MUST_TEXT": "```Please reply to any message```"
         },
         "filters": {
             "FILTER_DESC": "It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",
@@ -71,10 +86,20 @@
             "WELCOME_SETTED": "*✅ Welcome message has been set successfully!*",
             "GOODBYE_DESC": "Sets the goodbye message. If you leave blank, it show's the goodbye message.",
             "NOT_SET_GOODBYE": "*You didn't set a goodbye message!*\n*To set:* ```.goodbye Your Goodbye Message```",
-            "GOODBYE_ALREADY_SETTED": "*✅ Goodbye message has been set.!*\n*Message:* ```",
+            "GOODBYE_ALREADY_SETTED": "*✅ Goodbye message has been set!*\n*Message:* ```",
             "NEED_GOODBYE_TEXT": "*You must write a message to set up the goodbye message.*\n*Example:* ```.goodbye Goodbye!```",
             "GOODBYE_DELETED": "*✅ Goodbye message has been deleted successfully!*",
             "GOODBYE_SETTED": "*✅ Goodbye message has been setted successfully!*"
+        },
+        "lydia": {
+            "ADDLYDIA_DESC": "Activates Lydia for the user.",
+            "NEED_REPLY": "```Please respond to a user's message!```",
+            "COFFEEHOUSE": "```You haven't defined the Coffehouse API Key! ```",
+            "ENABLED_LYDIA": "```Lydia has been activated for this user!```",
+            "RMLYDIA_DESC": "Makes Lydia disabled for the user.",
+            "ALREADY_EMPTY": "```Your user list is already empty!```",
+            "NOT_ADDED": "```You haven't added this user already!```",
+            "DISABLED": "```Lydia has been disabled for this user!```"
         },
         "profile": {
             "KICKME_DESC": "It kicks you grop you are.",
@@ -115,8 +140,10 @@
             "NEED_WORDS": "```Please write a few words!```",
             "GETTING_VIDEOS": "```I'm bringing videos...```",
             "NOT_FOUND": "*I couldn't find anything :(*",
-            "SEARCHING": "*🔎 Researching...*",
-            "WIKI_DESC": "Searches Wikipedia."
+            "SEARCHING": "* 🔎 Searching...*",
+            "WIKI_DESC": "Searches on Wikipedia.",
+            "IMG_DESC": "Takes Google pics.",
+            "IMG": "Uploading photo ```{}``` number ```{} `..."
         },
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",
@@ -137,7 +164,7 @@
             "UPDATE_NOW_DESC": "It makes updates.",
             "UPDATING": "_Updating..._",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
-            "UPDATED": "✅ Update was successful!*",
+            "UPDATED": "*✅ Update was succesfull!*",
             "UPDATED_LOCAL": "*✅ Update was successful! *\n_You must restart for changes._"
         },
         "weather": {

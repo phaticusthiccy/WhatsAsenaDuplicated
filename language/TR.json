@@ -7,7 +7,22 @@
         "_asena": {
             "COMMAND": "Komut",
             "DESC": "Açıklama",
-            "EXAMPLE": "Örnek"
+            "EXAMPLE": "Örnek",
+            "NOT_FOUND": "*Böyle bir komut bulamadım!*"
+        },
+        "_plugin": {
+            "INSTALL_DESC": "Plugin yükler.",
+            "NEED_URL": "Lütfen bir URL giriniz! Örnek:",
+            "INVALID_URL": "```Lütfen bir geçerli URL giriniz!```",
+            "INVALID_PLUGIN": "*❌ Plugininiz hatalı!*\n*Hata:*",
+            "INSTALLED": "*✅ Plugin başarılı bir şekilde yüklendi!*",
+            "PLUGIN_DESC": "Yüklediğiniz pluginleri gösterir.",
+            "INSTALLED_FROM_REMOTE": "*Dışarıdan yüklediğiniz pluginler:*\n",
+            "NO_PLUGIN": "*Dışarıdan hiç plugin yüklememişsiniz!*",
+            "REMOVE_DESC": "Plugin kaldırır.",
+            "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
+            "DELETED": "*✅ Modül başarıyla silindi! Değişikliklerin uygulanması için yeniden başlatmanız gerekmektedir.*"
         },
         "admin": {
             "BAN_DESC": "Gruptan kişi banlar. Yanıt verin ya da komutun yanına kişiyi etiketleyin.",
@@ -76,6 +91,16 @@
             "GOODBYE_DELETED": "*✅ Görüşürüz mesajını başarıyla silindi!*",
             "GOODBYE_SETTED": "*✅ Görüşürüz mesajını başarıyla ayarlandı!*"
         },
+        "lydia": {
+            "ADDLYDIA_DESC": "Lydia botunu kullanıcı için aktif eder.",
+            "NEED_REPLY": "```Lütfen bir kullanıcının mesajına yanıt verin!```",
+            "COFFEEHOUSE": "```Coffehouse API Key tanımlamamışsınız!```",
+            "ENABLED_LYDIA": "```Lydia bu kullanıcı için aktif edildi!```",
+            "RMLYDIA_DESC": "Lydia botunu kullanıcı için devre dışı yapar.",
+            "ALREADY_EMPTY": "```Zaten kullanıcı listeniz boş!```",
+            "NOT_ADDED": "```Zaten bu kullanıcıyı eklememişsiniz!```",
+            "DISABLED": "```Lydia bu kullanıcı için devredışı bırakıldı!``"
+        },
         "profile": {
             "KICKME_DESC": "Yazdığınız gruptan sizi çıkarır.",
             "KICKME": "```Güle Güle! Ben gidiyorum 🤠```",
@@ -116,7 +141,9 @@
             "GETTING_VIDEOS": "```Videolar getiriyorum...```",
             "NOT_FOUND": "*Hiçbir şey bulamadım :(*",
             "SEARCHING": "*🔎 Araştırılıyor...*",
-            "WIKI_DESC": "Wikipedia'da arama yapar."
+            "WIKI_DESC": "Wikipedia'da arama yapar.",
+            "IMG_DESC": "Google resimler fotoğraf çeker.",
+            "IMG": "```{}``` adet ```{}``` fotoğrafı yükleniyor..."
         },
         "sticker": {
             "STICKER_DESC": "Yanıt verdiğiniz fotoğraf veya videoyu sticker yapın.",
@@ -137,7 +164,7 @@
             "UPDATE_NOW_DESC": "Güncelleme yapar.",
             "UPDATING": "_Güncelleme yapılıyor..._",
             "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
-            "UPDATED": "✅ Güncelleme başarılı oldu!*",
+            "UPDATED": "*✅ Güncelleme başarılı oldu!*",
             "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*\n_Değişiklikler yeniden başlatmanız gerekmektedir._"
         },
         "weather": {

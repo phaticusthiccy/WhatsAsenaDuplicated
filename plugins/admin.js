@@ -40,7 +40,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
     }
 }));
 
-Asena.addCommand({pattern: 'add ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC, usage: '.add 905xxxxxxxxx'}, (async (message, match) => {  
+Asena.addCommand({pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC, usage: '.add 905xxxxxxxxx'}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.sendMessage(Lang.IM_NOT_ADMIN);
     
@@ -125,7 +125,7 @@ Asena.addCommand({pattern: 'unmute ?(.*)', fromMe: true, onlyGroup: true, desc: 
     var im = await checkImAdmin(message);
     if (!im) return await message.sendMessage(Lang.IM_NOT_ADMIN);
     await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
-    await message.sendMessage('```Grup sohbeti açıldı!```');
+    await message.sendMessage(Lang.UNMUTED);
 }));
 
 Asena.addCommand({pattern: 'invite ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    

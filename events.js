@@ -39,7 +39,8 @@ function addCommand(info, func) {
         infos.pattern = new RegExp((info['handler'] === undefined || info['handler'] === true ? config.HANDLERS : '') + info.pattern, (info['flags'] !== undefined ? info['flags'] : ''));
     }
 
-    return Commands.push(infos);
+    Commands.push(infos);
+    return infos;
 }
 
 module.exports = {

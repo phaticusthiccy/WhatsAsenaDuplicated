@@ -16,7 +16,7 @@ const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.
 //============================== TTS ==================================================
 const fs = require('fs');
 const https = require('https');
-const googleTTS = require('google-tts-api');
+const googleTTS = require('google-translate-tts');
 //=====================================================================================
 //============================== YOUTUBE ==============================================
 const ytdl = require('ytdl-core');
@@ -35,6 +35,7 @@ const Language = require('../language');
 const Lang = Language.getString('scrapers');
 
 const wiki = require('wikijs').default;
+var gis = require('g-i-s');
 
 Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
     if (!message.reply_message) {
@@ -93,35 +94,11 @@ Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (asyn
         ttsMessage = ttsMessage.replace(speedMatch[0], "")
     }
     
-    let url = await googleTTS(ttsMessage, LANG, SPEED)
-    const filePath = "translate_tts.mp3"
-    const file = fs.createWriteStream(filePath);
-    const request = https.get(url, async response => {
-        if (response.statusCode !== 200) {
-            await message.reply(Lang.TTS_ERROR)
-            fs.unlink(filePath, async () => {})
-            return;
-        }
-        fileInfo = {
-            mime: response.headers['content-type'],
-            size: parseInt(response.headers['content-length'], 10),
-        };
-        response.pipe(file);
+    var buffer = await googleTTS.synthesize({
+        text: ttsMessage,
+        voice: LANG
     });
-    file.on('finish', async () => {
-        const buffer = fs.readFileSync(filePath)
-        await message.sendMessage(buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
-        fs.unlink(filePath, async () => {})
-    });
-    let error = async function(err) {
-        console.log(err)
-        fs.unlink(filePath, async () => {
-            await message.reply(Lang.TTS_ERROR)
-        });
-    }
-    request.on('error', error)
-    file.on('error', error)
-    request.end();
+    await message.sendMessage(buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
 }));
 
 Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
@@ -207,4 +184,21 @@ Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (a
     var info = await arama.rawContent();
     await message.reply(info);
     await reply.delete();
+}));
+
+Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
+    if (match[1] === '') return await message.sendMessage(Lang.NEED_WORDS);    
+
+    gis(match[1], async (error, result) => {
+        for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
+            var get = got(result[i].url);
+            var stream = get.buffer();
+            
+            stream.then(async (image) => {
+                await message.sendMessage(image, MessageType.image);
+            });
+        }
+
+        message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]))
+    });
 }));

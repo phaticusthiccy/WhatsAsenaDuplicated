@@ -7,7 +7,22 @@
         "_asena": {
             "COMMAND": "Əmr",
             "DESC": "Açığlama",
-            "EXAMPLE": "Nümunə"
+            "EXAMPLE": "Nümunə",
+            "NOT_FOUND": "*Belə bir əmr tapa bilmədim*"
+        },
+        "_plugin": {
+            "INSTALL_DESC": "Plugin quraşdırır.",
+            "NEED_URL": "Zəhmət olmasa bir URL daxil edin! Nümunə:",
+            "INVALID_URL": "```Xahiş edirəm etibarlı bir URL daxil edin!```",
+            "INVALID_PLUGIN": "*❌ Plagininiz səhvdir!*\n*Xeta:*",
+            "INSTALLED": "*✅ Plugin uğurla quraşdırıldı!*",
+            "PLUGIN_DESC": "Qurduğunuz plaginləri göstərir.",
+            "INSTALLED_FROM_REMOTE": "*Xaricdən qurduğunuz plaginlər:*\n",
+            "NO_PLUGIN": "*Xarici plaginlər quraşdırmamışsınız!*",
+            "REMOVE_DESC": "Plugin çıxarır.",
+            "NEED_PLUGIN": "```Zəhmət olmasa bir Plugin daxil edin! Nümunə: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Bəlkə belə bir plagin quraşdırmısınız, ya da yox. Ancaq əmin deyil ki, indi deyil.```",
+            "DELETED": "*✅ Modul uğurla silindi! Dəyişikliklərin qüvvəyə minməsi üçün yenidən başlamalısınız..*"
         },
         "admin": {
             "BAN_DESC": "Grupdan şəxsi banlayır. Cavap verin (reply) yada əmrin yanına şəxs adı yazın",
@@ -27,7 +42,7 @@
             "UNMUTE_DESC": "Grup söhbətini açar. Hərkəs mesaj göndərə bilər.",
             "UNMUTED": "```Grup söhbəti açıldı!```",
             "INVITE_DESC": "Grupun dəvət linkini gətirir.",
-            "INVITE": "``` Dəvət linki: ```"
+            "INVITE": "```Dəvət linki:```"
         },
         "afk": {
             "AFK_DESC": "Sizi AFK edər.",
@@ -83,6 +98,16 @@
             "NEED_PHOTO": "*Mənə bir şəkil ver!*",
             "PPING": "```Profil şəkili dəyişdirilir...```"
         },
+        "lydia": {
+            "ADDLYDIA_DESC": "Lydia botu aktivləşdirir.",
+            "NEED_REPLY": "```Zəhmət olmasa bir istifadəçinin mesajına cavab verin!```",
+            "COFFEEHOUSE": "```Coffehouse API Açarını təyin etməmisiniz!```",
+            "ENABLED_LYDIA": "```Lydia bu istifadəçi üçün aktivləşdirilib!```",
+            "RMLYDIA_DESC": "Lydia botunu istifadəçi üçün deaktiv edir.",
+            "ALREADY_EMPTY": "```İstifadəçi siyahınız artıq boşdur!```",
+            "NOT_ADDED": "```Bu istifadəçini hələ əlavə etməmisiniz!```",
+            "DISABLED": "```Lydia bu istifadəçi üçün deaktiv edilmişdir!``"
+        },
         "removebg": {
             "REMOVEBG_DESC": "Şəklin arxa-planını silər.",
             "NEED_PHOTO": "*Mənə bir şəkil ver!*",
@@ -116,7 +141,9 @@
             "GETTING_VIDEOS": "```Videoları gətirirəm```",
             "NOT_FOUND": "*Heçbir şey tapabilmədim :(*",
             "SEARCHING": "*🔎 İstintaq...*",
-            "WIKI_DESC": "Vikipediyada axtarış aparır."
+            "WIKI_DESC": "Vikipediyada axtarış aparır.",
+            "IMG_DESC": "Google resimler fotoğraf çeker.",
+            "IMG": "```{}``` adet ```{}``` fotoğrafı yükleniyor..."
         },
         "sticker": {
             "STICKER_DESC": "Cavap verdiyiniz şəkili vəya videoyu Sticker çevirin.",

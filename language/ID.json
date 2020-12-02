@@ -1,0 +1,189 @@
+{
+    "__ASENAJSON__": true,
+    "LANGUAGE": "Indonesia",
+    "LANGCODE": "in",
+    "AUTHOR": "@todayisshitday(telegram)",
+    "STRINGS": {
+        "_asena": {
+            "COMMAND": "Perintah",
+            "DESC": "Deskripsi",
+            "EXAMPLE": "Contoh"
+        },
+        "_plugin": {
+            "INSTALL_DESC": "Plugin installs.",
+            "NEED_URL": "Please enter a URL! Example:",
+            "INVALID_URL": "```Please enter a valid url!```",
+            "INVALID_PLUGIN": "*❌ Your plugin is invalid!*\n*Error:*",
+            "INSTALLED": "*✅ Plugin has been successfully installed!*",
+            "PLUGIN_DESC": "Shows the plugins you have installed.",
+            "INSTALLED_FROM_REMOTE": "*Plugins you install externally:*",
+            "NO_PLUGIN": "*You have not installed any external plugins!*",
+            "REMOVE_DESC": "Removes the plugin.",
+            "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Maybe you have installed such a plugin, or maybe not. But it sure isn't right now.```",
+            "DELETED": "*✅ Module successfully deleted! You must restart for the changes to take effect.*"
+        },
+        "admin": {
+            "BAN_DESC": "Ban seseorang dalam grup. Balas pesan atau tandai seseorang untuk menggunakan perintah.",
+            "IM_NOT_ADMIN": "*Saya bukan admin di grup ini!*",
+            "BANNED": "dikeluarkan dari grup!",
+            "GIVE_ME_USER": "*Beri saya pengguna!*",
+            "ADD_DESC": "Menambahkan seseorang ke grup",
+            "ADDED": "ditambahkan ke grup!",
+            "ALREADY_PROMOTED": "```Bagaimana cara menjadikan seseorang admin yang sudah menjadi admin?```",
+            "PROMOTED": "```, peran admin telah diberikan!```",
+            "PROMOTE_DESC": "Menjadikan setiap orang sebagai admin.",
+            "DEMOTE_DESC": "Mengambil otoritas admin mana pun.",
+            "ALREADY_NOT_ADMIN": "```Bagaimana cara menjadikan seseorang admin yang sudah menjadi admin?```",
+            "DEMOTED": "```, telah diturunkan pangkatnya!```",
+            "MUTE_DESC": "Bisukan obrolan grup. Hanya admin yang bisa mengirim pesan.",
+            "MUTED": "```Obrolan grup dibisukan!```",
+            "UNMUTE_DESC": "Suarakan obrolan grup. Siapapun bisa mengirim pesan.",
+            "UNMUTED": "```Obrolan grup telah disuarakan!```",
+            "INVITE_DESC": "Memberikan tautan undangan grup.",
+            "INVITE": "```Tautan undangan:```"
+        },
+        "afk": {
+            "AFK_DESC": "Itu membuat Anda AFK.",
+            "IM_AFK": "*Saya AFK sekarang!*",
+            "IM_AFK_NOMD": "Saya AFK sekarang!",
+            "REASON": "Alasan",
+            "LAST_SEEN": "Terakhir dilihat",
+            "IM_NOT_AFK": "```Saya tidak lagi AFK!```",
+            "AFK_TEXT": "```Bip bop! Ini adalah bot. Pemilik saya tidak ada di sini saat ini.```",
+            "AFK_TEXT_NOMD": "Bip bop! Ini adalah bot. Pemilik saya tidak ada di sini saat ini.",
+            "HOUR": "jam",
+            "MINUTE": "menit",
+            "SECOND": "detik"
+        },
+        "evaluators": {
+            "TERM_DESC": "Memungkinkan untuk menjalankan perintah di shell server.",
+            "GIVE_ME_CODE": "*Beri aku kode!*"
+        },
+        "nekobin": {
+            "NEKO_DESC": "Replied messages will be added to nekobin.com.",
+            "NEED_REPLY": "```Please reply to a message!```",
+            "MUST_TEXT": "```Please reply to any message```"
+        },
+        "filters": {
+            "FILTER_DESC": "Itu menambahkan filter. Jika seseorang menulis filter Anda, itu mengirimkan jawabannya. Jika Anda hanya menulis .filter, itu menunjukkan daftar filter Anda.",
+            "NO_FILTER": "*❌ Tidak ada filter dalam obrolan ini!*",
+            "FILTERS": "*🔎 Filter Anda dalam obrolan ini::*",
+            "NEED_REPLY": "*❌ Silahkan ketik dibalasan!*\n*Contoh:*",
+            "FILTERED": "*✅ Berhasil disetel* ```{}``` *untuk filter!*",
+            "STOP_DESC": "Menghentikan filter yang Anda tambahkan sebelumnya.",
+            "NEED_FILTER": "*❌ Silahkan ketik dibalasan!*\n*Contoh:*",
+            "ALREADY_NO_FILTER": "*❌ Sudah tidak ada filter seperti ini!*",
+            "DELETED": "*✅ Filter berhasil dihapus!*"
+        },
+        "greetings": {
+            "WELCOME_DESC": "Ini Menyetel pesan selamat datang. Jika Anda membiarkannya kosong, itu menunjukkan pesan selamat datang.",
+            "NOT_SET_WELCOME": "*Anda belum menyetel pesan selamat datang.!*\n**Untuk menyetel:** ```.welcome Pesan selamat datang darimu```",
+            "WELCOME_ALREADY_SETTED": "*✅ Pesan selamat datang sudah disetel!*\n*Pesan:* ```",
+            "NEED_WELCOME_TEXT": "*Anda harus menulis pesan untuk Menyetel pesan selamat datang.*\n*Contoh:* ```.welcome Selamat Datang!```",
+            "WELCOME_DELETED": "*✅ Pesan selamat datang berhasil dihapus!*",
+            "WELCOME_SETTED": "*✅ Pesan selamat datang berhasil disetel!*",
+            "GOODBYE_DESC": "Menyetel pesan selamat tinggal. Jika Anda biarkan kosong, itu menunjukkan pesan selamat tinggal.",
+            "NOT_SET_GOODBYE": "*Anda tidak menyetel pesan selamat tinggal!*\n*Untuk menyetel:* ```.goodbye Pesan selamat tinggal darimu```",
+            "GOODBYE_ALREADY_SETTED": "*✅ Pesan selamat tinggal telah disetel.!*\n*Pesan:* ```",
+            "NEED_GOODBYE_TEXT": "*Anda harus menulis pesan untuk menyetel pesan selamat tinggal.*\n*Contoh:* ```.goodbye Selamat Tinggal!```",
+            "GOODBYE_DELETED": "*✅ Pesan selamat tinggal telah berhasil dihapus!*",
+            "GOODBYE_SETTED": "*✅ Pesan selamat tinggal telah berhasil disetel!*"
+        },
+        "lydia": {
+            "ADDLYDIA_DESC": "Activates Lydia for the user.",
+            "NEED_REPLY": "```Please respond to a user's message!```",
+            "COFFEEHOUSE": "```You haven't defined the Coffehouse API Key! ```",
+            "ENABLED_LYDIA": "```Lydia has been activated for this user!```",
+            "RMLYDIA_DESC": "Makes Lydia disabled for the user.",
+            "ALREADY_EMPTY": "```Your user list is already empty!```",
+            "NOT_ADDED": "```You haven't added this user already!```",
+            "DISABLED": "```Lydia has been disabled for this user!```"
+        },
+        "profile": {
+            "KICKME_DESC": "Menendangmu Keluar dari grup!",
+            "KICKME": "```Sampai jumpa! Saya pergi 🤠```",
+            "PP_DESC": "Menjadikan foto yang anda balas dengan menulis .pp sebagai foto profil anda.",
+            "NEED_PHOTO": "*Beri aku foto!*",
+            "PPING": "```Menyetel foto profil...```"
+        },
+        "removebg": {
+            "REMOVEBG_DESC": "Menghapus latar belakang foto.",
+            "NEED_PHOTO": "*Beri aku foto!*",
+            "NO_API_KEY": "*Kamu belum menyetel API key!*\nDapatkan disini: remove.bg.",
+            "RBGING": "```Menghapus latar belakang...```"
+        },
+        "scrapers": {
+            "TRANSLATE_DESC": "Diterjemahkan dengan Google Translate. Balas pesan apapun.",
+            "TRANSLATE_USAGE": ".trt en id (Dari Inggris ke Indonesia)",
+            "NEED_REPLY": "```Harap balas pesan apapun!```",
+            "LANG": "Bahasa",
+            "FROM": "Bahasa yang Diterjemahkan",
+            "RESULT": "Diterjemahkan",
+            "TRANSLATE_ERROR": "\"❌ Terjadi kesalahan dalam terjemahan!*",
+            "CURRENCY_ERROR": "```Kesalahan sintaks! Contoh: .currency 1 USD IDR```",
+            "INVALID_CURRENCY": "```Pengonversian mata uang gagal. Anda menulis mata uang yang salah!```",
+            "UNKNOWN_ERROR": "```Terjadi kesalahan. Pengonversian mata uang gagal!```",
+            "TTS_DESC": "Ini mengubah teks menjadi suara.",
+            "TTS_ERROR": "```Kesalahan, Contoh ucapan kalimat Anda tidak dapat dibuat!```",
+            "SONG_DESC": "Mengunggah lagu yang Anda tulis.",
+            "NEED_TEXT_SONG": "*Harap tulis sebuah lagu!*\n*Contoh:* ```.song matamu cover - stephanie poetri```",
+            "NO_RESULT": "*Saya tidak dapat menemukan apa pun :(*",
+            "DOWNLOADING_SONG": "```Mengunduh lagu Anda...```",
+            "UPLOADING_SONG": "```Mengunggah lagu Anda...```",
+            "VIDEO_DESC": "Unduh video dari YouTube.",
+            "NEED_VIDEO": "*Harap masukkan tautan video!*\n*Contoh:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
+            "DOWNLOADING_VIDEO": "```Mengunduh lagu Anda...```",
+            "UPLOADING_VIDEO": "```Mengunggah lagu Anda...```",
+            "YT_DESC": "Ini mencari di YouTube.",
+            "NEED_WORDS": "```Tolong tuliskan beberapa kata!```",
+            "GETTING_VIDEOS": "```Saya membawa video ...```",
+            "NOT_FOUND": "*Saya tidak dapat menemukan apa pun :(*",
+            "SEARCHING": "*🔎 Mencari ...*",
+            "WIKI_DESC": "Mencari di Wikipedia.",
+            "IMG_DESC": "Takes Google pics.",
+            "IMG": "Uploading photo ```{}``` number ```{} `..."
+        },
+        "sticker": {
+            "STICKER_DESC": "Ini mengubah foto atau video yang Anda balas dengan mengetik .sticker menjadi stiker.",
+            "NEED_REPLY": "*Balas ke foto atau video!*",
+            "DOWNLOADING": "```Mengunduh media & menjadikannya stiker...```"
+        },
+        "system_stats": {
+            "ALIVE_DESC": "Apakah bot berfungsi?",
+            "SYSD_DESC": "Menunjukkan properti sistem."
+        },
+        "tagall": {
+            "TAGALL_DESC": "Menandai semua orang di grup."
+        },
+        "updater": {
+            "UPDATER_DESC": "Periksa pembaruan.",
+            "UPDATE": "*Bot Anda benar-benar terbaru!*",
+            "NEW_UPDATE": "*Pembaruan baru tersedia untuk Bot!*\n\nPerubahan:\n```",
+            "UPDATE_NOW_DESC": "Itu membuat pembaruan.",
+            "UPDATING": "_Memperbarui..._", 
+            "INVALID_HEROKU": "*❌ Informasi Heroku Anda salah!*",
+            "UPDATED": "*✅ Pembaruan berhasil!*",
+            "UPDATED_LOCAL": "*✅ Pembaruan berhasil! *\n_Anda harus memulai ulang untuk perubahan._"
+        },
+        "weather": {
+            "WEATHER_DESC": "Menunjukkan cuaca.",
+            "NEED_LOCATION": "*Silakan tulis lokasinya!*\n*Contoh:* ```.weather Sukoharjo```",
+            "LOCATION": "Lokasi",
+            "TEMP": "Suhu",
+            "DESC": "Deskripsi",
+            "HUMI": "Kelembaban",
+            "WIND": "Kecepatan angin",
+            "CLOUD": "Awan",
+            "NOT_FOUND": "```Saya tidak bisa menemukan kota dengan nama ini. 😖```"
+        },
+        "web": {
+            "SPEEDTEST_DESC": "Menguji kecepatan Unduhan dan Unggahan.",
+            "SPEEDTESTING": "```Menguji kecepatan...```",
+            "SPEEDTEST_RESULT": "*Uji kecepatan selesai!*",
+            "UPLOAD": "Unggah",
+            "DOWNLOAD": "Unduh",
+            "PING_DESC": "Mengukur ping anda."
+        }
+    }
+}

@@ -15,12 +15,13 @@ async function whatsAsena () {
     const conn = new WAConnection();
     const Session = new StringSession();  
     conn.logger.level = 'warn';
-
+    conn.regenerateQRIntervalMs = 30000;
+    
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.italic('AsenaString Kodu Alıcı')}
 
-${chalk.blue.italic('ℹ️  WhatsApp\'a bağlanılıyor... Lütfen bekleyin.')}`);
+${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please wait.')}`);
     });
     
 
@@ -31,9 +32,7 @@ ${chalk.blue.italic('ℹ️  WhatsApp\'a bağlanılıyor... Lütfen bekleyin.')}
         );
         
         if (!fs.existsSync('config.env')) {
-            fs.writeFileSync('config.env', `
-ASENA_SESSION="${st}"
-            `);
+            fs.writeFileSync('config.env', `ASENA_SESSION="${st}"`);
         }
 
         console.log(
