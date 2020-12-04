@@ -1,0 +1,190 @@
+{
+    "__ASENAJSON__": true,
+    "LANGUAGE": "Español",
+    "LANGCODE": "es",
+    "AUTHOR": "Skueletor",
+    "STRINGS": {
+        "_asena": {
+            "COMMAND": "Comando",
+            "DESC": "Explicación",
+            "EXAMPLE": "Ejemplo",
+            "NOT_FOUND": "*¡No pude encontrar tal comando!*"
+        },
+        "_plugin": {
+            "INSTALL_DESC": "Instala complementos.",
+            "NEED_URL": "Introduzca una URL. Muestra:",
+            "INVALID_URL": "```¡Ingrese una URL válida!```",
+            "INVALID_PLUGIN": "*❌ ¡Tu plugin está defectuoso!*\n*Error:*",
+            "INSTALLED": "*✅ ¡El complemento se ha instalado correctamente!*",
+            "PLUGIN_DESC": "Muestra los complementos que ha instalado.",
+            "INSTALLED_FROM_REMOTE": "*Complementos instalados externamente:*",
+            "NO_PLUGIN": "*¡No ha instalado ningún complemento externo!*",
+            "REMOVE_DESC": "Elimina el complemento.",
+            "NEED_PLUGIN": "```Introduzca un complemento. Ejemplo: .plugin _ejemplo```",
+            "NOT_FOUND_PLUGIN": "```Tal vez haya instalado un complemento de este tipo, o tal vez no. Pero seguro que no ahora mismo.```",
+            "DELETED": "*✅ ¡Módulo eliminado correctamente! Debe reiniciar para que los cambios surtan efecto.*"
+        },
+        "admin": {
+            "BAN_DESC": "La persona del grupo prohibirá. (Responda o etiquete a la persona junto al comando).",
+            "IM_NOT_ADMIN": "*¡No soy un administrador en este grupo!*",
+            "BANNED": "Eliminado/a del grupo!",
+            "GIVE_ME_USER": "*¡Dame un usuario!*",
+            "ADD_DESC": "Agrega personas al grupo.",
+            "ADDED": "¡Añadido al grupo!",
+            "ALREADY_PROMOTED": "```¿Cómo hago para que alguien que ya sea administrador?```",
+            "PROMOTED": "```¡Hecho admin!```",
+            "PROMOTE_DESC": "Convierte a cualquier persona en administrador.",
+            "DEMOTE_DESC": "Reduce la autoridad de cualquier paso.",
+            "ALREADY_NOT_ADMIN": "```¿Cómo puedo desautorizar a alguien que aún no es administrador?```",
+            "DEMOTED": "```Se ha reducido la potencia!```",
+            "MUTE_DESC": "Chat del grupo cerrado. Ahora sólo los administradores pueden publicar mensajes.",
+            "MUTED": "```¡El chat está cerrado!```",
+            "UNMUTE_DESC": "El chat del grupo está abierto. Ahora cualquiera puede enviar un mensaje.",
+            "UNMUTED": "¡Se abrió el chat del grupo!",
+            "INVITE_DESC": "Trayendo el enlace de invitación del grupo...",
+            "INVITE": "```Enlace de invitación:```"
+        },
+        "afk": {
+            "AFK_DESC": "Te hace AFK (ausente).",
+            "IM_AFK": "*¡Estoy ausente ahora!*",
+            "IM_AFK_NOMD": "¡Estoy ausente ahora!",
+            "REASON": "Razón",
+            "LAST_SEEN": "Última vez visto",
+            "IM_NOT_AFK": "```¡Ya no estoy ausente!```",
+            "AFK_TEXT": "¡Bip, bop! Este es un barco. No estoy aquí ahora mismo.",
+            "AFK_TEXT_NOMD": "¡Bip, bop! Este es un barco. No estoy aquí ahora mismo.",
+            "HOUR": "Hora",
+            "MINUTE": "Minuto",
+            "SECOND": "Segundo"
+        },
+        "evaluators": {
+            "TERM_DESC": "Le permite ejecutar comandos en el shell del servidor.",
+            "GIVE_ME_CODE": "*¡Dame un código!*"
+        },
+        "nekobin": {
+            "NEKO_DESC": "Los mensajes respondidos se agregarán a nekobin.com.",
+            "NEED_REPLY": "```¡Responde a un mensaje!```",
+            "MUST_TEXT": "```Responde cualquier mensaje```"
+        },
+        "filters": {
+            "FILTER_DESC": "Agrega un filtro. Si alguien escribe el filtro que escribiste, envía la respuesta que escribiste. Si solo escribe filtro, devuelve los filtros que agregó.",
+            "NO_FILTER": "*❌ ¡No hay filtros en este chat!*",
+            "FILTERS": "*🔎 Tus filtros en este chat:*",
+            "NEED_REPLY": "*❌ ¡Escriba una respuesta!*\n*Ejemplo:*",
+            "FILTERED": "*✅ ¡El filtro* ```{}``` *se ha configurado correctamente!*",
+            "STOP_DESC": "Detiene el filtro que agregó.",
+            "NEED_FILTER": "*❌ ¡Escriba un filtro!*\n*Ejemplo:*",
+            "ALREADY_NO_FILTER": "*❌ ¡Ya no existe tal filtro!*",
+            "DELETED": "*✅ ¡El plugin se ha instalado correctamente!*"
+        },
+        "greetings": {
+            "WELCOME_DESC": "Establece un mensaje de bienvenida. Si no escribe un mensaje, aparecerá un mensaje de bienvenida.",
+            "NOT_SET_WELCOME": "*¡No ha establecido un mensaje de bienvenida!*\n**Para configurar:** ```.welcome mensaje de bienvenida```",
+            "WELCOME_ALREADY_SETTED": "*✅ ¡Se establece el mensaje de bienvenida!*\n*Mensaje:* ```",
+            "NEED_WELCOME_TEXT": "*Debe escribir un mensaje para configurar un mensaje de bienvenida.*\n*Ejemplo:* ```.welcome ¡BIENVENIDO!```",
+            "WELCOME_DELETED": "*✅ ¡El mensaje de bienvenida se ha eliminado correctamente!*",
+            "WELCOME_SETTED": "*✅ ¡El mensaje de bienvenida se ha configurado correctamente!*",
+            "GOODBYE_DESC": "Establece el mensaje de la despedida. Si no envía un mensaje, le traerá el mensaje por defecto de la despedida.",
+            "NOT_SET_GOODBYE": "*¡No estableciste el mensaje de despedida!*\n*Para configurar:* ```.goodbye ¡Adiós!```",
+            "GOODBYE_ALREADY_SETTED": "*✅ ¡El mensaje de despedida está configurado!*\n*Mensaje:* ```",
+            "NEED_GOODBYE_TEXT": "*Tienes que escribir un mensaje para configurar el mensaje de despedida.*\n*Ejemplo* ```.goodbye ¡Adiós!```",
+            "GOODBYE_DELETED": "*✅ Se eliminó con éxito el mensaje de despedida*",
+            "GOODBYE_SETTED": "*✅ ¡El mensaje de despedida fue configurado correctamente!*"
+        },
+        "lydia": {
+            "ADDLYDIA_DESC": "Lydia activa su bot para el usuario.",
+            "NEED_REPLY": "```*¡Responda al mensaje de un usuario!*```",
+            "COFFEEHOUSE": "```¡Ha definido la clave API de Coffehouse!```",
+            "ENABLED_LYDIA": "```¡Lydia ha sido activada para este usuario!```",
+            "RMLYDIA_DESC": "Lydia desactiva su bot para el usuario.",
+            "ALREADY_EMPTY": "```¡Tu lista de usuarios ya está vacía!```",
+            "NOT_ADDED": "```¡Aún no has agregado a este usuario!```",
+            "DISABLED": "```Lydia ha sido deshabilitada para este usuario```"
+        },
+        "profile": {
+            "KICKME_DESC": "Te quita del grupo que escribiste.",
+            "KICKME": "```¡Adiós! Me voy 🤠```",
+            "PP_DESC": "Tu foto de perfil es la foto a la que respondes.",
+            "NEED_PHOTO": "*¡Dame una foto!*",
+            "PPING": "```Se está haciendo la foto de perfil...```"
+        },
+        "removebg": {
+            "REMOVEBG_DESC": "Borra el fondo de la foto.",
+            "NEED_PHOTO": "*¡Dame una foto!*",
+            "NO_API_KEY": "*¡No tienes clave API!*\nPuede obtenerlo de remove.bg.",
+            "RBGING": "```Se está eliminando el fondo :D...```"
+        },
+        "scrapers": {
+            "TRANSLATE_DESC": "Se traduce con Google Translate. Debes responder a un mensaje.",
+            "TRANSLATE_USAGE": ".trt it es (Traducción del Italiano al Español)",
+            "NEED_REPLY": "```¡Responde a un mensaje!```",
+            "LANG": "Idioma",
+            "FROM": "Idioma traducido",
+            "RESULT": "Traducción",
+            "TRANSLATE_ERROR": "*❌ ¡Hubo un error en la traducción!*",
+            "CURRENCY_ERROR": "```¡Error de sintaxis! Ejemplo: .currency 1 USD EUR",
+            "INVALID_CURRENCY": "```Error en la conversión de moneda, ¡ingresó la unidad incorrecta!```",
+            "UNKNOWN_ERROR": "```¡Se produjo un error, no se pudo realizar la conversión de moneda!```",
+            "TTS_DESC": "Convierte texto en sonido.",
+            "TTS_ERROR": "```Error, no se pudo realizar la síntesis de voz de su oración.```",
+            "SONG_DESC": "Carga la canción que escribiste.",
+            "NEED_TEXT_SONG": "*¡Por favor escribe una canción!*\n*Ejemplo:* ```.song Faded - Alan Walker```",
+            "NO_RESULT": "*No pude encontrar nada :(*",
+            "DOWNLOADING_SONG": "```Tu canción se está descargando...```",
+            "UPLOADING_SONG": "```Tu canción se está subiendo...```",
+            "VIDEO_DESC": "Descarga video de YouTube.",
+            "NEED_VIDEO": "*Por favor, escriba una dirección de video.*\n*Ejemplo:* ```.video https://www.youtube.com/watch?v=60ItHLz5WEA&ab```",
+            "DOWNLOADING_VIDEO": "```Tu video se está descargando...```",
+            "UPLOADING_VIDEO": "```Subiendo tu video...```",
+            "YT_DESC": "Búsquedas en YouTube.",
+            "NEED_WORDS": "```¡Por favor escriba algunas palabras!```",
+            "GETTING_VIDEOS": "```Traigo videos...```",
+            "NOT_FOUND": "*No pude encontrar nada :(*",
+            "SEARCHING": "*🔎 Investigando...*",
+            "WIKI_DESC": "Busca en Wikipedia.",
+            "IMG_DESC": "Ninguna traducción coincide con su búsqueda\nGoogle Pictures toma fotografías.",
+            "IMG": "Subiendo foto ```{}``` número ```{}```..."
+        },
+        "sticker": {
+            "STICKER_DESC": "Etiqueta la foto o el video al que respondiste.",
+            "NEED_REPLY": "*¡Responde a una foto o video!*",
+            "DOWNLOADING": "Descarga de medios y creación de stickers..."
+        },
+        "system_stats": {
+            "ALIVE_DESC": "¿Funciona el bot?",
+            "SYSD_DESC": "Dice las propiedades del sistema."
+        },
+        "tagall": {
+            "TAGALL_DESC": "Etiqueta a todos en el grupo."
+        },
+        "updater": {
+            "UPDATER_DESC": "Actualizar cheques.",
+            "UPDATE": "*¡Tu barco está completamente actualizado!*",
+            "NEW_UPDATE": "*¡Hay una nueva actualización disponible para el bot!*\n\nCambios:\n```",
+            "UPDATE_NOW_DESC": "Actualizaciones.",
+            "UPDATING": "_La actualización está en curso..._",
+            "INVALID_HEROKU": "*❌ ¡Tu información de Heroku es incorrecta!*",
+            "UPDATED": "*✅ ¡La actualización fue exitosa!*",
+            "UPDATED_LOCAL": "*✅ ¡La actualización fue exitosa!*\n_Para guardar los cambios deben reiniciarse._"
+        },
+        "weather": {
+            "WEATHER_DESC": "Trae el clima.",
+            "NEED_LOCATION": "*¡Por favor, escriba una ubicación!*\n*Ejemplo:* ```.weather Colombia```",
+            "LOCATION": "Ubicación",
+            "TEMP": "Temperatura",
+            "DESC": "Explicación",
+            "HUMI": "Humedad",
+            "WIND": "Velocidad del viento",
+            "CLOUD": "Nubes",
+            "NOT_FOUND": "```No pude encontrar una ciudad con ese nombre. 😖```"
+        },
+        "web": {
+            "SPEEDTEST_DESC": "Mide la velocidad de descarga y carga.",
+            "SPEEDTESTING": "```Prueba de velocidad en ejecución...```",
+            "SPEEDTEST_RESULT": "*¡Prueba de velocidad hecha!*",
+            "UPLOAD": "Cargando",
+            "DOWNLOAD": "Descargar",
+            "PING_DESC": "Mide tu ping."
+        }
+    }
+}

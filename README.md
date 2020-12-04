@@ -24,29 +24,29 @@
 
 > [You can translate other languages from Crowdin](https://crowdin.com/project/whatsasena)
 
-## 🔎 WhatsAsena nedir?
-**WhatsAsena,** [Yusuf Usta](https://github.com/Quiec) tarafından yazılmış WhatsApp yardımcı bir bottur. Hesabınıza giriş yapmaz; WhatsApp Web API üzerine yazılmıştır.
+## 🔎 What is WhatsAsena?
+**WhatsAsena,** is a WhatsApp helper bot written by [Yusuf Usta](https://github.com/Quiec). Does not log into your account It is written on WhatsApp Web API.
 
-## Kurulum
-### Çok Basit Yöntem
-`Üzerinde Çalışıyoruz...`
+## Setup
+### Very Simple Method
+`We are working on it...`
 
-### Basit Yöntem
+### Simple Method
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Quiec/WhatsAsena)
 
-### Zor Yöntem
+### The Hard Method
 ```js
 git clone https://github.com/Quiec/WhatsAsena.git
 cd WhatsAsena
 npm i
 # Config.env oluşturun ve düzenleyin. #
+# Config.env create and edit. #
 node bot.js
 ```
-
-## S.S.S
-Sıkça gelen birkaç soruya cevap;
-### Mesajlarımı okuyabilir misiniz?
-Bu proje açık kaynaklıdır yani tüm kodları bellidir. Ne eksik ne fazla; istediğinize bakabilirsiniz. **Kesinlikle hesaplarınıza erişimimiz yok.**
+## F.A.Q
+Answer a few frequently asked questions;
+### Can you read my messages?
+This project is open source so all the codes are clear. Neither less nor more; you can look what you want. **We absolutely do not have access to your accounts.**
 
 ### Peki güvenliğimiz?
 Güvenlik konusunda endişeleriniz varsa kendi bilgisayarınıza kurabilirsiniz. Eğer başkası verilerinizi ele geçirdiğini düşünüyorsanız **Whatsapp > Üç Nokta > Whatsapp Web > Tüm oturumlardan çıkış yap** butonuna tıklamanız yeterlidir.
@@ -71,11 +71,10 @@ Asenayı kurarak bu sorumlulukları kabul etmiş sayılırsınız.
 Taban, Geliştirme, Fikir, Modüller | Hata Düzeltmeleri, Modüller
 
 ## Thanks To
-[@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 
-
-[@itacirgabral](https://github.com/itacirgabral) for helps
-
-`Ikarus#7808 (Discord)` for helps
+- [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 
+- [@itacirgabral](https://github.com/itacirgabral) for helps
+- `Ikarus#7808 (Discord)` for helps
+- Translators
 
 ## Lisans
 Bu proje `GNU General Public Licence v3.0` lisansı ile korunmaktadır.

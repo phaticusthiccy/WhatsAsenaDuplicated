@@ -2,7 +2,7 @@
     "__ASENAJSON__": true,
     "LANGUAGE": "Indonesia",
     "LANGCODE": "in",
-    "AUTHOR": "@todayisshitday(telegram)",
+    "AUTHOR": "@todayisshitday(telegram) / Avi Patil",
     "STRINGS": {
         "_asena": {
             "COMMAND": "Perintah",
@@ -10,18 +10,18 @@
             "EXAMPLE": "Contoh"
         },
         "_plugin": {
-            "INSTALL_DESC": "Plugin installs.",
-            "NEED_URL": "Please enter a URL! Example:",
-            "INVALID_URL": "```Please enter a valid url!```",
-            "INVALID_PLUGIN": "*❌ Your plugin is invalid!*\n*Error:*",
-            "INSTALLED": "*✅ Plugin has been successfully installed!*",
-            "PLUGIN_DESC": "Shows the plugins you have installed.",
-            "INSTALLED_FROM_REMOTE": "*Plugins you install externally:*",
-            "NO_PLUGIN": "*You have not installed any external plugins!*",
-            "REMOVE_DESC": "Removes the plugin.",
-            "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
-            "NOT_FOUND_PLUGIN": "```Maybe you have installed such a plugin, or maybe not. But it sure isn't right now.```",
-            "DELETED": "*✅ Module successfully deleted! You must restart for the changes to take effect.*"
+            "INSTALL_DESC": "Penginstalan plugin.",
+            "NEED_URL": "Harap masukkan URL! Contoh:",
+            "INVALID_URL": "```Harap masukkan url yang valid!```",
+            "INVALID_PLUGIN": "*❌ Plugin Anda tidak valid!*\n*Kesalahan:*",
+            "INSTALLED": "*✅ Plugin berhasil diinstal!*",
+            "PLUGIN_DESC": "Menunjukkan plugin yang telah Anda instal.",
+            "INSTALLED_FROM_REMOTE": "*Plugin yang Anda instal secara eksternal:*\n",
+            "NO_PLUGIN": "*Anda belum memasang plugin eksternal!*",
+            "REMOVE_DESC": "Menghapus plugin.",
+            "NEED_PLUGIN": "```Harap masukkan sebuah Plugin! Contoh: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```Mungkin Anda telah menginstal plugin seperti itu, atau mungkin belum. Tapi itu pasti tidak sekarang.```",
+            "DELETED": "*✅ Modul berhasil dihapus! Anda harus memulai ulang agar perubahan diterapkan.*"
         },
         "admin": {
             "BAN_DESC": "Ban seseorang dalam grup. Balas pesan atau tandai seseorang untuk menggunakan perintah.",
@@ -61,9 +61,9 @@
             "GIVE_ME_CODE": "*Beri aku kode!*"
         },
         "nekobin": {
-            "NEKO_DESC": "Replied messages will be added to nekobin.com.",
-            "NEED_REPLY": "```Please reply to a message!```",
-            "MUST_TEXT": "```Please reply to any message```"
+            "NEKO_DESC": "Pesan yang dibalas akan ditambahkan ke nekobin.com.",
+            "NEED_REPLY": "```Harap balas pesan!```",
+            "MUST_TEXT": "```Harap balas pesan apa pun```"
         },
         "filters": {
             "FILTER_DESC": "Itu menambahkan filter. Jika seseorang menulis filter Anda, itu mengirimkan jawabannya. Jika Anda hanya menulis .filter, itu menunjukkan daftar filter Anda.",
@@ -91,14 +91,14 @@
             "GOODBYE_SETTED": "*✅ Pesan selamat tinggal telah berhasil disetel!*"
         },
         "lydia": {
-            "ADDLYDIA_DESC": "Activates Lydia for the user.",
-            "NEED_REPLY": "```Please respond to a user's message!```",
-            "COFFEEHOUSE": "```You haven't defined the Coffehouse API Key! ```",
-            "ENABLED_LYDIA": "```Lydia has been activated for this user!```",
-            "RMLYDIA_DESC": "Makes Lydia disabled for the user.",
-            "ALREADY_EMPTY": "```Your user list is already empty!```",
-            "NOT_ADDED": "```You haven't added this user already!```",
-            "DISABLED": "```Lydia has been disabled for this user!```"
+            "ADDLYDIA_DESC": "Mengaktifkan Lydia untuk pengguna.",
+            "NEED_REPLY": "```Harap balas pesan pengguna!```",
+            "COFFEEHOUSE": "```Anda belum menentukan Kunci API Coffehouse! ```",
+            "ENABLED_LYDIA": "```Lydia telah diaktifkan untuk pengguna ini!```",
+            "RMLYDIA_DESC": "Membuat Lydia dinonaktifkan untuk pengguna.",
+            "ALREADY_EMPTY": "```Daftar pengguna Anda sudah kosong!```",
+            "NOT_ADDED": "```Anda belum menambahkan pengguna ini!```",
+            "DISABLED": "```Lydia telah dinonaktifkan untuk pengguna ini!```"
         },
         "profile": {
             "KICKME_DESC": "Menendangmu Keluar dari grup!",
@@ -141,8 +141,8 @@
             "NOT_FOUND": "*Saya tidak dapat menemukan apa pun :(*",
             "SEARCHING": "*🔎 Mencari ...*",
             "WIKI_DESC": "Mencari di Wikipedia.",
-            "IMG_DESC": "Takes Google pics.",
-            "IMG": "Uploading photo ```{}``` number ```{} `..."
+            "IMG_DESC": "Mengambil foto Google.",
+            "IMG": "Mengupload foto```{}``` number ```{} `..."
         },
         "sticker": {
             "STICKER_DESC": "Ini mengubah foto atau video yang Anda balas dengan mengetik .sticker menjadi stiker.",
