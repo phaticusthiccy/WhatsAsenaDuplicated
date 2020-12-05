@@ -32,6 +32,8 @@
 `We are working on it...`
 
 ### Simple Method
+[![Run on Repl.it](https://repl.it/badge/github/Quiec/whatsasena)](https://repl.it/@Quiec/whatsasena)
+
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Quiec/WhatsAsena)
 
 ### The Hard Method
@@ -43,32 +45,35 @@ npm i
 # Config.env create and edit. #
 node bot.js
 ```
+
 ## F.A.Q
 Answer a few frequently asked questions;
 ### Can you read my messages?
 This project is open source so all the codes are clear. Neither less nor more; you can look what you want. **We absolutely do not have access to your accounts.**
 
-### Peki güvenliğimiz?
-Güvenlik konusunda endişeleriniz varsa kendi bilgisayarınıza kurabilirsiniz. Eğer başkası verilerinizi ele geçirdiğini düşünüyorsanız **Whatsapp > Üç Nokta > Whatsapp Web > Tüm oturumlardan çıkış yap** butonuna tıklamanız yeterlidir.
+### What about our security?
+If you are concerned about security, you can install it on your own computer. If you think someone else has captured your data, simply click on **Whatsapp> Three Dots> Whatsapp Web> Logout** from all sessions button.
 
-### Ücretli mi?
-**Tabii ki de hayır. Asla da olmayacak.** Ama bize bağış yapabilirsiniz. [Telegram](https://t.me/fusuf) üzerinden bana ulaşabilirsiniz.
+### Is it paid?
+**Of course not.** It will never happen. But you can donate to us. You can reach me via [Telegram](https://t.me/fusuf) .
 
-### Asena ne demek?
-[Asena](https://tr.wikipedia.org/wiki/Asena), Türk mitolojisinden gelmektedir. Türk mitolojisine göre Asena önemli bir rol oynayan dişi kurttur. 
+### • What does Asena mean?
+[Asena](https://tr.wikipedia.org/wiki/Asena), comes from Turkish mythology. According to Turkish mythology, Asena is a she-wolf that plays an important role.
 
-### ⚠️ Uyarı! 
+### ⚠️ Warning! 
 ```
-Userbottan dolayı; WhatsApp hesabınız yasaklanabilir.
-Bu bir açık kaynaklı projedir, yaptığınız her işlemden kendiniz sorumlusunuz. Kesinlikle Asena yöneticileri sorumluluk kabul etmemektedir.
-Asenayı kurarak bu sorumlulukları kabul etmiş sayılırsınız.
+Due to Userbot; Your WhatsApp account may be banned.
+This is an open source project, you are responsible for everything you do. 
+Absolutely, Asena executives do not accept responsibility.
+By establishing the Asena, you are deemed to have accepted these responsibilities.
 ```
+
 ## Geliştiriciler
 
 [![Yusuf Usta](https://github.com/quiec.png?size=100)](https://quiec.tech) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio)
 ---|---
 [Yusuf Usta](https://t.me/fusuf) | [Alperen Ç](https://t.me/xacnio)
-Taban, Geliştirme, Fikir, Modüller | Hata Düzeltmeleri, Modüller
+Base, Development, Idea, Modules |  Bug Fixes, Modules
 
 ## Thanks To
 - [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 
@@ -76,8 +81,8 @@ Taban, Geliştirme, Fikir, Modüller | Hata Düzeltmeleri, Modüller
 - `Ikarus#7808 (Discord)` for helps
 - Translators
 
-## Lisans
-Bu proje `GNU General Public Licence v3.0` lisansı ile korunmaktadır.
+## License
+This project is protected by `GNU General Public Licence v3.0` license.
 
 ### Disclaimer
 `WhatsApp` name, its variations and the logo are registered trademarks of Facebook. We have nothing to do with the registered trademark
