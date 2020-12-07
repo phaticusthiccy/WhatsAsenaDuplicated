@@ -66,6 +66,25 @@
             "NEED_REPLY": "```¡Responde a un mensaje!```",
             "MUST_TEXT": "```Responde cualquier mensaje```"
         },
+        "heroku": {
+            "RESTART_DESC": "Reiniciar WhatsAsena",
+            "RESTART_MSG": "```reiniciando...```",
+            "SHUTDOWN_DESC": "Apagar WhatsAsena",
+            "SHUTDOWN_MSG": "```Apagando ⛔```",
+            "DYNO_DESC": "Verificar el uso de heroku dyno",
+            "DYNO_TOTAL": "```Cuota total```",
+            "DYNO_USED": "```Cuota utilizada```",
+            "PERCENTAGE": "```Porcentaje```",
+            "DYNO_LEFT": "```Restante```",
+            "SETVAR_DESC": "conjunto heroku config var",
+            "SET_SUCCESS": "Establecido con éxito ```{} ➜ {}```",
+            "KEY_VAL_MISSING": "```Falta la key o el value```",
+            "INVALID": "```Clave no válida: formato de valor```",
+            "GETVAR_DESC": "obtener heroku config var",
+            "DELVAR_DESC": "Eliminar heroku config var",
+            "DEL_SUCCESS": "```{} eliminado con éxito```",
+            "NOT_FOUND": "```no se encontraron resultados para esta key```"           
+        },
         "filters": {
             "FILTER_DESC": "Agrega un filtro. Si alguien escribe el filtro que escribiste, envía la respuesta que escribiste. Si solo escribe filtro, devuelve los filtros que agregó.",
             "NO_FILTER": "*❌ ¡No hay filtros en este chat!*",

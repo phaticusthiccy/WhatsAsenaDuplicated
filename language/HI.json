@@ -66,6 +66,25 @@
             "NEED_REPLY": "```कृपया एक संदेश का जवाब दें!```",
             "MUST_TEXT": "```कृपया किसी भी संदेश का जवाब दें```"
         },
+        "heroku": {
+            "RESTART_DESC": "WhatsAsena को फिर से शुरू करें",
+            "RESTART_MSG": "```पुनरारंभ करते हुए प्रतीक्षा करें...```",
+            "SHUTDOWN_DESC": "WhatsAsena को बंद करो",
+            "SHUTDOWN_MSG": "```बंद कर रहा है ⛔```",
+            "DYNO_DESC": "heroku dyno उपयोग की जाँच करें",
+            "DYNO_TOTAL": "```कुल कोटा```",
+            "DYNO_USED": "```उपयोग किया कोटा```",
+            "PERCENTAGE": "```प्रतिशत```",
+            "DYNO_LEFT": "```शेष```",
+            "SETVAR_DESC": "सेट heroku config var",
+            "SET_SUCCESS": "सफलतापूर्वक सेट किया गया ```{} ➜ {}```",
+            "KEY_VAL_MISSING": "```या तो key या value गायब है```",
+            "INVALID": "```अमान्य key:value स्वरूप```",
+            "GETVAR_DESC": "heroku config var को प्राप्त करना",
+            "DELVAR_DESC": "heroku config var को हटाना",
+            "DEL_SUCCESS": "```{} सफलतापूर्वक हटा दिया गया```",
+            "NOT_FOUND": "```इस key के लिए कोई परिणाम नहीं मिले```"           
+        },
         "filters": {
             "FILTER_DESC": "यह एक फिल्टर जोड़ता है. अगर कोई आपका फ़िल्टर लिखता है, यह जवाब भेजता है. अगर तुम सिर्फ लिखो. filter, यह आपकी फ़िल्टर सूची दिखाता है।",
             "NO_FILTER": "*❌ इस चैट में कोई फ़िल्टर नहीं हैं!*",

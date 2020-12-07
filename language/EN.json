@@ -53,7 +53,7 @@
             "IM_NOT_AFK": "```I am not AFK anymore!```",
             "AFK_TEXT": "```Bip bop! This is a bot. My owner is not here at the moment.```",
             "AFK_TEXT_NOMD": "Bip bop! This is a bot. My owner is not here at the moment.",
-            "HOUR": "time",
+            "HOUR": "hour",
             "MINUTE": "minute",
             "SECOND": "second"
         },
@@ -65,6 +65,25 @@
             "NEKO_DESC": "Replied messages will be added to nekobin.com.",
             "NEED_REPLY": "```Please reply to a message!```",
             "MUST_TEXT": "```Please reply to any message```"
+        },
+        "heroku": {
+            "RESTART_DESC": "Restart WhatsAsena",
+            "RESTART_MSG": "```restarting...```",
+            "SHUTDOWN_DESC": "Shutdown WhatsAsena",
+            "SHUTDOWN_MSG": "```shutting down ⛔```",
+            "DYNO_DESC": "Check heroku dyno usage",
+            "DYNO_TOTAL": "```Total Quota```",
+            "DYNO_USED": "```Quota used```",
+            "PERCENTAGE": "```Percentage```",
+            "DYNO_LEFT": "```Remaining```",
+            "SETVAR_DESC": "Set heroku config var",
+            "SET_SUCCESS": "Successfully set ```{} ➜ {}```",
+            "KEY_VAL_MISSING": "```Either Key or Value is missing```",
+            "INVALID": "```Invalid key:value format```",
+            "GETVAR_DESC": "Get heroku config var",
+            "DELVAR_DESC": "Delete heroku config var",
+            "DEL_SUCCESS": "```{} successfully deleted```",
+            "NOT_FOUND": "```no results found for this key```"           
         },
         "filters": {
             "FILTER_DESC": "It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",

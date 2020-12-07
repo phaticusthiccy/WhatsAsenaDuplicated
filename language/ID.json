@@ -61,6 +61,25 @@
             "TERM_DESC": "Memungkinkan untuk menjalankan perintah di shell server.",
             "GIVE_ME_CODE": "*Beri aku kode!*"
         },
+        "heroku": {
+            "RESTART_DESC": "Mulai ulang WhatsAsena",
+            "RESTART_MSG": "```memulai ulang harap tunggu...```",
+            "SHUTDOWN_DESC": "Matikan WhatsAsena",
+            "SHUTDOWN_MSG": "```mematikan ⛔```",
+            "DYNO_DESC": "Periksa penggunaan heroku dyno",
+            "DYNO_TOTAL": "```Total Kuota```",
+            "DYNO_USED": "```Kuota terpakai```",
+            "PERCENTAGE": "```Persentase```",
+            "DYNO_LEFT": "```Sisa```",
+            "SETVAR_DESC": "Set heroku config var",
+            "SET_SUCCESS": "Berhasil disetel ```{} ➜ {}```",
+            "KEY_VAL_MISSING": "```Baik Kunci atau Nilai tidak ada```",
+            "INVALID": "```Kunci tidak valid: format nilai```",
+            "GETVAR_DESC": "Dapatkan heroku config var",
+            "DELVAR_DESC": "menghapus heroku config var",
+            "DEL_SUCCESS": "```{} berhasil dihapus```",
+            "NOT_FOUND": "```tidak ada hasil yang ditemukan untuk kunci ini```"           
+        },
         "nekobin": {
             "NEKO_DESC": "Pesan yang dibalas akan ditambahkan ke nekobin.com.",
             "NEED_REPLY": "```Harap balas pesan!```",

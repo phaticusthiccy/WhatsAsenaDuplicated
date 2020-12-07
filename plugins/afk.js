@@ -76,3 +76,4 @@ Asena.addCommand({pattern: 'afk ?(.*)', fromMe: true, deleteCommand: false, desc
     }
 }));
 
+module.exports = { secondsToHms };
