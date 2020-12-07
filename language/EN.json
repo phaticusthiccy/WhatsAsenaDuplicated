@@ -11,7 +11,7 @@
             "NOT_FOUND": "*I couldn't find a command like this*"
         },
         "_plugin": {
-            "INSTALL_DESC": "Plugin installs.",
+            "INSTALL_DESC": "Install external plugins.",
             "NEED_URL": "Please enter a URL! Example:",
             "INVALID_URL": "```Please enter a valid url!```",
             "INVALID_PLUGIN": "*❌ Your plugin is invalid!*\n*Error:*",
@@ -45,7 +45,7 @@
             "INVITE": "```Invitation link: ```"
         },
         "afk": {
-            "AFK_DESC": "It makes you AFK.",
+            "AFK_DESC": "It makes you AFK - Away From Keyboard.",
             "IM_AFK": "*I'm AFK now!*",
             "IM_AFK_NOMD": "I'm AFK now!",
             "REASON": "Reason",
@@ -92,7 +92,7 @@
             "GOODBYE_SETTED": "*✅ Goodbye message has been setted successfully!*"
         },
         "lydia": {
-            "ADDLYDIA_DESC": "Activates Lydia for the user.",
+            "ADDLYDIA_DESC": "Activates Lydia (AI) for the user.",
             "NEED_REPLY": "```Please respond to a user's message!```",
             "COFFEEHOUSE": "```You haven't defined the Coffehouse API Key! ```",
             "ENABLED_LYDIA": "```Lydia has been activated for this user!```",
@@ -102,7 +102,7 @@
             "DISABLED": "```Lydia has been disabled for this user!```"
         },
         "profile": {
-            "KICKME_DESC": "It kicks you grop you are.",
+            "KICKME_DESC": "It kicks you from the group you are using it in.",
             "KICKME": "```Bye bye! I am going 🤠```",
             "PP_DESC": "Makes the profile photo what photo you reply.",
             "NEED_PHOTO": "*Give me a photo!*",
@@ -115,13 +115,13 @@
             "RBGING": "```Removing background...```"
         },
         "scrapers": {
-            "TRANSLATE_DESC": "It translates with Google Translate. You must reply any massage.",
+            "TRANSLATE_DESC": "It translates with Google Translate. You must reply any message.",
             "TRANSLATE_USAGE": ".trt tr it (From Turkish to Italian)",
             "NEED_REPLY": "```Please reply to any message!```",
             "LANG": "Language",
             "FROM": "Translated Language",
             "RESULT": "Translate",
-            "TRANSLATE_ERROR": "\"❌ An error occurs in translation!*",
+            "TRANSLATE_ERROR": "\"❌ An error occured while translating!*",
             "CURRENCY_ERROR": "```Syntax error! Example: .currency 1 TRY USD```",
             "INVALID_CURRENCY": "```Foreign currency transaction failed. You wrote wrong currency!```",
             "UNKNOWN_ERROR": "```An error occurred. Foreign currency transaction failed!```",
@@ -141,8 +141,8 @@
             "GETTING_VIDEOS": "```I'm bringing videos...```",
             "NOT_FOUND": "*I couldn't find anything :(*",
             "SEARCHING": "* 🔎 Searching...*",
-            "WIKI_DESC": "Searches on Wikipedia.",
-            "IMG_DESC": "Takes Google pics.",
+            "WIKI_DESC": "Searches query on Wikipedia.",
+            "IMG_DESC": "Searches for related pics on Google.",
             "IMG": "Uploading photo ```{}``` number ```{} `..."
         },
         "sticker": {
@@ -164,8 +164,8 @@
             "UPDATE_NOW_DESC": "It makes updates.",
             "UPDATING": "_Updating..._",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
-            "UPDATED": "*✅ Update was succesfull!*",
-            "UPDATED_LOCAL": "*✅ Update was successful! *\n_You must restart for changes._"
+            "UPDATED": "*✅ Successfully Updated!*",
+            "UPDATED_LOCAL": "*✅ Successfully Updated! *\n_Please restart your bot for the changes._"
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
