@@ -125,7 +125,14 @@
             "KICKME": "```¡Adiós! Me voy 🤠```",
             "PP_DESC": "Tu foto de perfil es la foto a la que respondes.",
             "NEED_PHOTO": "*¡Dame una foto!*",
-            "PPING": "```Se está haciendo la foto de perfil...```"
+            "PPING": "```Se está haciendo la foto de perfil...```",
+            "BLOCK_DESC": "Block user.",
+            "UNBLOCK_DESC": "Unblock user.",
+            "BLOCKED": "blocked",
+            "UNBLOCKED": "unblocked",
+            "BLOCKED_UPPER": "Blocked!",
+            "UNBLOCKED_UPPER": "Unblocked.",
+            "NEED_USER": "Give me a user!"
         },
         "removebg": {
             "REMOVEBG_DESC": "Borra el fondo de la foto.",

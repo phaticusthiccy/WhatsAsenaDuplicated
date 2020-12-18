@@ -20,7 +20,7 @@
   },
   "homepage": "https://github.com/Quiec/WhatsAsena#readme",
   "dependencies": {
-    "@adiwajshing/baileys": "^3.3.0",
+    "@adiwajshing/baileys": "github:adiwajshing/baileys",
     "browser-id3-writer": "^4.4.0",
     "chalk": "^4.1.0",
     "coffeehouse": "^1.0.1",

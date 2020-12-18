@@ -125,7 +125,14 @@
             "KICKME": "```Güle Güle! Ben gidiyorum 🤠```",
             "PP_DESC": "Yanıt verdiğiniz fotoğrafı profil fotoğrafınız yapar.",
             "NEED_PHOTO": "*Bana bir fotoğraf ver!*",
-            "PPING": "```Profil fotoğrafı yapılıyor...```"
+            "PPING": "```Profil fotoğrafı yapılıyor...```",
+            "BLOCK_DESC": "Belirttiğiniz kullanıcıyı engeller.",
+            "UNBLOCK_DESC": "Belirttiğiniz kullanıcının engelini kaldırır.",
+            "BLOCKED": "engellendin",
+            "UNBLOCKED": "engelin kalktı",
+            "BLOCKED_UPPER": "Engellendin!",
+            "UNBLOCKED_UPPER": "Engelini kaldırdım.",
+            "NEED_USER": "Bana bir kullanıcı ver!"
         },
         "removebg": {
             "REMOVEBG_DESC": "Fotoğrafın arka-planını siler.",

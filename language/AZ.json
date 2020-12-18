@@ -115,7 +115,14 @@
             "KICKME": "```Görüşənədək! Mən gedirəm 🤠```",
             "PP_DESC": "Cavabladığınız şəkili profil şəkliniz edər.",
             "NEED_PHOTO": "*Mənə bir şəkil ver!*",
-            "PPING": "```Profil şəkili dəyişdirilir...```"
+            "PPING": "```Profil şəkili dəyişdirilir...```",
+            "BLOCK_DESC": "İstifadəçini bloklayın.",
+            "UNBLOCK_DESC": "İstifadəçinin blokdan çıxarılması.",
+            "BLOCKED": "bloklandı",
+            "UNBLOCKED": "blokdan çıxarıldı",
+            "BLOCKED_UPPER": "Blok edildi!",
+            "UNBLOCKED_UPPER": "Blokdan çıxarıldı.",
+            "NEED_USER": "Mənə bir istifadəçi verin!"
         },
         "lydia": {
             "ADDLYDIA_DESC": "Lydia botu aktivləşdirir.",

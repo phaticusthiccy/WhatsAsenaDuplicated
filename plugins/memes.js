@@ -8,7 +8,8 @@ WhatsAsena - Yusuf Usta
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-  
+
+/* CAN CODE SOMEONE WHO HAVE A TIME DO IT PLEASE?
 Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage('*Bir fotoğraf veya videoya yanıt verin!*');
     var topText, bottomText;
@@ -30,6 +31,5 @@ Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true}, (async (message, match) 
         },
         message: message.reply_message.data.quotedMessage
     });
-
-    // TO-DO meme
 }));
+*/

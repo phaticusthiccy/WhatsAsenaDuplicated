@@ -51,7 +51,7 @@ Asena.addCommand({pattern: 'rmlydia$', fromMe: true, desc: Lang.RMLYDIA_DESC}, (
     } else {
         if (veriler[0].dataValues.users == '') return await message.reply(Lang.ALREADY_EMPTY)
         var users = veriler[0].dataValues.users.split(',');
-        if (users.includes(message.reply_message.jid.split('@')[0])) { users.remove(message.reply_message.jid.split('@')[0]).join(','); } else {
+        if (users.includes(message.reply_message.jid.split('@')[0])) { users = users.remove(message.reply_message.jid.split('@')[0]).join(','); } else {
             return await message.reply(Lang.NOT_ADDED);
         }
 
@@ -105,7 +105,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             await message.sendTyping();
 
             var mesaj = await session.think_thought(message.message);
-            await message.sendMessage(mesaj.data.payload.output, MessageType.text, {quoted: message.data});
+            await message.client.sendMessage(message.jid,mesaj.data.payload.output, MessageType.text, {quoted: message.data});
         }
     }
 }));

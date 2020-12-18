@@ -50,7 +50,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
         }
 
         await Db.installPlugin(url, plugin_name);
-        await message.sendMessage(Lang.INSTALLED);
+        await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
     }
 }));
 
@@ -65,7 +65,7 @@ Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC}, (asy
                 mesaj += '*' + plugin.dataValues.name + '*: ' + plugin.dataValues.url + '\n';
             }
         );
-        return await message.sendMessage(mesaj);
+        return await message.client.sendMessage(message.jid, mesaj, MessageType.text);
     }
 }));
 
@@ -74,11 +74,11 @@ Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
     var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
     if (plugin.length < 1) {
-        return await message.sendMessage(Lang.NOT_FOUND_PLUGIN);
+        return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
     } else {
         await plugin[0].destroy();
         delete require.cache[require.resolve('./' + match[1] + '.js')]
         fs.unlinkSync('./plugins/' + match[1] + '.js');
-        return await message.sendMessage(Lang.DELETED);
+        return await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text);
     }
 }));

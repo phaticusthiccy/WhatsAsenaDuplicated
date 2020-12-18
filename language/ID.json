@@ -125,7 +125,14 @@
             "KICKME": "```Sampai jumpa! Saya pergi 🤠```",
             "PP_DESC": "Menjadikan foto yang anda balas dengan menulis .pp sebagai foto profil anda.",
             "NEED_PHOTO": "*Beri aku foto!*",
-            "PPING": "```Menyetel foto profil...```"
+            "PPING": "```Menyetel foto profil...```",
+            "BLOCK_DESC": "Block user.",
+            "UNBLOCK_DESC": "Unblock user.",
+            "BLOCKED": "blocked",
+            "UNBLOCKED": "unblocked",
+            "BLOCKED_UPPER": "Blocked!",
+            "UNBLOCKED_UPPER": "Unblocked.",
+            "NEED_USER": "Give me a user!"
         },
         "removebg": {
             "REMOVEBG_DESC": "Menghapus latar belakang foto.",

@@ -52,7 +52,7 @@
             "LAST_SEEN": "Last Seen",
             "IM_NOT_AFK": "```I am not AFK anymore!```",
             "AFK_TEXT": "```Bip bop! This is a bot. My owner is not here at the moment.```",
-            "AFK_TEXT_NOMD": "Bip bop! This is a bot. My owner is not here at the moment.",
+            "AFK_TEXT_NOMD": "Bip bop! This is a bot.",
             "HOUR": "hour",
             "MINUTE": "minute",
             "SECOND": "second"
@@ -125,7 +125,14 @@
             "KICKME": "```Bye bye! I am going 🤠```",
             "PP_DESC": "Makes the profile photo what photo you reply.",
             "NEED_PHOTO": "*Give me a photo!*",
-            "PPING": "```Setting profile photo...```"
+            "PPING": "```Setting profile photo...```",
+            "BLOCK_DESC": "Block user.",
+            "UNBLOCK_DESC": "Unblock user.",
+            "BLOCKED": "blocked",
+            "UNBLOCKED": "unblocked",
+            "BLOCKED_UPPER": "Blocked!",
+            "UNBLOCKED_UPPER": "Unblocked.",
+            "NEED_USER": "Give me a user!"
         },
         "removebg": {
             "REMOVEBG_DESC": "Removes the background of the photos.",
