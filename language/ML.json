@@ -126,17 +126,17 @@
             "PP_DESC": "പ്രൊഫൈൽ ഫോട്ടോ ആകേണ്ട  ടാ ഫോട്ടോയ്ക്ക് ടാഗ് ചെയ്തു അയക്കുക.",
             "NEED_PHOTO": "*ഒരു ചിത്രം തരിക!*",
             "PPING": "```പ്രൊഫൈൽ ഫോട്ടോ ആകുന്നു...```",
-            "BLOCK_DESC": "Block user.",
-            "UNBLOCK_DESC": "Unblock user.",
-            "BLOCKED": "blocked",
-            "UNBLOCKED": "unblocked",
-            "BLOCKED_UPPER": "Blocked!",
-            "UNBLOCKED_UPPER": "Unblocked.",
-            "NEED_USER": "Give me a user!"
+            "BLOCK_DESC": "ഉപഭോക്താവിനെ തടയുന്നു.",
+            "UNBLOCK_DESC": "ഉപയോക്താവിനെ തടഞ്ഞത് മാറ്റുക.",
+            "BLOCKED": "തടഞ്ഞു",
+            "UNBLOCKED": "തടഞ്ഞത് മാറ്റി",
+            "BLOCKED_UPPER": "തടഞ്!",
+            "UNBLOCKED_UPPER": "തടഞ്ഞത് മാറ്റി.",
+            "NEED_USER": "എനിക്ക് ഒരു ഉപയോക്താവിനെ തരൂ!"
         },
         "removebg": {
             "REMOVEBG_DESC": "ബാക്കിൽ ഉള്ള ചിത്രം നീക്കുന്നു.",
-            "NEED_PHOTO": "*Give me a photo!*",
+            "NEED_PHOTO": "*ഒരു ഫോട്ടോ തരിക!*",
             "NO_API_KEY": "*എ പി ഐ നൽകിയിട്ടില്ല !*\nഇവിടെ നിന്നും കിട്ടും: remove.bg.",
             "RBGING": "```ചിത്രം എഡിറ്റ് ചെയ്യുന്നു...```"
         },
