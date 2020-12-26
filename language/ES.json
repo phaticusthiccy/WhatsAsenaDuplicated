@@ -11,30 +11,30 @@
             "NOT_FOUND": "*¡No pude encontrar tal comando!*"
         },
         "_plugin": {
-            "INSTALL_DESC": "Instala complementos.",
+            "INSTALL_DESC": "Instalar plugins.",
             "NEED_URL": "Introduzca una URL. Muestra:",
             "INVALID_URL": "```¡Ingrese una URL válida!```",
             "INVALID_PLUGIN": "*❌ ¡Tu plugin está defectuoso!*\n*Error:*",
-            "INSTALLED": "*✅ ¡El complemento se ha instalado correctamente!*",
-            "PLUGIN_DESC": "Muestra los complementos que ha instalado.",
-            "INSTALLED_FROM_REMOTE": "*Complementos instalados externamente:*",
-            "NO_PLUGIN": "*¡No ha instalado ningún complemento externo!*",
-            "REMOVE_DESC": "Elimina el complemento.",
+            "INSTALLED": "*✅ ¡El plugin se ha instalado correctamente!*",
+            "PLUGIN_DESC": "Muestra los plugins que ha instalado.",
+            "INSTALLED_FROM_REMOTE": "*plugins instalados externamente:*",
+            "NO_PLUGIN": "*¡No ha instalado ningún plugin externo!*",
+            "REMOVE_DESC": "Elimina el plugin.",
             "NEED_PLUGIN": "```Introduzca un complemento. Ejemplo: .plugin _ejemplo```",
             "NOT_FOUND_PLUGIN": "```Tal vez haya instalado un complemento de este tipo, o tal vez no. Pero seguro que no ahora mismo.```",
-            "DELETED": "*✅ ¡Módulo eliminado correctamente! Debe reiniciar para que los cambios surtan efecto.*"
+            "DELETED": "*✅ ¡Plugin eliminado correctamente! Debe reiniciar el bot para que los cambios surtan efecto.*"
         },
         "admin": {
-            "BAN_DESC": "La persona del grupo prohibirá. (Responda o etiquete a la persona junto al comando).",
+            "BAN_DESC": "La persona del grupo será baneada. (Responda o etiquete a la persona junto al comando).",
             "IM_NOT_ADMIN": "*¡No soy un administrador en este grupo!*",
             "BANNED": "Eliminado/a del grupo!",
             "GIVE_ME_USER": "*¡Dame un usuario!*",
             "ADD_DESC": "Agrega personas al grupo.",
             "ADDED": "¡Añadido al grupo!",
-            "ALREADY_PROMOTED": "```¿Cómo hago para que alguien que ya sea administrador?```",
-            "PROMOTED": "```¡Hecho admin!```",
-            "PROMOTE_DESC": "Convierte a cualquier persona en administrador.",
-            "DEMOTE_DESC": "Reduce la autoridad de cualquier paso.",
+            "ALREADY_PROMOTED": "```¿Cómo hago para ascender a alguien que ya es administrador?```",
+            "PROMOTED": "```¡Ascendido a admin con éxito :D!```",
+            "PROMOTE_DESC": "Asciende a cualquier persona a administradora.",
+            "DEMOTE_DESC": "Reduce la autoridad de cualquier persona.",
             "ALREADY_NOT_ADMIN": "```¿Cómo puedo desautorizar a alguien que aún no es administrador?```",
             "DEMOTED": "```Se ha reducido la potencia!```",
             "MUTE_DESC": "Chat del grupo cerrado. Ahora sólo los administradores pueden publicar mensajes.",
@@ -68,7 +68,7 @@
         },
         "heroku": {
             "RESTART_DESC": "Reiniciar WhatsAsena",
-            "RESTART_MSG": "```reiniciando...```",
+            "RESTART_MSG": "```Reiniciando...```",
             "SHUTDOWN_DESC": "Apagar WhatsAsena",
             "SHUTDOWN_MSG": "```Apagando ⛔```",
             "DYNO_DESC": "Verificar el uso de heroku dyno",
@@ -79,11 +79,11 @@
             "SETVAR_DESC": "conjunto heroku config var",
             "SET_SUCCESS": "Establecido con éxito ```{} ➜ {}```",
             "KEY_VAL_MISSING": "```Falta la key o el value```",
-            "INVALID": "```Clave no válida: formato de valor```",
+            "INVALID": "```Key no válida: formato de valor```",
             "GETVAR_DESC": "obtener heroku config var",
             "DELVAR_DESC": "Eliminar heroku config var",
             "DEL_SUCCESS": "```{} eliminado con éxito```",
-            "NOT_FOUND": "```no se encontraron resultados para esta key```"           
+            "NOT_FOUND": "```No se encontraron resultados para esta key```"           
         },
         "filters": {
             "FILTER_DESC": "Agrega un filtro. Si alguien escribe el filtro que escribiste, envía la respuesta que escribiste. Si solo escribe filtro, devuelve los filtros que agregó.",
@@ -125,14 +125,14 @@
             "KICKME": "```¡Adiós! Me voy 🤠```",
             "PP_DESC": "Tu foto de perfil es la foto a la que respondes.",
             "NEED_PHOTO": "*¡Dame una foto!*",
-            "PPING": "```Se está haciendo la foto de perfil...```",
-            "BLOCK_DESC": "Block user.",
-            "UNBLOCK_DESC": "Unblock user.",
-            "BLOCKED": "blocked",
-            "UNBLOCKED": "unblocked",
-            "BLOCKED_UPPER": "Blocked!",
-            "UNBLOCKED_UPPER": "Unblocked.",
-            "NEED_USER": "Give me a user!"
+            "PPING": "```Estoy colocándome la foto de perfil...```",
+            "BLOCK_DESC": "Usuario Bloqueado.",
+            "UNBLOCK_DESC": "Usuario desbloqueado.",
+            "BLOCKED": "bloqueado",
+            "UNBLOCKED": "desbloqueado",
+            "BLOCKED_UPPER": "¡Bloqueado!",
+            "UNBLOCKED_UPPER": "Desbloqueado.",
+            "NEED_USER": "Dame un usuario!"
         },
         "removebg": {
             "REMOVEBG_DESC": "Borra el fondo de la foto.",
@@ -172,22 +172,22 @@
             "IMG": "Subiendo foto ```{}``` número ```{}```..."
         },
         "sticker": {
-            "STICKER_DESC": "Etiqueta la foto o el video al que respondiste.",
+            "STICKER_DESC": "Crea un sticker de la foto o el video al que respondiste.",
             "NEED_REPLY": "*¡Responde a una foto o video!*",
-            "DOWNLOADING": "Descarga de medios y creación de stickers..."
+            "DOWNLOADING": "Convirtiendo en sticker... :D"
         },
         "system_stats": {
-            "ALIVE_DESC": "¿Funciona el bot?",
+            "ALIVE_DESC": "Verifica si funciona correctamente el bot",
             "SYSD_DESC": "Dice las propiedades del sistema."
         },
         "tagall": {
             "TAGALL_DESC": "Etiqueta a todos en el grupo."
         },
         "updater": {
-            "UPDATER_DESC": "Actualizar cheques.",
-            "UPDATE": "*¡Tu barco está completamente actualizado!*",
+            "UPDATER_DESC": "Verificar actualizaciones.",
+            "UPDATE": "*¡Tu bot está completamente actualizado!*",
             "NEW_UPDATE": "*¡Hay una nueva actualización disponible para el bot!*\n\nCambios:\n```",
-            "UPDATE_NOW_DESC": "Actualizaciones.",
+            "UPDATE_NOW_DESC": "Actualizar ahora.",
             "UPDATING": "_La actualización está en curso..._",
             "INVALID_HEROKU": "*❌ ¡Tu información de Heroku es incorrecta!*",
             "UPDATED": "*✅ ¡La actualización fue exitosa!*",
@@ -205,11 +205,11 @@
             "NOT_FOUND": "```No pude encontrar una ciudad con ese nombre. 😖```"
         },
         "web": {
-            "SPEEDTEST_DESC": "Mide la velocidad de descarga y carga.",
+            "SPEEDTEST_DESC": "Mide la velocidad de carga y descarga.",
             "SPEEDTESTING": "```Prueba de velocidad en ejecución...```",
             "SPEEDTEST_RESULT": "*¡Prueba de velocidad hecha!*",
-            "UPLOAD": "Cargando",
-            "DOWNLOAD": "Descargar",
+            "UPLOAD": "Subida",
+            "DOWNLOAD": "Bajada",
             "PING_DESC": "Mide tu ping."
         }
     }
