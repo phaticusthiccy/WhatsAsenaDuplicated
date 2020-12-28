@@ -7,7 +7,7 @@
         "_asena": {
             "COMMAND": "आदेश",
             "DESC": "वर्णन",
-            "EXAMPLE": "नमूना",
+            "EXAMPLE": "उदाहरण",
             "NOT_FOUND": "*मुझे इस तरह की कमांड नहीं मिली*"
         },
         "_plugin": {
@@ -126,13 +126,13 @@
             "PP_DESC": "प्रोफाइल फोटो बनाता है कि आप किस फोटो का जवाब देते हैं।",
             "NEED_PHOTO": "*मुझे एक फोटो दो!*",
             "PPING": "```प्रोफ़ाइल फ़ोटो सेट करना...```",
-            "BLOCK_DESC": "Block user.",
-            "UNBLOCK_DESC": "Unblock user.",
-            "BLOCKED": "blocked",
-            "UNBLOCKED": "unblocked",
-            "BLOCKED_UPPER": "Blocked!",
-            "UNBLOCKED_UPPER": "Unblocked.",
-            "NEED_USER": "Give me a user!"
+            "BLOCK_DESC": "ब्लॉक यूजर.",
+            "UNBLOCK_DESC": "उपयोगकर्ता को अनब्लॉक करें.",
+            "BLOCKED": "ब्लॉक कर दिया",
+            "UNBLOCKED": "अनब्लॉक कर दिया",
+            "BLOCKED_UPPER": "ब्लॉक कर दिया!",
+            "UNBLOCKED_UPPER": "अनब्लॉक कर दिया.",
+            "NEED_USER": "मुझे एक उपयोगकर्ता दें!"
         },
         "removebg": {
             "REMOVEBG_DESC": "तस्वीरों की पृष्ठभूमि निकालता है।",
@@ -148,7 +148,7 @@
             "FROM": "अनूदित भाषा",
             "RESULT": "अनुवाद करना",
             "TRANSLATE_ERROR": "\"❌ अनुवाद में त्रुटि होती है! *",
-            "CURRENCY_ERROR": "```वाक्यविन्यास त्रुटि! उदाहरण: .currency 1 TRY USD```",
+            "CURRENCY_ERROR": "```वाक्यविन्यास त्रुटि! उदाहरण: .currency 1 INR USD```",
             "INVALID_CURRENCY": "```विदेशी मुद्रा लेनदेन विफल रहा. आपने गलत मुद्रा लिखी!```",
             "UNKNOWN_ERROR": "```एक त्रुटि पाई गई। विदेशी मुद्रा लेनदेन विफल रहा!```",
             "TTS_DESC": "यह पाठ को ध्वनि में परिवर्तित करता है।",
@@ -195,7 +195,7 @@
         },
         "weather": {
             "WEATHER_DESC": "मौसम दिखाता है।",
-            "NEED_LOCATION": "*कृपया स्थान लिखें!*\n*उदाहरण:* ```.weather Bakü```",
+            "NEED_LOCATION": "*कृपया स्थान लिखें!*\n*उदाहरण:* ```.weather Kolhapur```",
             "LOCATION": "स्थान",
             "TEMP": "तापमान",
             "DESC": "वर्णन",
