@@ -128,11 +128,11 @@
             "PPING": "```Menyetel foto profil...```",
             "BLOCK_DESC": "Block user.",
             "UNBLOCK_DESC": "Unblock user.",
-            "BLOCKED": "blocked",
-            "UNBLOCKED": "unblocked",
-            "BLOCKED_UPPER": "Blocked!",
-            "UNBLOCKED_UPPER": "Unblocked.",
-            "NEED_USER": "Give me a user!"
+            "BLOCKED": "diblokir",
+            "UNBLOCKED": "tidak diblokir",
+            "BLOCKED_UPPER": "Diblokir!",
+            "UNBLOCKED_UPPER": "tidak diblokir.",
+            "NEED_USER": "Beri saya pengguna!"
         },
         "removebg": {
             "REMOVEBG_DESC": "Menghapus latar belakang foto.",
