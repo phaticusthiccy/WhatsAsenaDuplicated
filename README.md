@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://i.hizliresim.com/6Bbj7i.jpg" width="200" height="200">
+  <img src="https://i.hizliresim.com/mm1NBs.jpg" width="200" height="200">
   <h1>🐺 WhatsAsena</h1>
 </div>
 <p align="center">
@@ -57,7 +57,7 @@ If you are concerned about security, you can install it on your own computer. If
 ### Is it paid?
 **Of course not.** It will never happen. But you can donate to us. You can reach me via [Telegram](https://t.me/fusuf) .
 
-### • What does Asena mean?
+### What does Asena mean?
 [Asena](https://tr.wikipedia.org/wiki/Asena), comes from Turkish mythology. According to Turkish mythology, Asena is a she-wolf that plays an important role.
 
 ### ⚠️ Warning! 
@@ -68,12 +68,12 @@ Absolutely, Asena executives do not accept responsibility.
 By establishing the Asena, you are deemed to have accepted these responsibilities.
 ```
 
-## Geliştiriciler
+## Developers
 
-[![Yusuf Usta](https://github.com/quiec.png?size=100)](https://quiec.tech) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio)
----|---
-[Yusuf Usta](https://t.me/fusuf) | [Alperen Ç](https://t.me/xacnio)
-Base, Development, Idea, Modules |  Bug Fixes, Modules
+[![Yusuf Usta](https://github.com/quiec.png?size=100)](https://quiec.tech) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio) | [![Justin Thoms](https://github.com/justinthoms.png?size=100)](https://github.com/justinthoms) | [![CW4RR10R](https://github.com/CW4RR10R.png?size=100)](https://github.com/CW4RR10R) | [![DevXenon](https://github.com/phaticusthiccy.png?size=100)](https://github.com/phaticusthiccy)
+---|---|---|---|---
+[Yusuf Usta](https://t.me/fusuf) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)  | [DevXenon](https://github.com/phaticusthiccy)
+Author, Base, Bug Fixes, Modules |  Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules | Modules, Idea
 
 ## Thanks To
 - [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 

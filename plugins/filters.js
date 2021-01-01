@@ -43,9 +43,9 @@ Asena.addCommand({pattern: 'stop ?(.*)', fromMe: true, desc: Lang.STOP_DESC, usa
     del = await FilterDb.deleteFilter(message.jid, match[0].replace(/['"“]+/g, ''));
     
     if (!del) {
-        await message.client.sendMessage(message.jid,Lang.ALREADY_NO_FILTER)
+        await message.client.sendMessage(message.jid,Lang.ALREADY_NO_FILTER, MessageType.text)
     } else {
-        await message.client.sendMessage(message.jid,Lang.DELETED)
+        await message.client.sendMessage(message.jid,Lang.DELETED, MessageType.text)
     }
 }));
 
