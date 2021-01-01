@@ -120,6 +120,18 @@
             "NOT_ADDED": "```Anda belum menambahkan pengguna ini!```",
             "DISABLED": "```Lydia telah dinonaktifkan untuk pengguna ini!```"
         },
+        "memes": {
+            "MEMES_DESC": "Photo memes you replied to.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Downloading media & making meme...```"
+        },
+        "ocr": {
+            "OCR_DESC": "Reads the text on the photo you have replied.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Media is downloading & reading...```",
+            "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
+            "RESULT": "*Language:* ```{}```\n*Here is what I read:* ```{}```"
+        },
         "profile": {
             "KICKME_DESC": "Menendangmu Keluar dari grup!",
             "KICKME": "```Sampai jumpa! Saya pergi 🤠```",
@@ -132,7 +144,10 @@
             "UNBLOCKED": "tidak diblokir",
             "BLOCKED_UPPER": "Diblokir!",
             "UNBLOCKED_UPPER": "tidak diblokir.",
-            "NEED_USER": "Beri saya pengguna!"
+            "NEED_USER": "Beri saya pengguna!",
+            "JID_DESC": "Giving user's JID.",
+            "JID": "```JID address of``` @{} ```: {}```",
+            "JID_CHAT": "```Chat's JID address: {}```"
         },
         "removebg": {
             "REMOVEBG_DESC": "Menghapus latar belakang foto.",

@@ -120,6 +120,18 @@
             "NOT_ADDED": "```Zaten bu kullanıcıyı eklememişsiniz!```",
             "DISABLED": "```Lydia bu kullanıcı için devredışı bırakıldı!``"
         },
+        "memes": {
+            "MEMES_DESC": "Yanıt verdiğiniz fotoğrafa yazdığınız yazıyı ekler.",
+            "NEED_REPLY": "*Bir fotoğraf veya videoya yanıt verin!*",
+            "DOWNLOADING": "```Medya indiriliyor & meme yapılıyor...```"
+        },
+        "ocr": {
+            "OCR_DESC": "Yanıt verdiğiniz fotoğraftaki yazıları okur.",
+            "NEED_REPLY": "*Bir fotoğrafa yanıt verin!*",
+            "DOWNLOADING": "```Medya indiriliyor & okunuyor...```",
+            "ERROR": "```Bunu okuyamadım :/```\n*Hata:*```{}```",
+            "RESULT": "*Dil:* ```{}```\n*İşte okuduklarım:* ```{}```"
+        },
         "profile": {
             "KICKME_DESC": "Yazdığınız gruptan sizi çıkarır.",
             "KICKME": "```Güle Güle! Ben gidiyorum 🤠```",
@@ -132,7 +144,10 @@
             "UNBLOCKED": "engelin kalktı",
             "BLOCKED_UPPER": "Engellendin!",
             "UNBLOCKED_UPPER": "Engelini kaldırdım.",
-            "NEED_USER": "Bana bir kullanıcı ver!"
+            "NEED_USER": "Bana bir kullanıcı ver!",
+            "JID_DESC": "Kullanıcının JID verir.",
+            "JID": "@{}, ```kullanıcısının JID adresi: {}```",
+            "JID_CHAT": "```Sohbetin JID adresi: {}```"
         },
         "removebg": {
             "REMOVEBG_DESC": "Fotoğrafın arka-planını siler.",

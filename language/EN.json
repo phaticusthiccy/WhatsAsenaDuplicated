@@ -120,6 +120,18 @@
             "NOT_ADDED": "```You haven't added this user already!```",
             "DISABLED": "```Lydia has been disabled for this user!```"
         },
+        "memes": {
+            "MEMES_DESC": "Photo memes you replied to.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Downloading media & making meme...```"
+        },
+        "ocr": {
+            "OCR_DESC": "Reads the text on the photo you have replied.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Media is downloading & reading...```",
+            "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
+            "RESULT": "*Language:* ```{}```\n*Here is what I read:* ```{}```"
+        },
         "profile": {
             "KICKME_DESC": "It kicks you from the group you are using it in.",
             "KICKME": "```Bye bye! I am going 🤠```",
@@ -132,7 +144,10 @@
             "UNBLOCKED": "unblocked",
             "BLOCKED_UPPER": "Blocked!",
             "UNBLOCKED_UPPER": "Unblocked.",
-            "NEED_USER": "Give me a user!"
+            "NEED_USER": "Give me a user!",
+            "JID_DESC": "Giving user's JID.",
+            "JID": "```JID address of``` @{} ```: {}```",
+            "JID_CHAT": "```Chat's JID address: {}```"
         },
         "removebg": {
             "REMOVEBG_DESC": "Removes the background of the photos.",

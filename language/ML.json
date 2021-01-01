@@ -120,6 +120,18 @@
             "NOT_ADDED": "```നിങ്ങൾ ഇതിനകം ഈ ഉപയോക്താവിനെ ചേർത്തിട്ടില്ല!```",
             "DISABLED": "```ഈ ഉപയോക്താവിനായി ലിഡിയ അപ്രാപ്‌തമാക്കി!```"
         },
+        "memes": {
+            "MEMES_DESC": "Photo memes you replied to.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Downloading media & making meme...```"
+        },
+        "ocr": {
+            "OCR_DESC": "Reads the text on the photo you have replied.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Media is downloading & reading...```",
+            "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
+            "RESULT": "*Language:* ```{}```\n*Here is what I read:* ```{}```"
+        },
         "profile": {
             "KICKME_DESC": "ഞാൻ പോകുന്നു.",
             "KICKME": "```ടാറ്റ! ഞാൻ പോകുന്നു 🤠```",
@@ -132,7 +144,10 @@
             "UNBLOCKED": "തടഞ്ഞത് മാറ്റി",
             "BLOCKED_UPPER": "തടഞ്!",
             "UNBLOCKED_UPPER": "തടഞ്ഞത് മാറ്റി.",
-            "NEED_USER": "എനിക്ക് ഒരു ഉപയോക്താവിനെ തരൂ!"
+            "NEED_USER": "എനിക്ക് ഒരു ഉപയോക്താവിനെ തരൂ!",
+            "JID_DESC": "Giving user's JID.",
+            "JID": "```JID address of``` @{} ```: {}```",
+            "JID_CHAT": "```Chat's JID address: {}```"
         },
         "removebg": {
             "REMOVEBG_DESC": "ബാക്കിൽ ഉള്ള ചിത്രം നീക്കുന്നു.",

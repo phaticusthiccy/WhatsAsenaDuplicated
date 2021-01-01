@@ -185,18 +185,17 @@ Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (a
 }));
 
 Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
-    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
-
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
     gis(match[1], async (error, result) => {
         for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
-            var get = got(result[i].url);
+            var get = got(result[i].url, {https: {rejectUnauthorized: false}});
             var stream = get.buffer();
-            
+                
             stream.then(async (image) => {
                 await message.client.sendMessage(message.jid,image, MessageType.image);
             });
         }
 
-        message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]))
+        message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
     });
 }));

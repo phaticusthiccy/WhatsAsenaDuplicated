@@ -110,6 +110,7 @@
             "GOODBYE_DELETED": "*✅ Sağollaşma mesajı müvəffəqiyyətlə silindi!*",
             "GOODBYE_SETTED": "*✅ Sağollaşma mesajı müvəffəqiyyətlə düzəldildi!*"
         },
+        
         "profile": {
             "KICKME_DESC": "Yazdığınız grupdan sizi çıxardar.",
             "KICKME": "```Görüşənədək! Mən gedirəm 🤠```",
@@ -124,6 +125,13 @@
             "UNBLOCKED_UPPER": "Blokdan çıxarıldı.",
             "NEED_USER": "Mənə bir istifadəçi verin!"
         },
+        "ocr": {
+            "OCR_DESC": "Yanıt verdiğiniz fotoğraftaki yazıları okur.",
+            "NEED_REPLY": "*Bir fotoğrafa yanıt verin!*",
+            "DOWNLOADING": "```Medya indiriliyor & okunuyor...```",
+            "ERROR": "```Bunu okuyamadım :/```\n*Hata:*```{}```",
+            "RESULT": "*Dil:* ```{}```\n*İşte okuduklarım:* ```{}```"
+        },
         "lydia": {
             "ADDLYDIA_DESC": "Lydia botu aktivləşdirir.",
             "NEED_REPLY": "```Zəhmət olmasa bir istifadəçinin mesajına cavab verin!```",
@@ -133,6 +141,11 @@
             "ALREADY_EMPTY": "```İstifadəçi siyahınız artıq boşdur!```",
             "NOT_ADDED": "```Bu istifadəçini hələ əlavə etməmisiniz!```",
             "DISABLED": "```Lydia bu istifadəçi üçün deaktiv edilmişdir!``"
+        },
+        "memes": {
+            "MEMES_DESC": "Yanıt verdiğiniz fotoğrafa yazdığınız yazıyı ekler.",
+            "NEED_REPLY": "*Bir fotoğraf veya videoya yanıt verin!*",
+            "DOWNLOADING": "```Medya indiriliyor & meme yapılıyor...```"
         },
         "removebg": {
             "REMOVEBG_DESC": "Şəklin arxa-planını silər.",

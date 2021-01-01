@@ -120,6 +120,18 @@
             "NOT_ADDED": "```आपने इस उपयोगकर्ता को पहले से नहीं जोड़ा है!```",
             "DISABLED": "```इस उपयोगकर्ता के लिए Lydia अक्षम कर दिया गया है!```"
         },
+        "ocr": {
+            "OCR_DESC": "Reads the text on the photo you have replied.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Media is downloading & reading...```",
+            "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
+            "RESULT": "*Language:* ```{}```\n*Here is what I read:* ```{}```"
+        },
+        "memes": {
+            "MEMES_DESC": "Photo memes you replied to.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Downloading media & making meme...```"
+        },
         "profile": {
             "KICKME_DESC": "यह आपको ग्रुप से निकलता है जहाँ आप है |",
             "KICKME": "```Bye bye! मैं जा रहा हूँ 🤠```",
@@ -132,7 +144,10 @@
             "UNBLOCKED": "अनब्लॉक कर दिया",
             "BLOCKED_UPPER": "ब्लॉक कर दिया!",
             "UNBLOCKED_UPPER": "अनब्लॉक कर दिया.",
-            "NEED_USER": "मुझे एक उपयोगकर्ता दें!"
+            "NEED_USER": "मुझे एक उपयोगकर्ता दें!",
+            "JID_DESC": "Giving user's JID.",
+            "JID": "```JID address of``` @{} ```: {}```",
+            "JID_CHAT": "```Chat's JID address: {}```"
         },
         "removebg": {
             "REMOVEBG_DESC": "तस्वीरों की पृष्ठभूमि निकालता है।",

@@ -8,7 +8,7 @@ WhatsAsena - Yusuf Usta
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-const speedTest = require('speedtest-net');
+const speedTest = require('@lh2020/speedtest-net');
 
 const Language = require('../language');
 const Lang = Language.getString('web');
