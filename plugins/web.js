@@ -27,9 +27,8 @@ function speedText(speed) {
     return `${bits.toFixed(places[unit])} ${units[unit]}bps`;
 }
 
-Asena.addCommand({pattern: 'speedtest', fromMe: true, deleteCommand: false, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
     var msg = await message.reply(Lang.SPEEDTESTING);
-    await message.delete();
     var st = await speedTest({acceptLicense: true, acceptGdpr: true});
     
     await message.client.sendMessage(
@@ -39,7 +38,6 @@ Asena.addCommand({pattern: 'speedtest', fromMe: true, deleteCommand: false, desc
     '*' + Lang.UPLOAD + ':* ```' + speedText(st.upload.bandwidth) + '```\n' +
     '*' + Lang.DOWNLOAD + ':* ```' + speedText(st.download.bandwidth) + '```\n',MessageType.text
     );
-
     await msg.delete();
 }));
 
