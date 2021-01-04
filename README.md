@@ -9,7 +9,7 @@ orijinal yazılıma kullanıcıların kendi yazdıkları eklentileri yükleyerek
 biçimde kullanmaları özelliğini sağlar.
 Kullanımı tamamen kullanıcının sorumluluğundadır, 
 Asena Userbot yalnızca bir altyapıdır. Nasıl sonradan yüklenen programlarla 
-yapıyan işlerden işletim sistemi sorumlu değilse, 
+yapılan işlerden işletim sistemi sorumlu değilse, 
 WhatsAsena da kullanıcıların kullanım amacı ve yönteminden sorumlu değildir.
 
 WhatsAsena - Asena Userbot is Open Source software open to development. 
