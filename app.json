@@ -1,10 +1,10 @@
 {
-    "name": "WhatsAsena",
+    "name": "WhatsAsenaDuplicated",
     "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp.",
     "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
     "keywords": ["whatsapp", "userbot", "Asena"],
-    "repository": "https://github.com/Quiec/WhatsAsena",
-    "website":   "https://quiec.tech",
+    "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
+    "website":   "https://t.me/phaticusthiccy",
     "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
     "env": {
