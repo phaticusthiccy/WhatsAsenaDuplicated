@@ -1,4 +1,4 @@
-FROM phaticusthiccy/WhatsAsenaDuplicated:latest
+FROM phaticusthiccy/whatsasenaduplicated:latest
 
 RUN git clone $GITHUB_REPO_URL /root/WhatsAsenaDuplicated
 WORKDIR /root/WhatsAsenaDuplicated/
