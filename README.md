@@ -25,7 +25,7 @@ is not responsible for the usage purpose and method of the users.
 
 <div align="center">
   <img src="https://i.hizliresim.com/mm1NBs.jpg" width="200" height="200">
-  <h1>🐺 WhatsAsena</h1>
+  <h1>🐺 WhatsAsena Duplicated</h1>
 </div>
 <p align="center">
     WhatsAsena project - Makes it easy and fun to use Whatsapp. Also first userbot for Whatsapp
@@ -34,6 +34,8 @@ is not responsible for the usage purpose and method of the users.
         Reserved |
         <a href="https://t.me/WHATSASENA">Telegram Channel</a> |
         <a href="https://t.me/AsenaSupport">Telegram Group</a> |
+        <a href="https://t.me/unofficialasena">New Support Group</a> |
+        <a href="https://t.me/unofficialplugin">New Plugin Channel</a> |
     <br>
 </p>
 
@@ -42,22 +44,23 @@ is not responsible for the usage purpose and method of the users.
 
 ## 📢 Guide
 > [Also for support & help please come our Telegram group.](https://t.me/AsenaSupport)
+> [New support & help group.](https://t.me/unofficialasena)
 
-> [Install Guide/Kurulum Yardımcısı/Qurulum Müavin](https://github.com/Quiec/WhatsAsena/wiki)
+> [Install Guide/Kurulum Yardımcısı/Qurulum Müavin](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
 
 > [Video Guide](https://www.youtube.com/watch?v=029KmetlKPU)
 
 > [You can translate other languages from Crowdin](https://crowdin.com/project/whatsasena)
 
 ## 🔎 What is WhatsAsena?
-**WhatsAsena,** is a WhatsApp helper bot written by [Yusuf Usta](https://github.com/Quiec). Does not log into your account It is written on WhatsApp Web API.
+**WhatsAsena,** is a WhatsApp helper bot written by [Yusuf Usta](https://github.com/Quiec) and edited by [Phaticusthiccy](https://github.com/phaticusthiccy). Does not log into your account It is written on WhatsApp Web API.
 
 ## Setup
 ### Very Simple Method
-`We are working on it...`
+`There is no support. Maybe I will handle it..`
 
 ### Simple Method
-[![Run on Repl.it](https://repl.it/badge/github/Quiec/whatsasena)](https://repl.it/@Quiec/whatsasena)
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://repl.it/@Quiec/whatsasena)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phaticusthiccy/WhatsAsenaDuplicated)
 
@@ -96,9 +99,9 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 ## Developers
 
 [![Phaticusthiccy](https://github.com/phaticusthiccy.png?size=100)](https://github.com/phaticusthiccy) | [![Yusuf Usta](https://github.com/quiec.png?size=100)](https://quiec.tech) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio) | [![Justin Thoms](https://github.com/justinthoms.png?size=100)](https://github.com/justinthoms) | [![CW4RR10R](https://github.com/CW4RR10R.png?size=100)](https://github.com/CW4RR10R)
----|---|---|---|---
+----|----|----|----|----
 [Phaticusthiccy](https://github.com/phaticusthiccy) | [Yusuf Usta](https://t.me/fusuf) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)
-Base, Bug Fixes, Modules |  Author, Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
+Base, Bug Fixes, Modules | Author, Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
 
 ## Thanks To
 - [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 
