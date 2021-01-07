@@ -49,9 +49,9 @@ is not responsible for the usage purpose and method of the users.
 ![Docker Pulls](https://img.shields.io/docker/pulls/fusuf/whatsasena?style=flat-square) ![Docker Image Size (latest by date)](https://img.shields.io/docker/image-size/fusuf/whatsasena?style=flat-square)
 
 ## 📢 Guide
-> [Also for support & help please come our Telegram group.](https://t.me/AsenaSupport)
+> [Also for support & help please come our Telegram group.](https://t.me/AsenaSupport) (Legacy)
 
-> [New support & help group.](https://t.me/unofficialasena)
+> [New support & help group.](https://t.me/unofficialasena) (New)
 
 > [Install Guide/Kurulum Yardımcısı/Qurulum Müavin](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
 
