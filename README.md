@@ -1,4 +1,4 @@
-```js
+```diff
 Thanks for Everything 
 We will always remember you
 [@fusufs](https://t.me/fusufs)
