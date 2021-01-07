@@ -61,7 +61,7 @@ is not responsible for the usage purpose and method of the users.
 `There is no support. Maybe I will handle it..`
 
 ### Simple Method
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://repl.it/@Quiec/whatsasena)
+[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://repl.it/@phaticusthiccy/WhatsAsena-QR)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phaticusthiccy/WhatsAsenaDuplicated)
 
@@ -99,10 +99,10 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 
 ## Developers
 
-[![Phaticusthiccy](https://github.com/phaticusthiccy.png?size=100)](https://github.com/phaticusthiccy) | [![Yusuf Usta](https://github.com/quiec.png?size=100)](https://quiec.tech) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio) | [![Justin Thoms](https://github.com/justinthoms.png?size=100)](https://github.com/justinthoms) | [![CW4RR10R](https://github.com/CW4RR10R.png?size=100)](https://github.com/CW4RR10R)
+[![Yusuf Usta](https://github.com/quiec.png?size=100)](https://quiec.tech) | [![Phaticusthiccy](https://github.com/phaticusthiccy.png?size=100)](https://github.com/phaticusthiccy) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio) | [![Justin Thoms](https://github.com/justinthoms.png?size=100)](https://github.com/justinthoms) | [![CW4RR10R](https://github.com/CW4RR10R.png?size=100)](https://github.com/CW4RR10R)
 ----|----|----|----|----
-[Phaticusthiccy](https://github.com/phaticusthiccy) | [Yusuf Usta](https://t.me/fusuf) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)
-Base, Bug Fixes, Modules | Author, Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
+[Yusuf Usta](https://t.me/fusuf) | [Phaticusthiccy](https://github.com/phaticusthiccy) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)
+Author, Base, Bug Fixes, Modules | Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
 
 ## Thanks To
 - [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 
