@@ -226,6 +226,11 @@
             "UPLOAD": "Upload",
             "DOWNLOAD": "Download",
             "PING_DESC": "Measures your ping."
+        },
+        "conventer": {
+            "MP4TOAUDİO_DESC": "Converts video to sound.",
+            "MP4TOAUDİO_NEEDREPLY": "*You Must Reply to a Video!*",
+            "MP4TOAUDİO": "```Converting Video to Audio..```"
         }
     }
 }
