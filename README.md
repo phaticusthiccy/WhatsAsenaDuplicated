@@ -1,9 +1,8 @@
-```
+
 Thanks for Everything 
 We will always remember you
 - [@fusufs](https://t.me/fusufs)
 - [Yusuf Usta](https://github.com/quiec)
-```
 
 ```
 Asena; Asena UserBot, WhatsAsena yazılımı temsil eden adlardır, yazının devamında birbiri yerine kullanılabilir.
