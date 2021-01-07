@@ -226,6 +226,11 @@
             "UPLOAD": "Unggah",
             "DOWNLOAD": "Unduh",
             "PING_DESC": "Mengukur ping anda."
+        },
+        "conventer": {
+            "MP4TOAUDİO_DESC": "Mengubah video menjadi suara.",
+            "MP4TOAUDİO_NEEDREPLY": "*Anda harus menanggapi videonya!*",
+            "MP4TOAUDİO": "```Video diubah menjadi audio..```"
         }
     }
 }
