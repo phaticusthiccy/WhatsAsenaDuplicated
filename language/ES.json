@@ -226,6 +226,11 @@
             "UPLOAD": "Subida",
             "DOWNLOAD": "Bajada",
             "PING_DESC": "Mide tu ping."
+        },
+        "conventer": {
+            "MP4TOAUDİO_DESC": "Convierte video en sonido.",
+            "MP4TOAUDİO_NEEDREPLY": "*Tienes que respond a un video!*",
+            "MP4TOAUDİO": "```El video se convierte en sonido..```"
         }
     }
 }
