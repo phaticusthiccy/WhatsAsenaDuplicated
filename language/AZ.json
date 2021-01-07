@@ -224,6 +224,11 @@
             "UPLOAD": "Yükləmə",
             "DOWNLOAD": "Endirmə",
             "PING_DESC": "Ping'inizi ölçər."
+        },
+        "conventer": {
+            "MP4TOAUDİO_DESC": "Videonu səsə çevirir..",
+            "MP4TOAUDİO_NEEDREPLY": "*Bir videoya cavab verməlisiniz!*",
+            "MP4TOAUDİO": "```Videonuzu Səsə çevirir..```"
         }
     }
 }
