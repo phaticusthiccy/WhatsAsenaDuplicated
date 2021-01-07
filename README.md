@@ -1,8 +1,8 @@
 ```
 Thanks for Everything 
 We will always remember you
-![@fusufs](https://t.me/fusufs)
-![Yusuf Usta](https://github.com/quiec)
+- [@fusufs](https://t.me/fusufs)
+- [Yusuf Usta](https://github.com/quiec)
 ```
 
 ```
