@@ -4,14 +4,17 @@
 - [Yusuf Usta](https://github.com/quiec)
 - [@fusufs](https://t.me/fusufs)
 
-```
 <p align="center">
-
+  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/fork">
+    <img src="https://img.shields.io/github/forks/phaticusthiccy/WhatsAsenaDuplicated?label=Fork&style=social">
+    
+  </a>
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated">
     <img src="https://img.shields.io/github/stars/phaticusthiccy/WhatsAsenaDuplicated?style=social">
   </a>
 </p>
 
+```
 Asena; Asena UserBot, WhatsAsena yazılımı temsil eden adlardır, yazının devamında birbiri yerine kullanılabilir.
 
 WhatsAsena - Asena Userbot Açık Kaynaklı geliştirmeye açık bir yazılımdır. 
