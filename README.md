@@ -5,7 +5,12 @@
 - [@fusufs](https://t.me/fusufs)
 
 ```
-<p align="left"> <img src="https://img.shields.io/github/stars/phaticusthiccy/WhatsAsenaDuplicated?style=social" /p>
+<p align="center">
+
+  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated">
+    <img src="https://img.shields.io/github/stars/phaticusthiccy/WhatsAsenaDuplicated?style=social">
+  </a>
+</p>
 
 Asena; Asena UserBot, WhatsAsena yazılımı temsil eden adlardır, yazının devamında birbiri yerine kullanılabilir.
 
