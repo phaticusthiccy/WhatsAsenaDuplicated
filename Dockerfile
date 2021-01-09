@@ -10,6 +10,7 @@ RUN apk --no-cache --virtual build-dependencies add \
     g++ \
     && npm install \
     && apk del build-dependencies
+RUN npm install supervisor -g
 RUN npm install
 
 CMD ["node", "bot.js"]
