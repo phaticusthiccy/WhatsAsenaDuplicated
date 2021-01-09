@@ -29,7 +29,6 @@
     "cwebp": "^2.0.5",
     "cwebp-bin": "^6.1.1",
     "dotenv": "^8.2.0",
-    "npm": "^7.4.0",
     "exchange-rates-api": "^1.0.2",
     "fluent-ffmpeg": "^2.1.2",
     "form-data": "^3.0.0",
