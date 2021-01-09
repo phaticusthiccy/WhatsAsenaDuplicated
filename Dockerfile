@@ -4,7 +4,6 @@ RUN git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated /root/Whats
 WORKDIR /root/WhatsAsenaDuplicated/
 ENV TZ=Europe/Istanbul
 RUN apk add sqlite
-RUN npm i -g sqlite3@4.0.1 --unsafe-perm
 RUN npm install supervisor -g
 RUN npm install
 
