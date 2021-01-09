@@ -5,6 +5,8 @@
 - [@fusufs](https://t.me/fusufs)
 
 ```
+<img src="https://img.shields.io/github/stars/phaticusthiccy/WhatsAsenaDuplicated?style=social">
+
 Asena; Asena UserBot, WhatsAsena yazılımı temsil eden adlardır, yazının devamında birbiri yerine kullanılabilir.
 
 WhatsAsena - Asena Userbot Açık Kaynaklı geliştirmeye açık bir yazılımdır. 
