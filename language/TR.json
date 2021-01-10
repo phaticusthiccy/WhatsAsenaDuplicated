@@ -230,7 +230,10 @@
         "conventer": {
             "MP4TOAUDİO_DESC": "Videoyu ses kaydına çevirir.",
             "MP4TOAUDİO_NEEDREPLY": "*Bir Videoya Yanıt Vermelisin!*",
-            "MP4TOAUDİO": "```Video Ses Kaydına Çevriliyor..```"
+            "MP4TOAUDİO": "```Video Ses Kaydına Çevriliyor..```",
+            "STİCKER_DESC': "Resim stickeri fotoğrafa çevirir.",
+            "STİCKER_NEEDREPLY": "*Bir Stickere Yanıt Vermelisin!*",
+            "STİCKER": "```Sticker Fotoğrafa Çevriliyor..```"
         }
     }
 }
