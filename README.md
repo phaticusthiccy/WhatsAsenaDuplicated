@@ -90,6 +90,8 @@ npm i
 # Config.env create and edit. #
 node bot.js
 ```
+### ⚒️ Setup Wiki 
+[![Setup - Kurulum](https://image.flaticon.com/icons/png/512/826/826022.png)](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
 
 ## F.A.Q
 Answer a few frequently asked questions;
