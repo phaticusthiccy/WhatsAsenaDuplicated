@@ -32,3 +32,23 @@ Asena.addCommand({pattern: 'videoaudio', fromMe: true, desc: Lang.MP4TOAUDİO_DE
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
+
+Asena.addCommand({pattern: 'imagesticker', fromMe: true, desc: Lang.STİCKER}, (async (message, match) => {    
+    if (message.reply_message === false) return await message.sendMessage(Lang.STİCKER_NEEDREPLY);
+    var downloading = await message.client.sendMessage(message.jid,Lang.STİCKER,MessageType.text);
+    var location = await message.client.downloadAndSaveMediaMessage({
+        key: {
+            remoteJid: message.reply_message.jid,
+            id: message.reply_message.id
+        },
+        message: message.reply_message.data.quotedMessage
+    });
+
+    ffmpeg(location)
+        .fromFormat('webp_pipe')
+        .save('output.jpg')
+        .on('end', async () => {
+            await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
+        });
+    return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+}));
