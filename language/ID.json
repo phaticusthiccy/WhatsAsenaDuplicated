@@ -233,7 +233,8 @@
             "MP4TOAUDİO": "```Video diubah menjadi audio..```",
             "STİCKER_DESC": "Mengubah stiker menjadi foto..",
             "STİCKER_NEEDREPLY": "*Anda harus membalas stiker*",
-            "STİCKER": "```Mengonversi stiker menjadi foto..```"
+            "STİCKER": "```Mengonversi stiker menjadi foto..```",
+            "XMEDİA_DESC": "Ini adalah plugin dengan lebih dari 25 alat media."
         }
     }
 }
