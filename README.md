@@ -17,6 +17,24 @@
   </a>
 </p>
 
+<p align="center">
+  <a href="httsp://github.com/phaticusthiccy/WhatsAsenaDuplicated">
+    <img src="https://img.shields.io/github/languages/code-size/phaticusthiccy/WhatsAsenaDuplicated?color=purple&style=plastic">
+
+  </a>
+  <a href="httsp://github.com/phaticusthiccy/WhatsAsenaDuplicated">
+    <img src="https://img.shields.io/codefactor/grade/github/phaticusthiccy/WhatsAsenaDuplicated?color=purple&style=plastic">
+
+  </a>
+  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/phaticusthiccy/WhatsAsenaDuplicated?color=purple&style=plastic">
+
+  </a>
+  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated">
+    <img src="https://img.shields.io/github/languages/top/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Javascript&style=plastic">
+  </a>
+</p>
+
 ```
 Asena; Asena UserBot, WhatsAsena yazılımı temsil eden adlardır, yazının devamında birbiri yerine kullanılabilir.
 
