@@ -231,7 +231,8 @@
             "MP4TOAUDİO": "```Videonuzu Səsə çevirir..```",
             "STİCKER_DESC": "Resim stickeri bir fotoya çevirir..",
             "STİCKER_NEEDREPLY": "*Bir stickere cavab verməlisən*",
-            "STİCKER": "```Sticker bir fotoya çevirir..```"
+            "STİCKER": "```Sticker bir fotoya çevirir..```",
+            "XMEDİA_DESC": "25-dən çox medya vasitəsi olan plagindir."
         }
     }
 }
