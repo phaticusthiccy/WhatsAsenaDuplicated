@@ -233,7 +233,8 @@
             "MP4TOAUDİO": "```Video Ses Kaydına Çevriliyor..```",
             "STİCKER_DESC": "Resim stickeri fotoğrafa çevirir.",
             "STİCKER_NEEDREPLY": "*Bir Stickere Yanıt Vermelisin!*",
-            "STİCKER": "```Sticker Fotoğrafa Çevriliyor..```"
+            "STİCKER": "```Sticker Fotoğrafa Çevriliyor..```",
+            "XMEDİA_DESC": "İçerisinde 25’den fazla medya aracının bulduğu bir plugin."
         }
     }
 }
