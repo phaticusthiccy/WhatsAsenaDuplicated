@@ -233,7 +233,8 @@
             "MP4TOAUDİO": "```Converting Video to Audio..```",
             "STİCKER_DESC": "Converts the sticker to a photo.",
             "STİCKER_NEEDREPLY": "*You Must Reply to a sticker!*",
-            "STİCKER": "```Converting the sticker to a photo..```"
+            "STİCKER": "```Converting the sticker to a photo..```",
+            "XMEDİA_DESC": "It is a plugin with more than 25 media tools."
         }
     }
 }
