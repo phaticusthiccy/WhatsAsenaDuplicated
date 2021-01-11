@@ -12,6 +12,9 @@
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated">
     <img src="https://img.shields.io/github/stars/phaticusthiccy/WhatsAsenaDuplicated?style=social">
   </a>
+  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated">
+    <img src="https://img.shields.io/github/commit-activity/m/phaticusthiccy/WhatsAsenaDuplicated?style=social">
+  </a>
 </p>
 
 ```
