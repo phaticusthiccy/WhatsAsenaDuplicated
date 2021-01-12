@@ -32,6 +32,11 @@
   </a>
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated">
     <img src="https://img.shields.io/github/languages/top/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Javascript&style=plastic">
+
+  </a>
+  <a href="https://github.com/phaticusthiccy">
+    <img src="https://img.shields.io/static/v1?label=Author&message=Thiccy&color=purple&style=plastic">
+
   </a>
 </p>
 
