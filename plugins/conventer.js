@@ -13,7 +13,7 @@ const cwebp = require('cwebp-bin');
 const Language = require('../language');
 const Lang = Language.getString('conventer');
 
-Asena.addCommand({pattern: 'videoaudio', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
+Asena.addCommand({pattern: 'mp4audio', fromMe: true, desc: Lang.MP4TOAUDİO_DESC}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.MP4TOAUDİO_NEEDREPLY);
     var downloading = await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO,MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
