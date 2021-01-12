@@ -30,7 +30,7 @@
             "BANNED": "Gruptan Çıkarıldı!",
             "GIVE_ME_USER": "*Bana bir kullanıcı ver!*",
             "ADD_DESC": "Gruba kişi ekler.",
-            "ADDED": "gruba eklendi!",
+            "ADDED": "Gruba Eklendi!",
             "ALREADY_PROMOTED": "```Zaten admin olan birisini nasıl admin yapayım?```",
             "PROMOTED": "```, Admin Yapıldı!```",
             "PROMOTE_DESC": "Herhangi bir kişiyi admin yapar.",
@@ -51,11 +51,11 @@
             "REASON": "Sebep",
             "LAST_SEEN": "Son Görülme",
             "IM_NOT_AFK": "```Artık AFK Değilim!```",
-            "AFK_TEXT": "```Bip bop! Bu bir bot. Sahibim şu an burada değil.```",
-            "AFK_TEXT_NOMD": "Bip bop! Bu bir bot. Sahibim şu an burada değil.",
-            "HOUR": "saat",
-            "MINUTE": "dakika",
-            "SECOND": "saniye"
+            "AFK_TEXT": "```Hayat çok kısa, yapacak çok şey var...\nOnlardan birini yapıyorum..```",
+            "AFK_TEXT_NOMD": "Hayat çok kısa, yapacak çok şey var...\nOnlardan birini yapıyorum..",
+            "HOUR": "Saat",
+            "MINUTE": "Dakika",
+            "SECOND": "Saniye"
         },
         "evaluators": {
             "TERM_DESC": "Sunucuda shellinde komut çalıştırmanıza imkan tanır.",
@@ -68,9 +68,9 @@
         },
         "heroku": {
             "RESTART_DESC": "WhatsAsena'yı yeniden başlatın",
-            "RESTART_MSG": "```Yeniden başlatılıyor...```",
+            "RESTART_MSG": "```Yeniden Başlatılıyor...```",
             "SHUTDOWN_DESC": "WhatsAsena'yı kapatır.",
-            "SHUTDOWN_MSG": "```Kapatılıyor... ⛔```",
+            "SHUTDOWN_MSG": "*Belki birgün tekrar görüşebiliriz..\nHoşcakal Sahip..*\n```Asena Kapatılıyor... ⛔```",
             "DYNO_DESC": "Heroku dyno kullanımını kontrol edin",
             "DYNO_TOTAL": "```Toplam Kota```",
             "DYNO_USED": "```Kullanılan kota```",
@@ -134,7 +134,7 @@
         },
         "profile": {
             "KICKME_DESC": "Yazdığınız gruptan sizi çıkarır.",
-            "KICKME": "```Güle Güle! Ben gidiyorum 🤠```",
+            "KICKME": "```Güle güle. Ben gidiyorum 🤠```",
             "PP_DESC": "Yanıt verdiğiniz fotoğrafı profil fotoğrafınız yapar.",
             "NEED_PHOTO": "*Bana bir fotoğraf ver!*",
             "PPING": "```Profil fotoğrafı yapılıyor...```",
