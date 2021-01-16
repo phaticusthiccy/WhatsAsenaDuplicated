@@ -45,6 +45,10 @@
             "INVITE_DESC": "Memberikan tautan undangan grup.",
             "INVITE": "```Tautan undangan:```"
         },
+        "locate": {
+            "L_DESC": "Mengirimkan lokasi Anda",
+            "L_WARN": "Nyalakan lokasi Anda sebelum digunakan!"
+        },
         "afk": {
             "AFK_DESC": "Itu membuat Anda AFK.",
             "IM_AFK": "*Saya AFK sekarang!*",
