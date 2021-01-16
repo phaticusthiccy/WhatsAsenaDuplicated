@@ -23,6 +23,7 @@ function addCommand(info, func) {
         desc: info['desc'] === undefined ? '' : info['desc'],
         usage: info['usage'] === undefined ? '' : info['usage'],
         dontAddCommandList: info['dontAddCommandList'] === undefined ? false : info['dontAddCommandList'],
+        warn: info['warn'] === undefined ? '' : info['warn'],
         function: func
     };
 
