@@ -45,6 +45,10 @@
             "INVITE_DESC": "Trayendo el enlace de invitación del grupo...",
             "INVITE": "```Enlace de invitación:```"
         },
+        "locate": {
+            "L_DESC": "Envía tu ubicación",
+            "L_WARN": "Encienda su ubicación antes de usar!"
+        },
         "afk": {
             "AFK_DESC": "Te hace AFK (ausente).",
             "IM_AFK": "*¡Estoy ausente ahora!*",
