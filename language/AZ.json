@@ -45,6 +45,10 @@
             "INVITE_DESC": "Grupun dəvət linkini gətirir.",
             "INVITE": "```Dəvət linki:```"
         },
+        "locate": {
+            "L_DESC": "Yerinizi göndərir.",
+            "L_WARN": "İstifadə etməzdən əvvəl yerinizi açın!"
+        },
         "afk": {
             "AFK_DESC": "Sizi AFK edər.",
             "IM_AFK": "*Artığ AFK’yam!*",
