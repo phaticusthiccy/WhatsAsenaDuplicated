@@ -8,7 +8,8 @@
             "COMMAND": "Command",
             "DESC": "Description",
             "EXAMPLE": "Example",
-            "NOT_FOUND": "*I couldn't find a command like this*"
+            "NOT_FOUND": "*I couldn't find a command like this*",
+            "WARN": "Warn"
         },
         "_plugin": {
             "INSTALL_DESC": "Install external plugins.",
