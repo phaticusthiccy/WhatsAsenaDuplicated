@@ -8,7 +8,8 @@
             "COMMAND": "Əmr",
             "DESC": "Açığlama",
             "EXAMPLE": "Nümunə",
-            "NOT_FOUND": "*Belə bir əmr tapa bilmədim*"
+            "NOT_FOUND": "*Belə bir əmr tapa bilmədim*",
+            "WARN": "Xəbərdarlıq"
         },
         "_plugin": {
             "INSTALL_DESC": "Plugin quraşdırır.",
