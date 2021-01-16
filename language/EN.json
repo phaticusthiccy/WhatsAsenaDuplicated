@@ -45,6 +45,10 @@
             "INVITE_DESC": "Provides the group's invitation link.",
             "INVITE": "```Invitation link: ```"
         },
+        "locate": {
+            "L_DESC": "It send your location.",
+            "L_WARN": "Please open your location before using command!"
+        },
         "afk": {
             "AFK_DESC": "It makes you AFK - Away From Keyboard.",
             "IM_AFK": "*I'm AFK now!*",
