@@ -79,21 +79,11 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
                 await git.addRemote('heroku', git_url);
             } catch { console.log('heroku remote ekli'); }
             await git.push('heroku', Config.BRANCH);
+
+            await message.sendMessage('💬 *WhatsAsena Restarting Automatically!* ');
             
             await message.client.sendMessage(
                 message.jid,Lang.UPDATED, MessageType.text);
-
-                await new Promise(r => setTimeout(r, 10000));
-    
-                await message.sendMessage('💬 *WhatsAsena Restarting Automatically!*');
-
-                console.log(baseURI);
-                await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-                    await message.sendMessage(error.message);
-
-                });
-
-            }
 
         } else {
             git.pull((async (err, update) => {
