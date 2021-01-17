@@ -325,6 +325,11 @@
             "TÜR": "*Unknown Command!*\n_Minute: 1-60_\n_Hour: 75-90..-180-720_\n_Day: 1d-3d_",
             "MUTE_DESC": "Turns off group chat. Only admins can send messages!",
             "MUTE_OPEN": "*Allright Boss! Chat Has Been Opened!*"
+        },
+        "unvoice": {
+            "UV_DESC": "Converts audio to sound recording.",
+            "UV_REPLY": "*You Must Reply to the Audio File!*",
+            "UV_PROC": "```Converting to Sound Recording..```"
         }
     }
 }
