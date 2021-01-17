@@ -325,6 +325,12 @@
             "TÜR": "*Perintah Tidak Diketahui!*\n_Menit: 1-60_\n_Jam: 75-90..-180-720_\n_Hari: 1h-3h_",
             "MUTE_DESC": "Matikan obrolan grup. Hanya admin yang dapat mengirim pesan!",
             "MUTE_OPEN": "*Baiklah Bos! Obrolan Telah Dibuka!*"
+        },
+        "unvoice": {
+            "UV_DESC": "Mencakup audio ke rekaman suara.",
+            "UV_REPLY": "*Anda harus membalas audio!*",
+            "UV_PROC": "```Mengonversi ke rekaman suara..```"
+
         }
     }
 }
