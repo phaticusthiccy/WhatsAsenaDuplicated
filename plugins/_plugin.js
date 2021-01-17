@@ -82,15 +82,16 @@ Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_
         delete require.cache[require.resolve('./' + match[1] + '.js')]
         fs.unlinkSync('./plugins/' + match[1] + '.js');
         return await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text);
-    }
-
-    await new Promise(r => setTimeout(r, 2000));
+        
+        await new Promise(r => setTimeout(r, 2000));
     
-    await message.sendMessage('💬 *WhatsAsena Restarting Automatically!*');
-    console.log(baseURI);
-    await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-        await message.sendMessage(error.message);
+        await message.sendMessage('💬 *WhatsAsena Restarting Automatically!*');
 
-    });
+        console.log(baseURI);
+        await heroku.delete(baseURI + '/dynos').catch(async (error) => {
+            await message.sendMessage(error.message);
+
+        });
+    }
 
 }));
