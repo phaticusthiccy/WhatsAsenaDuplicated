@@ -328,7 +328,7 @@
         },
         "unvoice": {
             "UV_DESC": "Müzik dosyasını sesli mesaja çevirir.",
-            "UV_REPLY": "*Herhangi Bir Ses Dosyasını Yanıtlaman Gerekiyor!",
+            "UV_REPLY": "*Herhangi Bir Ses Dosyasını Yanıtlaman Gerekiyor!*",
             "UV_PROC": "```Sesli Mesaja Çevriliyor..```"
         }
     }
