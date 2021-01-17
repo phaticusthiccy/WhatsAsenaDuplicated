@@ -19,6 +19,14 @@ const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 const Language = require('../language');
 const Lang = Language.getString('updater');
 
+const heroku = new Heroku({
+    token: Config.HEROKU.API_KEY
+});
+
+
+let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
+
+
 Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
     var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
@@ -74,6 +82,19 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
             
             await message.client.sendMessage(
                 message.jid,Lang.UPDATED, MessageType.text);
+
+                await new Promise(r => setTimeout(r, 10000));
+    
+                await message.sendMessage('💬 *WhatsAsena Restarting Automatically!*');
+
+                console.log(baseURI);
+                await heroku.delete(baseURI + '/dynos').catch(async (error) => {
+                    await message.sendMessage(error.message);
+
+                });
+
+            }
+
         } else {
             git.pull((async (err, update) => {
                 if(update && update.summary.changes) {
