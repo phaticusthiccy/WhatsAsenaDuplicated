@@ -19,13 +19,6 @@ const heroku = new Heroku({ token: Config.HEROKU.API_KEY })
 const Language = require('../language');
 const Lang = Language.getString('updater');
 
-const heroku = new Heroku({
-    token: Config.HEROKU.API_KEY
-});
-
-
-let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
-
 
 Asena.addCommand({pattern: 'update$', fromMe: true, desc: Lang.UPDATER_DESC}, (async (message, match) => {
     await git.fetch();
