@@ -323,6 +323,11 @@
             "TÜR": "*Naməlum Növü!*\n_Dəqiqə: 1-60_\n_Saat: 75-90..-180-720_\n_Gün: 1d-3d_",
             "MUTE_DESC": "Qrup söhbətini söndürür. Yalnız adminlər mesaj göndərə bilər!",
             "MUTE_OPEN": "*Yaxşı patron! Söhbət yenidən başlandı!*"
+        },
+        "unvoice": {
+            "UV_DESC": "Musiqi faylını səsli poçta çevirir..",
+            "UV_REPLY": "*Hər hansı bir səs sənədinə cavab verməlisiniz!*",
+            "UV_PROC": "```Səs Poçtuna Çevrilir..```"
         }
     }
 }
