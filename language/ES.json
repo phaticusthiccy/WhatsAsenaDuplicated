@@ -240,6 +240,11 @@
             "STİCKER_NEEDREPLY": "*Tienes que responder a un sticker!*",
             "STİCKER": "```El stciker convierte en foto..```",
             "XMEDİA_DESC": "Es un complemento con más de 25 herramientas multimedia."
+        },
+        "unvoice": {
+            "UV_DESC": "Convierte audio en grabación de sonido.",
+            "UV_REPLY": "*Necesitas contestar el archivo de audio!*",
+            "UV_PROC": "```Conversión a correo de voz..```"
         }
     }
 }
