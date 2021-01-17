@@ -73,11 +73,13 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
             } catch { console.log('heroku remote ekli'); }
             await git.push('heroku', Config.BRANCH);
 
-            await message.sendMessage('💬 *WhatsAsena Restarting Automatically!* ');
-            
             await message.client.sendMessage(
                 message.jid,Lang.UPDATED, MessageType.text);
 
+            await new Promise(r => setTimeout(r, 1200));
+
+            await message.sendMessage('💬 *WhatsAsena Restarting Automatically!* ');
+            
         } else {
             git.pull((async (err, update) => {
                 if(update && update.summary.changes) {
