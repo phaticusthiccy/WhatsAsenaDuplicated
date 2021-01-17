@@ -7,6 +7,7 @@ WhatsAsena - Yusuf Usta
 */
 
 const Asena = require('../events');
+const Heroku = require('heroku-client');
 const Config = require('../config');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
@@ -15,6 +16,14 @@ const Db = require('./sql/plugin');
 
 const Language = require('../language');
 const Lang = Language.getString('_plugin');
+
+
+const heroku = new Heroku({
+    token: Config.HEROKU.API_KEY
+});
+
+
+let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, usage: '.install https://gist.github.com/Quiec/cd5af0c153a613ba55c24f8c6b6f5565'}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage('```' + Lang.NEED_URL + '.install https://gist.github.com/Quiec/cd5af0c153a613ba55c24f8c6b6f5565```')
