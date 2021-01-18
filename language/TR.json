@@ -81,7 +81,7 @@
             "DYNO_USED": "```Kullanılan kota```",
             "PERCENTAGE": "```Yüzde```",
             "DYNO_LEFT": "```Kalan```",
-            "SETVAR_DESC": "Heroku'da kısa yolla config var ayarlar",
+            "SETVAR_DESC": "Heroku'da kısa yolla config var ayarlar.\n⌨️ ```Örnek: .setvar SUDO:true```",
             "SET_SUCCESS": "Başarıyla ayarlandı ```{} ➜ {}```",
             "KEY_VAL_MISSING": "```Key veya Value eksik yazdınız.```",
             "INVALID": "```Geçersiz key: value biçimi```",
