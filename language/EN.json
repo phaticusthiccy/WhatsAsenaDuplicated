@@ -240,7 +240,7 @@
             "STİCKER_NEEDREPLY": "*You Must Reply to a sticker!*",
             "STİCKER": "```Converting the sticker to a photo..```",
             "XMEDİA_DESC": "It is a plugin with more than 25 media tools.",
-            },
+        },
         "mute": {
             "1MUTE": "*The group was silenced for 1 minute!*",
             "2MUTE": "*The group was silenced for 2 minute!*",
