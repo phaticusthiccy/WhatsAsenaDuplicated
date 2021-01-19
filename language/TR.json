@@ -12,7 +12,7 @@
             "WARN": "Uyarı"
         },
         "_plugin": {
-            "INSTALL_DESC": "Plugin yükler.\n⌨️ *Örnek:* ```.install``` https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd",
+            "INSTALL_DESC": "Plugin yükler.\n⌨️ Örnek: .install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd",
             "NEED_URL": "Lütfen bir URL giriniz! Örnek:",
             "INVALID_URL": "```Lütfen bir geçerli URL giriniz!```",
             "INVALID_PLUGIN": "*❌ Plugininiz hatalı!*\n*Hata:*",
@@ -30,7 +30,7 @@
             "IM_NOT_ADMIN": "*Bu grupta admin değilim!*",
             "BANNED": "Gruptan Çıkarıldı!",
             "GIVE_ME_USER": "*Bana bir kullanıcı ver!*",
-            "ADD_DESC": "Gruba kişi ekler.\n⌨️ *Örnek:* ```.add``` 9055xxxxxxxx",
+            "ADD_DESC": "Gruba kişi ekler.\n⌨️ Örnek: .add 9055xxxxxxxx",
             "ADDED": "Gruba Eklendi!",
             "ALREADY_PROMOTED": "```Zaten admin olan birisini nasıl admin yapayım?```",
             "PROMOTED": "```, Admin Yapıldı!```",
@@ -63,7 +63,7 @@
             "SECOND": "Saniye"
         },
         "evaluators": {
-            "TERM_DESC": "Sunucuda shellinde komut çalıştırmanıza imkan tanır.\n⌨️ *Örnek:* ```.term ls``` ",
+            "TERM_DESC": "Sunucuda shellinde komut çalıştırmanıza imkan tanır.\n⌨️ Örnek: .term ls",
             "GIVE_ME_CODE": "*Bana bir kod ver!*"
         },
         "nekobin": {
@@ -81,7 +81,7 @@
             "DYNO_USED": "```Kullanılan kota```",
             "PERCENTAGE": "```Yüzde```",
             "DYNO_LEFT": "```Kalan```",
-            "SETVAR_DESC": "Heroku'da kısa yolla config var ayarlar.\n⌨️ *Örnek:* ```.setvar``` ```SUDO:true``` ",
+            "SETVAR_DESC": "Heroku'da kısa yolla config var ayarlar.\n⌨️ Örnek: .setvar SUDO:true",
             "SET_SUCCESS": "Başarıyla ayarlandı ```{} ➜ {}```",
             "KEY_VAL_MISSING": "```Key veya Value eksik yazdınız.```",
             "INVALID": "```Geçersiz key: value biçimi```",
@@ -96,7 +96,7 @@
             "FILTERS": "*🔎 Bu sohbetdeki filtreleriniz:*",
             "NEED_REPLY": "*❌ Lütfen cevap yazın!*\n*Örnek:*",
             "FILTERED": "*✅ Başarılı bir şekilde* ```{}``` *filtresi ayarlandı!*",
-            "STOP_DESC": "Ekledğiniz filtreyi durdurur.\n⌨️ ```Örnek: .stop ”merhaba”``` ",
+            "STOP_DESC": "Ekledğiniz filtreyi durdurur.\n⌨️ Örnek: .stop ”merhaba”",
             "NEED_FILTER": "*❌ Lütfen bir filtre yazın!*\n*Örnek:*",
             "ALREADY_NO_FILTER": "*❌ Zaten böyle bir filtre yok!*",
             "DELETED": "*✅ Filtreniz başarılı bir şekilde silindi!*"
@@ -126,12 +126,12 @@
             "DISABLED": "```Lydia bu kullanıcı için devredışı bırakıldı!``"
         },
         "memes": {
-            "MEMES_DESC": "Yanıt verdiğiniz fotoğrafa yazdığınız yazıyı ekler.\n⌨️ *Örnek:* ```.meme TEST;YAPIYOR``` ",
+            "MEMES_DESC": "Yanıt verdiğiniz fotoğrafa yazdığınız yazıyı ekler.\n⌨️ Örnek: .meme TEST;YAPIYOR",
             "NEED_REPLY": "*Bir fotoğraf veya videoya yanıt verin!*",
             "DOWNLOADING": "```Medya indiriliyor & meme yapılıyor...```"
         },
         "ocr": {
-            "OCR_DESC": "Yanıt verdiğiniz fotoğraftaki yazıları okur.\n⌨️ *Örnek:* ```.ocr tr``` ",
+            "OCR_DESC": "Yanıt verdiğiniz fotoğraftaki yazıları okur.\n⌨️ Örnek: .ocr tr",
             "NEED_REPLY": "*Bir fotoğrafa yanıt verin!*",
             "DOWNLOADING": "```Medya indiriliyor & okunuyor...```",
             "ERROR": "```Bunu okuyamadım :/```\n*Hata:*```{}```",
@@ -161,7 +161,7 @@
             "RBGING": "```Arkaplan kaldırılıyor...```"
         },
         "scrapers": {
-            "TRANSLATE_DESC": "Google çeviri ile çeviri yapar. Bir mesaja yanıt vermeniz gerekmektedir.\n⌨️ *Örnek:* ```.trt tr en```",
+            "TRANSLATE_DESC": "Google çeviri ile çeviri yapar. Bir mesaja yanıt vermeniz gerekmektedir.\n⌨️ Örnek: .trt tr en",
             "NEED_REPLY": "```Lütfen bir mesaja yanıt verin!```",
             "LANG": "Dil",
             "FROM": "Çevirilen Dil",
@@ -213,7 +213,7 @@
             "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*"
         },
         "weather": {
-            "WEATHER_DESC": "Hava durumu getirir.\n⌨️ *Örnek:* ```.weather bakü ``` ",
+            "WEATHER_DESC": "Hava durumu getirir.\n⌨️ Örnek: .weather bakü",
             "NEED_LOCATION": "*Lütfen bir konum yazın!*\n*Örnek:* ```.weather Bakü```",
             "LOCATION": "Konum",
             "TEMP": "Sıcaklık",
