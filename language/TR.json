@@ -91,12 +91,12 @@
             "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"           
         },
         "filters": {
-            "FILTER_DESC": "Filtre ekler. Yazdığınız filtreyi birisi yazarsa yazdığınıı cevabı gönderir. Eğer sadece filter yazarsanız eklediğiniz filtreleri getirir.\n⌨️ ```Örnek: .filter "merhaba" "merhaba, nasılsın?"```",
+            "FILTER_DESC": "Filtre ekler. Yazdığınız filtreyi birisi yazarsa yazdığınıı cevabı gönderir. Eğer sadece filter yazarsanız eklediğiniz filtreleri getirir.\n⌨️ ```Örnek: .filter \"merhaba"\ \"merhaba, nasılsın?"\```",
             "NO_FILTER": "*❌ Bu sohbette hiç filter yok!*",
             "FILTERS": "*🔎 Bu sohbetdeki filtreleriniz:*",
             "NEED_REPLY": "*❌ Lütfen cevap yazın!*\n*Örnek:*",
             "FILTERED": "*✅ Başarılı bir şekilde* ```{}``` *filtresi ayarlandı!*",
-            "STOP_DESC": "Ekledğiniz filtreyi durdurur.\n⌨️ ```Örnek: .stop "merhaba"```",
+            "STOP_DESC": "Ekledğiniz filtreyi durdurur.\n⌨️ ```Örnek: .stop \"merhaba"\```",
             "NEED_FILTER": "*❌ Lütfen bir filtre yazın!*\n*Örnek:*",
             "ALREADY_NO_FILTER": "*❌ Zaten böyle bir filtre yok!*",
             "DELETED": "*✅ Filtreniz başarılı bir şekilde silindi!*"
@@ -210,7 +210,7 @@
             "UPDATING": "_Güncelleme yapılıyor..._",
             "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
             "UPDATED": "*✅ Güncelleme başarılı oldu!*",
-            "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*\n_Değişiklikler yeniden başlatmanız gerekmektedir._"
+            "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*"
         },
         "weather": {
             "WEATHER_DESC": "Hava durumu getirir.\n⌨️ ```Örnek: .weather bakü```",
