@@ -14,7 +14,7 @@ const fs = require('fs')
 const Language = require('../language');
 const Lang = Language.getString('memes');
 
-Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC, usage: 'meme top;bottom'}, (async (message, match) => {    
+Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);
     var topText, bottomText;
     if (match[1].includes(';')) {
