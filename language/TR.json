@@ -17,7 +17,7 @@
             "INVALID_URL": "```Lütfen bir geçerli URL giriniz!```",
             "INVALID_PLUGIN": "*❌ Plugininiz hatalı!*\n*Hata:*",
             "INSTALLED": "*✅ Plugin başarılı bir şekilde yüklendi!*",
-            "PLUGIN_DESC": "Yüklediğiniz pluginleri gösterir.\n⌨️ *Örnek:* ```.install``` https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd ",
+            "PLUGIN_DESC": "Yüklediğiniz pluginleri gösterir.",
             "INSTALLED_FROM_REMOTE": "*Dışarıdan yüklediğiniz pluginler:*\n",
             "NO_PLUGIN": "*Dışarıdan hiç plugin yüklememişsiniz!*",
             "REMOVE_DESC": "Plugin kaldırır.",
