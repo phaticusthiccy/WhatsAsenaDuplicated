@@ -12,7 +12,7 @@
             "WARN": "Uyarı"
         },
         "_plugin": {
-            "INSTALL_DESC": "Plugin yükler.",
+            "INSTALL_DESC": "Plugin yükler.\n⌨️ *Örnek:* ```.install``` https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd",
             "NEED_URL": "Lütfen bir URL giriniz! Örnek:",
             "INVALID_URL": "```Lütfen bir geçerli URL giriniz!```",
             "INVALID_PLUGIN": "*❌ Plugininiz hatalı!*\n*Hata:*",
