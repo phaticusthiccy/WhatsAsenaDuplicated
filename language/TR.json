@@ -91,7 +91,7 @@
             "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"           
         },
         "filters": {
-            "FILTER_DESC": "Filtre ekler. Yazdığınız filtreyi birisi yazarsa yazdığınıı cevabı gönderir. Eğer sadece filter yazarsanız eklediğiniz filtreleri getirir.\n⌨️ *Örnek:* ```.filter ”merhaba” ”merhaba, nasılsın?” ``` ",
+            "FILTER_DESC": "Filtre ekler. Yazdığınız filtreyi birisi yazarsa yazdığınıı cevabı gönderir. Eğer sadece filter yazarsanız eklediğiniz filtreleri getirir.\n⌨️ Örnek: .filter ”merhaba” ”merhaba, nasılsın?”",
             "NO_FILTER": "*❌ Bu sohbette hiç filter yok!*",
             "FILTERS": "*🔎 Bu sohbetdeki filtreleriniz:*",
             "NEED_REPLY": "*❌ Lütfen cevap yazın!*\n*Örnek:*",
