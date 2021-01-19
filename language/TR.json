@@ -30,7 +30,7 @@
             "IM_NOT_ADMIN": "*Bu grupta admin değilim!*",
             "BANNED": "Gruptan Çıkarıldı!",
             "GIVE_ME_USER": "*Bana bir kullanıcı ver!*",
-            "ADD_DESC": "Gruba kişi ekler.\n⌨️ *Örnek:* ```.add``` ```9055xxxxxxxx```",
+            "ADD_DESC": "Gruba kişi ekler.\n⌨️ *Örnek:* ```.add``` 9055xxxxxxxx",
             "ADDED": "Gruba Eklendi!",
             "ALREADY_PROMOTED": "```Zaten admin olan birisini nasıl admin yapayım?```",
             "PROMOTED": "```, Admin Yapıldı!```",
