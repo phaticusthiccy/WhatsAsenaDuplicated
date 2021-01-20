@@ -23,7 +23,7 @@
             "REMOVE_DESC": "Removes the plugin.",
             "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Maybe you have installed such a plugin, or maybe not. But it sure isn't right now.```",
-            "DELETED": "*✅ Module successfully deleted! You must restart for the changes to take effect.*"
+            "DELETED": "*✅ Module successfully deleted!*"
         },
         "admin": {
             "BAN_DESC": "Ban someone in the group. Reply to message or tag a person to use command.",
@@ -211,7 +211,7 @@
             "UPDATING": "_Updating..._",
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*✅ Successfully Updated!*",
-            "UPDATED_LOCAL": "*✅ Successfully Updated! *\n_Please restart your bot for the changes._"
+            "UPDATED_LOCAL": "*✅ Successfully Updated!*"
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
@@ -330,6 +330,10 @@
             "UV_DESC": "Converts audio to sound recording.",
             "UV_REPLY": "*You Must Reply to the Audio File!*",
             "UV_PROC": "```Converting to Sound Recording..```"
+        },
+        "ffmpeg": {
+            "FF_DESC": "Applies the desired ffmpeg filter to the video.\n⌨️ Example: .ffmpeg fade=in:0:30",
+            "FF_PROC": "Efekt Uygulanıyor.."
         }
     }
 }
