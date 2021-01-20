@@ -23,7 +23,7 @@
             "REMOVE_DESC": "Elimina el plugin.",
             "NEED_PLUGIN": "```Introduzca un complemento. Ejemplo: .plugin _ejemplo```",
             "NOT_FOUND_PLUGIN": "```Tal vez haya instalado un complemento de este tipo, o tal vez no. Pero seguro que no ahora mismo.```",
-            "DELETED": "*✅ ¡Plugin eliminado correctamente! Debe reiniciar el bot para que los cambios surtan efecto.*"
+            "DELETED": "*✅ ¡Plugin eliminado correctamente!*"
         },
         "admin": {
             "BAN_DESC": "La persona del grupo será baneada. (Responda o etiquete a la persona junto al comando).",
@@ -245,6 +245,10 @@
             "UV_DESC": "Convierte audio en grabación de sonido.",
             "UV_REPLY": "*Necesitas contestar el archivo de audio!*",
             "UV_PROC": "```Conversión a correo de voz..```"
+        },
+        "ffmpeg": {
+            "FF_DESC": "Aplica el filtro ffmpeg deseado al video.\n⌨️ Ejemplo: .ffmpeg fade=in:0:30",
+            "FF_PROC": "Aplicar efecto.."
         }
     }
 }
