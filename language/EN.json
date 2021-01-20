@@ -322,7 +322,7 @@
             "1DAYMUTE": "*The group was silenced for 1 day!*",
             "2DAYMUTE": "*The group was silenced for 2 day!*",
             "3DAYMUTE": "*The group was silenced for 3 day!*",
-            "TÜR": "*Unknown Command!*\n_Minute: 1-60_\n_Hour: 75-90..-180-720_\n_Day: 1d-3d_",
+            "TÜR": "*Unknown Command!*\n_Minute: 1-59m_\n_Hour: 1-12h_\n_Day: 1d-3d_",
             "MUTE_DESC": "Turns off group chat. Only admins can send messages!",
             "MUTE_OPEN": "*Allright Boss! Chat Has Been Opened!*"
         },
