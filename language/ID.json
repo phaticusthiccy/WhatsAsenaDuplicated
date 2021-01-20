@@ -322,7 +322,7 @@
             "1DAYMUTE": "*Grup dibungkam selama 1 hari!*",
             "2DAYMUTE": "*Grup dibungkam selama 2 hari!*",
             "3DAYMUTE": "*Grup dibungkam selama 3 hari!*",
-            "TÜR": "*Perintah Tidak Diketahui!*\n_Menit: 1-60_\n_Jam: 75-90..-180-720_\n_Hari: 1h-3h_",
+            "TÜR": "*Perintah Tidak Diketahui!*\n_Menit: 1-59m_\n_Jam: 1-12h_\n_Hari: 1-3d",
             "MUTE_DESC": "Matikan obrolan grup. Hanya admin yang dapat mengirim pesan!",
             "MUTE_OPEN": "*Baiklah Bos! Obrolan Telah Dibuka!*"
         },
