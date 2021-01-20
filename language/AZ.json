@@ -23,7 +23,7 @@
             "REMOVE_DESC": "Plugin çıxarır.",
             "NEED_PLUGIN": "```Zəhmət olmasa bir Plugin daxil edin! Nümunə: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Bəlkə belə bir plagin quraşdırmısınız, ya da yox. Ancaq əmin deyil ki, indi deyil.```",
-            "DELETED": "*✅ Modul uğurla silindi! Dəyişikliklərin qüvvəyə minməsi üçün yenidən başlamalısınız..*"
+            "DELETED": "*✅ Modul uğurla silindi!*"
         },
         "admin": {
             "BAN_DESC": "Grupdan şəxsi banlayır. Cavap verin (reply) yada əmrin yanına şəxs adı yazın",
@@ -58,9 +58,9 @@
             "IM_NOT_AFK": "```Artığ AFK deyiləm!```",
             "AFK_TEXT": "```Bip bop! Bu bir bot. Sahibim hal hazırda burda deyil.```",
             "AFK_TEXT_NOMD": "Bip bop! Bu bir bot. Sahibim hal hazırda burda deyil.",
-            "HOUR": "saat",
-            "MINUTE": "dəqiqə",
-            "SECOND": "saniyə"
+            "HOUR": "Saat",
+            "MINUTE": "Dəqiqə",
+            "SECOND": "Saniyə"
         },
         "evaluators": {
             "TERM_DESC": "Server’də shellində əmr işlətməyinizə imkan verər.",
@@ -209,7 +209,7 @@
             "UPDATING": "_Yenilənir..._",
             "INVALID_HEROKU": "*❌ Heroku məlumatlarınız yanlışdır!*",
             "UPDATED": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*",
-            "UPDATED_LOCAL": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*\n_Dəyişikliklər üçün yenidən başlatmalısınız._"
+            "UPDATED_LOCAL": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*"
         },
         "weather": {
             "WEATHER_DESC": "Hava şəraitini gətirər.",
@@ -328,6 +328,10 @@
             "UV_DESC": "Musiqi faylını səsli poçta çevirir..",
             "UV_REPLY": "*Hər hansı bir səs sənədinə cavab verməlisiniz!*",
             "UV_PROC": "```Səs Poçtuna Çevrilir..```"
+        },
+        "ffmpeg": {
+            "FF_DESC": "İstədiyiniz ffmpeg filtrini videoya tətbiq edir.\n⌨️ Nümunə: .ffmpeg fade=in:0:30",
+            "FF_PROC": "Effekt tətbiq olunur.."
         }
     }
 }
