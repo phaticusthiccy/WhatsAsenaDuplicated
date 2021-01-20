@@ -333,7 +333,7 @@
         },
         "ffmpeg": {
             "FF_DESC": "Applies the desired ffmpeg filter to the video.\n⌨️ Example: .ffmpeg fade=in:0:30",
-            "FF_PROC": "Efekt Uygulanıyor.."
+            "FF_PROC": "Applying Effect.."
         }
     }
 }
