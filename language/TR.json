@@ -321,7 +321,7 @@
             "1DAYMUTE": "*Grup 1 gün süreyle susturuldu!*",
             "2DAYMUTE": "*Grup 2 gün süreyle susturuldu!*",
             "3DAYMUTE": "*Grup 3 gün süreyle susturuldu!*",
-            "TÜR": "*Bilinmeyen Tür!*\n_Dakika: 1-60_\n_Saat: 75-90..-180-720_\n_Gün: 1d-3d_",
+            "TÜR": "*Bilinmeyen Tür!*\n_Dakika: 1-59m_\n_Saat: 1-12h_\n_Gün: 1d-3d_",
             "MUTE_DESC": "Grup sohbetini kapatır. Sadece adminler mesaj gönderebilir!",
             "MUTE_OPEN": "*Pekâlâ Patron! Sohbet Tekrardan Açılmıştır!*"
         },
