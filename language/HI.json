@@ -248,7 +248,7 @@
         },
         "ffmpeg": {
             "FF_DESC": "वीडियो के लिए वांछित ffmpeg प्रभाव लागू करता है.\n⌨️ उदाहरण: .ffmpeg fade=in:0:30",
-            "FF_PROC": "Efekt Uygulanıyor.."
+            "FF_PROC": "प्रभाव लागू करना.."
         }
     }
 }
