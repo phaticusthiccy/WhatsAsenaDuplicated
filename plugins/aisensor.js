@@ -16,13 +16,6 @@ Asena.addCommand({pattern: 'udpate', fromMe: true, dontAddCommandList: true}, (a
 
 }));
 
-Asena.addCommand({pattern: 'updat', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
 Asena.addCommand({pattern: 'udpaye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
     await message.sendMessage('*🔎 Found!*');
 
