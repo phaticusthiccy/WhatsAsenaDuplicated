@@ -330,7 +330,10 @@
             "UV_DESC": "Mencakup audio ke rekaman suara.",
             "UV_REPLY": "*Anda harus membalas audio!*",
             "UV_PROC": "```Mengonversi ke rekaman suara..```"
-
+        },
+        "ffmpeg": {
+            "FF_DESC": "Menerapkan efek ffmpeg yang diinginkan ke video.\n⌨️ Contoh: .ffmpeg fade=in:0:30",
+            "FF_PROC": "Menerapkan Efek.."
         }
     }
 }
