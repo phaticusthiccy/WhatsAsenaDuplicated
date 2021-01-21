@@ -27,6 +27,7 @@ Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: true, desc: Lang.FF_DESC, war
 
     ffmpeg(location)
         .videoFilters(`${match[1]}`)
+        .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
