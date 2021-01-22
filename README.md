@@ -150,6 +150,7 @@ Author, Base, Bug Fixes, Modules | Base, Bug Fixes, Modules | Bug Fixes, Modules
 - [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 
 - [@itacirgabral](https://github.com/itacirgabral) for helps
 - `Ikarus#7808 (Discord)` for helps
+- [@Unique_hunter](https://t.me/Unique_hunter) for helps
 - Translators
 
 ## License
