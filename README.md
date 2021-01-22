@@ -1,4 +1,4 @@
-N## Thanks for Everything 
+## Thanks for Everything 
 ### We will always remember you..
 
 - [Yusuf Usta](https://github.com/yusufusta)
