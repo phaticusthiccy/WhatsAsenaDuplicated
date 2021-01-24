@@ -333,6 +333,12 @@
         "ffmpeg": {
             "FF_DESC": "Videoya istenilen ffmpeg filtresini uygular.\n⌨️ Örnek: .ffmpeg fade=in:0:30",
             "FF_PROC": "Efekt Uygulanıyor.."
+        },
+        "spammer": {
+            "SPAM_DESC": "Siz durdurana kadar spam yapar.\n⌨️ Örnek: .spam test",
+            "NEED_WORD": "*Kelime Girmelisin!*",
+            "STOP_SPAMDESC": "Spam komutunu durdurur.",
+            "STOP_SPAM": "✅ *Spam Başarıyla Durduruldu! Lütfen biraz bekleyin.*"
         }
     }
 }
