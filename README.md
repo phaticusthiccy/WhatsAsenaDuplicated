@@ -139,6 +139,7 @@ If you are concerned about security, you can install it on your own computer. If
 | Sticker Maker|✅|
 | Plugin Support|✅|
 | Ban & Unban User|✅|
+| Spammer|✅|
 | Add & Kick User|✅|
 | Promote & Demote User|✅|
 | Mute & Unmute Chat|✅|
