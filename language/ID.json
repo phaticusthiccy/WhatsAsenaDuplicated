@@ -334,6 +334,12 @@
         "ffmpeg": {
             "FF_DESC": "Menerapkan efek ffmpeg yang diinginkan ke video.\n⌨️ Contoh: .ffmpeg fade=in:0:30",
             "FF_PROC": "Menerapkan Efek.."
+        },
+        "spammer": {
+            "SPAM_DESC": "Itu spam sampai Anda menghentikannya.\n⌨️ Contoh: .spam test",
+            "NEED_WORD": "*Anda harus memasukkan sebuah kata!*",
+            "STOP_SPAMDESC": "Hentikan perintah spam.",
+            "STOP_SPAM": "✅ *Spam berhasil dihentikan! Tolong tunggu sebentar.*"
         }
     }
 }
