@@ -81,12 +81,12 @@
             "DYNO_USED": "```Kota istifadə edildi```",
             "PERCENTAGE": "```faiz```",
             "DYNO_LEFT": "```qalıq balans```",
-            "SETVAR_DESC": "dəsti heroku config var",
+            "SETVAR_DESC": "Heroku config var parametrləri.",
             "SET_SUCCESS": "Uğurla quruldu ```{} ➜ {}```",
             "KEY_VAL_MISSING": "```Ya key və ya value yoxdur```",
             "INVALID": "```Yanlış key:value formatı```",
-            "GETVAR_DESC": "almaq heroku config var",
-            "DELVAR_DESC": "Sil heroku config var",
+            "GETVAR_DESC": "Heroku config var göstərir.",
+            "DELVAR_DESC": "Heroku config var silir.",
             "DEL_SUCCESS": "```{} uğurla silindi```",
             "NOT_FOUND": "```bu açar üçün heç bir nəticə tapılmadı```"           
         },
@@ -332,6 +332,12 @@
         "ffmpeg": {
             "FF_DESC": "İstədiyiniz ffmpeg filtrini videoya tətbiq edir.\n⌨️ Nümunə: .ffmpeg fade=in:0:30",
             "FF_PROC": "Effekt tətbiq olunur.."
+        },
+        "spammer": {
+            "SPAM_DESC": "Siz onu dayandırana qədər spam göndərdi.\n⌨️ Nümunə: .spam test",
+            "NEED_WORD": "*Bir söz daxil etməlisiniz*",
+            "STOP_SPAMDESC": "Spam əmrini dayandırır.",
+            "STOP_SPAM": "✅ *Spam uğurla dayandırıldı! Xahiş edirəm bir az gözləyin.*"
         }
     }
 }
