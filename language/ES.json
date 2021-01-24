@@ -334,6 +334,12 @@
             "TÜR": "*¡Tipo desconocido!*\n_Minutos: 1-59m_\n_Tiempo: 1-12h_\n_Día: 1d-3d_",
             "MUTE_DESC": "Desactiva el chat grupal. ¡Solo los administradores pueden enviar mensajes!",
             "MUTE_OPEN": "*¡Muy bien, jefe! ¡El chat ha vuelto! *"
+        },
+        "spammer": {
+            "SPAM_DESC": "Es spam hasta que lo detengas.\n⌨️ Ejemplo: .spam test",
+            "NEED_WORD": "*Tienes que escribir palabras!*",
+            "STOP_SPAMDESC": "Detiene el comando de spam.",
+            "STOP_SPAM": "✅ *El spam se detuvo correctamente! Por favor, espere un momento.*"
         }
     }
 }
