@@ -131,6 +131,36 @@ If you are concerned about security, you can install it on your own computer. If
 ### What does Asena mean?
 [Asena](https://tr.wikipedia.org/wiki/Asena), comes from Turkish mythology. According to Turkish mythology, Asena is a she-wolf that plays an important role.
 
+## WhatsAsena Features
+
+| All Features |Available|
+| ------------- | ------------- |
+| AFK|✅|
+| Sticker Maker|✅|
+| Plugin Support|✅|
+| Ban & Unban User|✅|
+| Add & Kick User|✅|
+| Promote & Demote User|✅|
+| Mute & Unmute Chat|✅|
+| Group Link Generator|✅|
+| AI Scanner|✅|
+| Pre-Trained Effects|✅|
+| FFMPEG Support|✅|
+| Filter Support|✅|
+| Greetings Support|✅|
+| Heroku Plugin|✅|
+| Location Plugin|✅|
+| Lydia|✅|
+| Meme Maker|✅|
+| Nekobin Plugin|✅|
+| OCR Plugin|✅|
+| Remove BG Plugin|✅|
+| Scrapers|✅|
+| Tagall|✅|
+| Speedtest|✅|
+| Unvoice|✅|
+| And Many Features|✅|
+
 ### ⚠️ Warning! 
 ```
 Due to Userbot; Your WhatsApp account may be banned.
