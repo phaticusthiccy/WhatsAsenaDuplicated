@@ -340,6 +340,11 @@
             "NEED_WORD": "*Anda harus memasukkan sebuah kata!*",
             "STOP_SPAMDESC": "Hentikan perintah spam.",
             "STOP_SPAM": "✅ *Spam berhasil dihentikan! Tolong tunggu sebentar.*"
+        },
+        "carbon": {
+            "CARBON_DESC": "Mengonversi teks menjadi foto dengan carbon.sh.",
+            "CARBON_NEEDWORD": "*Silakan tulis kalimat!*\nContoh: ```.carbon test```\nContoh: ```.carbon Making#Test```",
+            "CARBON_WARN": "Harap tulis dalam bahasa TR dan EN saja!"
         }
     }
 }
