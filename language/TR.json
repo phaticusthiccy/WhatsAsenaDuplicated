@@ -12,7 +12,7 @@
             "WARN": "Uyarı"
         },
         "_plugin": {
-            "INSTALL_DESC": "Plugin yükler.\n⌨️ Örnek: .install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd",
+            "INSTALL_DESC": "Plugin yükler.\n⌨️ Örnek: .install https://gist.github.com/phaticusthiccy/d41dd4428faf34ab8cfd4c392501c62e",
             "NEED_URL": "Lütfen bir URL giriniz! Örnek:",
             "INVALID_URL": "```Lütfen bir geçerli URL giriniz!```",
             "INVALID_PLUGIN": "*❌ Plugininiz hatalı!*\n*Hata:*",
@@ -23,7 +23,7 @@
             "REMOVE_DESC": "Plugin kaldırır.",
             "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin test```",
             "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
-            "DELETED": "*✅ Modül başarıyla silindi! Değişikliklerin uygulanması için yeniden başlatmanız gerekmektedir.*"
+            "DELETED": "*✅ Modül başarıyla silindi!*"
         },
         "admin": {
             "BAN_DESC": "Gruptan kişi banlar. Yanıt verin ya da komutun yanına kişiyi etiketleyin.",
@@ -339,6 +339,11 @@
             "NEED_WORD": "*Kelime Girmelisin!*",
             "STOP_SPAMDESC": "Spam komutunu durdurur.",
             "STOP_SPAM": "✅ *Spam Başarıyla Durduruldu! Lütfen biraz bekleyin.*"
+        },
+        "carbon": {
+            "CARBON_DESC": "Yazdığınız metni carbon.sh ile fotoğrafa çevirir.",
+            "CARBON_NEEDWORD": "*Fotoğrafa çevirmek için yeterli argüman yok!*\nÖrnek: ```.carbon deneme```\nÖrnek: ```.carbon deneme%250AYapıyor```",
+            "CARBON_WARN": "Lütfen sadece ingilize karakter girin!"
         }
     }
 }
