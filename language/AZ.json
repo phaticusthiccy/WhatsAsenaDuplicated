@@ -338,6 +338,11 @@
             "NEED_WORD": "*Bir söz daxil etməlisiniz*",
             "STOP_SPAMDESC": "Spam əmrini dayandırır.",
             "STOP_SPAM": "✅ *Spam uğurla dayandırıldı! Xahiş edirəm bir az gözləyin.*"
+        },
+        "carbon": {
+            "CARBON_DESC": "Mətni carbon.sh ilə şəkilə çevirir.",
+            "CARBON_NEEDWORD": "*Fotoya çevirmək üçün kifayət qədər arqument yoxdur!*\nNümunə: ```.carbon deneme```\nNümunə: ```.carbon deneme#Yapıyor```",
+            "CARBON_WARN": "Xahiş edirəm yalnız en və en dillərində yazın!"
         }
     }
 }
