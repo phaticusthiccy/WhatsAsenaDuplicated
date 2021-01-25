@@ -340,6 +340,11 @@
             "NEED_WORD": "*Tienes que escribir palabras!*",
             "STOP_SPAMDESC": "Detiene el comando de spam.",
             "STOP_SPAM": "✅ *El spam se detuvo correctamente! Por favor, espere un momento.*"
+        },
+        "carbon": {
+            "CARBON_DESC": "Convierte texto en imagen con carbon.sh.",
+            "CARBON_NEEDWORD": "*No hay suficientes argumentos para convertirlo en una foto.!*\nEjemplo: ```.carbon test```\nEjemplo: ```.carbon Making#Test```",
+            "CARBON_WARN": "Escriba solo en los idiomas TR y EN!"
         }
     }
 }
