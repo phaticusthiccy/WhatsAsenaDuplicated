@@ -342,8 +342,8 @@
         },
         "carbon": {
             "CARBON_DESC": "Yazdığınız metni carbon.sh ile fotoğrafa çevirir.",
-            "CARBON_NEEDWORD": "*Fotoğrafa çevirmek için yeterli argüman yok!*\nÖrnek: ```.carbon deneme```\nÖrnek: ```.carbon deneme%250AYapıyor```",
-            "CARBON_WARN": "Lütfen sadece ingilize karakter girin!"
+            "CARBON_NEEDWORD": "*Fotoğrafa çevirmek için yeterli argüman yok!*\nÖrnek: ```.carbon deneme```\nÖrnek: ```.carbon deneme#Yapıyor```",
+            "CARBON_WARN": "Lütfen sadece tr ve en dilinde yazın!"
         }
     }
 }
