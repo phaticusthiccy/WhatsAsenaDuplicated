@@ -350,7 +350,6 @@
             "SCAM_DESC": "Crea 5 minutos de acciones falsas.",
             "SCAM_NOTFOUND": "*¡Debe ingresar una acción falsa*\nEtipos Existentes: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Acción incorrecta ingresada! Utilice los tipos existentes.```"
-
         }
     }
 }
