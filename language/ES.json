@@ -345,6 +345,12 @@
             "CARBON_DESC": "Convierte texto en imagen con carbon.sh.",
             "CARBON_NEEDWORD": "*No hay suficientes argumentos para convertirlo en una foto.!*\nEjemplo: ```.carbon test```\nEjemplo: ```.carbon Making#Test```",
             "CARBON_WARN": "Escriba solo en los idiomas TR y EN!"
+        },
+        "scam": {
+            "SCAM_DESC": "Crea 5 minutos de acciones falsas.",
+            "SCAM_NOTFOUND": "*¡Debe ingresar una acción falsa*\nEtipos Existentes: ```typing & recording & online & stop```",
+            "SCAM_NULL": "```Acción incorrecta ingresada! Utilice los tipos existentes.```"
+
         }
     }
 }
