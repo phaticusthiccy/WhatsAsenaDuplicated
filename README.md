@@ -107,12 +107,13 @@ is not responsible for the usage purpose and method of the users.
 
 ### The Hard Method
 ```js
-git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git
-cd WhatsAsenaDuplicated
-npm i
+$ git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git
+$ cd WhatsAsenaDuplicated
+$ npm i
+$ nano Config.env
 # Config.env oluşturun ve düzenleyin. #
 # Config.env create and edit. #
-node bot.js
+$ node bot.js
 ```
 ### ⚒️ Setup Wiki 
 [![Setup - Kurulum](https://img.icons8.com/clouds/300/000000/settings.png)](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
@@ -136,31 +137,32 @@ If you are concerned about security, you can install it on your own computer. If
 | All Features |Available|
 | ------------- | ------------- |
 | AFK|✅|
-| Sticker Maker|✅|
-| Plugin Support|✅|
-| Ban & Unban User|✅|
-| Spammer|✅|
-| Add & Kick User|✅|
-| Promote & Demote User|✅|
-| Mute & Unmute Chat|✅|
-| Group Link Generator|✅|
 | AI Scanner|✅|
-| Pre-Trained Effects|✅|
+| Add & Kick User|✅|
+| And Many Features|✅|
+| Ban & Unban User|✅|
 | FFMPEG Support|✅|
 | Filter Support|✅|
 | Greetings Support|✅|
+| Group Link Generator|✅|
 | Heroku Plugin|✅|
 | Location Plugin|✅|
 | Lydia|✅|
 | Meme Maker|✅|
+| Mute & Unmute Chat|✅|
 | Nekobin Plugin|✅|
 | OCR Plugin|✅|
+| Plugin Support|✅|
+| Pre-Trained Effects|✅|
+| Promote & Demote User|✅|
 | Remove BG Plugin|✅|
+| Scam Actions|✅|
 | Scrapers|✅|
-| Tagall|✅|
+| Spammer|✅|
 | Speedtest|✅|
+| Sticker Maker|✅|
+| Tagall|✅|
 | Unvoice|✅|
-| And Many Features|✅|
 
 ### ⚠️ Warning! 
 ```
