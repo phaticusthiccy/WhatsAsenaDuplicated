@@ -345,6 +345,11 @@
             "CARBON_DESC": "carbon.sh के साथ फ़ोटो को पाठ परिवर्तित करता है।.",
             "CARBON_NEEDWORD": "*कृपया एक वाक्य लिखें!*\nउदाहरण: ```.carbon test```\nउदाहरण: ```.carbon Making#Test```",
             "CARBON_WARN": "केवल TR और EN भाषाओं में लिखें!"
+        },
+        "scam": {
+            "SCAM_DESC": "5 मिनट की नकली क्रिया बनाता है।",
+            "SCAM_NOTFOUND": "*आपको फेक एक्शन दर्ज करना होगा!*\nमौजूदा प्रकार: ```typing & recording & online & stop```",
+            "SCAM_NULL": "```गलत कार्रवाई दर्ज! कृपया मौजूदा प्रकारों का उपयोग करें```"
         }
     }
 }
