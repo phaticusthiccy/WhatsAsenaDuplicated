@@ -343,6 +343,11 @@
             "CARBON_DESC": "Mətni carbon.sh ilə şəkilə çevirir.",
             "CARBON_NEEDWORD": "*Fotoya çevirmək üçün kifayət qədər arqument yoxdur!*\nNümunə: ```.carbon deneme```\nNümunə: ```.carbon deneme#Yapıyor```",
             "CARBON_WARN": "Xahiş edirəm yalnız en və en dillərində yazın!"
+        },
+        "scam": {
+            "SCAM_DESC": "5 dəqiqəlik saxta hərəkətlər yaradır.",
+            "SCAM_NOTFOUND": "*Saxta Fəaliyyət Yazmalısınız!*\nMövcud Növləri: ```typing & recording & online & stop```",
+            "SCAM_NULL": "```Səhv Əməliyyat Girdi! Zəhmət olmasa mövcud növlərdən istifadə edin.```"
         }
     }
 }
