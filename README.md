@@ -76,7 +76,7 @@ is not responsible for the usage purpose and method of the users.
         Reserved |
         <a href="https://t.me/WHATSASENA">Telegram Channel</a> |
         <a href="https://t.me/AsenaSupport">Telegram Group</a> |
-        <a href="https://t.me/unofficialasena">New Support Group</a> |
+        <a href="https://t.me/asenaremaster">New Support Group</a> |
         <a href="https://t.me/unofficialplugin">New Plugin Channel</a> |
     <br>
 </p>
@@ -136,16 +136,17 @@ If you are concerned about security, you can install it on your own computer. If
 
 | All Features |Available|
 | ------------- | ------------- |
+| Admin Commands|✅|
 | AFK|✅|
 | AI Scanner|✅|
 | Add & Kick User|✅|
-| And Many Features|✅|
 | Ban & Unban User|✅|
 | FFMPEG Support|✅|
 | Filter Support|✅|
 | Greetings Support|✅|
 | Group Link Generator|✅|
 | Heroku Plugin|✅|
+| Jid Scraper|✅|
 | Location Plugin|✅|
 | Lydia|✅|
 | Meme Maker|✅|
@@ -159,7 +160,7 @@ If you are concerned about security, you can install it on your own computer. If
 | Scam Actions|✅|
 | Scrapers|✅|
 | Spammer|✅|
-| Speedtest|✅|
+| Speedtest|🛠️|
 | Sticker Maker|✅|
 | Tagall|✅|
 | Unvoice|✅|
@@ -176,14 +177,14 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 
 [![Yusuf Usta](https://github.com/yusufusta.png?size=100)](https://quiec.tech) | [![Phaticusthiccy](https://github.com/phaticusthiccy.png?size=100)](https://github.com/phaticusthiccy) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio) | [![Justin Thoms](https://github.com/justinthoms.png?size=100)](https://github.com/justinthoms) | [![CW4RR10R](https://github.com/CW4RR10R.png?size=100)](https://github.com/CW4RR10R)
 ----|----|----|----|----
-[Yusuf Usta](https://t.me/fusuf) | [Phaticusthiccy](https://github.com/phaticusthiccy) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)
-Author, Base, Bug Fixes, Modules | Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
+[Yusuf Usta](https://t.me/fusufs) | [Phaticusthiccy](https://github.com/phaticusthiccy) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)
+Author, Base, Bug Fixes, Modules | Author, Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
 
 ## Thanks To
 - [@adiwajshing](https://github.com/adiwajshing) for coded [Baileys](https://github.com/adiwajshing/Baileys) 
 - [@itacirgabral](https://github.com/itacirgabral) for helps
 - `Ikarus#7808 (Discord)` for helps
-- [Unique_hunter](https://t.me/Unique_hunter) for helps and ideas
+- [@Unique_hunter](https://t.me/Unique_hunter) for helps and ideas
 - Translators
 
 ## License
