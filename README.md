@@ -134,36 +134,37 @@ If you are concerned about security, you can install it on your own computer. If
 
 ## WhatsAsena Features
 
-| All Features |Available|
-| ------------- | ------------- |
-| Admin Commands|✅|
-| AFK|✅|
-| AI Scanner|✅|
-| Add & Kick User|✅|
-| Ban & Unban User|✅|
-| FFMPEG Support|✅|
-| Filter Support|✅|
-| Greetings Support|✅|
-| Group Link Generator|✅|
-| Heroku Plugin|✅|
-| Jid Scraper|✅|
-| Location Plugin|✅|
-| Lydia|✅|
-| Meme Maker|✅|
-| Mute & Unmute Chat|✅|
-| Nekobin Plugin|✅|
-| OCR Plugin|✅|
-| Plugin Support|✅|
-| Pre-Trained Effects|✅|
-| Promote & Demote User|✅|
-| Remove BG Plugin|✅|
-| Scam Actions|✅|
-| Scrapers|✅|
-| Spammer|✅|
-| Speedtest|🛠️|
-| Sticker Maker|✅|
-| Tagall|✅|
-| Unvoice|✅|
+| All Features 📢|Available ☑️|Version 🔎|
+| ------------- | ------------ | ---------- |
+| Admin Commands|✅|1.0|
+| AFK|✅|1.2|
+| AI Scanner|✅|1.1|
+| Add & Kick User|✅|1.0|
+| Carbon.sh Plugin|✅|1.4|
+| Ban & Unban User|✅|1.0|
+| FFMPEG Support|✅|1.6|
+| Filter Support|✅|1.2|
+| Greetings Support|✅|1.2|
+| Group Link Generator|✅|1.0|
+| Heroku Plugin|✅|1.5|
+| Jid Scraper|✅|1.0|
+| Location Plugin|✅|1.0|
+| Lydia|✅|1.2|
+| Meme Maker|✅|1.0|
+| Mute & Unmute Chat|✅|1.3|
+| Nekobin Plugin|✅|1.0|
+| OCR Plugin|✅|1.2|
+| Plugin Support|✅|1.0|
+| Pre-Trained Effects|✅|3.2|
+| Promote & Demote User|✅|1.1|
+| Remove BG Plugin|✅|1.0|
+| Scam Actions|✅|1.3|
+| Scrapers|✅|1.5|
+| Spammer|✅|1.4|
+| Speedtest|🛠️|1.6|
+| Sticker Maker|✅|1.0|
+| Tagall|✅|1.0|
+| Unvoice|✅|1.3|
 
 ### ⚠️ Warning! 
 ```
