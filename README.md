@@ -38,6 +38,10 @@
     <img src="https://img.shields.io/static/v1?label=Author&message=Thiccy&color=purple&style=plastic">
 
   </a>
+  <a href="https://t.me/asenaremaster">
+    <img src="https://img.shields.io/badge/Telegram-Asena%20Remaster-purple&style=plastic">
+
+  </a>
 </p>
 
 ```
