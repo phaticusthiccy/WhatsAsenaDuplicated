@@ -349,6 +349,11 @@
             "SCAM_DESC": "5 dakikalık sahte eylemler oluşturur.",
             "SCAM_NOTFOUND": "*Sahte Eylem Girmelisin!*\nVarolan Türler: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Yanlış Eylem Girildi! Lütfen varolan türleri kullanın.```"
+        },
+        "deepai": {
+            "DEEAPAI_DESC": "Yapay sinir ağlarını kullanarak en güçlü yapay zeka araçlarını çalıştırır.",
+            "TEXT": "*Metin girmelisin! Her ne kadar güçlü bir yapay zeka olsam da düşüncelerini okuyamam!*",
+            "URL": "*Resim URL'si girmelisin!*\n*Örnek:* https://i.hizliresim.com/nrg50b.jpg",
         }
     }
 }
