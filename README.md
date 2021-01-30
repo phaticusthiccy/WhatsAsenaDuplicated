@@ -115,8 +115,8 @@ $ git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git
 $ cd WhatsAsenaDuplicated
 $ npm i
 $ nano Config.env
-# Config.env oluşturun ve düzenleyin. #
-# Config.env create and edit. #
+// Config.env oluşturun ve düzenleyin.
+// Config.env create and edit.
 $ node bot.js
 ```
 ### ⚒️ Setup Wiki 
@@ -144,8 +144,9 @@ If you are concerned about security, you can install it on your own computer. If
 | AFK|✅|1.2|
 | AI Scanner|✅|1.1|
 | Add & Kick User|✅|1.0|
-| Carbon.sh Plugin|✅|1.4|
 | Ban & Unban User|✅|1.0|
+| Carbon.sh Plugin|✅|1.4|
+| Depp AI APIs|✅|1.0|
 | FFMPEG Support|✅|1.6|
 | Filter Support|✅|1.2|
 | Greetings Support|✅|1.2|
