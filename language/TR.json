@@ -353,7 +353,7 @@
         "deepai": {
             "DEEAPAI_DESC": "Yapay sinir ağlarını kullanarak en güçlü yapay zeka araçlarını çalıştırır.",
             "TEXT": "*Metin girmelisin! Her ne kadar güçlü bir yapay zeka olsam da düşüncelerini okuyamam!*",
-            "URL": "*Resim URL'si girmelisin!*\n*Örnek:* https://i.hizliresim.com/nrg50b.jpg",
+            "URL": "*Resim URL'si girmelisin!*\n*Örnek:* https://i.hizliresim.com/nrg50b.jpg"
         }
     }
 }
