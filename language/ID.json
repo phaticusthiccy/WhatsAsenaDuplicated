@@ -350,6 +350,11 @@
             "SCAM_DESC": "Menciptakan 5 menit tindakan palsu.",
             "SCAM_NOTFOUND": "*Anda Harus Melakukan Tindakan Palsu!*\nJenis yang Ada: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Tindakan yang Salah Dimasukkan! Harap gunakan tipe yang ada.```"
+        },
+        "deepai": {
+            "DEEAPAI_DESC": "Menjalankan alat kecerdasan buatan paling kuat menggunakan jaringan saraf tiruan.",
+            "TEXT": "*Anda harus memasukkan teks! Meskipun saya adalah kecerdasan buatan yang kuat, saya tidak dapat membaca pikiran Anda!*",
+            "URL": "*Anda harus memasukkan URL gambar!*\n*Contoh:* https://i.hizliresim.com/nrg50b.jpg"
         }
     }
 }
