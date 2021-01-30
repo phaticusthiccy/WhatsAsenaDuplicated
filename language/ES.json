@@ -350,6 +350,11 @@
             "SCAM_DESC": "Crea 5 minutos de acciones falsas.",
             "SCAM_NOTFOUND": "*¡Debe ingresar una acción falsa*\nEtipos Existentes: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Acción incorrecta ingresada! Utilice los tipos existentes.```"
+        },
+        "deepai": {
+            "DEEAPAI_DESC": "Ejecuta las herramientas de inteligencia artificial más poderosas utilizando redes neuronales artificiales.",
+            "TEXT": "*¡Debes ingresar texto! Aunque soy una poderosa inteligencia artificial, no puedo leer tus pensamientos!*",
+            "URL": "*¡Debes ingresar la URL de la imagen*\n*Ejemplo:* https://i.hizliresim.com/nrg50b.jpg"
         }
     }
 }
