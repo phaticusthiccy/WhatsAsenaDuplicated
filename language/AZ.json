@@ -350,7 +350,7 @@
             "SCAM_NULL": "```Səhv Əməliyyat Girdi! Zəhmət olmasa mövcud növlərdən istifadə edin.```"
         },
         "deepai": {
-            "DEEAPAI_DESC": "Süni sinir şəbəkələrindən istifadə edərək ən güclü süni intellekt alətlərini işlədir.",
+            "DEEPAI_DESC": "Süni sinir şəbəkələrindən istifadə edərək ən güclü süni intellekt alətlərini işlədir.",
             "TEXT": "*Mətn daxil etməlisiniz! Güclü bir süni zəka olsam da, düşüncələrinizi oxuya bilmirəm!*",
             "URL": "*Şəklin URL-sini daxil etməlisiniz!*\n*Nümunə:* https://i.hizliresim.com/nrg50b.jpg"
         }
