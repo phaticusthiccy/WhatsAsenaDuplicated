@@ -91,11 +91,9 @@ is not responsible for the usage purpose and method of the users.
 ## 📢 Guide
 > [Also for support & help please come our Telegram group.](https://t.me/AsenaSupport) (Legacy)
 
-> [New support & help group.](https://t.me/unofficialasena) (New)
+> [New support & help group.](https://t.me/asenaremaster) (New)
 
 > [Install Guide/Kurulum Yardımcısı/Qurulum Müavin](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
-
-> [You can translate other languages from Crowdin](https://crowdin.com/project/whatsasena)
 
 ## 🔎 What is WhatsAsena?
 **WhatsAsena,** is a WhatsApp helper bot written by [Yusuf Usta](https://github.com/Quiec) and edited by [Phaticusthiccy](https://github.com/phaticusthiccy). Does not log into your account It is written on WhatsApp Web API.
