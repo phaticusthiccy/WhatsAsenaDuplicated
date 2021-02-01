@@ -456,3 +456,66 @@ Asena.addCommand({pattern: ' Ping', fromMe: true, dontAddCommandList: true}, (as
     await message.sendMessage('.ping');
 
 }));
+
+Asena.addCommand({pattern: ' asena', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.asena');
+
+}));
+
+Asena.addCommand({pattern: ' Asena', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.asena');
+
+}));
+
+Asena.addCommand({pattern: 'asnwa', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.asena');
+
+}));
+
+Asena.addCommand({pattern: 'asnea', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.asena');
+
+}));
+
+Asena.addCommand({pattern: 'asnwa', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.asena');
+
+}));
+
+Asena.addCommand({pattern: 'asnwa', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.asena');
+
+}));
+
+Asena.addCommand({pattern: 'ufdate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.update');
+
+}));
+
+Asena.addCommand({pattern: 'udpsye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.update');
+
+}));
+
+Asena.addCommand({pattern: 'xemdia', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+    await message.sendMessage('*🔎 Found!*');
+
+    await message.sendMessage('.xmedia');
+
+}));
