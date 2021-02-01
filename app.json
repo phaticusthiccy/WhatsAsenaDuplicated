@@ -13,7 +13,7 @@
             "required": true
         },
         "SUDO": {
-            "description": "Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
+            "description": "Leave blank if you don't know how to use it! Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
             "required": false
         },
         "LANGUAGE": {
