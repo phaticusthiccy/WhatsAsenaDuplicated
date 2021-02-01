@@ -15,7 +15,7 @@ const langs = require('langs');
 const Language = require('../language');
 const Lang = Language.getString('ocr');
 
-Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC, usage: 'ocr en'}, (async (message, match) => {    
+Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC}, (async (message, match) => {    
     if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
     var location = await message.client.downloadAndSaveMediaMessage({
