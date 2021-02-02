@@ -646,9 +646,9 @@ Asena.addCommand({pattern: 'iosmp3', fromMe: true, dontAddCommandList: true}, (a
 
     ffmpeg(location)
         .outputOptions(["-y", "-vn", "-ar", "44100", "-ac", "2", "-b:a", "192k"])
-        .save('ios.mp3')
+        .save('ios.aac')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('ios.mp3'), MessageType.audio, {mimetype: Mimetype.mpeg, ptt: false});
+            await message.sendMessage(fs.readFileSync('ios.aac'), MessageType.audio, {mimetype: Mimetype.vnd.dlna.adts, ptt: false});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
