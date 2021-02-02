@@ -632,23 +632,3 @@ Asena.addCommand({pattern: 'grenimage', fromMe: true, dontAddCommandList: true},
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
-
-Asena.addCommand({pattern: 'iosmp3', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
-    if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
-    var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
-    var location = await message.client.downloadAndSaveMediaMessage({
-        key: {
-            remoteJid: message.reply_message.jid,
-            id: message.reply_message.id
-        },
-        message: message.reply_message.data.quotedMessage
-    });
-
-    ffmpeg(location)
-        .outputOptions(["-y", "-vn", "-ar", "44100", "-ac", "2", "-b:a", "192k"])
-        .save('ios.aac')
-        .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('ios.aac'), MessageType.audio, {mimetype: Mimetype.vnd.dlna.adts, ptt: false});
-        });
-    return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-}));
