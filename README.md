@@ -169,6 +169,11 @@ If you are concerned about security, you can install it on your own computer. If
 | Tagall|✅|1.0|
 | Unvoice|✅|1.3|
 
+
+Here Are All Commands With Description
+----|
+[GistHub](https://gist.github.com/phaticusthiccy/8dfa827a71647e5f659680d75543a748) |
+
 ### ⚠️ Warning! 
 ```
 Due to Userbot; Your WhatsApp account may be banned.
