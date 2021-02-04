@@ -355,6 +355,10 @@
             "DEEPAI_DESC": "Menjalankan alat kecerdasan buatan paling kuat menggunakan jaringan saraf tiruan.",
             "TEXT": "*Anda harus memasukkan teks! Meskipun saya adalah kecerdasan buatan yang kuat, saya tidak dapat membaca pikiran Anda!*",
             "URL": "*Anda harus memasukkan URL gambar!*\n*Contoh:* https://i.hizliresim.com/nrg50b.jpg"
+        },
+        "ttp": {
+            "TTP_DESC": "Mengonversi teks menjadi lukisan biasa.",
+            "NEED_WORD": "*Anda harus memasukkan kata-kata!*"
         }
     }
 }
