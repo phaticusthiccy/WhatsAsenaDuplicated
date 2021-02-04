@@ -199,7 +199,8 @@
             "SYSD_DESC": "Sistem xüsusiyyətlərini deyər."
         },
         "tagall": {
-            "TAGALL_DESC": "Grupdaki hərkəsi etiketləyər."
+            "TAGALL_DESC": "Grupdaki hərkəsi etiketləyər.",
+            "ADMİN": "*Mən bu qrupda admin deyiləm!*"
         },
         "updater": {
             "UPDATER_DESC": "Yenilənmələri axtarar.",
