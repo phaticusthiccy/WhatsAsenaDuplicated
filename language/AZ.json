@@ -353,6 +353,10 @@
             "DEEPAI_DESC": "Süni sinir şəbəkələrindən istifadə edərək ən güclü süni intellekt alətlərini işlədir.",
             "TEXT": "*Mətn daxil etməlisiniz! Güclü bir süni zəka olsam da, düşüncələrinizi oxuya bilmirəm!*",
             "URL": "*Şəklin URL-sini daxil etməlisiniz!*\n*Nümunə:* https://i.hizliresim.com/nrg50b.jpg"
+        },
+        "ttp": {
+            "TTP_DESC": "Mətni düz resme çevirir.",
+            "NEED_WORD": "*Sözləri daxil etməlisən!*"
         }
     }
 }
