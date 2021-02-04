@@ -359,6 +359,9 @@
         "ttp": {
             "TTP_DESC": "Yazıyı sade resme dönüştürür.",
             "NEED_WORD": "*Kelime Girmelisin!*"
+        },
+        "wallpaper": {
+            "WP": "Birbirinden farklı, yüksek çözünürlüklü duvar kağıdı gönderir."
         }
     }
 }
