@@ -355,6 +355,10 @@
             "DEEPAI_DESC": "Ejecuta las herramientas de inteligencia artificial más poderosas utilizando redes neuronales artificiales.",
             "TEXT": "*¡Debes ingresar texto! Aunque soy una poderosa inteligencia artificial, no puedo leer tus pensamientos!*",
             "URL": "*¡Debes ingresar la URL de la imagen*\n*Ejemplo:* https://i.hizliresim.com/nrg50b.jpg"
+        },
+        "ttp": {
+            "TTP_DESC": "Convierte texto en pintura simple.",
+            "NEED_WORD": "*¡Debes ingresar palabras!*"
         }
     }
 }
