@@ -201,7 +201,8 @@
             "SYSD_DESC": "Dice las propiedades del sistema."
         },
         "tagall": {
-            "TAGALL_DESC": "Etiqueta a todos en el grupo."
+            "TAGALL_DESC": "Etiqueta a todos en el grupo.",
+            "ADMİN": "*¡No soy un administrador en este grupo!*"
         },
         "updater": {
             "UPDATER_DESC": "Verificar actualizaciones.",
