@@ -200,7 +200,8 @@
             "SYSD_DESC": "Sistem özelliklerini söyler."
         },
         "tagall": {
-            "TAGALL_DESC": "Gruptaki herkesi etiketler."
+            "TAGALL_DESC": "Gruptaki herkesi etiketler.",
+            "ADMİN": "*Bu Grupta Admin Değilim!*"
         },
         "updater": {
             "UPDATER_DESC": "Güncelleme denetler.",
