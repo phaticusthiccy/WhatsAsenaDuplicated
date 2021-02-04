@@ -355,6 +355,10 @@
             "DEEPAI_DESC": "Runs the most powerful artificial intelligence tools using artificial neural networks.",
             "TEXT": "*You must enter text! Although I am a powerful artificial intelligence, I cannot read your thoughts!*",
             "URL": "*You must enter the image URL!*\n*Example:* https://i.hizliresim.com/nrg50b.jpg"
+        },
+        "ttp": {
+            "TTP_DESC": "Converts text to plain painting.",
+            "NEED_WORD": "*You must enter words!*"
         }
     }
 }
