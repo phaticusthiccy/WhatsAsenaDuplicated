@@ -201,7 +201,8 @@
             "SYSD_DESC": "Menunjukkan properti sistem."
         },
         "tagall": {
-            "TAGALL_DESC": "Menandai semua orang di grup."
+            "TAGALL_DESC": "Menandai semua orang di grup.",
+            "ADMİN": "*Saya bukan admin di grup ini!*"
         },
         "updater": {
             "UPDATER_DESC": "Periksa pembaruan.",
