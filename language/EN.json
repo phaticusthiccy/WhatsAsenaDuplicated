@@ -201,7 +201,8 @@
             "SYSD_DESC": "Shows the system properties."
         },
         "tagall": {
-            "TAGALL_DESC": "Tags everyone in the group."
+            "TAGALL_DESC": "Tags everyone in the group.",
+            "ADMİN": "*I am not admin in this group!*"
         },
         "updater": {
             "UPDATER_DESC": "Checks the update.",
