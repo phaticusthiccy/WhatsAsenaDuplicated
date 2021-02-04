@@ -201,7 +201,8 @@
             "SYSD_DESC": "सिस्टम Properties दिखाता है।"
         },
         "tagall": {
-            "TAGALL_DESC": "ग्रुप में सभी को टैग करें।"
+            "TAGALL_DESC": "ग्रुप में सभी को टैग करें।",
+            "ADMİN": "*मैं इस समूह में व्यवस्थापक नहीं हूं!*"
         },
         "updater": {
             "UPDATER_DESC": "Update की जाँच करता है।",
