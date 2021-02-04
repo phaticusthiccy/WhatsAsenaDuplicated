@@ -79,7 +79,7 @@ Asena.addCommand({pattern: 'mp4image', fromMe: true, dontAddCommandList: true}, 
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {caption: 'Made by WhatsAsena'});
+            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
         });
     return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
 }));
