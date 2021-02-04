@@ -360,6 +360,9 @@
         "ttp": {
             "TTP_DESC": "Mengonversi teks menjadi lukisan biasa.",
             "NEED_WORD": "*Anda harus memasukkan kata-kata!*"
+        },
+        "wallpaper": {
+            "WP": "Mengirimkan wallpaper resolusi tinggi yang berbeda."
         }
     }
 }
