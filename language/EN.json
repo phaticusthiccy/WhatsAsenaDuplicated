@@ -360,6 +360,9 @@
         "ttp": {
             "TTP_DESC": "Converts text to plain painting.",
             "NEED_WORD": "*You must enter words!*"
+        },
+        "wallpaper": {
+            "WP": "It sends high resolution wallpapers."
         }
     }
 }
