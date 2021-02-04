@@ -360,6 +360,9 @@
         "ttp": {
             "TTP_DESC": "Convierte texto en pintura simple.",
             "NEED_WORD": "*¡Debes ingresar palabras!*"
+        },
+        "wallpaper": {
+            "WP": "Envía fondos de pantalla de alta resolución diferentes."
         }
     }
 }
