@@ -358,6 +358,9 @@
         "ttp": {
             "TTP_DESC": "Mətni düz resme çevirir.",
             "NEED_WORD": "*Sözləri daxil etməlisən!*"
+        },
+        "wallpaper": {
+            "WP": "Fərqli, yüksək qətnamə divar kağızı göndərir."
         }
     }
 }
