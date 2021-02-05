@@ -2,7 +2,7 @@
     "__ASENAJSON__": true,
     "LANGUAGE": "Mlayalam",
     "LANGCODE": "ml",
-    "AUTHOR": "Justin",
+    "AUTHOR": "Phaticusthiccy / Justin",
     "STRINGS": {
         "_asena": {
             "COMMAND": "കമാൻഡ്",
@@ -363,6 +363,10 @@
         },
         "wallpaper": {
             "WP": "വ്യത്യസ്തവും ഉയർന്ന മിഴിവുള്ളതുമായ വാൾപേപ്പർ അയയ്‌ക്കുന്നു."
+        },
+        "webss": {
+            "SS_DESC": "തന്നിരിക്കുന്ന ലിങ്കിലെ പേജിൽ നിന്ന് ഒരു സ്ക്രീൻഷോട്ട് എടുക്കുന്നു.",
+            "LİNK": "നിങ്ങൾ ഒരു ലിങ്ക് നൽകണം!"
         }
     }
 }
