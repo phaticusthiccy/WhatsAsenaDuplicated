@@ -362,6 +362,10 @@
         },
         "wallpaper": {
             "WP": "Birbirinden farklı, yüksek çözünürlüklü duvar kağıdı gönderir."
+        },
+        "webss": {
+            "SS_DESC": "Verilen linkteki sayfadan ekran görüntüsü alır.",
+            "LİNK": "Herhangi bir link girmelisin!"
         }
     }
 }
