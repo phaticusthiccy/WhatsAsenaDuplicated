@@ -363,6 +363,10 @@
         },
         "wallpaper": {
             "WP": "Envía fondos de pantalla de alta resolución diferentes."
+        },
+        "webss": {
+            "SS_DESC": "Toma una captura de pantalla de la página en el enlace dado.",
+            "LİNK": "¡Debes ingresar cualquier enlace!"
         }
     }
 }
