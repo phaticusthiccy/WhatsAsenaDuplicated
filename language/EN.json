@@ -363,6 +363,10 @@
         },
         "wallpaper": {
             "WP": "It sends high resolution wallpapers."
+        },
+        "webss": {
+            "SS_DESC": "Takes a screenshot from the page in the given link.",
+            "LİNK": "You must enter link!"
         }
     }
 }
