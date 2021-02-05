@@ -2,7 +2,7 @@
     "__ASENAJSON__": true,
     "LANGUAGE": "Indonesia",
     "LANGCODE": "in",
-    "AUTHOR": "@todayisshitday(telegram) / Avi Patil",
+    "AUTHOR": "Phaticusthiccy / @todayisshitday(telegram) / Avi Patil",
     "STRINGS": {
         "_asena": {
             "COMMAND": "Perintah",
@@ -363,6 +363,10 @@
         },
         "wallpaper": {
             "WP": "Mengirimkan wallpaper resolusi tinggi yang berbeda."
+        },
+        "webss": {
+            "SS_DESC": "Mengambil screenshot dari halaman di link yang diberikan.",
+            "LİNK": "Anda harus memasukkan tautan apa pun!"
         }
     }
 }
