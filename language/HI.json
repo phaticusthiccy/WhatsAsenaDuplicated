@@ -2,7 +2,7 @@
     "__ASENAJSON__": true,
     "LANGUAGE": "Hindi",
     "LANGCODE": "hi",
-    "AUTHOR": "Avi Patil",
+    "AUTHOR": "Avi Patil / Phaticusthiccy",
     "STRINGS": {
         "_asena": {
             "COMMAND": "आदेश",
@@ -363,6 +363,10 @@
         },
         "wallpaper": {
             "WP": "अलग, उच्च संकल्प वॉलपेपर भेजता है।"
+        },
+        "webss": {
+            "SS_DESC": "दिए गए लिंक में पृष्ठ से एक स्क्रीनशॉट लेता है।",
+            "LİNK": "आपको कोई भी लिंक डालना होगा!"
         }
     }
 }
