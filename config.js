@@ -31,7 +31,7 @@ module.exports = {
         APP_NAME: process.env.HEROKU_APP_NAME === undefined ? '' : process.env.HEROKU_APP_NAME
     },
     DATABASE_URL: DATABASE_URL,
-    DATABASE: DATABASE_URL === './whatsasena.db' ? new Sequelize({ dialect: "sqlite", ssl: true, storage: DATABASE_URL, logging: DEBUG}) : new Sequelize(DATABASE_URL, {logging: DEBUG}),
+    DATABASE: DATABASE_URL === './whatsasena.db' ? new Sequelize({ dialect: "sqlite", ssl: true, storage: DATABASE_URL, logging: DEBUG, dialectOptions: {ssl: true}}) : new Sequelize(DATABASE_URL, {logging: DEBUG}),
     RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? false : process.env.REMOVE_BG_API_KEY,
     NO_ONLINE: process.env.NO_ONLINE === undefined ? true : convertToBool(process.env.NO_ONLINE),
     SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
