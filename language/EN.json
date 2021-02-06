@@ -189,7 +189,7 @@
             "SEARCHING": "* 🔎 Searching...*",
             "WIKI_DESC": "Searches query on Wikipedia.",
             "IMG_DESC": "Searches for related pics on Google.",
-            "IMG": "Uploading photo ```{}``` number ```{} `..."
+            "IMG": "Uploading ```{}``` photos of ```{}```..."
         },
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",
