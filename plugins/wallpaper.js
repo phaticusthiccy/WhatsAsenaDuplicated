@@ -264,7 +264,6 @@ Asena.addCommand({pattern: 'wallpaper', fromMe: true, desc: Lang.WP}, (async (me
     r_text[244] = "https://images.wallpaperscraft.com/image/anime_girl_leaves_162517_1080x1920.jpg";
     r_text[245] = "https://images.wallpaperscraft.com/image/girl_anime_wind_188165_1080x1920.jpg";
     r_text[246] = "https://images.wallpaperscraft.com/image/girl_anime_guitar_184800_1080x1920.jpg";
-    r_text[247] = "https://images.wallpaperscraft.com/image/girl_guitar_anime_141048_1080x1920.jpg";
     r_text[247] = "https://images.wallpaperscraft.com/image/buildings_river_snow_198357_1350x2400.jpg";
     r_text[248] = "https://images.wallpaperscraft.com/image/ferris_wheel_buildings_skyscrapers_198273_1350x2400.jpg";
     r_text[249] = "https://images.wallpaperscraft.com/image/plane_trail_sky_197126_1350x2400.jpg";
@@ -394,8 +393,33 @@ Asena.addCommand({pattern: 'wallpaper', fromMe: true, desc: Lang.WP}, (async (me
     r_text[373] = "https://images.wallpaperscraft.com/image/silhouette_sea_sunset_123444_1350x2400.jpg";
     r_text[374] = "https://images.wallpaperscraft.com/image/silhouette_umbrella_loneliness_129903_1350x2400.jpg";
     r_text[375] = "https://images.wallpaperscraft.com/image/silhouette_loneliness_alone_178665_1350x2400.jpg";
+    r_text[376] = "https://images.wallpaperscraft.com/image/bridge_road_buildings_198628_1080x1920.jpg";
+    r_text[377] = "https://images.wallpaperscraft.com/image/bridge_road_night_149250_1080x1920.jpg";
+    r_text[378] = "https://images.wallpaperscraft.com/image/bridge_road_city_177485_1080x1920.jpg";
+    r_text[379] = "https://images.wallpaperscraft.com/image/bridge_road_trees_landscape_87106_1080x1920.jpg";
+    r_text[380] = "https://images.wallpaperscraft.com/image/field_trees_snow_198625_1440x2560.jpg";
+    r_text[381] = "https://images.wallpaperscraft.com/image/field_trees_winter_156237_1440x2560.jpg";
+    r_text[382] = "https://images.wallpaperscraft.com/image/field_trees_landscape_86249_1440x2560.jpg";
+    r_text[383] = "https://images.wallpaperscraft.com/image/starry_sky_trees_stars_198613_1440x2560.jpg";
+    r_text[384] = "https://images.wallpaperscraft.com/image/eye_pupil_macro_198610_1440x2560.jpg";
+    r_text[385] = "https://images.wallpaperscraft.com/image/eye_pupil_eyelashes_174969_1440x2560.jpg";
+    r_text[386] = "https://images.wallpaperscraft.com/image/eye_pupil_macro_153593_1440x2560.jpg";
+    r_text[387] = "https://images.wallpaperscraft.com/image/flowers_berries_branches_198606_1440x2560.jpg";
+    r_text[388] = "https://images.wallpaperscraft.com/image/silhouette_alone_northern_lights_198622_1440x2560.jpg";
+    r_text[389] = "https://images.wallpaperscraft.com/image/silhouette_alone_sad_158329_1440x2560.jpg";
+    r_text[390] = "https://images.wallpaperscraft.com/image/silhouette_alone_beach_158676_1440x2560.jpg";
+    r_text[391] = "https://images.wallpaperscraft.com/image/silhouette_alone_sea_196773_1440x2560.jpg";
+    r_text[392] = "https://images.wallpaperscraft.com/image/window_smoke_dark_198627_1440x2560.jpg";
+    r_text[393] = "https://images.wallpaperscraft.com/image/window_dark_eyes_133034_1440x2560.jpg";
+    r_text[394] = "https://images.wallpaperscraft.com/image/window_branches_dark_165733_1440x2560.jpg";
+    r_text[395] = "https://images.wallpaperscraft.com/image/window_ivy_leaves_181003_1440x2560.jpg";
+    r_text[396] = "https://images.wallpaperscraft.com/image/stains_liquid_paint_198596_1440x2560.jpg";
+    r_text[397] = "https://images.wallpaperscraft.com/image/buildings_city_boat_198584_1440x2560.jpg";
+    r_text[398] = "https://images.wallpaperscraft.com/image/buildings_city_canal_193837_1440x2560.jpg";
+    r_text[399] = "https://images.wallpaperscraft.com/image/buildings_city_ferris_wheel_178120_1440x2560.jpg";
+    r_text[400] = "https://images.wallpaperscraft.com/image/buildings_city_horizon_177629_1440x2560.jpg";
 
-    var i = Math.floor(376*Math.random())
+    var i = Math.floor(401*Math.random())
 
     var respoimage = await axios.get(`${r_text[i]}`, { responseType: 'arraybuffer' })
 
