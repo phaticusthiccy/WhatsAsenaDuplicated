@@ -53,6 +53,11 @@
             "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
             "required": false
         },
+        "GAN_IMAGE": {
+            "description": "Gan Style eklentisi için resim bağlantısı yazın.",
+            "required": true,
+            "value": "https://i.hizliresim.com/loUtAb.jpg"
+        },
         "NO_ONLINE": {
             "description": "Çevrimiçi görünmek istemiyorsanız true yazın.",
             "required": false,
