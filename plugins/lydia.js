@@ -25,11 +25,11 @@ Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC},
 
     if (veriler.length < 1) {
         var session = await lydia.createSession();
-        await LydiaDB.create({result.session_id: session.id, expires: session.expires, users: message.reply_message.jid.split('@')[0]});
+        await LydiaDB.create({session_id: session.id, expires: session.expires, users: message.reply_message.jid.split('@')[0]});
     } else {
         if (unix > veriler[0].dataValues.expires) {
             var session = await lydia.createSession();
-            await veriler[0].update({result.session_id: session.id, expires: session.expires, users: veriler[0].dataValues.users + ',' + message.reply_message.jid.split('@')[0]});
+            await veriler[0].update({session_id: session.id, expires: session.expires, users: veriler[0].dataValues.users + ',' + message.reply_message.jid.split('@')[0]});
         } else {
             await veriler[0].update({users: veriler[0].dataValues.users + (veriler[0].dataValues.users != '' ? ',' : '') + message.reply_message.jid.split('@')[0]});
         }
@@ -87,7 +87,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
     } else {
         if (unix > veriler[0].dataValues.expires) {
             session = await lydia.createSession();
-            await veriler[0].update({result.session_id: session.id, expires: session.expires});
+            await veriler[0].update({session_id: session.id, expires: session.expires});
         } else {
             session = await lydia.getSession(veriler[0].dataValues.session_id);
         }
