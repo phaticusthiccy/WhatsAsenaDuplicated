@@ -106,8 +106,8 @@ It is your responsibility to use these codes. We are not responsible for any bad
   "user_publicmail": "dohuhanz@gmail.com"
   },
   "user_permissions" {
-    "allow": [share, usage, support],
-    "unallow": [write, commit]
+    "allow": ["share, usage, support"],
+    "unallow": ["write, commit"]
     {
 }
 ```
