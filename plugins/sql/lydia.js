@@ -12,7 +12,7 @@ const { DataTypes } = require('sequelize');
 const LydiaDB = config.DATABASE.define('Lydia', {
     session_id: {
         type: DataTypes.STRING,
-        allowNull: true
+        allowNull: false
     },
     expires: {
         type: DataTypes.INTEGER,
