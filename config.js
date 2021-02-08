@@ -23,6 +23,8 @@ module.exports = {
     SESSION: process.env.ASENA_SESSION === undefined ? '' : process.env.ASENA_SESSION,
     GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
     LANG: process.env.LANGUAGE === undefined ? 'TR' : process.env.LANGUAGE.toUpperCase(),
+    ALIVEMSG: process.env.ALIVE_MESSAGE === undefined ? 'default' : process.env.ALIVE_MESSAGE,
+    AFKMSG: process.env.AFK_MESSAGE === undefined ? 'default' : process.env.AFK_MESSAGE,
     HANDLERS: process.env.HANDLERS === undefined ? '^[.!;]' : process.env.HANDLERS,
     SEND_READ: process.env.SEND_READ === undefined ? false : convertToBool(process.env.SEND_READ),
     BRANCH: 'master',
