@@ -4,10 +4,12 @@ Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
 WhatsAsena - Yusuf Usta
+Developer & Co-Founder - Phaticusthiccy
 */
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
+const Config = require('../config');
 
 const Language = require('../language');
 const Lang = Language.getString('afk');
@@ -31,27 +33,54 @@ function secondsToHms(d) {
     return hDisplay + mDisplay + sDisplay; 
 }
 
-Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {   
-    if (AFK.isAfk && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
-        (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
-        if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
-            message.mention.map(async (jid) => {
-                if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
+Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+    if (Config.AFKMSG == 'default') {
+
+        if (AFK.isAfk && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
+            (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
+            if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
+                message.mention.map(async (jid) => {
+                    if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
+                        await message.client.sendMessage(message.jid,Lang.AFK_TEXT + '\n' + 
+                        (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
+                        (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});            
+                    }
+                })
+            } else if (message.jid.includes('-') && message.reply_message !== false) {
+                if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
                     await message.client.sendMessage(message.jid,Lang.AFK_TEXT + '\n' + 
-                    (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
-                    (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});            
+                        (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
+                        (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});
                 }
-            })
-        } else if (message.jid.includes('-') && message.reply_message !== false) {
-            if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
+            } else {
                 await message.client.sendMessage(message.jid,Lang.AFK_TEXT + '\n' + 
-                    (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
-                    (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});
+                (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
+                (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});
             }
-        } else {
-            await message.client.sendMessage(message.jid,Lang.AFK_TEXT + '\n' + 
-            (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
-            (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});    
+        }
+    }
+    else {
+        if (AFK.isAfk && ((!message.jid.includes('-')) || (message.jid.includes('-') && 
+            (( message.mention !== false && message.mention.length !== 0 ) || message.reply_message !== false)))) {
+            if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
+                message.mention.map(async (jid) => {
+                    if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
+                        await message.client.sendMessage(message.jid,Config.AFKMSG + '\n' + 
+                        (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
+                        (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});            
+                    }
+                })
+            } else if (message.jid.includes('-') && message.reply_message !== false) {
+                if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
+                    await message.client.sendMessage(message.jid,Config.AFKMSG + '\n' + 
+                        (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
+                        (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});
+                }
+            } else {
+                await message.client.sendMessage(message.jid,Config.AFKMSG + '\n' + 
+                (AFK.reason !== false ? '\n*' + Lang.REASON + ':* ```' + AFK.reason + '```' : '') + 
+                (AFK.lastseen !== 0 ? '\n*' + Lang.LAST_SEEN + ':* ```' + secondsToHms(Math.round((new Date()).getTime() / 1000) - AFK.lastseen) + ' önce```' : ''), MessageType.text, {quoted: message.data});
+            }
         }
     }
 }));
