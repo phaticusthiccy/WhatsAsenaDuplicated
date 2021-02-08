@@ -53,6 +53,16 @@
             "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
             "required": false
         },
+        "ALIVE_MESSAGE": {
+            "description": "Customizable Alive Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "AFK_MESSAGE": {
+            "description": "Customizable AFK Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
         "GAN_IMAGE": {
             "description": "Gan Style eklentisi için resim bağlantısı yazın.",
             "required": true,
