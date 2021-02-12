@@ -8,14 +8,21 @@ WhatsAsena - Yusuf Usta
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
+const Config = require('../config');
 
 const fs = require('fs');
 const Language = require('../language');
 const Lang = Language.getString('profile');
 
-Asena.addCommand({pattern: 'kickme', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {    
-    await message.client.sendMessage(message.jid,Lang.KICKME,MessageType.text);
-    await message.client.groupLeave(message.jid);
+Asena.addCommand({pattern: 'kickme', fromMe: true, desc: Lang.KICKME_DESC, onlyGroup: true}, (async (message, match) => {
+    if (Config.KICKMEMSG == 'default') { 
+        await message.client.sendMessage(message.jid,Lang.KICKME,MessageType.text);
+        await message.client.groupLeave(message.jid);
+    }
+    else {
+        await message.client.sendMessage(message.jid,Config.KICKMEMSG,MessageType.text);
+        await message.client.groupLeave(message.jid);
+    }
 }));
 
 Asena.addCommand({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (message, match) => {    
