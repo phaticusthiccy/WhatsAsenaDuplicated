@@ -58,6 +58,26 @@
             "required": false,
             "value": "default"
         },
+        "BAN_MESSAGE": {
+            "description": "Customizable Ban Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "KICKME_MESSAGE": {
+            "description": "Customizable Kickme Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "PROMOTE_MESSAGE": {
+            "description": "Customizable Promote Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "DEMOTE_MESSAGE": {
+            "description": "Customizable Demote Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
         "AFK_MESSAGE": {
             "description": "Customizable AFK Message! Use => default, to change back.",
             "required": false,
