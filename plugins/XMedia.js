@@ -732,7 +732,7 @@ Asena.addCommand({pattern: 'mp4negative', fromMe: true, dontAddCommandList: true
     });
 
     ffmpeg(location)
-        .outputOptions(["-y", "-vf", "curves=color_negative"])
+        .outputOptions(["-y", "-vf", "curves=color_negative,format=yuv420p"])
         .format('mp4')
         .save('output.mp4')
         .on('end', async () => {
