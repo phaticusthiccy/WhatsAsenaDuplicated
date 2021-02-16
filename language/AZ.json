@@ -210,7 +210,8 @@
             "UPDATING": "_Yenilənir..._",
             "INVALID_HEROKU": "*❌ Heroku məlumatlarınız yanlışdır!*",
             "UPDATED": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*",
-            "UPDATED_LOCAL": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*"
+            "UPDATED_LOCAL": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*",
+            "AFTER_UPDATE": "*💬 WhatsAsena Yenidən Başladır.*"
         },
         "weather": {
             "WEATHER_DESC": "Hava şəraitini gətirər.",
