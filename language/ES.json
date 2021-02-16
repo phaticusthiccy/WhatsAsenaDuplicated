@@ -212,7 +212,8 @@
             "UPDATING": "_La actualización está en curso..._",
             "INVALID_HEROKU": "*❌ ¡Tu información de Heroku es incorrecta!*",
             "UPDATED": "*✅ ¡La actualización fue exitosa!*",
-            "UPDATED_LOCAL": "*✅ ¡La actualización fue exitosa!*\n_Para guardar los cambios deben reiniciarse._"
+            "UPDATED_LOCAL": "*✅ ¡La actualización fue exitosa!*",
+            "AFTER_UPDATE": "*¡Reinicio de WhatsAsena*"
         },
         "weather": {
             "WEATHER_DESC": "Trae el clima.",
