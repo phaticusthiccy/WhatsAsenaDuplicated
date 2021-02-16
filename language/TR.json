@@ -211,7 +211,8 @@
             "UPDATING": "_Güncelleme yapılıyor..._",
             "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
             "UPDATED": "*✅ Güncelleme başarılı oldu!*",
-            "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*"
+            "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*",
+            "AFTER_UPDATE": "*💬 WhatsAsena Yeniden Başlatılıyor*"
         },
         "weather": {
             "WEATHER_DESC": "Hava durumu getirir.\n⌨️ Örnek: .weather bakü",
