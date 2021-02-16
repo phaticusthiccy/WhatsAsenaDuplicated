@@ -137,7 +137,7 @@ If you are concerned about security, you can install it on your own computer. If
 ### WhatsAsena Features ✨
 
 Here Are All Commands With Description
-[GistHub](https://gist.github.com/phaticusthiccy/8dfa827a71647e5f659680d75543a748) |
+[GistHub](https://gist.github.com/phaticusthiccy/8dfa827a71647e5f659680d75543a748)
 
 ### ⚠️ Warning! 
 ```
