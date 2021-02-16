@@ -212,7 +212,8 @@
             "UPDATING": "_Memperbarui..._", 
             "INVALID_HEROKU": "*❌ Informasi Heroku Anda salah!*",
             "UPDATED": "*✅ Pembaruan berhasil!*",
-            "UPDATED_LOCAL": "*✅ Pembaruan berhasil! *\n_Anda harus memulai ulang untuk perubahan._"
+            "UPDATED_LOCAL": "*✅ Pembaruan berhasil! *\n_Anda harus memulai ulang untuk perubahan._",
+            "AFTER_UPDATE": "*💬 Memulai Ulang WhatsAsena!*"
         },
         "weather": {
             "WEATHER_DESC": "Menunjukkan cuaca.",
