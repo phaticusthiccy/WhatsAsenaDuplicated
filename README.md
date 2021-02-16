@@ -117,8 +117,13 @@ $ nano Config.env
 // Config.env create and edit.
 $ node bot.js
 ```
+
+##
+
 ### ⚒️ Setup Wiki 
 [![Setup - Kurulum](https://img.icons8.com/clouds/300/000000/settings.png)](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
+
+##
 
 ## F.A.Q
 Answer a few frequently asked questions;
@@ -134,10 +139,14 @@ If you are concerned about security, you can install it on your own computer. If
 ### What does Asena mean?
 [Asena](https://tr.wikipedia.org/wiki/Asena), comes from Turkish mythology. According to Turkish mythology, Asena is a she-wolf that plays an important role.
 
+##
+
 ### WhatsAsena Features ✨
 
 Here Are All Commands With Description
 [GistHub](https://gist.github.com/phaticusthiccy/8dfa827a71647e5f659680d75543a748)
+
+##
 
 ### ⚠️ Warning! 
 ```
