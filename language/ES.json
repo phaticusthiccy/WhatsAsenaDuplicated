@@ -120,25 +120,25 @@
             "NEED_REPLY": "```*¡Responda al mensaje de un usuario!*```",
             "COFFEEHOUSE": "```¡Ha definido la clave API de Coffehouse!```",
             "ENABLED_LYDIA": "```¡Lydia ha sido activada para este usuario!```",
-            "RMLYDIA_DESC": "Lydia desactiva su bot para el usuario.",
+            "RMLYDIA_DESC": "Lydia ha desactivado el bot.",
             "ALREADY_EMPTY": "```¡Tu lista de usuarios ya está vacía!```",
             "NOT_ADDED": "```¡Aún no has agregado a este usuario!```",
             "DISABLED": "```Lydia ha sido deshabilitada para este usuario```"
         },
         "memes": {
-            "MEMES_DESC": "Photo memes you replied to.",
-            "NEED_REPLY": "*Reply to a photo!*",
-            "DOWNLOADING": "```Downloading media & making meme...```"
+            "MEMES_DESC": "Obtén un meme para la foto que respondas",
+            "NEED_REPLY": "*¡Responda a una foto!*",
+            "DOWNLOADING": "```Descargando imagen y conviritiendo en meme```"
         },
         "ocr": {
-            "OCR_DESC": "Reads the text on the photo you have replied.",
-            "NEED_REPLY": "*Reply to a photo!*",
-            "DOWNLOADING": "```Media is downloading & reading...```",
-            "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
-            "RESULT": "*Language:* ```{}```\n*Here is what I read:* ```{}```"
+            "OCR_DESC": "Lee el texto de la foto que has respondido.",
+            "NEED_REPLY": "*¡Responda a una foto!*",
+            "DOWNLOADING": "```Analizando la imagen y escribiendo el texto...```",
+            "ERROR": "```No pude leer esto:/```\n*Error:*```{}```",
+            "RESULT": "*Lenguaje:* ```{}```\n*Esto es lo que leí:* ```{}```"
         },
         "profile": {
-            "KICKME_DESC": "Te quita del grupo que escribiste.",
+            "KICKME_DESC": "Este comando te expulsa del grupo que escribiste.",
             "KICKME": "```¡Adiós! Me voy 🤠```",
             "PP_DESC": "Tu foto de perfil es la foto a la que respondes.",
             "NEED_PHOTO": "*¡Dame una foto!*",
@@ -150,15 +150,15 @@
             "BLOCKED_UPPER": "¡Bloqueado!",
             "UNBLOCKED_UPPER": "Desbloqueado.",
             "NEED_USER": "Dame un usuario!",
-            "JID_DESC": "Giving user's JID.",
-            "JID": "```JID address of``` @{} ```: {}```",
-            "JID_CHAT": "```Chat's JID address: {}```"
+            "JID_DESC": "Dando el JID del usuario.",
+            "JID": "```Dirección JID de``` @{} ```: {}```",
+            "JID_CHAT": "```Dirección JID del chat: {}```"
         },
         "removebg": {
             "REMOVEBG_DESC": "Borra el fondo de la foto.",
-            "NEED_PHOTO": "*¡Dame una foto!*",
-            "NO_API_KEY": "*¡No tienes clave API!*\nPuede obtenerlo de remove.bg.",
-            "RBGING": "```Se está eliminando el fondo :D...```"
+            "NEED_PHOTO": "*¡Responde una foto!*",
+            "NO_API_KEY": "*¡No tienes clave API!*\nPuedes obtenerlo de remove.bg.",
+            "RBGING": "```El fondo se está eliminando :D\n\nEspere por favor...```"
         },
         "scrapers": {
             "TRANSLATE_DESC": "Se traduce con Google Translate. Debes responder a un mensaje.",
