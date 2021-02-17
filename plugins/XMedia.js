@@ -825,7 +825,7 @@ Asena.addCommand({pattern: 'mp4color', fromMe: true, dontAddCommandList: true}, 
 }));
 
 Asena.addCommand({pattern: 'colorimage', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
-    if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
+    if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
     var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
         key: {
