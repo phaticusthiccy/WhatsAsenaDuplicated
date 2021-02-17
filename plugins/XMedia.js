@@ -691,7 +691,7 @@ Asena.addCommand({pattern: 'mp4rainbow', fromMe: true, dontAddCommandList: true}
     });
 
     ffmpeg(location)
-        .outputOptions(["-y", "-vf", "geq=r='X/W*r(X,Y)':g='(1-X/W)*g(X,Y)':b='(H-Y)/H*b(X,Y)"])
+        .outputOptions(["-y", "-vf", "geq=r='X/W*r(X,Y)':g='(1-X/W)*g(X,Y)':b='(H-Y)/H*b(X,Y)", "-pix_fmt yuv420p"])
         .videoFilters('eq=brightness=0.5')
         .save('output.mp4')
         .on('end', async () => {
