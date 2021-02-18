@@ -2,10 +2,10 @@
     "name": "WhatsAsenaDuplicated",
     "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp.",
     "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
-    "keywords": ["whatsapp", "userbot", "Asena"],
-    "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
-    "website":   "https://t.me/phaticusthiccy",
-    "success_url": "https://t.me/AsenaSupport",
+    "keywords": ["whatsapp", "userbot"],
+    "repository": "https://github.com/muhammedkpln/WhatsAsenaDuplicated",
+    "website":   "https://github.com/muhammedkpln/",
+    "success_url": "https://github.com/muhammedkpln/",
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
@@ -95,6 +95,11 @@
         },
         "COFFEEHOUSE_API_KEY": {
             "description": "CoffeeHouse API Key. Need for Lydia. https://coffeehouse.intellivoid.net/",
+            "required": false,
+            "value": "true"
+        },
+        "GOOGLE_CREDENTIALS": {
+            "description": "Google credentials for voicy",
             "required": false,
             "value": "true"
         }
