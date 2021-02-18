@@ -35,13 +35,15 @@ Asena.addCommand({ pattern: 'voicy', desc: 'voicy', usage: 'sa', fromMe: true },
             };
 
             // Detects speech in the audio file
-            const [response] = await client.recognize(requestBody);
-            const transcription = response.results
-                .map(result => result.alternatives[0].transcript)
-                .join('\n');
+            client.recognize(requestBody).then(async (response) => {
+                const transcription = response.results
+                    .map(result => result.alternatives[0].transcript)
+                    .join('\n');
 
 
-            await message.client.sendMessage(message.reply_message.jid, '*Hey! Seste bunlari duydum!:*\n\n ' + transcription, MessageType.text)
+                await message.client.sendMessage(message.reply_message.jid, '*Hey! Seste bunlari duydum!:*\n\n ' + transcription, MessageType.text)
+
+            })
 
         } else {
             await message.client.sendMessage(message.jid, Lang.ONLY_AUDIO)
