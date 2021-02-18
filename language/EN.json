@@ -367,6 +367,11 @@
         "webss": {
             "SS_DESC": "Takes a screenshot from the page in the given link.",
             "LİNK": "You must enter link!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```Please reply to any message!```",
+            "ONLY_AUDIO":"```Only audio file is accepted.```",
+            "USAGE": "````Reply to the audio and type .voicy. It will convert audio to text.```"
         }
     }
 }

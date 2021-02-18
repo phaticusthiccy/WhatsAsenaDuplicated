@@ -366,6 +366,11 @@
         "webss": {
             "SS_DESC": "Verilen linkteki sayfadan ekran görüntüsü alır.",
             "LİNK": "Herhangi bir link girmelisin!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```Lütfen bir kullanıcının mesajına yanıt verin!```",
+            "ONLY_AUDIO":"```Sadece ses dosyalari desteklenir.```",
+            "USAGE": "Sesi alintilayip .voicy yazin, sesi yaziya dökecektir."
         }
     }
 }
