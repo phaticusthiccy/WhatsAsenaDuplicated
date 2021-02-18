@@ -7,12 +7,11 @@ const client = new speech.SpeechClient({
     credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS)
 });
 const Language = require('../language');
+const { cpuUsage } = require('process');
 const Lang = Language.getString('voicy');
 
 Asena.addCommand({ pattern: 'voicy', desc: 'voicy', usage: 'sa', fromMe: true }, (async (message, match) => {
-
     if (message.reply_message) {
-
         if (!message.reply_message.text && !message.reply_message.video && !message.reply_message.image && !message.reply_message.message) {
             const file = await message.client.downloadAndSaveMediaMessage({
                 key: {
@@ -42,7 +41,7 @@ Asena.addCommand({ pattern: 'voicy', desc: 'voicy', usage: 'sa', fromMe: true },
                 .join('\n');
 
 
-            await message.client.sendMessage(message.jid, '*Hey! Seste bunlari duydum!:*\n\n ' + transcription, MessageType.text)
+            await message.client.sendMessage(message.reply_message.jid, '*Hey! Seste bunlari duydum!:*\n\n ' + transcription, MessageType.text)
 
         } else {
             await message.client.sendMessage(message.jid, Lang.ONLY_AUDIO)
