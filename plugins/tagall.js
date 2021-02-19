@@ -25,10 +25,12 @@ Asena.addCommand({pattern: 'tagall', fromMe: true, desc: Lang.TAGALL_DESC}, (asy
 
     grup = await message.client.groupMetadata(message.jid);
     var jids = [];
-    mesaj = '';
+    mesaj = "*Tagall*\n";
+    no = 0
     grup['participants'].map(
         async (uye) => {
-            mesaj += '@' + uye.id.split('@')[0] + ' ';
+            no += 1
+            mesaj += "\n" + no + ". @" + uye.id('@')[0] + ' ';
             jids.push(uye.id.replace('c.us', 's.whatsapp.net'));
         }
     );
