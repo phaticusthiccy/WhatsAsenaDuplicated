@@ -97,11 +97,6 @@
             "description": "CoffeeHouse API Key. Need for Lydia. https://coffeehouse.intellivoid.net/",
             "required": false,
             "value": "true"
-        },
-        "GOOGLE_CREDENTIALS": {
-            "description": "Google credentials for voicy",
-            "required": false,
-            "value": "true"
         }
     },
     "addons": [{
