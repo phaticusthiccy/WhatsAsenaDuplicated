@@ -46,7 +46,7 @@
             "value": "default"
         },
         "UNMUTE_MESSAGE": {
-            "description": "Customizable Unmute Message?",
+            "description": "Customizable Unmute Message!",
             "required": false,
             "value": "default"
         },
