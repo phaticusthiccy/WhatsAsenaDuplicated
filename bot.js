@@ -136,6 +136,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
         console.log(
             chalk.green.bold('✅ Plugins installed!')
         );
+        await new Promise(r => setTimeout(r, 1100));
+
+        if (config.LANG == 'TR' || config.LANG == 'AZ') {
+            await conn.sendMessage(conn.user.jid, '*WhatsAsena Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+        }
+        else {
+            await conn.sendMessage(conn.user.jid, '*WhatsAsena Working! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+        }
     });
     
     conn.on('message-new', async msg => {
