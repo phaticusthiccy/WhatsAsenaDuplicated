@@ -371,7 +371,9 @@
         "voicy": {
             "NEED_REPLY": "```Please reply to any message!```",
             "ONLY_AUDIO":"```Only audio file is accepted.```",
-            "USAGE": "````Reply to the audio and type .voicy. It will convert audio to text.```"
+            "USAGE": "````Reply to the audio and type .voicy. It will convert audio to text.```",
+            "TEXT": "*Hey! I listened secretly to this voice and heard those!: *\n\n"
+
         }
     }
 }

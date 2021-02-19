@@ -1,14 +1,39 @@
 const Asena = require('../events');
-const speech = require('@google-cloud/speech');
+const ffmpeg = require('fluent-ffmpeg');
 const fs = require('fs');
 const { MessageType } = require('@adiwajshing/baileys');
-
-const client = new speech.SpeechClient({
-    credentials: JSON.parse(process.env.GOOGLE_CREDENTIALS)
-});
 const Language = require('../language');
-const { cpuUsage } = require('process');
 const Lang = Language.getString('voicy');
+const conf = require('../config');
+
+
+const recognizeAudio = () => {
+
+    const headers = new Headers({
+        'Content-Type': 'audio/wav',
+        "Authorization": `Bearer ${conf.WITAI_API}`,
+        'Cache-Control': 'no-cache',
+        'Transfer-Encoding': 'chunked'
+    })
+
+    const requestBody = {
+        method: "POST",
+        body: fs.readFileSync('output.wav'),
+        headers: headers
+    }
+
+    return fetch("https://api.wit.ai/speech?v=20200219", requestBody)
+        .then(response => response.json())
+        .then(json => json._text)
+}
+
+const convertToWav = file => {
+    return ffmpeg(file)
+        .inputFormat('ogg')
+        .audioCodec('pcm_s16le')
+        .format('wav')
+        .save('output.wav')
+}
 
 Asena.addCommand({ pattern: 'voicy', desc: 'voicy', usage: 'sa', fromMe: true }, (async (message, match) => {
     try {
@@ -22,27 +47,12 @@ Asena.addCommand({ pattern: 'voicy', desc: 'voicy', usage: 'sa', fromMe: true },
                     message: message.reply_message.data.quotedMessage
                 })
 
-                const config = {
-                    encoding: 'OGG_OPUS',
-                    sampleRateHertz: 16000,
-                    languageCode: 'tr-TR',
-                };
-                const audio = {
-                    content: fs.readFileSync(file).toString('base64')
-                }
-                const requestBody = {
-                    audio: audio,
-                    config: config,
-                };
 
-                // Detects speech in the audio file
-                const [response] = await client.recognize(requestBody)
+                convertToWav(file).on('end', async () => {
+                    const recognizedText = await recognizeAudio()
 
-                const transcription = response.results
-                    .map(result => result.alternatives[0].transcript)
-                    .join('\n');
-
-                await message.client.sendMessage(message.jid, '*Hey! Seste bunlari duydum!:*\n\n ```' + transcription + '```', MessageType.text)
+                    await message.client.sendMessage(message.jid, Lang.TEXT + '```' + recognizedText + '```', MessageType.text)
+                });
 
 
             } else {
