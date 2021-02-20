@@ -381,14 +381,14 @@
             "SEARCHING": "🔎 Command not found! *Searching* similar commands.."
         },
         "notes": {
-            "NOTES_USAGE": ".notes for listing your saved notes.",
+            "NOTES_USAGE": "Shows all your existing notes.",
             "NO_SAVED": "You don't have any saved notes.",
             "SAVED": "Here is your saved messages: ",
             "SAVE_USAGE": "Reply a message and type .save or just use .save <Your note> without replying",
             "REPLY": "Please provide a note or reply to a message.",
             "SUCCESSFULLY_ADDED": "Successfully added new note, check your notes with .notes.",
             "UNSUCCESSFUL": "Could not add note, please try again later or contact WhatsAsena developers.",
-            "DELETE_USAGE": ".deleteNotes - Deletes *all* your saved notes.",
+            "DELETE_USAGE": "Deletes *all* your saved notes.",
             "SUCCESSFULLY_DELETED": "Successfully deleted all your notes."
         }
     }
