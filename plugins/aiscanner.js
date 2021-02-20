@@ -21,6 +21,8 @@
 // Also Kind of AI 
 
 const Asena = require('../events');
+const Language = require('../language')
+const Lang = Language.getString('aiscanner')
 
 function editDistance(s1, s2) {
     s1 = s1.toLowerCase();
@@ -68,7 +70,11 @@ Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
     if (Asena.commands.filter(v => {
         try {
             const inputCommand = match.input.replace('.', '')
-            const potentialCommand = v.pattern.toString().replace('/^[.!;]', '').replace('/', '').replace('?(.*)', '').replace('(?: |$)(.*)', '')
+            const potentialCommand = v.pattern.toString()
+                .replace('/^[.!;]', '')
+                .replace('/', '')
+                .replace('?(.*)', '')
+                .replace('(?: |$)(.*)', '')
             if (inputCommand === potentialCommand) {
                 return new Array(v)
             } else {
@@ -83,13 +89,17 @@ Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
 
         const similarities = []
 
-        await message.sendMessage('🔎 Command not found! *Searching* similar commands..');
+        await message.sendMessage(Lang.SEARCHING);
 
         Asena.commands.forEach(async (command) => {
 
             try {
                 const inputCommand = match.input.replace('.', '')
-                const potentialCommand = command.pattern.toString().replace('/^[.!;]', '').replace('/', '').replace('?(.*)', '').replace('(?: |$)(.*)', '')
+                const potentialCommand = command.pattern.toString()
+                    .replace('/^[.!;]', '')
+                    .replace('/', '')
+                    .replace('?(.*)', '')
+                    .replace('(?: |$)(.*)', '')
                 const c = similarity(inputCommand, potentialCommand)
 
                 if (c > 0.50) {
@@ -101,9 +111,9 @@ Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
         });
 
         if (similarities.length > 0) {
-            await message.sendMessage('*Found those commands that is similar.* \n 🔎 ```' + similarities.join('\n') + '```');
+            await message.sendMessage(Lang.FOUND + similarities.join('\n') + '```');
         } else {
-            await message.sendMessage('Could *not* found any similar commands.');
+            await message.sendMessage(Lang.NOT_FOUND);
         }
     }
 })

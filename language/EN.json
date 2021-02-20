@@ -374,6 +374,11 @@
             "ONLY_AUDIO":"```Only audio file is accepted.```",
             "USAGE": "````Reply to the audio and type .voicy. It will convert audio to text.```",
             "TEXT": "*Hey! I listened secretly to this voice and heard those!: *\n\n"
+        },
+        "aiscanner": {
+            "NOT_FOUND": "Could *not* found any similar commands.",
+            "FOUND": "*Found those commands that is similar.* \n 🔎 ```",
+            "SEARCHING": "🔎 Command not found! *Searching* similar commands.."
         }
     }
 }
