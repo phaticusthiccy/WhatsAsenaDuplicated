@@ -368,6 +368,17 @@
         "webss": {
             "SS_DESC": "Toma una captura de pantalla de la página en el enlace dado.",
             "LİNK": "¡Debes ingresar cualquier enlace!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```¡Responda al mensaje de un usuario```",
+            "ONLY_AUDIO":"```Solo se admiten archivos de audio.```",
+            "USAGE": "Traduce las oraciones de la voz en texto..",
+            "TEXT": "*¡Oye ¡Escuché estos en voz:*\n\n"
+        },
+        "aiscanner": {
+            "NOT_FOUND": "No pudimos encontrar otro comando similar al que estaba buscando..",
+            "FOUND": "*Comando no encontrado, comandos similares:* \n 🔎 ```",
+            "SEARCHING": "🔎 Comando no encontrado. Buscando comandos similares.."
         }
     }
 }
