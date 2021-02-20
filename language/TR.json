@@ -370,9 +370,9 @@
         },
         "voicy": {
             "NEED_REPLY": "```Lütfen bir kullanıcının mesajına yanıt verin!```",
-            "ONLY_AUDIO":"```Sadece ses dosyalari desteklenir.```",
-            "USAGE": "Sesi alintilayip .voicy yazin, sesi yaziya dökecektir.",
-            "TEXT": "*Hey! Seste bunlari duydum!:*\n\n"
+            "ONLY_AUDIO":"```Sadece ses dosyaları desteklenir.```",
+            "USAGE": "Sesteki cümleleri yazıya çevirir.",
+            "TEXT": "*Hey! Seste bunları duydum!:*\n\n"
         },
         "aiscanner": {
             "NOT_FOUND": "Aradığınız komuta benzer başka bir komut bulamadık..",
