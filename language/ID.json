@@ -368,6 +368,17 @@
         "webss": {
             "SS_DESC": "Mengambil screenshot dari halaman di link yang diberikan.",
             "LİNK": "Anda harus memasukkan tautan apa pun!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```Harap balas pesan pengguna!```",
+            "ONLY_AUDIO":"```Hanya file audio yang didukung.```",
+            "USAGE": "Menerjemahkan kalimat dalam suara menjadi teks.",
+            "TEXT": "*Hei! Saya mendengar ini dengan suara!:*\n\n"
+        },
+        "aiscanner": {
+            "NOT_FOUND": "Kami tidak dapat menemukan perintah lain yang mirip dengan perintah yang Anda cari..",
+            "FOUND": "*Perintah tidak ditemukan, perintah serupa:* \n 🔎 ```",
+            "SEARCHING": "🔎 Perintah tidak ditemukan. Mencari perintah yang serupa.."
         }
     }
 }
