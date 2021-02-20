@@ -367,6 +367,17 @@
         "webss": {
             "SS_DESC": "Verilen linkteki sayfadan ekran görüntüsü alır.",
             "LİNK": "Herhangi bir link girmelisin!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```Lütfen bir kullanıcının mesajına yanıt verin!```",
+            "ONLY_AUDIO":"```Sadece ses dosyalari desteklenir.```",
+            "USAGE": "Sesi alintilayip .voicy yazin, sesi yaziya dökecektir.",
+            "TEXT": "*Hey! Seste bunlari duydum!:*\n\n"
+        },
+        "aiscanner": {
+            "NOT_FOUND": "Aradığınız komuta benzer başka bir komut bulamadık..",
+            "FOUND": "*Aradığınız komut bulunamadı, benzeyen komutlar: * \n 🔎 ```",
+            "SEARCHING": "🔎 Komut bulunamadı.. Benzer komutlar aranıyor.."
         }
     }
 }
