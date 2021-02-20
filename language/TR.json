@@ -380,14 +380,14 @@
             "SEARCHING": "🔎 Komut bulunamadı.. Benzer komutlar aranıyor.."
         },
         "notes": {
-            "NOTES_USAGE": ".notes yazarak tüm notlarınıza ulaşabilirsiniz.",
+            "NOTES_USAGE": Varolan tüm notlarınızı gösterir.",
             "NO_SAVED": "Kaydedilmiş herhangi bir notunuz bulunmadı.",
             "SAVED": "İşte kaydettiğiniz notlarınız: ",
-            "SAVE_USAGE": "Lütfen bir mesajı alıntılayıp .save yazınız veya .save <notunu> şeklinde kullanabilirsiniz.",
+            "SAVE_USAGE": "Yanıtladığınız mesajı yada resmi nota kaydeder.",
             "REPLY": "Lütfen bir mesaj alıntılayın veya .save <notunuz> şeklinde kullanın.",
             "SUCCESSFULLY_ADDED": "Notunuz başarılı bir şekilde kaydedildi, .notes yazarak notlarınıza ulaşabilirsiniz",
             "UNSUCCESSFUL": "Notunuzu kaydederken bir hatayla karşılaştık, lütfen tekrar deneyin. Eğer sorun devam ediyorsa lütfen WhatsAsena geliştiricileriyle iletişime geçin.",
-            "DELETE_USAGE": ".deleteNotes - Kaydettiğiniz *tüm* notlarınızı siler.",
+            "DELETE_USAGE": "Kaydettiğiniz *tüm* notlarınızı siler.",
             "SUCCESSFULLY_DELETED": "Tüm notlarınız başarılı bir şekilde silindi."
         }
     }
