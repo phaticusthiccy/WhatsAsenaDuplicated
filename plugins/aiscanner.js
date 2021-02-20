@@ -1,4 +1,4 @@
-/* 
+/*
 # Copyright (C) 2020 MuhammedKpln.
 #
 # WhatsAsena is free software: you can redistribute it and/or modify
@@ -65,7 +65,21 @@ function similarity(s1, s2) {
 
 
 Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
-    if (Asena.commands.filter(v => v.pattern === match.input).length < 1) {
+    if (Asena.commands.filter(v => {
+        try {
+            const inputCommand = match.input.replace('.', '')
+            const potentialCommand = v.pattern.toString().replace('/^[.!;]', '').replace('/', '').replace('?(.*)', '').replace('(?: |$)(.*)', '')
+            if (inputCommand === potentialCommand) {
+                return new Array(v)
+            } else {
+                return []
+            }
+
+        } catch (err) {
+            console.log(err)
+        }
+
+    }).length < 1) {
 
         const similarities = []
 
@@ -75,7 +89,7 @@ Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
 
             try {
                 const inputCommand = match.input.replace('.', '')
-                const potentialCommand = command.pattern.toString().replace('/^[.!;]', '').replace('/', '').replace('?(.*)', '')
+                const potentialCommand = command.pattern.toString().replace('/^[.!;]', '').replace('/', '').replace('?(.*)', '').replace('(?: |$)(.*)', '')
                 const c = similarity(inputCommand, potentialCommand)
 
                 if (c > 0.50) {
