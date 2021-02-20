@@ -380,7 +380,7 @@
             "SEARCHING": "🔎 Komut bulunamadı.. Benzer komutlar aranıyor.."
         },
         "notes": {
-            "NOTES_USAGE": Varolan tüm notlarınızı gösterir.",
+            "NOTES_USAGE": "Varolan tüm notlarınızı gösterir.",
             "NO_SAVED": "Kaydedilmiş herhangi bir notunuz bulunmadı.",
             "SAVED": "İşte kaydettiğiniz notlarınız: ",
             "SAVE_USAGE": "Yanıtladığınız mesajı yada resmi nota kaydeder.",
