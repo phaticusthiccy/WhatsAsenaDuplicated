@@ -66,7 +66,7 @@ function similarity(s1, s2) {
 }
 
 
-Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
+Asena.addCommand({ pattern: '.*', fromMe: true, dontAddCommandList: true }, async (message, match) => {
     if (Asena.commands.filter(v => {
         try {
             const inputCommand = match.input.replace('.', '')
