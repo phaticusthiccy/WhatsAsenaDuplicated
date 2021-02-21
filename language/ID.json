@@ -212,7 +212,8 @@
             "UPDATING": "_Memperbarui..._", 
             "INVALID_HEROKU": "*❌ Informasi Heroku Anda salah!*",
             "UPDATED": "*✅ Pembaruan berhasil!*",
-            "UPDATED_LOCAL": "*✅ Pembaruan berhasil! *\n_Anda harus memulai ulang untuk perubahan._"
+            "UPDATED_LOCAL": "*✅ Pembaruan berhasil! *\n_Anda harus memulai ulang untuk perubahan._",
+            "AFTER_UPDATE": "*💬 Memulai Ulang WhatsAsena!*"
         },
         "weather": {
             "WEATHER_DESC": "Menunjukkan cuaca.",
@@ -367,6 +368,28 @@
         "webss": {
             "SS_DESC": "Mengambil screenshot dari halaman di link yang diberikan.",
             "LİNK": "Anda harus memasukkan tautan apa pun!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```Harap balas pesan pengguna!```",
+            "ONLY_AUDIO":"```Hanya file audio yang didukung.```",
+            "USAGE": "Menerjemahkan kalimat dalam suara menjadi teks.",
+            "TEXT": "*Hei! Saya mendengar ini dengan suara!:*\n\n"
+        },
+        "aiscanner": {
+            "NOT_FOUND": "Kami tidak dapat menemukan perintah lain yang mirip dengan perintah yang Anda cari..",
+            "FOUND": "*Perintah tidak ditemukan, perintah serupa:* \n 🔎 ```",
+            "SEARCHING": "🔎 Perintah tidak ditemukan. Mencari perintah yang serupa.."
+        },
+        "notes": {
+            "NOTES_USAGE": "Menampilkan semua catatan Anda yang ada.",
+            "NO_SAVED": "Anda belum menemukan catatan yang direkam.",
+            "SAVED": "Ini catatan yang Anda rekam: ",
+            "SAVE_USAGE": "Rekam pesan yang Anda balas atau catatan resmi.",
+            "REPLY": "Silakan mengutip pesan atau Gunakan sebagai .save <yournote>",
+            "SUCCESSFULLY_ADDED": "Catatan Anda berhasil disimpan, anda dapat mengakses catatan Anda dengan mengetik .notes",
+            "UNSUCCESSFUL": "Kami mengalami kesalahan saat menyimpan catatan Anda, silahkan coba lagi. Jika masalah berlanjut, silakan hubungi pengembang WhatsAsena.",
+            "DELETE_USAGE": "Menghapus *semua* catatan yang telah Anda simpan.",
+            "SUCCESSFULLY_DELETED": "Semua catatan Anda telah berhasil dihapus."
         }
     }
 }

@@ -192,15 +192,29 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
 Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.MUTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
-    await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
-    await message.client.sendMessage(message.jid,Lang.MUTED,MessageType.text);
+
+    if (Config.MUTEMSG == 'default') {
+        await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+        await message.client.sendMessage(message.jid,Lang.MUTED,MessageType.text);
+    }
+    else {
+        await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
+        await message.client.sendMessage(message.jid,Config.MUTEMSG,MessageType.text);
+    }
 }));
 
 Asena.addCommand({pattern: 'unmute ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.UNMUTE_DESC}, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
-    await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
-    await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
+
+    if (Config.UNMUTEMSG == 'default') {
+        await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
+        await message.client.sendMessage(message.jid,Lang.UNMUTED,MessageType.text);
+    }
+    else {
+        await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, false);
+        await message.client.sendMessage(message.jid,Config.UNMUTEMSG,MessageType.text);
+    }
 }));
 
 Asena.addCommand({pattern: 'invite ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.INVITE_DESC}, (async (message, match) => {    

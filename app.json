@@ -40,6 +40,16 @@
             "description": "Herokuda API Keyiniz. Heroku API Key.",
             "required": true
         },
+        "MUTE_MESSAGE": {
+            "description": "Customizable Mute Message!",
+            "required": false,
+            "value": "default"
+        },
+        "UNMUTE_MESSAGE": {
+            "description": "Customizable Unmute Message!",
+            "required": false,
+            "value": "default"
+        },
         "HEROKU_APP_NAME": {
             "description": "Herokuda uygulama adı. Heroku APP Name.",
             "required": true

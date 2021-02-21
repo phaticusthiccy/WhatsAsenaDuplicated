@@ -14,23 +14,62 @@ const Language = require('../language');
 const Lang = Language.getString('ffmpeg');
 
 
-Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: true, desc: Lang.FF_DESC, warn: 'Dont use on photos! Only for Videos.'}, (async (message, match) => {    
-    if (match[1] === '') return await message.sendMessage('Need Video and Filter Name!\nℹ️ Ex: ```.ffmpeg fade=in:0:30```\nℹ️ Ex: ```.ffmpeg fade=in:0:30, fps=fps=25```');
-    var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-    var location = await message.client.downloadAndSaveMediaMessage({
-        key: {
-            remoteJid: message.reply_message.jid,
-            id: message.reply_message.id
-        },
-        message: message.reply_message.data.quotedMessage
-    });
+Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: true, desc: Lang.FF_DESC}, (async (message, match) => {    
+    if (match[1] === '') return await message.sendMessage('Need Media and Filter Name!\nℹ️ Ex: ```.ffmpeg fade=in:0:30```\nℹ️ Ex: ```.ffmpeg curves=vintage, fps=fps=25```');
+    if (message.reply_message.image === false && message.reply_message.video) {
 
-    ffmpeg(location)
-        .videoFilters(`${match[1]}`)
-        .format('mp4')
-        .save('output.mp4')
-        .on('end', async () => {
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
+        var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
+        var location = await message.client.downloadAndSaveMediaMessage({
+            key: {
+                remoteJid: message.reply_message.jid,
+                id: message.reply_message.id
+            },
+            message: message.reply_message.data.quotedMessage
         });
-    return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+
+        ffmpeg(location)
+            .videoFilters(`${match[1]}`)
+            .format('mp4')
+            .save('output.mp4')
+            .on('end', async () => {
+                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
+            });
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+    }
+    else if (message.reply_message.video === false && message.reply_message.image) {
+        var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
+        var location = await message.client.downloadAndSaveMediaMessage({
+            key: {
+                remoteJid: message.reply_message.jid,
+                id: message.reply_message.id
+            },
+            message: message.reply_message.data.quotedMessage
+        });
+
+        ffmpeg(location)
+            .videoFilters(`${match[1]}`)
+            .save('output.jpg')
+            .on('end', async () => {
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+            });
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+    }
+    else {
+        var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
+        var location = await message.client.downloadAndSaveMediaMessage({
+            key: {
+                remoteJid: message.reply_message.jid,
+                id: message.reply_message.id
+            },
+            message: message.reply_message.data.quotedMessage
+        });
+
+        ffmpeg(location)
+            .audioFilters(`${match[1]}`)
+            .save('output.mp3')
+            .on('end', async () => {
+                await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio});
+            });
+        return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
+    }
 }));

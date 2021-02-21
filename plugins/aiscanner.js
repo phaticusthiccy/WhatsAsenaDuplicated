@@ -1,521 +1,119 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
+/*
+# Copyright (C) 2020 MuhammedKpln.
+#
+# WhatsAsena is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# WhatsAsena is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <https://www.gnu.org/licenses/>.
+#
+
 */
 
 // It converts wrong commands to true
 // Also Kind of AI 
 
 const Asena = require('../events');
-const {MessageType, GroupSettingChange} = require('@adiwajshing/baileys');
-
-Asena.addCommand({pattern: 'udpate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'udpaye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'udpste', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: ' Udpate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: ' udpate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'udoaye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'udaote', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: ' Udpaye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: ' Udpsye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'ypdate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'udpTe', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'udpYe', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'yptade', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'alibe', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.alive');
-
-}));
-
-Asena.addCommand({pattern: 'aoibe', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.alive');
-
-}));
-
-Asena.addCommand({pattern: 'aliev', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.alive');
-
-}));
-
-Asena.addCommand({pattern: 'Alive', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.alive');
-
-}));
-
-Asena.addCommand({pattern: ' alive', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.alive');
-
-}));
-
-Asena.addCommand({pattern: ' Alive', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.alive');
-
-}));
-
-Asena.addCommand({pattern: 'xmedua', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.xmedia');
-
-}));
-
-Asena.addCommand({pattern: 'Xmedia', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.xmedia');
-
-}));
-
-Asena.addCommand({pattern: 'xmesia', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.xmedia');
-
-}));
-
-Asena.addCommand({pattern: ' xmedia', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.xmedia');
-
-}));
-
-Asena.addCommand({pattern: ' Xmedia', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.xmedia');
-
-}));
-
-Asena.addCommand({pattern: ' Xmedua', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.xmedia');
-
-}));
-
-Asena.addCommand({pattern: 'locaye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.locate');
-
-}));
-
-Asena.addCommand({pattern: 'lcoaye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.locate');
-
-}));
-
-Asena.addCommand({pattern: ' locate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.locate');
-
-}));
-
-Asena.addCommand({pattern: ' Locate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.locate');
-
-}));
-
-Asena.addCommand({pattern: 'lcoate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.locate');
-
-}));
-
-Asena.addCommand({pattern: 'imviye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.invite');
-
-}));
-
-Asena.addCommand({pattern: 'inviye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.invite');
-
-}));
-
-Asena.addCommand({pattern: ' invite', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.invite');
-
-}));
-
-Asena.addCommand({pattern: ' İnvite', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.invite');
-
-}));
-
-Asena.addCommand({pattern: ' Invite', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.invite');
-
-}));
-
-Asena.addCommand({pattern: 'ingite', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.invite');
-
-}));
-
-Asena.addCommand({pattern: 'imvite', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.invite');
-
-}));
-
-Asena.addCommand({pattern: 'rstsrt', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'reysary', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'retsart', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'resyart', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: ' Restart', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: ' restart', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'resyaty', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'resyary', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'retart', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'rwstart', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'resyatt', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.restart');
-
-}));
-
-Asena.addCommand({pattern: 'dyni', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.dyno');
-
-}));
-
-Asena.addCommand({pattern: 'dyjo', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.dyno');
-
-}));
-
-Asena.addCommand({pattern: ' dyno', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.dyno');
-
-}));
-
-Asena.addCommand({pattern: ' Dyno', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.dyno');
-
-}));
-
-Asena.addCommand({pattern: 'sydy', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.sysd');
-
-}));
-
-Asena.addCommand({pattern: ' sysd', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.sysd');
-
-}));
-
-Asena.addCommand({pattern: ' Sysd', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.sysd');
-
-}));
-
-Asena.addCommand({pattern: 'yagall', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.tagall');
-
-}));
-
-Asena.addCommand({pattern: ' tagall', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.tagall');
-
-}));
-
-Asena.addCommand({pattern: ' Tagall', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.tagall');
-
-}));
-
-Asena.addCommand({pattern: 'pjng', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.ping');
-
-}));
-
-Asena.addCommand({pattern: 'ling', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.ping');
-
-}));
-
-Asena.addCommand({pattern: 'pimg', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.ping');
-
-}));
-
-Asena.addCommand({pattern: 'pign', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.ping');
-
-}));
-
-Asena.addCommand({pattern: ' ping', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.ping');
-
-}));
-
-Asena.addCommand({pattern: ' Ping', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.ping');
-
-}));
-
-Asena.addCommand({pattern: ' asena', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.asena');
-
-}));
-
-Asena.addCommand({pattern: ' Asena', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.asena');
-
-}));
-
-Asena.addCommand({pattern: 'asnwa', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.asena');
-
-}));
-
-Asena.addCommand({pattern: 'asnea', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.asena');
-
-}));
-
-Asena.addCommand({pattern: 'asnwa', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.asena');
-
-}));
-
-Asena.addCommand({pattern: 'asnwa', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.asena');
-
-}));
-
-Asena.addCommand({pattern: 'ufdate', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'udpsye', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.update');
-
-}));
-
-Asena.addCommand({pattern: 'xemdia', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
-    await message.sendMessage('*🔎 Found!*');
-
-    await message.sendMessage('.xmedia');
-
-}));
+const Language = require('../language')
+const Lang = Language.getString('aiscanner')
+
+function editDistance(s1, s2) {
+    s1 = s1.toLowerCase();
+    s2 = s2.toLowerCase();
+
+    var costs = new Array();
+    for (var i = 0; i <= s1.length; i++) {
+        var lastValue = i;
+        for (var j = 0; j <= s2.length; j++) {
+            if (i == 0)
+                costs[j] = j;
+            else {
+                if (j > 0) {
+                    var newValue = costs[j - 1];
+                    if (s1.charAt(i - 1) != s2.charAt(j - 1))
+                        newValue = Math.min(Math.min(newValue, lastValue),
+                            costs[j]) + 1;
+                    costs[j - 1] = lastValue;
+                    lastValue = newValue;
+                }
+            }
+        }
+        if (i > 0)
+            costs[s2.length] = lastValue;
+    }
+    return costs[s2.length];
+}
+
+function similarity(s1, s2) {
+    var longer = s1;
+    var shorter = s2;
+    if (s1.length < s2.length) {
+        longer = s2;
+        shorter = s1;
+    }
+    var longerLength = longer.length;
+    if (longerLength == 0) {
+        return 1.0;
+    }
+    return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
+}
+
+
+Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
+    if (Asena.commands.filter(v => {
+        try {
+            const inputCommand = match.input.replace('.', '')
+            const potentialCommand = v.pattern.toString()
+                .replace('/^[.!;]', '')
+                .replace('/', '')
+                .replace('?(.*)', '')
+                .replace('(?: |$)(.*)', '')
+            if (inputCommand === potentialCommand) {
+                return new Array(v)
+            } else {
+                return []
+            }
+
+        } catch (err) {
+            console.log(err)
+        }
+
+    }).length < 1) {
+
+        const similarities = []
+
+        await message.sendMessage(Lang.SEARCHING);
+
+        Asena.commands.forEach(async (command) => {
+
+            try {
+                const inputCommand = match.input.replace('.', '')
+                const potentialCommand = command.pattern.toString()
+                    .replace('/^[.!;]', '')
+                    .replace('/', '')
+                    .replace('?(.*)', '')
+                    .replace('(?: |$)(.*)', '')
+                const c = similarity(inputCommand, potentialCommand)
+
+                if (c > 0.50) {
+                    similarities.push(potentialCommand)
+                }
+            } catch (err) {
+                console.log(err)
+            }
+        });
+
+        if (similarities.length > 0) {
+            await message.sendMessage(Lang.FOUND + similarities.join('\n') + '```');
+        } else {
+            await message.sendMessage(Lang.NOT_FOUND);
+        }
+    }
+})

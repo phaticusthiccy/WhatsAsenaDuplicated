@@ -76,7 +76,7 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
             await message.client.sendMessage(
                 message.jid,Lang.UPDATED, MessageType.text);
 
-            await message.sendMessage('💬 *WhatsAsena Restarting Automatically!* ');
+            await message.sendMessage(Lang.AFTER_UPDATE);
             
         } else {
             git.pull((async (err, update) => {

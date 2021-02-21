@@ -210,7 +210,8 @@
             "UPDATING": "_Yenilənir..._",
             "INVALID_HEROKU": "*❌ Heroku məlumatlarınız yanlışdır!*",
             "UPDATED": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*",
-            "UPDATED_LOCAL": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*"
+            "UPDATED_LOCAL": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*",
+            "AFTER_UPDATE": "*💬 WhatsAsena Yenidən Başladır.*"
         },
         "weather": {
             "WEATHER_DESC": "Hava şəraitini gətirər.",
@@ -365,6 +366,28 @@
         "webss": {
             "SS_DESC": "Verilən linkdəki səhifədən ekran görüntüsü alır.",
             "LİNK": "Hər hansı bir linki daxil etməlisiniz!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```Zəhmət olmasa bir istifadəçinin mesajına cavab verin!```",
+            "ONLY_AUDIO":"```Yalnız səs sənədləri dəstəklənir.```",
+            "USAGE": "Səsdəki cümlələri mətnə ​​çevirir.",
+            "TEXT": "*Hey! Bunları səsdən eşitdim:*\n\n"
+        },
+        "aiscanner": {
+            "NOT_FOUND": "Aradığınız əmrə bənzər başqa bir əmr tapa bilmədik..",
+            "FOUND": "*Axtardığınız əmr tapılmadı, oxşar əmrlər:* \n 🔎 ```",
+            "SEARCHING": "🔎 Əmr tapılmadı. Oxşar əmrlər istəndi.."
+        },
+        "notes": {
+            "NOTES_USAGE": "Bütün mövcud qeydlərinizi göstərir.",
+            "NO_SAVED": "Heç bir qeyd tapmadınız.",
+            "SAVED": "Budur qeyd etdiyiniz qeydlər: ",
+            "SAVE_USAGE": "Cavabladığınız mesajı və ya rəsmi qeydləri qeyd edir.",
+            "REPLY": "Xahiş edirəm bir mesaj verin və ya onu .save <öz qeydiniz> olaraq istifadə edin.",
+            "SUCCESSFULLY_ADDED": "Qeydiniz uğurla qeyd edildi, qeydlərinizə .notes yazaraq daxil ola bilərsiniz.",
+            "UNSUCCESSFUL": "Qeydinizi saxlayarkən bir səhvlə qarşılaşdıq, xahiş edirəm yenidən cəhd edin. Problem davam edərsə, xahiş edirəm WhatsAsena inkişaf etdiriciləri ilə əlaqə saxlayın..",
+            "DELETE_USAGE": "Yadda saxladığınız *bütün* qeydləri silir.",
+            "SUCCESSFULLY_DELETED": "Bütün qeydləriniz uğurla silindi."
         }
     }
 }
