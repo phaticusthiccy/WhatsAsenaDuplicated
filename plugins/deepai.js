@@ -47,7 +47,7 @@ Asena.addCommand({pattern: 'colorai', fromMe: true, deleteCommand: false, dontAd
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
         });
 
@@ -77,7 +77,7 @@ Asena.addCommand({pattern: 'waifuai', fromMe: true, deleteCommand: false, dontAd
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
         });
 
@@ -107,7 +107,7 @@ Asena.addCommand({pattern: 'superai', fromMe: true, deleteCommand: false, dontAd
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
         });
 
@@ -149,7 +149,7 @@ Asena.addCommand({pattern: 'dreamai', fromMe: true, deleteCommand: false, dontAd
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
         });
 
@@ -195,7 +195,7 @@ Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: true, deleteCommand: false, do
 
     var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+    await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
 }));
 
@@ -221,7 +221,7 @@ Asena.addCommand({pattern: 'toonai', fromMe: true, deleteCommand: false, dontAdd
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg})
+            await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg})
 
         });
 
@@ -292,7 +292,7 @@ Asena.addCommand({pattern: 'ganstyle', fromMe: true, deleteCommand: false, dontA
 
             var respoimage = await axios.get(`${resp.output_url}`, { responseType: 'arraybuffer' })
 
-            await message.sendMessage(Buffer(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
+            await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
 
         });
 
