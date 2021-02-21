@@ -379,6 +379,17 @@
             "NOT_FOUND": "No pudimos encontrar otro comando similar al que estaba buscando..",
             "FOUND": "*Comando no encontrado, comandos similares:* \n 🔎 ```",
             "SEARCHING": "🔎 Comando no encontrado. Buscando comandos similares.."
+        },
+        "notes": {
+            "NOTES_USAGE": "Muestra todas sus notas existentes.",
+            "NO_SAVED": "No has encontrado ninguna nota grabada.",
+            "SAVED": "Aquí están las notas que grabó: ",
+            "SAVE_USAGE": "Registra el mensaje al que responde o la nota oficial.",
+            "REPLY": "Por favor cite un mensaje o usar como .save <yournote>",
+            "SUCCESSFULLY_ADDED": "Tu nota ha sido guardada con éxito, puede acceder a sus notas escribiendo .notes",
+            "UNSUCCESSFUL": "Encontramos un error al guardar tu nota, ınténtalo de nuevo. Si el problema persiste, comuníquese con los desarrolladores de WhatsAsena.",
+            "DELETE_USAGE": "Elimina *todas* las notas que ha guardado.",
+            "SUCCESSFULLY_DELETED": "Todas tus notas se han eliminado correctamente."
         }
     }
 }
