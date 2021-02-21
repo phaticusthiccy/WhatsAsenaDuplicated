@@ -379,6 +379,17 @@
             "NOT_FOUND": "Kami tidak dapat menemukan perintah lain yang mirip dengan perintah yang Anda cari..",
             "FOUND": "*Perintah tidak ditemukan, perintah serupa:* \n 🔎 ```",
             "SEARCHING": "🔎 Perintah tidak ditemukan. Mencari perintah yang serupa.."
+        },
+        "notes": {
+            "NOTES_USAGE": "Menampilkan semua catatan Anda yang ada.",
+            "NO_SAVED": "Anda belum menemukan catatan yang direkam.",
+            "SAVED": "Ini catatan yang Anda rekam: ",
+            "SAVE_USAGE": "Rekam pesan yang Anda balas atau catatan resmi.",
+            "REPLY": "Silakan mengutip pesan atau Gunakan sebagai .save <yournote>",
+            "SUCCESSFULLY_ADDED": "Catatan Anda berhasil disimpan, anda dapat mengakses catatan Anda dengan mengetik .notes",
+            "UNSUCCESSFUL": "Kami mengalami kesalahan saat menyimpan catatan Anda, silahkan coba lagi. Jika masalah berlanjut, silakan hubungi pengembang WhatsAsena.",
+            "DELETE_USAGE": "Menghapus *semua* catatan yang telah Anda simpan.",
+            "SUCCESSFULLY_DELETED": "Semua catatan Anda telah berhasil dihapus."
         }
     }
 }
