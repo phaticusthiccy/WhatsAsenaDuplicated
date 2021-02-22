@@ -33,9 +33,9 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
 
     await message.sendMessage(infoMessage(Lang.LOADING))
 
-    const { data: { graphql: { user } } } = await axios.get(`https://www.instagram.com/${userName}/?__a=1`)
+    const { data } = await axios.get(`https://www.instagram.com/${userName}/?__a=1`).catch(err => await message.sendMessage(errorMessage('Not Found: ' + userName)))
 
-    const { profile_pic_url_hd, username, biography, edge_followed_by, edge_follow, full_name, is_private } = user
+    const { profile_pic_url_hd, username, biography, edge_followed_by, edge_follow, full_name, is_private } = data.graphql.user
 
     const profileBuffer = await axios.get(profile_pic_url_hd, { responseType: 'arraybuffer' })
 
