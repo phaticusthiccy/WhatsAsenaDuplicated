@@ -83,8 +83,6 @@ Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
 
                 if (inputCommand === potentialCommand) {
                     return new Array(v)
-                } else {
-                    console.log('Command does not exists.')
                 }
             }
         } catch (err) {
