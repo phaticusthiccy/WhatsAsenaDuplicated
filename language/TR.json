@@ -359,6 +359,7 @@
         },
         "ttp": {
             "TTP_DESC": "Yazıyı sade resme dönüştürür.",
+            "ATTP_DESC": "Yazıyı renkli stickera dönüştürür.",
             "NEED_WORD": "*Kelime Girmelisin!*"
         },
         "wallpaper": {

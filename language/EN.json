@@ -360,6 +360,7 @@
         },
         "ttp": {
             "TTP_DESC": "Converts text to plain painting.",
+            "ATTP_DESC": "Adds rainbow effect to the text as a sticker.",
             "NEED_WORD": "*You must enter words!*"
         },
         "wallpaper": {
