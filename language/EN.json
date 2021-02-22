@@ -393,6 +393,20 @@
             "UNSUCCESSFUL": "Could not add note, please try again later or contact WhatsAsena developers.",
             "DELETE_USAGE": "Deletes *all* your saved notes.",
             "SUCCESSFULLY_DELETED": "Successfully deleted all your notes."
+        },
+        "instagram": {
+            "NEED_WORD": "*Please enter username of any instagram account.*",
+            "USAGE": ".insta <userName>",
+            "DESC": "Fetches user informations from instagram",
+            "LOADING": "Fetching user data.. please wait.",
+            "USERNAME": "Username",
+            "NAME": "Name",
+            "BIO": "Biography",
+            "FOLLOWERS": "Followers",
+            "FOLLOWS": "Follows",
+            "ACCOUNT": "Account privacy",
+            "PUBLIC": "Public",
+            "HIDDEN": "Hidden"
         }
     }
 }
