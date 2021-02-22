@@ -133,14 +133,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please wait.')}`);
             if (pluginExt == '.js') {
 
                 // Do not load aiscanner plugin, we're gonna load it separately.
-                if (pluginName !== 'aiscanner') {
+                if (pluginName !== '_cmd') {
                     require('./plugins/' + plugin);
                 }
             }
         });
 
         // Load aiscanner at the end, for it needs all commands to already be added to the commands list.
-        require('./plugins/aiscanner');
+        require('./plugins/_cmd');
 
         console.log(
             chalk.green.bold('✅ Plugins installed!')
