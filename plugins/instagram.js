@@ -39,8 +39,6 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
 
     const profileBuffer = await axios.get(profile_pic_url_hd, { responseType: 'arraybuffer' })
 
-    await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image)
-
     const msg = `
     *${Lang.NAME}*: ${full_name}
     *${Lang.USERNAME}*: ${username}
@@ -49,6 +47,9 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
     *${Lang.FOLLOWS}*: ${edge_follow.count}
     *${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC}`
 
-    await message.sendMessage(msg)
+    await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, { caption: msg })
+
+
+
 
 }));
