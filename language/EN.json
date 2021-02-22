@@ -378,7 +378,9 @@
         "aiscanner": {
             "NOT_FOUND": "Could *not* found any similar commands.",
             "FOUND": "*Found those commands that is similar.* \n 🔎 ```",
-            "SEARCHING": "🔎 Command not found! *Searching* similar commands.."
+            "SEARCHING": "🔎 Command not found! *Searching* similar commands..",
+            "NEW_UPDATE": "New update available for Bot!"
+
         },
         "notes": {
             "NOTES_USAGE": "Shows all your existing notes.",

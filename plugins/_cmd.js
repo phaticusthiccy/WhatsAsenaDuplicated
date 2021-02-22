@@ -21,8 +21,13 @@
 
 const Asena = require('../events');
 const Language = require('../language')
-const { infoMessage, errorMessage } = require('../helpers')
+const simpleGit = require('simple-git');
+const Config = require('../config');
+const { infoMessage, errorMessage } = require('../helpers');
+const { MessageType } = require('@adiwajshing/baileys');
 const Lang = Language.getString('aiscanner')
+const ULang = Language.getString('updater')
+const git = simpleGit();
 
 function editDistance(s1, s2) {
     s1 = s1.toLowerCase();
@@ -65,8 +70,39 @@ function similarity(s1, s2) {
     return (longerLength - editDistance(longer, shorter)) / parseFloat(longerLength);
 }
 
+let commandTries = 0
+const maxCommandTriesForUpdate = 5
+
+async function shouldUpdate() {
+
+    if (commandTries >= maxCommandTriesForUpdate) {
+        try {
+            await git.fetch();
+            var commits = await git.log([Config.BRANCH + '..origin/' + Config.BRANCH]);
+            if (commits.total === 0) {
+                return false
+            } else {
+                return true
+            }
+        } catch (err) {
+            console.log(err)
+        }
+    }
+
+}
+
 
 Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
+
+    commandTries += 1
+    const needUpdate = await shouldUpdate()
+
+    if (needUpdate) {
+        await message.sendMessage(
+            infoMessage(Lang.NEW_UPDATE), MessageType.text
+        );
+    }
+
 
     const filteredCommandList = Asena.commands.filter(v => {
         try {
@@ -94,6 +130,7 @@ Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
     if (filteredCommandList.length < 1) {
 
         const similarities = []
+
 
         await message.sendMessage(infoMessage(Lang.SEARCHING));
 
