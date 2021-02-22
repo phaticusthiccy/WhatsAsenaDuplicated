@@ -21,6 +21,7 @@
 
 const Asena = require('../events');
 const Language = require('../language')
+const { infoMessage, errorMessage } = require('../helpers')
 const Lang = Language.getString('aiscanner')
 
 function editDistance(s1, s2) {
@@ -96,7 +97,7 @@ Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
 
         const similarities = []
 
-        await message.sendMessage(Lang.SEARCHING);
+        await message.sendMessage(infoMessage(Lang.SEARCHING));
 
         Asena.commands.forEach(async (command) => {
 
@@ -122,7 +123,7 @@ Asena.addCommand({ pattern: '.*', fromMe: true }, async (message, match) => {
         if (similarities.length > 0) {
             await message.sendMessage(Lang.FOUND + similarities.join('\n') + '```');
         } else {
-            await message.sendMessage(Lang.NOT_FOUND);
+            await message.sendMessage(errorMessage(Lang.NOT_FOUND));
         }
     }
 })
