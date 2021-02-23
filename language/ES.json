@@ -378,7 +378,8 @@
         "aiscanner": {
             "NOT_FOUND": "No pudimos encontrar otro comando similar al que estaba buscando..",
             "FOUND": "*Comando no encontrado, comandos similares:* \n 🔎 ```",
-            "SEARCHING": "🔎 Comando no encontrado. Buscando comandos similares.."
+            "SEARCHING": "🔎 Comando no encontrado. Buscando comandos similares..",
+            "NEW_UPDATE": "¡Hay una nueva actualización disponible para el bot"
         },
         "notes": {
             "NOTES_USAGE": "Muestra todas sus notas existentes.",
@@ -390,6 +391,21 @@
             "UNSUCCESSFUL": "Encontramos un error al guardar tu nota, ınténtalo de nuevo. Si el problema persiste, comuníquese con los desarrolladores de WhatsAsena.",
             "DELETE_USAGE": "Elimina *todas* las notas que ha guardado.",
             "SUCCESSFULLY_DELETED": "Todas tus notas se han eliminado correctamente."
+        },
+        "instagram": {
+            "NEED_WORD": "*Escribe cualquier nombre de usuario de Instagram.*",
+            "USAGE": ".insta <nombre de usuario>",
+            "DESC": "Acceso a la información del usuario de Instagram.",
+            "LOADING": "Cargando perfil de usuario.. Espere por favor.",
+            "USERNAME": "Nombre de usuario",
+            "NAME": "Nombre",
+            "BIO": "Biografía",
+            "FOLLOWERS": "Seguidor",
+            "FOLLOWS": "Seguimiento",
+            "ACCOUNT": "Privacidad de la cuenta",
+            "PUBLIC": "Abierto a todos",
+            "HIDDEN": "Oculto",
+            "NOT_FOUND": "Usuario no encontrado: "
         }
     }
 }
