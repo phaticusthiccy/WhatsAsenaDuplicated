@@ -406,7 +406,8 @@
             "FOLLOWS": "Follows",
             "ACCOUNT": "Account privacy",
             "PUBLIC": "Public",
-            "HIDDEN": "Hidden"
+            "HIDDEN": "Hidden",
+            "NOT_FOUND":"User not found: "
         }
     }
 }

@@ -404,7 +404,8 @@
             "FOLLOWS": "Takip",
             "ACCOUNT": "Hesap gizliliği",
             "PUBLIC": "Herkese açık",
-            "HIDDEN": "Gizli"
+            "HIDDEN": "Gizli",
+            "NOT_FOUND": "Kullanıcı bulunmadı: "
         }
     }
 }
