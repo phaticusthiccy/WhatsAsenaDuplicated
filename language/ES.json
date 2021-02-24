@@ -390,6 +390,21 @@
             "UNSUCCESSFUL": "Encontramos un error al guardar tu nota, ınténtalo de nuevo. Si el problema persiste, comuníquese con los desarrolladores de WhatsAsena.",
             "DELETE_USAGE": "Elimina *todas* las notas que ha guardado.",
             "SUCCESSFULLY_DELETED": "Todas tus notas se han eliminado correctamente."
+        },
+        "instagram": {
+            "NEED_WORD": "*Ingrese el nombre de usuario de cualquier cuenta de Instagram.*",
+            "USAGE": ".insta <Nombre de usuario>",
+            "DESC": "Obtiene información de usuario de Instagram",
+            "LOADING": "Obteniendo datos de usuario... espere por favor.",
+            "USERNAME": "Nombre de usuario",
+            "NAME": "Nombre",
+            "BIO": "Biografía",
+            "FOLLOWERS": "Seguidores",
+            "FOLLOWS": "Seguidos",
+            "ACCOUNT": "Privacidad de la cuenta",
+            "PUBLIC": "Pública",
+            "HIDDEN": "Oculta",
+            "NOT_FOUND":"Usuario no encontrado: "
         }
     }
 }
