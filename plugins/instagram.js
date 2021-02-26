@@ -25,9 +25,8 @@ const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
 
-Asena.addCommand(
-  { pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC },
-  async (message, match) => {
+Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
+
     const userName = match[1]
 
     if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
