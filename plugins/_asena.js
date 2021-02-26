@@ -41,7 +41,7 @@ Asena.addCommand({pattern: 'asena ?(.*)', fromMe: true, dontAddCommandList: true
         );
         
         await message.client.sendMessage(
-            message.jid, CMD_HELP, MessageType.text
+            message.jid,'●▬▬▬ *WhatsAsena* ▬▬▬●\n' + CMD_HELP, MessageType.text
         );    
     } else {
         var CMD_HELP = '';
@@ -72,7 +72,7 @@ Asena.addCommand({pattern: 'asena ?(.*)', fromMe: true, dontAddCommandList: true
         );
         if (CMD_HELP === '') CMD_HELP += Lang.NOT_FOUND;
         await message.client.sendMessage(
-            message.jid, CMD_HELP, MessageType.text
+            message.jid,'●▬▬▬ *WhatsAsena* ▬▬▬●\n' + CMD_HELP, MessageType.text
         );
     }
 }));
