@@ -10,6 +10,8 @@ const Config = require('../config');
 const Heroku = require('heroku-client');
 const {secondsToHms} = require('./afk');
 const got = require('got');
+const {MessageType} = require('@adiwajshing/baileys');
+
 const Language = require('../language');
 const Lang = Language.getString('heroku');
 
