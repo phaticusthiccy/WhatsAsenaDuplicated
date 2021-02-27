@@ -860,6 +860,7 @@ Asena.addCommand({pattern: 'mp4slowmo', fromMe: true, dontAddCommandList: true},
     ffmpeg(location)
         .videoFilters('minterpolate=fps=120')
         .videoFilters('setpts=4*PTS')
+        .noAudio()
         .format('mp4')
         .save('slowmo.mp4')
         .on('end', async () => {
