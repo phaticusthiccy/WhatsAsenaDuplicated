@@ -80,10 +80,8 @@ the user is responsible.
   <h1>🐺 WhatsAsena Duplicated</h1>
 </div>
 <p align="center">
-    WhatsAsena project - Makes it easy and fun to use Whatsapp. Also first userbot for Whatsapp
+    WhatsAsena project - Makes it easy and fun to use Whatsapp. Also first userbot for Whatsapp.
     <br>
-        Reserved |
-        Reserved |
         <a href="https://t.me/WHATSASENA">Telegram Channel</a> |
         <a href="https://t.me/AsenaSupport">Telegram Group</a> |
         <a href="https://t.me/asenaremaster">New Support Group</a> |
@@ -106,10 +104,10 @@ the user is responsible.
 
 ## Setup
 ### Very Simple Method
-`There is no support. Maybe I will handle it..`
+`Soon as Possible...`
 
 ### Simple Method
-[![Run on Repl.it](https://repl.it/badge/github/quiec/whatsasena)](https://repl.it/@phaticusthiccy/WhatsAsena-QR)
+[![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://repl.it/@phaticusthiccy/WhatsAsena-QR)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phaticusthiccy/WhatsAsenaDuplicated)
 

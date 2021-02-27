@@ -378,7 +378,8 @@
         "aiscanner": {
             "NOT_FOUND": "Kami tidak dapat menemukan perintah lain yang mirip dengan perintah yang Anda cari..",
             "FOUND": "*Perintah tidak ditemukan, perintah serupa:* \n 🔎 ```",
-            "SEARCHING": "🔎 Perintah tidak ditemukan. Mencari perintah yang serupa.."
+            "SEARCHING": "🔎 Perintah tidak ditemukan. Mencari perintah yang serupa..",
+            "NEW_UPDATE": "Pembaruan baru tersedia untuk bot!"
         },
         "notes": {
             "NOTES_USAGE": "Menampilkan semua catatan Anda yang ada.",
@@ -390,6 +391,21 @@
             "UNSUCCESSFUL": "Kami mengalami kesalahan saat menyimpan catatan Anda, silahkan coba lagi. Jika masalah berlanjut, silakan hubungi pengembang WhatsAsena.",
             "DELETE_USAGE": "Menghapus *semua* catatan yang telah Anda simpan.",
             "SUCCESSFULLY_DELETED": "Semua catatan Anda telah berhasil dihapus."
+        },
+        "instagram": {
+            "NEED_WORD": "*Ketik nama pengguna instagram apa saja.*",
+            "USAGE": ".insta <username>",
+            "DESC": "Instagram menjangkau informasi pengguna.",
+            "LOADING": "Memuat profil pengguna.. Mohon tunggu.",
+            "USERNAME": "Nama pengguna",
+            "NAME": "Nama",
+            "BIO": "Biografi",
+            "FOLLOWERS": "Pengikut",
+            "FOLLOWS": "Pelacakan",
+            "ACCOUNT": "Privasi akun",
+            "PUBLIC": "Terbuka untuk semua orang",
+            "HIDDEN": "Tersembunyi",
+            "NOT_FOUND": "Pengguna tidak ditemukan: "
         }
     }
 }

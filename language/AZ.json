@@ -376,7 +376,8 @@
         "aiscanner": {
             "NOT_FOUND": "Aradığınız əmrə bənzər başqa bir əmr tapa bilmədik..",
             "FOUND": "*Axtardığınız əmr tapılmadı, oxşar əmrlər:* \n 🔎 ```",
-            "SEARCHING": "🔎 Əmr tapılmadı. Oxşar əmrlər istəndi.."
+            "SEARCHING": "🔎 Əmr tapılmadı. Oxşar əmrlər istəndi..",
+            "NEW_UPDATE": "Bot üçün yeni yeniləmə mövcuddur!"
         },
         "notes": {
             "NOTES_USAGE": "Bütün mövcud qeydlərinizi göstərir.",
@@ -388,6 +389,21 @@
             "UNSUCCESSFUL": "Qeydinizi saxlayarkən bir səhvlə qarşılaşdıq, xahiş edirəm yenidən cəhd edin. Problem davam edərsə, xahiş edirəm WhatsAsena inkişaf etdiriciləri ilə əlaqə saxlayın..",
             "DELETE_USAGE": "Yadda saxladığınız *bütün* qeydləri silir.",
             "SUCCESSFULLY_DELETED": "Bütün qeydləriniz uğurla silindi."
+        },
+        "instagram": {
+            "NEED_WORD": "*Hər hansı bir instagram istifadəçi adını yazın.*",
+            "USAGE": ".insta <kullanıcıAdı>",
+            "DESC": "Instagram istifadəçi məlumatlarına çatır.",
+            "LOADING": "İstifadəçi profili yüklənir.. Xahiş edirəm gözləyin.",
+            "USERNAME": "İstifadəçi Adı",
+            "NAME": "Ad",
+            "BIO": "Tərcümeyi-hal",
+            "FOLLOWERS": "İzləyici",
+            "FOLLOWS": "İzləmə",
+            "ACCOUNT": "Hesab Məxfiliyi",
+            "PUBLIC": "Hər kəs üçün açıqdır",
+            "HIDDEN": "Gizli",
+            "NOT_FOUND": "İstifadəçi tapılmadı: "
         }
     }
 }

@@ -16,7 +16,7 @@ const Db = require('./sql/plugin');
 
 const Language = require('../language');
 const Lang = Language.getString('_plugin');
-
+const NLang = Language.getString('updater');
 
 const heroku = new Heroku({
     token: Config.HEROKU.API_KEY
@@ -90,9 +90,9 @@ Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_
         fs.unlinkSync('./plugins/' + match[1] + '.js');
         await message.client.sendMessage(message.jid, Lang.DELETED, MessageType.text);
         
-        await new Promise(r => setTimeout(r, 2000));
+        await new Promise(r => setTimeout(r, 1000));
     
-        await message.sendMessage('💬 *WhatsAsena Restarting Automatically!*');
+        await message.sendMessage(NLang.AFTER_UPDATE);
 
         console.log(baseURI);
         await heroku.delete(baseURI + '/dynos').catch(async (error) => {

@@ -21,28 +21,31 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 Asena.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
-    await message.sendMessage(Lang.RESTART_MSG);
+
+    await message.client.sendMessage(message.jid,Lang.RESTART_MSG, MessageType.text);
     console.log(baseURI);
     await heroku.delete(baseURI + '/dynos').catch(async (error) => {
-        await message.sendMessage(error.message);
+        await message.client.sendMessage(message.jid,error.message, MessageType.text);
     });
 }));
 
 Asena.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
+
     await heroku.get(baseURI + '/formation').then(async (formation) => {
         forID = formation[0].id;
-        await message.sendMessage(Lang.SHUTDOWN_MSG);
+        await message.client.sendMessage(message.jid,Lang.SHUTDOWN_MSG, MessageType.text);
         await heroku.patch(baseURI + '/formation/' + forID, {
             body: {
                 quantity: 0
             }
         });
     }).catch(async (err) => {
-        await message.sendMessage(error.message);
+        await message.client.sendMessage(message.jid,error.message, MessageType.text);
     });
 }));
 
 Asena.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+
     heroku.get('/account').then(async (account) => {
         // have encountered some issues while calling this API via heroku-client
         // so let's do it manually
@@ -58,36 +61,40 @@ Asena.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (
            quota_used = Math.floor(resp.quota_used);         
            percentage = Math.round((quota_used / total_quota) * 100);
            remaining = total_quota - quota_used;
-           await message.sendMessage(
+           await message.client.sendMessage(
+                message.jid,
                 Lang.DYNO_TOTAL + ": ```{}```\n\n".format(secondsToHms(total_quota))  + 
                 Lang.DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +  
                 Lang.PERCENTAGE + ": ```{}```\n\n".format(percentage) +
-                Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining))
+                Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining)),
+                MessageType.text
            );
         }).catch(async (err) => {
-            await message.sendMessage(err.message);     
+            await message.client.sendMessage(message.jid,err.message, MessageType.text);     
         });        
     });
 }));
 
 Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}, (async(message, match) => {
-    if (match[1] === '') return await message.sendMessage(Lang.KEY_VAL_MISSING);
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     if ((varKey = match[1].split(':')[0]) && (varValue = match[1].split(':')[1])) {
         await heroku.patch(baseURI + '/config-vars', {
             body: {
                 [varKey]: varValue
             }
         }).then(async (app) => {
-            await message.sendMessage(Lang.SET_SUCCESS.format(varKey, varValue));
+            await message.client.sendMessage(message.jid,Lang.SET_SUCCESS.format(varKey, varValue), MessageType.text);
         });
     } else {
-        await message.sendMessage(Lang.INVALID);
+        await message.client.sendMessage(message.jid,Lang.INVALID, MessageType.text);
     }
 }));
 
 
 Asena.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}, (async (message, match) => {
-    if (match[1] === '') return await message.reply(Lang.KEY_VAL_MISSING);
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
         key = match[1].trim();
         for (vr in vars) {
@@ -97,24 +104,25 @@ Asena.addCommand({pattern: 'delvar ?(.*)', fromMe: true, desc: Lang.DELVAR_DESC}
                         [key]: null
                     }
                 });
-                return await message.sendMessage(Lang.DEL_SUCCESS.format(key));
+                return await message.client.sendMessage(message.jid,Lang.DEL_SUCCESS.format(key), MessageType.text);
             }
         }
-        await message.sendMessage(Lang.NOT_FOUND);
+        await message.client.sendMessage(message.jid,Lang.NOT_FOUND, MessageType.text);
     }).catch(async (error) => {
-        await message.sendMessage(error.message);
+        await message.client.sendMessage(message.jid,error.message, MessageType.text);
     });
 
 }));
 
 Asena.addCommand({pattern: 'getvar ?(.*)', fromMe: true, desc: Lang.GETVAR_DESC}, (async (message, match) => {
-    if (match[1] === '') return await message.reply(Lang.KEY_VAL_MISSING);
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.KEY_VAL_MISSING, MessageType.text);
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
         for (vr in vars) {
             if (match[1].trim() == vr) return await message.sendMessage("```{} - {}```".format(vr, vars[vr]));
         }
-        await message.sendMessage(Lang.NOT_FOUND);
+        await message.client.sendMessage(message.jid,Lang.NOT_FOUND, MessageType.text);
     }).catch(async (error) => {
-        await message.sendMessage(error.message);
+        await message.client.sendMessage(message.jid,error.message, MessageType.text);
     });
 }));
