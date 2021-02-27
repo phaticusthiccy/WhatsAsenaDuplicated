@@ -15,6 +15,10 @@
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/commits/master">
     <img src="https://img.shields.io/github/commit-activity/m/phaticusthiccy/WhatsAsenaDuplicated?style=social">
   </a>
+  <a href="https://i.hizliresim.com/ZtrNkY.png">
+    <img src="https://img.shields.io/badge/Donate-Papara%201%E2%82%BA-important?style=plastic&logo=appveyor">
+  </a>
+
 </p>
 
 <p align="center">
