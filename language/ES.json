@@ -360,7 +360,11 @@
         },
         "ttp": {
             "TTP_DESC": "Convierte texto en pintura simple.",
-            "NEED_WORD": "*¡Debes ingresar palabras!*"
+            "NEED_WORD": "*¡Debes ingresar palabras!*",
+            "ANIME_DESC": "Escribe el texto dentro de la pancarta sostenida por la chica anime.",
+            "TRUMP_DESC": "Convierte el texto al tweet de Trump.",
+            "CHANGE_DESC": "Convierte el artículo en un póster de change my mind.",
+            "ATTP_DESC": "Convierte el texto en sticker de colores"
         },
         "wallpaper": {
             "WP": "Envía fondos de pantalla de alta resolución diferentes."
@@ -374,12 +378,6 @@
             "ONLY_AUDIO":"```Solo se admiten archivos de audio.```",
             "USAGE": "Traduce las oraciones de la voz en texto..",
             "TEXT": "*¡Oye ¡Escuché estos en voz:*\n\n"
-        },
-        "aiscanner": {
-            "NOT_FOUND": "No pudimos encontrar otro comando similar al que estaba buscando..",
-            "FOUND": "*Comando no encontrado, comandos similares:* \n 🔎 ```",
-            "SEARCHING": "🔎 Comando no encontrado. Buscando comandos similares..",
-            "NEW_UPDATE": "¡Hay una nueva actualización disponible para el bot"
         },
         "notes": {
             "NOTES_USAGE": "Muestra todas sus notas existentes.",
