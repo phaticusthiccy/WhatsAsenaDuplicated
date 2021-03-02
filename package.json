@@ -25,7 +25,7 @@
     "@lh2020/speedtest-net": "^2.1.1",
     "browser-id3-writer": "^4.4.0",
     "chalk": "^4.1.0",
-    "coffeehouse": "^1.0.1",
+    "coffeehouse": "^2.0.0",
     "cwebp": "^2.0.5",
     "deepai": "^1.0.17",
     "cwebp-bin": "^6.1.1",

@@ -50,6 +50,11 @@
             "required": false,
             "value": "default"
         },
+        "WORK_TYPE": {
+            "description": "WhatsAsena Working Type. If you use “public”, anyone can use the bot. Else if you use “private”, anyone can use your bot.",
+            "required": true,
+            "value": "private"
+        },
         "HEROKU_APP_NAME": {
             "description": "Herokuda uygulama adı. Heroku APP Name.",
             "required": true
