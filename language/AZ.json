@@ -358,7 +358,10 @@
         },
         "ttp": {
             "TTP_DESC": "Mətni düz resme çevirir.",
-            "NEED_WORD": "*Sözləri daxil etməlisən!*"
+            "NEED_WORD": "*Sözləri daxil etməlisən!*",
+            "ANIME_DESC": "Mətni anime qızının əlindəki bannerin içərisinə yazır.",
+            "TRUMP_DESC": "Mətni Trampın tvitinə çevirir.",
+            "CHANGE_DESC": "Məqaləni change my mind afişasına çevirir."
         },
         "wallpaper": {
             "WP": "Fərqli, yüksək qətnamə divar kağızı göndərir."
