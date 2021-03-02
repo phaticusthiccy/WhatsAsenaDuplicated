@@ -358,6 +358,7 @@
         },
         "ttp": {
             "TTP_DESC": "Mətni düz resme çevirir.",
+            "ATTP_DESC": "Mətni rəngli stickere çevirir.",
             "NEED_WORD": "*Sözləri daxil etməlisən!*",
             "ANIME_DESC": "Mətni anime qızının əlindəki bannerin içərisinə yazır.",
             "TRUMP_DESC": "Mətni Trampın tvitinə çevirir.",
