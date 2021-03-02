@@ -377,12 +377,6 @@
             "USAGE": "Səsdəki cümlələri mətnə ​​çevirir.",
             "TEXT": "*Hey! Bunları səsdən eşitdim:*\n\n"
         },
-        "aiscanner": {
-            "NOT_FOUND": "Aradığınız əmrə bənzər başqa bir əmr tapa bilmədik..",
-            "FOUND": "*Axtardığınız əmr tapılmadı, oxşar əmrlər:* \n 🔎 ```",
-            "SEARCHING": "🔎 Əmr tapılmadı. Oxşar əmrlər istəndi..",
-            "NEW_UPDATE": "Bot üçün yeni yeniləmə mövcuddur!"
-        },
         "notes": {
             "NOTES_USAGE": "Bütün mövcud qeydlərinizi göstərir.",
             "NO_SAVED": "Heç bir qeyd tapmadınız.",
