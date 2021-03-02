@@ -9,6 +9,8 @@ WhatsAsena - Yusuf Usta
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const got = require('got');
+const Config = require('../config');
+
 
 const Language = require('../language');
 const Lang = Language.getString('weather');
