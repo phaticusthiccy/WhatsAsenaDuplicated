@@ -27,7 +27,7 @@ Asena.addCommand({pattern: 'welcome (.*)', fromMe: true, dontAddCommandList: tru
         return await message.client.sendMessage(message.jid,Lang.NEED_WELCOME_TEXT);
     } else {
         if (match[1] === 'delete') { await message.client.sendMessage(message.jid,Lang.WELCOME_DELETED,MessageType.text); return await sql.deleteMessage(message.jid, 'welcome'); }
-        await sql.setMessage(message.jid, 'welcome', match[1]);
+        await sql.setMessage(message.jid, 'welcome', match[1].replace(/#/g, '\n'));
         return await message.client.sendMessage(message.jid,Lang.WELCOME_SETTED,MessageType.text)
     }
 }));
@@ -46,7 +46,7 @@ Asena.addCommand({pattern: 'goodbye (.*)', fromMe: true, dontAddCommandList: tru
         return await message.client.sendMessage(message.jid,Lang.NEED_GOODBYE_TEXT,MessageType.text);
     } else {
         if (match[1] === 'delete') { await message.client.sendMessage(message.jid,Lang.GOODBYE_DELETED,MessageType.text); return await sql.deleteMessage(message.jid, 'goodbye'); }
-        await sql.setMessage(message.jid, 'goodbye', match[1]);
+        await sql.setMessage(message.jid, 'goodbye', match[1].replace(/#/g, '\n'));
         return await message.client.sendMessage(message.jid,Lang.GOODBYE_SETTED,MessageType.text)
     }
 }));
