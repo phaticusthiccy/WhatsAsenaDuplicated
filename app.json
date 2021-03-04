@@ -9,7 +9,7 @@
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
-            "description": "Qr.Js ile oluşturduğunuz özel session kodu.",
+            "description": "Qr.Js ile oluşturduğunuz özel session kodu. Type here yours Asena Session.",
             "required": true
         },
         "SUDO": {
@@ -22,17 +22,17 @@
             "value": "TR"
         },
         "HANDLERS": {
-            "description": "Komutlar için.",
+            "description": "Komutlar için. For commands.",
             "required": true,
             "value": "^[.!;]"
         },
         "SEND_READ": {
-            "description": "Görüldü atmak istiyorsanız true yazın.",
+            "description": "Görüldü atmak istiyorsanız true yazın. Write true if you want to throw seen.",
             "required": true,
             "value": "true"
         },
         "HEROKU": {
-            "description": "Herokuda çalışıyorsa true yazın.",
+            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
             "required": true,
             "value": "true"
         },
@@ -41,12 +41,12 @@
             "required": true
         },
         "MUTE_MESSAGE": {
-            "description": "Customizable Mute Message!",
+            "description": "Düzenlenebilir Mute Mesajı. Customizable Mute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "UNMUTE_MESSAGE": {
-            "description": "Customizable Unmute Message!",
+            "description": "Düzenlenebilir Unmute Mesajı. Customizable Unmute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
@@ -99,12 +99,12 @@
             "value": "default"
         },
         "GAN_IMAGE": {
-            "description": "Gan Style eklentisi için resim bağlantısı yazın.",
+            "description": "Gan Style eklentisi için resim bağlantısı yazın. Type image link for Gan Style plugin.",
             "required": true,
             "value": "https://i.hizliresim.com/loUtAb.jpg"
         },
         "NO_ONLINE": {
-            "description": "Çevrimiçi görünmek istemiyorsanız true yazın.",
+            "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
             "required": false,
             "value": "true"
         },
