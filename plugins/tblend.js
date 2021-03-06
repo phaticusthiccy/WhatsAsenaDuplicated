@@ -274,7 +274,7 @@ else if (Config.WORKTYPE == 'public') {
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.MP4TOAUDİO_NEEDREPLY, MessageType.text);
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.F_NOT, MessageType.text)
+        if (message.repy_message && match[1] === '') return await message.client.sendMessage(message.jid, Lang.T_NOT, MessageType.text);
 
         if (match[1] === 'dodge') {
 
