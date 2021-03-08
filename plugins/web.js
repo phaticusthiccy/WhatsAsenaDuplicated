@@ -9,9 +9,11 @@ WhatsAsena - Yusuf Usta
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const speedTest = require('@lh2020/speedtest-net');
+const TinyURL = require('tinyurl');
 
 const Language = require('../language');
 const Lang = Language.getString('web');
+const SLang = Language.getString('webss');
 
 // https://github.com/ddsol/speedtest.net/blob/master/bin/index.js#L86
 function speedText(speed) {
@@ -49,4 +51,16 @@ Asena.addCommand({pattern: 'ping', fromMe: true, deleteCommand: false, desc: Lan
   await msg.delete();
   await message.client.sendMessage(
     message.jid,'*Pong!*\n```' + (end - start) + 'ms```', MessageType.text);
+}));
+
+Asena.addCommand({pattern: 'short ?(.*)', fromMe: true, desc: Lang.URL}, (async (message, match) => {
+
+    if (match[1] === '') return await message.client.sendMessage(message.jid, SLang.LİNK, MessageType.text);
+
+    TinyURL.shorten(`${match[1]}`, async(res, err) => {
+      if (err)
+        await message.client.sendMessage(message.jid, '*#### Error! ####*\n\n' + '```' + err + '```', MessageType.text);
+
+        await message.client.sendMessage(message.jid,`*Original Link:* ${match[1]}\n*Short Link:* ` + res, MessageType.text)
+    });
 }));

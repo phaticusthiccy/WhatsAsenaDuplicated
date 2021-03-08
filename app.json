@@ -1,8 +1,8 @@
 {
     "name": "WhatsAsenaDuplicated",
-    "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp.",
+    "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
     "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
-    "keywords": ["whatsapp", "userbot", "Asena"],
+    "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
     "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
     "website":   "https://t.me/phaticusthiccy",
     "success_url": "https://t.me/AsenaSupport",
@@ -51,7 +51,7 @@
             "value": "default"
         },
         "WORK_TYPE": {
-            "description": "WhatsAsena Working Type. If you use “public”, anyone can use the bot. Else if you use “private”, anyone can use your bot.",
+            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, anyone can use your bot.",
             "required": true,
             "value": "private"
         },

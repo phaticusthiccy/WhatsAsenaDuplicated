@@ -232,7 +232,8 @@
             "SPEEDTEST_RESULT": "*Uji kecepatan selesai!*",
             "UPLOAD": "Unggah",
             "DOWNLOAD": "Unduh",
-            "PING_DESC": "Mengukur ping anda."
+            "PING_DESC": "Mengukur ping anda.",
+            "URL": "Persingkat tautan panjang."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Mengubah video menjadi suara.",
@@ -241,7 +242,10 @@
             "STİCKER_DESC": "Mengubah stiker menjadi foto..",
             "STİCKER_NEEDREPLY": "*Anda harus membalas stiker*",
             "STİCKER": "```Mengonversi stiker menjadi foto..```",
-            "XMEDİA_DESC": "Ini adalah plugin dengan lebih dari 25 alat media."
+            "XMEDİA_DESC": "Ini adalah plugin dengan lebih dari 25 alat media.",
+            "T_FALSE": "```❌ Efek TBlend Salah Dimasukkan!```\n```🔎 Perintah yang Ada:```\n\n*$dodge* - Menerapkan filter warna merah muda ke video.\n*$multiply* - Menerapkan filter warna hijau ke video.\n*$grainmerge* - Meningkatkan kontras video.\n*$and* - Menerapkan efek kilat hitam sesuai dengan kecepatan video.\n*$or* - Menerapkan efek kilat putih sesuai dengan kecepatan video.\n*$burn* - Menerapkan kontras hijau ke video.\n*$difference* - Menunjukkan perbedaan dengan mengaplikasikan relief hijau ke video.\n*$grainextract* - Menunjukkan perbedaan dengan menerapkan relief abu-abu ke video.\n*$divide* - Menunjukkan perbedaan dengan mengaplikasikan relief merah muda pada video.\n*$xor* - Menerapkan relief hijau dan efek kilat ke video.\n*$hardmix* - Mencampur warna video menjadi nada kuning dan merah.\n*$negation* - Mengubah dinamika video menjadi merah muda.",
+            "T_NOT": "```💭 Anda Perlu Memasukkan Efek TBlend!\n```🔎 Perintah yang Ada:```\n\n*$dodge* - Menerapkan filter warna merah muda ke video.\n*$multiply* - Menerapkan filter warna hijau ke video.\n*$grainmerge* - Meningkatkan kontras video.\n*$and* - Menerapkan efek kilat hitam sesuai dengan kecepatan video.\n*$or* - Menerapkan efek kilat putih sesuai dengan kecepatan video.\n*$burn* - Menerapkan kontras hijau ke video.\n*$difference* - Menunjukkan perbedaan dengan mengaplikasikan relief hijau ke video.\n*$grainextract* - Menunjukkan perbedaan dengan menerapkan relief abu-abu ke video.\n*$divide* - Menunjukkan perbedaan dengan mengaplikasikan relief merah muda pada video.\n*$xor* - Menerapkan relief hijau dan efek kilat ke video.\n*$hardmix* - Mencampur warna video menjadi nada kuning dan merah.\n*$negation* - Mengubah dinamika video menjadi merah muda.",
+            "T_DESC": "Menerapkan efek TBlend yang dipilih ke video." 
         },
         "mute": {
             "1MUTE": "*Grup dibungkam selama 1 menit!*",

@@ -231,7 +231,8 @@
             "SPEEDTEST_RESULT": "*Hız testi yapıldı!*",
             "UPLOAD": "Yükleme",
             "DOWNLOAD": "İndirme",
-            "PING_DESC": "Pinginizi ölçer."
+            "PING_DESC": "Pinginizi ölçer.",
+            "URL": "Uzun linki kısaltır."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Videoyu ses kaydına çevirir.",
@@ -240,7 +241,10 @@
             "STİCKER_DESC": "Resim stickeri fotoğrafa çevirir.",
             "STİCKER_NEEDREPLY": "*Bir Stickere Yanıt Vermelisin!*",
             "STİCKER": "```Sticker Fotoğrafa Çevriliyor..```",
-            "XMEDİA_DESC": "İçerisinde 25’den fazla medya aracının bulduğu bir plugin."
+            "XMEDİA_DESC": "İçerisinde 25’den fazla medya aracının bulduğu bir plugin.",
+            "T_FALSE": "```❌ Yanlış Blend Efekti Girildi!```\n```🔎 Varolan Komutlar:```\n\n*$dodge* - Videoya pembe renk filtresi uygular.\n*$multiply* - Videoya yeşil renk filtresi uygular.\n*$grainmerge* - Videonun kontrast değerlerini arttırır.\n*$and* - Videonun hıza göre siyah yıldırım efekti uygular.\n*$or* - Videonun hızına göre beyaz yıldırım efekti uygular.\n*$burn* - Videoya yeşil kontrast uygular.\n*$difference* - Videoya yeşil kabartma uygulayarak farklılıkları gösterir.\n*$grainextract* - Videoya gri kabartma uygulayarak farklılıkları gösterir.\n*$divide* - Videoya pembe kabartma uygulayarak farklılıkları gösterir.\n*$xor* - Videoya hem yeşil kabartma hemde yıldırım efekti uygular.\n*$hardmix* - Videonun renklerini sarı ve kırmızı tonuna mix eder.\n*$negation* - Videonun dinamiklerini pembeye çevirir.",
+            "T_NOT": "```💭 Herhangi Bir Blend Efekti Girmen Gerekiyor!\n```🔎 Varolan Komutlar:```\n\n*$dodge* - Videoya pembe renk filtresi uygular.\n*$multiply* - Videoya yeşil renk filtresi uygular.\n*$grainmerge* - Videonun kontrast değerlerini arttırır.\n*$and* - Videonun hıza göre siyah yıldırım efekti uygular.\n*$or* - Videonun hızına göre beyaz yıldırım efekti uygular.\n*$burn* - Videoya yeşil kontrast uygular.\n*$difference* - Videoya yeşil kabartma uygulayarak farklılıkları gösterir.\n*$grainextract* - Videoya gri kabartma uygulayarak farklılıkları gösterir.\n*$divide* - Videoya pembe kabartma uygulayarak farklılıkları gösterir.\n*$xor* - Videoya hem yeşil kabartma hemde yıldırım efekti uygular.\n*$hardmix* - Videonun renklerini sarı ve kırmızı tonuna mix eder.\n*$negation* - Videonun dinamiklerini pembeye çevirir.",
+            "T_DESC": "Videolara seçilen TBlend efektini uygular." 
         },
         "mute": {
             "1MUTE": "*Grup 1 dakika süreyle susturuldu!*",

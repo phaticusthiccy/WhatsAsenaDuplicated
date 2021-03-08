@@ -232,7 +232,8 @@
             "SPEEDTEST_RESULT": "*¡Prueba de velocidad hecha!*",
             "UPLOAD": "Subida",
             "DOWNLOAD": "Bajada",
-            "PING_DESC": "Mide tu ping."
+            "PING_DESC": "Mide tu ping.",
+            "URL": "Acorta el enlace largo."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Convierte video en sonido.",
@@ -241,7 +242,10 @@
             "STİCKER_DESC": "Convierte sticker en foto",
             "STİCKER_NEEDREPLY": "*Tienes que responder a un sticker!*",
             "STİCKER": "```El stciker convierte en foto..```",
-            "XMEDİA_DESC": "Es un complemento con más de 25 herramientas multimedia."
+            "XMEDİA_DESC": "Es un complemento con más de 25 herramientas multimedia.",
+            "T_FALSE": "```❌ ¡Se ha introducido un efecto de Blend incorrecto!```\n```🔎 Comandos existentes:```\n\n*$dodge* - Aplica un filtro de color rosa al video.\n*$multiply* - Aplica un filtro de color verde al video.\n*$grainmerge* - Aumenta el contraste del video.\n*$and* - Aplica efecto de rayo negro según la velocidad del video.\n*$or* - Aplica un efecto de rayo blanco según la velocidad del video.\n*$burn* - Aplica contraste verde al video.\n*$difference* - Muestra las diferencias aplicando relieve verde al video.\n*$grainextract* - Muestra las diferencias aplicando un relieve gris al video.\n*$divide* - Demuestra las diferencias aplicando un relieve rosa al video.\n*$xor* - Aplica tanto relieve verde como efecto relámpago al vídeo.\n*$hardmix* - Mezcla los colores del video en un tono amarillo y rojo.\n*$negation* - Convierte la dinámica del video en rosa.",
+            "T_NOT": "```💭 ¡Necesita ingresar cualquier efecto de Blend!\n```🔎 Comandos existentes:```\n\n*$dodge* - Aplica un filtro de color rosa al video.\n*$multiply* - Aplica un filtro de color verde al video.\n*$grainmerge* - Aumenta los valores de contraste del video.\n*$and* - Aplica efecto de rayo negro según la velocidad del video.\n*$or* - Aplica un efecto de rayo blanco según la velocidad del video.\n*$burn* - Aplica contraste verde al video.\n*$difference* - Muestra las diferencias aplicando relieve verde al video.\n*$grainextract* - Muestra las diferencias aplicando un relieve gris al video.\n*$divide* - Demuestra las diferencias aplicando un relieve rosa al video.\n*$xor* - Aplica tanto relieve verde como efecto relámpago al vídeo.\n*$hardmix* - Mezcla los colores del video en un tono amarillo y rojo.\n*$negation* - Convierte la dinámica del video en rosa.",
+            "T_DESC": "Aplica el efecto TBlend seleccionado a los videos." 
         },
         "unvoice": {
             "UV_DESC": "Convierte audio en grabación de sonido.",

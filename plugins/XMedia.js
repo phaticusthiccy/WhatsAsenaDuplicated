@@ -1676,7 +1676,7 @@ else if (Config.WORKTYPE == 'public') {
         });
 
         ffmpeg(location)
-            .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.1,format=yuv420p"])
+            .outputOptions(["-y", "-vf", "colorbalance=rs=-0.75:gs=-0.75:bs=-0.75:rm=-0.875:gm=-0.875:bm=-0.875:rh=-1:gh=-1:bh=-1,format=yuv420p"])
             .format('mp4')
             .save('output.mp4')
             .on('end', async () => {
@@ -1697,7 +1697,7 @@ else if (Config.WORKTYPE == 'public') {
         });
 
         ffmpeg(location)
-            .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.1"])
+            .outputOptions(["-y", "-vf", "colorbalance=rs=-0.75:gs=-0.75:bs=-0.75:rm=-0.875:gm=-0.875:bm=-0.875:rh=-1:gh=-1:bh=-1"])
             .save('output.jpg')
             .on('end', async () => {
                 await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});

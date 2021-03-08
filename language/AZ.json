@@ -230,7 +230,8 @@
             "SPEEDTEST_RESULT": "*Sürəti testi elədim!*",
             "UPLOAD": "Yükləmə",
             "DOWNLOAD": "Endirmə",
-            "PING_DESC": "Ping'inizi ölçər."
+            "PING_DESC": "Ping'inizi ölçər.",
+            "URL": "Uzun əlaqəni qısaldın."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Videonu səsə çevirir..",
@@ -239,7 +240,10 @@
             "STİCKER_DESC": "Resim stickeri bir fotoya çevirir..",
             "STİCKER_NEEDREPLY": "*Bir stickere cavab verməlisən*",
             "STİCKER": "```Sticker bir fotoya çevirir..```",
-            "XMEDİA_DESC": "25-dən çox medya vasitəsi olan plagindir."
+            "XMEDİA_DESC": "25-dən çox medya vasitəsi olan plagindir.",
+            "T_FALSE": "```❌ Yanlış Blend Effekti Daxil Edildi!```\n```🔎 Mövcud əmrlər:```\n\n*$dodge* - Videoya çəhrayı rəngli bir filtr tətbiq edir.\n*$multiply* - Videoya yaşıl rəngli bir filtr tətbiq edir.\n*$grainmerge* - Videonun kontrastını artırır.\n*$and* - Videonun sürətinə görə qara ildırım effekti tətbiq edir.\n*$or* - Videonun sürətinə görə ağ ildırım effekti tətbiq edir.\n*$burn* - Videoya yaşıl kontrast tətbiq edir.\n*$difference* - Videoya yaşıl relyef tətbiq edərək fərqləri göstərir.\n*$grainextract* - Videoya boz relyef tətbiq edərək fərqləri göstərir.\n*$divide* - Videoya çəhrayı bir rahatlama tətbiq edərək fərqləri nümayiş etdirir.\n*$xor* - Həm yaşıl relyef, həm də ildırım effekti videoya tətbiq olunur.\n*$hardmix* - Videonun rənglərini sarı və qırmızı bir tonda qarışdırır.\n*$negation* - Videonun dinamikasını çəhrayı rəngə çevirir.",
+            "T_NOT": "```💭 Hər hansı bir Blend effekti daxil etməlisiniz!\n```🔎 Mövcud əmrlər:```\n\n*$dodge* - Videoya çəhrayı rəngli bir filtr tətbiq edir.\n*$multiply* - Videoya yaşıl rəngli bir filtr tətbiq edir.\n*$grainmerge* - Videonun kontrastını artırır.\n*$and* - Videonun sürətinə görə qara ildırım effekti tətbiq edir.\n*$or* - Videonun sürətinə görə ağ ildırım effekti tətbiq edir.\n*$burn* - Videoya yaşıl kontrast tətbiq edir.\n*$difference* - Videoya yaşıl relyef tətbiq edərək fərqləri göstərir.\n*$grainextract* - Videoya boz relyef tətbiq edərək fərqləri göstərir.\n*$divide* - Videoya çəhrayı bir rahatlama tətbiq edərək fərqləri nümayiş etdirir.\n*$xor* - Həm yaşıl relyef, həm də ildırım effekti videoya tətbiq olunur.\n*$hardmix* - Videonun rənglərini sarı və qırmızı bir tonda qarışdırır.\n*$negation* - Videonun dinamikasını çəhrayı rəngə çevirir.",
+            "T_DESC": "Seçilmiş TBlend effektini videolara tətbiq edir." 
         },
         "mute": {
             "BİRMUTE": "*Grup 1 dakika süreyle susturuldu!*",

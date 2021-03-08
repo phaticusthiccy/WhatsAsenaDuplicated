@@ -232,7 +232,8 @@
             "SPEEDTEST_RESULT": "*स्पीड टेस्ट पूरा हुआ!*",
             "UPLOAD": "अपलोड",
             "DOWNLOAD": "डाउनलोड",
-            "PING_DESC": "आपके पिंग को मापता है।"
+            "PING_DESC": "आपके पिंग को मापता है।",
+            "URL": "लंबे लिंक को छोटा करें."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "वीडियो को ध्वनि में रूपांतरित करता है",
@@ -241,7 +242,10 @@
             "STİCKER_DESC": "कँटिया को फोटो में रूपांतरित करता है",
             "STİCKER_NEEDREPLY": "*आपको स्टिकर का जवाब देना होगा*",
             "STİCKER": "```स्टिकर को फ़ोटो में परिवर्तित करना..```",
-            "XMEDİA_DESC": "यह 25 से अधिक मीडिया टूल के साथ एक प्लगइन है"
+            "XMEDİA_DESC": "यह 25 से अधिक मीडिया टूल के साथ एक प्लगइन है",
+            "T_FALSE": "```❌ Incorrect Blend Effect Entered!```\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
+            "T_NOT": "```💭 You Need To Enter Any Blend Effects!\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
+            "T_DESC": "Applies the selected TBlend effect to videos." 
         },
         "unvoice": {
             "UV_DESC": "ऑडियो को ध्वनि रिकॉर्डिंग में परिवर्तित करता है",
