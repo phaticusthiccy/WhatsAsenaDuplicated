@@ -232,7 +232,8 @@
             "SPEEDTEST_RESULT": "*Speed ​​test completed!*",
             "UPLOAD": "Upload",
             "DOWNLOAD": "Download",
-            "PING_DESC": "Measures your ping."
+            "PING_DESC": "Measures your ping.",
+            "URL": "Shorten the long link."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Converts video to sound.",
