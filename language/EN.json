@@ -380,7 +380,7 @@
         "voicy": {
             "NEED_REPLY": "```Please reply to any message!```",
             "ONLY_AUDIO":"```Only audio file is accepted.```",
-            "USAGE": "```It converts audio to text.```",
+            "USAGE": "It converts audio to text.",
             "TEXT": "*Hey! I listened secretly to this voice and heard those!:* \n\n"
         },
         "notes": {
