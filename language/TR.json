@@ -231,7 +231,8 @@
             "SPEEDTEST_RESULT": "*Hız testi yapıldı!*",
             "UPLOAD": "Yükleme",
             "DOWNLOAD": "İndirme",
-            "PING_DESC": "Pinginizi ölçer."
+            "PING_DESC": "Pinginizi ölçer.",
+            "URL": "Uzun linki kısaltır."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Videoyu ses kaydına çevirir.",
