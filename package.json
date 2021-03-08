@@ -29,6 +29,7 @@
     "cwebp": "^2.0.5",
     "deepai": "^1.0.17",
     "cwebp-bin": "^6.1.1",
+    "tinyurl": "^1.1.7",
     "dotenv": "^8.2.0",
     "exchange-rates-api": "^1.0.2",
     "fluent-ffmpeg": "^2.1.2",
