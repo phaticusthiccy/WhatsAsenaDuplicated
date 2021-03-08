@@ -230,7 +230,8 @@
             "SPEEDTEST_RESULT": "*Sürəti testi elədim!*",
             "UPLOAD": "Yükləmə",
             "DOWNLOAD": "Endirmə",
-            "PING_DESC": "Ping'inizi ölçər."
+            "PING_DESC": "Ping'inizi ölçər.",
+            "URL": "Uzun əlaqəni qısaldın."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Videonu səsə çevirir..",
