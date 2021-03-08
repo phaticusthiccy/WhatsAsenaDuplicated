@@ -232,7 +232,8 @@
             "SPEEDTEST_RESULT": "*Uji kecepatan selesai!*",
             "UPLOAD": "Unggah",
             "DOWNLOAD": "Unduh",
-            "PING_DESC": "Mengukur ping anda."
+            "PING_DESC": "Mengukur ping anda.",
+            "URL": "Persingkat tautan panjang."
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Mengubah video menjadi suara.",
