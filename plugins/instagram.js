@@ -1,6 +1,7 @@
 /*
 # Copyright (C) 2020 MuhammedKpln.
-#
+# edited by Vai838
+
 # WhatsAsena is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
@@ -34,28 +35,28 @@ Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc
     await message.sendMessage(infoMessage(Lang.LOADING))
 
     await axios
-      .get(`https://www.instagram.com/${userName}/?__a=1`)
+      .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
       .then(async (response) => {
         const {
-          profile_pic_url_hd,
+          profile_hd,
           username,
-          biography,
-          edge_followed_by,
-          edge_follow,
+          bio,
+          followers,
+          following,
           full_name,
           is_private,
-        } = response.data.graphql.user
+        } = response.data.result
 
-        const profileBuffer = await axios.get(profile_pic_url_hd, {
+        const profileBuffer = await axios.get(profile_hd, {
           responseType: 'arraybuffer',
         })
 
         const msg = `
         *${Lang.NAME}*: ${full_name}
         *${Lang.USERNAME}*: ${username}
-        *${Lang.BIO}*: ${biography}
-        *${Lang.FOLLOWERS}*: ${edge_followed_by.count}
-        *${Lang.FOLLOWS}*: ${edge_follow.count}
+        *${Lang.BIO}*: ${bio}
+        *${Lang.FOLLOWERS}*: ${followers}
+        *${Lang.FOLLOWS}*: ${following}
         *${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC}`
 
         await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
