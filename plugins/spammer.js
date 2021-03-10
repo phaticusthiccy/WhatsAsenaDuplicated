@@ -5,6 +5,7 @@ Instagram: www.instagram.com/kyrie.baran
 
 const Asena = require('../events');
 const Language = require('../language');
+const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const Lang = Language.getString('spammer');
 
 let totalMaxSpamCount = 50
