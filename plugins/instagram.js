@@ -28,7 +28,7 @@ const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
 
 
-if (Config.WORKTYPE == 'private') {
+if (cn.WORKTYPE == 'private') {
 
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
 
@@ -73,7 +73,7 @@ if (Config.WORKTYPE == 'private') {
       },
     )
 }
-else if (Config.WORKTYPE == 'public') {
+else if (cn.WORKTYPE == 'public') {
 
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
 
