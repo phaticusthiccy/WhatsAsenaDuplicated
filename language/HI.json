@@ -416,9 +416,3 @@
     }
 }
 
-
-
-"GLITCH_DESC": "Turns the text into a Glitch style image.",
-            "NEONGLOW_DESC": "Turns the text into a Neonglow style image.",
-            "LATTE_DESC": "It converts the text to Latte art in a coffeecup.",
-            "GLITCHUSAGE": ".glitch <Toptext;Bottomtext>"
