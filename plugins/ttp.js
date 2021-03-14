@@ -36,7 +36,7 @@ if (Config.WORKTYPE == 'private') {
 
     }));
     
-        Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: true, desc: Lang.GLITCH_DESC}, (async (message, match) => {
+        Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: true, usage: Lang.GLITCHUSAGE, desc: Lang.GLITCH_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
@@ -98,7 +98,7 @@ else if (Config.WORKTYPE == 'public') {
 
     }));
     
-        Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, desc: Lang.GLITCH_DESC}, (async (message, match) => {
+        Asena.addCommand({pattern: 'glitch ?(.*)', fromMe: false, usage: Lang.GLITCHUSAGE, desc: Lang.GLITCH_DESC}, (async (message, match) => {
 
     if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORD, MessageType.text);
 
