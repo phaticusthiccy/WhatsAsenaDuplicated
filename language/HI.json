@@ -368,7 +368,11 @@
             "ANIME_DESC": "वह एनीमे लड़की द्वारा आयोजित बैनर के अंदर पाठ लिखता है।",
             "TRUMP_DESC": "ट्रम्प के ट्वीट को पाठ में परिवर्तित करता है।",
             "CHANGE_DESC": "लेख को change my mind पोस्टर में बदल देता है।",
-            "ATTP_DESC": "पाठ को रंगीन स्टिकर में परिवर्तित करता है"
+            "ATTP_DESC": "पाठ को रंगीन स्टिकर में परिवर्तित करता है",
+            "GLITCH_DESC": "पाठ को एक Glitch शैली की छवि में बदल देता है.",                          
+            "NEONGLOW_DESC": "पाठ को एक Neonglow शैली की छवि में बदल देता है.",
+            "LATTE_DESC": "यह पाठ को लोटे कला में एक कॉफ़ेकेप में परिवर्तित करता है.",
+            "GLITCHUSAGE": ".glitch <Toptext;Bottomtext>"
         },
         "wallpaper": {
             "WP": "अलग, उच्च संकल्प वॉलपेपर भेजता है।"
@@ -411,3 +415,10 @@
         }
     }
 }
+
+
+
+"GLITCH_DESC": "Turns the text into a Glitch style image.",
+            "NEONGLOW_DESC": "Turns the text into a Neonglow style image.",
+            "LATTE_DESC": "It converts the text to Latte art in a coffeecup.",
+            "GLITCHUSAGE": ".glitch <Toptext;Bottomtext>"
