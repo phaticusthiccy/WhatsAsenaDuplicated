@@ -368,7 +368,11 @@
             "ANIME_DESC": "Escribe el texto dentro de la pancarta sostenida por la chica anime.",
             "TRUMP_DESC": "Convierte el texto al tweet de Trump.",
             "CHANGE_DESC": "Convierte el artículo en un póster de change my mind.",
-            "ATTP_DESC": "Convierte el texto en sticker de colores"
+            "ATTP_DESC": "Convierte el texto en sticker de colores",
+            "GLITCH_DESC": "Convierte el texto en una imagen de estilo Glitch.",
+            "NEONGLOW_DESC": "Convierte el texto en una imagen de estilo Neonglow.",
+            "LATTE_DESC": "Convierte el texto a Latte art en una taza de café.",
+            "GLITCHUSAGE": ".glitch <Toptext;Bottomtext>"
         },
         "wallpaper": {
             "WP": "Envía fondos de pantalla de alta resolución diferentes."
