@@ -367,7 +367,11 @@
             "NEED_WORD": "*Kelime Girmelisin!*",
             "ANIME_DESC": "Yazıyı anime kızının tuttuğu pankartın içine yazar.",
             "TRUMP_DESC": "Yazıyı trump’ın tweetine çevirir.",
-            "CHANGE_DESC": "Yazıyı change my mind posterine çevirir."
+            "CHANGE_DESC": "Yazıyı change my mind posterine çevirir.",
+            "GLITCH_DESC": "Metni Glitch tarzı bir görüntüye dönüştürür.",
+            "NEONGLOW_DESC": "Metni Neonglow tarzı bir görüntüye dönüştürür.",
+            "LATTE_DESC": "Metni bir kahve fincanı içinde Latte sanatına dönüştürür.",
+            "GLITCHUSAGE": ".glitch <Toptext;Bottomtext>"
         },
         "wallpaper": {
             "WP": "Birbirinden farklı, yüksek çözünürlüklü duvar kağıdı gönderir."
