@@ -367,6 +367,10 @@
             "ANIME_DESC": "Mətni anime qızının əlindəki bannerin içərisinə yazır.",
             "TRUMP_DESC": "Mətni Trampın tvitinə çevirir.",
             "CHANGE_DESC": "Məqaləni change my mind afişasına çevirir."
+            "GLITCH_DESC": "Mətni Glitch stili şəklinə çevirir.",
+            "NEONGLOW_DESC": "Mətni Neonglow üslublu şəkilə çevirir.",
+            "LATTE_DESC": "Qəhvə şəklində mətni Latte sənətinə çevirir.",
+            "GLITCHUSAGE": ".glitch <Toptext;Bottomtext>"
         },
         "wallpaper": {
             "WP": "Fərqli, yüksək qətnamə divar kağızı göndərir."
