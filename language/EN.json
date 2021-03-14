@@ -365,10 +365,14 @@
         "ttp": {
             "TTP_DESC": "Converts text to plain painting.",
             "ATTP_DESC": "Adds rainbow effect to the text as a sticker.",
-            "NEED_WORD": "*You must enter words!*",
+            "NEED_WORD": "*You must enter text!*",
             "ANIME_DESC": "It writes the text inside the banner the anime girl is holding",
             "TRUMP_DESC": "Converts the text to Trump's tweet.",
-            "CHANGE_DESC": "Turns the text into the change my mind poster."
+            "CHANGE_DESC": "Turns the text into the change my mind poster.",
+            "GLITCH_DESC": "Turns the text into a Glitch style image.",
+            "NEONGLOW_DESC": "Turns the text into a Neonglow style image.",
+            "LATTE_DESC": "It converts the text to Latte art in a coffeecup.",
+            "GLITCHUSAGE": ".glitch <Toptext;Bottomtext>"
         },
         "wallpaper": {
             "WP": "It sends high resolution wallpapers."
