@@ -213,7 +213,7 @@
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*✅ Successfully Updated!*",
             "UPDATED_LOCAL": "*✅ Successfully Updated!*",
-            "AFTER_UPDATE": "*💬 WhatsAsena Restating Automaticly!*"
+            "AFTER_UPDATE": "*💬 WhatsAsena Restarting Automatically!*"
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
