@@ -10,6 +10,8 @@ const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
+const axios = require('axios')
+
 //============================== CURRENCY =============================================
 const { exchangeRates } = require('exchange-rates-api');
 const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
@@ -33,6 +35,7 @@ const spotifyApi = new SpotifyWebApi({
 //=====================================================================================
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
+const Glang = Language.getString('github');
 
 const wiki = require('wikijs').default;
 var gis = require('g-i-s');
@@ -202,6 +205,51 @@ if (config.WORKTYPE == 'private') {
             message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
         });
     }));
+
+    Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
+
+        const userName = match[1]
+ 
+        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
+
+        await axios
+          .get(`https://videfikri.com/api/github/?username=${userName}`)
+          .then(async (response) => {
+
+            const {
+              hireable,
+              company,
+              profile_pic,
+              username,
+              fullname, 
+              blog, 
+              location,
+              email,
+              public_repository,
+              biografi,
+              following,
+              followers,
+              public_gists,
+              profile_url,
+              last_updated,
+              joined_on,
+            } = response.data.result
+
+            const githubscrap = await axios.get(profile_pic, 
+              {responseType: 'arraybuffer',
+            })
+
+            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOWİNG}* ${following} \n*${Glang.BİO}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.GİST}* ${public_gists} \n*${Glang.LOCATİON}* ${location} \n*${Glang.MAİL}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.HİRE}* ${hireable === "true" ? Glang.HİRE_TRUE : Glang.HİRE_FALSE} \n*${Glang.JOİN}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
+
+            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
+              caption: msg,
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
+          )
+      },
+    )
 }
 else if (config.WORKTYPE == 'public') {
 
@@ -367,4 +415,49 @@ else if (config.WORKTYPE == 'public') {
             message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
         });
     }));
+
+    Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
+
+        const userName = match[1]
+ 
+        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
+
+        await axios
+          .get(`https://videfikri.com/api/github/?username=${userName}`)
+          .then(async (response) => {
+
+            const {
+              hireable,
+              company,
+              profile_pic,
+              username,
+              fullname, 
+              blog, 
+              location,
+              email,
+              public_repository,
+              biografi,
+              following,
+              followers,
+              public_gists,
+              profile_url,
+              last_updated,
+              joined_on,
+            } = response.data.result
+
+            const githubscrap = await axios.get(profile_pic, 
+              {responseType: 'arraybuffer',
+            })
+
+            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOWİNG}* ${following} \n*${Glang.BİO}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.GİST}* ${public_gists} \n*${Glang.LOCATİON}* ${location} \n*${Glang.MAİL}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.HİRE}* ${hireable === "true" ? Glang.HİRE_TRUE : Glang.HİRE_FALSE} \n*${Glang.JOİN}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
+
+            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
+              caption: msg,
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
+          )
+      },
+    )
 }
