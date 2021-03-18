@@ -57,7 +57,8 @@ Açık kaynaklı bir proje olduğundan isteyen herkes yazılımı kopyalayıp ek
 kendi özelleştirdiği biçimde kullanabilir. Ayrıca eklenti (plugin) desteği, 
 orijinal yazılıma kullanıcıların kendi yazdıkları eklentileri yükleyerek istedikleri 
 biçimde kullanmaları özelliğini sağlar.
-Kullanımı tamamen kullanıcının sorumluluğundadır, 
+Kullanımı tamamen kullanıcının sorumluluğundadır.
+Botu amacı dışında kullanmak, açık bir şekilde yasaklanmanıza sebeb olur.
 Asena Userbot yalnızca bir altyapıdır. Nasıl sonradan yüklenen programlarla 
 yapılan işlerden işletim sistemi sorumlu değilse, 
 WhatsAsena da kullanıcıların kullanım amacı ve yönteminden sorumlu değildir.
@@ -70,6 +71,7 @@ The user is responsible for all consequences that may arise from incorrect or mi
 Since it is an open source project, anyone can copy the software, add and remove,
 and use it in a way that they customize. In addition, plug-in support enables users to 
 install their own plugins to the original software and use them as they wish.
+Using the bot out of purpose will explicitly ban you.
 Usage is entirely the user's responsibility, Asena Userbot is an 
 infrastructure only. Just as the operating system is not responsible 
 for the work done with the programs that are installed later, WhatsAsena 

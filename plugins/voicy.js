@@ -39,6 +39,12 @@ const convertToWav = file => {
 if (conf.WORKTYPE == 'private') {
 
     Asena.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true }, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         try {
             if (message.reply_message) {
                 if (!message.reply_message.text && !message.reply_message.video && !message.reply_message.image) {
@@ -77,6 +83,12 @@ if (conf.WORKTYPE == 'private') {
 if (conf.WORKTYPE == 'public') {
 
     Asena.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: false }, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         try {
             if (message.reply_message) {
                 if (!message.reply_message.text && !message.reply_message.video && !message.reply_message.image) {

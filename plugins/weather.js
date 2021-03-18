@@ -18,6 +18,12 @@ const Lang = Language.getString('weather');
 if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: true}, async (message, match) => {
+
+            if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
+
 	    if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
 	    try {
@@ -37,6 +43,12 @@ if (Config.WORKTYPE == 'private') {
 if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'weather ?(.*)', desc: Lang.WEATHER_DESC, fromMe: false}, async (message, match) => {
+
+            if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
+
 	    if (match[1] === '') return await message.reply(Lang.NEED_LOCATION);
 	    const url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
 	    try {

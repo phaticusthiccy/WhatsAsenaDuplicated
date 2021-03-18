@@ -408,6 +408,28 @@
             "PUBLIC": "Terbuka untuk semua orang",
             "HIDDEN": "Tersembunyi",
             "NOT_FOUND": "Pengguna tidak ditemukan: "
+        },
+        "github": {
+            "GİTHUB_DESC": "Mengumpulkan informasi github dari nama pengguna yang diberikan.\n⌨️ Contoh: .github phaticusthiccy",
+            "REPLY": "```Anda Perlu Memasukkan Nama Pengguna Apa Pun!```",
+            "NOT": "```Pengguna tidak ditemukan!```",
+            "FOLLOWERS": "Pengikut:",
+            "NAME": "Nama:",
+            "USERNAME": "Nama pengguna:",
+            "REPO": "Repos Publik:",
+            "BİO": "Biografi:",
+            "FOLLOWİNG": "Berikut:",
+            "COMPANY": "Perusahaan:",
+            "BLOG": "Blog:",
+            "MAİL": "Alamat email:",
+            "LOCATİON": "Lokasi:",
+            "GİST": "Gists Publik:",
+            "JOİN": "Tanggal Partisipasi:",
+            "HİRE_FALSE": "Tidak bisa disewa 🚫",
+            "HİRE_TRUE": "Dapat disewa ☑️",
+            "HİRE": "Apakah bisa disewa?:",
+            "URL": "Koneksi Profil:",
+            "UPDATE" "Pembaharuan Terakhir:"
         }
     }
 }

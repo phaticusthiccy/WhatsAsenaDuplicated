@@ -10,6 +10,8 @@ const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
+const axios = require('axios')
+
 //============================== CURRENCY =============================================
 const { exchangeRates } = require('exchange-rates-api');
 const ExchangeRatesError = require('exchange-rates-api/src/exchange-rates-error.js')
@@ -33,6 +35,7 @@ const spotifyApi = new SpotifyWebApi({
 //=====================================================================================
 const Language = require('../language');
 const Lang = Language.getString('scrapers');
+const Glang = Language.getString('github');
 
 const wiki = require('wikijs').default;
 var gis = require('g-i-s');
@@ -41,6 +44,12 @@ var gis = require('g-i-s');
 if (config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: true}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (!message.reply_message) {
             return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
         }
@@ -56,6 +65,12 @@ if (config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
             return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
         }
@@ -80,6 +95,12 @@ if (config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if(match[1] === undefined || match[1] == "")
             return;
     
@@ -105,6 +126,12 @@ if (config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
         arama = arama.all;
@@ -137,6 +164,12 @@ if (config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: true, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
         try {
@@ -157,6 +190,12 @@ if (config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'yt ?(.*)', fromMe: true, desc: Lang.YT_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
         var reply = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text);
 
@@ -176,6 +215,12 @@ if (config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: true, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
         var reply = await message.client.sendMessage(message.jid,Lang.SEARCHING,MessageType.text);
 
@@ -188,6 +233,12 @@ if (config.WORKTYPE == 'private') {
     }));
 
     Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
             for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
@@ -202,10 +253,67 @@ if (config.WORKTYPE == 'private') {
             message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
         });
     }));
+
+    Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC }, async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
+
+        const userName = match[1]
+ 
+        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
+
+        await axios
+          .get(`https://videfikri.com/api/github/?username=${userName}`)
+          .then(async (response) => {
+
+            const {
+              hireable,
+              company,
+              profile_pic,
+              username,
+              fullname, 
+              blog, 
+              location,
+              email,
+              public_repository,
+              biografi,
+              following,
+              followers,
+              public_gists,
+              profile_url,
+              last_updated,
+              joined_on,
+            } = response.data.result
+
+            const githubscrap = await axios.get(profile_pic, 
+              {responseType: 'arraybuffer',
+            })
+
+            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOWİNG}* ${following} \n*${Glang.BİO}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.GİST}* ${public_gists} \n*${Glang.LOCATİON}* ${location} \n*${Glang.MAİL}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.HİRE}* ${hireable === "true" ? Glang.HİRE_TRUE : Glang.HİRE_FALSE} \n*${Glang.JOİN}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
+
+            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
+              caption: msg,
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
+          )
+      },
+    )
 }
 else if (config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'trt(?: |$)(\\S*) ?(\\S*)', desc: Lang.TRANSLATE_DESC, usage: Lang.TRANSLATE_USAGE, fromMe: false}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (!message.reply_message) {
             return await message.client.sendMessage(message.jid,Lang.NEED_REPLY,MessageType.text);
         }
@@ -221,6 +329,12 @@ else if (config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: false}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
             return await message.client.sendMessage(message.jid,Lang.CURRENCY_ERROR,MessageType.text);
         }
@@ -245,6 +359,12 @@ else if (config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'tts (.*)', fromMe: false, desc: Lang.TTS_DESC}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if(match[1] === undefined || match[1] == "")
             return;
     
@@ -270,6 +390,12 @@ else if (config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'song ?(.*)', fromMe: false, desc: Lang.SONG_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
         let arama = await yts(match[1]);
         arama = arama.all;
@@ -302,6 +428,12 @@ else if (config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'video ?(.*)', fromMe: false, desc: Lang.VIDEO_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_VIDEO,MessageType.text);    
     
         try {
@@ -322,6 +454,12 @@ else if (config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'yt ?(.*)', fromMe: false, desc: Lang.YT_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
         var reply = await message.client.sendMessage(message.jid,Lang.GETTING_VIDEOS,MessageType.text);
 
@@ -341,6 +479,12 @@ else if (config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'wiki ?(.*)', fromMe: false, desc: Lang.WIKI_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);    
         var reply = await message.client.sendMessage(message.jid,Lang.SEARCHING,MessageType.text);
 
@@ -353,6 +497,12 @@ else if (config.WORKTYPE == 'public') {
     }));
 
     Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
         gis(match[1], async (error, result) => {
             for (var i = 0; i < (result.length < 5 ? result.length : 5); i++) {
@@ -367,4 +517,55 @@ else if (config.WORKTYPE == 'public') {
             message.reply(Lang.IMG.format((result.length < 5 ? result.length : 5), match[1]));
         });
     }));
+
+    Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC }, async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
+
+        const userName = match[1]
+ 
+        if (userName === '') return await message.client.sendMessage(message.jid, Glang.REPLY, MessageType.text)
+
+        await axios
+          .get(`https://videfikri.com/api/github/?username=${userName}`)
+          .then(async (response) => {
+
+            const {
+              hireable,
+              company,
+              profile_pic,
+              username,
+              fullname, 
+              blog, 
+              location,
+              email,
+              public_repository,
+              biografi,
+              following,
+              followers,
+              public_gists,
+              profile_url,
+              last_updated,
+              joined_on,
+            } = response.data.result
+
+            const githubscrap = await axios.get(profile_pic, 
+              {responseType: 'arraybuffer',
+            })
+
+            const msg = `*${Glang.USERNAME}* ${username} \n*${Glang.NAME}* ${fullname} \n*${Glang.FOLLOWERS}* ${followers} \n*${Glang.FOLLOWİNG}* ${following} \n*${Glang.BİO}* ${biografi} \n*${Glang.REPO}* ${public_repository} \n*${Glang.GİST}* ${public_gists} \n*${Glang.LOCATİON}* ${location} \n*${Glang.MAİL}* ${email} \n*${Glang.BLOG}* ${blog} \n*${Glang.COMPANY}* ${company} \n*${Glang.HİRE}* ${hireable === "true" ? Glang.HİRE_TRUE : Glang.HİRE_FALSE} \n*${Glang.JOİN}* ${joined_on} \n*${Glang.UPDATE}* ${last_updated} \n*${Glang.URL}* ${profile_url}`
+
+            await message.sendMessage(Buffer.from(githubscrap.data), MessageType.image, { 
+              caption: msg,
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Glang.NOT, MessageType.text),
+          )
+      },
+    )
 }
