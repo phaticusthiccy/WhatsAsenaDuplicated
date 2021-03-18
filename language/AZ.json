@@ -406,6 +406,28 @@
             "PUBLIC": "Hər kəs üçün açıqdır",
             "HIDDEN": "Gizli",
             "NOT_FOUND": "İstifadəçi tapılmadı: "
+        },
+        "github": {
+            "GİTHUB_DESC": "Verilən istifadəçi adından github məlumatlarını toplayır.\n⌨️ Nümunə: .github phaticusthiccy",
+            "REPLY": "```Hər hansı bir istifadəçi adı daxil etməlisiniz!```",
+            "NOT": "```İstifadəçi Tapılmadı!```",
+            "FOLLOWERS": "İzləyicilər:",
+            "NAME": "Ad:",
+            "USERNAME": "İstifadəçi adı:",
+            "REPO": "Açık Repolar:",
+            "BİO": "Tərcümeyi-hal:",
+            "FOLLOWİNG": "İzləyirəm:",
+            "COMPANY": "Şirkət:",
+            "BLOG": "Blog:",
+            "MAİL": "Poçt ünvanı:",
+            "LOCATİON": "Yer:",
+            "GİST": "Açık Gistler:",
+            "JOİN": "İştirak tarixi:",
+            "HİRE_FALSE": "Kirayə verilə bilməz 🚫",
+            "HİRE_TRUE": "Kirayə verilir ☑️",
+            "HİRE": "Kirayə ola bilərmi??:",
+            "URL": "Profil əlaqəsi:",
+            "UPDATE" "Son yeniləmə:"
         }
     }
 }
