@@ -408,6 +408,28 @@
             "PUBLIC": "Abierto a todos",
             "HIDDEN": "Oculto",
             "NOT_FOUND": "Usuario no encontrado: "
+        },
+        "github": {
+            "GİTHUB_DESC": "Recopila información de github del nombre de usuario dado.\n⌨️ Muestra: .github phaticusthiccy",
+            "REPLY": "```Necesita ingresar cualquier nombre de usuario!```",
+            "NOT": "```Usuario no encontrado!```",
+            "FOLLOWERS": "Seguidores:",
+            "NAME": "Nombre:",
+            "USERNAME": "Nombre de usuario:",
+            "REPO": "Reposiciones públicas:",
+            "BİO": "Biografía:",
+            "FOLLOWİNG": "Siguiente:",
+            "COMPANY": "Compañía:",
+            "BLOG": "Blog:",
+            "MAİL": "Correo Electronico:",
+            "LOCATİON": "Localización:",
+            "GİST": "Gistler público:",
+            "JOİN": "Fecha de participación:",
+            "HİRE_FALSE": "No se puede alquilar 🚫",
+            "HİRE_TRUE": "Arrendable ☑️",
+            "HİRE": "Se puede alquilar?:",
+            "URL": "Conexión de perfil:",
+            "UPDATE" "Última actualización:"
         }
     }
 }
