@@ -16,6 +16,12 @@ const Lang = Language.getString('_asena');
 if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'asena ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         var CMD_HELP = '';
         if (match[1] === '') {
             Asena.commands.map(
@@ -46,6 +52,12 @@ if (Config.WORKTYPE == 'private') {
                 message.jid,'●▬▬▬ *WhatsAsena Private* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
             );    
         } else {
+
+            if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
+
             var CMD_HELP = '';
             Asena.commands.map(
                 async (command) =>  {
@@ -82,6 +94,12 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'asena ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         var CMD_HELP = '';
         if (match[1] === '') {
             Asena.commands.map(
@@ -112,6 +130,12 @@ else if (Config.WORKTYPE == 'public') {
                 message.jid,'●▬▬▬ *WhatsAsena Public* ▬▬▬●\n\n' + CMD_HELP, MessageType.text
             );    
         } else {
+
+            if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
+
             var CMD_HELP = '';
             Asena.commands.map(
                 async (command) =>  {
