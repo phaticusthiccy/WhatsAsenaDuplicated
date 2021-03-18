@@ -408,6 +408,28 @@
             "PUBLIC": "Public",
             "HIDDEN": "Hidden",
             "NOT_FOUND":"User not found: "
+        },
+        "github": {
+            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github phaticusthiccy",
+            "REPLY": "```You Need To Type Any Username!```",
+            "NOT": "```User not found!```",
+            "FOLLOWERS": "Followers:",
+            "NAME": "Name:",
+            "USERNAME": "Username:",
+            "REPO": "Public Repos:",
+            "BİO": "Biography:",
+            "FOLLOWİNG": "Following:",
+            "COMPANY": "Company:",
+            "BLOG": "Blog:",
+            "MAİL": "Mail Address:",
+            "LOCATİON": "Location:",
+            "GİST": "Public Gists:",
+            "JOİN": "Joining Date:",
+            "HİRE_FALSE": "Cannot Hirable 🚫",
+            "HİRE_TRUE": "Hirable ☑️",
+            "HİRE": "Can s/he Hirable?:",
+            "URL": "Profile URL:",
+            "UPDATE" "Last Update:"
         }
     }
 }
