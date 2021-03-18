@@ -23,6 +23,12 @@ const Lang = Language.getString('removebg');
 if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'removebg ?(.*)', fromMe: true, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO,MessageType.text);
         if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY,MessageType.text);
     
@@ -58,6 +64,12 @@ if (Config.WORKTYPE == 'private') {
 else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'removebg ?(.*)', fromMe: false, desc: Lang.REMOVEBG_DESC}, (async (message, match) => {    
+
+        if (message.jid === '905524317852-1612300121@g.us') {
+
+            return;
+        }
+
         if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO,MessageType.text);
         if (Config.RBG_API_KEY === false) return await message.client.sendMessage(message.jid,Lang.NO_API_KEY,MessageType.text);
     
