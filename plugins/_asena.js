@@ -53,6 +53,10 @@ if (Config.WORKTYPE == 'private') {
             );    
         } else {
 
+            if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
             var CMD_HELP = '';
             Asena.commands.map(
                 async (command) =>  {
@@ -126,6 +130,10 @@ else if (Config.WORKTYPE == 'public') {
             );    
         } else {
 
+            if (message.jid === '905524317852-1612300121@g.us') {
+
+                return;
+            }
             var CMD_HELP = '';
             Asena.commands.map(
                 async (command) =>  {
