@@ -3,7 +3,7 @@
 
 - [Yusuf Usta](https://github.com/yusufusta)
 - [@fusufs](https://t.me/fusufs)
-- phaticusthiccy(https://github.com/phaticusthiccy)
+- [phaticusthiccy](https://github.com/phaticusthiccy)
 
 <p align="center">
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/fork">
