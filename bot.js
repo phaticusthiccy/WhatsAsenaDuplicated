@@ -329,18 +329,18 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
             }
         }
-        else if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
+        else if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye' || config.WORKTYPE == ' prigate' || config.WORKTYPE == 'prigate' || config.WORKTYPE == 'priavte' || config.WORKTYPE == ' priavte' || config.WORKTYPE == 'PRİVATE' || config.WORKTYPE == ' PRİVATE' || config.WORKTYPE == 'PRIVATE' || config.WORKTYPE == ' PRIVATE') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
+                    '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef_ *WORK_TYPE* _Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        [WORK_TYPE]: private
+                        ['WORK_TYPE']: 'private'
                     }
                 })
             }
@@ -348,28 +348,28 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
+                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
                 );
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        [WORK_TYPE]: private
+                        ['WORK_TYPE']: 'private'
                     }
                 })
             }
         }
-        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc') {
+        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc' || config.WORKTYPE == 'pubcli' || config.WORKTYPE == ' pubcli' || config.WORKTYPE == 'PUBLİC' || config.WORKTYPE == ' PUBLİC' || config.WORKTYPE == 'PUBLIC' || config.WORKTYPE == ' PUBLIC' || config.WORKTYPE == 'puvlic' || config.WORKTYPE == ' puvlic' || config.WORKTYPE == 'Puvlic' || config.WORKTYPE == ' Puvlic') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
+                    '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef_ *WORK_TYPE* _Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        [WORK_TYPE]: public
+                        ['WORK_TYPE']: 'public'
                     }
                 })
             }
@@ -377,12 +377,12 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 await conn.sendMessage(
                     conn.user.jid,
-                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
+                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
                 );
 
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
-                        [WORK_TYPE]: public
+                        ['WORK_TYPE']: 'public'
                     }
                 })
             }
@@ -393,14 +393,14 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
 
                 return await conn.sendMessage(
                     conn.user.jid,
-                    '_Girdiğin WORK_TYPE Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar WORK_TYPE:private``` _Yada_ ```.setvar WORK_TYPE:public``` _Komutunu Kullanın!_', MessageType.text
+                    '_Girdiğin_ *WORK_TYPE* _Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar WORK_TYPE:private``` _Yada_ ```.setvar WORK_TYPE:public``` _Komutunu Kullanın!_', MessageType.text
                 );
             }
             else {
 
                 return await conn.sendMessage(
                     conn.user.jid,
-                    '_The WORK_TYPE Key You Entered Was Not Found!_ \n_Please Type_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
+                    '_The_ *WORK_TYPE* _Key You Entered Was Not Found!_ \n_Please Type_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
                 );
             }
         }
