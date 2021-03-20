@@ -118,7 +118,7 @@ the user is responsible.
 ### From windows powershell
 ```Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://gitlab.com/Quiec/whatsasena/-/raw/master/windows.ps1')```
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phaticusthiccy/WhatsAsenaDuplicated)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/br-ut/WhatsAsenaDuplicated)
 
 ### The Hard Method
 ```js
