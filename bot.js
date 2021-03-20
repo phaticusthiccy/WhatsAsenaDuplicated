@@ -329,7 +329,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
             }
         }
-        else if (config.WORKTYPE == ' private' || 'Private' || ' Private' || 'privaye' || ' privaye') {
+        else if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
@@ -358,7 +358,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
         }
-        else if (config.WORKTYPE == ' public' || 'Public' || ' Public' || 'publoc' || ' publoc') {
+        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc') {
 
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
