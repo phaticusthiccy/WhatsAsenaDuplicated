@@ -329,8 +329,80 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
             }
         }
+        else if (config.WORKTYPE == ' private' || 'Private' || ' Private' || 'privaye' || ' privaye') {
+
+            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
+                );
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [WORK_TYPE]: private
+                    }
+                })
+            }
+            else {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
+                );
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [WORK_TYPE]: private
+                    }
+                })
+            }
+        }
+        else if (config.WORKTYPE == ' public' || 'Public' || ' Public' || 'publoc' || ' publoc') {
+
+            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef WORK_TYPE Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
+                );
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [WORK_TYPE]: public
+                    }
+                })
+            }
+            else {
+
+                await conn.sendMessage(
+                    conn.user.jid,
+                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your WORK_TYPE Key Is Incorrect!_ \n_Dont Worry! I'm Trying To Find The Right One For You.._', MessageType.text
+                );
+
+                await heroku.patch(baseURI + '/config-vars', {
+                    body: {
+                        [WORK_TYPE]: public
+                    }
+                })
+            }
+        }
         else {
-            return console.log('Wrong WORK_TYPE key! Please use “private” or “public”')
+
+            if (config.LANG == 'TR' || config.LANG == 'AZ') {
+
+                return await conn.sendMessage(
+                    conn.user.jid,
+                    '_Girdiğin WORK_TYPE Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar WORK_TYPE:private``` _Yada_ ```.setvar WORK_TYPE:public``` _Komutunu Kullanın!_', MessageType.text
+                );
+            }
+            else {
+
+                return await conn.sendMessage(
+                    conn.user.jid,
+                    '_The WORK_TYPE Key You Entered Was Not Found!_ \n_Please Type_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
+                );
+            }
         }
     });
 
