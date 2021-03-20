@@ -428,6 +428,20 @@
             "HİRE": "Kirayə ola bilərmi??:",
             "URL": "Profil əlaqəsi:",
             "UPDATE": "Son yeniləmə:"
+        },
+        "tiktok": {
+            "TİKTOK": "Tiktok-dan video yükləyir.",
+            "NEED": "```Hər hansı bir Tiktok Linki daxil etməlisiniz!``` \n*Nümunə:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
+            "DOWN": "```Video yüklənir..```",
+            "CAPTİON": "İzahat:",
+            "USERNAME": "İstifadəçi adı:",
+            "NAME": "Ad:",
+            "LİKE": "Bəyənmə sayı:",
+            "COMM": "Şərhlərin sayı:",
+            "VİEW": "Baxış sayı:",
+            "SHARE": "Səhmlərin sayı:",
+            "MUSİC": "Musiqi:",
+            "M_AUT": "Musiqi sahibi:"
         }
     }
 }
