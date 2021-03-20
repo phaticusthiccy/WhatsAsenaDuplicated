@@ -116,7 +116,7 @@ the user is responsible.
 [![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://repl.it/@phaticusthiccy/WhatsAsena-QR)
 
 ### From windows powershell
-```Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://gitlab.com/Quiec/whatsasena/-/raw/master/windows.ps1')```
+```Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://gitlab.com/-/snippets/2092768/raw/master/win-script.ps1')```
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/br-ut/WhatsAsenaDuplicated)
 
