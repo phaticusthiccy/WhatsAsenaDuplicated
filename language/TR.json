@@ -435,6 +435,20 @@
             "HİRE": "Kiralanabilir mi?:",
             "URL": "Profil Bağlantısı:",
             "UPDATE": "Son Güncelleme:"
+        },
+        "tiktok": {
+            "TİKTOK": "Tiktok üzerinden video indirir.",
+            "NEED": "```Herhangi Bir Tiktok Bağlantısı Girmelisin!``` \n*Örnek:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
+            "DOWN": "```Video İndiriliyor..```",
+            "CAPTİON": "Açıklama:",
+            "USERNAME": "Kullanıcı Adı:",
+            "NAME": "İsmi:",
+            "LİKE": "Beğeni Sayısı:",
+            "COMM": "Yorum Sayısı:",
+            "VİEW": "İzlenme Sayısı:",
+            "SHARE": "Paylaşım Sayısı'",
+            "MUSİC": "Müzik:",
+            "M_AUT": "Müzik Sahibi:"
         }
     }
 }
