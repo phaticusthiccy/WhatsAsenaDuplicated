@@ -430,6 +430,20 @@
             "HİRE": "Can s/he Hirable?:",
             "URL": "Profile URL:",
             "UPDATE": "Last Update:"
+        },
+        "tiktok": {
+            "TİKTOK": "Downloads videos from Tiktok.",
+            "NEED": "```You Must Enter Any Tiktok Link!``` \n*Example:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
+            "DOWN": "```Video Downloading..```",
+            "CAPTİON": "Title:",
+            "USERNAME": "Username:",
+            "NAME": "Name:",
+            "LİKE": "Likes:",
+            "COMM": "Comments:",
+            "VİEW": "Views:",
+            "SHARE": "Shares:",
+            "MUSİC": "Music:",
+            "M_AUT": "Music Author:"
         }
     }
 }
