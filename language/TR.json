@@ -443,6 +443,14 @@
             "SHARE": "Paylaşım Sayısı:",
             "MUSİC": "Müzik:",
             "M_AUT": "Müzik Sahibi:"
+        },
+        "lyrics": {
+            "LY_DESC": "Şarkı sözlerini bulur",
+            "NEED": "```Herhangi Bir Şarkı Yazmalısın!```",
+            "SLY": "Şarkı Sözleri:",
+            "AUT": "Şarkı Sahibi:",
+            "BUL": "Bulunan Şarkı:",
+            "ARAT": "Aratılan Şarkı:"
         }
     }
 }
