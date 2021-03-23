@@ -828,9 +828,9 @@ if (Config.WORKTYPE == 'private') {
             return;
         }
 
-        if (message.reply_message === false && match[1] === '') return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
-        if (match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
-        if (match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
+        if (message.reply_message.video === false) return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
+        if (message.reply_message.video === true && match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
+        if (message.reply_message.video === true && match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
    
         var downloading = await message.client.sendMessage(message.jid,'```Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -1099,7 +1099,7 @@ if (Config.WORKTYPE == 'private') {
             return;
         }
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
+        if (message.reply_message.video === false) return await message.sendMessage('*Need Video!*');
         var downloading = await message.client.sendMessage(message.jid,'```Motion Render Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -1937,9 +1937,9 @@ else if (Config.WORKTYPE == 'public') {
             return;
         }
 
-        if (message.reply_message === false && match[1] === '') return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
-        if (match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
-        if (match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
+        if (message.reply_message.video === false) return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
+        if (message.reply_message.video === true && match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
+        if (message.reply_message.video === true && match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
    
         var downloading = await message.client.sendMessage(message.jid,'```Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -2166,7 +2166,7 @@ else if (Config.WORKTYPE == 'public') {
         });
 
         ffmpeg(location)
-            .outputOptions(["-y", "-vf", "colorbalance=rs=-0.75:gs=-0.75:bs=-0.75:rm=-0.875:gm=-0.875:bm=-0.875:rh=-1:gh=-1:bh=-1,format=yuv420p"])
+            .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.1, format=yuv420p"])
             .format('mp4')
             .save('output.mp4')
             .on('end', async () => {
@@ -2193,7 +2193,7 @@ else if (Config.WORKTYPE == 'public') {
         });
 
         ffmpeg(location)
-            .outputOptions(["-y", "-vf", "colorbalance=rs=-0.75:gs=-0.75:bs=-0.75:rm=-0.875:gm=-0.875:bm=-0.875:rh=-1:gh=-1:bh=-1"])
+            .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.1"])
             .save('output.jpg')
             .on('end', async () => {
                 await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
@@ -2208,7 +2208,7 @@ else if (Config.WORKTYPE == 'public') {
             return;
         }
   
-        if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
+        if (message.reply_message.video === false) return await message.sendMessage('*Need Video!*');
         var downloading = await message.client.sendMessage(message.jid,'```Motion Render Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
