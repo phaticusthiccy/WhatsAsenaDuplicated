@@ -438,6 +438,14 @@
             "SHARE": "Jumlah dibagikan:",
             "MUSİC": "Musik:",
             "M_AUT": "Pemilik Musik:"
+        },
+        "lyrics": {
+            "LY_DESC": "Menemukan lirik lagu.",
+            "NEED": "```Anda Harus Menulis Lagu Apa Saja!```",
+            "SLY": "Lirik:",
+            "AUT": "Pemilik Lagu:",
+            "BUL": "Menemukan Lagu:",
+            "ARAT": "Lagu yang dicari:"
         }
     }
 }
