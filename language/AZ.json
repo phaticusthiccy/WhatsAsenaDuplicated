@@ -436,6 +436,14 @@
             "SHARE": "Səhmlərin sayı:",
             "MUSİC": "Musiqi:",
             "M_AUT": "Musiqi sahibi:"
+        },
+        "lyrics": {
+            "LY_DESC": "Mahnının sözlərini tapır.",
+            "NEED": "```Hər hansı bir mahnı yazmalısan!```",
+            "SLY": "Mahnılar:",
+            "AUT": "Mahnı sahibi:",
+            "BUL": "Mahnı tapıldı:",
+            "ARAT": "Mahnı axtardı:"
         }
     }
 }
