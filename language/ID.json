@@ -362,7 +362,8 @@
             "ANIME_DESC": "Dia menulis teks di dalam spanduk yang dipegang oleh gadis anime itu.",
             "TRUMP_DESC": "Mengubah teks menjadi tweet Trump.",
             "CHANGE_DESC": "Mengubah artikel menjadi poster change my mind.",
-            "ATTP_DESC": "Mengubah teks menjadi stiker berwarna"
+            "ATTP_DESC": "Mengubah teks menjadi stiker berwarna",
+            "GLOW_DESC": "Mengubah teks menjadi lukisan neon."
         },
         "wallpaper": {
             "WP": "Mengirimkan wallpaper resolusi tinggi yang berbeda."
