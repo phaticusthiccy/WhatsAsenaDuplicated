@@ -361,7 +361,8 @@
             "NEED_WORD": "*Kelime Girmelisin!*",
             "ANIME_DESC": "Yazıyı anime kızının tuttuğu pankartın içine yazar.",
             "TRUMP_DESC": "Yazıyı trump’ın tweetine çevirir.",
-            "CHANGE_DESC": "Yazıyı change my mind posterine çevirir."
+            "CHANGE_DESC": "Yazıyı change my mind posterine çevirir.",
+            "GLOW_DESC": "Yazıyı neon resme dönüştürür."
         },
         "wallpaper": {
             "WP": "Birbirinden farklı, yüksek çözünürlüklü duvar kağıdı gönderir."
