@@ -21,7 +21,7 @@
   },
   "homepage": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme",
   "dependencies": {
-    "@adiwajshing/baileys": "^3.4.1",
+    "@adiwajshing/baileys": "3.4.1",
     "@lh2020/speedtest-net": "^2.1.1",
     "browser-id3-writer": "^4.4.0",
     "chalk": "^4.1.0",
