@@ -200,6 +200,33 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             });
         }
     }
+    if (match[1] == 'BLOCK_CHAT: false' || match[1] == 'BLOCK_CHAT: False' || match[1] == 'BLOCK_CHAT: FALSE' || match[1] == 'BLOCK_CHAT:False' || match[1] == 'BLOCK_CHAT:FALSE' || match[1] == 'BLOCK_CHAT:fakse' || match[1] == 'BLOCK_CHAT: fakse' || match[1] == 'BLOCK_CHAT:falde' || match[1] == 'BLOCK_CHAT: falde' || match[1] == 'BLOCK_CHAT:flase' || match[1] == 'BLOCK_CHAT:Flase' || match[1] == 'BLOCK_CHAT: flase') {
+
+        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+            await message.client.sendMessage(
+                message.jid,
+                '_Görünüşe göre_ *BLOCK_CHAT* _anahtarını_ *false* _yapmaya çalışıyorsun._\n_Merak etme, senin için doğrusunu ayarlayabilirim._',
+                MessageType.text
+            );
+            return await heroku.patch(baseURI + '/config-vars', {
+                body: {
+                    ['BLOCK_CHAT']: 'false'
+                }
+            });
+        }
+        else {
+            await message.client.sendMessage(
+                message.jid,
+                '_It looks like you are trying to make the_ *BLOCK_CHAT* _var switch_ *false.*\n_Dont worry, I will set it for you._',
+                MessageType.text
+            );
+            return await heroku.patch(baseURI + '/config-vars', {
+                body: {
+                    ['BLOCK_CHAT']: 'false'
+                }
+            });
+        }
+    }
     if (match[1] == 'DEBUG: true' || match[1] == 'DEBUG: True' || match[1] == 'DEBUG: TRUE' || match[1] == 'DEBUG:True' || match[1] == 'DEBUG:TRUE' || match[1] == 'DEBUG:ture' || match[1] == 'DEBUG: ture' || match[1] == 'DEBUG:ttue' || match[1] == 'DEBUG:trie' || match[1] == 'DEBUG: trie' || match[1] == 'DEBUG:Trie' || match[1] == 'DEBUG: Trie') {
 
         if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
