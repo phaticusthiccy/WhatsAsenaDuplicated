@@ -38,7 +38,7 @@
             "DEMOTE_DESC": "Hər hansısa bir adamdan adminlik hüququnu alar.",
             "ALREADY_NOT_ADMIN": "```Admin olmayan birindən, adminliyini necə alım? ```",
             "DEMOTED": "```, adminlik hüququ alındı! ```",
-            "MUTE_DESC": "Grup söhbətini bağlıyar. Təkcə adminlər mesaj göndərə bilər.",
+            "MUTE_DESC": "Grup söhbətini bağlıyar. Təkcə adminlər mesaj göndərə bilər.\n⌨️ Nümunə: .mute & .mute 5m vs",
             "MUTED": "```Grup söhbəti bağlandı! ```",
             "UNMUTE_DESC": "Grup söhbətini açar. Hərkəs mesaj göndərə bilər.",
             "UNMUTED": "```Grup söhbəti açıldı!```",
