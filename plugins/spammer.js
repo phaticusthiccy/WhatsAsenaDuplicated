@@ -1,11 +1,9 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
-*/
-
 const Asena = require('../events');
-const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
-const Heroku = require('heroku-client');
+const {MessageType, Mimetype} = require('@adiwajshing/baileys');
+const fs = require('fs');
+const ffmpeg = require('fluent-ffmpeg');
+const {execFile} = require('child_process');
+const cwebp = require('cwebp-bin');
 const Config = require('../config');
 
 const Language = require('../language');
@@ -19,2550 +17,6 @@ const heroku = new Heroku({
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 
-Asena.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
-
-    if (message.jid === '905524317852-1612300121@g.us') {
-
-        return;
-    }
-
-
-    if (match[1] === '') {
-
-        return await message.client.sendMessage(message.jid, Lang.NEED_WORD);
-
-    }
-
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-    
-    await message.client.sendMessage(message.jid, `${match[1].replace(/#/g, '\n')}`, MessageType.text);
-
-}));
-
 Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid, Lang.STOP_SPAM, MessageType.text);
@@ -2572,4 +26,2545 @@ Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, 
         await message.client.sendMessage(message.jid, error.message, MessageType.text);
 
     });
+}));
+
+Asena.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
+
+
+    if (match[1] === '') {
+
+        return await message.client.sendMessage(message.jid, Lang.NEED_WORD);
+
+    }
+
+    var spam = `${match[1]}`
+    var fin = spam.replace(/#/g, "\n");
+
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    
+    await message.client.sendMessage(message.jid, fin, MessageType.text);
 }));
