@@ -38,7 +38,7 @@
             "DEMOTE_DESC": "Mengambil otoritas admin mana pun.",
             "ALREADY_NOT_ADMIN": "```Bagaimana cara menjadikan seseorang admin yang sudah menjadi admin?```",
             "DEMOTED": "```, telah diturunkan pangkatnya!```",
-            "MUTE_DESC": "Bisukan obrolan grup. Hanya admin yang bisa mengirim pesan.",
+            "MUTE_DESC": "Bisukan obrolan grup. Hanya admin yang bisa mengirim pesan.\n⌨️ Contoh: .mute & .mute 5m etc",
             "MUTED": "```Obrolan grup dibisukan!```",
             "UNMUTE_DESC": "Suarakan obrolan grup. Siapapun bisa mengirim pesan.",
             "UNMUTED": "```Obrolan grup telah disuarakan!```",
