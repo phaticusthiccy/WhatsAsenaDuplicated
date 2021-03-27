@@ -38,7 +38,7 @@
             "DEMOTE_DESC": "Reduce la autoridad de cualquier persona.",
             "ALREADY_NOT_ADMIN": "```¿Cómo puedo desautorizar a alguien que aún no es administrador?```",
             "DEMOTED": "```Se ha reducido la potencia!```",
-            "MUTE_DESC": "Chat del grupo cerrado. Ahora sólo los administradores pueden publicar mensajes.",
+            "MUTE_DESC": "Chat del grupo cerrado. Ahora sólo los administradores pueden publicar mensajes.\n⌨️ Ejemplo: .mute & .mute 5m etc",
             "MUTED": "```¡El chat está cerrado!```",
             "UNMUTE_DESC": "El chat del grupo está abierto. Ahora cualquiera puede enviar un mensaje.",
             "UNMUTED": "¡Se abrió el chat del grupo!",
