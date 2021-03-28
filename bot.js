@@ -626,7 +626,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                 }
                                 else {
                                     return await conn.sendMessage(conn.user.jid, '*🙇🏻 Maalesef Bu Hatayı Okuyamadım! 🙇🏻*' +
-                                        '\n_Daha fazla yardım için grubumuza yazabilirsiniz._
+                                        '\n_Daha fazla yardım için grubumuza yazabilirsiniz._'
                                         , MessageType.text
                                     );
                                 }
@@ -753,6 +753,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         )
     });
+    // ==================== End Error Message ====================
 
     try {
         await conn.connect();
