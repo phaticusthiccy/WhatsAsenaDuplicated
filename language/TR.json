@@ -123,7 +123,7 @@
             "RMLYDIA_DESC": "Lydia botunu kullanıcı için devre dışı yapar.",
             "ALREADY_EMPTY": "```Zaten kullanıcı listeniz boş!```",
             "NOT_ADDED": "```Zaten bu kullanıcıyı eklememişsiniz!```",
-            "DISABLED": "```Lydia bu kullanıcı için devredışı bırakıldı!``"
+            "DISABLED": "```Lydia bu kullanıcı için devredışı bırakıldı!```"
         },
         "memes": {
             "MEMES_DESC": "Yanıt verdiğiniz fotoğrafa yazdığınız yazıyı ekler.\n⌨️ Örnek: .meme TEST;YAPIYOR",
@@ -338,7 +338,16 @@
             "SPAM_DESC": "Siz durdurana kadar spam yapar.\n⌨️ Örnek: .spam test",
             "NEED_WORD": "*Kelime Girmelisin!*",
             "STOP_SPAMDESC": "Spam komutunu durdurur.",
-            "STOP_SPAM": "✅ *Spam Başarıyla Durduruldu! Lütfen biraz bekleyin.*"
+            "STOP_SPAM": "✅ *Spam Başarıyla Durduruldu! Lütfen biraz bekleyin.*",
+            "ST_DESC": "Yanıtlanan fotoğrafı veya videoyu stickera dönüştürüp spam olarak gönderir.",
+            "ST_ST": "```Lütfen Stcikere Yanıt Vermeyin!```\n```Sadece Video yada Fotoğrafa Yanıt Verin!```",
+            "ST_NEED": "```Herhangi Bir Videoya veya Fotoğrafa Yanıt Vermelisin!```",
+            "AU_DESC": "Yanıtlanan sesi spam olarak gönderir.",
+            "AU_REP": "```Lütfen Sadece Ses Dosyasına Yanıt Verin!```",
+            "FOTO_DESC": "Yanıtlanan fotoğrafı spam olarak gönderir.",
+            "FOTO_FOT": "```Lütfen Herhangi Bir Resme Yanıt Verin!```",
+            "VİD_DESC": "Yanıtlanan videoyu spam olarak gönderir.",
+            "VİD_NEED": "```Herhangi Bir Videoya Yanıt Verin!```"
         },
         "carbon": {
             "CARBON_DESC": "Yazdığınız metni carbon.sh ile fotoğrafa çevirir.",
