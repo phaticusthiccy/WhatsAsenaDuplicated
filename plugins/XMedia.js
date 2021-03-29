@@ -24,7 +24,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'x4mp4', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
+        if (!message.reply_message.video) return await message.sendMessage('*Need Video!*');
         var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -46,7 +46,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'x2mp4', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Video!*');
+        if (!message.reply_message.video) return await message.sendMessage('*Need Video!*');
         var downloading = await message.client.sendMessage(message.jid,'```Editing..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -68,7 +68,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'mp4image', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Photo!*');
+        if (!message.reply_message.image) return await message.sendMessage('*Need Photo!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -92,7 +92,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'spectrum', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
+        if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -113,7 +113,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'waves', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
+        if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -134,7 +134,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'frequency', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
+        if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
             var location = await message.client.downloadAndSaveMediaMessage({
                 key: {
@@ -155,7 +155,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'avec', fromMe: true, dontAddCommandList: true}, (async (message, match) => {   
  
-        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
+        if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -176,7 +176,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'volumeaudio', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
+        if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -197,7 +197,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'cqtaudio', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message === false) return await message.sendMessage('*Need Audio!*');
+        if (!message.reply_message) return await message.sendMessage('*Need Audio!*');
         var downloading = await message.client.sendMessage(message.jid,'```Converting..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -668,9 +668,9 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'interp ?(.*)', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message.video === false) return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
-        if (message.reply_message.video === true && match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
-        if (message.reply_message.video === true && match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
+        if (!message.reply_message.video) return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
+        if (message.reply_message.video && match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
+        if (message.reply_message.video && match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
    
         var downloading = await message.client.sendMessage(message.jid,'```Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -889,7 +889,7 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'mp4slowmo', fromMe: true, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message.video === false) return await message.sendMessage('*Need Video!*');
+        if (!message.reply_message.video) return await message.sendMessage('*Need Video!*');
         var downloading = await message.client.sendMessage(message.jid,'```Motion Render Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
             key: {
@@ -1567,9 +1567,9 @@ else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'interp ?(.*)', fromMe: false, dontAddCommandList: true}, (async (message, match) => {    
 
-        if (message.reply_message.video === false) return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
-        if (message.reply_message.video === true && match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
-        if (message.reply_message.video === true && match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
+        if (!message.reply_message.video) return await message.sendMessage('*Need Video and FPS Value!*\nEx: ```.interp 100```');
+        if (message.reply_message.video && match[1] <= 10) return await message.sendMessage('*Low FPS Value ⚠️*\n*Please, type over 10*');
+        if (message.reply_message.video && match[1] >= 500) return await message.sendMessage('*High FPS Value ⚠️*\n*Please, type under 500*')
    
         var downloading = await message.client.sendMessage(message.jid,'```Interpolating..```',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
