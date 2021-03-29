@@ -339,7 +339,16 @@
             "SPAM_DESC": "Es spam hasta que lo detengas.\n⌨️ Ejemplo: .spam test",
             "NEED_WORD": "*Tienes que escribir palabras!*",
             "STOP_SPAMDESC": "Detiene el comando de spam.",
-            "STOP_SPAM": "✅ *El spam se detuvo correctamente! Por favor, espere un momento.*"
+            "STOP_SPAM": "✅ *El spam se detuvo correctamente! Por favor, espere un momento.*",
+            "ST_DESC": "Convierta la foto o el video respondido para pegarlo y envíelo como spam.",
+            "ST_ST": "```¡No responda a Stciker!```\n```Solo responder a video o foto!```",
+            "ST_NEED": "```Debes responder a cualquier video o foto!```",
+            "AU_DESC": "Envía la voz contestada como spam q.",
+            "AU_REP": "```Responda solo al archivo de audio!```",
+            "FOTO_DESC": "Envía la foto respondida como spam.",
+            "FOTO_FOT": "```Responda a cualquier imagen!```",
+            "VİD_DESC": "Envía el video respondido como spam.",
+            "VİD_NEED": "```Responde a cualquier video!```"
         },
         "carbon": {
             "CARBON_DESC": "Convierte texto en imagen con carbon.sh.",
