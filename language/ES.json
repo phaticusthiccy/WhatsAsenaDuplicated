@@ -61,7 +61,7 @@
             "HOUR": "Hora",
             "MINUTE": "Minuto",
             "SECOND": "Segundo",
-            "AGO": " Ago```"
+            "AGO": " Atrás```"
         },
         "evaluators": {
             "TERM_DESC": "Le permite ejecutar comandos en el shell del servidor.",
