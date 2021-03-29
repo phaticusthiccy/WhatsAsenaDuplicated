@@ -339,7 +339,16 @@
             "SPAM_DESC": "It spam until you stop it.\n⌨️ Example: .spam test",
             "NEED_WORD": "*Need Some Words!*",
             "STOP_SPAMDESC": "Stops spam command.",
-            "STOP_SPAM": "✅ *Spam successfully stopped! Please wait a moment.*"
+            "STOP_SPAM": "✅ *Spam successfully stopped! Please wait a moment.*",
+            "ST_DESC": "Convert the replied photo or video to sticker and send it as spam.",
+            "ST_ST": "```Please Don't Reply to Stciker!```\n```Only Reply to Video or Photo!```",
+            "ST_NEED": "```You Must Reply To Any Video Or Photo!```",
+            "AU_DESC": "Sends the replied audio as spam.",
+            "AU_REP": "```Please Only Reply To Audio File!```",
+            "FOTO_DESC": "Sends the replied photo as spam.",
+            "FOTO_FOT": "```Please Reply To Any Picture!```",
+            "VİD_DESC": "Sends the replied video as spam.",
+            "VİD_NEED": "```Please Reply to Any Video!```"
         },
         "carbon": {
             "CARBON_DESC": "Uses carbon.sh for Text-to-Image",
