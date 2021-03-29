@@ -60,7 +60,8 @@
             "AFK_TEXT_NOMD": "Bip bop! Ini adalah bot. Pemilik saya tidak ada di sini saat ini.",
             "HOUR": "jam",
             "MINUTE": "menit",
-            "SECOND": "detik"
+            "SECOND": "detik",
+            "AGO": " lalu```"
         },
         "evaluators": {
             "TERM_DESC": "Memungkinkan untuk menjalankan perintah di shell server.",
@@ -103,15 +104,15 @@
         },
         "greetings": {
             "WELCOME_DESC": "Ini Menyetel pesan selamat datang. Jika Anda membiarkannya kosong, itu menunjukkan pesan selamat datang.",
-            "NOT_SET_WELCOME": "*Anda belum menyetel pesan selamat datang.!*\n**Untuk menyetel:** ```.welcome Pesan selamat datang darimu```",
+            "NOT_SET_WELCOME": "*Anda belum menyetel pesan selamat datang.!*\n**Untuk menyetel:** ```.welcome Hai && Hai#ada apa```",
             "WELCOME_ALREADY_SETTED": "*✅ Pesan selamat datang sudah disetel!*\n*Pesan:* ```",
-            "NEED_WELCOME_TEXT": "*Anda harus menulis pesan untuk Menyetel pesan selamat datang.*\n*Contoh:* ```.welcome Selamat Datang!```",
+            "NEED_WELCOME_TEXT": "*Anda harus menulis pesan untuk Menyetel pesan selamat datang.*\n*Contoh:* ```.welcome Hai && Hai#ada apa```",
             "WELCOME_DELETED": "*✅ Pesan selamat datang berhasil dihapus!*",
             "WELCOME_SETTED": "*✅ Pesan selamat datang berhasil disetel!*",
             "GOODBYE_DESC": "Menyetel pesan selamat tinggal. Jika Anda biarkan kosong, itu menunjukkan pesan selamat tinggal.",
-            "NOT_SET_GOODBYE": "*Anda tidak menyetel pesan selamat tinggal!*\n*Untuk menyetel:* ```.goodbye Pesan selamat tinggal darimu```",
+            "NOT_SET_GOODBYE": "*Anda tidak menyetel pesan selamat tinggal!*\n*Untuk menyetel:* ```.goodbye Selamat tinggal && Selamat tinggal#Goreng```",
             "GOODBYE_ALREADY_SETTED": "*✅ Pesan selamat tinggal telah disetel.!*\n*Pesan:* ```",
-            "NEED_GOODBYE_TEXT": "*Anda harus menulis pesan untuk menyetel pesan selamat tinggal.*\n*Contoh:* ```.goodbye Selamat Tinggal!```",
+            "NEED_GOODBYE_TEXT": "*Anda harus menulis pesan untuk menyetel pesan selamat tinggal.*\n*Contoh:* ```.goodbye Selamat tinggal && Selamat tinggal#Goreng```",
             "GOODBYE_DELETED": "*✅ Pesan selamat tinggal telah berhasil dihapus!*",
             "GOODBYE_SETTED": "*✅ Pesan selamat tinggal telah berhasil disetel!*"
         },
