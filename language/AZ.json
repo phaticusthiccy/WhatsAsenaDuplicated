@@ -145,7 +145,7 @@
             "RMLYDIA_DESC": "Lydia botunu istifadəçi üçün deaktiv edir.",
             "ALREADY_EMPTY": "```İstifadəçi siyahınız artıq boşdur!```",
             "NOT_ADDED": "```Bu istifadəçini hələ əlavə etməmisiniz!```",
-            "DISABLED": "```Lydia bu istifadəçi üçün deaktiv edilmişdir!``"
+            "DISABLED": "```Lydia bu istifadəçi üçün deaktiv edilmişdir!```"
         },
         "memes": {
             "MEMES_DESC": "Yanıt verdiğiniz fotoğrafa yazdığınız yazıyı ekler.",
@@ -337,7 +337,16 @@
             "SPAM_DESC": "Siz onu dayandırana qədər spam göndərdi.\n⌨️ Nümunə: .spam test",
             "NEED_WORD": "*Bir söz daxil etməlisiniz*",
             "STOP_SPAMDESC": "Spam əmrini dayandırır.",
-            "STOP_SPAM": "✅ *Spam uğurla dayandırıldı! Xahiş edirəm bir az gözləyin.*"
+            "STOP_SPAM": "✅ *Spam uğurla dayandırıldı! Xahiş edirəm bir az gözləyin.*",
+            "ST_DESC": "Cavab verilən fotonu və ya videonu stickera çevirir və spam olaraq göndərir.",
+            "ST_ST": "```Xahiş edirəm Stcikere cavab vermeyin```\n```Yalnız Videoya və ya Şəkilə Cavab Verin!```",
+            "ST_NEED": "```Hər hansı bir videoya və ya fotoya cavab verməlisiniz!```",
+            "AU_DESC": "Cavab verilmiş səsi spam olaraq göndərir.",
+            "AU_REP": "```Xahiş edirəm yalnız səs sənədinə cavab verin!```",
+            "FOTO_DESC": "Cavab verilən fotonu spam olaraq göndərir.",
+            "FOTO_FOT": "```Zəhmət olmasa hər hansı bir şəkilə cavab verin!```",
+            "VİD_DESC": "Cavab verilən videonu spam olaraq göndərir.",
+            "VİD_NEED": "```Hər hansı bir videoya cavab verin!```"
         },
         "carbon": {
             "CARBON_DESC": "Mətni carbon.sh ilə şəkilə çevirir.",
