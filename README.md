@@ -15,23 +15,19 @@
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/commits/master">
     <img src="https://img.shields.io/github/commit-activity/m/phaticusthiccy/WhatsAsenaDuplicated?style=social">
   </a>
-  <a href="https://i.hizliresim.com/ZtrNkY.png">
-    <img src="https://img.shields.io/badge/Donate-Papara%201%E2%82%BA-important?style=plastic&logo=appveyor">
-  </a>
-
 </p>
 
 <p align="center">
   <a href="httsp://github.com/phaticusthiccy/WhatsAsenaDuplicated">
-    <img src="https://img.shields.io/github/repo-size/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Repo%20Boyutu&style=plastic">
+    <img src="https://img.shields.io/github/repo-size/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Repo%20Size&style=plastic">
 
   </a>
   <a href="httsp://github.com/phaticusthiccy/WhatsAsenaDuplicated">
-    <img src="https://img.shields.io/codefactor/grade/github/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Kod%20Kalitesi&style=plastic">
+    <img src="https://img.shields.io/codefactor/grade/github/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Code%20Quality&style=plastic">
 
   </a>
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Lisans&style=plastic">
+    <img src="https://img.shields.io/github/license/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Lisance&style=plastic">
 
   </a>
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated">
@@ -113,6 +109,7 @@ the user is responsible.
 `Soon as Possible...`
 
 ### Simple Method
+
 [![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://repl.it/@phaticusthiccy/WhatsAsena-QR)
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phaticusthiccy/WhatsAsenaDuplicated)
@@ -130,7 +127,7 @@ $ node bot.js
 
 ##
 
-### ⚒️ Setup Wiki 
+### ⚒️ Setup Wiki - Kurulum [Tam Anlatım]
 [![Setup - Kurulum](https://img.icons8.com/clouds/300/000000/settings.png)](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
 
 ##
@@ -148,13 +145,6 @@ If you are concerned about security, you can install it on your own computer. If
 
 ### What does Asena mean?
 [Asena](https://tr.wikipedia.org/wiki/Asena), comes from Turkish mythology. According to Turkish mythology, Asena is a she-wolf that plays an important role.
-
-##
-
-### WhatsAsena Features ✨
-
-Here Are All Commands With Description
-[GistHub](https://gist.github.com/phaticusthiccy/8dfa827a71647e5f659680d75543a748)
 
 ##
 
