@@ -339,7 +339,16 @@
             "SPAM_DESC": "Itu spam sampai Anda menghentikannya.\n⌨️ Contoh: .spam test",
             "NEED_WORD": "*Anda harus memasukkan sebuah kata!*",
             "STOP_SPAMDESC": "Hentikan perintah spam.",
-            "STOP_SPAM": "✅ *Spam berhasil dihentikan! Tolong tunggu sebentar.*"
+            "STOP_SPAM": "✅ *Spam berhasil dihentikan! Tolong tunggu sebentar.*",
+            "ST_DESC": "Konversikan foto atau video yang dibalas agar tetap dan kirimkan sebagai spam.",
+            "ST_ST": "```Tolong Jangan Menanggapi Stciker!```\n```Hanya Membalas Video atau Foto!```",
+            "ST_NEED": "```Anda Harus Menanggapi Video atau Foto Apa Pun!```",
+            "AU_DESC": "Mengirim suara yang dijawab sebagai spam.",
+            "AU_REP": "```Harap Hanya Menanggapi File Audio!```",
+            "FOTO_DESC": "Mengirim foto yang dibalas sebagai spam.",
+            "FOTO_FOT": "```Silakan Menanggapi Gambar Apa Pun!```",
+            "VİD_DESC": "Mengirim video yang dibalas sebagai spam.",
+            "VİD_NEED": "```Tanggapi Video Apa Pun!```"
         },
         "carbon": {
             "CARBON_DESC": "Mengonversi teks menjadi foto dengan carbon.sh.",
