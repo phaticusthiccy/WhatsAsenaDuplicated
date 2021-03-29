@@ -60,7 +60,8 @@
             "AFK_TEXT_NOMD": "Bip bop! Bu bir bot. Sahibim hal hazırda burda deyil.",
             "HOUR": "Saat",
             "MINUTE": "Dəqiqə",
-            "SECOND": "Saniyə"
+            "SECOND": "Saniyə",
+            "AGO": " Əvvəl```"
         },
         "evaluators": {
             "TERM_DESC": "Server’də shellində əmr işlətməyinizə imkan verər.",
@@ -103,15 +104,15 @@
         },
         "greetings": {
             "WELCOME_DESC": "Xoşgəldin mesajını tənzimləyər. Əgər mesaj yazmazsanız xoşgəldin mesajını göstərər.",
-            "NOT_SET_WELCOME": "*Xoşgəldin mesajını tənzimləməmisiniz!*\n**Tənzimləmək üçün:** ```.welcome \"xoşgəldin mesajınız\"```",
+            "NOT_SET_WELCOME": "*Xoşgəldin mesajını tənzimləməmisiniz!*\n**Tənzimləmək üçün:** ```.welcome xoşgəldin && xoşgəldin#necəsən```",
             "WELCOME_ALREADY_SETTED": "*✅ Xoşgəldin mesajı tənzimləndi!*\n*Mesaj:* ```",
-            "NEED_WELCOME_TEXT": "*Xoşgəldin mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.welcome \"XOŞGƏLDİN!\"```",
+            "NEED_WELCOME_TEXT": "*Xoşgəldin mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.welcome xoşgəldin && xoşgəldin#necəsən,```",
             "WELCOME_DELETED": "*✅ Xoşgəldin mesajınız müvəffəqiyyətlə silindi!*",
             "WELCOME_SETTED": "*✅ Xoşgəldin mesajı müvəffəqiyyətlə redaktə olundu!*",
             "GOODBYE_DESC": "Sağollaşma mesajı əlavə edər. Əgər mesaj yazmasanız sağollaşma mesajını göstərər.",
-            "NOT_SET_GOODBYE": "*Sağollaşma mesajını tənzimləmədiniz!*\n*Tənzimləmək üçün:* ``.goodbye \"Sağollaşma mesajınız\"```",
+            "NOT_SET_GOODBYE": "*Sağollaşma mesajını tənzimləmədiniz!*\n*Tənzimləmək üçün:* ``.goodbye baybay && baybay#görüşənə qədər```",
             "GOODBYE_ALREADY_SETTED": "*✅ Sağollaşma mesajı tənzimlənib!*\n*Mesaj:* ```",
-            "NEED_GOODBYE_TEXT": "*Sağollaşma mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.goodbye \"Görüşənədək!\"```",
+            "NEED_GOODBYE_TEXT": "*Sağollaşma mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.goodbye baybay && baybay#görüşənə qədər```",
             "GOODBYE_DELETED": "*✅ Sağollaşma mesajı müvəffəqiyyətlə silindi!*",
             "GOODBYE_SETTED": "*✅ Sağollaşma mesajı müvəffəqiyyətlə düzəldildi!*"
         },
