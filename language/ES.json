@@ -60,7 +60,8 @@
             "AFK_TEXT_NOMD": "¡Bip, bop! Este es un barco. No estoy aquí ahora mismo.",
             "HOUR": "Hora",
             "MINUTE": "Minuto",
-            "SECOND": "Segundo"
+            "SECOND": "Segundo",
+            "AGO": " Ago```"
         },
         "evaluators": {
             "TERM_DESC": "Le permite ejecutar comandos en el shell del servidor.",
@@ -103,15 +104,15 @@
         },
         "greetings": {
             "WELCOME_DESC": "Establece un mensaje de bienvenida. Si no escribe un mensaje, aparecerá un mensaje de bienvenida.",
-            "NOT_SET_WELCOME": "*¡No ha establecido un mensaje de bienvenida!*\n**Para configurar:** ```.welcome mensaje de bienvenida```",
+            "NOT_SET_WELCOME": "*¡No ha establecido un mensaje de bienvenida!*\n**Para configurar:** ```.welcome Hola && Hola#Bienvenido```",
             "WELCOME_ALREADY_SETTED": "*✅ ¡Se establece el mensaje de bienvenida!*\n*Mensaje:* ```",
-            "NEED_WELCOME_TEXT": "*Debe escribir un mensaje para configurar un mensaje de bienvenida.*\n*Ejemplo:* ```.welcome ¡BIENVENIDO!```",
+            "NEED_WELCOME_TEXT": "*Debe escribir un mensaje para configurar un mensaje de bienvenida.*\n*Ejemplo:* ```.welcome Hola && Hola#Bienvenido```",
             "WELCOME_DELETED": "*✅ ¡El mensaje de bienvenida se ha eliminado correctamente!*",
             "WELCOME_SETTED": "*✅ ¡El mensaje de bienvenida se ha configurado correctamente!*",
             "GOODBYE_DESC": "Establece el mensaje de la despedida. Si no envía un mensaje, le traerá el mensaje por defecto de la despedida.",
             "NOT_SET_GOODBYE": "*¡No estableciste el mensaje de despedida!*\n*Para configurar:* ```.goodbye ¡Adiós!```",
             "GOODBYE_ALREADY_SETTED": "*✅ ¡El mensaje de despedida está configurado!*\n*Mensaje:* ```",
-            "NEED_GOODBYE_TEXT": "*Tienes que escribir un mensaje para configurar el mensaje de despedida.*\n*Ejemplo* ```.goodbye ¡Adiós!```",
+            "NEED_GOODBYE_TEXT": "*Tienes que escribir un mensaje para configurar el mensaje de despedida.*\n*Ejemplo* ```.goodbye ¡Adiós! && Adiós#Amigos```",
             "GOODBYE_DELETED": "*✅ Se eliminó con éxito el mensaje de despedida*",
             "GOODBYE_SETTED": "*✅ ¡El mensaje de despedida fue configurado correctamente!*"
         },
