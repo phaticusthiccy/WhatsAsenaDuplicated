@@ -21,7 +21,6 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: Lang.FOTO_DESC}, (a
     });
 
     ffmpeg(location)
-        .format('jpg')
         .save('output.jpg')
         .on('end', async () => {
 
