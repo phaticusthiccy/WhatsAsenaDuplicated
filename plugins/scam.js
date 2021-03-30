@@ -119,6 +119,108 @@ Asena.addCommand({pattern: 'scam ?(.*)', fromMe: true, desc: Lang.SCAM_DESC}, (a
 
         await message.client.updatePresence(message.jid,Presence.composing)
 
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.composing)
+
     } else if (match[1] === 'online') {
 
         await message.client.updatePresence(message.jid,Presence.available)
@@ -223,7 +325,211 @@ Asena.addCommand({pattern: 'scam ?(.*)', fromMe: true, desc: Lang.SCAM_DESC}, (a
 
         await message.client.updatePresence(message.jid,Presence.available)
 
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.available)
+
     } else if (match[1] === 'recording') {
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
+
+        await new Promise(r => setTimeout(r, 10000));
+
+        await message.client.updatePresence(message.jid,Presence.recording)
 
         await message.client.updatePresence(message.jid,Presence.recording)
 

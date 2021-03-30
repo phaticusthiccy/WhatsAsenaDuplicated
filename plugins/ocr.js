@@ -19,11 +19,6 @@ if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: true, desc: Lang.OCR_DESC}, (async (message, match) => { 
 
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
-   
         if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -61,11 +56,6 @@ else if (Config.WORKTYPE == 'public') {
 
     Asena.addCommand({pattern: 'ocr ?(.*)', fromMe: false, desc: Lang.OCR_DESC}, (async (message, match) => { 
 
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
-   
         if (message.reply_message === false) return await message.sendMessage(Lang.NEED_REPLY);    
 	var info = await message.reply(Lang.DOWNLOADING);
         var location = await message.client.downloadAndSaveMediaMessage({

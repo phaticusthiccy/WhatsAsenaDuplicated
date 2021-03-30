@@ -45,6 +45,11 @@
             "required": false,
             "value": "default"
         },
+        "BLOCK_CHAT": {
+            "description": "Choose in which chat the bot won't work there. Ex: 905xxxx && 905xxxx-1xxx or 905xxxx,905xxx...",
+            "required": false,
+            "value": "false"
+        },
         "UNMUTE_MESSAGE": {
             "description": "Düzenlenebilir Unmute Mesajı. Customizable Unmute Message! Use => default, to change back.",
             "required": false,

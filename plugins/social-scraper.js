@@ -26,17 +26,11 @@ const cn = require('../config');
 const Language = require('../language')
 const { errorMessage, infoMessage } = require('../helpers')
 const Lang = Language.getString('instagram')
-
+const Tlang = Language.getString('tiktok')
 
 if (cn.WORKTYPE == 'private') {
 
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
-
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
-
 
         const userName = match[1]
 
@@ -78,16 +72,47 @@ if (cn.WORKTYPE == 'private') {
           )
       },
     )
+
+    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
+
+        const userName = match[1]
+
+        if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
+
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
+
+        await axios
+          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
+          .then(async (response) => {
+            const {
+              uploaded_at,
+              caption,
+              url_nwm,
+              created_at,
+              user,
+              stats,
+              music,
+            } = response.data.result
+
+            const profileBuffer = await axios.get(url_nwm, {
+              responseType: 'arraybuffer',
+            })
+
+            const msg = `*${Tlang.CAPTİON}* ${caption} \n*${Tlang.USERNAME}* ${user.username} \n*${Tlang.NAME}* ${user.name} \n*${Tlang.LİKE}* ${stats.likes} \n*${Tlang.COMM}* ${stats.comments} \n*${Tlang.VİEW}* ${stats.play} \n*${Tlang.SHARE}* ${stats.shares} \n*${Tlang.MUSİC}* ${music.title} \n*${Tlang.M_AUT}* ${music.author} `
+
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+              caption: msg,
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Tlang.NOT + userName, MessageType.text),
+          )
+      },
+    )
 }
 else if (cn.WORKTYPE == 'public') {
 
     Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
-
-        if (message.jid === '905524317852-1612300121@g.us') {
-
-            return;
-        }
-
 
         const userName = match[1]
 
@@ -126,6 +151,43 @@ else if (cn.WORKTYPE == 'public') {
           })
           .catch(
             async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
+          )
+      },
+    )
+
+    Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
+
+        const userName = match[1]
+
+        if (!userName) return await message.client.sendMessage(message.jid, Tlang.NEED, MessageType.text)
+
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
+
+        await axios
+          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
+          .then(async (response) => {
+            const {
+              uploaded_at,
+              caption,
+              url_nwm,
+              created_at,
+              user,
+              stats,
+              music,
+            } = response.data.result
+
+            const profileBuffer = await axios.get(url_nwm, {
+              responseType: 'arraybuffer',
+            })
+
+            const msg = `*${Tlang.CAPTİON}* ${caption} \n*${Tlang.USERNAME}* ${user.username} \n*${Tlang.NAME}* ${user.name} \n*${Tlang.LİKE}* ${stats.likes} \n*${Tlang.COMM}* ${stats.comments} \n*${Tlang.VİEW}* ${stats.play} \n*${Tlang.SHARE}* ${stats.shares} \n*${Tlang.MUSİC}* ${music.title} \n*${Tlang.M_AUT}* ${music.author} `
+
+            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
+              caption: msg,
+            })
+          })
+          .catch(
+            async (err) => await message.client.sendMessage(message.jid, Tlang.NOT + userName, MessageType.text),
           )
       },
     )

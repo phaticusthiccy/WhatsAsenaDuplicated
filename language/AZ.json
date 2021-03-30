@@ -38,7 +38,7 @@
             "DEMOTE_DESC": "Hər hansısa bir adamdan adminlik hüququnu alar.",
             "ALREADY_NOT_ADMIN": "```Admin olmayan birindən, adminliyini necə alım? ```",
             "DEMOTED": "```, adminlik hüququ alındı! ```",
-            "MUTE_DESC": "Grup söhbətini bağlıyar. Təkcə adminlər mesaj göndərə bilər.",
+            "MUTE_DESC": "Grup söhbətini bağlıyar. Təkcə adminlər mesaj göndərə bilər.\n⌨️ Nümunə: .mute & .mute 5m vs",
             "MUTED": "```Grup söhbəti bağlandı! ```",
             "UNMUTE_DESC": "Grup söhbətini açar. Hərkəs mesaj göndərə bilər.",
             "UNMUTED": "```Grup söhbəti açıldı!```",
@@ -60,7 +60,8 @@
             "AFK_TEXT_NOMD": "Bip bop! Bu bir bot. Sahibim hal hazırda burda deyil.",
             "HOUR": "Saat",
             "MINUTE": "Dəqiqə",
-            "SECOND": "Saniyə"
+            "SECOND": "Saniyə",
+            "AGO": " Əvvəl```"
         },
         "evaluators": {
             "TERM_DESC": "Server’də shellində əmr işlətməyinizə imkan verər.",
@@ -103,15 +104,15 @@
         },
         "greetings": {
             "WELCOME_DESC": "Xoşgəldin mesajını tənzimləyər. Əgər mesaj yazmazsanız xoşgəldin mesajını göstərər.",
-            "NOT_SET_WELCOME": "*Xoşgəldin mesajını tənzimləməmisiniz!*\n**Tənzimləmək üçün:** ```.welcome \"xoşgəldin mesajınız\"```",
+            "NOT_SET_WELCOME": "*Xoşgəldin mesajını tənzimləməmisiniz!*\n**Tənzimləmək üçün:** ```.welcome xoşgəldin && xoşgəldin#necəsən```",
             "WELCOME_ALREADY_SETTED": "*✅ Xoşgəldin mesajı tənzimləndi!*\n*Mesaj:* ```",
-            "NEED_WELCOME_TEXT": "*Xoşgəldin mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.welcome \"XOŞGƏLDİN!\"```",
+            "NEED_WELCOME_TEXT": "*Xoşgəldin mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.welcome xoşgəldin && xoşgəldin#necəsən,```",
             "WELCOME_DELETED": "*✅ Xoşgəldin mesajınız müvəffəqiyyətlə silindi!*",
             "WELCOME_SETTED": "*✅ Xoşgəldin mesajı müvəffəqiyyətlə redaktə olundu!*",
             "GOODBYE_DESC": "Sağollaşma mesajı əlavə edər. Əgər mesaj yazmasanız sağollaşma mesajını göstərər.",
-            "NOT_SET_GOODBYE": "*Sağollaşma mesajını tənzimləmədiniz!*\n*Tənzimləmək üçün:* ``.goodbye \"Sağollaşma mesajınız\"```",
+            "NOT_SET_GOODBYE": "*Sağollaşma mesajını tənzimləmədiniz!*\n*Tənzimləmək üçün:* ``.goodbye baybay && baybay#görüşənə qədər```",
             "GOODBYE_ALREADY_SETTED": "*✅ Sağollaşma mesajı tənzimlənib!*\n*Mesaj:* ```",
-            "NEED_GOODBYE_TEXT": "*Sağollaşma mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.goodbye \"Görüşənədək!\"```",
+            "NEED_GOODBYE_TEXT": "*Sağollaşma mesajını tənzimləmək üçün mesaj yazmalısınız.*\n*Nümunə:* ```.goodbye baybay && baybay#görüşənə qədər```",
             "GOODBYE_DELETED": "*✅ Sağollaşma mesajı müvəffəqiyyətlə silindi!*",
             "GOODBYE_SETTED": "*✅ Sağollaşma mesajı müvəffəqiyyətlə düzəldildi!*"
         },
@@ -145,7 +146,7 @@
             "RMLYDIA_DESC": "Lydia botunu istifadəçi üçün deaktiv edir.",
             "ALREADY_EMPTY": "```İstifadəçi siyahınız artıq boşdur!```",
             "NOT_ADDED": "```Bu istifadəçini hələ əlavə etməmisiniz!```",
-            "DISABLED": "```Lydia bu istifadəçi üçün deaktiv edilmişdir!``"
+            "DISABLED": "```Lydia bu istifadəçi üçün deaktiv edilmişdir!```"
         },
         "memes": {
             "MEMES_DESC": "Yanıt verdiğiniz fotoğrafa yazdığınız yazıyı ekler.",
@@ -306,13 +307,7 @@
             "ELLİSEKİZMUTE": "*Grup 58 dakika süreyle susturuldu!*",
             "ELLİDOKUZMUTE": "*Grup 59 dakika süreyle susturuldu!*",
             "SAATBİRMUTE": "*Grup 1 saat süreyle susturuldu!*",
-            "SAATBİRONBEŞMUTE": "*Grup 1 saat 15 dakika süreyle susturuldu!*",
-            "SAATBİROTUZMUTE": "*Grup 1 saat 30 dakika süreyle susturuldu!*",
-            "SAATBİRKIRKBEŞMUTE": "*Grup 1 saat 45 dakika süreyle susturuldu!*",
             "SAATİKİMUTE": "*Grup 2 saat süreyle susturuldu!*",
-            "SAATİKİONBEŞMUTE": "*Grup 2 saat 15 dakika süreyle susturuldu!*",
-            "SAATİKİOTUZMUTE": "*Grup 2 saat 30 dakika süreyle susturuldu!*",
-            "SAATİKİKIRKBEŞMUTE": "*Grup 2 saat 45 dakika süreyle susturuldu!*",
             "SAATÜÇMUTE": "*Grup 3 saat süreyle susturuldu!*",
             "SAATDÖRTMUTE": "*Grup 4 saat süreyle susturuldu!*",
             "SAATBEŞMUTE": "*Grup 5 saat süreyle susturuldu!*",
@@ -343,7 +338,16 @@
             "SPAM_DESC": "Siz onu dayandırana qədər spam göndərdi.\n⌨️ Nümunə: .spam test",
             "NEED_WORD": "*Bir söz daxil etməlisiniz*",
             "STOP_SPAMDESC": "Spam əmrini dayandırır.",
-            "STOP_SPAM": "✅ *Spam uğurla dayandırıldı! Xahiş edirəm bir az gözləyin.*"
+            "STOP_SPAM": "✅ *Spam uğurla dayandırıldı! Xahiş edirəm bir az gözləyin.*",
+            "ST_DESC": "Cavab verilən fotonu və ya videonu stickera çevirir və spam olaraq göndərir.",
+            "ST_ST": "```Xahiş edirəm Stcikere cavab vermeyin```\n```Yalnız Videoya və ya Şəkilə Cavab Verin!```",
+            "ST_NEED": "```Hər hansı bir videoya və ya fotoya cavab verməlisiniz!```",
+            "AU_DESC": "Cavab verilmiş səsi spam olaraq göndərir.",
+            "AU_REP": "```Xahiş edirəm yalnız səs sənədinə cavab verin!```",
+            "FOTO_DESC": "Cavab verilən fotonu spam olaraq göndərir.",
+            "FOTO_FOT": "```Zəhmət olmasa hər hansı bir şəkilə cavab verin!```",
+            "VİD_DESC": "Cavab verilən videonu spam olaraq göndərir.",
+            "VİD_NEED": "```Hər hansı bir videoya cavab verin!```"
         },
         "carbon": {
             "CARBON_DESC": "Mətni carbon.sh ilə şəkilə çevirir.",
@@ -366,7 +370,8 @@
             "NEED_WORD": "*Sözləri daxil etməlisən!*",
             "ANIME_DESC": "Mətni anime qızının əlindəki bannerin içərisinə yazır.",
             "TRUMP_DESC": "Mətni Trampın tvitinə çevirir.",
-            "CHANGE_DESC": "Məqaləni change my mind afişasına çevirir."
+            "CHANGE_DESC": "Məqaləni change my mind afişasına çevirir.",
+            "GLOW_DESC": "Mətni neon resme çevirir."
         },
         "wallpaper": {
             "WP": "Fərqli, yüksək qətnamə divar kağızı göndərir."
@@ -428,6 +433,32 @@
             "HİRE": "Kirayə ola bilərmi??:",
             "URL": "Profil əlaqəsi:",
             "UPDATE": "Son yeniləmə:"
+        },
+        "tiktok": {
+            "TİKTOK": "Tiktok-dan video yükləyir.",
+            "NEED": "```Hər hansı bir Tiktok Linki daxil etməlisiniz!``` \n*Nümunə:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
+            "DOWN": "```Video yüklənir..```",
+            "CAPTİON": "İzahat:",
+            "USERNAME": "İstifadəçi adı:",
+            "NAME": "Ad:",
+            "LİKE": "Bəyənmə sayı:",
+            "COMM": "Şərhlərin sayı:",
+            "VİEW": "Baxış sayı:",
+            "SHARE": "Səhmlərin sayı:",
+            "MUSİC": "Musiqi:",
+            "M_AUT": "Musiqi sahibi:"
+        },
+        "lyrics": {
+            "LY_DESC": "Mahnının sözlərini tapır.",
+            "NEED": "```Hər hansı bir mahnı yazmalısan!```",
+            "SLY": "Mahnılar:",
+            "AUT": "Mahnı sahibi:",
+            "BUL": "Mahnı tapıldı:",
+            "ARAT": "Mahnı axtardı:"
+        },
+        "covid": {
+            "COV_DESC": "15-dən çox ölkənin gündəlik və ümumi covid masasını göstərir.",
+            "NOT": "```Bağışlayın, buna bənzər bir ölkə tapa bilmədim! Zəhmət olmasa tətbiq olunan ölkə kodlarını daxil edin!```\n\n```Ölkə kodları:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
 }
