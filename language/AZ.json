@@ -455,6 +455,10 @@
             "AUT": "Mahnı sahibi:",
             "BUL": "Mahnı tapıldı:",
             "ARAT": "Mahnı axtardı:"
+        },
+        "covid": {
+            "COV_DESC": "15-dən çox ölkənin gündəlik və ümumi covid masasını göstərir.",
+            "NOT": "```Bağışlayın, buna bənzər bir ölkə tapa bilmədim! Zəhmət olmasa tətbiq olunan ölkə kodlarını daxil edin!```\n\n```Ölkə kodları:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
 }
