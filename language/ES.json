@@ -457,6 +457,11 @@
             "AUT": "Propietario de la canción:",
             "BUL": "Canción encontrada:",
             "ARAT": "Canción buscada:"
+        },
+        "covid": {
+            "COV_DESC": "Muestra la tabla covid diaria y general de más de 15 países.",
+            "NOT": "```Lo siento, no pude encontrar un país como este! Ingrese los códigos de país correspondientes!```\n\n```Códigos de país:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
+
         }
     }
 }
