@@ -462,6 +462,10 @@
             "AUT": "Şarkı Sahibi:",
             "BUL": "Bulunan Şarkı:",
             "ARAT": "Aratılan Şarkı:"
+        },
+        "covid": {
+            "COV_DESC": "15'den fazla ülkenin günlük ve genel covid tablosunu gösterir.",
+            "NOT": "```Üzgünüm Böyle Bir Ülke Bulamadım! Lütfen Geçerli Olan Ülke Kodlarını Girin!```\n\n```Ülke Kodları:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
 }
