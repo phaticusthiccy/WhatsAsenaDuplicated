@@ -457,6 +457,10 @@
             "AUT": "Song Owner:",
             "BUL": "Founded Song:",
             "ARAT": "Searched Song:"
+        },
+        "covid": {
+            "COV_DESC": "Shows the daily and overall covid table of more than 15 countries.",
+            "NOT": "```Sorry I Could Not Find A Country Like This! Please Enter Applicable Country Codes!```\n\n```Country Codes:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
 }
