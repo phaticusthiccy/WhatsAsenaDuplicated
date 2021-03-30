@@ -457,6 +457,10 @@
             "AUT": "Pemilik Lagu:",
             "BUL": "Menemukan Lagu:",
             "ARAT": "Lagu yang dicari:"
+        },
+        "covid": {
+            "COV_DESC": "Menunjukkan tabel covid harian dan keseluruhan lebih dari 15 negara.",
+            "NOT": "```Maaf Saya Tidak Dapat Menemukan Negara Seperti Ini! Harap Masukkan Kode Negara yang Berlaku!```\n\n```Kode Negara:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
 }
