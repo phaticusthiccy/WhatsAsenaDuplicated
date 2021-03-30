@@ -353,7 +353,7 @@ if (config.WORKTYPE == 'private') {
                 await message.reply(`Error : \n${err.message}`, MessageType.text)
             }
         }
-        else if (match[1] === "hi" || match[1] === "hı" || match[1] === "Hı" || match[1] === "Hi" || match[1] === "Hİ" ||  match[1] === "HI" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
+        else if (match[1] === "in" || match[1] === "ın" || match[1] === "In" || match[1] === "İn" || match[1] === "IN" ||  match[1] === "İN" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
                     resp = JSON.parse(ok.body);
@@ -790,7 +790,7 @@ else if (config.WORKTYPE == 'public') {
                 await message.reply(`Error : \n${err.message}`, MessageType.text)
             }
         }
-        else if (match[1] === "hi" || match[1] === "hı" || match[1] === "Hı" || match[1] === "Hi" || match[1] === "Hİ" ||  match[1] === "HI" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
+        else if (match[1] === "in" || match[1] === "ın" || match[1] === "In" || match[1] === "İn" || match[1] === "İN" ||  match[1] === "IN" || match[1] === "india" || match[1] === "India" || match[1].includes('indian') ) {
             try{
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/countries/India").then(async ok  => {
                     resp = JSON.parse(ok.body);
