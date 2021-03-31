@@ -159,9 +159,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         if (config.WORKTYPE == 'public') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net') {
+                if (conn.user.jid === '994775035797@s.whatsapp.net' || conn.user.jid === '905423036554@s.whatsapp.net') {
 
-                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Tespit Edildi!``` \n```Kullanıcı: 994775035797``` \n```Sebep: Kötüye Kullanım, Asenayı Karalama``` ', MessageType.text)
+                    await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Tespit Edildi!```\n```Sebep: Kötüye Kullanım, Asenayı Karalama``` ', MessageType.text)
 
                     await new Promise(r => setTimeout(r, 1700));
 
@@ -220,7 +220,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             else {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net') {
+                if (conn.user.jid === '994775035797@s.whatsapp.net' || conn.user.jid === '905423036554@s.whatsapp.net') {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```Reason: Kötüye Kullanım, Asenayı Karalama``` ', MessageType.text)
 
@@ -282,7 +282,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         else if (config.WORKTYPE == 'private') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net') {
+                if (conn.user.jid === '994775035797@s.whatsapp.net' || conn.user.jid === '905423036554@s.whatsapp.net') {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```Sebep: Kötüye Kullanım, Asenayı Karalama``` ', MessageType.text)
 
@@ -343,7 +343,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             else {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net') {
+                if (conn.user.jid === '994775035797@s.whatsapp.net' || conn.user.jid === '905423036554@s.whatsapp.net') {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!``` \n```Reason: Kötüye Kullanım, Asenayı Karalama``` ', MessageType.text)
    
