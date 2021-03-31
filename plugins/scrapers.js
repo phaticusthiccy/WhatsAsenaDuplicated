@@ -89,32 +89,61 @@ if (config.WORKTYPE == 'private') {
         }
     }));
 
-    Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+    if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-        if(match[1] === undefined || match[1] == "")
-            return;
+        Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
+
+            if(match[1] === undefined || match[1] == "")
+                return;
     
-        let 
-            LANG = config.LANG.toLowerCase(),
-            ttsMessage = match[1],
-            SPEED = 1.0
+            let 
+                LANG = 'tr',
+                ttsMessage = match[1],
+                SPEED = 1.0
 
-        if(langMatch = match[1].match("\\{([a-z]{2})\\}")) {
-            LANG = langMatch[1]
-            ttsMessage = ttsMessage.replace(langMatch[0], "")
-        } 
-        if(speedMatch = match[1].match("\\{([0].[0-9]+)\\}")) {
-            SPEED = parseFloat(speedMatch[1])
-            ttsMessage = ttsMessage.replace(speedMatch[0], "")
-        }
+            if(langMatch = match[1].match("\\{([a-z]{2})\\}")) {
+                LANG = langMatch[1]
+                ttsMessage = ttsMessage.replace(langMatch[0], "")
+            } 
+            if(speedMatch = match[1].match("\\{([0].[0-9]+)\\}")) {
+                SPEED = parseFloat(speedMatch[1])
+                ttsMessage = ttsMessage.replace(speedMatch[0], "")
+            }
     
-        var buffer = await googleTTS.synthesize({
-            text: ttsMessage,
-            voice: LANG
-        });
-        await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
-    }));
+            var buffer = await googleTTS.synthesize({
+                text: ttsMessage,
+                voice: LANG
+            });
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+        }));
+    }
+    else {
+        Asena.addCommand({pattern: 'tts (.*)', fromMe: true, desc: Lang.TTS_DESC}, (async (message, match) => {
 
+            if(match[1] === undefined || match[1] == "")
+                return;
+    
+            let 
+                LANG = config.LANG.toLowerCase(),
+                ttsMessage = match[1],
+                SPEED = 1.0
+
+            if(langMatch = match[1].match("\\{([a-z]{2})\\}")) {
+                LANG = langMatch[1]
+                ttsMessage = ttsMessage.replace(langMatch[0], "")
+            } 
+            if(speedMatch = match[1].match("\\{([0].[0-9]+)\\}")) {
+                SPEED = parseFloat(speedMatch[1])
+                ttsMessage = ttsMessage.replace(speedMatch[0], "")
+            }
+    
+            var buffer = await googleTTS.synthesize({
+                text: ttsMessage,
+                voice: LANG
+            });
+            await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+        }));
+    }
     Asena.addCommand({pattern: 'song ?(.*)', fromMe: true, desc: Lang.SONG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_TEXT_SONG,MessageType.text);    
