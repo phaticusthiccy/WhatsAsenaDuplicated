@@ -212,7 +212,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
         else {
             return await message.client.sendMessage(
                 message.jid,
-                'I Can'\t Add Owner to Block Chat',
+                'I Can\'t Add Owner to Block Chat',
                 MessageType.text
             );
         }
