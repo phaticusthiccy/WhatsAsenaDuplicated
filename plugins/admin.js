@@ -200,7 +200,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,Lang.MUTED,MessageType.text);
         }
-        if (match[1] == '1m') {
+        else if (match[1] == '1m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,mut.BİRMUTE,MessageType.text);
 
@@ -875,7 +875,7 @@ Asena.addCommand({pattern: 'mute ?(.*)', fromMe: true, onlyGroup: true, desc: La
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid, Config.MUTEMSG,MessageType.text);
         }
-        if (match[1] == '1m') {
+        else if (match[1] == '1m') {
             await message.client.groupSettingChange(message.jid, GroupSettingChange.messageSend, true);
             await message.client.sendMessage(message.jid,Config.MUTEMSG,MessageType.text);
 
