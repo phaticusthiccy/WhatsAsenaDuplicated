@@ -200,6 +200,23 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             });
         }
     }
+    if (match[1].match(/905511384572/i)) {
+
+        if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+            return await message.client.sendMessage(
+                message.jid,
+                '```Kurucuyu Block Chat\'e Alamam!```',
+                MessageType.text
+            );
+        }
+        else {
+            return await message.client.sendMessage(
+                message.jid,
+                'I Can'\t Add Owner to Block Chat',
+                MessageType.text
+            );
+        }
+    }
     if (match[1] == 'BLOCK_CHAT: false' || match[1] == 'BLOCK_CHAT: False' || match[1] == 'BLOCK_CHAT: FALSE' || match[1] == 'BLOCK_CHAT:False' || match[1] == 'BLOCK_CHAT:FALSE' || match[1] == 'BLOCK_CHAT:fakse' || match[1] == 'BLOCK_CHAT: fakse' || match[1] == 'BLOCK_CHAT:falde' || match[1] == 'BLOCK_CHAT: falde' || match[1] == 'BLOCK_CHAT:flase' || match[1] == 'BLOCK_CHAT:Flase' || match[1] == 'BLOCK_CHAT: flase') {
 
         if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
