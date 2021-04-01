@@ -85,23 +85,15 @@ if (cn.WORKTYPE == 'private') {
           .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
           .then(async (response) => {
             const {
-              uploaded_at,
-              caption,
-              url_nwm,
-              created_at,
-              user,
-              stats,
-              music,
-            } = response.data.result
+              server_1,
+            } = response.data
 
-            const profileBuffer = await axios.get(url_nwm, {
+            const profileBuffer = await axios.get(server_1, {
               responseType: 'arraybuffer',
             })
 
-            const msg = `*${Tlang.CAPTİON}* ${caption} \n*${Tlang.USERNAME}* ${user.username} \n*${Tlang.NAME}* ${user.name} \n*${Tlang.LİKE}* ${stats.likes} \n*${Tlang.COMM}* ${stats.comments} \n*${Tlang.VİEW}* ${stats.play} \n*${Tlang.SHARE}* ${stats.shares} \n*${Tlang.MUSİC}* ${music.title} \n*${Tlang.M_AUT}* ${music.author} `
-
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: msg,
+              caption: 'Made by WhatsAsena',
             })
           })
           .catch(
@@ -167,23 +159,15 @@ else if (cn.WORKTYPE == 'public') {
           .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
           .then(async (response) => {
             const {
-              uploaded_at,
-              caption,
-              url_nwm,
-              created_at,
-              user,
-              stats,
-              music,
-            } = response.data.result
+              server_1,
+            } = response.data
 
-            const profileBuffer = await axios.get(url_nwm, {
+            const profileBuffer = await axios.get(server_1, {
               responseType: 'arraybuffer',
             })
 
-            const msg = `*${Tlang.CAPTİON}* ${caption} \n*${Tlang.USERNAME}* ${user.username} \n*${Tlang.NAME}* ${user.name} \n*${Tlang.LİKE}* ${stats.likes} \n*${Tlang.COMM}* ${stats.comments} \n*${Tlang.VİEW}* ${stats.play} \n*${Tlang.SHARE}* ${stats.shares} \n*${Tlang.MUSİC}* ${music.title} \n*${Tlang.M_AUT}* ${music.author} `
-
             await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.video, {
-              caption: msg,
+              caption: 'Made by WhatsAsena',
             })
           })
           .catch(
