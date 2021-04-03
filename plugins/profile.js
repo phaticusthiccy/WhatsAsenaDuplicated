@@ -38,7 +38,7 @@ Asena.addCommand({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (mess
     });
 
     await message.client.updateProfilePicture(message.client.user.jid, fs.readFileSync(location));
-    await load.delete();
+    await message.client.deleteMessage(message.jid, {id: load.key.id, remoteJid: message.jid, fromMe: true})
 }));
 
 Asena.addCommand({pattern: 'block ?(.*)', fromMe: true, desc: Lang.BLOCK_DESC}, (async (message, match) => {    
