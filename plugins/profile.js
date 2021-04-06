@@ -26,7 +26,7 @@ Asena.addCommand({pattern: 'kickme', fromMe: true, desc: Lang.KICKME_DESC, onlyG
 }));
 
 Asena.addCommand({pattern: 'pp', fromMe: true, desc: Lang.PP_DESC}, (async (message, match) => {    
-    if (message.reply_message === false || message.reply_message.image === false) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO);
+    if (!message.reply_message || !message.reply_message.image) return await message.client.sendMessage(message.jid,Lang.NEED_PHOTO, MessageType.text);
     
     var load = await message.client.sendMessage(message.jid,Lang.PPING,MessageType.text);
     var location = await message.client.downloadAndSaveMediaMessage({
