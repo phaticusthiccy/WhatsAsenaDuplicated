@@ -52,7 +52,7 @@
         "afk": {
             "AFK_DESC": "Itu membuat Anda AFK.",
             "IM_AFK": "*Saya AFK sekarang woe!*",
-            "IM_AFK_NOMD": "Saya AFK sekarang!",
+            "IM_AFK_NOMD": "Saya AFK sekarang woe!",
             "REASON": "Alasan",
             "LAST_SEEN": "Terakhir dilihat",
             "IM_NOT_AFK": "```Saya tidak lagi AFK!```",
