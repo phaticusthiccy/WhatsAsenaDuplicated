@@ -5,33 +5,33 @@
 - [@fusufs](https://t.me/fusufs)
 
 <p align="center">
-  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/fork">
-    <img src="https://img.shields.io/github/forks/phaticusthiccy/WhatsAsenaDuplicated?label=Fork&style=social">
+  <a href="https://github.com/xmtscf/WhatsAsenaDuplicated/fork">
+    <img src="https://img.shields.io/github/forks/xmtscf/WhatsAsenaDuplicated?label=Fork&style=social">
     
   </a>
-  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/stargazers">
-    <img src="https://img.shields.io/github/stars/phaticusthiccy/WhatsAsenaDuplicated?style=social">
+  <a href="https://github.com/xmtscf/WhatsAsenaDuplicated/stargazers">
+    <img src="https://img.shields.io/github/stars/xmtscf/WhatsAsenaDuplicated?style=social">
   </a>
-  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/commits/master">
-    <img src="https://img.shields.io/github/commit-activity/m/phaticusthiccy/WhatsAsenaDuplicated?style=social">
+  <a href="https://github.com/xmtscf/WhatsAsenaDuplicated/commits/master">
+    <img src="https://img.shields.io/github/commit-activity/m/xmtscf/WhatsAsenaDuplicated?style=social">
   </a>
 </p>
 
 <p align="center">
-  <a href="httsp://github.com/phaticusthiccy/WhatsAsenaDuplicated">
-    <img src="https://img.shields.io/github/repo-size/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Repo%20Size&style=plastic">
+  <a href="httsp://github.com/xmtscf/WhatsAsenaDuplicated">
+    <img src="https://img.shields.io/github/repo-size/xmtscf/WhatsAsenaDuplicated?color=purple&label=Repo%20Size&style=plastic">
 
   </a>
-  <a href="httsp://github.com/phaticusthiccy/WhatsAsenaDuplicated">
-    <img src="https://img.shields.io/codefactor/grade/github/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Code%20Quality&style=plastic">
+  <a href="httsp://github.com/xmtscf/WhatsAsenaDuplicated">
+    <img src="https://img.shields.io/codefactor/grade/github/xmtscf/WhatsAsenaDuplicated?color=purple&label=Code%20Quality&style=plastic">
 
   </a>
-  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Lisance&style=plastic">
+  <a href="https://github.com/xmtscf/WhatsAsenaDuplicated/blob/master/LICENSE">
+    <img src="https://img.shields.io/github/license/xmtscf/WhatsAsenaDuplicated?color=purple&label=Lisance&style=plastic">
 
   </a>
-  <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated">
-    <img src="https://img.shields.io/github/languages/top/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Javascript&style=plastic">
+  <a href="https://github.com/xmtscf/WhatsAsenaDuplicated">
+    <img src="https://img.shields.io/github/languages/top/xmtscf/WhatsAsenaDuplicated?color=purple&label=Javascript&style=plastic">
 
   </a>
   <a href="https://github.com/phaticusthiccy">
@@ -99,7 +99,7 @@ the user is responsible.
 
 > [New support & help group.](https://t.me/asenaremaster) (New)
 
-> [Install Guide/Kurulum Yardımcısı/Qurulum Müavin](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
+> [Install Guide/Kurulum Yardımcısı/Qurulum Müavin](https://github.com/xmtscf/WhatsAsenaDuplicated/wiki)
 
 ## 🔎 What is WhatsAsena?
 **WhatsAsena,** is a WhatsApp helper bot written by [Yusuf Usta](https://github.com/Quiec) and edited by [Phaticusthiccy](https://github.com/phaticusthiccy). Does not log into your account It is written on WhatsApp Web API.
@@ -110,13 +110,13 @@ the user is responsible.
 
 ### Simple Method
 
-[![Run on Repl.it](https://repl.it/badge/github/phaticusthiccy/WhatsAsenaDuplicated)](https://repl.it/@phaticusthiccy/WhatsAsena-QR)
+[![Run on Repl.it](https://repl.it/badge/github/xmtscf/WhatsAsenaDuplicated)](https://repl.it/@phaticusthiccy/WhatsAsena-QR)
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/phaticusthiccy/WhatsAsenaDuplicated)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/xmtscf/WhatsAsenaDuplicated)
 
 ### The Hard Method
 ```js
-$ git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git
+$ git clone https://github.com/xmtscf/WhatsAsenaDuplicated.git
 $ cd WhatsAsenaDuplicated
 $ npm i
 $ nano Config.env
@@ -128,7 +128,7 @@ $ node bot.js
 ##
 
 ### ⚒️ Setup Wiki - Kurulum [Tam Anlatım]
-[![Setup - Kurulum](https://img.icons8.com/clouds/300/000000/settings.png)](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
+[![Setup - Kurulum](https://img.icons8.com/clouds/300/000000/settings.png)](https://github.com/xmtscf/WhatsAsenaDuplicated/wiki)
 
 ##
 

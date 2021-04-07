@@ -17,7 +17,7 @@ const Lang = Language.getString('lydia');
 
 Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC}, (async (message, match) => {
     if (!message.reply_message) return await message.reply(Lang.NEED_REPLY);
-    if (!Config.COFFEEHOUSE_API_KEY) return await message.client.sendMessage(message.jid, '```You Must Set an API KEY!```\nhttps://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY', MessageType.text);
+    if (!Config.COFFEEHOUSE_API_KEY) return await message.client.sendMessage(message.jid, '```You Must Set an API KEY!```\nhttps://github.com/xmtscf/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY', MessageType.text);
 
     var unix = Date.now() / 1000 | 0;
 
@@ -41,7 +41,7 @@ Asena.addCommand({pattern: 'addlydia$', fromMe: true, desc: Lang.ADDLYDIA_DESC},
 
 Asena.addCommand({pattern: 'rmlydia$', fromMe: true, desc: Lang.RMLYDIA_DESC}, (async (message, match) => {
     if (!message.reply_message) return await message.reply(Lang.NEED_REPLY);
-    if (!Config.COFFEEHOUSE_API_KEY) return await message.client.sendMessage(message.jid, '```You Must Set an API KEY!```\nhttps://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY', MessageType.text);
+    if (!Config.COFFEEHOUSE_API_KEY) return await message.client.sendMessage(message.jid, '```You Must Set an API KEY!```\nhttps://github.com/xmtscf/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY', MessageType.text);
 
     var unix = Date.now() / 1000 | 0;
 
