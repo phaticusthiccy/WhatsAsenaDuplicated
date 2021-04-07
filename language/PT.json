@@ -9,7 +9,7 @@
             "DESC": "Descrição",
             "EXAMPLE": "Exemplo",
             "NOT_FOUND": "*Não consegui encontrar um comando como este*",
-            "WARN": "Avisar"
+            "WARN": "Atenção"
         },
         "_plugin": {
             "INSTALL_DESC": "Instale plugins externos.",
