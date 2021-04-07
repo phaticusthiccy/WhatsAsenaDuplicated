@@ -1,8 +1,8 @@
-## Thanks for Everything 
+## SELAMAT MENIKMATI BOT WHATSOHUMAN USERBOT 
 ### We will always remember you..
 
-- [Yusuf Usta](https://github.com/yusufusta)
-- [@fusufs](https://t.me/fusufs)
+- [Anto](https://github.com/yusufusta)
+- [@sohuman](https://t.me/sohuman)
 
 <p align="center">
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/fork">
@@ -45,49 +45,35 @@
 </p>
 
 ```
-Asena; Asena UserBot, WhatsAsena yazılımı temsil eden adlardır, yazının devamında birbiri yerine kullanılabilir.
+Sohuman; Sohuman UserBot, WhatsSohuman adalah nama yang mewakili perangkat lunak, mereka dapat digunakan secara bergantian di sisa artikel.
+WhatsAsena - Sohuman Userbot adalah perangkat lunak Open Source yang terbuka untuk pengembangan.
+Pengguna bertanggung jawab atas semua konsekuensi yang mungkin timbul dari kesalahan atau penyalahgunaan.
+Karena ini adalah proyek sumber terbuka, siapa pun dapat menyalin perangkat lunak, menambah dan menghapus,
+dan menggunakannya dengan cara yang mereka sesuaikan. Selain itu, dukungan plug-in memungkinkan pengguna untuk
+instal plugin mereka sendiri ke perangkat lunak asli dan gunakan sesuai keinginan.
+Menggunakan bot di luar tujuan akan secara eksplisit melarang Anda.
+Penggunaan sepenuhnya menjadi tanggung jawab pengguna, Sohuman Userbot adalah
+infrastruktur saja. Sama seperti sistem operasi yang tidak bertanggung jawab
+untuk pekerjaan yang dilakukan dengan program yang diinstal nanti, WhatSohuman
+tidak bertanggung jawab atas tujuan penggunaan dan metode pengguna.
+Memasarkan WhatSohuman untuk mendapatkan uang, membuatnya tersedia, atau memiliki nilai material apa pun
+Dilarang keras menawarkannya untuk dijual dengan apapun. Semua investigasi hukum yang mungkin timbul
+pengguna bertanggung jawab.
 
-WhatsAsena - Asena Userbot Açık Kaynaklı geliştirmeye açık bir yazılımdır. 
-Yanlış ve amacı dışında kullanımdan doğabilecek tüm sonuçlardan kullanıcı sorumludur. 
-Açık kaynaklı bir proje olduğundan isteyen herkes yazılımı kopyalayıp eklemeler çıkarmalar yapabilir,
-kendi özelleştirdiği biçimde kullanabilir. Ayrıca eklenti (plugin) desteği, 
-orijinal yazılıma kullanıcıların kendi yazdıkları eklentileri yükleyerek istedikleri 
-biçimde kullanmaları özelliğini sağlar.
-Kullanımı tamamen kullanıcının sorumluluğundadır.
-Botu amacı dışında kullanmak, açık bir şekilde yasaklanmanıza sebeb olur.
-Asena Userbot yalnızca bir altyapıdır. Nasıl sonradan yüklenen programlarla 
-yapılan işlerden işletim sistemi sorumlu değilse, 
-WhatsAsena da kullanıcıların kullanım amacı ve yönteminden sorumlu değildir.
-WhatsAsena'yı para karşılığı pazarlamak, kullanıma sunmak yahut herhangi bir maddi değere sahip
-birşey ile satışa sunmak kesinlikle yasaktır. Doğabilecek tüm yasal soruşturmalardan
-kullanıcı sorumludur.
 
-WhatsAsena - Asena Userbot is Open Source software open to development. 
-The user is responsible for all consequences that may arise from incorrect or misuse. 
-Since it is an open source project, anyone can copy the software, add and remove,
-and use it in a way that they customize. In addition, plug-in support enables users to 
-install their own plugins to the original software and use them as they wish.
-Using the bot out of purpose will explicitly ban you.
-Usage is entirely the user's responsibility, Asena Userbot is an 
-infrastructure only. Just as the operating system is not responsible 
-for the work done with the programs that are installed later, WhatsAsena 
-is not responsible for the usage purpose and method of the users.
-Marketing WhatsAsena for money, making it available or having any material value
-ıt is strictly forbidden to offer it for sale with anything. All legal investigations that may arise
-the user is responsible.
 ```
 
 <div align="center">
-  <img src="https://i.hizliresim.com/mm1NBs.jpg" width="200" height="200">
-  <h1>🐺 WhatsAsena Duplicated</h1>
+  <img src="https://i.resmim.net/G6CaY.jpg" width="200" height="200">
+  <h1>🌀 WHATSOHUMAN</h1>
 </div>
 <p align="center">
     WhatsAsena project - Makes it easy and fun to use Whatsapp. Also first userbot for Whatsapp.
     <br>
-        <a href="https://t.me/WHATSASENA">Telegram Channel</a> |
-        <a href="https://t.me/AsenaSupport">Telegram Group</a> |
-        <a href="https://t.me/asenaremaster">New Support Group</a> |
-        <a href="https://t.me/unofficialplugin">New Plugin Channel</a> |
+        <a href="https://t.me/sohuman">Telegram Channel</a> |
+        <a href="https://t.me/sohuman">Telegram Group</a> |
+        <a href="https://t.me/sohuman">New Support Group</a> |
+        <a href="https://t.me/sohuman">New Plugin Channel</a> |
     <br>
 </p>
 
