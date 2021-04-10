@@ -26,22 +26,22 @@
             "DELETED": "*✅ Plugin berhasil dihapus! Anda harus memulai ulang agar perubahan diterapkan.*"
         },
         "admin": {
-            "BAN_DESC": "Ban seseorang dalam grup. Balas pesan atau tandai seseorang untuk menggunakan perintah.",
-            "IM_NOT_ADMIN": "*Saya bukan admin di grup ini!*",
+            "BAN_DESC": "Ban seseorang dalam grup.",
+            "IM_NOT_ADMIN": "*Gua bukan admin anjim di grup ini!*",
             "BANNED": "dikeluarkan dari grup!",
-            "GIVE_ME_USER": "*Beri saya pengguna!*",
+            "GIVE_ME_USER": "*Tag Orangny ngab!*",
             "ADD_DESC": "Menambahkan seseorang ke grup",
             "ADDED": "ditambahkan ke grup!",
             "ALREADY_PROMOTED": "```Bagaimana cara menjadikan seseorang admin yang sudah menjadi admin?```",
             "PROMOTED": "```, peran admin telah diberikan!```",
-            "PROMOTE_DESC": "Menjadikan setiap orang sebagai admin.",
-            "DEMOTE_DESC": "Mengambil otoritas admin mana pun.",
+            "PROMOTE_DESC": "Menjadikan orang sebagai admin.",
+            "DEMOTE_DESC": "Mengambil otoritas admin.",
             "ALREADY_NOT_ADMIN": "```Bagaimana cara menjadikan seseorang admin yang sudah menjadi admin?```",
             "DEMOTED": "```, telah diturunkan pangkatnya!```",
-            "MUTE_DESC": "Bisukan obrolan grup. Hanya admin yang bisa mengirim pesan.\n⌨️ Contoh: .mute & .mute 5m etc",
-            "MUTED": "```Obrolan grup dibisukan!```",
-            "UNMUTE_DESC": "Suarakan obrolan grup. Siapapun bisa mengirim pesan.",
-            "UNMUTED": "```Obrolan grup telah disuarakan!```",
+            "MUTE_DESC": "Group di tutup.",
+            "MUTED": "```Group di tutup ngab!```",
+            "UNMUTE_DESC": "Group di buka.",
+            "UNMUTED": "```Groub di buka ngab!```",
             "INVITE_DESC": "Memberikan tautan undangan grup.",
             "INVITE": "```Tautan undangan:```"
         },
@@ -51,30 +51,30 @@
         },
         "afk": {
             "AFK_DESC": "Itu membuat Anda AFK.",
-            "IM_AFK": "*Saya AFK sekarang!*",
-            "IM_AFK_NOMD": "Saya AFK sekarang!",
+            "IM_AFK": "*GUA NGAK ONLINE!*",
+            "IM_AFK_NOMD": "GUA NGAK ONLINE!",
             "REASON": "Alasan",
             "LAST_SEEN": "Terakhir dilihat",
-            "IM_NOT_AFK": "```Saya tidak lagi AFK!```",
-            "AFK_TEXT": "```Bip bop! Ini adalah bot. Pemilik saya tidak online saat ini.```",
-            "AFK_TEXT_NOMD": "Bip bop! Ini adalah bot. Pemilik saya tidak online saat ini.",
+            "IM_NOT_AFK": "```GUA ON WA NGAB!```",
+            "AFK_TEXT": "```NGAPAIN TAG GUA?, GUA NGAK ONLINE NGAB.```",
+            "AFK_TEXT_NOMD": "NGAPAIN TAG GUA? GUA NGAK ONLINE NGAB.",
             "HOUR": "jam",
             "MINUTE": "menit",
             "SECOND": "detik",
             "AGO": " lalu```"
         },
         "evaluators": {
-            "TERM_DESC": "Memungkinkan untuk menjalankan perintah di shell server.",
+            "TERM_DESC": "jalankan perintah di shell server.",
             "GIVE_ME_CODE": "*Beri aku kode!*"
         },
         "heroku": {
-            "RESTART_DESC": "Mulai ulang WhatsAsena",
-            "RESTART_MSG": "```memulai ulang harap tunggu...```",
-            "SHUTDOWN_DESC": "Matikan WhatsAsena",
+            "RESTART_DESC": "Mulai ulang WhatsSohuman",
+            "RESTART_MSG": "```memulai ulang harap tunggu ngab...```",
+            "SHUTDOWN_DESC": "Matikan WhatsSohuman",
             "SHUTDOWN_MSG": "```mematikan ⛔```",
-            "DYNO_DESC": "Periksa penggunaan heroku dyno",
-            "DYNO_TOTAL": "```Total Kuota```",
-            "DYNO_USED": "```Kuota terpakai```",
+            "DYNO_DESC": "Periksa penguna heroku dyno",
+            "DYNO_TOTAL": "```Total Kuota Lu```",
+            "DYNO_USED": "```Kuota terpakai Lu apain```",
             "PERCENTAGE": "```Persentase```",
             "DYNO_LEFT": "```Sisa```",
             "SETVAR_DESC": "Set heroku config var",
@@ -92,24 +92,24 @@
             "MUST_TEXT": "```Harap balas pesan apa pun```"
         },
         "filters": {
-            "FILTER_DESC": "Itu menambahkan filter. Jika seseorang menulis filter Anda, itu mengirimkan jawabannya. Jika Anda hanya menulis .filter, itu menunjukkan daftar filter Anda.",
+            "FILTER_DESC": "Menambahkan filter Balas otomatis.",
             "NO_FILTER": "*❌ Tidak ada filter dalam obrolan ini!*",
             "FILTERS": "*🔎 Filter Anda dalam obrolan ini::*",
             "NEED_REPLY": "*❌ Silahkan ketik dibalasan!*\n*Contoh:*",
             "FILTERED": "*✅ Berhasil disetel* ```{}``` *untuk filter!*",
-            "STOP_DESC": "Menghentikan filter yang Anda tambahkan sebelumnya.",
+            "STOP_DESC": "Menghentikan filter.",
             "NEED_FILTER": "*❌ Silahkan ketik dibalasan!*\n*Contoh:*",
             "ALREADY_NO_FILTER": "*❌ Sudah tidak ada filter seperti ini!*",
             "DELETED": "*✅ Filter berhasil dihapus!*"
         },
         "greetings": {
-            "WELCOME_DESC": "Ini Menyetel pesan selamat datang. Jika Anda membiarkannya kosong, itu menunjukkan pesan selamat datang.",
+            "WELCOME_DESC": "Ini Menyetel pesan selamat datang.",
             "NOT_SET_WELCOME": "*Anda belum menyetel pesan selamat datang.!*\n**Untuk menyetel:** ```.welcome Hai && Hai#ada apa```",
             "WELCOME_ALREADY_SETTED": "*✅ Pesan selamat datang sudah disetel!*\n*Pesan:* ```",
             "NEED_WELCOME_TEXT": "*Anda harus menulis pesan untuk Menyetel pesan selamat datang.*\n*Contoh:* ```.welcome Hai && Hai#ada apa```",
             "WELCOME_DELETED": "*✅ Pesan selamat datang berhasil dihapus!*",
             "WELCOME_SETTED": "*✅ Pesan selamat datang berhasil disetel!*",
-            "GOODBYE_DESC": "Menyetel pesan selamat tinggal. Jika Anda biarkan kosong, itu menunjukkan pesan selamat tinggal.",
+            "GOODBYE_DESC": "Menyetel pesan selamat tinggal.",
             "NOT_SET_GOODBYE": "*Anda tidak menyetel pesan selamat tinggal!*\n*Untuk menyetel:* ```.goodbye Selamat tinggal && Selamat tinggal#Goreng```",
             "GOODBYE_ALREADY_SETTED": "*✅ Pesan selamat tinggal telah disetel.!*\n*Pesan:* ```",
             "NEED_GOODBYE_TEXT": "*Anda harus menulis pesan untuk menyetel pesan selamat tinggal.*\n*Contoh:* ```.goodbye Selamat tinggal && Selamat tinggal#Goreng```",
@@ -132,7 +132,7 @@
             "DOWNLOADING": "```Downloading media & making meme...```"
         },
         "ocr": {
-            "OCR_DESC": "Reads the text on the photo you have replied.",
+            "OCR_DESC": "Reads the text on  you have replied.",
             "NEED_REPLY": "*Reply to a photo!*",
             "DOWNLOADING": "```Media is downloading & reading...```",
             "ERROR": "```I couldn't read this :/```\n*Error:*```{}```",
@@ -140,8 +140,8 @@
         },
         "profile": {
             "KICKME_DESC": "Menendangmu Keluar dari grup!",
-            "KICKME": "```Sampai jumpa! Saya pergi 🤠```",
-            "PP_DESC": "Menjadikan foto yang anda balas dengan menulis .pp sebagai foto profil anda.",
+            "KICKME": "```Gua mau keluar bangsat```",
+            "PP_DESC": "Menjadikan foto tulis.",
             "NEED_PHOTO": "*Beri aku foto!*",
             "PPING": "```Menyetel foto profil...```",
             "BLOCK_DESC": "Block user.",
@@ -157,7 +157,7 @@
         },
         "removebg": {
             "REMOVEBG_DESC": "Menghapus latar belakang foto.",
-            "NEED_PHOTO": "*Beri aku foto!*",
+            "NEED_PHOTO": "*Mana foto lu ngab!*",
             "NO_API_KEY": "*Kamu belum menyetel API key!*\nDapatkan disini: remove.bg.",
             "RBGING": "```Menghapus latar belakang...```"
         },
@@ -180,21 +180,21 @@
             "DOWNLOADING_SONG": "```Mengunduh lagu Anda...```",
             "UPLOADING_SONG": "```Mengunggah lagu Anda...```",
             "VIDEO_DESC": "Unduh video dari YouTube.",
-            "NEED_VIDEO": "*Harap masukkan tautan video!*\n*Contoh:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
-            "DOWNLOADING_VIDEO": "```Mengunduh lagu Anda...```",
-            "UPLOADING_VIDEO": "```Mengunggah lagu Anda...```",
+            "NEED_VIDEO": "*Mana tautan yt  lu ngab!*\n*Contoh:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
+            "DOWNLOADING_VIDEO": "```Mengunduh video Lo...```",
+            "UPLOADING_VIDEO": "```Mengunggah Video Lo...```",
             "YT_DESC": "Ini mencari di YouTube.",
             "NEED_WORDS": "```Tolong tuliskan beberapa kata!```",
-            "GETTING_VIDEOS": "```Saya membawa video ...```",
-            "NOT_FOUND": "*Saya tidak dapat menemukan apa pun :(*",
+            "GETTING_VIDEOS": "```Video lu sedang gua cari ...```",
+            "NOT_FOUND": "*Gua ngak dapat apa apa ngab sory :(*",
             "SEARCHING": "*🔎 Mencari ...*",
             "WIKI_DESC": "Mencari di Wikipedia.",
             "IMG_DESC": "Mengambil foto dari Google.",
             "IMG": "Mengunggah ```{}``` foto ```{}```..."
         },
         "sticker": {
-            "STICKER_DESC": "Ini mengubah foto atau video yang Anda balas dengan mengetik .sticker menjadi stiker.",
-            "NEED_REPLY": "*Balas ke foto atau video!*",
+            "STICKER_DESC": "foto dan video jadi sticker.",
+            "NEED_REPLY": "*Balas kepoto ngab lu paham?!*",
             "DOWNLOADING": "```Mengunduh media & menjadikannya stiker...```"
         },
         "system_stats": {
@@ -203,7 +203,7 @@
         },
         "tagall": {
             "TAGALL_DESC": "Menandai semua orang di grup.",
-            "ADMİN": "*Saya bukan admin di grup ini!*"
+            "ADMİN": "*NANTI GUA ADMIN BISA MENANDAI NGAB SORY!*"
         },
         "updater": {
             "UPDATER_DESC": "Periksa pembaruan.",
@@ -214,7 +214,7 @@
             "INVALID_HEROKU": "*❌ Informasi Heroku Anda salah!*",
             "UPDATED": "*✅ Pembaruan berhasil!*",
             "UPDATED_LOCAL": "*✅ Pembaruan berhasil! *\n_Anda harus memulai ulang untuk perubahan._",
-            "AFTER_UPDATE": "*💬 Memulai Ulang WhatsAsena!*"
+            "AFTER_UPDATE": "*💬 Memulai Ulang WhatsSohuman!*"
         },
         "weather": {
             "WEATHER_DESC": "Menunjukkan cuaca.",
@@ -225,7 +225,7 @@
             "HUMI": "Kelembaban",
             "WIND": "Kecepatan angin",
             "CLOUD": "Awan",
-            "NOT_FOUND": "```Saya tidak bisa menemukan kota dengan nama ini. 😖```"
+            "NOT_FOUND": "```Kota lu Gua ngak dapat ngab sory. 😖```"
         },
         "web": {
             "SPEEDTEST_DESC": "Menguji kecepatan Unduhan dan Unggahan.",
@@ -238,11 +238,11 @@
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Mengubah video menjadi suara.",
-            "MP4TOAUDİO_NEEDREPLY": "*Anda harus menanggapi videonya!*",
-            "MP4TOAUDİO": "```Video diubah menjadi audio..```",
+            "MP4TOAUDİO_NEEDREPLY": "*Balas videonya ngab!*",
+            "MP4TOAUDİO": "```Bentar ngab sedang di ubah..```",
             "STİCKER_DESC": "Mengubah stiker menjadi foto..",
             "STİCKER_NEEDREPLY": "*Anda harus membalas stiker*",
-            "STİCKER": "```Mengonversi stiker menjadi foto..```",
+            "STİCKER": "```Bentar ngab stiker menjadi foto..```",
             "XMEDİA_DESC": "Ini adalah plugin dengan lebih dari 25 alat media.",
             "T_FALSE": "```❌ Efek TBlend Salah Dimasukkan!```\n```🔎 Perintah yang Ada:```\n\n*$dodge* - Menerapkan filter warna merah muda ke video.\n*$multiply* - Menerapkan filter warna hijau ke video.\n*$grainmerge* - Meningkatkan kontras video.\n*$and* - Menerapkan efek kilat hitam sesuai dengan kecepatan video.\n*$or* - Menerapkan efek kilat putih sesuai dengan kecepatan video.\n*$burn* - Menerapkan kontras hijau ke video.\n*$difference* - Menunjukkan perbedaan dengan mengaplikasikan relief hijau ke video.\n*$grainextract* - Menunjukkan perbedaan dengan menerapkan relief abu-abu ke video.\n*$divide* - Menunjukkan perbedaan dengan mengaplikasikan relief merah muda pada video.\n*$xor* - Menerapkan relief hijau dan efek kilat ke video.\n*$hardmix* - Mencampur warna video menjadi nada kuning dan merah.\n*$negation* - Mengubah dinamika video menjadi merah muda.",
             "T_NOT": "```💭 Anda Perlu Memasukkan Efek TBlend!\n```🔎 Perintah yang Ada:```\n\n*$dodge* - Menerapkan filter warna merah muda ke video.\n*$multiply* - Menerapkan filter warna hijau ke video.\n*$grainmerge* - Meningkatkan kontras video.\n*$and* - Menerapkan efek kilat hitam sesuai dengan kecepatan video.\n*$or* - Menerapkan efek kilat putih sesuai dengan kecepatan video.\n*$burn* - Menerapkan kontras hijau ke video.\n*$difference* - Menunjukkan perbedaan dengan mengaplikasikan relief hijau ke video.\n*$grainextract* - Menunjukkan perbedaan dengan menerapkan relief abu-abu ke video.\n*$divide* - Menunjukkan perbedaan dengan mengaplikasikan relief merah muda pada video.\n*$xor* - Menerapkan relief hijau dan efek kilat ke video.\n*$hardmix* - Mencampur warna video menjadi nada kuning dan merah.\n*$negation* - Mengubah dinamika video menjadi merah muda.",
@@ -329,7 +329,7 @@
         },
         "unvoice": {
             "UV_DESC": "Mencakup audio ke rekaman suara.",
-            "UV_REPLY": "*Anda harus membalas audio!*",
+            "UV_REPLY": "*Balas audionya ngab!*",
             "UV_PROC": "```Mengonversi ke rekaman suara..```"
         },
         "ffmpeg": {
@@ -337,7 +337,7 @@
             "FF_PROC": "Menerapkan Efek.."
         },
         "spammer": {
-            "SPAM_DESC": "Itu spam sampai Anda menghentikannya.\n⌨️ Contoh: .spam test",
+            "SPAM_DESC": "Membuat spm",
             "NEED_WORD": "*Anda harus memasukkan sebuah kata!*",
             "STOP_SPAMDESC": "Hentikan perintah spam.",
             "STOP_SPAM": "✅ *Spam berhasil dihentikan! Tolong tunggu sebentar.*",
@@ -352,7 +352,7 @@
             "VİD_NEED": "```Tanggapi Video Apa Pun!```"
         },
         "carbon": {
-            "CARBON_DESC": "Mengonversi teks menjadi foto dengan carbon.sh.",
+            "CARBON_DESC": "teks menjadi foto dengan carbon.sh.",
             "CARBON_NEEDWORD": "*Silakan tulis kalimat!*\nContoh: ```.carbon test```\nContoh: ```.carbon Making#Test```",
             "CARBON_WARN": "Harap tulis dalam bahasa TR dan EN saja!"
         },
@@ -376,10 +376,10 @@
             "GLOW_DESC": "Mengubah teks menjadi lukisan neon."
         },
         "wallpaper": {
-            "WP": "Mengirimkan wallpaper resolusi tinggi yang berbeda."
+            "WP": "wallpaper resolusi tinggi yang berbeda."
         },
         "webss": {
-            "SS_DESC": "Mengambil screenshot dari halaman di link yang diberikan.",
+            "SS_DESC": "screenshot halaman di link yang diberikan.",
             "LİNK": "Anda harus memasukkan tautan apa pun!"
         },
         "voicy": {
@@ -438,8 +438,8 @@
         },
         "tiktok": {
             "TİKTOK": "Unduh video dari Tiktok.",
-            "NEED": "```Anda Harus Memasukkan Tautan Tiktok Apa Pun!``` \n*Sampel:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
-            "DOWN": "```Pengunduhan Video..```",
+            "NEED": "```Mana tautanya ngab```",
+            "DOWN": "```Bentar sednag di unduh Video lu..```",
             "CAPTİON": "Penjelasan:",
             "USERNAME": "Nama pengguna:",
             "NAME": "Nama:",
