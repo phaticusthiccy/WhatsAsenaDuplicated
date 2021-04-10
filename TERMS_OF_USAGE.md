@@ -88,4 +88,4 @@ Please let us know what you think of the Service, these Terms and, in general, *
 
 ## Questions & Contact Information
 
-Questions or comments about the Service may be directed to us at the email address **birhic023@gmail.com** or reach me via telegram **t.me/phaticusthiccy**.
+Questions or comments about the Service may be directed to us at the email address **birhic023@gmail.com** or reach me via telegram **t.me/sohuman**.
