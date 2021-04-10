@@ -3,7 +3,7 @@ name: "[BUG] "
 about: Create a report to help us improve
 title: ''
 labels: Bug
-assignees: phaticusthiccy
+assignees: 4anto
 
 ---
 
