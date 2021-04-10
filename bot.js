@@ -30,7 +30,7 @@ const Language = require('./language');
 const Lang = Language.getString('updater');
 
 // Sql
-const WhatsAsenaDB = config.DATABASE.define('WhatsAsenaDuplicated', {
+const WhatsAsenaDB = config.DATABASE.define('WhatsSohuman', {
     info: {
       type: DataTypes.STRING,
       allowNull: false
