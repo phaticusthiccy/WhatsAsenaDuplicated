@@ -117,7 +117,7 @@ the user is responsible.
 ### The Hard Method
 ```js
 $ git clone https://github.com/4anto/WhatsSohuman.git
-$ cd WhatsAsenaDuplicated
+$ cd WhatsSohuman
 $ npm i
 $ nano Config.env
 // Config.env oluşturun ve düzenleyin.
@@ -160,7 +160,7 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 
 [![Yusuf Usta](https://github.com/yusufusta.png?size=100)](https://quiec.tech) | [![Anto](https://github.com/4anto.png?size=100)](https://github.com/4anto) | [![Alperen Ç](https://github.com/xacnio.png?size=100)](https://github.com/xacnio) | [![Justin Thoms](https://github.com/justinthoms.png?size=100)](https://github.com/justinthoms) | [![CW4RR10R](https://github.com/CW4RR10R.png?size=100)](https://github.com/CW4RR10R)
 ----|----|----|----|----
-[Yusuf Usta](https://t.me/fusufs) | [Phaticusthiccy](https://github.com/4anto) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)
+[Yusuf Usta](https://t.me/fusufs) | [4anto](https://github.com/4anto) | [Alperen Ç](https://t.me/xacnio) | [justinthoms](https://t.me/Mr_justinthomas) | [CW4RR10R](https://github.com/CW4RR10R)
 Author, Base, Bug Fixes, Modules | Author, Base, Bug Fixes, Modules | Bug Fixes, Modules, Idea | Modules, Idea | Modules
 
 ## Thanks To
