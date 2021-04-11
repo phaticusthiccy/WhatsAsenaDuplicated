@@ -1,4 +1,4 @@
-FROM fusuf/whatsAsena:latest
+FROM fusuf/whatsasena:latest
 
 RUN git clone https://github.com/4anto/WhatsSohuman /root/WhatsSohuman
 WORKDIR /root/WhatsSohuman/
