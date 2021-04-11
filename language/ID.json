@@ -88,8 +88,8 @@
         },
         "nekobin": {
             "NEKO_DESC": "Pesan yang dibalas akan ditambahkan ke nekobin.com.",
-            "NEED_REPLY": "```Harap balas pesan!```",
-            "MUST_TEXT": "```Harap balas pesan apa pun```"
+            "NEED_REPLY": "```Balas pesan ngab!```",
+            "MUST_TEXT": "```Balas pesan apa pun ngab```"
         },
         "filters": {
             "FILTER_DESC": "Menambahkan filter Balas otomatis.",
@@ -164,7 +164,7 @@
         "scrapers": {
             "TRANSLATE_DESC": "Diterjemahkan dengan Google Translate. Balas pesan apapun.",
             "TRANSLATE_USAGE": ".trt en id (Dari Inggris ke Indonesia)",
-            "NEED_REPLY": "```Harap balas pesan apapun!```",
+            "NEED_REPLY": "```Balas pesan ngab atau replay!```",
             "LANG": "Bahasa",
             "FROM": "Bahasa yang Diterjemahkan",
             "RESULT": "Diterjemahkan",
@@ -176,7 +176,7 @@
             "TTS_ERROR": "```Kesalahan, Contoh ucapan kalimat Anda tidak dapat dibuat!```",
             "SONG_DESC": "Mengunggah lagu yang Anda pilih.",
             "NEED_TEXT_SONG": "*Judul lagu apa lu yg cari ngab!*\n*Contoh:* ```.song matamu cover - stephanie poetri```",
-            "NO_RESULT": "*Sory ngab gua ngak dapat :(*",
+            "NO_RESULT": "*Sory ngab gua ngak dapat lagu lu :(*",
             "DOWNLOADING_SONG": "```Nah skarang Mengunduh lagu lu...```",
             "UPLOADING_SONG": "```Nah Mengunggah lagu lu...```",
             "VIDEO_DESC": "Unduh video dari YouTube.",
@@ -207,7 +207,7 @@
         },
         "updater": {
             "UPDATER_DESC": "Periksa pembaruan.",
-            "UPDATE": "*Bot Anda benar-benar terbaru!*",
+            "UPDATE": "*Bot lu baru tolol!*",
             "NEW_UPDATE": "*Pembaruan baru tersedia untuk Bot!*\n\nPerubahan:\n```",
             "UPDATE_NOW_DESC": "Itu membuat pembaruan.",
             "UPDATING": "_Memperbarui..._", 
@@ -439,7 +439,7 @@
         "tiktok": {
             "TİKTOK": "Unduh video dari Tiktok.",
             "NEED": "```Mana tautanya ngab```",
-            "DOWN": "```Bentar sednag di unduh Video lu..```",
+            "DOWN": "```Bentar sedang di unduh Video lu..```",
             "CAPTİON": "Penjelasan:",
             "USERNAME": "Nama pengguna:",
             "NAME": "Nama:",
