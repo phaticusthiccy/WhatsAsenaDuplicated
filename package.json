@@ -2,7 +2,7 @@
   "name": "WhatsSohuman",
   "version": "1.0.0",
   "description": "Bot untuk bersenag senang.",
-  "main": "./Whatsasena/bot.js",
+  "main": "./WhatsSohuman/bot.js",
   "scripts": {
     "start": "supervisor -s bot.js"
   },
