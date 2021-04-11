@@ -47,7 +47,7 @@
         },
         "locate": {
             "L_DESC": "Mengirimkan lokasi Anda",
-            "L_WARN": "Nyalakan lokasi Anda sebelum digunakan!"
+            "L_WARN": "🌀Nyalakan lokasi Anda sebelum digunakan!"
         },
         "afk": {
             "AFK_DESC": "Itu membuat Anda AFK.",
@@ -65,7 +65,7 @@
         },
         "evaluators": {
             "TERM_DESC": "jalankan perintah di shell server.",
-            "GIVE_ME_CODE": "*Beri aku kode!*"
+            "GIVE_ME_CODE": "*🌀Beri aku kode!*"
         },
         "heroku": {
             "RESTART_DESC": "Mulai ulang WhatsSohuman",
@@ -78,7 +78,7 @@
             "PERCENTAGE": "```Persentase```",
             "DYNO_LEFT": "```Sisa```",
             "SETVAR_DESC": "Set heroku config var",
-            "SET_SUCCESS": "Berhasil disetel ```{} ➜ {}```",
+            "SET_SUCCESS": "🌀Berhasil disetel ```{} ➜ {}```",
             "KEY_VAL_MISSING": "```Baik Kunci atau Nilai tidak ada```",
             "INVALID": "```Kunci tidak valid: format nilai```",
             "GETVAR_DESC": "Dapatkan heroku config var",
@@ -104,31 +104,31 @@
         },
         "greetings": {
             "WELCOME_DESC": "Ini Menyetel pesan selamat datang.",
-            "NOT_SET_WELCOME": "*Anda belum menyetel pesan selamat datang.!*\n**Untuk menyetel:** ```.welcome Hai && Hai#ada apa```",
+            "NOT_SET_WELCOME": "*🌀Anda belum menyetel pesan selamat datang.!*\n**Untuk menyetel:** ```.welcome Hai && Hai#ada apa```",
             "WELCOME_ALREADY_SETTED": "*✅ Pesan selamat datang sudah disetel!*\n*Pesan:* ```",
-            "NEED_WELCOME_TEXT": "*Anda harus menulis pesan untuk Menyetel pesan selamat datang.*\n*Contoh:* ```.welcome Hai && Hai#ada apa```",
+            "NEED_WELCOME_TEXT": "*🌀Anda harus menulis pesan untuk Menyetel pesan selamat datang.*\n*Contoh:* ```.welcome Hai && Hai#ada apa```",
             "WELCOME_DELETED": "*✅ Pesan selamat datang berhasil dihapus!*",
             "WELCOME_SETTED": "*✅ Pesan selamat datang berhasil disetel!*",
             "GOODBYE_DESC": "Menyetel pesan selamat tinggal.",
-            "NOT_SET_GOODBYE": "*Anda tidak menyetel pesan selamat tinggal!*\n*Untuk menyetel:* ```.goodbye Selamat tinggal && Selamat tinggal#Goreng```",
+            "NOT_SET_GOODBYE": "*🌀Anda tidak menyetel pesan selamat tinggal!*\n*Untuk menyetel:* ```.goodbye Selamat tinggal && Selamat tinggal#Goreng```",
             "GOODBYE_ALREADY_SETTED": "*✅ Pesan selamat tinggal telah disetel.!*\n*Pesan:* ```",
-            "NEED_GOODBYE_TEXT": "*Anda harus menulis pesan untuk menyetel pesan selamat tinggal.*\n*Contoh:* ```.goodbye Selamat tinggal && Selamat tinggal#Goreng```",
+            "NEED_GOODBYE_TEXT": "*🌀Anda harus menulis pesan untuk menyetel pesan selamat tinggal.*\n*Contoh:* ```.goodbye Selamat tinggal && Selamat tinggal#Goreng```",
             "GOODBYE_DELETED": "*✅ Pesan selamat tinggal telah berhasil dihapus!*",
             "GOODBYE_SETTED": "*✅ Pesan selamat tinggal telah berhasil disetel!*"
         },
         "lydia": {
             "ADDLYDIA_DESC": "Mengaktifkan Lydia untuk pengguna.",
-            "NEED_REPLY": "```Harap balas pesan pengguna!```",
-            "COFFEEHOUSE": "```Anda belum menentukan Kunci API Coffehouse! ```",
-            "ENABLED_LYDIA": "```Lydia telah diaktifkan untuk pengguna ini!```",
+            "NEED_REPLY": "```🌀Harap balas pesan pengguna!```",
+            "COFFEEHOUSE": "```🌀Anda belum menentukan Kunci API Coffehouse! ```",
+            "ENABLED_LYDIA": "```🌀Lydia telah diaktifkan untuk pengguna ini!```",
             "RMLYDIA_DESC": "Membuat Lydia dinonaktifkan untuk pengguna.",
-            "ALREADY_EMPTY": "```Daftar pengguna Anda sudah kosong!```",
-            "NOT_ADDED": "```Anda belum menambahkan pengguna ini!```",
-            "DISABLED": "```Lydia telah dinonaktifkan untuk pengguna ini!```"
+            "ALREADY_EMPTY": "```🌀Daftar pengguna Anda sudah kosong!```",
+            "NOT_ADDED": "```🌀Anda belum menambahkan pengguna ini!```",
+            "DISABLED": "```🌀Lydia telah dinonaktifkan untuk pengguna ini!```"
         },
         "memes": {
             "MEMES_DESC": "Photo memes you replied to.",
-            "NEED_REPLY": "*Reply to a photo!*",
+            "NEED_REPLY": "*🌀Reply to a photo!*",
             "DOWNLOADING": "```Downloading media & making meme...```"
         },
         "ocr": {
@@ -140,26 +140,26 @@
         },
         "profile": {
             "KICKME_DESC": "Menendangmu Keluar dari grup!",
-            "KICKME": "```Gua mau keluar bangsat```",
+            "KICKME": "```🌀Gua mau keluar bangsat```",
             "PP_DESC": "Menjadikan foto tulis.",
-            "NEED_PHOTO": "*Beri aku foto!*",
-            "PPING": "```Menyetel foto profil...```",
+            "NEED_PHOTO": "*🌀Beri aku foto!*",
+            "PPING": "```🌀Menyetel foto profil...```",
             "BLOCK_DESC": "Block user.",
             "UNBLOCK_DESC": "Unblock user.",
-            "BLOCKED": "diblokir",
-            "UNBLOCKED": "tidak diblokir",
-            "BLOCKED_UPPER": "Diblokir!",
-            "UNBLOCKED_UPPER": "tidak diblokir.",
-            "NEED_USER": "Beri saya pengguna!",
+            "BLOCKED": "🌀diblokir",
+            "UNBLOCKED": "🌀tidak diblokir",
+            "BLOCKED_UPPER": "🌀Diblokir!",
+            "UNBLOCKED_UPPER": "🌀tidak diblokir.",
+            "NEED_USER": "🌀Beri saya pengguna!",
             "JID_DESC": "Giving user's JID.",
             "JID": "```JID address of``` @{} ```: {}```",
             "JID_CHAT": "```Chat's JID address: {}```"
         },
         "removebg": {
             "REMOVEBG_DESC": "Menghapus latar belakang foto.",
-            "NEED_PHOTO": "*Mana foto lu ngab!*",
-            "NO_API_KEY": "*Kamu belum menyetel API key!*\nDapatkan disini: remove.bg.",
-            "RBGING": "```Menghapus latar belakang...```"
+            "NEED_PHOTO": "*🌀Mana foto lu ngab!*",
+            "NO_API_KEY": "*🌀Kamu belum menyetel API key!*\nDapatkan disini: remove.bg.",
+            "RBGING": "```🌀Bentar Gua lagi hapus latar belakang...```"
         },
         "scrapers": {
             "TRANSLATE_DESC": "Diterjemahkan dengan Google Translate. Balas pesan apapun.",
@@ -175,16 +175,16 @@
             "TTS_DESC": "Ini mengubah teks menjadi suara.",
             "TTS_ERROR": "```Kesalahan, Contoh ucapan kalimat Anda tidak dapat dibuat!```",
             "SONG_DESC": "Mengunggah lagu yang Anda pilih.",
-            "NEED_TEXT_SONG": "*Judul lagu apa lu yg cari ngab!*\n*Contoh:* ```.song matamu cover - stephanie poetri```",
-            "NO_RESULT": "*Sory ngab gua ngak dapat lagu lu :(*",
-            "DOWNLOADING_SONG": "```Nah skarang Mengunduh lagu lu...```",
+            "NEED_TEXT_SONG": "*🌀Judul lagu apa lu yg cari ngab!*\n*Contoh:* ```.song matamu cover - stephanie poetri```",
+            "NO_RESULT": "*🌀Sory ngab gua ngak dapat lagu lu :(*",
+            "DOWNLOADING_SONG": "```🌀Bentar Gua lagi cari lagu lu...```",
             "UPLOADING_SONG": "```Nah Mengunggah lagu lu...```",
             "VIDEO_DESC": "Unduh video dari YouTube.",
-            "NEED_VIDEO": "*Mana tautan yt  lu ngab!*\n*Contoh:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
-            "DOWNLOADING_VIDEO": "```Mengunduh video Lo...```",
-            "UPLOADING_VIDEO": "```Mengunggah Video Lo...```",
+            "NEED_VIDEO": "*🌀Mana tautan yt  lu ngab!*\n*Contoh:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
+            "DOWNLOADING_VIDEO": "```🌀Mengunduh video Lo...```",
+            "UPLOADING_VIDEO": "```🌀Mengunggah Video Lo...```",
             "YT_DESC": "Ini mencari di YouTube.",
-            "NEED_WORDS": "```Tolong tuliskan beberapa kata!```",
+            "NEED_WORDS": "```🌀Mana Tautan Youtube lu ngab!```",
             "GETTING_VIDEOS": "```Video lu sedang gua cari ...```",
             "NOT_FOUND": "*Gua ngak dapat apa apa ngab sory :(*",
             "SEARCHING": "*🔎 Mencari ...*",
@@ -194,7 +194,7 @@
         },
         "sticker": {
             "STICKER_DESC": "foto dan video jadi sticker.",
-            "NEED_REPLY": "*Balas kepoto ngab lu paham?!*",
+            "NEED_REPLY": "*🌀Balas kepoto ngab lu paham?!*",
             "DOWNLOADING": "```Mengunduh media & menjadikannya stiker...```"
         },
         "system_stats": {
@@ -203,14 +203,14 @@
         },
         "tagall": {
             "TAGALL_DESC": "Menandai semua orang di grup.",
-            "ADMİN": "*NANTI GUA ADMIN BISA MENANDAI NGAB SORY!*"
+            "ADMİN": "*🌀NANTI GUA ADMIN BISA MENANDAI NGAB SORY!*"
         },
         "updater": {
             "UPDATER_DESC": "Periksa pembaruan.",
-            "UPDATE": "*Bot lu baru tolol!*",
-            "NEW_UPDATE": "*Pembaruan baru tersedia untuk Bot!*\n\nPerubahan:\n```",
+            "UPDATE": "*🌀Bot lu baru tolol!*",
+            "NEW_UPDATE": "*🌀Pembaruan baru tersedia untuk Bot!*\n\nPerubahan:\n```",
             "UPDATE_NOW_DESC": "Itu membuat pembaruan.",
-            "UPDATING": "_Memperbarui..._", 
+            "UPDATING": "_🌀Bentar Ngab Sedang Memperbarui..._", 
             "INVALID_HEROKU": "*❌ Informasi Heroku Anda salah!*",
             "UPDATED": "*✅ Pembaruan berhasil!*",
             "UPDATED_LOCAL": "*✅ Pembaruan berhasil! *\n_Anda harus memulai ulang untuk perubahan._",
@@ -218,19 +218,19 @@
         },
         "weather": {
             "WEATHER_DESC": "Menunjukkan cuaca.",
-            "NEED_LOCATION": "*Silakan tulis lokasinya!*\n*Contoh:* ```.weather Sukoharjo```",
+            "NEED_LOCATION": "*🌀Tulis Nama Lokasimu Ngab!*\n*Contoh:* ```.weather Sukoharjo```",
             "LOCATION": "Lokasi",
-            "TEMP": "Suhu",
-            "DESC": "Deskripsi",
-            "HUMI": "Kelembaban",
-            "WIND": "Kecepatan angin",
-            "CLOUD": "Awan",
+            "TEMP": "🌀Suhu",
+            "DESC": "🌀Deskripsi",
+            "HUMI": "🌀Kelembaban",
+            "WIND": "🌀Kecepatan angin",
+            "CLOUD": "🌀Awan",
             "NOT_FOUND": "```Kota lu Gua ngak dapat ngab sory. 😖```"
         },
         "web": {
             "SPEEDTEST_DESC": "Menguji kecepatan Unduhan dan Unggahan.",
-            "SPEEDTESTING": "```Menguji kecepatan...```",
-            "SPEEDTEST_RESULT": "*Uji kecepatan selesai!*",
+            "SPEEDTESTING": "```🌀Menguji kecepatan...```",
+            "SPEEDTEST_RESULT": "*🌀Uji kecepatan selesai!*",
             "UPLOAD": "Unggah",
             "DOWNLOAD": "Unduh",
             "PING_DESC": "Mengukur ping anda.",
@@ -238,11 +238,11 @@
         },
         "conventer": {
             "MP4TOAUDİO_DESC": "Mengubah video menjadi suara.",
-            "MP4TOAUDİO_NEEDREPLY": "*Balas videonya ngab!*",
-            "MP4TOAUDİO": "```Bentar ngab sedang di ubah..```",
+            "MP4TOAUDİO_NEEDREPLY": "*🌀Balas videonya ngab!*",
+            "MP4TOAUDİO": "```🌀Bentar ngab sedang di ubah..```",
             "STİCKER_DESC": "Mengubah stiker menjadi foto..",
-            "STİCKER_NEEDREPLY": "*Anda harus membalas stiker*",
-            "STİCKER": "```Bentar ngab stiker menjadi foto..```",
+            "STİCKER_NEEDREPLY": "*🌀Balas Sticker Ngab*",
+            "STİCKER": "```🌀Bentar ngab stiker menjadi foto..```",
             "XMEDİA_DESC": "Ini adalah plugin dengan lebih dari 25 alat media.",
             "T_FALSE": "```❌ Efek TBlend Salah Dimasukkan!```\n```🔎 Perintah yang Ada:```\n\n*$dodge* - Menerapkan filter warna merah muda ke video.\n*$multiply* - Menerapkan filter warna hijau ke video.\n*$grainmerge* - Meningkatkan kontras video.\n*$and* - Menerapkan efek kilat hitam sesuai dengan kecepatan video.\n*$or* - Menerapkan efek kilat putih sesuai dengan kecepatan video.\n*$burn* - Menerapkan kontras hijau ke video.\n*$difference* - Menunjukkan perbedaan dengan mengaplikasikan relief hijau ke video.\n*$grainextract* - Menunjukkan perbedaan dengan menerapkan relief abu-abu ke video.\n*$divide* - Menunjukkan perbedaan dengan mengaplikasikan relief merah muda pada video.\n*$xor* - Menerapkan relief hijau dan efek kilat ke video.\n*$hardmix* - Mencampur warna video menjadi nada kuning dan merah.\n*$negation* - Mengubah dinamika video menjadi merah muda.",
             "T_NOT": "```💭 Anda Perlu Memasukkan Efek TBlend!\n```🔎 Perintah yang Ada:```\n\n*$dodge* - Menerapkan filter warna merah muda ke video.\n*$multiply* - Menerapkan filter warna hijau ke video.\n*$grainmerge* - Meningkatkan kontras video.\n*$and* - Menerapkan efek kilat hitam sesuai dengan kecepatan video.\n*$or* - Menerapkan efek kilat putih sesuai dengan kecepatan video.\n*$burn* - Menerapkan kontras hijau ke video.\n*$difference* - Menunjukkan perbedaan dengan mengaplikasikan relief hijau ke video.\n*$grainextract* - Menunjukkan perbedaan dengan menerapkan relief abu-abu ke video.\n*$divide* - Menunjukkan perbedaan dengan mengaplikasikan relief merah muda pada video.\n*$xor* - Menerapkan relief hijau dan efek kilat ke video.\n*$hardmix* - Mencampur warna video menjadi nada kuning dan merah.\n*$negation* - Mengubah dinamika video menjadi merah muda.",
@@ -329,16 +329,16 @@
         },
         "unvoice": {
             "UV_DESC": "Mencakup audio ke rekaman suara.",
-            "UV_REPLY": "*Balas audionya ngab!*",
-            "UV_PROC": "```Mengonversi ke rekaman suara..```"
+            "UV_REPLY": "*🌀Balas audionya ngab!*",
+            "UV_PROC": "```🌀Mengonversi ke rekaman suara..```"
         },
         "ffmpeg": {
             "FF_DESC": "Menerapkan efek ffmpeg yang diinginkan ke video.\n⌨️ Contoh: .ffmpeg fade=in:0:30",
-            "FF_PROC": "Menerapkan Efek.."
+            "FF_PROC": "🌀Menerapkan Efek.."
         },
         "spammer": {
             "SPAM_DESC": "Membuat spm",
-            "NEED_WORD": "*Anda harus memasukkan sebuah kata!*",
+            "NEED_WORD": "*🌀Anda harus memasukkan sebuah kata!*",
             "STOP_SPAMDESC": "Hentikan perintah spam.",
             "STOP_SPAM": "✅ *Spam berhasil dihentikan! Tolong tunggu sebentar.*",
             "ST_DESC": "Konversikan foto atau video yang dibalas agar tetap dan kirimkan sebagai spam.",
@@ -368,7 +368,7 @@
         },
         "ttp": {
             "TTP_DESC": "Mengonversi teks menjadi lukisan biasa.",
-            "NEED_WORD": "*Anda harus memasukkan kata-kata!*",
+            "NEED_WORD": "*🌀Mana kata kata lu ngab!*",
             "ANIME_DESC": "Dia menulis teks di dalam spanduk yang dipegang oleh gadis anime itu.",
             "TRUMP_DESC": "Mengubah teks menjadi tweet Trump.",
             "CHANGE_DESC": "Mengubah artikel menjadi poster change my mind.",
@@ -380,7 +380,7 @@
         },
         "webss": {
             "SS_DESC": "screenshot halaman di link yang diberikan.",
-            "LİNK": "Anda harus memasukkan tautan apa pun!"
+            "LİNK": "🌀Anda harus memasukkan tautan apa pun!"
         },
         "voicy": {
             "NEED_REPLY": "```Harap balas pesan pengguna!```",
@@ -400,7 +400,7 @@
             "SUCCESSFULLY_DELETED": "Semua catatan Anda telah berhasil dihapus."
         },
         "instagram": {
-            "NEED_WORD": "*Ketik nama pengguna instagram apa saja.*",
+            "NEED_WORD": "*🌀Ketik nama pengguna instagram apa saja.*",
             "USAGE": ".insta <username>",
             "DESC": "Instagram menjangkau informasi pengguna.",
             "LOADING": "Memuat profil pengguna.. Mohon tunggu.",
@@ -416,7 +416,7 @@
         },
         "github": {
             "GİTHUB_DESC": "Mengumpulkan informasi github dari nama pengguna yang diberikan.\n⌨️ Contoh: .github phaticusthiccy",
-            "REPLY": "```Anda Perlu Memasukkan Nama Pengguna Apa Pun!```",
+            "REPLY": "```🌀Anda Perlu Memasukkan Nama Pengguna Apa Pun!```",
             "NOT": "```Pengguna tidak ditemukan!```",
             "FOLLOWERS": "Pengikut:",
             "NAME": "Nama:",
@@ -438,8 +438,8 @@
         },
         "tiktok": {
             "TİKTOK": "Unduh video dari Tiktok.",
-            "NEED": "```Mana tautanya ngab```",
-            "DOWN": "```Bentar sedang di unduh Video lu..```",
+            "NEED": "```🌀Mana tautanya ngab```",
+            "DOWN": "```🌀Bentar sedang di unduh Video lu..```",
             "CAPTİON": "Penjelasan:",
             "USERNAME": "Nama pengguna:",
             "NAME": "Nama:",
@@ -452,7 +452,7 @@
         },
         "lyrics": {
             "LY_DESC": "Menemukan lirik lagu.",
-            "NEED": "```Anda Harus Menulis Lagu Apa Saja!```",
+            "NEED": "```🌀Tulis Juduk lagunya ngab!```",
             "SLY": "Lirik:",
             "AUT": "Pemilik Lagu:",
             "BUL": "Menemukan Lagu:",
@@ -460,7 +460,7 @@
         },
         "covid": {
             "COV_DESC": "Menunjukkan tabel covid harian dan keseluruhan lebih dari 15 negara.",
-            "NOT": "```Maaf Saya Tidak Dapat Menemukan Negara Seperti Ini! Harap Masukkan Kode Negara yang Berlaku!```\n\n```Kode Negara:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
+            "NOT": "```🌀Maaf Saya Tidak Dapat Menemukan Negara Seperti Ini! Harap Masukkan Kode Negara yang Berlaku!```\n\n```Kode Negara:``` *.covid tr || az || usa || in || cn || nl || pk || ru || de || uk || gr || fr || jp || kz || id*"
         }
     }
 }
