@@ -1,6 +1,6 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
+/* Codded by @4anto
+Telegram: t.me/4anto
+Instagram: www.instagram.com/4anto0
 
 Special Thanks:
 @Unique_hunter for Helps
