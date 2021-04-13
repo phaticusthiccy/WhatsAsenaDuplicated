@@ -452,6 +452,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             var sup = config.SUPPORT.split(',');                            
             if(msg.key.remoteJid.includes('-') ? sup.includes(msg.key.remoteJid.split('@')[0]) : sup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
+        if (config.SUPPORT2 == '905511384572-1617736751') {     
+            var tsup = config.SUPPORT2.split(',');                            
+            if(msg.key.remoteJid.includes('-') ? tsup.includes(msg.key.remoteJid.split('@')[0]) : tsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+        }
         // ==================== End Blocked Chats ====================
 
         // ==================== Events ====================
@@ -552,6 +556,15 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                         '\n\n*Ana Hata:* _Split of Undefined_' +
                                         '\n*Nedeni:* _Grup adminlerinin kullanabildiği komutların ara sıra split fonksiyonunu görememesi._ ' +
                                         '\n*Çözümü:* _Restart atmanız yeterli olacaktır._'
+                                        , MessageType.text
+                                    );
+                                }
+                                else if (error.message.includes('401')) {
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n\n*Ana Hata:* _Undefined Lydia API Key_' +
+                                        '\n*Nedeni:* _Lydia yapay zekayı çalıştırmak için gerekli API anahtarının tahsis edilmemiş olması._ ' +
+                                        '\n*Çözümü:* _https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY \nBu adrese gidip lütfen Lydia için API anahtarı ayarlayın._'
                                         , MessageType.text
                                     );
                                 }
@@ -659,6 +672,15 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                         '\n\n*Main Error:* _Only Absolutely URLs Supported_' +
                                         '\n*Reason:* _The usage of media tools (xmedia, sticker..) in the LOG number._' +
                                         '\n*Solution:* _You can use commands in any chat, except the LOG number._'
+                                        , MessageType.text
+                                    );
+                                }
+                                else if (error.message.includes('401')) {
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
+                                        '\n========== ```Error Resolved!``` ==========' +
+                                        '\n\n*Ana Hata:* _Undefined Lydia API Key_' +
+                                        '\n*Nedeni:* _The API key required to run Lydia artificial intelligence is not allocated._ ' +
+                                        '\n*Çözümü:* _Please, go here to set Lydia API key._ \nhttps://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY'
                                         , MessageType.text
                                     );
                                 }
