@@ -27,9 +27,13 @@ Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: Lang.ST_DESC }, 
             if (err) {
                 throw err;
             }
-        
-            await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+            for (i = 0; i < 2000; i++) {
+                await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
+            };
+            
+            /* wow... a simple loop make this better
 
+
             await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
 
             await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
@@ -3003,7 +3007,7 @@ Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: Lang.ST_DESC }, 
             await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
 
             await message.sendMessage(fs.readFileSync('./output.webp'), MessageType.sticker);
-
+            */
         });
     }
 
@@ -3012,6 +3016,10 @@ Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: Lang.ST_DESC }, 
         .save('sticker.webp')
         .on('end', async () => {
 
+            for (i = 0; i < 2000; i++) {
+                await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
+            };
+            /*
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
 
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
@@ -4548,6 +4556,6 @@ Asena.addCommand({pattern: 'sticker spam$', fromMe: true, desc: Lang.ST_DESC }, 
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
 
             await message.sendMessage(fs.readFileSync('sticker.webp'), MessageType.sticker);
-
+            */
         });
 }));

@@ -41,7 +41,11 @@ Asena.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (a
     var spam = `${match[1]}`
     var fin = spam.replace(/#/g, "\n");
 
-    await message.client.sendMessage(message.jid, fin, MessageType.text);
+    for (i = 0; i < 2000; i++) {
+        await message.client.sendMessage(message.jid, fin, MessageType.text);
+    };
+    /*
+    wow... a simple loop make this better
     
     await message.client.sendMessage(message.jid, fin, MessageType.text);
     
@@ -2568,4 +2572,5 @@ Asena.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (a
     await message.client.sendMessage(message.jid, fin, MessageType.text);
     
     await message.client.sendMessage(message.jid, fin, MessageType.text);
+    */
 }));

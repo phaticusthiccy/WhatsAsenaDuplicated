@@ -24,9 +24,17 @@ Asena.addCommand({pattern: 'vid spam$', fromMe: true, desc: Lang.VİD_DESC }, (a
     ffmpeg(location)
         .save('output.mp4')
         .on('end', async () => {
+            for (i = 0; i < 2000; i++) {
+                await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
+            };
 
-            await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
+            /*
+             wow... a simple loop make this better
+
 
+
+
+             
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
 
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
@@ -3047,6 +3055,6 @@ Asena.addCommand({pattern: 'vid spam$', fromMe: true, desc: Lang.VİD_DESC }, (a
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
 
             await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg});
-
+            */
         });
 }));
