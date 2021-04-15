@@ -258,7 +258,7 @@
             "FF_PROC": "Aplicar efecto.."
         }, 
         "mute": { 
-            "BİRMUTE": "*¡Grupo silenciado durante 1 minuto! *", 
+            "BİRMUTE": "*¡Grupo silenciado durante* ", 
             "İKİMUTE": "*¡El grupo fue silenciado durante 2 minutos!*", 
             "ÜÇMUTE": "*¡El grupo fue silenciado durante 3 minutos! *", 
             "DÖRTMUTE": "*¡El grupo fue silenciado durante 4 minutos! *",

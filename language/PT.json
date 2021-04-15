@@ -249,7 +249,7 @@
             "T_DESC": "Aplica o efeito TBlend selecionado a vídeos." 
         },
         "mute": {
-            "BİRMUTE": "*O grupo foi silenciado por 1 minuto!*",
+            "BİRMUTE": "*O grupo foi silenciado por* ",
             "İKİMUTE": "*O grupo foi silenciado por 2 minutos!*",
             "ÜÇMUTE": "*O grupo foi silenciado por 3 minutos!*",
             "DÖRTMUTE": "*O grupo foi silenciado por 4 minutos!*",

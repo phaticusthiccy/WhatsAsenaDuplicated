@@ -249,7 +249,7 @@
             "T_DESC": "Menerapkan efek TBlend yang dipilih ke video." 
         },
         "mute": {
-            "BİRMUTE": "*Grup dibungkam selama 1 menit!*",
+            "BİRMUTE": "*Grup dibungkam selama 1* ",
             "İKİMUTE": "*Grup dibungkam selama 2 menit!*",
             "ÜÇMUTE": "*Grup dibungkam selama 3 menit!*",
             "DÖRTMUTE": "*Grup dibungkam selama 4 menit!*",

@@ -247,7 +247,7 @@
             "T_DESC": "Seçilmiş TBlend effektini videolara tətbiq edir." 
         },
         "mute": {
-            "BİRMUTE": "*Grup 1 dakika süreyle susturuldu!*",
+            "BİRMUTE": "*Grup tarafından susturuldu* ",
             "İKİMUTE": "*Grup 2 dakika süreyle susturuldu!*",
             "ÜÇMUTE": "*Grup 3 dakika süreyle susturuldu!*",
             "DÖRTMUTE": "*Grup 4 dakika süreyle susturuldu!*",
