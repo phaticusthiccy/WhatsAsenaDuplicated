@@ -55,6 +55,16 @@
             "required": false,
             "value": "default"
         },
+        "BLOCK_MESSAGE": {
+            "description": "Düzenlenebilir Block Mesajı. Customizable Block Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
+        "UNBLOCK_MESSAGE": {
+            "description": "Düzenlenebilir Unblock Mesajı. Customizable Unblock Message! Use => default, to change back.",
+            "required": false,
+            "value": "default"
+        },
         "WORK_TYPE": {
             "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
             "required": true,
