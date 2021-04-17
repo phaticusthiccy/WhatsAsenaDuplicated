@@ -217,7 +217,7 @@
             "UPDATING": "_Güncelleme yapılıyor..._",
             "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
             "UPDATED": "*✅ Güncelleme başarılı oldu!*",
-            "IN_AF": "*Lütfen* _HEROKU_APP_NAME_ *ile* _app name_\'nin *aynı olduğuna emin olun.* \n\n*Bilgiler doğru ise lütfen* _HEROKU_API_KEY_\'inizi *yenileyin.*",
+            "IN_AF": "*Lütfen* _HEROKU_APP_NAME_ *ile* _app name_'nin *aynı olduğuna emin olun.* \n\n*Bilgiler doğru ise lütfen* _HEROKU_API_KEY_'inizi *yenileyin.*",
             "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*",
             "AFTER_UPDATE": "*💬 WhatsAsena Yeniden Başlatılıyor*"
         },
