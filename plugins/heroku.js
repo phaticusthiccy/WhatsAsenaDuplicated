@@ -14,6 +14,7 @@ const {MessageType} = require('@adiwajshing/baileys');
 
 const Language = require('../language');
 const Lang = Language.getString('heroku');
+const Langr = Language.getString('lydia');
 
 const heroku = new Heroku({
     token: Config.HEROKU.API_KEY
@@ -21,6 +22,123 @@ const heroku = new Heroku({
 
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
+
+Asena.addCommand({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC}, (async (message, match) => {
+
+    if (match[1] == '' && message.reply_message) {
+        return await message.client.sendMessage(message.jid, Lang.DEGİS_NONE, MessageType.text); 
+    }
+    else if (match[1] == ''  && !message.reply_message) {
+        return await message.client.sendMessage(message.jid, Langr.NEED_REPLY, MessageType.text); 
+    }
+    else if (match[1] == 'ban' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['BAN_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'mute' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['MUTE_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'unmute' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['UNMUTE_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'kickme' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['KICKME_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'afk' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['AFK_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'alive' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['ALIVE_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'demote' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['DEMOTE_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'promote' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['PROMOTE_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'block' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['BLOCK_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if (match[1] == 'unblock' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await new Promise(r => setTimeout(r, 1200));
+        await message.client.sendMessage(message.jid, Lang.SUCC_AF, MessageType.text);
+        await heroku.patch(baseURI + '/config-vars', { 
+            body: { 
+                ['UNBLOCK_MESSAGE']: message.reply_message.text
+            } 
+        });
+    }
+    else if ((!match[1] == 'unblock' || !match[1] == 'block' || !match[1] == 'mute' || !match[1] == 'unmute' || !match[1] == 'afk' || !match[1] == 'alive' || !match[1] == 'demote' || !match[1] == 'promote' || !match[1] == 'ban' || !match[1] == 'kickme') && message.reply_message) {
+        return await message.client.sendMessage(message.jid, Lang.WR, MessageType.text);
+    }
+    else if ((!match[1] == 'unblock' || !match[1] == 'block' || !match[1] == 'mute' || !match[1] == 'unmute' || !match[1] == 'afk' || !match[1] == 'alive' || !match[1] == 'demote' || !match[1] == 'promote' || !match[1] == 'ban' || !match[1] == 'kickme') && !message.reply_message) {
+        return await message.client.sendMessage(message.jid, Lang.WR, MessageType.text);
+    }
+}));
+
 
 Asena.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
 
