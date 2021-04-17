@@ -57,8 +57,11 @@ Asena.addCommand({pattern: 'update now$', fromMe: true, desc: Lang.UPDATE_NOW_DE
             try {
                 var app = await heroku.get('/apps/' + Config.HEROKU.APP_NAME)
             } catch {
-                return await message.client.sendMessage(
+                await message.client.sendMessage(
                     message.jid,Lang.INVALID_HEROKU, MessageType.text);
+                await new Promise(r => setTimeout(r, 1000));
+                return await message.client.sendMessage(
+                    message.jid,Lang.IN_AF, MessageType.text);
             }
 
             git.fetch('upstream', Config.BRANCH);
