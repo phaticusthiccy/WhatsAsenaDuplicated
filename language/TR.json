@@ -23,7 +23,8 @@
             "REMOVE_DESC": "Plugin kaldırır.",
             "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin test```",
             "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
-            "DELETED": "*✅ Modül başarıyla silindi!*"
+            "DELETED": "*✅ Modül başarıyla silindi!*",
+            "WARN": "Pluginleri sadece t.me/remasterplugin kanalından alın."
         },
         "admin": {
             "BAN_DESC": "Gruptan kişi banlar. Yanıt verin ya da komutun yanına kişiyi etiketleyin.",
@@ -91,7 +92,7 @@
             "DEL_SUCCESS": "```{} başarıyla silindi```",
             "SUCC": "*Başarıyla Ayarlandı ✅* \n*Lütfen Biraz Bekleyin.*",
             "SUCC_AF": "*Eski haline döndürmek için* ```default``` *yazısını kullanın.*",
-            "DEGİS_NONE": "```Lütfen Herhangi Bir Modül İsmi Girin!``` \n\n*.degis afk*\n*.degis alive*\n*.degis ban*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```Lütfen Herhangi Bir Modül İsmi Girin!``` \n\n*.degis afk*\n*.degis alive*\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Lütfen geçerli olan modülleri kullanın!*",
             "DEGİS_DESC": "Alive, afk gibi modüllerin metinlerini değiştirir.",
             "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"           
@@ -206,8 +207,36 @@
             "SYSD_DESC": "Sistem özelliklerini söyler."
         },
         "tagall": {
-            "TAGALL_DESC": "Gruptaki herkesi etiketler.",
-            "ADMİN": "*Bu Grupta Admin Değilim!*"
+            "TAGALL_DESC": "Gruptaki herkesi etiketler. Hidetag atmak için mesajı yanıtlayın yada kelime girin.",
+            "ADMİN": "*Bu Grupta Admin Değilim!*",
+            "SCAN": "Girilen numaranın WhatApp'ta kayıtlı olup olmadığını kontrol eder.",
+            "NO": "*Lütfen Herhangi Bir Telefon Numarası Gir!*\n*Örnek:* ```.scan 90xxxx```",
+            "SUC": "*Numaralı Kişi WhatApp Kullanıyor! ✅*",
+            "UNSUC": "*Numaralı Kişi WhatApp Kullanmıyor! ❌*",
+            "TAGADMİN": "Grup adminlerini etiketler.",
+            "REPORT": "Grup adminlerine rapor gönderir.",
+            "USER": "=== ```Rapor``` ===\n\n*Kullanıcı:* ",
+            "REASON": "\n*Sebep:* ",
+            "REPLY": "*Lütfen Rapor Edilecek Kullanıcının Mesajına Yanıt Verin!*"
+        },
+        "whois": {
+            "WHO": "Grup veya kişinin metadata verisini gösterir.",
+            "SUB": "*Grup İsmi:* ",
+            "DES": "*Grup Açıklaması:* ",
+            "OWN": "*Kurucu:* ",
+            "COD": "*Eşsiz Grup Kodu:* ",
+            "JİD": "*Kişi JID:* ",
+            "ST": "*Kişi Durumu:* "
+        },
+        "log": {
+            "LOG": "Yanıtladığınız mesajı özel numaranıza kaydeder",
+            "REPLY": "*Lütfen Herhangi Bir Mesajı Yanıtlayın!*",
+            "ANIM": "Hareketli stickerleri desteklemez!",
+            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
+            "USER": " Numaralı Kullanıcıdan \n",
+            "FROM": " ID'li Gruptan, ",
+            "MSG": "Mesaj: \n\n",
+            "SUC": "*Mesaj Başarıyla LOG'a Kaydedildi!*"
         },
         "updater": {
             "UPDATER_DESC": "Güncelleme denetler.",
@@ -219,7 +248,8 @@
             "UPDATED": "*✅ Güncelleme başarılı oldu!*",
             "IN_AF": "*Lütfen* _HEROKU_APP_NAME_ *ile* _app name_'nin *aynı olduğuna emin olun.* \n\n*Bilgiler doğru ise lütfen* _HEROKU_API_KEY_'inizi *yenileyin.*",
             "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*",
-            "AFTER_UPDATE": "*💬 WhatsAsena Yeniden Başlatılıyor*"
+            "AFTER_UPDATE": "*💬 WhatsAsena Yeniden Başlatılıyor*",
+            "IN_AF": "*Lütfen* ```HEROKU_APP_NAME``` *ile* ```app name```'nizin *aynı olduğuna emin olun.*\n*Bu iki değer aynı ise lütfen* ```HEROKU_API_KEY```'inizi *değiştirin!*\n\n_Bu ayarlara ulaşmak için Heroku >> Uygulama >> Settings >> Reavel Config Vars adımlarını takip edin._\n_API keyinizi yenilemek için Heroku >> Account >> API Key kısmından yeniledikten sonra eski API key ile değiştirin._"
         },
         "weather": {
             "WEATHER_DESC": "Hava durumu getirir.\n⌨️ Örnek: .weather bakü",
