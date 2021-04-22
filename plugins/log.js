@@ -42,11 +42,11 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                 message: message.reply_message.data.quotedMessage
             });
             ffmpeg(location)
-            .save('log.jpg')
+            .save('im.jpg')
             .on('end', async () => {
                 await message.client.sendMessage(
                     message.client.user.jid,
-                    fs.readFileSync('log.jpg'),
+                    fs.readFileSync('im.jpg'),
                     MessageType.image,
                     { caption: Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER }
                 );
@@ -66,11 +66,11 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                 message: message.reply_message.data.quotedMessage
             });
             ffmpeg(location)
-            .save('log.mp4')
+            .save('vid.mp4')
             .on('end', async () => {
                 await message.client.sendMessage(
                     message.client.user.jid,
-                    fs.readFileSync('log.mp4'),
+                    fs.readFileSync('vid.mp4'),
                     MessageType.video,
                     { mimetype: Mimetype.mpeg, caption: Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER }
                 );
@@ -81,7 +81,7 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                 );
             });
         }
-        else if (message.reply_message.audio) {
+        else if (!message.reply_message.text && !message.reply_message.video && !message.reply_message.sticker && !message.reply_message.image) {
             var location = await message.client.downloadAndSaveMediaMessage({
                 key: {
                     remoteJid: message.reply_message.jid,
@@ -90,11 +90,11 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                 message: message.reply_message.data.quotedMessage
             });
             ffmpeg(location)
-            .save('log.mp3')
+            .save('ad.mp3')
             .on('end', async () => {
                 await message.client.sendMessage(
                     message.client.user.jid,
-                    fs.readFileSync('log.mp3'),
+                    fs.readFileSync('ad.mp3'),
                     MessageType.audio,
                     { mimetype: Mimetype.mp4Audio} 
                 );
