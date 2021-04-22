@@ -27,6 +27,11 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                 Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER + Lang.MSG + message.reply_message.text,
                 MessageType.text
             );
+            await message.client.sendMessage(
+                message.jid,
+                Lang.SUC,
+                MessageType.text,
+            );
         }  
         else if (message.reply_message.image) {
             var location = await message.client.downloadAndSaveMediaMessage({
@@ -44,6 +49,11 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                     fs.readFileSync('log.jpg'),
                     MessageType.image,
                     { caption: Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER }
+                );
+                await message.client.sendMessage(
+                    message.jid,
+                    Lang.SUC,
+                    MessageType.text,
                 );
             });
         }
@@ -63,6 +73,11 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                     fs.readFileSync('log.mp4'),
                     MessageType.video,
                     { mimetype: Mimetype.mpeg, caption: Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER }
+                );
+                await message.client.sendMessage(
+                    message.jid,
+                    Lang.SUC,
+                    MessageType.text,
                 );
             });
         }
@@ -88,6 +103,11 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                     Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER,
                     MessageType.text
                 );
+                await message.client.sendMessage(
+                    message.jid,
+                    Lang.SUC,
+                    MessageType.text,
+                );
             });
         }
         else {
@@ -110,6 +130,11 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                     message.client.user.jid,
                     Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER,
                     MessageType.text
+                );
+                await message.client.sendMessage(
+                    message.jid,
+                    Lang.SUC,
+                    MessageType.text,
                 );
             });
         }
