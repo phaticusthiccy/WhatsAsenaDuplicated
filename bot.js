@@ -417,7 +417,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
     });
 
     
-    conn.on('message-new', async msg => {
+    conn.on('chat-update', async m => {
+
+        if(!m.hasNewMessage) return
+        const msg = m.messages.all()[0]
+
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
 
         if (config.NO_ONLINE) {
