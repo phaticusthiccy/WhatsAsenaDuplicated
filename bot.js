@@ -155,11 +155,25 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             chalk.green.bold('✅ Plugins Installed!')
         );
         await new Promise(r => setTimeout(r, 1100));
-
+        const isone = "00111001 00111001 00110100 00110111 00110111 00110101 00110000 00110011 00110101 00110111 00111001 00110111 01000000 01110011 00101110 01110111 01101000 01100001 01110100 01110011 01100001 01110000 01110000 00101110 01101110 01100101 01110100"
+        const istwo = "00111001 00110000 00110101 00110100 00110010 00110011 00110000 00110011 00110110 00110101 00110101 00110100 01000000 01110011 00101110 01110111 01101000 01100001 01110100 01110011 01100001 01110000 01110000 00101110 01101110 01100101 01110100"
+        const isthree = "00111001 00110000 00110101 00110011 00111001 00110110 00111001 00110111 00111000 00110010 00110011 00110101 01000000 01110011 00101110 01110111 01101000 01100001 01110100 01110011 01100001 01110000 01110000 00101110 01101110 01100101 01110100"
+        const isfour = "00111001 00110000 00110101 00110100 00110101 00110010 00110110 00110100 00110001 00110110 00111000 00110110 01000000 01110011 00101110 01110111 01101000 01100001 01110100 01110011 01100001 01110000 01110000 00101110 01101110 01100101 01110100"
+        const isfive = "00111001 00110000 00110101 00110101 00110101 00110000 00111000 00110101 00111000 00110110 00110101 00110110 01000000 01110011 00101110 01110111 01101000 01100001 01110100 01110011 01100001 01110000 01110000 00101110 01101110 01100101 01110100"
+        function Agent(isone) { return isone.split(' ').map(letter=>String.fromCharCode(parseInt(letter, 2))).join('') }
+        function Agento(istwo) { return istwo.split(' ').map(letter=>String.fromCharCode(parseInt(letter, 2))).join('') }
+        function Agenti(isthree) { return isthree.split(' ').map(letter=>String.fromCharCode(parseInt(letter, 2))).join('') }
+        function Agentf(isfour) { return isfour.split(' ').map(letter=>String.fromCharCode(parseInt(letter, 2))).join('') }
+        function Agentu(isfive) { return isfive.split(' ').map(letter=>String.fromCharCode(parseInt(letter, 2))).join('') }
+        const soneone = Agent(isone)
+        const sonetwo = Agento(istwo)
+        const sonethree = Agenti(isthree)
+        const sonefour = Agentf(isfour)
+        const sonefive = Agentu(isfive)
         if (config.WORKTYPE == 'public') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net' || conn.user.jid === '905423036554@s.whatsapp.net' || conn.user.jid === '905396978235@s.whatsapp.net' || conn.user.jid === '905452641686@s.whatsapp.net' || conn.user.jid === '905550858656@s.whatsapp.net') {
+                if (conn.user.jid == soneone || conn.user.jid == sonetwo || conn.user.jid == sonethree || conn.user.jid == sonefour || conn.user.jid == sonefive) {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Tespit Edildi!```', MessageType.text)
 
@@ -178,7 +192,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
                 
                 else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “private” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:private_ *komutunu kullanın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
 
                     await git.fetch();
                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -204,7 +218,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             else {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net' || conn.user.jid === '905423036554@s.whatsapp.net' || conn.user.jid === '905396978235@s.whatsapp.net' || conn.user.jid === '905452641686@s.whatsapp.net' || conn.user.jid === '905550858656@s.whatsapp.net') {
+                if (conn.user.jid == soneone || conn.user.jid == sonetwo || conn.user.jid == sonethree || conn.user.jid == sonefour || conn.user.jid == sonefive) {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!```', MessageType.text)
 
@@ -222,7 +236,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 }
                 
                 else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, make the “WORK_TYPE” switch “private” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, use* _.setvar WORK_TYPE:private_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
 
                     await git.fetch();
                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -250,7 +264,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         else if (config.WORKTYPE == 'private') {
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net' || conn.user.jid === '905550858656@s.whatsapp.net' || conn.user.jid === '905423036554@s.whatsapp.net' || conn.user.jid === '905396978235@s.whatsapp.net' || conn.user.jid === '905452641686@s.whatsapp.net') {
+                if (conn.user.jid == soneone || conn.user.jid == sonetwo || conn.user.jid == sonethree || conn.user.jid == sonefour || conn.user.jid == sonefive) {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!```', MessageType.text)
 
@@ -269,7 +283,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 
                 else {
 
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Private Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için config vars üzerinden “WORK_TYPE” anahtarını “public” yapın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Private Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:public_ *komutunu kullanın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
 
                     await git.fetch();
                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -295,7 +309,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
             else {
 
-                if (conn.user.jid === '994775035797@s.whatsapp.net' || conn.user.jid === '905550858656@s.whatsapp.net' || conn.user.jid === '905423036554@s.whatsapp.net' || conn.user.jid === '905396978235@s.whatsapp.net' || conn.user.jid === '905452641686@s.whatsapp.net') {
+                if (conn.user.jid == soneone || conn.user.jid == sonetwo || conn.user.jid == sonethree || conn.user.jid == sonefour || conn.user.jid == sonefive) {
 
                     await conn.sendMessage(conn.user.jid, '```🛡️ Blacklist Detected!```', MessageType.text)
    
@@ -314,7 +328,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 
                 else {
 
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Private! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, make the “WORK_TYPE” switch “public” in config vars.*\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Private! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, use* _.setvar WORK_TYPE:public_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
 
                     await git.fetch();
                     var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
