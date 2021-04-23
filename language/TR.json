@@ -489,7 +489,8 @@
             "VİEW": "İzlenme Sayısı:",
             "SHARE": "Paylaşım Sayısı:",
             "MUSİC": "Müzik:",
-            "M_AUT": "Müzik Sahibi:"
+            "M_AUT": "Müzik Sahibi:",
+            "NOT": "*Yüklenemedi* "
         },
         "lyrics": {
             "LY_DESC": "Şarkı sözlerini bulur",
