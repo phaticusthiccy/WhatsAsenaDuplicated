@@ -1,21 +1,6 @@
-/*
-# Copyright (C) 2020 MuhammedKpln.
-# edited by Vai838
-
-# WhatsAsena is free software: you can redistribute it and/or modify
-# it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
-#
-# WhatsAsena is distributed in the hope that it will be useful,
-# but WITHOUT ANY WARRANTY; without even the implied warranty of
-# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-# GNU General Public License for more details.
-#
-# You should have received a copy of the GNU General Public License
-# along with this program.  If not, see <https://www.gnu.org/licenses/>.
-#
-
+/* Codded by @phaticusthiccy
+Telegram: t.me/phaticusthiccy
+Instagram: www.instagram.com/kyrie.baran
 */
 
 const Asena = require('../events')
@@ -30,48 +15,30 @@ const Tlang = Language.getString('tiktok')
 
 if (cn.WORKTYPE == 'private') {
 
-    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
+    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+	
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
+        let response
+        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
+        }
+        const json = JSON.parse(response.body);
 
-        const userName = match[1]
+        if (json.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
+        if (json.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
 
-        if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
 
-        await message.sendMessage(infoMessage(Lang.LOADING))
+        let url = json.result.data[0].data;
+        let name = json.result.data[0].type;
+        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
+            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '*' + json.result.username + '\n*' + Tlang.LİNK + '*' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '*' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '*' + json.result.username + '\n*' + Tlang.LİNK + '*' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '*' + json.result.caption });
+            }
+        });
 
-        await axios
-          .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
-          .then(async (response) => {
-            const {
-              profile_hd,
-              username,
-              bio,
-              followers,
-              following,
-              full_name,
-              is_private,
-            } = response.data.result
+    }));
 
-            const profileBuffer = await axios.get(profile_hd, {
-              responseType: 'arraybuffer',
-            })
-
-            const msg = `
-            *${Lang.NAME}*: ${full_name}
-            *${Lang.USERNAME}*: ${username}
-            *${Lang.BIO}*: ${bio}
-            *${Lang.FOLLOWERS}*: ${followers}
-            *${Lang.FOLLOWS}*: ${following}
-            *${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC}`
-
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-              caption: msg,
-            })
-          })
-          .catch(
-            async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
-          )
-      },
-    )
     /*
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: true, desc: Tlang.TİKTOK }, async (message, match) => {
 
@@ -105,48 +72,52 @@ if (cn.WORKTYPE == 'private') {
 }
 else if (cn.WORKTYPE == 'public') {
 
-    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, usage: Lang.USAGE, desc: Lang.DESC }, async (message, match) => {
+    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: false, desc: Lang.DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+	
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
+        let response
+        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
+        }
+        const json = JSON.parse(response.body);
 
-        const userName = match[1]
+        if (json.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
+        if (json.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
 
-        if (!userName) return await message.sendMessage(errorMessage(Lang.NEED_WORD))
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
 
-        await message.sendMessage(infoMessage(Lang.LOADING))
+        let url = json.result.data[0].data;
+        let name = json.result.data[0].type;
+        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
+            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '*' + json.result.username + '\n*' + Tlang.LİNK + '*' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '*' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '*' + json.result.username + '\n*' + Tlang.LİNK + '*' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '*' + json.result.caption });
+            }
+        });
 
-        await axios
-          .get(`https://videfikri.com/api/igstalk/?username=${userName}`)
-          .then(async (response) => {
-            const {
-              profile_hd,
-              username,
-              bio,
-              followers,
-              following,
-              full_name,
-              is_private,
-            } = response.data.result
+    }));
+    Asena.addCommand({ pattern: 'insta ?(.*)', fromMe: true, desc: Lang.DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+        if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
+	
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
+        let response
+        try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
+        }
+        const json = JSON.parse(response.body);
 
-            const profileBuffer = await axios.get(profile_hd, {
-              responseType: 'arraybuffer',
-            })
+        if (json.status === false) return await message.client.sendMessage(message.jid, Lang.NOT_FOUND, MessageType.text, { quoted: message.data });
+        if (json.code === 403) return await message.client.sendMessage(message.jid, '```API Error!```', MessageType.text, { quoted: message.data });
 
-            const msg = `
-            *${Lang.NAME}*: ${full_name}
-            *${Lang.USERNAME}*: ${username}
-            *${Lang.BIO}*: ${bio}
-            *${Lang.FOLLOWERS}*: ${followers}
-            *${Lang.FOLLOWS}*: ${following}
-            *${Lang.ACCOUNT}*: ${is_private ? Lang.HIDDEN : Lang.PUBLIC}`
+        await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text, { quoted: message.data });
 
-            await message.sendMessage(Buffer.from(profileBuffer.data), MessageType.image, {
-              caption: msg,
-            })
-          })
-          .catch(
-            async (err) => await message.sendMessage(errorMessage(Lang.NOT_FOUND + userName)),
-          )
-      },
-    )
+        let url = json.result.data[0].data;
+        let name = json.result.data[0].type;
+        await axios({ method: "get", url, headers: { 'DNT': 1, 'Upgrade-Insecure-Request': 1 }, responseType: 'arraybuffer'}).then(async (res) => {
+            if (name === 'video') { return await message.sendMessage(Buffer(res.data), MessageType.video, { caption: '*' + Tlang.USERNAME + '*' + json.result.username + '\n*' + Tlang.LİNK + '*' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '*' + json.result.caption }) } else { return await message.sendMessage(Buffer(res.data), MessageType.image, { caption: '*' + Tlang.USERNAME + '*' + json.result.username + '\n*' + Tlang.LİNK + '*' + 'http://instagram.com/' + json.result.username + '\n*' + Tlang.CAPTİON + '*' + json.result.caption });
+            }
+        });
+
+    }));
     /*
     Asena.addCommand({ pattern: 'tiktok ?(.*)', fromMe: false, desc: Tlang.TİKTOK }, async (message, match) => {
 
