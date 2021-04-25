@@ -441,19 +441,20 @@
             "SUCCESSFULLY_DELETED": "Tüm notlarınız başarılı bir şekilde silindi."
         },
         "instagram": {
-            "NEED_WORD": "*Herhangi bir instagram kullanıcı adını yazın.*",
+            "NEED_WORD": "*Herhangi Bir Instagram Post Linki Girin!*",
             "USAGE": ".insta <kullanıcıAdı>",
-            "DESC": "İnstagram kullanıcı bilgilerine ulaşır.",
+            "DESC": "İnstagram'dan video veya fotoğraf indirir.",
             "LOADING": "Kullanıcı profili yükleniyor.. lütfen bekleyiniz.",
             "USERNAME": "Kullanıcı adı",
             "NAME": "İsim",
             "BIO": "Biyografi",
+            "FİX": "*Bakım Çalışması Yapılıyor!*",
             "FOLLOWERS": "Takipçi",
             "FOLLOWS": "Takip",
             "ACCOUNT": "Hesap gizliliği",
             "PUBLIC": "Herkese açık",
             "HIDDEN": "Gizli",
-            "NOT_FOUND": "Kullanıcı bulunmadı: "
+            "NOT_FOUND": "*Medya Bulunamadı!*"
         },
         "github": {
             "GİTHUB_DESC": "Verilen kullanıcı adından github bilgilerini toplar.\n⌨️ Örnek: .github phaticusthiccy",
@@ -480,10 +481,11 @@
         "tiktok": {
             "TİKTOK": "Tiktok üzerinden video indirir.",
             "NEED": "```Herhangi Bir Tiktok Bağlantısı Girmelisin!``` \n*Örnek:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
-            "DOWN": "```Video İndiriliyor..```",
+            "DOWN": "```Medya İndiriliyor..```",
             "CAPTİON": "Açıklama:",
             "USERNAME": "Kullanıcı Adı:",
             "NAME": "İsmi:",
+            "LİNK": "Kullanıcı Linki:",
             "LİKE": "Beğeni Sayısı:",
             "COMM": "Yorum Sayısı:",
             "VİEW": "İzlenme Sayısı:",
