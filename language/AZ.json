@@ -23,7 +23,8 @@
             "REMOVE_DESC": "Plugin çıxarır.",
             "NEED_PLUGIN": "```Zəhmət olmasa bir Plugin daxil edin! Nümunə: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Bəlkə belə bir plagin quraşdırmısınız, ya da yox. Ancaq əmin deyil ki, indi deyil.```",
-            "DELETED": "*✅ Modul uğurla silindi!*"
+            "DELETED": "*✅ Modul uğurla silindi!*",
+            "WARN": "Plaginləri yalnız t.me/remasterplugin kanalından əldə edin."
         },
         "admin": {
             "BAN_DESC": "Grupdan şəxsi banlayır. Cavap verin (reply) yada əmrin yanına şəxs adı yazın",
@@ -89,7 +90,12 @@
             "GETVAR_DESC": "Heroku config var göstərir.",
             "DELVAR_DESC": "Heroku config var silir.",
             "DEL_SUCCESS": "```{} uğurla silindi```",
-            "NOT_FOUND": "```bu açar üçün heç bir nəticə tapılmadı```"           
+            "NOT_FOUND": "```bu açar üçün heç bir nəticə tapılmadı```",
+            "SUCC": "*Uğurla qurun! ✅* \n*Xahiş edirəm bir az gözləyin.*",
+            "SUCC_AF": "*Bərpa etmək üçün* ```default``` *mətn istifadə edin.*",
+            "DEGİS_NONE": "```Zəhmət olmasa istənilən modul adını daxil edin!``` \n\n*.degis afk*\n*.degis alive*\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "WR": "*Zəhmət olmasa tətbiq olunan modullardan istifadə edin!*",
+            "DEGİS_DESC": "Modulların mətnini alive, afk kimi dəyişdirin.",        
         },
         "filters": {
             "FILTER_DESC": "Filter əlavə edər. Yazdığın filter'i biri yazsa, yazdığınız cavabı göndərər. Əgər sadəcə filter yazsanız, yazılan filter'ləri göstərər.",
@@ -201,7 +207,35 @@
         },
         "tagall": {
             "TAGALL_DESC": "Grupdaki hərkəsi etiketləyər.",
-            "ADMİN": "*Mən bu qrupda admin deyiləm!*"
+            "ADMİN": "*Mən bu qrupda admin deyiləm!*",
+            "SCAN": "Girilən nömrənin WhatApp-da qeydiyyatdan keçirilməməsini yoxlayır.",
+            "NO": "*Zəhmət olmasa istənilən telefon nömrəsini daxil edin!*\n*Nümunə:* ```.scan 90xxxx```",
+            "SUC": "*Nömrəli şəxs WhatsAppdan istifadə edir! ✅*",
+            "UNSUC": "*Nömrəli şəxs WhatsApp istifadə etmir! ❌*",
+            "TAGADMİN": "Etiketler qrup adminleri.",
+            "REPORT": "Qrup rəhbərlərinə hesabat göndərir.",
+            "USER": "=== ```Hesabat``` ===\n\n*İstifadəçi:* ",
+            "REASON": "\n*Səbəb:* ",
+            "REPLY": "*Zəhmət olmasa İstifadəçinin Hesabat vermə mesajına cavab verin!*"
+        },
+        "whois": {
+            "WHO": "Qrupun və ya şəxsin metadata məlumatlarını göstərir.",
+            "SUB": "*Qrup adı:* ",
+            "DES": "*Qrup təsviri:* ",
+            "OWN": "*Təsisçi:* ",
+            "COD": "*Unikal qrup kodu:* ",
+            "JİD": "*Şəxs JID:* ",
+            "ST": "*Şəxs statusu:* "
+        },
+        "log": {
+            "LOG": "Cavabladığınız mesajı şəxsi nömrənizə saxlayır.",
+            "REPLY": "*Zəhmət olmasa hər hansı bir mesaja cavab verin!*",
+            "ANIM": "Hərəkətli stikerləri dəstəkləmir!",
+            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
+            "USER": " İstifadəçi nömrəsindən \n",
+            "FROM": " ID'li qrupdan, ",
+            "MSG": "Mesaj: \n\n",
+            "SUC": "*Mesaj Uğurla LOG-a qeyd edildi!*"
         },
         "updater": {
             "UPDATER_DESC": "Yenilənmələri axtarar.",
@@ -212,7 +246,8 @@
             "INVALID_HEROKU": "*❌ Heroku məlumatlarınız yanlışdır!*",
             "UPDATED": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*",
             "UPDATED_LOCAL": "*✅ Yenilənmə müvəffəqiyyətlə sona çatdı!*",
-            "AFTER_UPDATE": "*💬 WhatsAsena Yenidən Başladır.*"
+            "AFTER_UPDATE": "*💬 WhatsAsena Yenidən Başladır.*",
+            "IN_AF": "*Zəhmət olmasa* ```HEROKU_APP_NAME``` *ilə* ```app_name``` *eyni olduğuna əmin olun.*\n*Bu iki dəyər eynidirsə, xahiş edirəm* ```HEROKU_API_KEY```'inizi *dəyişdirin!*\n\n_Bu parametrlərə daxil olmaq üçün Heroku >> Uygulama >> Settings >> Reavel Config Vars addımlarınızı izləyin._\n_API açarınızı yeniləmək üçün Heroku >> Account >> API Key Bölmədən təzələndikdən sonra onu köhnə API açarı ilə əvəz edin._"
         },
         "weather": {
             "WEATHER_DESC": "Hava şəraitini gətirər.",
@@ -398,19 +433,20 @@
             "SUCCESSFULLY_DELETED": "Bütün qeydləriniz uğurla silindi."
         },
         "instagram": {
-            "NEED_WORD": "*Hər hansı bir instagram istifadəçi adını yazın.*",
+            "NEED_WORD": "*Zəhmət olmasa instagram post linkinizi daxil edin.*",
             "USAGE": ".insta <kullanıcıAdı>",
-            "DESC": "Instagram istifadəçi məlumatlarına çatır.",
+            "DESC": "Instagram-dan video və ya foto yükləyir.",
             "LOADING": "İstifadəçi profili yüklənir.. Xahiş edirəm gözləyin.",
             "USERNAME": "İstifadəçi Adı",
             "NAME": "Ad",
+            "FİX": "*Modul təmirdədir!*",
             "BIO": "Tərcümeyi-hal",
             "FOLLOWERS": "İzləyici",
             "FOLLOWS": "İzləmə",
             "ACCOUNT": "Hesab Məxfiliyi",
             "PUBLIC": "Hər kəs üçün açıqdır",
             "HIDDEN": "Gizli",
-            "NOT_FOUND": "İstifadəçi tapılmadı: "
+            "NOT_FOUND": "*Post tapılmadı!*"
         },
         "github": {
             "GİTHUB_DESC": "Verilən istifadəçi adından github məlumatlarını toplayır.\n⌨️ Nümunə: .github phaticusthiccy",
@@ -444,6 +480,7 @@
             "LİKE": "Bəyənmə sayı:",
             "COMM": "Şərhlərin sayı:",
             "VİEW": "Baxış sayı:",
+            "LİNK": "İstifadəçi bağlantısı:",
             "SHARE": "Səhmlərin sayı:",
             "MUSİC": "Musiqi:",
             "M_AUT": "Musiqi sahibi:"
