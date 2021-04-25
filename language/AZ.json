@@ -473,7 +473,7 @@
         "tiktok": {
             "TİKTOK": "Tiktok-dan video yükləyir.",
             "NEED": "```Hər hansı bir Tiktok Linki daxil etməlisiniz!``` \n*Nümunə:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
-            "DOWN": "```Video yüklənir..```",
+            "DOWN": "```Medya yüklənir..```",
             "CAPTİON": "İzahat:",
             "USERNAME": "İstifadəçi adı:",
             "NAME": "Ad:",
