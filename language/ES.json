@@ -2,7 +2,7 @@
     "__ASENAJSON__": true,
     "LANGUAGE": "Español",
     "LANGCODE": "es",
-    "AUTHOR": "Skueletor",
+    "AUTHOR": "Phaticusthiccy / Skueletor",
     "STRINGS": {
         "_asena": {
             "COMMAND": "Comando",
@@ -89,7 +89,12 @@
             "GETVAR_DESC": "obtener heroku config var",
             "DELVAR_DESC": "Eliminar heroku config var",
             "DEL_SUCCESS": "```{} eliminado con éxito```",
-            "NOT_FOUND": "```No se encontraron resultados para esta key```"           
+            "NOT_FOUND": "```No se encontraron resultados para esta key```",
+            "SUCC": "*Başarıyla Ayarlandı ✅* \n*Lütfen Biraz Bekleyin.*",
+            "SUCC_AF": "*Usa texto* ```default``` *para restaurarlo.*",
+            "DEGİS_NONE": "```Ingrese cualquier nombre de módulo!``` \n\n*.degis afk*\n*.degis alive*\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "WR": "*Utilice los módulos que correspondan!*",
+            "DEGİS_DESC": "Reemplazar el texto de módulos como alive, afk."        
         },
         "filters": {
             "FILTER_DESC": "Agrega un filtro. Si alguien escribe el filtro que escribiste, envía la respuesta que escribiste. Si solo escribe filtro, devuelve los filtros que agregó.",
@@ -203,7 +208,35 @@
         },
         "tagall": {
             "TAGALL_DESC": "Etiqueta a todos en el grupo.",
-            "ADMİN": "*¡No soy un administrador en este grupo!*"
+            "ADMİN": "*¡No soy un administrador en este grupo!*",
+            "SCAN": "Comprueba si el número introducido está registrado en WhatApp.",
+            "NO": "*Ingrese cualquier número de teléfono!*\n*Muestra:* ```.scan 90xxxx```",
+            "SUC": "*Persona numerada usa WhatsApp! ✅*",
+            "UNSUC": "*Persona numerada no usa WhatsApp! ❌*",
+            "TAGADMİN": "Administradores de grupos de etiquetas.",
+            "REPORT": "Envía informes a los administradores del grupo.",
+            "USER": "=== ```Informe``` ===\n\n*Usuario:* ",
+            "REASON": "\n*Razón:* ",
+            "REPLY": "*Responda al mensaje del usuario para informar!*"
+        },
+        "whois": {
+            "WHO": "Muestra datos de metadatos de grupo o persona.",
+            "SUB": "*Nombre del grupo:* ",
+            "DES": "*Descripción del Grupo:* ",
+            "OWN": "*Fundador:* ",
+            "COD": "*Código de grupo único:* ",
+            "JİD": "*Persona JID:* ",
+            "ST": "*Estado de la persona:* "
+        },
+        "log": {
+            "LOG": "Guarda el mensaje que responde a su número privado.",
+            "REPLY": "*Por favor responda a cualquier mensaje!*",
+            "ANIM": "No admite pegatinas en movimiento.!",
+            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
+            "USER": " Desde el número de usuario \n",
+            "FROM": " Del grupo con ID, ",
+            "MSG": "Mensaje: \n\n",
+            "SUC": "*Mensaje guardado correctamente en LOG!*"
         },
         "updater": {
             "UPDATER_DESC": "Verificar actualizaciones.",
@@ -214,7 +247,8 @@
             "INVALID_HEROKU": "*❌ ¡Tu información de Heroku es incorrecta!*",
             "UPDATED": "*✅ ¡La actualización fue exitosa!*",
             "UPDATED_LOCAL": "*✅ ¡La actualización fue exitosa!*",
-            "AFTER_UPDATE": "*¡Reinicio de WhatsAsena*"
+            "AFTER_UPDATE": "*¡Reinicio de WhatsAsena*",
+            "IN_AF": "*Asegúrate de que* ```HEROKU_APP_NAME``` *sea el mismo que* ```app name```\n*Si estos dos valores son iguales, cambie* ```HEROKU_API_KEY```!*\n\n_Siga estos pasos para acceder a estas configuraciones: Heroku >> App >> Settings >> Reavel Configs_\n_Siga estos pasos para renovar su API key:  Heroku >> Account >> API Key Luego reemplácelo con el viejo API key._"
         },
         "weather": {
             "WEATHER_DESC": "Trae el clima.",
@@ -400,11 +434,12 @@
             "SUCCESSFULLY_DELETED": "Todas tus notas se han eliminado correctamente."
         },
         "instagram": {
-            "NEED_WORD": "*Escribe cualquier nombre de usuario de Instagram.*",
+            "NEED_WORD": "*Ingrese cualquier enlace de medios de Instagram!*",
             "USAGE": ".insta <nombre de usuario>",
-            "DESC": "Acceso a la información del usuario de Instagram.",
+            "DESC": "Descarga videos o fotos de Instagram.",
             "LOADING": "Cargando perfil de usuario.. Espere por favor.",
             "USERNAME": "Nombre de usuario",
+            "FİX": "*Realización de trabajos de mantenimiento!*",
             "NAME": "Nombre",
             "BIO": "Biografía",
             "FOLLOWERS": "Seguidor",
@@ -412,7 +447,7 @@
             "ACCOUNT": "Privacidad de la cuenta",
             "PUBLIC": "Abierto a todos",
             "HIDDEN": "Oculto",
-            "NOT_FOUND": "Usuario no encontrado: "
+            "NOT_FOUND": "*Medios no encontrado*"
         },
         "github": {
             "GİTHUB_DESC": "Recopila información de github del nombre de usuario dado.\n⌨️ Muestra: .github phaticusthiccy",
@@ -439,7 +474,7 @@
         "tiktok": {
             "TİKTOK": "Descarga video de Tiktok.",
             "NEED": "```Debes ingresar cualquier enlace de Tiktok!``` \n*Muestra:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
-            "DOWN": "```Descarga de video..```",
+            "DOWN": "```Descarga de Medios..```",
             "CAPTİON": "Explicación:",
             "USERNAME": "Nombre de usuario:",
             "NAME": "El nombre:",
