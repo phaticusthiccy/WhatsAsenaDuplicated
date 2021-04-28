@@ -13,6 +13,7 @@ const { similarity } = require('../similarity')
 Asena.addCommand({ pattern: '.', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
     if(message.fromMe) return
     let command = [ 
+    'asena',
     'xmedia',
     'install',
     'plugin',
@@ -94,11 +95,10 @@ Asena.addCommand({ pattern: '.', fromMe: true, dontAddCommandList: true }, (asyn
     'weather',
     'speedtest',
     'ping',
-    'short',
-    'asena' ]
+    'short']
     let sml = '';
     let string = match['input'].split(' ')[0];
-    string = string.slice(1, match['input'].split("''")[0].length);
+    string = string.slice(1, match['input'].split(' ')[0].length);
     let msg = `Command ${string} not found, Try these\n`
     for (let i = 0; i < command.length; i++) {
         let smlarity = similarity(command[i], string)
@@ -113,7 +113,6 @@ Asena.addCommand({ pattern: '.', fromMe: true, dontAddCommandList: true }, (asyn
             return;
         }
         if (smlarity > 0.6 && smlarity !==0) {
-            console.log(i,command[i])
             sml += '\n*' + command[i] + '*'
         }
     }
