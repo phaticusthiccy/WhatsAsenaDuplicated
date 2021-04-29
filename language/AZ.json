@@ -219,7 +219,7 @@
             "REPLY": "*Zəhmət olmasa İstifadəçinin Hesabat vermə mesajına cavab verin!*"
         },
         "whois": {
-            "WHO": "Qrupun və ya şəxsin metadata məlumatlarını göstərir.",
+            "PL_DESC": "Qrupun və ya şəxsin metadata məlumatlarını göstərir.",
             "SUB": "*Qrup adı:* ",
             "DES": "*Qrup təsviri:* ",
             "OWN": "*Təsisçi:* ",
