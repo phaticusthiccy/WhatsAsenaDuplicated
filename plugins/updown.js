@@ -4,9 +4,10 @@ const { similarity } = require('../similarity')
 const Language = require('../language');
 const Lang = Language.getString('aiscanner');
 const pb = require('../config');
-
-if (pb.WORKTYPE == 'private') {
-    Asena.addCommand({ pattern: '.', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+let me = pb.WORKTYPE == 'public' ? false : true
+let em = pb.WORKTYPE == 'public' ? true : true 
+//if (pb.WORKTYPE == 'private') {
+    Asena.addCommand({ pattern: '.', fromMe: me, dontAddCommandList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',
@@ -178,7 +179,7 @@ if (pb.WORKTYPE == 'private') {
         await message.client.sendMessage(message.jid, msg + sml, MessageType.text)
 
     }));
-}
+/*}
 else if (pb.WORKTYPE == 'public') {
     Asena.addCommand({ pattern: '.', fromMe: false, dontAddCommandList: true }, (async (message, match) => {
         if(message.fromMe) return
@@ -351,8 +352,8 @@ else if (pb.WORKTYPE == 'public') {
         if(sml.length < 1) return;
         await message.client.sendMessage(message.jid, msg + sml, MessageType.text)
 
-    }));
-    Asena.addCommand({ pattern: '.', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+    }));*/
+    Asena.addCommand({ pattern: '.', fromMe: em, dontAddCommandList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',
@@ -524,4 +525,4 @@ else if (pb.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid, msg + sml, MessageType.text)
 
     }));
-}
+//}
