@@ -64,14 +64,34 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
 Asena.addCommand({pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC}, (async (message, match) => {  
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid,Lang.IM_NOT_ADMIN,MessageType.text);
-    
-    if (match[1] !== '') {
-        match[1].split(' ').map(async (user) => {
-            await message.client.groupAdd(message.jid, [user + "@s.whatsapp.net"]);
-            await message.client.sendMessage(message.jid,'```' + user + ' ' + Lang.ADDED +'```');
-        });
-    } else {
-        return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
+
+    if (Config.ADDMSG == 'default') {
+        if (match[1] !== '') {
+            match[1].split(' ').map(async (user) => {
+                await message.client.groupAdd(message.jid, [user + "@s.whatsapp.net"]);
+                await message.client.sendMessage(message.jid,'```' + user + ' ' + Lang.ADDED +'```', MessageType.text);
+            });
+        } 
+        else if (match[1].includes('+')) {
+            return await message.client.sendMessage(message.jid,Lang.WRONG,MessageType.text);
+        }
+        else {
+            return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
+        }
+    }
+    else {
+        if (match[1] !== '') {
+            match[1].split(' ').map(async (user) => {
+                await message.client.groupAdd(message.jid, [user + "@s.whatsapp.net"]);
+                await message.client.sendMessage(message.jid,'```' + user + '``` ' + Config.ADDMSG, MessageType.text);
+            });
+        }
+        else if (match[1].includes('+')) {
+            return await message.client.sendMessage(message.jid,Lang.WRONG,MessageType.text);
+        }
+        else {
+            return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
+        }
     }
 }));
 

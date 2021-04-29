@@ -2,7 +2,7 @@
     "__ASENAJSON__": true,
     "LANGUAGE": "Português Brasileiro",
     "LANGCODE": "pt",
-    "AUTHOR": "@xmtscf",
+    "AUTHOR": "Phaticusthiccy / @xmtscf",
     "STRINGS": {
         "_asena": {
             "COMMAND": "Comando",
@@ -23,7 +23,8 @@
             "REMOVE_DESC": "Remove o plugin.",
             "NEED_PLUGIN": "```Por favor, insira um Plugin! Exemplo: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Talvez você tenha instalado esse plugin, ou talvez não. Mas com certeza não é agora.```",
-            "DELETED": "*✅ Módulo excluído com sucesso!*"
+            "DELETED": "*✅ Módulo excluído com sucesso!*",
+            "WARN": "Obtenha plug-ins apenas do canal t.me/remasterplugin"
         },
         "admin": {
             "BAN_DESC": "Banir alguém do grupo. Responda a uma mensagem ou marque uma pessoa para usar o comando.",
@@ -89,7 +90,12 @@
             "GETVAR_DESC": "Obter var de configuração do heroku",
             "DELVAR_DESC": "Excluir var de configuração do heroku",
             "DEL_SUCCESS": "```{} excluído com sucesso```",
-            "NOT_FOUND": "```nenhum resultado encontrado para esta chave```"           
+            "NOT_FOUND": "```nenhum resultado encontrado para esta chave```",
+            "SUCC": "*Configurado com sucesso ✅* \n*Por favor espere um pouco.*",
+            "SUCC_AF": "*Use o script* ```default``` *para restaurá-lo.*",
+            "DEGİS_NONE": "```Por favor, digite qualquer nome de módulo!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "WR": "*Use os módulos que se aplicam!*",
+            "DEGİS_DESC": "Substitua o texto dos módulos como alive, afk."          
         },
         "filters": {
             "FILTER_DESC": "Ele adiciona um filtro. Se alguém escreve seu filtro, ele envia a resposta. Se você apenas escrever .filter, ele mostra sua lista de filtros.",
@@ -203,7 +209,35 @@
         },
         "tagall": {
             "TAGALL_DESC": "Marca todos no grupo.",
-            "ADMİN": "*Eu não sou administrador neste grupo!*"
+            "ADMİN": "*Eu não sou administrador neste grupo!*",
+            "SCAN": "Verifica se o número inserido está registrado no WhatApp.",
+            "NO": "*Digite qualquer número de telefone!*\n*Amostra:* ```.scan 991xxxx```",
+            "SUC": "*Pessoa numerada usa WhatsApp! ✅*",
+            "UNSUC": "*Pessoa numerada não usa WhatsApp! ❌*",
+            "TAGADMİN": "Administradores de grupos de tags.",
+            "REPORT": "Envia relatórios aos administradores do grupo.",
+            "USER": "=== ```Relatório``` ===\n\n*Do utilizador:* ",
+            "REASON": "\n*Razão:* ",
+            "REPLY": "*Responda à mensagem do usuário para relatar!*"
+        },
+        "whois": {
+            "PL_DESC": "Exibe dados de metadados de grupo ou pessoa.",
+            "SUB": "*Nome do grupo:* ",
+            "DES": "*Descrição do grupo:* ",
+            "OWN": "*Fundador:* ",
+            "COD": "*Código de Grupo Único:* ",
+            "JİD": "*Pessoa JID:* ",
+            "ST": "*Status da pessoa:* "
+        },
+        "log": {
+            "LOG": "Salva a mensagem que você responde em seu número privado.",
+            "REPLY": "*Por favor, responda a qualquer mensagem!*",
+            "ANIM": "Não suporta Stcikers!",
+            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
+            "USER": " Do número do usuário \n",
+            "FROM": " Do grupo com ID, ",
+            "MSG": "Mensagem: \n\n",
+            "SUC": "*Mensagem salva com sucesso em LOG!*"
         },
         "updater": {
             "UPDATER_DESC": "Verifica as atualizações.",
@@ -214,7 +248,8 @@
             "INVALID_HEROKU": "*❌ Suas informações do Heroku estão erradas!*",
             "UPDATED": "*✅ Atualizado com sucesso!*",
             "UPDATED_LOCAL": "*✅ Atualizado com sucesso!*",
-            "AFTER_UPDATE": "*💬 WhatsAsena reiniciando automaticamente!*"
+            "AFTER_UPDATE": "*💬 WhatsAsena reiniciando automaticamente!*",
+            "IN_AF": "*Certifique-se de que* ```HEROKU_APP_NAME``` *é igual a* ```app name```\n*Se esses dois valores forem iguais, altere* ```HEROKU_API_KEY```\n\n_Para acessar essas configurações Heroku >> App >> Settings >> Reavel Config Vars siga seus passos._\n_Para renovar sua chave de API Heroku >> Account >> API Key Depois de atualizar a seção, substitua-a pela chave de API antiga.._"
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
@@ -400,19 +435,20 @@
             "SUCCESSFULLY_DELETED": "Excluiu com sucesso todas as suas notas."
         },
         "instagram": {
-            "NEED_WORD": "*Por favor, digite o nome de usuário de qualquer conta do instagram.*",
+            "NEED_WORD": "*Insira qualquer link de postagem do Instagram*",
             "USAGE": ".insta <userName>",
-            "DESC": "Coleta informações do usuário no instagram",
+            "DESC": "Faz download de vídeos ou fotos do Instagram",
             "LOADING": "Buscando dados do usuário ... aguarde.",
             "USERNAME": "Username",
             "NAME": "Nome",
+            "FİX": "*Executando trabalho de manutenção!*",
             "BIO": "Biografia",
             "FOLLOWERS": "Seguidores",
             "FOLLOWS": "Segue",
             "ACCOUNT": "Privacidade da conta",
             "PUBLIC": "Público",
             "HIDDEN": "Escondido",
-            "NOT_FOUND":"Usuário não encontrado: "
+            "NOT_FOUND": "```Midia nao encontrada```"
         },
         "github": {
             "GİTHUB_DESC": "Coleta informações do github do nome de usuário fornecido.\n⌨️ Exemplo: .github phaticusthiccy",
@@ -439,7 +475,8 @@
         "tiktok": {
             "TİKTOK": "Baixa vídeos do Tiktok.",
             "NEED": "```Você deve inserir qualquer link do Tiktok!``` \n*Exemplo:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
-            "DOWN": "```Baixando vídeo...```",
+            "DOWN": "```Download de mídia...```",
+            "LİNK": "Link do usuário:",
             "CAPTİON": "Título:",
             "USERNAME": "Username:",
             "NAME": "Nome:",

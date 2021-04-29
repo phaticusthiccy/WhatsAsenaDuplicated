@@ -23,7 +23,8 @@
             "REMOVE_DESC": "Removes the plugin.",
             "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Maybe you have installed such a plugin, or maybe not. But it sure isn't right now.```",
-            "DELETED": "*✅ Module successfully deleted!*"
+            "DELETED": "*✅ Module successfully deleted!*",
+            "WARN": "Get plugins only from t.me/remasterplugin channel."
         },
         "admin": {
             "BAN_DESC": "Ban someone in the group. Reply to message or tag a person to use command.",
@@ -89,7 +90,12 @@
             "GETVAR_DESC": "Get heroku config var",
             "DELVAR_DESC": "Delete heroku config var",
             "DEL_SUCCESS": "```{} successfully deleted```",
-            "NOT_FOUND": "```no results found for this key```"           
+            "NOT_FOUND": "```no results found for this key```",
+            "SUCC": "*Successfully Setted Up ✅* \n*Please wait a little while.*",
+            "SUCC_AF": "*To restore, use* ```default```",
+            "DEGİS_NONE": "```Please Enter Any Module Name!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "WR": "*Please use the modules that exists!*",
+            "DEGİS_DESC": "Changes the text of modules like alive, afk etc.."       
         },
         "filters": {
             "FILTER_DESC": "It adds a filter. If someone writes your filter, it send the answer. If you just write .filter, it show's your filter list.",
@@ -203,7 +209,16 @@
         },
         "tagall": {
             "TAGALL_DESC": "Tags everyone in the group.",
-            "ADMİN": "*I am not admin in this group!*"
+            "ADMİN": "*I am not admin in this group!*",
+            "SCAN": "Checks whether the entered number is registered on WhatApp.",
+            "NO": "*Please Enter Any Phone Number!*\n*Example:* ```.scan 90xxxx```",
+            "SUC": "*Numbered Person Uses WhatsApp! ✅*",
+            "UNSUC": "*Numbered Person Does Not Use WhatsApp! ❌*",
+            "TAGADMİN": "Tags group admins.",
+            "REPORT": "Sends reports to group admins.",
+            "USER": "=== ```Report``` ===\n\n*User:* ",
+            "REASON": "\n*Reason:* ",
+            "REPLY": "*Please Respond to User's Message to Report!*"
         },
         "updater": {
             "UPDATER_DESC": "Checks the update.",
@@ -214,7 +229,27 @@
             "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
             "UPDATED": "*✅ Successfully Updated!*",
             "UPDATED_LOCAL": "*✅ Successfully Updated!*",
-            "AFTER_UPDATE": "*💬 WhatsAsena Restarting Automatically!*"
+            "AFTER_UPDATE": "*💬 WhatsAsena Restarting Automatically!*",
+            "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
+        },
+        "whois": {
+            "PL_DESC": "Displays metadata data of group or person.",
+            "SUB": "*Group Name:* ",
+            "DES": "*Group Description:* ",
+            "OWN": "*Founder:* ",
+            "COD": "*Unique Group Code:* ",
+            "JİD": "*Person JID:* ",
+            "ST": "*Person Status:* "
+        },
+        "log": {
+            "LOG": "Saves the message you reply to your private number.",
+            "REPLY": "*Please Reply To Any Message!*",
+            "ANIM": "Does not support animated stickers!",
+            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
+            "USER": " From User Number \n",
+            "FROM": " From the group with ID, ",
+            "MSG": "Message: \n\n",
+            "SUC": "*Message Successfully Saved to LOG!*"
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
@@ -400,19 +435,20 @@
             "SUCCESSFULLY_DELETED": "Successfully deleted all your notes."
         },
         "instagram": {
-            "NEED_WORD": "*Please enter username of any instagram account.*",
+            "NEED_WORD": "*Enter Any Instagram Post Link!*",
             "USAGE": ".insta <userName>",
-            "DESC": "Fetches user informations from instagram",
+            "DESC": "Downloads videos or photos from Instagram.",
             "LOADING": "Fetching user data.. please wait.",
             "USERNAME": "Username",
             "NAME": "Name",
             "BIO": "Biography",
+            "FİX": "*Carrying out maintenance work!*",
             "FOLLOWERS": "Followers",
             "FOLLOWS": "Follows",
             "ACCOUNT": "Account privacy",
             "PUBLIC": "Public",
             "HIDDEN": "Hidden",
-            "NOT_FOUND":"User not found: "
+            "NOT_FOUND": "*Media Not Found!*"
         },
         "github": {
             "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github phaticusthiccy",
@@ -439,11 +475,12 @@
         "tiktok": {
             "TİKTOK": "Downloads videos from Tiktok.",
             "NEED": "```You Must Enter Any Tiktok Link!``` \n*Example:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
-            "DOWN": "```Video Downloading..```",
+            "DOWN": "```Downloading Media..```",
             "CAPTİON": "Title:",
             "USERNAME": "Username:",
             "NAME": "Name:",
             "LİKE": "Likes:",
+            "LİNK": "User Link:",
             "COMM": "Comments:",
             "VİEW": "Views:",
             "SHARE": "Shares:",

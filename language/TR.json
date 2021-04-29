@@ -23,7 +23,8 @@
             "REMOVE_DESC": "Plugin kaldırır.",
             "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin test```",
             "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
-            "DELETED": "*✅ Modül başarıyla silindi!*"
+            "DELETED": "*✅ Modül başarıyla silindi!*",
+            "WARN": "Pluginleri sadece t.me/remasterplugin kanalından alın."
         },
         "admin": {
             "BAN_DESC": "Gruptan kişi banlar. Yanıt verin ya da komutun yanına kişiyi etiketleyin.",
@@ -89,6 +90,11 @@
             "GETVAR_DESC": "Heroku config var getirir.",
             "DELVAR_DESC": "Heroku config var siler.",
             "DEL_SUCCESS": "```{} başarıyla silindi```",
+            "SUCC": "*Başarıyla Ayarlandı ✅* \n*Lütfen Biraz Bekleyin.*",
+            "SUCC_AF": "*Eski haline döndürmek için* ```default``` *yazısını kullanın.*",
+            "DEGİS_NONE": "```Lütfen Herhangi Bir Modül İsmi Girin!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "WR": "*Lütfen geçerli olan modülleri kullanın!*",
+            "DEGİS_DESC": "Alive, afk gibi modüllerin metinlerini değiştirir.",
             "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"           
         },
         "filters": {
@@ -201,8 +207,36 @@
             "SYSD_DESC": "Sistem özelliklerini söyler."
         },
         "tagall": {
-            "TAGALL_DESC": "Gruptaki herkesi etiketler.",
-            "ADMİN": "*Bu Grupta Admin Değilim!*"
+            "TAGALL_DESC": "Gruptaki herkesi etiketler. Hidetag atmak için mesajı yanıtlayın yada kelime girin.",
+            "ADMİN": "*Bu Grupta Admin Değilim!*",
+            "SCAN": "Girilen numaranın WhatApp'ta kayıtlı olup olmadığını kontrol eder.",
+            "NO": "*Lütfen Herhangi Bir Telefon Numarası Gir!*\n*Örnek:* ```.scan 90xxxx```",
+            "SUC": "*Numaralı Kişi WhatApp Kullanıyor! ✅*",
+            "UNSUC": "*Numaralı Kişi WhatApp Kullanmıyor! ❌*",
+            "TAGADMİN": "Grup adminlerini etiketler.",
+            "REPORT": "Grup adminlerine rapor gönderir.",
+            "USER": "=== ```Rapor``` ===\n\n*Kullanıcı:* ",
+            "REASON": "\n*Sebep:* ",
+            "REPLY": "*Lütfen Rapor Edilecek Kullanıcının Mesajına Yanıt Verin!*"
+        },
+        "whois": {
+            "PL_DESC": "Grup veya kişinin metadata verisini gösterir.",
+            "SUB": "*Grup İsmi:* ",
+            "DES": "*Grup Açıklaması:* ",
+            "OWN": "*Kurucu:* ",
+            "COD": "*Eşsiz Grup Kodu:* ",
+            "JİD": "*Kişi JID:* ",
+            "ST": "*Kişi Durumu:* "
+        },
+        "log": {
+            "LOG": "Yanıtladığınız mesajı özel numaranıza kaydeder",
+            "REPLY": "*Lütfen Herhangi Bir Mesajı Yanıtlayın!*",
+            "ANIM": "Hareketli stickerleri desteklemez!",
+            "HEAD": "```===== [LOGGED MESSAGE] =====```\n\n",
+            "USER": " Numaralı Kullanıcıdan \n",
+            "FROM": " ID'li Gruptan, ",
+            "MSG": "Mesaj: \n\n",
+            "SUC": "*Mesaj Başarıyla LOG'a Kaydedildi!*"
         },
         "updater": {
             "UPDATER_DESC": "Güncelleme denetler.",
@@ -212,8 +246,10 @@
             "UPDATING": "_Güncelleme yapılıyor..._",
             "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
             "UPDATED": "*✅ Güncelleme başarılı oldu!*",
+            "IN_AF": "*Lütfen* _HEROKU_APP_NAME_ *ile* _app name_'nin *aynı olduğuna emin olun.* \n\n*Bilgiler doğru ise lütfen* _HEROKU_API_KEY_'inizi *yenileyin.*",
             "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*",
-            "AFTER_UPDATE": "*💬 WhatsAsena Yeniden Başlatılıyor*"
+            "AFTER_UPDATE": "*💬 WhatsAsena Yeniden Başlatılıyor*",
+            "IN_AF": "*Lütfen* ```HEROKU_APP_NAME``` *ile* ```app name```'nizin *aynı olduğuna emin olun.*\n*Bu iki değer aynı ise lütfen* ```HEROKU_API_KEY```'inizi *değiştirin!*\n\n_Bu ayarlara ulaşmak için Heroku >> Uygulama >> Settings >> Reavel Config Vars adımlarını takip edin._\n_API keyinizi yenilemek için Heroku >> Account >> API Key kısmından yeniledikten sonra eski API key ile değiştirin._"
         },
         "weather": {
             "WEATHER_DESC": "Hava durumu getirir.\n⌨️ Örnek: .weather bakü",
@@ -242,7 +278,7 @@
             "STİCKER_DESC": "Resim stickeri fotoğrafa çevirir.",
             "STİCKER_NEEDREPLY": "*Bir Stickere Yanıt Vermelisin!*",
             "STİCKER": "```Sticker Fotoğrafa Çevriliyor..```",
-            "XMEDİA_DESC": "İçerisinde 25’den fazla medya aracının bulduğu bir plugin.",
+            "XMEDİA_DESC": "İçerisinde 30’dan fazla medya aracının bulduğu bir plugin.",
             "T_FALSE": "```❌ Yanlış Blend Efekti Girildi!```\n```🔎 Varolan Komutlar:```\n\n*$dodge* - Videoya pembe renk filtresi uygular.\n*$multiply* - Videoya yeşil renk filtresi uygular.\n*$grainmerge* - Videonun kontrast değerlerini arttırır.\n*$and* - Videonun hıza göre siyah yıldırım efekti uygular.\n*$or* - Videonun hızına göre beyaz yıldırım efekti uygular.\n*$burn* - Videoya yeşil kontrast uygular.\n*$difference* - Videoya yeşil kabartma uygulayarak farklılıkları gösterir.\n*$grainextract* - Videoya gri kabartma uygulayarak farklılıkları gösterir.\n*$divide* - Videoya pembe kabartma uygulayarak farklılıkları gösterir.\n*$xor* - Videoya hem yeşil kabartma hemde yıldırım efekti uygular.\n*$hardmix* - Videonun renklerini sarı ve kırmızı tonuna mix eder.\n*$negation* - Videonun dinamiklerini pembeye çevirir.",
             "T_NOT": "```💭 Herhangi Bir Blend Efekti Girmen Gerekiyor!\n```🔎 Varolan Komutlar:```\n\n*$dodge* - Videoya pembe renk filtresi uygular.\n*$multiply* - Videoya yeşil renk filtresi uygular.\n*$grainmerge* - Videonun kontrast değerlerini arttırır.\n*$and* - Videonun hıza göre siyah yıldırım efekti uygular.\n*$or* - Videonun hızına göre beyaz yıldırım efekti uygular.\n*$burn* - Videoya yeşil kontrast uygular.\n*$difference* - Videoya yeşil kabartma uygulayarak farklılıkları gösterir.\n*$grainextract* - Videoya gri kabartma uygulayarak farklılıkları gösterir.\n*$divide* - Videoya pembe kabartma uygulayarak farklılıkları gösterir.\n*$xor* - Videoya hem yeşil kabartma hemde yıldırım efekti uygular.\n*$hardmix* - Videonun renklerini sarı ve kırmızı tonuna mix eder.\n*$negation* - Videonun dinamiklerini pembeye çevirir.",
             "T_DESC": "Videolara seçilen TBlend efektini uygular." 
@@ -405,19 +441,20 @@
             "SUCCESSFULLY_DELETED": "Tüm notlarınız başarılı bir şekilde silindi."
         },
         "instagram": {
-            "NEED_WORD": "*Herhangi bir instagram kullanıcı adını yazın.*",
+            "NEED_WORD": "*Herhangi Bir Instagram Post Linki Girin!*",
             "USAGE": ".insta <kullanıcıAdı>",
-            "DESC": "İnstagram kullanıcı bilgilerine ulaşır.",
+            "DESC": "İnstagram'dan video veya fotoğraf indirir.",
             "LOADING": "Kullanıcı profili yükleniyor.. lütfen bekleyiniz.",
             "USERNAME": "Kullanıcı adı",
             "NAME": "İsim",
             "BIO": "Biyografi",
+            "FİX": "*Bakım Çalışması Yapılıyor!*",
             "FOLLOWERS": "Takipçi",
             "FOLLOWS": "Takip",
             "ACCOUNT": "Hesap gizliliği",
             "PUBLIC": "Herkese açık",
             "HIDDEN": "Gizli",
-            "NOT_FOUND": "Kullanıcı bulunmadı: "
+            "NOT_FOUND": "*Medya Bulunamadı!*"
         },
         "github": {
             "GİTHUB_DESC": "Verilen kullanıcı adından github bilgilerini toplar.\n⌨️ Örnek: .github phaticusthiccy",
@@ -444,16 +481,18 @@
         "tiktok": {
             "TİKTOK": "Tiktok üzerinden video indirir.",
             "NEED": "```Herhangi Bir Tiktok Bağlantısı Girmelisin!``` \n*Örnek:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
-            "DOWN": "```Video İndiriliyor..```",
+            "DOWN": "```Medya İndiriliyor..```",
             "CAPTİON": "Açıklama:",
             "USERNAME": "Kullanıcı Adı:",
             "NAME": "İsmi:",
+            "LİNK": "Kullanıcı Linki:",
             "LİKE": "Beğeni Sayısı:",
             "COMM": "Yorum Sayısı:",
             "VİEW": "İzlenme Sayısı:",
             "SHARE": "Paylaşım Sayısı:",
             "MUSİC": "Müzik:",
-            "M_AUT": "Müzik Sahibi:"
+            "M_AUT": "Müzik Sahibi:",
+            "NOT": "*Yüklenemedi* "
         },
         "lyrics": {
             "LY_DESC": "Şarkı sözlerini bulur",
