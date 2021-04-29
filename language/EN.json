@@ -93,7 +93,7 @@
             "NOT_FOUND": "```no results found for this key```",
             "SUCC": "*Successfully Setted Up ✅* \n*Please wait a little while.*",
             "SUCC_AF": "*To restore, use* ```default```",
-            "DEGİS_NONE": "```Please Enter Any Module Name!``` \n\n*.degis afk*\n*.degis alive*\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```Please Enter Any Module Name!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Please use the modules that exists!*",
             "DEGİS_DESC": "Changes the text of modules like alive, afk etc.."       
         },
