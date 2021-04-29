@@ -49,13 +49,13 @@ if (cn.WORKTYPE == 'private') {
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
 
         await axios
-          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
+          .get(`https://shinoa-rest.herokuapp.com/dl/tiktok?link=${userName}`)
           .then(async (response) => {
             const {
-              server_1,
+              data,
             } = response.data
 
-            const profileBuffer = await axios.get(server_1, {
+            const profileBuffer = await axios.get(data.mp4, {
               responseType: 'arraybuffer',
             })
 
@@ -156,13 +156,13 @@ else if (cn.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid, Tlang.DOWN, MessageType.text)
 
         await axios
-          .get(`https://api.xteam.xyz/dl/tiktok?url=${userName}&APIKEY=ab9942f95c09ca89`)
+          .get(`https://shinoa-rest.herokuapp.com/dl/tiktok?link=${userName}`)
           .then(async (response) => {
             const {
-              server_1,
+              data,
             } = response.data
 
-            const profileBuffer = await axios.get(server_1, {
+            const profileBuffer = await axios.get(data.mp4, {
               responseType: 'arraybuffer',
             })
 
