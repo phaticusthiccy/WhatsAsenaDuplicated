@@ -1,3 +1,4 @@
+/*
 const Asena = require('../events');
 const { MessageType } = require('@adiwajshing/baileys');
 const { similarity } = require('../similarity')
@@ -525,3 +526,4 @@ else if (pb.WORKTYPE == 'public') {
 
     }));
 }
+*/
