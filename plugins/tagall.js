@@ -48,7 +48,7 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC 
         );
         await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }
-    else if (message.reply_message) {
+    else if (message.reply_message && match[1] == '') {
         grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';
@@ -69,7 +69,7 @@ if (Config.WORKTYPE == 'private') {
 
         var exists = await message.client.isOnWhatsApp(match[1])
         if (exists) {
-            await message.client.sendMessage(message.jid, '```' + match[1] + '``` \n' + Lang.SUC + exists.jid, MessageType.text);
+            await message.client.sendMessage(message.jid, '```' + match[1] + '``` \n' + Lang.SUC + '\n' + exists.jid, MessageType.text);
         }
         else {
             await message.client.sendMessage(message.jid,'```' + match[1] + '``` \n' + Lang.UNSUC, MessageType.text);
@@ -125,7 +125,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var exists = await message.client.isOnWhatsApp(match[1])
         if (exists) {
-            await message.client.sendMessage(message.jid, '```' + match[1] + '``` \n' + Lang.SUC + exists.jid, MessageType.text);
+            await message.client.sendMessage(message.jid, '```' + match[1] + '``` \n' + Lang.SUC + '\n' + exists.jid, MessageType.text);
         }
         else {
             await message.client.sendMessage(message.jid,'```' + match[1] + '``` \n' + Lang.UNSUC, MessageType.text);
@@ -137,7 +137,7 @@ else if (Config.WORKTYPE == 'public') {
 
         var exists = await message.client.isOnWhatsApp(match[1])
         if (exists) {
-            await message.client.sendMessage(message.jid, '```' + match[1] + '``` \n' + Lang.SUC + exists.jid, MessageType.text);
+            await message.client.sendMessage(message.jid, '```' + match[1] + '``` \n' + Lang.SUC + '\n' + exists.jid, MessageType.text);
         }
         else {
             await message.client.sendMessage(message.jid,'```' + match[1] + '``` \n' + Lang.UNSUC, MessageType.text);
