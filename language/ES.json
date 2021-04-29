@@ -220,7 +220,7 @@
             "REPLY": "*Responda al mensaje del usuario para informar!*"
         },
         "whois": {
-            "WHO": "Muestra datos de metadatos de grupo o persona.",
+            "PL_DESC": "Muestra datos de metadatos de grupo o persona.",
             "SUB": "*Nombre del grupo:* ",
             "DES": "*Descripción del Grupo:* ",
             "OWN": "*Fundador:* ",
