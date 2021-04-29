@@ -5,7 +5,7 @@ const Language = require('../language');
 const Lang = Language.getString('aiscanner');
 const pb = require('../config');
 let me = pb.WORKTYPE == 'public' ? false : true
-    Asena.addCommand({ pattern: '.', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+    Asena.addCommand({ pattern: '.', fromMe: me, dontAddCommandList: true }, (async (message, match) => {
         if(message.fromMe) return
         let command = [ 
         'xmedia',
