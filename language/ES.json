@@ -23,7 +23,8 @@
             "REMOVE_DESC": "Elimina el plugin.",
             "NEED_PLUGIN": "```Introduzca un complemento. Ejemplo: .plugin _ejemplo```",
             "NOT_FOUND_PLUGIN": "```Tal vez haya instalado un complemento de este tipo, o tal vez no. Pero seguro que no ahora mismo.```",
-            "DELETED": "*✅ ¡Plugin eliminado correctamente!*"
+            "DELETED": "*✅ ¡Plugin eliminado correctamente!*",
+            "WARN": "Obtenga complementos solo del canal t.me/remasterplugin."
         },
         "admin": {
             "BAN_DESC": "La persona del grupo será baneada. (Responda o etiquete a la persona junto al comando).",
