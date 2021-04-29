@@ -93,7 +93,7 @@
             "NOT_FOUND": "```इस key के लिए कोई परिणाम नहीं मिले```",
             "SUCC": "*सफलतापूर्वक सेट अप करें ✅* \n*कृपया थोड़ी देर प्रतीक्षा करें.*",
             "SUCC_AF": "*इसे पुनर्स्थापित करने के लिए* ```default``` *का उपयोग करें*",
-            "DEGİS_NONE": "```कृपया कोई भी मॉड्यूल नाम दर्ज करें!``` \n\n*.degis afk*\n*.degis alive*\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```कृपया कोई भी मॉड्यूल नाम दर्ज करें!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*कृपया लागू होने वाले मॉड्यूल का उपयोग करें!*",
             "DEGİS_DESC": "Alive, afk जैसे मॉड्यूल के टेक्स्ट को बदलें."           
         },
