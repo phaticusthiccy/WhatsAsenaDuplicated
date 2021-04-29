@@ -85,7 +85,12 @@
             "GETVAR_DESC": "Dapatkan heroku config var",
             "DELVAR_DESC": "menghapus heroku config var",
             "DEL_SUCCESS": "```{} berhasil dihapus```",
-            "NOT_FOUND": "```tidak ada hasil yang ditemukan untuk kunci ini```"           
+            "NOT_FOUND": "```tidak ada hasil yang ditemukan untuk kunci ini```",
+            "SUCC": "*Berhasil Mengatur ✅* \n*Mohon tunggu sebentar.*",
+            "SUCC_AF": "*Gunakan teks* ```default``` *untuk memulihkannya.*",
+            "DEGİS_NONE": "```Harap Masukkan Nama Modul Apa Pun!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "WR": "*Harap gunakan modul yang sesuai!*",
+            "DEGİS_DESC": "Ganti teks modul seperti alive, afk."        
         },
         "nekobin": {
             "NEKO_DESC": "Pesan yang dibalas akan ditambahkan ke nekobin.com.",
