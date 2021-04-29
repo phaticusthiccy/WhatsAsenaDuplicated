@@ -703,21 +703,19 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                         , MessageType.text
                                     );
                                 }
-<<<<<<< HEAD
                                 else if (error.message.includes('conversation')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
                                         '\n========== ```Error Resolved!``` ==========' +
                                         '\n\n*Main Error:* _Deleting Plugin_' +
                                         '\n*Reason:* _Entering incorrectly the name of the plugin wanted to be deleted._' +
                                         '\n*Solution:* _Please try without adding_ *__* _to the plugin you want to delete. If you still get an error, try to add like_ ```?(.*) / $``` _to the end of the name._ '
-=======
+
                                 else if (error.message.includes('401')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
                                         '\n========== ```Error Resolved!``` ==========' +
                                         '\n\n*Ana Hata:* _Undefined Lydia API Key_' +
                                         '\n*Nedeni:* _The API key required to run Lydia artificial intelligence is not allocated._ ' +
                                         '\n*Çözümü:* _Please, go here to set Lydia API key._ \nhttps://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/LYDIA-API-KEY'
->>>>>>> master
                                         , MessageType.text
                                     );
                                 }
