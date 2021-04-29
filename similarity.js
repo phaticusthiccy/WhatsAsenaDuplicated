@@ -1,3 +1,6 @@
+/* WhatsAsena Duplicated - Artificial Intelligence Similarity
+Codded by lyfee
+
 function similarity(first, second) {
 	first = first.replace(/\s+/g, '')
 	second = second.replace(/\s+/g, '')
@@ -13,7 +16,7 @@ function similarity(first, second) {
 			: 1;
 
 		firstBigrams.set(bigram, count);
-	};
+	}
 
 	let intersectionSize = 0;
 	for (let i = 0; i < second.length - 1; i++) {
