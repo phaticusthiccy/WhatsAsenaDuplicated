@@ -232,7 +232,7 @@
             "IN_AF": "*Please check* ```HEROKU_APP_NAME``` *and* ```app name``` *They must be same.*\n*If these two values ​​are the same, please restore* ```HEROKU_API_KEY```\n\n_To access these settings, use Heroku >> App >> Settings >> Reavel Config Vars_\n_To renew your API key, follow these steps, Heroku >> Account >> API Key then replace old api key in config vars._"
         },
         "whois": {
-            "WHO": "Displays metadata data of group or person.",
+            "PL_DESC": "Displays metadata data of group or person.",
             "SUB": "*Group Name:* ",
             "DES": "*Group Description:* ",
             "OWN": "*Founder:* ",
