@@ -220,7 +220,7 @@
             "REPLY": "*Lütfen Rapor Edilecek Kullanıcının Mesajına Yanıt Verin!*"
         },
         "whois": {
-            "WHO": "Grup veya kişinin metadata verisini gösterir.",
+            "PL_DESC": "Grup veya kişinin metadata verisini gösterir.",
             "SUB": "*Grup İsmi:* ",
             "DES": "*Grup Açıklaması:* ",
             "OWN": "*Kurucu:* ",
