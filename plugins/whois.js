@@ -27,7 +27,7 @@ if (CON.WORKTYPE == 'private') {
             const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             await message.sendMessage(
-                Buffer.from(resim.data), 
+                Buffer(resim.data), 
                 MessageType.image, 
                 { caption: msg }
             );
@@ -39,7 +39,7 @@ if (CON.WORKTYPE == 'private') {
             const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
             const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
-                Buffer.from(resimnw.data), 
+                Buffer(resimnw.data), 
                 MessageType.image, 
                 { caption: nwmsg }
             );
@@ -64,7 +64,7 @@ else if (CON.WORKTYPE == 'public') {
             const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             await message.sendMessage(
-                Buffer.from(resim.data), 
+                Buffer(resim.data), 
                 MessageType.image, 
                 { caption: msg }
             );
@@ -76,7 +76,7 @@ else if (CON.WORKTYPE == 'public') {
             const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
             const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
-                Buffer.from(resimnw.data), 
+                Buffer(resimnw.data), 
                 MessageType.image, 
                 { caption: nwmsg }
             );
@@ -98,7 +98,7 @@ else if (CON.WORKTYPE == 'public') {
             const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
 
             await message.sendMessage(
-                Buffer.from(resim.data), 
+                Buffer(resim.data), 
                 MessageType.image, 
                 { caption: msg }
             );
@@ -110,7 +110,7 @@ else if (CON.WORKTYPE == 'public') {
             const nwmsg = Lang.JİD + `${usexists.jid} \n` + Lang.ST + `${status.status}`
             const resimnw = await Axios.get(usppUrl, {responseType: 'arraybuffer'})
             await message.sendMessage(
-                Buffer.from(resimnw.data), 
+                Buffer(resimnw.data), 
                 MessageType.image, 
                 { caption: nwmsg }
             );
