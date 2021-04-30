@@ -5,7 +5,7 @@ Instagram: www.instagram.com/kyrie.baran
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-const Config = ('../config');
+const Config = require('../config');
 
 const Language = require('../language');
 const Lang = Language.getString('tagall');
