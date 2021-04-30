@@ -28,7 +28,10 @@ Asena.addCommand({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC},
     if (match[1] == '' && message.reply_message) {
         return await message.client.sendMessage(message.jid, Lang.DEGİS_NONE, MessageType.text); 
     }
-    else if (match[1] == ''  && !message.reply_message) {
+    else if (match[1] !== '' && !message.reply_message) {
+        return await message.client.sendMessage(message.jid, Lang.NEED_REPLY, MessageType.text); 
+    }
+    else if (match[1] == '' && !message.reply_message) {
         return await message.client.sendMessage(message.jid, Langr.NEED_REPLY, MessageType.text); 
     }
     else if (match[1] == 'ban' && message.reply_message) {
