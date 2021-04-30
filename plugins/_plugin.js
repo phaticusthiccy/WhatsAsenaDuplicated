@@ -63,7 +63,7 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
     }
 }));
 
-Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC, warn: WARN}, (async (message, match) => {
+Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (async (message, match) => {
     var mesaj = Lang.INSTALLED_FROM_REMOTE;
     var plugins = await Db.PluginDB.findAll();
     if (plugins.length < 1) {
