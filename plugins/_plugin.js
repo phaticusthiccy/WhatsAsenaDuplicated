@@ -79,7 +79,7 @@ Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (as
         plugins.map(
             (plugin) => {
                 let vf = plugin.dataValues.url.includes('phaticusthiccy') ? msg : inmsg
-                mesaj += '_' + plugin.dataValues.name + '_: ' + plugin.dataValues.url + '\n' + vf + '\n\n';
+                mesaj += '```' + plugin.dataValues.name + '```: ' + plugin.dataValues.url + '\n' + vf + '\n\n';
             }
         );
         return await message.client.sendMessage(message.jid, mesaj, MessageType.text);
@@ -89,7 +89,7 @@ Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (as
 Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
-    var plugin = await Db.PluginDB.findAll({ where: {name: '__' + match[1]} });
+    var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
     if (plugin.length < 1) {
         return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
     } else {
