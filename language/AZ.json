@@ -21,6 +21,7 @@
             "INSTALLED_FROM_REMOTE": "*Xaricdən qurduğunuz plaginlər:*\n",
             "NO_PLUGIN": "*Xarici plaginlər quraşdırmamışsınız!*",
             "REMOVE_DESC": "Plugin çıxarır.",
+            "UNOFF": "⚠️ *Diqqət!* \n*Qurduğunuz plagin rəsmi deyil!*",
             "NEED_PLUGIN": "```Zəhmət olmasa bir Plugin daxil edin! Nümunə: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Bəlkə belə bir plagin quraşdırmısınız, ya da yox. Ancaq əmin deyil ki, indi deyil.```",
             "DELETED": "*✅ Modul uğurla silindi!*",
@@ -266,6 +267,10 @@
             "SPEEDTEST_RESULT": "*Sürəti testi elədim!*",
             "UPLOAD": "Yükləmə",
             "DOWNLOAD": "Endirmə",
+            "CALC": "Sadə riyaziyyat əməliyyatları həyata keçirir.",
+            "SUC": "*Hesablama tamamlandı ✅*\n*Nəticə:* ",
+            "UNSUC": "*Hesablama alınmadı ❌*\n*Xəta:* \n",
+            "VALİD": "*Zəhmət olmasa tətbiq oluna bilər!* \n*.calc 1 + 2*\n*.calc 3 x 5*\n*.calc 10 / 5*\n*.calc 5 - 2*",
             "PING_DESC": "Ping'inizi ölçər.",
             "URL": "Uzun əlaqəni qısaldın."
         },

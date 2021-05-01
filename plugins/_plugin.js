@@ -18,6 +18,9 @@ const Language = require('../language');
 const Lang = Language.getString('_plugin');
 const NLang = Language.getString('updater');
 
+let msg = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Olarak Onaylanmıştır!* ✅' : '*This Plugin is Officially Approved!* ✅'
+let inmsg = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Değildir!* ❌' : '*This Plugin isn\'t Officially Approved!* ❌'
+
 const heroku = new Heroku({
     token: Config.HEROKU.API_KEY
 });
@@ -60,6 +63,10 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
 
         await Db.installPlugin(url, plugin_name);
         await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
+        if (!match[1].includes('phaticusthiccy')) {
+            await new Promise(r => setTimeout(r, 400));
+            await message.client.sendMessage(message.jid, Lang.UNOFF, MessageType.text);
+        }
     }
 }));
 
@@ -71,7 +78,8 @@ Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (as
     } else {
         plugins.map(
             (plugin) => {
-                mesaj += '*' + plugin.dataValues.name + '*: ' + plugin.dataValues.url + '\n';
+                let vf = plugin.dataValues.url.includes('phaticusthiccy') ? msg : inmsg
+                mesaj += '_' + plugin.dataValues.name + '_: ' + plugin.dataValues.url + '\n' + vf + '\n\n';
             }
         );
         return await message.client.sendMessage(message.jid, mesaj, MessageType.text);
@@ -81,7 +89,7 @@ Asena.addCommand({pattern: 'plugin', fromMe: true, desc: Lang.PLUGIN_DESC }, (as
 Asena.addCommand({pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC}, (async (message, match) => {
     if (match[1] === '') return await message.sendMessage(Lang.NEED_PLUGIN);
     if (!match[1].startsWith('__')) match[1] = '__' + match[1];
-    var plugin = await Db.PluginDB.findAll({ where: {name: match[1]} });
+    var plugin = await Db.PluginDB.findAll({ where: {name: '__' + match[1]} });
     if (plugin.length < 1) {
         return await message.sendMessage(message.jid, Lang.NOT_FOUND_PLUGIN, MessageType.text);
     } else {

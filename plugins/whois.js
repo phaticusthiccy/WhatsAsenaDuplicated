@@ -82,7 +82,7 @@ else if (CON.WORKTYPE == 'public') {
             );
         }
     });
-    Asena.addCommand({ pattern: 'whois', fromMe: true, desc: Lang.PL_DESC }, async (message, match) => { 
+    Asena.addCommand({ pattern: 'whois', fromMe: true, desc: Lang.PL_DESC, dontAddCommandList: true }, async (message, match) => { 
 
         if (message.jid.includes('-')) {
             var json = await message.client.groupMetadataMinimal(message.jid) 

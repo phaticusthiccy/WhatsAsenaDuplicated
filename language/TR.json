@@ -24,6 +24,7 @@
             "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin test```",
             "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
             "DELETED": "*✅ Modül başarıyla silindi!*",
+            "UNOFF": "⚠️ *Dikkat!* \n*Yüklendiğiniz plugin resmi değildir!*",
             "WARN": "Pluginleri sadece t.me/remasterplugin kanalından alın."
         },
         "admin": {
@@ -268,6 +269,10 @@
             "SPEEDTEST_RESULT": "*Hız testi yapıldı!*",
             "UPLOAD": "Yükleme",
             "DOWNLOAD": "İndirme",
+            "CALC": "Basit matematik işlemleri yapar.",
+            "SUC": "*Hesaplama Yapıldı ✅*\n*Sonuç:* ",
+            "UNSUC": "*Hesaplama Yapılamadı ❌*\n*Hata:* \n",
+            "VALİD": "*Lütfen Geçerli Olan Şekilde Kullanın!* \n*.calc 1 + 2*\n*.calc 3 x 5*\n*.calc 10 / 5*\n*.calc 5 - 2*",
             "PING_DESC": "Pinginizi ölçer.",
             "URL": "Uzun linki kısaltır."
         },
