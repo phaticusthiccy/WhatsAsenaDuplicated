@@ -267,6 +267,10 @@
             "SPEEDTEST_RESULT": "*Sürəti testi elədim!*",
             "UPLOAD": "Yükləmə",
             "DOWNLOAD": "Endirmə",
+            "CALC": "Sadə riyaziyyat əməliyyatları həyata keçirir.",
+            "SUC": "*Hesablama tamamlandı ✅*\n*Nəticə:* ",
+            "UNSUC": "*Hesablama alınmadı ❌*\n*Xəta:* \n",
+            "VALİD": "*Zəhmət olmasa tətbiq oluna bilər!* \n*.calc 1 + 2*\n*.calc 3 x 5*\n*.calc 10 / 5*\n*.calc 5 - 2*",
             "PING_DESC": "Ping'inizi ölçər.",
             "URL": "Uzun əlaqəni qısaldın."
         },
