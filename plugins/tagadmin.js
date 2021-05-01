@@ -37,7 +37,7 @@ else if (Config.WORKTYPE == 'public') {
         });
         await message.client.sendMessage(message.jid,mesaj, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }));
-    Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGADMİN}, (async (message, match) => {
+    Asena.addCommand({pattern: 'tagadmin', fromMe: true, desc: Lang.TAGADMİN, dontAddCommandList: true}, (async (message, match) => {
         let grup = await message.client.groupMetadata(message.jid);
         var jids = [];
         mesaj = '';
