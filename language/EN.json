@@ -14,6 +14,7 @@
         "_plugin": {
             "INSTALL_DESC": "Install external plugins.",
             "NEED_URL": "Please enter a URL! Example:",
+            "UNOFF": "⚠️ *Attention!* \n*The plugin you have installed is not official!*",
             "INVALID_URL": "```Please enter a valid url!```",
             "INVALID_PLUGIN": "*❌ Your plugin is invalid!*\n*Error:*",
             "INSTALLED": "*✅ Plugin has been successfully installed!*",
