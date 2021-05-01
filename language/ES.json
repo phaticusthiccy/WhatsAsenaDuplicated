@@ -268,6 +268,10 @@
             "SPEEDTESTING": "```Prueba de velocidad en ejecución...```",
             "SPEEDTEST_RESULT": "*¡Prueba de velocidad hecha!*",
             "UPLOAD": "Subida",
+            "CALC": "Realiza operaciones matemáticas simples.",
+            "SUC": "*Cálculo hecho ✅*\n*Resultado:* ",
+            "UNSUC": "*Error de cálculo ❌*\n*Error:* \n",
+            "VALİD": "*Utilice según corresponda!* \n*.calc 1 + 2*\n*.calc 3 x 5*\n*.calc 10 / 5*\n*.calc 5 - 2*",
             "DOWNLOAD": "Bajada",
             "PING_DESC": "Mide tu ping.",
             "URL": "Acorta el enlace largo."
