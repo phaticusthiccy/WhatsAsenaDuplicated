@@ -113,7 +113,7 @@ if (conf.WORKTYPE == 'public') {
 
 
     }));
-    Asena.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true }, (async (message, match) => {
+    Asena.addCommand({ pattern: 'voicy', desc: Lang.USAGE, fromMe: true, dontAddCommandList: true }, (async (message, match) => {
 
         try {
             if (message.reply_message) {
