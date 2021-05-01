@@ -91,7 +91,7 @@ else if (Config.WORKTYPE == 'public') {
             await info.delete();    
         });
     }));
-    Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC}, (async (message, match) => {   
+    Asena.addCommand({pattern: 'meme ?(.*)', fromMe: true, desc: Lang.MEMES_DESC, dontAddCommandList: true}, (async (message, match) => {   
 
         if (message.reply_message === false) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text);
         var topText, bottomText;
