@@ -269,6 +269,10 @@
             "SPEEDTEST_RESULT": "*Teste de velocidade concluído!*",
             "UPLOAD": "Upload",
             "DOWNLOAD": "Download",
+            "CALC": "Executa operações matemáticas simples.",
+            "SUC": "*Cálculo Feito ✅*\n*Resultado:* ",
+            "UNSUC": "*Cálculo falhou ❌*\n*Erro:* \n",
+            "VALİD": "*Use conforme aplicável!* \n*.calc 1 + 2*\n*.calc 3 x 5*\n*.calc 10 / 5*\n*.calc 5 - 2*",
             "PING_DESC": "Mede seu ping.",
             "URL": "Encurte o link longo."
         },
