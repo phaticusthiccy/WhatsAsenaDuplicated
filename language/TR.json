@@ -24,6 +24,7 @@
             "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin test```",
             "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
             "DELETED": "*✅ Modül başarıyla silindi!*",
+            "UNOFF": "⚠️ *Dikkat!* \n*Yüklendiğiniz plugin resmi değildir!*",
             "WARN": "Pluginleri sadece t.me/remasterplugin kanalından alın."
         },
         "admin": {
