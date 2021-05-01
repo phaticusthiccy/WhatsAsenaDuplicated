@@ -243,7 +243,7 @@ else if (Config.WORKTYPE == 'public') {
             });        
         });
     }));
-    Asena.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC, dontAddCommandList: true}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client
