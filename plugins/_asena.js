@@ -23,7 +23,7 @@ if (Config.WORKTYPE == 'private') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
-                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiö ç1234567890]*)/);
+                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                     } catch {
                         var match = [command.pattern];
                     }
@@ -53,7 +53,7 @@ if (Config.WORKTYPE == 'private') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
-                        var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
+                        var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                     } catch {
                         var cmatch = [command.pattern];
                     }
@@ -91,7 +91,7 @@ else if (Config.WORKTYPE == 'public') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
-                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiö ç1234567890]*)/);
+                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
                     } catch {
                         var match = [command.pattern];
                     }
@@ -121,7 +121,7 @@ else if (Config.WORKTYPE == 'public') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
-                        var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
+                        var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiıöç1234567890 ]*)/);
                     } catch {
                         var cmatch = [command.pattern];
                     }
@@ -156,7 +156,7 @@ else if (Config.WORKTYPE == 'public') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
-                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiö ç1234567890]*)/);
+                        var match = command.pattern.toString().match(/(\W*)([A-Za-zğüşiıöç1234567890 ]*)/);
                     } catch {
                         var match = [command.pattern];
                     }
@@ -186,7 +186,7 @@ else if (Config.WORKTYPE == 'public') {
                 async (command) =>  {
                     if (command.dontAddCommandList || command.pattern === undefined) return;
                     try {
-                        var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiöç1234567890]*)/);
+                        var cmatch = command.pattern.toString().match(/(\W*)([A-Za-zğüşiıöç1234567890 ]*)/);
                     } catch {
                         var cmatch = [command.pattern];
                     }
