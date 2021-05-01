@@ -52,7 +52,7 @@ else if (Config.WORKTYPE == 'public') {
         }
        
     }));
-    Asena.addCommand({pattern: 'neko', fromMe: true, desc: Lang.NEKO_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'neko', fromMe: true, desc: Lang.NEKO_DESC, dontAddCommandList: true}, (async (message, match) => {
 
         if (!message.reply_message) return await message.sendMessage(Lang.NEED_REPLY);
         if (!message.reply_message.text) return await message.sendMessage(Lang.MUST_TEXT);
