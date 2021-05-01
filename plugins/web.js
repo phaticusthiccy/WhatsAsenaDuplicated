@@ -118,7 +118,7 @@ else if (Config.WORKTYPE == 'public') {
             }
         }
     }));
-    Asena.addCommand({pattern: 'calc ?(.*)', fromMe: false, desc: Lang.CALC, dontAddCommandList: true }, (async (message, match) => {
+    Asena.addCommand({pattern: 'calc ?(.*)', fromMe: true, desc: Lang.CALC, dontAddCommandList: true }, (async (message, match) => {
         if (match[1].length < 4) { return await message.client.sendMessage(message.jid,Lang.VALİD, MessageType.text) }
         if (match[1].includes('+')) { var split = match[1].split('+'), sonsayi = split[1], ilksayi = split[0]
             var result = ilksayi + sonsayi
