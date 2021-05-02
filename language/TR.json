@@ -93,8 +93,9 @@
             "DEL_SUCCESS": "```{} başarıyla silindi```",
             "SUCC": "*Başarıyla Ayarlandı ✅* \n*Lütfen Biraz Bekleyin.*",
             "SUCC_AF": "*Eski haline döndürmek için* ```default``` *yazısını kullanın.*",
-            "DEGİS_NONE": "```Lütfen Herhangi Bir Modül İsmi Girin!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```Lütfen Herhangi Bir Modül İsmi Girin!``` \n\n*.degis afk*\n*.degis alive* << *Değişkenler* >> \n_{pp}: Bir kere kullanmak yeterlidir. Mesaja profil fotoğrafınızı ekler._\n_{info}: Durumunuzu getirir._\n_{version}: Bot sürümünü getirir._\n_{plugin}: Plugin kanalını getirir._\n*.degis ban*\n*.degis welcome*\n*.degis goodbye*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Lütfen geçerli olan modülleri kullanın!*",
+            "GR_DEL": "*Karşılama Mesajı Ayarlandı!*\n*Silmek için* ```.goodbye delete & .welcome delete``` *komutunu kullanın*!",
             "DEGİS_DESC": "Alive, afk gibi modüllerin metinlerini değiştirir.",
             "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"           
         },
