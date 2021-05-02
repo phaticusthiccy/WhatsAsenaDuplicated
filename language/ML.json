@@ -83,6 +83,7 @@
             "DYNO_TOTAL": "```മൊത്തം ക്വാട്ട```",
             "DYNO_USED": "```ഉപയോഗിച്ച ക്വാട്ട```",
             "PERCENTAGE": "```ശതമാനം```",
+            "GR_DEL": "*അഭിവാദ്യ സന്ദേശം സജ്ജമാക്കി!*\n*ഇല്ലാതാക്കാൻ ഇനിപ്പറയുന്ന കമാൻഡ് ഉപയോഗിക്കുക:* ```.goodbye delete & .welcome delete```",
             "DYNO_LEFT": "```ശേഷിക്കുന്ന```",
             "SETVAR_DESC": "heroku config var സെറ്റ് ചെയ്യാൻ",
             "SET_SUCCESS": "വിജയകരമായി സെറ്റ് ചെയ്തു ```{} ➜ {}```",
@@ -94,7 +95,7 @@
             "NOT_FOUND": "```നിങൾ കൊടുത്ത ഈ കീ എനിക്ക് കണ്ടെത്താനായില്ല```",
             "SUCC": "*വിജയകരമായി സജ്ജമാക്കുക ✅* \n*കുറച്ച് സമയം കാത്തിരിക്കുക.*",
             "SUCC_AF": "*ഇത് പുന restore സ്ഥാപിക്കാൻ* ```default``` *എന്ന വാചകം ഉപയോഗിക്കുക.*",
-            "DEGİS_NONE": "```ഏതെങ്കിലും മൊഡ്യൂൾ നാമം നൽകുക!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```ഏതെങ്കിലും മൊഡ്യൂൾ നാമം നൽകുക!``` \n\n*.degis afk*\n*.degis alive* << വേരിയബിളുകൾ >> \n_{pp}: ഇത് ഒരിക്കൽ ഉപയോഗിച്ചാൽ മതിയാകും. സന്ദേശത്തിലേക്ക് നിങ്ങളുടെ പ്രൊഫൈൽ ഫോട്ടോ ചേർക്കുന്നു._\n_{info}: നിങ്ങളുടെ നില കാണിക്കുന്നു_ \n_{version}: ബോട്ടിന്റെ പതിപ്പ് കാണിക്കുന്നു_ \n_{plugin}: പ്ലഗിൻ ചാനൽ കാണിക്കുന്നു_\n*.degis ban*\n*.degis add*\n*.degis welcome* \n*.degis goodbye* \n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*ബാധകമായ മൊഡ്യൂളുകൾ ദയവായി ഉപയോഗിക്കുക!*",
             "DEGİS_DESC": "Alive, afk പോലുള്ള മൊഡ്യൂളുകളുടെ വാചകം മാറ്റിസ്ഥാപിക്കുക."          
         },
