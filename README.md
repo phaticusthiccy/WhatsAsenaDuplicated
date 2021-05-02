@@ -127,7 +127,7 @@ $ node bot.js
 
 ##
 
-### ⚒️ Setup Wiki - Kurulum [Tam Anlatım]
+### ⚒️ Setup Wiki - Kurulum [Full Guide - Tam Anlatım]
 [![Setup - Kurulum](https://img.icons8.com/clouds/300/000000/settings.png)](https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki)
 
 ##
