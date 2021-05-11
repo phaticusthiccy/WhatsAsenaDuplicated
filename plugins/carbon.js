@@ -12,6 +12,12 @@ const dd = "Made by WhatsAsena"
 const Language = require('../language');
 const Lang = Language.getString('carbon');
 
+function base64_encode(file) {
+    var bitmap = fs.readFileSync(file);
+    return new Buffer(bitmap).toString('base64');
+}
+var base64str = base64_encode('/root/WhatsAsenaDuplicated/media/gif/WhatsAsena-Thumb.jpeg');
+
 if (Config.WORKTYPE == 'private') {
 
     Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
@@ -52,8 +58,7 @@ if (Config.WORKTYPE == 'private') {
         Theme[18] = "a11y-dark";
         Theme[19] = "dracula-pro";
         Theme[20] = "night-owl";
-        Theme[21] = "dracula-pro";
-        var i = Math.floor(22*Math.random())
+        var i = Math.floor(21*Math.random())
 
         var Language = new Array ()
         Language[0] = "Apache";
@@ -67,9 +72,12 @@ if (Config.WORKTYPE == 'private') {
         Language[8] = "GraphQL";
         var l = Math.floor(9*Math.random())
 
-        var respoimage = await axios.get(`https://thiccyscarbonapi.herokuapp.com/?code=${match[1].replace(/#/gi, "%250A").replace(/Ö/g, "%C3%96").replace(/ö/g, "%C3%B6").replace(/ü/g, "%C3%BC").replace(/Ü/g, "%C3%9C").replace(/Ğ/g, "%C4%9E").replace(/ğ/g, "%C4%9F").replace(/ş/g, "%C5%9F").replace(/Ş/g, "%C5%9E").replace(/ç/g, "%C3%A7").replace(/Ç/g, "%C3%87").replace(/ı/g, "%C4%B1").replace(/i/g, "%69").replace(/"/g, "%22").replace(/İ/g, "%C4%B0")}&theme=` + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
+        var payload = `${match[1].replace('#', '\n')}`
+        var uri = encodeURI(payload)
+        
+        var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + uri + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid,Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: dd})
+        await message.client.sendMessage(message.jid,Buffer.from(respoimage.data), MessageType.image, {thumbnail: base64str, mimetype: Mimetype.png, caption: dd})
 
     }));
 }
@@ -113,8 +121,7 @@ else if (Config.WORKTYPE == 'public') {
         Theme[18] = "a11y-dark";
         Theme[19] = "dracula-pro";
         Theme[20] = "night-owl";
-        Theme[21] = "dracula-pro";
-        var i = Math.floor(22*Math.random())
+        var i = Math.floor(21*Math.random())
 
         var Language = new Array ()
         Language[0] = "Apache";
@@ -128,10 +135,11 @@ else if (Config.WORKTYPE == 'public') {
         Language[8] = "GraphQL";
         var l = Math.floor(9*Math.random())
 
-        var respoimage = await axios.get(`https://thiccyscarbonapi.herokuapp.com/?code=${match[1].replace(/#/gi, "%250A").replace(/Ö/g, "%C3%96").replace(/ö/g, "%C3%B6").replace(/ü/g, "%C3%BC").replace(/Ü/g, "%C3%9C").replace(/Ğ/g, "%C4%9E").replace(/ğ/g, "%C4%9F").replace(/ş/g, "%C5%9F").replace(/Ş/g, "%C5%9E").replace(/ç/g, "%C3%A7").replace(/Ç/g, "%C3%87").replace(/ı/g, "%C4%B1").replace(/i/g, "%69").replace(/"/g, "%22").replace(/İ/g, "%C4%B0")}&theme=` + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
+        var payload = `${match[1].replace('#', '\n')}`
+        var uri = encodeURI(payload)
+        
+        var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + uri + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid,Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.png, caption: dd})
-
+        await message.client.sendMessage(message.jid,Buffer.from(respoimage.data), MessageType.image, {thumbnail: base64str, mimetype: Mimetype.png, caption: dd})
     }));
 }
-
