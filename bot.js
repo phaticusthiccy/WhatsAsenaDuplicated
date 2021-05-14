@@ -22,13 +22,10 @@ const simpleGit = require('simple-git');
 const git = simpleGit();
 const crypto = require('crypto');
 const nw = '```Blacklist Defected!```'
-
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
-
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
-
 const Language = require('./language');
 const Lang = Language.getString('updater');
 
@@ -43,13 +40,11 @@ const WhatsAsenaDB = config.DATABASE.define('WhatsAsenaDuplicated', {
         allowNull: false
     }
 });
-
 fs.readdirSync('./plugins/sql/').forEach(plugin => {
     if(path.extname(plugin).toLowerCase() == '.js') {
         require('./plugins/sql/' + plugin);
     }
 });
-
 const plugindb = require('./plugins/sql/plugin');
 
 // Yalnızca bir kolaylık. https://stackoverflow.com/questions/4974238/javascript-equivalent-of-pythons-format-function //
@@ -65,7 +60,6 @@ if (!Date.now) {
     Date.now = function() { return new Date().getTime(); }
 }
 // ==================== End Date Scanner ====================
-
 
 Array.prototype.remove = function() {
     var what, a = arguments, L = a.length, ax;
@@ -95,13 +89,10 @@ async function whatsAsena () {
     const three = buffi.toString('utf-8'); 
     const buffu = Buffer.from(`${dsl4}`, 'base64');  
     const four = buffu.toString('utf-8'); 
-
     const conn = new WAConnection();
     const Session = new StringSession();
-
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb;
-
     if (StrSes_Db.length < 1) {
         nodb = true;
         conn.loadAuthInfo(Session.deCrypt(config.SESSION)); 
@@ -112,7 +103,6 @@ async function whatsAsena () {
         console.log(
             chalk.blueBright.italic('✅ Login Information Updated!')
         );
-
         const authInfo = conn.base64EncodedAuthInfo();
         if (StrSes_Db.length < 1) {
             await WhatsAsenaDB.create({ info: "StringSession", value: Session.createStringSession(authInfo) });
@@ -120,20 +110,16 @@ async function whatsAsena () {
             await StrSes_Db[0].update({ value: Session.createStringSession(authInfo) });
         }
     })    
-
     conn.on('connecting', async () => {
         console.log(`${chalk.green.bold('Whats')}${chalk.blue.bold('Asena')}
 ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
 ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
     });
-    
-
     conn.on('credentials-updated', async () => {
         console.log(
             chalk.green.bold('✅ Login successful!')
         );
-
         console.log(
             chalk.blueBright.italic('⬇️ Installing External Plugins...')
         );
@@ -175,7 +161,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 await heroku.patch(baseURI + '/formation/' + forID, { 
                     body: { 
                     quantity: 0 
-                  
                     } 
                 });
             })
@@ -196,7 +181,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                         }
                     );
-        
                     await conn.sendMessage(
                         conn.user.jid,
                         '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
@@ -263,7 +247,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                         }
                     );
-        
                     await conn.sendMessage(
                         conn.user.jid,
                         '```Type``` *.update now* ```For The Update Bot.```\n\n' + degisiklikler + '```', MessageType.text
@@ -279,7 +262,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     conn.user.jid,
                     '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef_ *WORK_TYPE* _Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
-
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['WORK_TYPE']: 'private'
@@ -287,12 +269,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
             else {
-
                 await conn.sendMessage(
                     conn.user.jid,
                     '_It Looks Like You Want to Switch to Private Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! I am Trying To Find The Right One For You.._', MessageType.text
                 );
-
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['WORK_TYPE']: 'private'
@@ -301,14 +281,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
         else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc' || config.WORKTYPE == 'pubcli' || config.WORKTYPE == ' pubcli' || config.WORKTYPE == 'PUBLİC' || config.WORKTYPE == ' PUBLİC' || config.WORKTYPE == 'PUBLIC' || config.WORKTYPE == ' PUBLIC' || config.WORKTYPE == 'puvlic' || config.WORKTYPE == ' puvlic' || config.WORKTYPE == 'Puvlic' || config.WORKTYPE == ' Puvlic') {
-
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-
                 await conn.sendMessage(
                     conn.user.jid,
                     '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef_ *WORK_TYPE* _Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
                 );
-
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['WORK_TYPE']: 'public'
@@ -316,12 +293,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 })
             }
             else {
-
                 await conn.sendMessage(
                     conn.user.jid,
                     '_It Looks Like You Want to Switch to Public Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! I am Trying To Find The Right One For You.._', MessageType.text
                 );
-
                 await heroku.patch(baseURI + '/config-vars', {
                     body: {
                         ['WORK_TYPE']: 'public'
@@ -330,32 +305,24 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
         else {
-
             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-
                 return await conn.sendMessage(
                     conn.user.jid,
                     '_Girdiğin_ *WORK_TYPE* _Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar WORK_TYPE:private``` _Yada_ ```.setvar WORK_TYPE:public``` _Komutunu Kullanın!_', MessageType.text
                 );
             }
             else {
-
                 return await conn.sendMessage(
                     conn.user.jid,
                     '_The_ *WORK_TYPE* _Key You Entered Was Not Found!_ \n_Please Type_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
                 );
             }
         }
-        
     })
-    
     conn.on('chat-update', async m => {
-
         if(!m.hasNewMessage) return
         const msg = m.messages.all()[0]
-
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
-
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
         }
@@ -383,7 +350,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             var abc = config.BLOCKCHAT.split(',');                            
             if(msg.key.remoteJid.includes('-') ? abc.includes(msg.key.remoteJid.split('@')[0]) : abc.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
-        
         if (config.SUPPORT == '905524317852-1612300121') {     
             var sup = config.SUPPORT.split(',');                            
             if(msg.key.remoteJid.includes('-') ? sup.includes(msg.key.remoteJid.split('@')[0]) : sup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
@@ -406,7 +372,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 } else {
                     var text_msg = undefined;
                 }
-
                 if ((command.on !== undefined && (command.on === 'image' || command.on === 'photo')
                     && msg.message && msg.message.imageMessage !== null && 
                     (command.pattern === undefined || (command.pattern !== undefined && 
@@ -443,9 +408,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         if (config.SEND_READ && command.on === undefined) {
                             await conn.chatRead(msg.key.remoteJid);
                         }
-                        
                         var match = text_msg.match(command.pattern);
-                        
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
                         && msg.message.imageMessage !== null) {
                             whats = new Image(conn, msg);
@@ -455,7 +418,6 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         } else {
                             whats = new Message(conn, msg);
                         }
-
                         if (command.deleteCommand && msg.key.fromMe) {
                             await whats.delete(); 
                         }
@@ -494,8 +456,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                         '\n*Nedeni:* _Grup adminlerinin kullanabildiği komutların ara sıra split fonksiyonunu görememesi._ ' +
                                         '\n*Çözümü:* _Restart atmanız yeterli olacaktır._'
                                         , MessageType.text
-                                    );
-                                
+                                    );                               
                                 }
                                 else if (error.message.includes('Ookla')) {
                                     return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
