@@ -108,7 +108,7 @@ async function whatsAsena () {
     } else {
         conn.loadAuthInfo(Session.deCrypt(StrSes_Db[0].dataValues.value));
     }
-    conn.on ('credentials-updated', async () => {
+    conn.on ('open', async () => {
         console.log(
             chalk.blueBright.italic('✅ Login Information Updated!')
         );
