@@ -129,7 +129,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
     });
     
 
-    conn.on('open', async () => {
+    conn.on('credentials-updated', async () => {
         console.log(
             chalk.green.bold('✅ Login successful!')
         );
