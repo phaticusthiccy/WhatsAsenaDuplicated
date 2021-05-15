@@ -418,9 +418,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         } else {
                             whats = new Message(conn, msg);
                         }
-                        if (command.deleteCommand && msg.key.fromMe) {
-                            await whats.delete(); 
-                        }
+                        if (msg.key.fromMe) { try { if (command.deleteCommand) { await whats.delete() } } catch (err) { await command.function(whats, match) } }
                         // ==================== End Message Catcher ====================
 
                         // ==================== Error Message ====================
