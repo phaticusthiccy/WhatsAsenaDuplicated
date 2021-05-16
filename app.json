@@ -129,7 +129,7 @@
             "value": "true"
         },
         "COFFEEHOUSE_API_KEY": {
-            "description": "CoffeeHouse API Key. Need for Lydia. https://coffeehouse.intellivoid.net/",
+            "description": "Pass This Step! - Bu Bölümü Geçin!",
             "required": false,
             "value": "true"
         }
