@@ -10,7 +10,7 @@ const Config = require('../config');
 const dd = "Made by WhatsAsena"
 
 const Language = require('../language');
-const Lang = Language.getString('carbon');
+const Lang = Language.getString('log');
 
 function base64_encode(file) {
     var bitmap = fs.readFileSync(file);
@@ -20,9 +20,9 @@ var base64str = base64_encode('/root/WhatsAsenaDuplicated/media/gif/WhatsAsena-T
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: true, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
+    Asena.addCommand({pattern: 'carbon', fromMe: true, desc: Lang.CARBON_DESC}, (async (message, match) => {
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
+        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.REPLY, MessageType.text);
 
         var rgbafmin = 0; 
         var rgbafmax = 255;  
@@ -57,8 +57,11 @@ if (Config.WORKTYPE == 'private') {
         Theme[17] = "3024-night";
         Theme[18] = "a11y-dark";
         Theme[19] = "dracula-pro";
-        Theme[20] = "night-owl";
-        var i = Math.floor(21*Math.random())
+        Theme[20] = "dracula-pro";
+        Theme[21] = "dracula-pro";
+        Theme[22] = "dracula-pro";
+        Theme[23] = "night-owl";
+        var i = Math.floor(24*Math.random())
 
         var Language = new Array ()
         Language[0] = "Apache";
@@ -72,20 +75,21 @@ if (Config.WORKTYPE == 'private') {
         Language[8] = "GraphQL";
         var l = Math.floor(9*Math.random())
 
-        var payload = `${match[1].replace('#', '\n')}`
-        var uri = encodeURI(payload)
+        var text = message.reply_message.text
+        var fin = text.replace(/(?:\r\n|\r|\n)/g, '%250A')
+        var pay = encodeURIComponent(fin)
         
-        var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + uri + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
+        var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + pay + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid,Buffer.from(respoimage.data), MessageType.image, {thumbnail: base64str, mimetype: Mimetype.png, caption: dd})
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {thumbnail: base64str, mimetype: Mimetype.png, caption: dd})
 
     }));
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'carbon ?(.*)', fromMe: false, desc: Lang.CARBON_DESC, warn: Lang.CARBON_WARN}, (async (message, match) => {
+    Asena.addCommand({pattern: 'carbon', fromMe: false, desc: Lang.CARBON_DESC}, (async (message, match) => {
 
-        if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.CARBON_NEEDWORD, MessageType.text);
+        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.REPLY, MessageType.text);
 
         var rgbafmin = 0; 
         var rgbafmax = 255;  
@@ -120,8 +124,11 @@ else if (Config.WORKTYPE == 'public') {
         Theme[17] = "3024-night";
         Theme[18] = "a11y-dark";
         Theme[19] = "dracula-pro";
-        Theme[20] = "night-owl";
-        var i = Math.floor(21*Math.random())
+        Theme[20] = "dracula-pro";
+        Theme[21] = "dracula-pro";
+        Theme[22] = "dracula-pro";
+        Theme[23] = "night-owl";
+        var i = Math.floor(24*Math.random())
 
         var Language = new Array ()
         Language[0] = "Apache";
@@ -135,11 +142,12 @@ else if (Config.WORKTYPE == 'public') {
         Language[8] = "GraphQL";
         var l = Math.floor(9*Math.random())
 
-        var payload = `${match[1].replace('#', '\n')}`
-        var uri = encodeURI(payload)
+        var text = message.reply_message.text
+        var fin = text.replace(/(?:\r\n|\r|\n)/g, '%250A')
+        var pay = encodeURIComponent(fin)
         
-        var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + uri + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
+        var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + pay + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
 
-        await message.client.sendMessage(message.jid,Buffer.from(respoimage.data), MessageType.image, {thumbnail: base64str, mimetype: Mimetype.png, caption: dd})
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {thumbnail: base64str, mimetype: Mimetype.png, caption: dd})
     }));
 }
