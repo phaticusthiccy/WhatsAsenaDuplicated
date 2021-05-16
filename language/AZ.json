@@ -391,7 +391,7 @@
             "VİD_NEED": "```Hər hansı bir videoya cavab verin!```"
         },
         "carbon": {
-            "CARBON_DESC": "Mətni carbon.sh ilə şəkilə çevirir.",
+            "CARBON_DESC": "Cavab mətninizi carbon.sh ilə şəkilə çevirir.",
             "CARBON_NEEDWORD": "*Fotoya çevirmək üçün kifayət qədər arqument yoxdur!*\nNümunə: ```.carbon deneme```\nNümunə: ```.carbon deneme#Yapıyor```",
             "CARBON_WARN": "Xahiş edirəm yalnız en və en dillərində yazın!"
         },
