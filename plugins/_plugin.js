@@ -27,13 +27,20 @@ const heroku = new Heroku({
 
 
 let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
+var LANG = {
+    unaffinfo: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Yüklenen Pluginin Tehlike Derecesi:* _%' : '*Danger Level of Installed Plugin:* _%',
+    harmful: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Zararlı Olduğundan Yüklenemez!*' : '*This Plugin Cannot Be Installed As It Is Harmful!*',
+    duplicate: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Aynı Plugini 2 Defa Yüklemeyezsiniz!*' : '*You Cannot Install the Same Plugin 2 Times!*',
+    limit: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Güvenlik Sınırını Aşıyor!*\n*Zararlılık Yüzdesi:* _%' : '*This Plugin Exceeds Security Limit!*\n*Percentage of Harm:* _%',
+    imside: Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Varolan Pluginleri Tekrar Yükleyemezsin!*' : '*You Cant Reinstall Existing Plugins!*'
+};
+Asena.addCommand({pattern: 'install?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
 
-Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, warn: Lang.WARN}, (async (message, match) => {
-    if (match[1] === '') return await message.sendMessage(Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd')
+    if (match[1] == '') return await message.client.sendMessage(message.jid,Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd', MessageType.text)
     try {
         var url = new URL(match[1]);
     } catch {
-        return await message.sendMessage(Lang.INVALID_URL);
+        return await message.client.sendMessage(message.jid,Lang.INVALID_URL,txt);
     }
     
     if (url.host === 'gist.github.com') {
@@ -58,14 +65,60 @@ Asena.addCommand({pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DES
             require('./' + plugin_name);
         } catch (e) {
             fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
-            return await message.sendMessage(Lang.INVALID_PLUGIN + ' ```' + e + '```');
+            return await message.client.sendMessage(message.jid,Lang.INVALID_PLUGIN + ' ```' + e + '```', MessageType.text);
         }
-
-        await Db.installPlugin(url, plugin_name);
-        await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text);
-        if (!match[1].includes('phaticusthiccy')) {
-            await new Promise(r => setTimeout(r, 400));
-            await message.client.sendMessage(message.jid, Lang.UNOFF, MessageType.text);
+        var DEG = { level: 5 }
+        if (response.body.includes('fs.')) DEG.level = DEG.level + 8
+        if (response.body.includes('message.client.user.name')) DEG.level = DEG.level + 6
+        if (response.body.includes('Buffer')) DEG.level = DEG.level + 14
+        if (response.body.includes("require('fs')")) DEG.level = DEG.level + 9
+        if (response.body.includes('quotedMessage')) DEG.level = DEG.level + 5
+        if (response.body.includes('fs.unlinkSync')) DEG.level = DEG.level + 16
+        if (response.body.includes('findAll')) DEG.level = DEG.level + 20
+        if (response.body.includes('MessageType.location')) DEG.level = DEG.level + 9
+        if (response.body.includes('message.client.user.jid')) DEG.level = DEG.level + 8
+        if (response.body.includes('exec')) DEG.level = DEG.level + 14
+        if (response.body.includes('setMessage')) DEG.level = DEG.level + 22
+        if (response.body.includes('/sql/notes') || response.body.includes('/sql/lydia') || response.body.includes('/sql/plugin') || response.body.includes('/sql/greetings') || response.body.includes('/sql/filters')) DEG.level = DEG.level + 33
+        if (response.body.includes('neofetch')) DEG.level = DEG.level + 12
+        if (response.body.includes('groupMetadata')) DEG.level = DEG.level + 29
+        if (response.body.includes('similarity')) DEG.level = DEG.level + 18
+        if (response.body.includes('format')) DEG.level = DEG.level + 26
+        var plugins = await Db.PluginDB.findAll()
+        var find = '';
+        await plugins.map((plugin) => { find += plugin.dataValues.name })
+        if (find.includes(plugin_name)) {
+            await message.client.sendMessage(message.jid, LANG.duplicate, MessageType.text)
+            await new Promise(r => setTimeout(r, 400))
+            fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+        }
+        else if (response.body.includes('formation')) {
+            await message.client.sendMessage(message.jid, LANG.harmful, MessageType.text)
+            await new Promise(r => setTimeout(r, 400))
+            fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+        } 
+        else if (response.body.includes('commands.map') || response.body.includes('PluginDB') || response.body.includes('groupRemove') || response.body.includes('groupAdd') || response.body.includes('groupMakeAdmin') || response.body.includes('groupDemoteAdmin') || response.body.includes('groupSettingChange') || response.body.includes('groupInviteCode') || response.body.includes('Math.round((new Date()).getTime() / 1000)') || response.body.includes('https://thiccyscarbonapi.herokuapp.com/?code=') || response.body.includes('filtreler.map') || response.body.includes('heroku.delete') || response.body.includes('heroku.patch') || response.body.includes('Chrome/80.0.3987.149 Mobile Safari/537.36') || response.body.includes('groupLeave') || response.body.includes('updateProfilePicture') || response.body.includes('blockUser') || response.body.includes("Language.getString('system_stats')") || response.body.includes("commits['all'].map") || response.body.includes('await git.fetch') || response.body.includes('jids.push')) {
+            await message.client.sendMessage(message.jid, LANG.imside, MessageType.text)
+            await new Promise(r => setTimeout(r, 400))
+            fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+        } 
+        else {
+            if (!match[1].includes('phaticusthiccy') && DEG.level > 100) {
+                await message.client.sendMessage(message.jid,LANG.limit + DEG.level + '_', MessageType.text)
+                fs.unlinkSync('/root/WhatsAsenaDuplicated/plugins/' + plugin_name + '.js')
+            }
+            else if (!match[1].includes('phaticusthiccy') && DEG.level < 101) {
+                await Db.installPlugin(url, plugin_name)
+                await new Promise(r => setTimeout(r, 400))
+                await message.client.sendMessage(message.jid,Lang.UNOFF, MessageType.text)
+                await new Promise(r => setTimeout(r, 400))
+                await message.client.sendMessage(message.jid, LANG.unaffinfo + DEG.level + '_', MessageType.text)
+            }
+            else {
+                await new Promise(r => setTimeout(r, 400))
+                await Db.installPlugin(url, plugin_name)
+                await message.client.sendMessage(message.jid, Lang.INSTALLED, MessageType.text)
+            }
         }
     }
 }));
