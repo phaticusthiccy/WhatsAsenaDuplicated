@@ -281,6 +281,7 @@
             "MP4TOAUDİO_DESC": "Converts video to sound.",
             "MP4TOAUDİO_NEEDREPLY": "*You Must Reply to a Video!*",
             "MP4TOAUDİO": "```Converting Video to Audio..```",
+            "ANİM_STİCK": "Converts animated stickers to video.",
             "STİCKER_DESC": "Converts the sticker to a photo.",
             "STİCKER_NEEDREPLY": "*You Must Reply to a sticker!*",
             "STİCKER": "```Converting the sticker to a photo..```",
