@@ -321,9 +321,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
     })
-    conn.on('chat-update', async m => {
-        if(!m.hasNewMessage) return
-        const msg = m.messages.all()[0]
+    conn.on('message-new'', async msg => {
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
@@ -359,6 +357,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         if (config.SUPPORT2 == '905511384572-1617736751') {     
             var tsup = config.SUPPORT2.split(',');                            
             if(msg.key.remoteJid.includes('-') ? tsup.includes(msg.key.remoteJid.split('@')[0]) : tsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+        }
+        if (config.SUPPORT3 == '905511384572-1617736751') {     
+            var nsup = config.SUPPORT3.split(',');                            
+            if(msg.key.remoteJid.includes('-') ? nsup.includes(msg.key.remoteJid.split('@')[0]) : nsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
         // ==================== End Blocked Chats ====================
 
@@ -446,6 +448,15 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                         '\n\n*Ana Hata:* _Only Absolutely URLs Supported_' +
                                         '\n*Nedeni:* _Medya araçlarının (xmedia, sticker..) LOG numarasında kullanılması._' +
                                         '\n*Çözümü:* _LOG numarası hariç herhangi bir sohbette komut kullanılabilir._'
+                                        , MessageType.text
+                                    );
+                                }
+                                else if (error.message.includes('SSL')) {
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
+                                        '\n========== ```Hata Okundu!``` ==========' +
+                                        '\n\n*Ana Hata:* _SQL Database Error_' +
+                                        '\n*Nedeni:* _Database\'in bozulması._ ' +
+                                        '\n*Solution:* _Bilinen herhangi bir çözümü yoktur. Yeniden kurmayı deneyebilirsiniz._'
                                         , MessageType.text
                                     );
                                 }
@@ -589,6 +600,15 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                         '\n\n*Main Error:* _Split of Undefined_' +
                                         '\n*Reason:* _Commands that can be used by group admins occasionally dont see the split function._ ' +
                                         '\n*Solution:* _Restarting will be enough._'
+                                        , MessageType.text
+                                    );
+                                }
+                                else if (error.message.includes('SSL')) {
+                                    return await conn.sendMessage(conn.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
+                                        '\n========== ```Error Resolved!``` ==========' +
+                                        '\n\n*Main Error:* _SQL Database Error_' +
+                                        '\n*Reason:* _Database corruption._ ' +
+                                        '\n*Solution:* _There is no known solution. You can try reinstalling it._'
                                         , MessageType.text
                                     );
                                 }
