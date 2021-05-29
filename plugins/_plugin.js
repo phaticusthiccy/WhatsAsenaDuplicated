@@ -19,7 +19,7 @@ const Lang = Language.getString('_plugin');
 const NLang = Language.getString('updater');
 
 let msg = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Olarak Onaylanmıştır!* ✅' : '*This Plugin is Officially Approved!* ✅'
-let inmsg = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Değildir!* ❌' : '*This Plugin isn\'t Officially Approved!* ❌'
+let unmsg = Config.LANG == 'TR' || Config.LANG == 'AZ' ? '*Bu Plugin Resmi Değildir!* ❌' : '*This Plugin isn\'t Officially Approved!* ❌'
 
 const heroku = new Heroku({
     token: Config.HEROKU.API_KEY
@@ -107,7 +107,7 @@ Asena.addCommand({pattern: 'install?(.*)', fromMe: true, desc: Lang.INSTALL_DESC
             else if (!match[1].includes('phaticusthiccy') && DEG.level < 100) {
                 await Db.installPlugin(url, plugin_name)
                 await new Promise(r => setTimeout(r, 400))
-                await message.client.sendMessage(message.jid, '*Yüklenen Plugin Resmi Değildir!*', MessageType.text)
+                await message.client.sendMessage(message.jid, Lang.UNOFF, MessageType.text)
                 await new Promise(r => setTimeout(r, 400))
                 await message.client.sendMessage(message.jid, LANG.unaffinfo + DEG.level + '_', MessageType.text)
             }
