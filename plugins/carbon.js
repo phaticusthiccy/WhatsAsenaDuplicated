@@ -12,15 +12,10 @@ const dd = "Made by WhatsAsena"
 const Language = require('../language');
 const Lang = Language.getString('log');
 
-function base64_encode(file) {
-    var bitmap = fs.readFileSync(file);
-    return new Buffer(bitmap).toString('base64');
-}
-var base64str = base64_encode('/root/WhatsAsenaDuplicated/media/gif/WhatsAsena-Thumb.jpeg');
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'carbon', fromMe: true, desc: Lang.CARBON_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'carbon$', fromMe: true, desc: Lang.CARBON_DESC}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.REPLY, MessageType.text);
 
@@ -81,13 +76,13 @@ if (Config.WORKTYPE == 'private') {
         
         var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + pay + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {thumbnail: base64str, mimetype: Mimetype.png, caption: dd})
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, { mimetype: Mimetype.png, caption: dd})
 
     }));
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'carbon', fromMe: false, desc: Lang.CARBON_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'carbon$', fromMe: false, desc: Lang.CARBON_DESC}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.REPLY, MessageType.text);
 
@@ -148,6 +143,6 @@ else if (Config.WORKTYPE == 'public') {
         
         var respoimage = await axios.get('https://thiccyscarbonapi.herokuapp.com/?code=' + pay + '&theme=' + Theme[i] + '&exportSize=3x&paddingVertical=200px&paddingHorizontal=200px&backgroundColor=rgba(' + rgbafirst + ',' + rgbasecond + ',' + rgbathird + ')&language=' + Language[l], { responseType: 'arraybuffer' })
 
-        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {thumbnail: base64str, mimetype: Mimetype.png, caption: dd})
+        await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, { mimetype: Mimetype.png, caption: dd})
     }));
 }
