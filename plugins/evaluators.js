@@ -10,6 +10,7 @@ const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const exec = require('child_process').exec;
 const os = require("os");
+const fs = require('fs');
 const Config = require('../config')
 const Language = require('../language');
 const Lang = Language.getString('evaluators');
@@ -91,7 +92,7 @@ Asena.addCommand({pattern: 'addserver$', fromMe: wk_ad, desc: addsdesc}, (async 
             message: message.reply_message.data.quotedMessage
         });
         var fin = location.split('.')[1]
-        exec('mv ' + location + ' /root/WhatsAsenaDuplicated/server-image' + fin)
+        exec('mv ' + location + ' /root/WhatsAsenaDuplicated/server-image.' + fin)
         await message.client.sendMessage(message.jid,suc_add, MessageType.text)
     }
     else if (message.reply_message.video) {
@@ -104,7 +105,7 @@ Asena.addCommand({pattern: 'addserver$', fromMe: wk_ad, desc: addsdesc}, (async 
             
         });
         var fin = location.split('.')[1]
-        exec('mv ' + location + ' /root/WhatsAsenaDuplicated/server-video' + fin)
+        exec('mv ' + location + ' /root/WhatsAsenaDuplicated/server-video.' + fin)
         await message.client.sendMessage(message.jid,suc_add, MessageType.text)
     }
     else if (message.reply_message.audio) {
@@ -117,7 +118,7 @@ Asena.addCommand({pattern: 'addserver$', fromMe: wk_ad, desc: addsdesc}, (async 
             
         });
         var fin = location.split('.')[1]
-        exec('mv ' + location + ' /root/WhatsAsenaDuplicated/server-audio' + fin)
+        exec('mv ' + location + ' /root/WhatsAsenaDuplicated/server-audio.' + fin)
         await message.client.sendMessage(message.jid,suc_add, MessageType.text)
     }
     else { await message.client.sendMessage(message.jid,rep_add, MessageType.text)
