@@ -76,7 +76,9 @@ if (Config.WORKTYPE == 'private') {
                     } catch {
                         var cmatch = [command.pattern];
                     }
-                
+                    if (cmmatch.endsWith(' ')) {
+                        var cmmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2].replace(' ', '')
+                    }
                     if (cmmatch == match[1]) {
                         var HANDLER = '';
     
@@ -182,7 +184,9 @@ else if (Config.WORKTYPE == 'public') {
                     } catch {
                         var cmatch = [command.pattern];
                     }
-                
+                    if (cmmatch.endsWith(' ')) {
+                        var cmmatch = command.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2].replace(' ', '')
+                    }
                     if (cmmatch == match[1]) {
                         var HANDLER = '';
     
