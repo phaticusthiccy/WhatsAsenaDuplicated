@@ -78,6 +78,9 @@ async function whatsAsena () {
     var ggg = Buffer.from(clh.cd, 'base64')
     var ddd = ggg.toString('utf-8')
     clh.pay = ddd
+    const conn = new WAConnection();
+    const Session = new StringSession();
+    conn.version = [2, 2119, 6]
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
@@ -147,8 +150,7 @@ async function whatsAsena () {
     const three = buffi.toString('utf-8'); 
     const buffu = Buffer.from(`${dsl4}`, 'base64');  
     const four = buffu.toString('utf-8'); 
-    const conn = new WAConnection();
-    const Session = new StringSession();
+    
     conn.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb;
     if (StrSes_Db.length < 1) {
