@@ -1,6 +1,11 @@
-/* Codded by @phaticusthiccy
-Telegram: t.me/phaticusthiccy
-Instagram: www.instagram.com/kyrie.baran
+/* Codded By @TOXIC-DEVIL
+
+## CopyRight (C) 2021 [ @TOXIC-DEVIL ]
+## WhatsAsenaDuplicated
+##
+# GNU General Public License for more details.
+#
+## WhatsAsenaDuplicated - [ Command Coder - @TOXIC-DEVIL ]
 */
 
 const Asena = require('../events');
@@ -32,6 +37,12 @@ if (Config.WORKTYPE == 'private') {
         var ttinullimage = await axios.get('https://videfikri.com/api/textmaker/glowingneon/?text=' + uri, { responseType: 'arraybuffer' })
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena' })
     }));
+    Asena.addCommand({ pattern: 'burnttp ?(.*)', fromMe: true, desc: Lang.BURN_DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
+        var uri = encodeURI(match[1])
+        var ttinullimage = await axios.get('https://videfikri.com/api/textmaker/burnpaper/?text=' + uri, { responseType: 'arraybuffer' })
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena' })
+    }));
 }
 else if (Config.WORKTYPE == 'public') {
     Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: false, desc: Lang.TTP_DESC }, (async (message, match) => {
@@ -50,6 +61,12 @@ else if (Config.WORKTYPE == 'public') {
         if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
         var uri = encodeURI(match[1])
         var ttinullimage = await axios.get('https://videfikri.com/api/textmaker/glowingneon/?text=' + uri, { responseType: 'arraybuffer' })
+        await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena' })
+    }));
+    Asena.addCommand({ pattern: 'burnttp ?(.*)', fromMe: false, desc: Lang.BURN_DESC }, (async (message, match) => {
+        if (match[1] === '') return await message.sendMessage(Lang.NEED_WORD);
+        var uri = encodeURI(match[1])
+        var ttinullimage = await axios.get('https://videfikri.com/api/textmaker/burnpaper/?text=' + uri, { responseType: 'arraybuffer' })
         await message.sendMessage(Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena' })
     }));
 }
