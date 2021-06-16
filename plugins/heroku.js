@@ -11,6 +11,7 @@ const Heroku = require('heroku-client');
 const {secondsToHms} = require('./afk');
 const got = require('got');
 const {MessageType} = require('@adiwajshing/baileys');
+const sql = require('./sql/greetings');
 
 const Language = require('../language');
 const Lang = Language.getString('heroku');
@@ -25,13 +26,10 @@ let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 Asena.addCommand({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC}, (async (message, match) => {
 
-    if (match[1] == '' && message.reply_message) {
+    if (match[1] == '') {
         return await message.client.sendMessage(message.jid, Lang.DEGİS_NONE, MessageType.text); 
     }
-    else if (match[1] !== '' && !message.reply_message) {
-        return await message.client.sendMessage(message.jid, Lang.NEED_REPLY, MessageType.text); 
-    }
-    else if (match[1] == '' && !message.reply_message) {
+    else if (!message.reply_message) {
         return await message.client.sendMessage(message.jid, Langr.NEED_REPLY, MessageType.text); 
     }
     else if (match[1] == 'ban' && message.reply_message) {
@@ -43,6 +41,16 @@ Asena.addCommand({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC},
                 ['BAN_MESSAGE']: message.reply_message.text
             } 
         });
+    }
+    else if (match[1] == 'welcome' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await sql.setMessage(message.jid, 'welcome', message.reply_message.text)
+        await message.client.sendMessage(message.jid, Lang.GR_DEL, MessageType.text);
+    }
+    else if (match[1] == 'goodbye' && message.reply_message) {
+        await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
+        await sql.setMessage(message.jid, 'goodbye', message.reply_message.text)
+        await message.client.sendMessage(message.jid, Lang.GR_DEL, MessageType.text);
     }
     else if (match[1] == 'mute' && message.reply_message) {
         await message.client.sendMessage(message.jid, Lang.SUCC, MessageType.text);
@@ -144,16 +152,13 @@ Asena.addCommand({pattern: 'degis ?(.*)', fromMe: true, desc: Lang.DEGİS_DESC},
             } 
         });
     }
-    else if ((!match[1] == 'unblock' || !match[1] == 'add' || !match[1] == 'block' || !match[1] == 'mute' || !match[1] == 'unmute' || !match[1] == 'afk' || !match[1] == 'alive' || !match[1] == 'demote' || !match[1] == 'promote' || !match[1] == 'ban' || !match[1] == 'kickme') && message.reply_message) {
-        return await message.client.sendMessage(message.jid, Lang.WR, MessageType.text);
-    }
-    else if ((!match[1] == 'unblock' || !match[1] == 'add' || !match[1] == 'block' || !match[1] == 'mute' || !match[1] == 'unmute' || !match[1] == 'afk' || !match[1] == 'alive' || !match[1] == 'demote' || !match[1] == 'promote' || !match[1] == 'ban' || !match[1] == 'kickme') && !message.reply_message) {
+    else if (!match[1] == 'unblock' || !match[1] == 'welcome' || !match[1] == 'goodbye' || !match[1] == 'add' || !match[1] == 'block' || !match[1] == 'mute' || !match[1] == 'unmute' || !match[1] == 'afk' || !match[1] == 'alive' || !match[1] == 'demote' || !match[1] == 'promote' || !match[1] == 'ban' || !match[1] == 'kickme' && message.reply_message) {
         return await message.client.sendMessage(message.jid, Lang.WR, MessageType.text);
     }
 }));
 
 
-Asena.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
+Asena.addCommand({pattern: 'restart$', fromMe: true, desc: Lang.RESTART_DESC}, (async (message, match) => {
 
     await message.client.sendMessage(message.jid,Lang.RESTART_MSG, MessageType.text);
     console.log(baseURI);
@@ -162,7 +167,7 @@ Asena.addCommand({pattern: 'restart', fromMe: true, desc: Lang.RESTART_DESC}, (a
     });
 }));
 
-Asena.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
+Asena.addCommand({pattern: 'shutdown$', fromMe: true, desc: Lang.SHUTDOWN_DESC}, (async(message, match) => {
 
     await heroku.get(baseURI + '/formation').then(async (formation) => {
         forID = formation[0].id;
@@ -180,7 +185,7 @@ Asena.addCommand({pattern: 'shutdown', fromMe: true, desc: Lang.SHUTDOWN_DESC}, 
 
 if (Config.WORKTYPE == 'private') {
 
-    Asena.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'dyno$', fromMe: true, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client
@@ -213,37 +218,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'dyno', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
-
-        heroku.get('/account').then(async (account) => {
-            // have encountered some issues while calling this API via heroku-client
-            // so let's do it manually
-            url = "https://api.heroku.com/accounts/" + account.id + "/actions/get-quota"
-            headers = {
-                "User-Agent": "Chrome/80.0.3987.149 Mobile Safari/537.36",
-                "Authorization": "Bearer " + Config.HEROKU.API_KEY,
-                "Accept": "application/vnd.heroku+json; version=3.account-quotas",
-            }
-            await got(url, {headers: headers}).then(async (res) => {
-               const resp = JSON.parse(res.body);
-               total_quota = Math.floor(resp.account_quota);
-               quota_used = Math.floor(resp.quota_used);         
-               percentage = Math.round((quota_used / total_quota) * 100);
-               remaining = total_quota - quota_used;
-               await message.client.sendMessage(
-                    message.jid,
-                    Lang.DYNO_TOTAL + ": ```{}```\n\n".format(secondsToHms(total_quota))  + 
-                    Lang.DYNO_USED + ": ```{}```\n".format(secondsToHms(quota_used)) +  
-                    Lang.PERCENTAGE + ": ```{}```\n\n".format(percentage) +
-                    Lang.DYNO_LEFT + ": ```{}```\n".format(secondsToHms(remaining)),
-                    MessageType.text
-               );
-            }).catch(async (err) => {
-                await message.client.sendMessage(message.jid,err.message, MessageType.text);     
-            });        
-        });
-    }));
-    Asena.addCommand({pattern: 'dyno', fromMe: true, desc: Lang.DYNO_DESC, dontAddCommandList: true}, (async (message, match) => {
+    Asena.addCommand({pattern: 'dyno$', fromMe: false, desc: Lang.DYNO_DESC}, (async (message, match) => {
 
         heroku.get('/account').then(async (account) => {
             // have encountered some issues while calling this API via heroku-client

@@ -80,7 +80,7 @@ if (Config.WORKTYPE == 'private') {
 }
 else if (Config.WORKTYPE == 'public') {
 
-    Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: true, desc: Lang.FF_DESC}, (async (message, match) => {
+    Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: false, desc: Lang.FF_DESC}, (async (message, match) => {
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,'Need Media and Filter Name!\nℹ️ Ex: ```.ffmpeg fade=in:0:30```\nℹ️ Ex: ```.ffmpeg curves=vintage, fps=fps=25```', MessageType.text);
         if (message.reply_message.video) {
@@ -141,65 +141,5 @@ else if (Config.WORKTYPE == 'public') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
         }
     }));
-    Asena.addCommand({pattern: 'ffmpeg ?(.*)', fromMe: false, desc: Lang.FF_DESC, dontAddCommandList: true}, (async (message, match) => {
-
-        if (match[1] === '') return await message.client.sendMessage(message.jid,'Need Media and Filter Name!\nℹ️ Ex: ```.ffmpeg fade=in:0:30```\nℹ️ Ex: ```.ffmpeg curves=vintage, fps=fps=25```', MessageType.text);
-        if (message.reply_message.video) {
-
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
-
-            ffmpeg(location)
-                .videoFilters(`${match[1]}`)
-                .format('mp4')
-                .save('output.mp4')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp4'), MessageType.video, {mimetype: Mimetype.mpeg, caption: 'Made by WhatsAsena'});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-        }
-        else if (message.reply_message.video === false && message.reply_message.image) {
-
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
-
-            ffmpeg(location)
-                .videoFilters(`${match[1]}`)
-                .save('output.jpg')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-        }
-        else {
-            var downloading = await message.client.sendMessage(message.jid,Lang.FF_PROC,MessageType.text);
-            var location = await message.client.downloadAndSaveMediaMessage({
-                key: {
-                    remoteJid: message.reply_message.jid,
-                    id: message.reply_message.id
-                },
-                message: message.reply_message.data.quotedMessage
-            });
-
-            ffmpeg(location)
-                .audioFilters(`${match[1]}`)
-                .save('output.mp3')
-                .on('end', async () => {
-                    await message.sendMessage(fs.readFileSync('output.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio});
-                });
-            return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
-        }
-    }));
+    
 }

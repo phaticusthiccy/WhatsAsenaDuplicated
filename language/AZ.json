@@ -83,6 +83,7 @@
             "DYNO_TOTAL": "```Ümumi kvota```",
             "DYNO_USED": "```Kota istifadə edildi```",
             "PERCENTAGE": "```faiz```",
+            "GR_DEL": "*Xoş Mesajlar Dəsti!*\n*Silmək üçün* ```.goodbye delete & .welcome delete``` *komanda istifadə edin*!",
             "DYNO_LEFT": "```qalıq balans```",
             "SETVAR_DESC": "Heroku config var parametrləri.",
             "SET_SUCCESS": "Uğurla quruldu ```{} ➜ {}```",
@@ -94,7 +95,7 @@
             "NOT_FOUND": "```bu açar üçün heç bir nəticə tapılmadı```",
             "SUCC": "*Uğurla qurun! ✅* \n*Xahiş edirəm bir az gözləyin.*",
             "SUCC_AF": "*Bərpa etmək üçün* ```default``` *mətn istifadə edin.*",
-            "DEGİS_NONE": "```Zəhmət olmasa istənilən modul adını daxil edin!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```Zəhmət olmasa istənilən modul adını daxil edin!``` \n\n*.degis afk*\n*.degis alive* << *Dəyişənlər* >> \n_{pp}: Bir dəfə istifadə etmək kifayətdir. Profil şəklinizi mesaja əlavə edir._\n_{info}: Statusunuzu göstərir._ \n_{version}: Botun versiyasını göstərir._ \n_{plugin}: Plugin kanalını göstərir._\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis welcome* \n*.degis goodbye* \n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Zəhmət olmasa tətbiq olunan modullardan istifadə edin!*",
             "DEGİS_DESC": "Modulların mətnini alive, afk kimi dəyişdirin."        
         },
@@ -278,9 +279,11 @@
             "MP4TOAUDİO_DESC": "Videonu səsə çevirir..",
             "MP4TOAUDİO_NEEDREPLY": "*Bir videoya cavab verməlisiniz!*",
             "MP4TOAUDİO": "```Videonuzu Səsə çevirir..```",
+            "ANİM_STİCK": "Animasiya stikerlərini videoya çevirir.",
             "STİCKER_DESC": "Resim stickeri bir fotoya çevirir..",
             "STİCKER_NEEDREPLY": "*Bir stickere cavab verməlisən*",
             "STİCKER": "```Sticker bir fotoya çevirir..```",
+            "ANİMATE": "```Animasiya stikeri videoya çevrir..```",
             "XMEDİA_DESC": "25-dən çox medya vasitəsi olan plagindir.",
             "T_FALSE": "```❌ Yanlış Blend Effekti Daxil Edildi!```\n```🔎 Mövcud əmrlər:```\n\n*$dodge* - Videoya çəhrayı rəngli bir filtr tətbiq edir.\n*$multiply* - Videoya yaşıl rəngli bir filtr tətbiq edir.\n*$grainmerge* - Videonun kontrastını artırır.\n*$and* - Videonun sürətinə görə qara ildırım effekti tətbiq edir.\n*$or* - Videonun sürətinə görə ağ ildırım effekti tətbiq edir.\n*$burn* - Videoya yaşıl kontrast tətbiq edir.\n*$difference* - Videoya yaşıl relyef tətbiq edərək fərqləri göstərir.\n*$grainextract* - Videoya boz relyef tətbiq edərək fərqləri göstərir.\n*$divide* - Videoya çəhrayı bir rahatlama tətbiq edərək fərqləri nümayiş etdirir.\n*$xor* - Həm yaşıl relyef, həm də ildırım effekti videoya tətbiq olunur.\n*$hardmix* - Videonun rənglərini sarı və qırmızı bir tonda qarışdırır.\n*$negation* - Videonun dinamikasını çəhrayı rəngə çevirir.",
             "T_NOT": "```💭 Hər hansı bir Blend effekti daxil etməlisiniz!\n```🔎 Mövcud əmrlər:```\n\n*$dodge* - Videoya çəhrayı rəngli bir filtr tətbiq edir.\n*$multiply* - Videoya yaşıl rəngli bir filtr tətbiq edir.\n*$grainmerge* - Videonun kontrastını artırır.\n*$and* - Videonun sürətinə görə qara ildırım effekti tətbiq edir.\n*$or* - Videonun sürətinə görə ağ ildırım effekti tətbiq edir.\n*$burn* - Videoya yaşıl kontrast tətbiq edir.\n*$difference* - Videoya yaşıl relyef tətbiq edərək fərqləri göstərir.\n*$grainextract* - Videoya boz relyef tətbiq edərək fərqləri göstərir.\n*$divide* - Videoya çəhrayı bir rahatlama tətbiq edərək fərqləri nümayiş etdirir.\n*$xor* - Həm yaşıl relyef, həm də ildırım effekti videoya tətbiq olunur.\n*$hardmix* - Videonun rənglərini sarı və qırmızı bir tonda qarışdırır.\n*$negation* - Videonun dinamikasını çəhrayı rəngə çevirir.",
@@ -390,7 +393,7 @@
             "VİD_NEED": "```Hər hansı bir videoya cavab verin!```"
         },
         "carbon": {
-            "CARBON_DESC": "Mətni carbon.sh ilə şəkilə çevirir.",
+            "CARBON_DESC": "Cavab mətninizi carbon.sh ilə şəkilə çevirir.",
             "CARBON_NEEDWORD": "*Fotoya çevirmək üçün kifayət qədər arqument yoxdur!*\nNümunə: ```.carbon deneme```\nNümunə: ```.carbon deneme#Yapıyor```",
             "CARBON_WARN": "Xahiş edirəm yalnız en və en dillərində yazın!"
         },

@@ -93,8 +93,9 @@
             "DEL_SUCCESS": "```{} başarıyla silindi```",
             "SUCC": "*Başarıyla Ayarlandı ✅* \n*Lütfen Biraz Bekleyin.*",
             "SUCC_AF": "*Eski haline döndürmek için* ```default``` *yazısını kullanın.*",
-            "DEGİS_NONE": "```Lütfen Herhangi Bir Modül İsmi Girin!``` \n\n*.degis afk*\n*.degis alive* _({pp}, {info}, {version}, {plugin})_\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```Lütfen Herhangi Bir Modül İsmi Girin!``` \n\n*.degis afk*\n*.degis alive* << *Değişkenler* >> \n_{pp}: Bir kere kullanmak yeterlidir. Mesaja profil fotoğrafınızı ekler._\n_{info}: Durumunuzu getirir._\n_{version}: Bot sürümünü getirir._\n_{plugin}: Plugin kanalını getirir._\n*.degis ban*\n*.degis welcome*\n*.degis goodbye*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Lütfen geçerli olan modülleri kullanın!*",
+            "GR_DEL": "*Karşılama Mesajı Ayarlandı!*\n*Silmek için* ```.goodbye delete & .welcome delete``` *komutunu kullanın*!",
             "DEGİS_DESC": "Alive, afk gibi modüllerin metinlerini değiştirir.",
             "NOT_FOUND": "```bu anahtar için sonuç bulunamadı```"           
         },
@@ -246,8 +247,7 @@
             "UPDATE_NOW_DESC": "Güncelleme yapar.",
             "UPDATING": "_Güncelleme yapılıyor..._",
             "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
-            "UPDATED": "*✅ Güncelleme başarılı oldu!*",
-            "IN_AF": "*Lütfen* _HEROKU_APP_NAME_ *ile* _app name_'nin *aynı olduğuna emin olun.* \n\n*Bilgiler doğru ise lütfen* _HEROKU_API_KEY_'inizi *yenileyin.*",
+            "UPDATED": "*✅ Güncelleme başarılı oldu!*",          
             "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*",
             "AFTER_UPDATE": "*💬 WhatsAsena Yeniden Başlatılıyor*",
             "IN_AF": "*Lütfen* ```HEROKU_APP_NAME``` *ile* ```app name```'nizin *aynı olduğuna emin olun.*\n*Bu iki değer aynı ise lütfen* ```HEROKU_API_KEY```'inizi *değiştirin!*\n\n_Bu ayarlara ulaşmak için Heroku >> Uygulama >> Settings >> Reavel Config Vars adımlarını takip edin._\n_API keyinizi yenilemek için Heroku >> Account >> API Key kısmından yeniledikten sonra eski API key ile değiştirin._"
@@ -282,7 +282,9 @@
             "MP4TOAUDİO": "```Video Ses Kaydına Çevriliyor..```",
             "STİCKER_DESC": "Resim stickeri fotoğrafa çevirir.",
             "STİCKER_NEEDREPLY": "*Bir Stickere Yanıt Vermelisin!*",
+            "ANİM_STİCK": "Animasyonlu stickerleri videoya çevirir.",
             "STİCKER": "```Sticker Fotoğrafa Çevriliyor..```",
+            "ANİMATE": "```Animasyonlu Sticker Videoya Çevriliyor..```",
             "XMEDİA_DESC": "İçerisinde 30’dan fazla medya aracının bulduğu bir plugin.",
             "T_FALSE": "```❌ Yanlış Blend Efekti Girildi!```\n```🔎 Varolan Komutlar:```\n\n*$dodge* - Videoya pembe renk filtresi uygular.\n*$multiply* - Videoya yeşil renk filtresi uygular.\n*$grainmerge* - Videonun kontrast değerlerini arttırır.\n*$and* - Videonun hıza göre siyah yıldırım efekti uygular.\n*$or* - Videonun hızına göre beyaz yıldırım efekti uygular.\n*$burn* - Videoya yeşil kontrast uygular.\n*$difference* - Videoya yeşil kabartma uygulayarak farklılıkları gösterir.\n*$grainextract* - Videoya gri kabartma uygulayarak farklılıkları gösterir.\n*$divide* - Videoya pembe kabartma uygulayarak farklılıkları gösterir.\n*$xor* - Videoya hem yeşil kabartma hemde yıldırım efekti uygular.\n*$hardmix* - Videonun renklerini sarı ve kırmızı tonuna mix eder.\n*$negation* - Videonun dinamiklerini pembeye çevirir.",
             "T_NOT": "```💭 Herhangi Bir Blend Efekti Girmen Gerekiyor!\n```🔎 Varolan Komutlar:```\n\n*$dodge* - Videoya pembe renk filtresi uygular.\n*$multiply* - Videoya yeşil renk filtresi uygular.\n*$grainmerge* - Videonun kontrast değerlerini arttırır.\n*$and* - Videonun hıza göre siyah yıldırım efekti uygular.\n*$or* - Videonun hızına göre beyaz yıldırım efekti uygular.\n*$burn* - Videoya yeşil kontrast uygular.\n*$difference* - Videoya yeşil kabartma uygulayarak farklılıkları gösterir.\n*$grainextract* - Videoya gri kabartma uygulayarak farklılıkları gösterir.\n*$divide* - Videoya pembe kabartma uygulayarak farklılıkları gösterir.\n*$xor* - Videoya hem yeşil kabartma hemde yıldırım efekti uygular.\n*$hardmix* - Videonun renklerini sarı ve kırmızı tonuna mix eder.\n*$negation* - Videonun dinamiklerini pembeye çevirir.",
@@ -392,7 +394,7 @@
             "VİD_NEED": "```Herhangi Bir Videoya Yanıt Verin!```"
         },
         "carbon": {
-            "CARBON_DESC": "Yazdığınız metni carbon.sh ile fotoğrafa çevirir.",
+            "CARBON_DESC": "Yanıtladığınız metni carbon.sh ile fotoğrafa çevirir.",
             "CARBON_NEEDWORD": "*Fotoğrafa çevirmek için yeterli argüman yok!*\nÖrnek: ```.carbon deneme```\nÖrnek: ```.carbon deneme#Yapıyor```",
             "CARBON_WARN": "Lütfen sadece tr ve en dilinde yazın!"
         },
