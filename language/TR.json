@@ -247,8 +247,7 @@
             "UPDATE_NOW_DESC": "Güncelleme yapar.",
             "UPDATING": "_Güncelleme yapılıyor..._",
             "INVALID_HEROKU": "*❌ Heroku bilgileriniz yanlış!*",
-            "UPDATED": "*✅ Güncelleme başarılı oldu!*",
-            "IN_AF": "*Lütfen* _HEROKU_APP_NAME_ *ile* _app name_'nin *aynı olduğuna emin olun.* \n\n*Bilgiler doğru ise lütfen* _HEROKU_API_KEY_'inizi *yenileyin.*",
+            "UPDATED": "*✅ Güncelleme başarılı oldu!*",          
             "UPDATED_LOCAL": "*✅ Güncelleme başarılı oldu!*",
             "AFTER_UPDATE": "*💬 WhatsAsena Yeniden Başlatılıyor*",
             "IN_AF": "*Lütfen* ```HEROKU_APP_NAME``` *ile* ```app name```'nizin *aynı olduğuna emin olun.*\n*Bu iki değer aynı ise lütfen* ```HEROKU_API_KEY```'inizi *değiştirin!*\n\n_Bu ayarlara ulaşmak için Heroku >> Uygulama >> Settings >> Reavel Config Vars adımlarını takip edin._\n_API keyinizi yenilemek için Heroku >> Account >> API Key kısmından yeniledikten sonra eski API key ile değiştirin._"
