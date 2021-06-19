@@ -15,6 +15,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('web');
 const SLang = Language.getString('webss');
+/*
 var LANG = { RES: '' }
 if (Config.LANG == 'TR') LANG.RES == '*Komut Bulunamadı!*\n*Benzer Komut:*'
 if (Config.LANG == 'EN') LANG.RES == '*Command not Found!*\n*Similar Command:*'
@@ -367,6 +368,7 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
         */
     }
 }));
+*/
 // https://github.com/ddsol/speedtest.net/blob/master/bin/index.js#L86
 function speedText(speed) {
     let bits = speed * 8;
@@ -401,7 +403,7 @@ Asena.addCommand({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: La
   var end = new Date().getTime();
 
   await message.client.sendMessage(
-    message.jid,'*Pong!*\n```' + (end - start) + 'ms```', MessageType.text);
+    message.jid,'*Pong!*\n```' + (end - start) + 'ms```', MessageType.text, { quoted: message.data });
 }));
 
 if (Config.WORKTYPE == 'private') {
