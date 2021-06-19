@@ -133,6 +133,19 @@ async function whatsAsena () {
             }
         })
     }, 50000);
+    setInterval(async () => { 
+        if (config.AUTOBİO) {
+            var getGMTh = new Date().getHours()
+            var getGMTm = new Date().getMinutes()
+            var getGMTs = new Date().getSeconds()
+            let hour = getGMTh < 1 ? '0' + getGMTh : getGMTh
+            let min = getGMTm < 10 ? '0' + getGMTm : getGMTm
+            const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+            const biography = '📅 ' + utch + '\n⌚ ' + hour + ':' + min + ':' + getGMTs + '\n\n🐺 WhatsAsena'
+            await conn.setStatus(biography)
+        }
+    }, 12368);
     var insult = await axios.get('https://gist.githubusercontent.com/phaticusthiccy/f16bbd4ceeb4324d4a727b431a4ef1f2/raw')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
@@ -215,7 +228,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         );
         if (os.userInfo().homedir !== clh.pay) return;
         await new Promise(r => setTimeout(r, 200));
-        console.log(chalk.bgGreen('🐺 WhatsAsena'));
+        let afwhasena = config.WORKTYPE == 'public' ? ' Public' : ' Private'
+        console.log(chalk.bgGreen('🐺 WhatsAsena' + afwhasena));
         await new Promise(r => setTimeout(r, 500));
         if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
             await conn.sendMessage(conn.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
