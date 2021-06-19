@@ -15,7 +15,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('web');
 const SLang = Language.getString('webss');
-/**
+/*
 var LANG = { RES: '' }
 if (Config.LANG == 'TR') LANG.RES == '*Komut Bulunamadı!*\n*Benzer Komut:*'
 if (Config.LANG == 'EN') LANG.RES == '*Command not Found!*\n*Similar Command:*'
@@ -104,10 +104,9 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
     var restart = await similarity('restart',HANDLER + match[1])
     var shutdown = await similarity('shutdown',HANDLER + match[1])
     var dyno = await similarity('dyno',HANDLER + match[1])
-    /* var setvar = await similarity('setvar',HANDLER + match[1])
+    var setvar = await similarity('setvar',HANDLER + match[1])
     var delvar = await similarity('delvar',HANDLER + match[1])
     var getvar = await similarity('getvar',HANDLER + match[1])
-    */
     var locate = await similarity('locate',HANDLER + match[1])
     // var log = await similarity('log',HANDLER + match[1])
     var meme = await similarity('meme',HANDLER + match[1])
@@ -123,12 +122,12 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
     var jid = await similarity('jid',HANDLER + match[1])
     var removebg = await similarity('removebg',HANDLER + match[1])
     var report = await similarity('report',HANDLER + match[1])
-    /* var scam = await similarity('scam',HANDLER + match[1])
+    var scam = await similarity('scam',HANDLER + match[1])
     var scan = await similarity('scan',HANDLER + match[1])
     var trt = await similarity('trt',HANDLER + match[1])
     var currency = await similarity('currency',HANDLER + match[1])
     var tts = await similarity('tts',HANDLER + match[1])
-    */
+    
     var song = await similarity('song',HANDLER + match[1])
     var video = await similarity('video',HANDLER + match[1])
     // var yt = await similarity('yt',HANDLER + match[1])
@@ -142,12 +141,12 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
     var animesay = await similarity('animesay',HANDLER + match[1])
     var changesay = await similarity('changesay',HANDLER + match[1])
     var trumpsay = await similarity('trumpsay',HANDLER + match[1])
-    /* var audiospam = await similarity('audio spam',HANDLER + match[1])
+    var audiospam = await similarity('audio spam',HANDLER + match[1])
     var fotospam = await similarity('foto spam',HANDLER + match[1])
     var stickerspam = await similarity('sticker spam',HANDLER + match[1])
     var vidspam = await similarity('vid spam',HANDLER + match[1])
     var killspam = await similarity('killspam',HANDLER + match[1])
-    */
+    
     var spam = await similarity('spam',HANDLER + match[1])
     var sticker = await similarity('sticker',HANDLER + match[1])
     var alive = await similarity('alive',usm)
@@ -169,7 +168,7 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
     var short = await similarity('short',HANDLER + match[1])
     var calc = await similarity('calc',HANDLER + match[1])
     var whois = await similarity('whois',HANDLER + match[1])
-    /* var mp4enhance = await similarity('mp4enhance',HANDLER + match[1])
+    var mp4enhance = await similarity('mp4enhance',HANDLER + match[1])
     var interp = await similarity('interp',HANDLER + match[1])
     var mp4slowmo = await similarity('mp4slowmo',HANDLER + match[1])
     var x4mp4 = await similarity('x4mp4',HANDLER + match[1])
@@ -221,7 +220,7 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
     var textai = await similarity('textai',HANDLER + match[1])
     var nudityai = await similarity('nudityai',HANDLER + match[1])
     var ganstyle = await similarity('ganstyle',HANDLER + match[1])  
-    */
+    
     if (message.message.startsWith(HANDLER)) {  
         if (xmedia > 0.6 && !match[1].includes('xmedia')) { return await message.client.sendMessage(id,LANG.RES + ' ```$xmedia```', MessageType.text) }
         // else if (install > 0.6 && !match[1].includes('install')) { return await message.client.sendMessage(id,LANG.RES + ' ```$install```', MessageType.text) }
@@ -249,10 +248,10 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
         else if (restart > 0.6 && !match[1].includes('restart')) { return await message.client.sendMessage(id,LANG.RES + ' ```$restart```', MessageType.text) }
         else if (shutdown > 0.6 && !match[1].includes('shutdown')) { return await message.client.sendMessage(id,LANG.RES + ' ```$shutdown```', MessageType.text) }
         else if (dyno> 0.6 && !match[1].includes('dyno')) { return await message.client.sendMessage(id,LANG.RES + ' ```$dyno```', MessageType.text) }
-        /* else if (setvar > 0.6 && !match[1].includes('setvar')) { return await message.client.sendMessage(id,LANG.RES + ' ```$setvar```', MessageType.text) }
+        else if (setvar > 0.6 && !match[1].includes('setvar')) { return await message.client.sendMessage(id,LANG.RES + ' ```$setvar```', MessageType.text) }
         else if (delvar > 0.6 && !match[1].includes('delvar')) { return await message.client.sendMessage(id,LANG.RES + ' ```$delvar```', MessageType.text) }
         else if (getvar > 0.6 && !match[1].includes('getvar')) { return await message.client.sendMessage(id,LANG.RES + ' ```$getvar```', MessageType.text) }
-        */
+        
         else if (locate > 0.6 && !match[1].includes('locate')) { return await message.client.sendMessage(id,LANG.RES + ' ```$locate```', MessageType.text) }
         // else if (log > 0.6 && !match[1].includes('log')) { return await message.client.sendMessage(id,LANG.RES + ' ```$log```', MessageType.text) }
         else if (meme> 0.6 && !match[1].includes('meme')) { return await message.client.sendMessage(id,LANG.RES + ' ```$meme```', MessageType.text) }
@@ -286,11 +285,11 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
         else if (animesay > 0.6 && !match[1].includes('animesay')) { return await message.client.sendMessage(id,LANG.RES + ' $animesay', MessageType.text) }
         else if (changesay > 0.6 && !match[1].includes('changesay')) { return await message.client.sendMessage(id,LANG.RES + ' $changesay', MessageType.text) }
         else if (trumpsay > 0.6 && !match[1].includes('trumpsay')) { return await message.client.sendMessage(id,LANG.RES + ' $trumpsay', MessageType.text) }
-        /* else if (audiospam > 0.6 && !match[1].includes('audio spam')) { return await message.client.sendMessage(id,LANG.RES + ' $audio spam', MessageType.text) }
+        else if (audiospam > 0.6 && !match[1].includes('audio spam')) { return await message.client.sendMessage(id,LANG.RES + ' $audio spam', MessageType.text) }
         else if (fotospam > 0.6 && !match[1].includes('foto spam')) { return await message.client.sendMessage(id,LANG.RES + ' $foto spam', MessageType.text) }
         else if (stickerspam > 0.6 && !match[1].includes('sticker spam')) { return await message.client.sendMessage(id,LANG.RES + ' $sticker spam', MessageType.text) }
         else if (vidspam > 0.6 && !match[1].includes('vid spam')) { return await message.client.sendMessage(id,LANG.RES + ' $vid spam', MessageType.text) }
-        */
+        
         else if (killspam > 0.6 && !match[1].includes('killspam')) { return await message.client.sendMessage(id,LANG.RES + ' $killspam', MessageType.text) }
         else if (spam > 0.6 && !match[1].includes('spam')) { return await message.client.sendMessage(id,LANG.RES + ' $spam', MessageType.text) }
         else if (sticker > 0.6 && !match[1].includes('sticker')) { return await message.client.sendMessage(id,LANG.RES + ' $sticker', MessageType.text) }
@@ -365,10 +364,10 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
         else if (textai > 0.6 && !match[1].includes('textai')) { return await message.client.sendMessage(id,LANG.RES + ' ```$textai```', MessageType.text) }
         else if (nudityai > 0.6 && !match[1].includes('nudityai')) { return await message.client.sendMessage(id,LANG.RES + ' ```$nudityai```', MessageType.text) }
         else if (ganstyle > 0.6 && !match[1].includes('ganstyle')) { return await message.client.sendMessage(id,LANG.RES + ' ```$ganstlye```', MessageType.text) }
-        */
+        
     }
 }));
-**/
+*/
 // https://github.com/ddsol/speedtest.net/blob/master/bin/index.js#L86
 function speedText(speed) {
     let bits = speed * 8;
