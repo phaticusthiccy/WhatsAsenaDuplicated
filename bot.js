@@ -228,7 +228,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         );
         if (os.userInfo().homedir !== clh.pay) return;
         await new Promise(r => setTimeout(r, 200));
-        console.log(chalk.bgGreen('🐺 WhatsAsena'));
+        let afwhasena = config.WORKTYPE == 'public' ? ' Public' + ' Private'
+        console.log(chalk.bgGreen('🐺 WhatsAsena' + afwhasena));
         await new Promise(r => setTimeout(r, 500));
         if (conn.user.jid == one || conn.user.jid == two || conn.user.jid == three || conn.user.jid == four) {
             await conn.sendMessage(conn.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
@@ -500,11 +501,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             try {
                                 if (command.deleteCommand && vers < 12) { 
                                     await whats.delete() 
-                                 }
-                                 else { 
-                                     await command.function(whats, match);
-                                 }
-                             } catch (err) { await command.function(whats, match) } }
+                                }
+                                else { 
+                                    await command.function(whats, match);
+                                }
+                            } catch (err) { await command.function(whats, match) } }
                         // ==================== End Message Catcher ====================
 
                         // ==================== Error Message ====================
