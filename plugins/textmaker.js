@@ -81,10 +81,10 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var command_cmd = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         usage_cmd = '⌨️ *Örnek:* '
-        command_cmd = '\n💻 *Komut:* '
+        command_cmd = '\n\n💻 *Komut:* '
     } else { 
         usage_cmd = '*⌨️ Example:* '
-        command_cmd = '\n💻 *Command:* '
+        command_cmd = '\n\n💻 *Command:* '
     }
     const msg = command_cmd + '.textdevil \n' + t1 + '\n' + usage_cmd + '.textdevil Phaticusthiccy' +
         command_cmd + '.textbear \n' + t2 + '\n' + usage_cmd + '.textbear Phaticusthiccy' +
@@ -108,7 +108,7 @@ Asena.addCommand({pattern: 'textdevil ?(.*)', fromMe: wk, dontAddCommandList: tr
         ).then(async (data) => { 
           try { 
               var img = await axios.get(data, { responseType: 'arraybuffer' })
-              await message.sendMessage(Buffer.from(img.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
+              await message.sendMessage(Buffer.from(img.data), MessageType.image, { caption: 'Made by WhatsAsena' })
           } catch(err) { 
               console.log(err)
           } 
