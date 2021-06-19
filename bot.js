@@ -133,6 +133,19 @@ async function whatsAsena () {
             }
         })
     }, 50000);
+    setInterval(async () => { 
+        if (config.AUTOBİO) {
+            var getGMTh = new Date().getHours()
+            var getGMTm = new Date().getMinutes()
+            var getGMTs = new Date().getSeconds()
+            let hour = getGMTh < 1 ? '0' + getGMTh : getGMTh
+            let min = getGMTm < 10 ? '0' + getGMTm : getGMTm
+            const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
+            const biography = '📅 ' + utch + '\n⌚ ' + hour + ':' + min + ':' + getGMTs + '\n\n🐺 WhatsAsena'
+            await conn.setStatus(biography)
+        }
+    }, 12368);
     var insult = await axios.get('https://gist.githubusercontent.com/phaticusthiccy/f16bbd4ceeb4324d4a727b431a4ef1f2/raw')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
