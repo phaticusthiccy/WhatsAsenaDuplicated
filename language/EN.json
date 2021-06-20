@@ -424,7 +424,7 @@
         "webss": {
             "SS_DESC": "Takes a screenshot from the page in the given link.",
             "LİNK": "You must enter link!",
-            "SPDF_DESC": "Converts a Site into PDF",
+            "SPDF_DESC": "Converts a Site into PDF"
         },
         "voicy": {
             "NEED_REPLY": "```Please reply to any message!```",
