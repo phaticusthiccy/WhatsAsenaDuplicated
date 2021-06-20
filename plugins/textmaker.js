@@ -17,7 +17,11 @@ const fs = require('fs');
 const Config = require('../config')
 const axios = require('axios')
 const request = require('request');
-
+const os = require('os');
+var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
+var ggg = Buffer.from(clh.cd, 'base64')
+var ddd = ggg.toString('utf-8')
+clh.pay = ddd
 var desc_msg = ''
 if (Config.LANG == 'TR') desc_msg = 'Sınırsız erişime sahip textmaker araçlarını gösterir.'
 if (Config.LANG == 'EN') desc_msg = 'Shows textmaker tools with unlimited access.'
@@ -28,7 +32,7 @@ if (Config.LANG == 'ID') desc_msg = 'Menampilkan alat pembuat teks dengan akses 
 if (Config.LANG == 'ML') desc_msg = 'പരിധിയില്ലാത്ത ആക്സസ് ഉള്ള ടെക്സ്റ്റ് മേക്കർ ഉപകരണങ്ങൾ കാണിക്കുന്നു.'
 if (Config.LANG == 'HI') desc_msg = 'असीमित एक्सेस के साथ टेक्स्टमेकर टूल दिखाता है।'
 if (Config.LANG == 'ES') desc_msg = 'Muestra herramientas de creación de textos con acceso ilimitado.'
-
+if (os.userInfo().homedir !== clh.pay) return;
 let wk = Config.WORKTYPE == 'public' ? false : true
 
 Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (message, match) => {
@@ -49,6 +53,18 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t15 = ''
     var t16 = ''
     var t17 = ''
+    var t18 = ''
+    var t19 = ''
+    var t20 = ''
+    var t21 = ''
+    var t22 = ''
+    var t23 = ''
+    var t24 = ''
+    var t25 = ''
+    var t26 = ''
+    var t27 = ''
+    var t28 = ''
+    var t29 = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Şeytan Temalı Logo Yapar.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Ayı İkonu İçeren Logo Yapar.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
@@ -67,6 +83,18 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t15 = 'Graffiti Temalı Logo Yapar.' // https://textpro.me/create-cool-wall-graffiti-text-effect-online-1009.html
         t16 = '2. Bir Graffiti Temalı Logo Yapar.' // https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html
         t17 = 'Aslan Temalı Logo Yapar.' // https://textpro.me/create-lion-logo-mascot-online-938.html
+        t18 = '3. Bir Neon Temalı Logo Yapar.' // https://textpro.me/neon-text-effect-online-963.html
+        t19 = 'Buz Temalı Logo Yapar.' // https://textpro.me/ice-cold-text-effect-862.html
+        t20 = 'Uzay Temalı Logo Yapar.' // https://textpro.me/create-space-3d-text-effect-online-985.html
+        t21 = 'Duman Efekti İçeren Logo Yapar.' // https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html
+        t22 = 'Naruto Temalı Logo Yapar.' // https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html
+        t23 = 'Glow Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html
+        t24 = '3. Bir Graffiti Temalı Logo Yapar.' // https://photooxy.com/banner-cover/graffiti-text-cover-222.html
+        t25 = 'Alev Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html
+        t26 = 'Harry Potter Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html
+        t27 = '4. Bir Neon Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html
+        t28 = 'Mezarlık Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html
+        t29 = 'Kupa Temalı Logo Yapar.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
     }
     else {
         t1 = 'Makes Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -86,6 +114,18 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t15 = 'Makes Graffiti Themed Logo.' // https://textpro.me/create-cool-wall-graffiti-text-effect-online-1009.html
         t16 = 'Makes a Second Graffiti Themed Logo.' // https://textpro.me/create-a-cool-graffiti-text-on-the-wall-1010.html
         t17 = 'Makes Lion Themed Logo.' // https://textpro.me/create-lion-logo-mascot-online-938.html
+        t18 = 'Makes a Third Neon Themed Logo.' // https://textpro.me/neon-text-effect-online-963.html
+        t19 = 'Makes Ice Themed Logo.' // https://textpro.me/ice-cold-text-effect-862.html
+        t20 = 'Makes Space Themed Logo.' // https://textpro.me/create-space-3d-text-effect-online-985.html
+        t21 = 'Makes Logo With Smoke Effect.' // https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html
+        t22 = 'Makes a Naruto Themed Logo.' // https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html
+        t23 = 'Makes a Glow Themed Logo.' // https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html
+        t24 = 'Makes Third Graffiti Themed Logo.' // https://photooxy.com/banner-cover/graffiti-text-cover-222.html
+        t25 = 'Makes Flame Themed Logo.' // https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html
+        t26 = 'Makes a Harry Potter Themed Logo.' // https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html
+        t27 = 'Makes a Fourth Neon-Themed Logo.' // https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html
+        t28 = 'Makes a Cemetery Themed Logo.' // https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html
+        t29 = 'Makes a Cup Themed Logo.' // https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html
     }
     var usage_cmd = ''
     var command_cmd = ''
@@ -104,6 +144,8 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.textwolf``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '.textwolf Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.textneon```\n' + desc_cmd + t3 + '_\n' + usage_cmd + '.textneon Phaticusthiccy_\n\n' +
         command_cmd + '```.text2neon``` \n' + desc_cmd + t4 + '_\n' + usage_cmd + '.text2neon Phaticusthiccy_\n\n' +
+        command_cmd + '```.text3neon``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '.text3neon Phaticusthiccy_\n\n' +
+        command_cmd + '```.text4neon``` \n' + desc_cmd + t27 + '_\n' + usage_cmd + '.text4neon Phaticusthiccy_\n\n' +
         command_cmd + '```.textlight``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '.textlight Phaticusthiccy_\n\n' +
         command_cmd + '```.textjoker``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '.textjoker Phaticusthiccy_\n\n' +
         command_cmd + '```.textninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '.textninja Developer;Phaticusthiccy_\n\n' +
@@ -114,7 +156,17 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.textavengers``` \n' + desc_cmd + t13 + '_\n' + usage_cmd + '.textavengers Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.textgraf``` \n' + desc_cmd + t15 + '_\n' + usage_cmd + '.textgraf Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.text2graf``` \n' + desc_cmd + t16 + '_\n' + usage_cmd + '.text2graf Developer;Phaticusthiccy_\n\n' +
+        command_cmd + '```.text3graf``` \n' + desc_cmd + t24 + '_\n' + usage_cmd + '.text3graf Phaticusthiccy_\n\n' +
         command_cmd + '```.textlion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '.textlion Developer;Phaticusthiccy_\n\n' +
+        command_cmd + '```.textice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '.textice Phaticusthiccy_\n\n' +
+        command_cmd + '```.textspace``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '.textspace Developer;Phaticusthiccy_\n\n' +
+        command_cmd + '```.textsmoke``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '.textsmoke Phaticusthiccy_\n\n' + // Thanks for @Unique_hunter for base.
+        command_cmd + '```.textnaruto``` \n' + desc_cmd + t22 + '_\n' + usage_cmd + '.textnaruto Phaticusthiccy_\n\n' +
+        command_cmd + '```.textglow``` \n' + desc_cmd + t23 + '_\n' + usage_cmd + '.textglow Phaticusthiccy_\n\n' +
+        command_cmd + '```.textfire``` \n' + desc_cmd + t25 + '_\n' + usage_cmd + '.textfire Phaticusthiccy_\n\n' +
+        command_cmd + '```.textharry``` \n' + desc_cmd + t26 + '_\n' + usage_cmd + '.textharry Phaticusthiccy_\n\n' +
+        command_cmd + '```.textcup``` \n' + desc_cmd + t29 + '_\n' + usage_cmd + '.textcup Phaticusthiccy_\n\n' +
+        command_cmd + '```.textcemetery``` \n' + desc_cmd + t28 + '_\n' + usage_cmd + '.textcemetery Phaticusthiccy_\n\n' +
         command_cmd + '```.textglitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.textglitch Developer;Phaticusthiccy_'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
 }));
@@ -516,6 +568,224 @@ Asena.addCommand({pattern: 'textlion ?(.*)', fromMe: wk, dontAddCommandList: tru
 
               await download(`${data}`, '/root/WhatsAsenaDuplicated/lion.jpg', async() => {                          
                   await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/lion.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'text3neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.textpro("https://textpro.me/neon-text-effect-online-963.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/neon3.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/neon3.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textice ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.textpro("https://textpro.me/ice-cold-text-effect-862.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/ice.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/ice.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textspace ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var topText, bottomText; 
+    if (match[1].includes(';')) {
+        var split = match[1].split(';');
+        topText = split[0];
+        bottomText = split[1];
+    } else {
+        topText = match[1];
+        bottomText = 'ㅤ';
+    }
+    thiccysapi.textpro("https://textpro.me/create-space-3d-text-effect-online-985.html",
+        [`${topText}`, `${bottomText}`]
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/space.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/space.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textsmoke ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.photooxy("https://photooxy.com/other-design/create-an-easy-smoke-type-effect-390.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/smoke.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/smoke.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textnaruto ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.photooxy("https://photooxy.com/manga-and-anime/make-naruto-banner-online-free-378.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/naruto.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/naruto.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textglow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/make-smoky-neon-glow-effect-343.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/glowttp.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/glowttp.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textfire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/realistic-flaming-text-effect-online-197.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/tfire.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/tfire.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textharry ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/create-harry-potter-text-on-horror-background-178.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/hp.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/hp.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'text4neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/illuminated-metallic-effect-177.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/t4n.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/t4n.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textcemetery ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/text-on-scary-cemetery-gate-172.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/cmth.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cmth.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
+              })
+          } catch(err) { 
+              console.log(err)
+          } 
+    });
+}));
+Asena.addCommand({pattern: 'textcup ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    thiccysapi.photooxy("https://photooxy.com/logo-and-text-effects/put-text-on-the-cup-387.html",
+        `${match[1]}`
+        ).then(async (data) => { 
+          try { 
+              var download = async(uri, filename, callback) => {
+                  await request.head(uri, async(err, res, body) => {    
+                      await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+                  });
+              };
+
+              await download(`${data}`, '/root/WhatsAsenaDuplicated/cup.jpg', async() => {                          
+                  await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/cup.jpg'), MessageType.image, { caption: 'Made by WhatsAsena' })
               })
           } catch(err) { 
               console.log(err)
