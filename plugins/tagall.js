@@ -64,7 +64,7 @@ Asena.addCommand({pattern: 'tagall ?(.*)', fromMe: true, desc: Lang.TAGALL_DESC 
         await message.client.sendMessage(message.jid,tx, MessageType.extendedText, {contextInfo: {mentionedJid: jids}, previewType: 0})
     }
 }));
-var stam_dsc = ''
+var stag_dsc = ''
 if (Config.LANG == 'TR') stag_dsc = 'Yanıtlanan mesajı gruptaki tüm üyelere gönderir.'
 if (Config.LANG == 'EN') stag_dsc = 'Sends the replied message to all members in the group.'
 if (Config.LANG == 'AZ') stag_dsc = 'Cavablanmış mesajı qrupdakı bütün üzvlərə göndərir.'
@@ -75,7 +75,7 @@ if (Config.LANG == 'ML') stag_dsc = 'ഗ്രൂപ്പിലെ എല്ല
 if (Config.LANG == 'ID') stag_dsc = 'Mengirim pesan balasan ke semua anggota dalam grup.'
 if (Config.LANG == 'PT') stag_dsc = 'Envia a mensagem respondida a todos os membros do grupo.'
 
-Asena.addCommand({pattern: 'stam$', fromMe: true, desc: stam_dsc }, (async (message, match) => {
+Asena.addCommand({pattern: 'stam$', fromMe: true, desc: stag_dsc }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,SLang.NEED_REPLY, MessageType.text)
     grup = await message.client.groupMetadata(message.jid);
     var jids = [];
