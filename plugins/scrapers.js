@@ -190,35 +190,62 @@ if (config.WORKTYPE == 'private') {
         succ_off = 'ആന്റിലിങ്ക് വിജയകരമായി അടച്ചു!'
     }
     if (config.LANG == 'PT') {
-        l_dsc = ''
-        alr_on = ''
-        alr_off = ''
-        succ_on = ''
-        succ_off = ''
+        l_dsc = 'Ativa a ferramenta Antilink.'
+        alr_on = 'O Antilink já está aberto!'
+        alr_off = 'Antilink está fechado no momento!'
+        succ_on = 'Antilink aberto com sucesso!'
+        succ_off = 'Antilink fechado com sucesso!'
     }
     if (config.LANG == 'RU') {
-        l_dsc = ''
-        alr_on = ''
-        alr_off = ''
-        succ_on = ''
-        succ_off = ''
+        l_dsc = 'Активирует инструмент Antilink.'
+        alr_on = 'Антилинк уже открыт!'
+        alr_off = 'Антилинк сейчас закрыт!'
+        succ_on = 'Антилинк успешно открыт!'
+        succ_off = 'Антилинк успешно закрыт!'
     }
     if (config.LANG == 'ES') {
-        l_dsc = ''
-        alr_on = ''
-        alr_off = ''
-        succ_on = ''
-        succ_off = ''
+        l_dsc = 'Activa la herramienta Antilink.'
+        alr_on = '¡Antilink ya está abierto!'
+        alr_off = '¡Antilink está cerrado actualmente!'
+        succ_on = '¡Antilink se abrió con éxito!'
+        succ_off = 'Antilink cerrado correctamente!'
     }
     if (config.LANG == 'ID') {
-        l_dsc = ''
-        alr_on = ''
-        alr_off = ''
-        succ_on = ''
-        succ_off = ''
+        l_dsc = 'Mengaktifkan alat Antilink.'
+        alr_on = 'Antilink sudah terbuka!'
+        alr_off = 'Antilink saat ini ditutup!'
+        succ_on = 'Antilink Berhasil Dibuka!'
+        succ_off = 'Antilink Berhasil Ditutup!'
     }
-    Asena.addCommand({pattern: 'antilink$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
-
+    Asena.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
+        const anti_status = `${config.ANTİLİNK}`
+        if (match[1] == 'on') {
+            if (anti_status == 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_on + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['ANTİ_LİNK']: 'true'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
+            }
+        }
+        else if (match[1] == 'off') {
+            if (anti_status !== 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_off + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['ANTİ_LİNK']: 'false'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
+            }
+        }
+    }));
     Asena.addCommand({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
