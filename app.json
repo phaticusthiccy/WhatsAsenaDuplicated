@@ -21,10 +21,25 @@
             "required": true,
             "value": "TR"
         },
+        "ANTİ_LİNK": {
+            "description": "Link Engelleme Sistemi. Link Blocking System.",
+            "required": true,
+            "value": "false"
+        },
+        "AUTO_BİO": {
+            "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
+            "required": true,
+            "value": "false"
+        },
         "HANDLERS": {
             "description": "Komutlar için. For commands.",
             "required": true,
             "value": "^[.!;]"
+        },
+        "FULL_EVA": {
+            "description": "Hesabınızı bir Chatbot'a Çevirin! Turn your account into a chatbot!",
+            "required": true,
+            "value": "false"
         },
         "NO_LOG": {
             "description": "Hata logu görmek istemiyorsanız true yapın. Set true if you don't want to see error log.",

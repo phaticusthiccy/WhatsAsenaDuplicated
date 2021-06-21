@@ -15,6 +15,8 @@ const Config = require('../config')
 const Language = require('../language');
 const Lang = Language.getString('evaluators');
 const SLang = Language.getString('conventer');
+const NLang = Language.getString('scrapers');
+const googleTTS = require('google-translate-tts');
 
 var dd = ''
 var errmsg = ''
@@ -124,7 +126,60 @@ Asena.addCommand({pattern: 'addserver$', fromMe: wk_ad, desc: addsdesc}, (async 
     else { await message.client.sendMessage(message.jid,rep_add, MessageType.text)
     }
 }));
-
+async function checkUsAdmin(message, user = message.data.participant) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {     
+        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
+}
+async function checkImAdmin(message, user = message.client.user.jid) {
+    var grup = await message.client.groupMetadata(message.jid);
+    var sonuc = grup['participants'].map((member) => {     
+        if (member.jid.split("@")[0] == user.split("@")[0] && member.isAdmin) return true; else; return false;
+    });
+    return sonuc.includes(true);
+}
+var ldc = ''
+if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
+if (Config.LANG == 'TR') ldc = '*‎Link Tespit Edildi!*'
+if (Config.LANG == 'EN') ldc = '*Link Detected!*'
+if (Config.LANG == 'ML') ldc = '*ലിങ്ക് കണ്ടെത്തി!*'
+if (Config.LANG == 'ID') ldc = '*Tautan Terdeteksi!*'
+if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
+if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
+if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
+if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
+Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
+    if (Config.ANTİLİNK == 'true') {
+        let regex1 = new RegExp('http://')
+        let regex2 = new RegExp('https://')
+        if (regex1.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+        } 
+        else if (regex2.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+        }
+        else if (message.message.match(/((?:[.]com)\b)/i)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+        }
+    }
+}));
 Asena.addCommand({pattern: 'term ?(.*)', fromMe: true, desc: Lang.TERM_DESC}, (async (message, match) => {    
     var user = message.client.user.name
     var id = message.jid
@@ -189,4 +244,50 @@ Asena.addCommand({pattern: 'mediainfo$', fromMe: wk, desc: medinfo}, (async (mes
         });
     } else { return await message.client.sendMessage(id,SLang.MP4TOAUDİO_NEEDREPLY, MessageType.text)
     }
+}));
+var sucmsg = ''
+var pmmm = ''
+var psmm = ''
+if (Config.LANG == 'TR') sucmsg = '*Mesaj Başarıyla Gönderildi ✅*', pmmm = 'Yanıt verilen kişiye özelden mesaj gönderir.', psmm = 'Yanıt verilen kişiye özelden sesli mesaj gönderir.'
+if (Config.LANG == 'EN') sucmsg = '*Message Sent Successfully ✅*', pmmm = 'Sends a private message to the replied person.', psmm = 'Sends a private voice message to the respondent.'
+if (Config.LANG == 'AZ') sucmsg = '*Mesaj Uğurla Göndərildi ✅*', pmmm = 'Cavablandırılan şəxsə xüsusi mesaj göndərir.', psmm = 'Cavabdehə xüsusi səs mesajı göndərir.'
+if (Config.LANG == 'ES') sucmsg = '*Mensaje enviado con éxito ✅*', pmmm = 'Envía un mensaje privado a la persona que respondió.', psmm = 'Envía un mensaje de voz privado al encuestado.'
+if (Config.LANG == 'HI') sucmsg = '*संदेश सफलतापूर्वक भेजा जा चुका है ✅*', pmmm = 'उत्तर दिए गए व्यक्ति को एक निजी संदेश भेजता है', psmm = 'प्रतिवादी को एक निजी ध्वनि संदेश भेजता है'
+if (Config.LANG == 'ML') sucmsg = '*സന്ദേശം വിജയകരമായി അയച്ചു ✅*', pmmm = 'മറുപടി നൽകിയ വ്യക്തിക്ക് ഒരു സ്വകാര്യ സന്ദേശം അയയ്ക്കുന്നു.', psmm = 'പ്രതികരിക്കുന്നയാൾക്ക് ഒരു സ്വകാര്യ ശബ്ദ സന്ദേശം അയയ്ക്കുന്നു.'
+if (Config.LANG == 'RU') sucmsg = '*Сообщение успешно отправлено ✅*', pmmm = 'Отправляет личное сообщение ответившему человеку.', psmm = 'Отправляет респонденту личное голосовое сообщение.'
+if (Config.LANG == 'ID') sucmsg = '*Pesan Berhasil Terkirim ✅*', pmmm = 'Mengirim pesan pribadi ke orang yang dibalas.', psmm = 'Mengirim pesan suara pribadi ke responden.'
+if (Config.LANG == 'PT') sucmsg = '*Mensagem enviada com sucesso ✅*', pmmm = 'Envia uma mensagem privada para a pessoa respondida.', psmm = 'Envia uma mensagem de voz privada para o entrevistado.'
+Asena.addCommand({pattern: 'pmsend ?(.*)', fromMe: true, desc: pmmm }, (async (message, match) => {
+    if (!message.reply_message) return await message.client.sendMessage(message.jid,NLang.NEED_REPLY, MessageType.text);
+    if (message.reply_message && match[1] == '') return await message.client.sendMessage(message.jid, NLang.NEED_WORDS, MessageType.text);
+    const uspm = message.reply_message.jid
+    await message.client.sendMessage(uspm, `${match[1]}`, MessageType.text);
+    await message.client.sendMessage(message.jid, sucmsg, MessageType.text);
+}));
+Asena.addCommand({pattern: 'pmttssend ?(.*)', fromMe: true, desc: psmm}, (async (message, match) => {
+    if (!message.reply_message) return await message.client.sendMessage(message.jid,NLang.NEED_REPLY, MessageType.text);
+    if (message.reply_message && match[1] == '') return await message.client.sendMessage(message.jid, NLang.NEED_WORDS, MessageType.text);
+    let 
+        LANG = Config.LANG.toLowerCase(),
+        ttsMessage = match[1],
+        SPEED = 1.0
+
+    if(langMatch = match[1].match("\\{([a-z]{2})\\}")) {
+        LANG = langMatch[1]
+        ttsMessage = ttsMessage.replace(langMatch[0], "")
+    } 
+    if(speedMatch = match[1].match("\\{([0].[0-9]+)\\}")) {
+        SPEED = parseFloat(speedMatch[1])
+        ttsMessage = ttsMessage.replace(speedMatch[0], "")
+    }
+    
+    var buffer = await googleTTS.synthesize({
+        text: ttsMessage,
+        voice: LANG
+    });
+    fs.writeFileSync('tts.mp3', buffer);
+
+    await message.client.sendMessage(message.reply_message.jid, fs.readFileSync('tts.mp3'), MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true});
+    await message.client.sendMessage(message.jid,sucmsg, MessageType.text);
+       
 }));

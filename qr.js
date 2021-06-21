@@ -7,7 +7,7 @@ WhatsAsena - Yusuf Usta
 */
 
 const chalk = require('chalk');
-const {WAConnection} = require('@adiwajshing/baileys');
+const {WAConnection, MessageOptions, MessageType} = require('@adiwajshing/baileys');
 const {StringSession} = require('./whatsasena/');
 const fs = require('fs');
 
@@ -26,7 +26,7 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
     });
     
 
-    conn.on('open', () => {
+    conn.on('open', async () => {
         var st = Session.createStringSession(conn.base64EncodedAuthInfo());
         console.log(
             chalk.green.bold('Asena String Kodunuz: '), Session.createStringSession(conn.base64EncodedAuthInfo())
@@ -36,16 +36,20 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
             fs.writeFileSync('config.env', `ASENA_SESSION="${st}"`);
         }
         if (conn.user.jid.startsWith('90')) {
-            conn.sendMessage(conn.user.jid,st, MessageType.text)
-            conn.sendMessage(conn.user.jid,'*Bu Kodu Kimseyle Paylaşmayın!*', MessageType.text)
+            await conn.sendMessage(conn.user.jid,st, MessageType.text)
+            await conn.sendMessage(conn.user.jid,'*Bu Kodu Kimseyle Paylaşmayın!*', MessageType.text)
+            console.log(
+                chalk.blue.bold('Locale kuruyorsanız node bot.js ile botu başlatabilirsiniz.')
+            );
         }
         else {
-            conn.sendMessage(conn.user.jid,st, MessageType.text)
-            conn.sendMessage(conn.user.jid,'*Do Not Share This Code With Anyone!*', MessageType.text)
+            await conn.sendMessage(conn.user.jid,st, MessageType.text)
+            await conn.sendMessage(conn.user.jid,'*Do Not Share This Code With Anyone!*', MessageType.text)
+            console.log(
+                chalk.blue.bold('If you are installing locale, you can start the bot with node bot.js')
+            );
         }
-        console.log(
-            chalk.blue.bold('Locale kuruyorsanız node bot.js ile botu başlatabilirsiniz.')
-        );
+        
         process.exit(0);
     });
 

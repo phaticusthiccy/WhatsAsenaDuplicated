@@ -10,7 +10,13 @@ const Asena = require('../events');
 const {MessageType,Mimetype} = require('@adiwajshing/baileys');
 const translatte = require('translatte');
 const config = require('../config');
-
+const LanguageDetect = require('languagedetect');
+const lngDetector = new LanguageDetect();
+const Heroku = require('heroku-client');
+const heroku = new Heroku({
+    token: config.HEROKU.API_KEY
+});
+let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 //============================== LYRICS =============================================
 const axios = require('axios');
 const { requestLyricsFor, requestAuthorFor, requestTitleFor, requestIconFor } = require("solenolyrics");
@@ -45,6 +51,86 @@ const Clang = Language.getString('covid');
 const wiki = require('wikijs').default;
 var gis = require('g-i-s');
 
+var dlang_dsc = ''
+var closer_res = ''
+var dlang_lang = ''
+var dlang_similarity = ''
+var dlang_other = ''
+var dlang_input = ''
+
+if (config.LANG == 'TR') {
+    dlang_dsc = 'Yanıtlanan mesajın dilini tahmin eder.'
+    closer_res = 'En Yakın Sonuç:'
+    dlang_lang = 'Dil:'
+    dlang_similarity = 'Benzerlik:'
+    dlang_other = 'Diğer Diller'
+    dlang_input = 'İşlenen Metin:'
+}
+if (config.LANG == 'EN') {
+    dlang_dsc = 'Guess the language of the replied message.'
+    closer_res = 'Closest Result:'
+    dlang_lang = 'Language:'
+    dlang_similarity = 'Similarity:'
+    dlang_other = 'Other Languages'
+    dlang_input = 'Processed Text:'
+}
+if (config.LANG == 'AZ') {
+    dlang_dsc = 'Cavablanan mesajın dilini təxmin edin.'
+    closer_res = 'Ən yaxın nəticə:'
+    dlang_lang = 'Dil:'
+    dlang_similarity = 'Bənzərlik:'
+    dlang_other = 'Başqa Dillər'
+    dlang_input = 'İşlənmiş Mətn:'
+}
+if (config.LANG == 'ML') {
+    dlang_dsc = 'മറുപടി നൽകിയ സന്ദേശത്തിന്റെ ഭാഷ ess ഹിക്കുക.'
+    closer_res = 'ഏറ്റവും അടുത്ത ഫലം:'
+    dlang_lang = 'നാവ്:'
+    dlang_similarity = 'സമാനത:'
+    dlang_other = 'മറ്റ് ഭാഷകൾ'
+    dlang_input = 'പ്രോസസ്സ് ചെയ്ത വാചകം:'
+}
+if (config.LANG == 'HI') {
+    dlang_dsc = 'उत्तर दिए गए संदेश की भाषा का अनुमान लगाएं'
+    closer_res = 'निकटतम परिणाम:'
+    dlang_lang = 'जुबान:'
+    dlang_similarity = 'समानता:'
+    dlang_other = 'अन्य भाषाएँ'
+    dlang_input = 'संसाधित पाठ:'
+}
+if (config.LANG == 'ES') {
+    dlang_dsc = 'Adivina el idioma del mensaje respondido.'
+    closer_res = 'Resultado más cercano:'
+    dlang_lang = 'Lengua:'
+    dlang_similarity = 'Semejanza:'
+    dlang_other = 'Otros idiomas:'
+    dlang_input = 'Texto procesado:'
+}
+if (config.LANG == 'PT') {
+    dlang_dsc = 'Adivinhe o idioma da mensagem respondida.'
+    closer_res = 'Resultado mais próximo:'
+    dlang_lang = 'Língua:'
+    dlang_similarity = 'Similaridade:'
+    dlang_other = 'Outras línguas'
+    dlang_input = 'Texto Processado:'
+}
+if (config.LANG == 'ID') {
+    dlang_dsc = 'Tebak bahasa pesan yang dibalas.'
+    closer_res = 'Hasil Terdekat:'
+    dlang_lang = 'Lidah:'
+    dlang_similarity = 'Kesamaan:'
+    dlang_other = 'Bahasa Lainnya'
+    dlang_input = 'Teks yang Diproses:'
+}
+if (config.LANG == 'RU') {
+    dlang_dsc = 'Угадай язык ответного сообщения.'
+    closer_res = 'Ближайший результат:'
+    dlang_lang = 'Язык:'
+    dlang_similarity = 'Сходствo:'
+    dlang_other = 'Другие языки'
+    dlang_input = 'Обработанный текст:'
+}
+
 
 if (config.WORKTYPE == 'private') {
 
@@ -63,7 +149,128 @@ if (config.WORKTYPE == 'private') {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
         }
     }));
+    var l_dsc = ''
+    var alr_on = ''
+    var alr_off = ''
+    var succ_on = ''
+    var succ_off = ''
+    if (config.LANG == 'TR') {
+        l_dsc = 'Antilink aracını etkinleştirir.'
+        alr_on = 'Antilink halihazırda açık!'
+        alr_off = 'Antilink halihazırda kapalı!'
+        succ_on = 'Antilink Başarıyla Açıldı!'
+        succ_off = 'Antilink Başarıyla Kapatıldı!'
+    }
+    if (config.LANG == 'EN') {
+        l_dsc = 'Activates the Antilink tool.'
+        alr_on = 'Antilink is already open!'
+        alr_off = 'Antilink is currently closed!'
+        succ_on = 'Antilink Opened Successfully!'
+        succ_off = 'Antilink Closed Successfully!'
+    }
+    if (config.LANG == 'AZ') {
+        l_dsc = 'Antilink alətini aktivləşdirir.'
+        alr_on = 'Antilink hazırda açıqdır!'
+        alr_off = 'Antilink hazırda bağlıdır!'
+        succ_on = 'Antilink Uğurla Açıldı!'
+        succ_off = 'Antilink Uğurla Bağlandı!'
+    }
+    if (config.LANG == 'HI') {
+        l_dsc = 'एंटीलिंक टूल को सक्रिय करता है।'
+        alr_on = 'एंटीलिंक पहले से ही खुला है!'
+        alr_off = 'एंटीलिंक वर्तमान में बंद है!'
+        succ_on = 'एंटीलिंक सफलतापूर्वक खोला गया!'
+        succ_off = 'एंटीलिंक सफलतापूर्वक बंद!'
+    }
+    if (config.LANG == 'ML') {
+        l_dsc = 'ആന്റിലിങ്ക് ഉപകരണം സജീവമാക്കുന്നു.'
+        alr_on = 'ആന്റിലിങ്ക് ഇതിനകം തുറന്നു!'
+        alr_off = 'ആന്റിലിങ്ക് നിലവിൽ അടച്ചിരിക്കുന്നു!'
+        succ_on = 'ആന്റിലിങ്ക് വിജയകരമായി തുറന്നു!'
+        succ_off = 'ആന്റിലിങ്ക് വിജയകരമായി അടച്ചു!'
+    }
+    if (config.LANG == 'PT') {
+        l_dsc = 'Ativa a ferramenta Antilink.'
+        alr_on = 'O Antilink já está aberto!'
+        alr_off = 'Antilink está fechado no momento!'
+        succ_on = 'Antilink aberto com sucesso!'
+        succ_off = 'Antilink fechado com sucesso!'
+    }
+    if (config.LANG == 'RU') {
+        l_dsc = 'Активирует инструмент Antilink.'
+        alr_on = 'Антилинк уже открыт!'
+        alr_off = 'Антилинк сейчас закрыт!'
+        succ_on = 'Антилинк успешно открыт!'
+        succ_off = 'Антилинк успешно закрыт!'
+    }
+    if (config.LANG == 'ES') {
+        l_dsc = 'Activa la herramienta Antilink.'
+        alr_on = '¡Antilink ya está abierto!'
+        alr_off = '¡Antilink está cerrado actualmente!'
+        succ_on = '¡Antilink se abrió con éxito!'
+        succ_off = 'Antilink cerrado correctamente!'
+    }
+    if (config.LANG == 'ID') {
+        l_dsc = 'Mengaktifkan alat Antilink.'
+        alr_on = 'Antilink sudah terbuka!'
+        alr_off = 'Antilink saat ini ditutup!'
+        succ_on = 'Antilink Berhasil Dibuka!'
+        succ_off = 'Antilink Berhasil Ditutup!'
+    }
+    Asena.addCommand({pattern: 'antilink ?(.*)', fromMe: true, desc: l_dsc, usage: '.antilink on / off' }, (async (message, match) => {
+        const anti_status = `${config.ANTİLİNK}`
+        if (match[1] == 'on') {
+            if (anti_status == 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_on + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['ANTİ_LİNK']: 'true'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
+            }
+        }
+        else if (match[1] == 'off') {
+            if (anti_status !== 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_off + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['ANTİ_LİNK']: 'false'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
+            }
+        }
+    }));
+    Asena.addCommand({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
 
+        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
+        const msg = message.reply_message.text
+        var ldet = lngDetector.detect(msg)
+        async function upperfirstLetter(letter) {
+            return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
+        }
+        var cls1 = await upperfirstLetter(ldet[0][0])
+        var cls2 = ldet[0][1].toString()
+        var cls3 = await upperfirstLetter(ldet[1][0])
+        var cls4 = ldet[1][1].toString()
+        var cls5 = await upperfirstLetter(ldet[2][0])
+        var cls6 = ldet[2][1].toString()
+        var cls7 = await upperfirstLetter(ldet[3][0])
+        var cls8 = ldet[3][1].toString()
+        const res_1 = '*' + dlang_input + '* ' + '_' + msg + '_ \n'
+        const res_2 = '*' + closer_res + '* ' + '_' + cls1 + '_\n*' + dlang_similarity + '* ' + '_' + cls2 + '_ \n\n'
+        const res_3 = '```[ ' + dlang_other + ' ]```\n\n'
+        const res_4 = '#2 *' + dlang_lang + '* ' + '_' + cls3 + '_\n*' + dlang_similarity + '* ' + '_' + cls4 + '_ \n'
+        const res_5 = '#3 *' + dlang_lang + '* ' + '_' + cls5 + '_\n*' + dlang_similarity + '* ' + '_' + cls6 + '_ \n'
+        const res_6 = '#4 *' + dlang_lang + '* ' + '_' + cls7 + '_\n*' + dlang_similarity + '* ' + '_' + cls8 + '_'
+        const rep_7 = res_1 + res_2 + res_3 + res_4 + res_5 + res_6
+        await message.client.sendMessage(message.jid,rep_7,MessageType.text);
+    }));
     Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: true}, (async (message, match) => {
 
         if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {
@@ -535,7 +742,31 @@ else if (config.WORKTYPE == 'public') {
             return await message.client.sendMessage(message.jid,Lang.TRANSLATE_ERROR,MessageType.text)
         }
     }));
+    Asena.addCommand({pattern: 'detectlang$', fromMe: false, desc: dlang_dsc}, (async (message, match) => {
 
+        if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
+        const msg = message.reply_message.text
+        var ldet = lngDetector.detect(msg)
+        async function upperfirstLetter(letter) {
+            return letter.charAt(0).toUpperCase() + letter.slice(1).toLowerCase();
+        }
+        var cls1 = await upperfirstLetter(ldet[0][0])
+        var cls2 = ldet[0][1].toString()
+        var cls3 = await upperfirstLetter(ldet[1][0])
+        var cls4 = ldet[1][1].toString()
+        var cls5 = await upperfirstLetter(ldet[2][0])
+        var cls6 = ldet[2][1].toString()
+        var cls7 = await upperfirstLetter(ldet[3][0])
+        var cls8 = ldet[3][1].toString()
+        const res_1 = '*' + dlang_input + '* ' + '_' + msg + '_ \n'
+        const res_2 = '*' + closer_res + '* ' + '_' + cls1 + '_\n*' + dlang_similarity + '* ' + '_' + cls2 + '_ \n\n'
+        const res_3 = '```[ ' + dlang_other + ' ]```\n\n'
+        const res_4 = '#2 *' + dlang_lang + '* ' + '_' + cls3 + '_\n*' + dlang_similarity + '* ' + '_' + cls4 + '_ \n'
+        const res_5 = '#3 *' + dlang_lang + '* ' + '_' + cls5 + '_\n*' + dlang_similarity + '* ' + '_' + cls6 + '_ \n'
+        const res_6 = '#4 *' + dlang_lang + '* ' + '_' + cls7 + '_\n*' + dlang_similarity + '* ' + '_' + cls8 + '_'
+        const rep_7 = res_1 + res_2 + res_3 + res_4 + res_5 + res_6
+        await message.client.sendMessage(message.jid,rep_7,MessageType.text, { quoted: message.data });
+    }));
     Asena.addCommand({pattern: 'currency(?: ([0-9.]+) ([a-zA-Z]+) ([a-zA-Z]+)|$|(.*))', fromMe: false}, (async (message, match) => {
 
         if(match[1] === undefined || match[2] == undefined || match[3] == undefined) {

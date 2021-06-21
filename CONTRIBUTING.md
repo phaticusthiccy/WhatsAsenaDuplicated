@@ -73,7 +73,7 @@ further defined and clarified by project maintainers.
 ### Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at [INSERT EMAIL ADDRESS]. All
+reported by contacting the project team at AsenaDev. All
 complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. The project team is
 obligated to maintain confidentiality with regard to the reporter of an incident.
@@ -94,20 +94,3 @@ This project is open source. So you are responsible for the changes you make.
 It is your responsibility to use these codes. We are not responsible for any bad things you make.
 
 ##
-
-##### Sharing WhatsAsena on Social Medias
-
-> Users Allowed 
-
-```json
-{
-  "user_github": "https://github.com/dogubk",
-  "user_workmail": "doguhanonder34@gmail.com",
-  "user_publicmail": "dohuhanz@gmail.com"
-  },
-  "user_permissions" {
-    "allow": ["share, usage, support"],
-    "unallow": ["write, commit"]
-    {
-}
-```
