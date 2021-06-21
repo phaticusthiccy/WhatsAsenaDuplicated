@@ -246,6 +246,103 @@ if (config.WORKTYPE == 'private') {
             }
         }
     }));
+    var auto_dsc = ''
+    var alr_on_bio = ''
+    var alr_off_bio = ''
+    var succ_on_bio = ''
+    var succ_off_bio = ''
+    if (config.LANG == 'TR') {
+        auto_dsc = 'Biyografinize canlı saat ekleyin!'
+        alr_on_bio = 'Autobio halihazırda açık!'
+        alr_off_bio = 'Autobio halihazırda kapalı!'
+        succ_on_bio = 'Autobio Başarıyla Açıldı!'
+        succ_off_bio = 'Autobio Başarıyla Kapatıldı!'
+    }
+    if (config.LANG == 'EN') {
+        auto_dsc = 'Add live clock to your bio!'
+        alr_on_bio = 'Autobio is already open!'
+        alr_off_bio = 'Autobio is currently closed!'
+        succ_on_bio = 'Autobio Opened Successfully!'
+        succ_off_bio = 'Autobio Closed Successfully!'
+    }
+    if (config.LANG == 'AZ') {
+        auto_dsc = 'Bio-ya canlı saat əlavə et!'
+        alr_on_bio = 'Autobio hazırda açıqdır!'
+        alr_off_bio = 'Autobio hazırda bağlıdır!'
+        succ_on_bio = 'Autobio Uğurla Açıldı!'
+        succ_off_bio = 'Autobio Uğurla Bağlandı!'
+    }
+    if (config.LANG == 'HI') {
+        auto_dsc = 'अपने बायो में लाइव घड़ी जोड़ें!'
+        alr_on_bio = 'Autobio पहले से ही खुला है!'
+        alr_off_bio = 'Autobio वर्तमान में बंद है!'
+        succ_on_bio = 'Autobio सफलतापूर्वक खोला गया!'
+        succ_off_bio = 'Autobio सफलतापूर्वक बंद!'
+    }
+    if (config.LANG == 'ML') {
+        auto_dsc = 'നിങ്ങളുടെ ബയോയിലേക്ക് തത്സമയ ക്ലോക്ക് ചേർക്കുക!'
+        alr_on_bio = 'Autobio ഇതിനകം തുറന്നു!'
+        alr_off_bio = 'Autobio നിലവിൽ അടച്ചിരിക്കുന്നു!'
+        succ_on_bio = 'Autobio വിജയകരമായി തുറന്നു!'
+        succ_off_bio = 'Autobio വിജയകരമായി അടച്ചു!'
+    }
+    if (config.LANG == 'PT') {
+        auto_dsc = 'Adicione um relógio ao vivo à sua biografia!'
+        alr_on_bio = 'O Autobio já está aberto!'
+        alr_off_bio = 'Autobio está fechado no momento!'
+        succ_on_bio = 'Autobio aberto com sucesso!'
+        succ_off_bio = 'Autobio fechado com sucesso!'
+    }
+    if (config.LANG == 'RU') {
+        auto_dsc = 'Добавьте живые часы в свою биографию!'
+        alr_on_bio = 'Autobio уже открыт!'
+        alr_off_bio = 'Autobio сейчас закрыт!'
+        succ_on_bio = 'Autobio успешно открыт!'
+        succ_off_bio = 'Autobio успешно закрыт!'
+    }
+    if (config.LANG == 'ES') {
+        auto_dsc = '¡Agrega un reloj en vivo a tu biografía!'
+        alr_on_bio = '¡Autobio ya está abierto!'
+        alr_off_bio = '¡Autobio está cerrado actualmente!'
+        succ_on_bio = '¡Autobio se abrió con éxito!'
+        succ_off_bio = 'Autobio cerrado correctamente!'
+    }
+    if (config.LANG == 'ID') {
+        auto_dsc = 'Tambahkan jam langsung ke bio Anda!'
+        alr_on_bio = 'Autobio sudah terbuka!'
+        alr_off_bio = 'Autobio saat ini ditutup!'
+        succ_on_bio = 'Autobio Berhasil Dibuka!'
+        succ_off_bio = 'Autobio Berhasil Ditutup!'
+    }
+    Asena.addCommand({pattern: 'autobio ?(.*)', fromMe: true, desc: auto_dsc, usage: '.autobio on / off' }, (async (message, match) => {
+        const bio_status = `${config.AUTOBİO}`
+        if (match[1] == 'on') {
+            if (bio_status == 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_on_bio + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['AUTO_BİO']: 'true'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_on_bio + '*', MessageType.text)
+            }
+        }
+        else if (match[1] == 'off') {
+            if (bio_status !== 'true') {
+                return await message.client.sendMessage(message.jid, '*' + alr_off_bio + '*', MessageType.text)
+            }
+            else {
+                await heroku.patch(baseURI + '/config-vars', { 
+                    body: { 
+                        ['AUTO_BİO']: 'false'
+                    } 
+                });
+                await message.client.sendMessage(message.jid, '*' + succ_off_bio + '*', MessageType.text)
+            }
+        }
+    }));
     Asena.addCommand({pattern: 'detectlang$', fromMe: true, desc: dlang_dsc}, (async (message, match) => {
 
         if (!message.reply_message) return await message.client.sendMessage(message.jid,Lang.NEED_REPLY, MessageType.text)
