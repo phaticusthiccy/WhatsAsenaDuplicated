@@ -28,7 +28,7 @@ Wikipedia Articles About Eva'a System:
 >> https://en.m.wikipedia.org/wiki/Natural_language_processing
 
 */
-
+// ===================================================
 /*
 Eva has never been connected to the internet previously.
 The Brainshop.ai supports to javascript datasets, so thats way we cloned some datas from Eva to 
@@ -56,6 +56,11 @@ const os = require('os')
 const translatte = require('translatte');
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
+const Heroku = require('heroku-client');
+const heroku = new Heroku({
+    token: conf.HEROKU.API_KEY
+});
+let baseURI = '/apps/' + conf.HEROKU.APP_NAME;
 
 let wk = conf.WORKTYPE == 'public' ? false : true
 var vtalk_dsc = ''
@@ -256,4 +261,102 @@ Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mes
                 });
         });
     } catch (err) { console.log(err) }
+}));
+var fulleva_dsc = ''
+var already_on = ''
+var already_off = ''
+var succ_on = ''
+var succ_off = ''
+if (conf.LANG == 'TR') {
+    fulleva_dsc = 'Tam fonksiyonel Eva özelliklerini aktif eder. Hesabınızı bir chatbota dönüştürün!'
+    already_on = 'Eva yapay zekası halihazırda tüm fonksiyonları etkin.'
+    already_off = 'Eva yapay zekası halihazırda yarı fonksiyonel çalışıyor.'
+    succ_on = 'Eva, Tam Fonksiyonel Olarak Açıldı! Lütfen Biraz Bekleyin! ✅'
+    succ_off = 'Eva, Yarı Fonksiyonel Olarak Ayarlandı! Lütfen Biraz Bekleyin! ☑️'
+}
+if (conf.LANG == 'EN') {
+    fulleva_dsc = 'Activates full functional Eva features. Turn your account into a ai chatbot!'
+    already_on = 'Eva artificial intelligence is already fully functional.'
+    already_off = 'Eva artificial intelligence is currently running semi-functional.'
+    succ_on = 'Eva Opened Fully Functionally! Please wait a bit! ✅'
+    succ_off = 'Eva Set to Semi-Functional! Please wait a bit! ☑️'
+}
+if (conf.LANG == 'AZ') {
+    fulleva_dsc = 'Tam funksional Eva xüsusiyyətlərini aktivləşdirir. Hesabınızı bir chatbot halına gətirin!'
+    already_on = 'Eva süni intellekt onsuz da tam işlək vəziyyətdədir.'
+    already_off = 'Eva AI hazırda yarı funksionaldır.'
+    succ_on = 'Eva Tamamilə İşlədi! Xahiş edirəm bir az gözləyin! ✅'
+    succ_off = 'Eva Yarı İşləkdir! Xahiş edirəm bir az gözləyin! ☑️'
+}
+if (conf.LANG == 'RU') {
+    fulleva_dsc = 'Активирует полнофункциональные функции Eva. Превратите свой аккаунт в чат-бота!'
+    already_on = 'Искусственный интеллект Eva уже полностью функционален.'
+    already_off = 'Eva AI в настоящее время частично функционирует'
+    succ_on = 'Eva открылась полностью функционально! Подождите немного! ✅'
+    succ_off = 'Eva настроена на полуфункциональность! Подождите немного! ☑️'
+}
+if (conf.LANG == 'ES') {
+    fulleva_dsc = 'Activa todas las funciones funcionales de Eva. ¡Convierta su cuenta en un chatbot!'
+    already_on = 'La inteligencia artificial de Eva ya es completamente funcional.'
+    already_off = 'Eva AI es actualmente semi-funcional.'
+    succ_on = '¡Eva abrió completamente funcionalmente! ¡Por favor espere un poco! ✅'
+    succ_off = '¡Eva se pone semifuncional! ¡Por favor espere un poco! ☑️'
+}
+if (conf.LANG == 'HI') {
+    fulleva_dsc = 'पूरी तरह कार्यात्मक Eva सुविधाओं को सक्रिय करता है। अपने खाते को चैटबॉट में बदलें!'
+    already_on = 'ईवा आर्टिफिशियल इंटेलिजेंस पहले से ही पूरी तरह कार्यात्मक है'
+    already_off = 'ईवा एआई वर्तमान में अर्ध-कार्यात्मक है'
+    succ_on = 'ईवा पूरी तरह कार्यात्मक रूप से खुल गई! कृपया थोड़ी प्रतीक्षा करें! ✅'
+    succ_off = 'अर्ध-कार्यात्मक करने के लिए ईवा सेट! कृपया थोड़ी प्रतीक्षा करें! ☑️'
+}
+if (conf.LANG == 'ML') {
+    fulleva_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ Eva സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
+    already_on = 'ഇവ കൃത്രിമബുദ്ധി ഇതിനകം പൂർണ്ണമായി പ്രവർത്തിക്കുന്നു.'
+    already_off = 'ഇവാ AI നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
+    succ_on = 'ഇവ പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
+    succ_off = 'സെമി-ഫങ്ഷണൽ ആയി ഇവാ സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
+}
+if (conf.LANG == 'PT') {
+    fulleva_dsc = 'Ativa recursos Eva totalmente funcionais. Transforme sua conta em um chatbot!'
+    already_on = 'A inteligência artificial Eva já está totalmente funcional.'
+    already_off = 'Eva AI está semi-funcional.'
+    succ_on = 'Eva abriu totalmente funcionalmente! Por favor espere um pouco! ✅'
+    succ_off = 'Eva definida como semi-funcional! Por favor espere um pouco! ☑️'
+}
+if (conf.LANG == 'ID') {
+    fulleva_dsc = 'Mengaktifkan fitur Eva yang berfungsi penuh. Ubah akun Anda menjadi chatbot!'
+    already_on = 'Kecerdasan buatan Eva sudah berfungsi penuh.'
+    already_off = 'Eva AI saat ini semi-fungsional.'
+    succ_on = 'Eva Dibuka Sepenuhnya Secara Fungsional! Harap tunggu sebentar! ✅'
+    succ_off = 'Eva Set ke Semi-Fungsional! Mohon tunggu sebentar! ☑️'
+}
+
+Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.fulleva on / off' }, (async (message, match) => {
+    var eva_status = `${conf.FULLEVA}`
+    if (match[1] == 'on') {
+        if (eva_status == 'true') {
+            return await message.client.sendMessage(message.jid, '*' + already_on + '*', MessageType.text)
+        }
+        else {
+            await heroku.patch(baseURI + '/config-vars', { 
+                body: { 
+                    ['FULL_EVA']: 'true'
+                } 
+            });
+            await message.client.sendMessage(message.jid, '*' + succ_on + '*', MessageType.text)
+        }
+    }
+    else if (match[1] == 'off') {
+        if (eva_status !== 'true') {
+            return await message.client.sendMessage(message.jid, '*' + already_off + '*', MessageType.text)
+        }
+        else {
+            await heroku.patch(baseURI + '/config-vars', { 
+                body: { 
+                    ['FULL_EVA']: 'false'
+                } 
+            });
+            await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
+        }
+    }
 }));
