@@ -133,8 +133,9 @@ async function whatsAsena () {
             }
         })
     }, 50000);
+    var biography_var = `${config.AUTOBİO}`
     setInterval(async () => { 
-        if (config.AUTOBİO == 'true') {
+        if (biography_var == 'true') {
             var getGMTh = new Date().getHours()
             var getGMTm = new Date().getMinutes()
             var getGMTs = new Date().getSeconds()
@@ -145,7 +146,7 @@ async function whatsAsena () {
             const biography = '📅 ' + utch + '\n⌚ ' + hour + ':' + min + ':' + getGMTs + '\n\n🐺 WhatsAsena'
             await conn.setStatus(biography)
         }
-    }, 8480);
+    }, 10790);
     var insult = await axios.get('https://gist.githubusercontent.com/phaticusthiccy/f16bbd4ceeb4324d4a727b431a4ef1f2/raw')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
