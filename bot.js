@@ -419,7 +419,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
     })
-    conn.on('message-new', async msg => {
+    conn.on('chat-update', async ma => {
+        
+        if(!ma.hasNewMessage) return
+        const msg = ma.messages.all()[0]
+        
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
@@ -519,11 +523,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         } else {
                             whats = new Message(conn, msg);
                         }
-                        if (msg.key.fromMe) {
-                            var vers = conn.user.phone.wa_version.split('.')[2]
-                            if (command.deleteCommand && vers < 12) { 
-                                await whats.delete() 
-                            }
+                        if (msg.key.fromMe && command.deleteCommand) { 
+                            await whats.delete() 
                         } 
                         // ==================== End Message Catcher ====================
 
