@@ -17,6 +17,11 @@ const Lang = Language.getString('evaluators');
 const SLang = Language.getString('conventer');
 const NLang = Language.getString('scrapers');
 const googleTTS = require('google-translate-tts');
+const Heroku = require('heroku-client');
+const heroku = new Heroku({
+    token: Config.HEROKU.API_KEY
+});
+let baseURI = '/apps/' + Config.HEROKU.APP_NAME;
 
 var dd = ''
 var errmsg = ''
@@ -140,6 +145,10 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     });
     return sonuc.includes(true);
 }
+var antilink_var = ''
+await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+    antilink_var = vars.ANTİLİNK
+});
 var ldc = ''
 if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
 if (Config.LANG == 'TR') ldc = '*‎Link Tespit Edildi!*'
@@ -151,7 +160,7 @@ if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
 if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
 if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-    if (Config.ANTİLİNK == 'true') {
+    if (antilink_var == 'true') {
         let regex1 = new RegExp('http://')
         let regex2 = new RegExp('https://')
         if (regex1.test(message.message)) {
