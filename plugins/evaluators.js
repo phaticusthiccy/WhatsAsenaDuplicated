@@ -148,7 +148,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 var antilink_var = ''
 async function antlch() {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        antilink_var = vars.ANTİLİNK
+        antilink_var = vars.ANTİ_LİNK
     });
 }
 antlch()
