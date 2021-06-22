@@ -133,7 +133,10 @@ async function whatsAsena () {
             }
         })
     }, 50000);
-    var biography_var = `${config.AUTOBİO}`
+    var biography_var = ''
+    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+        biography_var = vars.AUTO_BİO
+    });
     setInterval(async () => { 
         if (biography_var == 'true') {
             var getGMTh = new Date().getHours()
@@ -146,7 +149,7 @@ async function whatsAsena () {
             const biography = '📅 ' + utch + '\n⌚ ' + hour + ':' + min + ':' + getGMTs + '\n\n🐺 WhatsAsena'
             await conn.setStatus(biography)
         }
-    }, 10790);
+    }, 7890);
     var insult = await axios.get('https://gist.githubusercontent.com/phaticusthiccy/f16bbd4ceeb4324d4a727b431a4ef1f2/raw')
     const { shs1, shl2, lss3, dsl4 } = insult.data.inside
     await config.DATABASE.sync();
@@ -419,11 +422,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             }
         }
     })
-    conn.on('chat-update', async ma => {
-        
-        if(!ma.hasNewMessage) return
-        const msg = ma.messages.all()[0]
-        
+    conn.on('message-new', async msg => {
+       
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
         if (config.NO_ONLINE) {
             await conn.updatePresence(msg.key.remoteJid, Presence.unavailable);
@@ -524,7 +524,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             whats = new Message(conn, msg);
                         }
                         if (msg.key.fromMe && command.deleteCommand) { 
-                            await whats.delete() 
+                            var wrs = conn.user.phone.wa_version.split('.')[2]
+                            if (wrs < 11) {
+                                await whats.delete() 
+                            }
                         } 
                         // ==================== End Message Catcher ====================
 
