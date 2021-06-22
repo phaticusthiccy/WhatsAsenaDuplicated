@@ -146,9 +146,12 @@ async function checkImAdmin(message, user = message.client.user.jid) {
     return sonuc.includes(true);
 }
 var antilink_var = ''
-await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-    antilink_var = vars.ANTİLİNK
-});
+async function antlch() {
+    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
+        antilink_var = vars.ANTİLİNK
+    });
+}
+antlch()
 var ldc = ''
 if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
 if (Config.LANG == 'TR') ldc = '*‎Link Tespit Edildi!*'
