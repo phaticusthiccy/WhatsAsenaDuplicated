@@ -1,6 +1,6 @@
 {
   "name": "WhatsAsenaDuplicated",
-  "version": "1.3.2",
+  "version": "1.3.5",
   "description": "WhatsAsena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
   "main": "./WhatsAsenaDuplicated/bot.js",
   "scripts": {
@@ -15,6 +15,10 @@
     "bot",
     "ai",
     "asena",
+    "machine learning",
+    "automatic",
+    "whatsapp web",
+    "whatsapp api",
     "WhatsAsena"
   ],
   "author": "AsenaDev / Yusuf Usta",
@@ -66,8 +70,8 @@
     "spotify-web-api-node": "^5.0.0",
     "sqlite3": "5.0.0",
     "solenolyrics": "^5.0.0",
-    "translatte": "^3.0.0",
-    "wikijs": "^6.0.1",
+    "translate": "^1.2.3",
+    "wikijs": "^6.0.1", 
     "yt-search": "^2.7.4",
     "ytdl-core": "^4.8.3"
   }
