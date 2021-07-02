@@ -104,7 +104,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
             }
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy (2).mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210619-WA0106.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Admin Tarafından Admin Yapıldın!```" }
             )
@@ -123,7 +123,7 @@ Asena.addCommand({pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc:
 
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy (2).mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210619-WA0106.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Admin Tarafından Admin Yapıldın!```" }
             )
@@ -173,7 +173,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
             }
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy (3).mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210619-WA0120.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Admin Tarafından Yetkin Düşürüldü!```" }
             )
@@ -191,7 +191,7 @@ Asena.addCommand({pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: 
             });
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/giphy (3).mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210619-WA0120.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "```Admin Tarafından Yetkin Düşürüldü!```" }
             )
