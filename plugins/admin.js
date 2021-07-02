@@ -32,7 +32,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
         if (message.reply_message !== false) {
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Edited_20210227_152650.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210702-WA0029.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "Admin Tarafından Banlandın!" }
             )
@@ -45,7 +45,7 @@ Asena.addCommand({pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lan
             });
             await message.client.sendMessage(
                 message.jid, 
-                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/Edited_20210227_152650.mp4"),
+                fs.readFileSync("/root/WhatsAsenaDuplicated/media/gif/VID-20210702-WA0029.mp4"),
                 MessageType.video, 
                 { mimetype: Mimetype.gif, caption: "Admin Tarafından Banlandın!" }
             )
