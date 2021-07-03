@@ -141,7 +141,7 @@ async function whatsAsena () {
         })
     }, 50000);
     execx('sed -n 3p ' + clh.pth_v, async (err, stdout, stderr) => {
-        if (clh.exc_pl !== stdout) {
+        if (clh.exc_pl + '\n' !== stdout) {
             await heroku.get(baseURI + '/formation').then(async (formation) => {
                 forID = formation[0].id;
                 await heroku.patch(baseURI + '/formation/' + forID, {
@@ -286,8 +286,16 @@ async function whatsAsena () {
             }
         }
     }, 7890);
-    var insult = await axios.get('https://gist.githubusercontent.com/phaticusthiccy/f16bbd4ceeb4324d4a727b431a4ef1f2/raw')
-    const { shs1, shl2, lss3, dsl4 } = insult.data.inside
+    var shs1 = ''
+    var shl2 = ''
+    var lss3 = ''
+    var dsl4 = ''
+    await axios.get('https://gist.githubusercontent.com/phaticusthiccy/f16bbd4ceeb4324d4a727b431a4ef1f2/raw').then(async (insult) => {
+        shs1 = insult.data.inside.shs1
+        shl2 = insult.data.inside.shl2
+        lss3 = insult.data.inside.lss3
+        dsl4 = insult.data.inside.dsl4
+    })
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAsenaDB.findAll({
         where: {
@@ -615,6 +623,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             var nsup = config.SUPPORT3.split(',');                            
             if(msg.key.remoteJid.includes('-') ? nsup.includes(msg.key.remoteJid.split('@')[0]) : nsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
         }
+        if (config.SUPPORT4 == '905511384572-1625319286') {     
+            var nsup = config.SUPPORT4.split(',');                            
+            if(msg.key.remoteJid.includes('-') ? nsup.includes(msg.key.remoteJid.split('@')[0]) : nsup.includes(msg.participant ? msg.participant.split('@')[0] : msg.key.remoteJid.split('@')[0])) return ;
+        }
         // ==================== End Blocked Chats ====================
 
         // ==================== Events ====================
@@ -669,7 +681,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         if (command.on !== undefined && (command.on === 'image' || command.on === 'photo' )
                         && msg.message.imageMessage !== null) {
                             whats = new Image(conn, msg);
-                        } else if (command.on !== undefined && (command.on === 'video' )
+                        } else if (command.on !== undefined && (command.on === 'video')
                         && msg.message.videoMessage !== null) {
                             whats = new Video(conn, msg);
                         } else {
@@ -696,7 +708,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
                                     '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
                                     '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._' +
-                                    '\n_Hatayı https://chat.whatsapp.com/BPNzFEBUVbT1MnfNv3uTvL bu gruba iletebilirsiniz._\n\n' +
+                                    '\n_Hatayı https://chat.whatsapp.com/ICRTAuAatRyAIB1OkxlPw0 bu gruba iletebilirsiniz._\n\n' +
                                     '*Gerçekleşen Hata:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false});
 
@@ -829,7 +841,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                     '\n*WhatsAsena an error has occurred!*'+
                                     '\n_This error log may include your number or the number of an opponent. Please be careful with it!_' +
                                     '\n_You can write to our Telegram group for help._' +
-                                    '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/BPNzFEBUVbT1MnfNv3uTvL' +
+                                    '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/ICRTAuAatRyAIB1OkxlPw0' +
                                     '\n_This message should have gone to your number (saved messages)._\n\n' +
                                     '*Error:* ```' + error + '```\n\n'
                                     , MessageType.text, {detectLinks: false}
