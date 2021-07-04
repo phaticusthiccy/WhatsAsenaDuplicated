@@ -158,7 +158,7 @@ if (Config.WORKTYPE == 'private') {
                 }); 
             });
         } else {
-            await message.client.sendMessage(message.jid, NEED_USER, MessageType.text);
+            await message.client.sendMessage(message.jid, Lang.NEED_USER, MessageType.text);
         }
     }));
 }
@@ -192,7 +192,7 @@ else if (Config.WORKTYPE == 'public') {
                 }); 
             });
         } else {
-            await message.client.sendMessage(message.jid, NEED_USER, MessageType.text);
+            await message.client.sendMessage(message.jid, Lang.NEED_USER, MessageType.text);
         }
     }));
 }
