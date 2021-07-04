@@ -145,6 +145,22 @@ if (Config.WORKTYPE == 'private') {
             await message.client.sendMessage(message.jid, Lang.JID_CHAT.format(message.jid), MessageType.text);
         }
     }));
+
+    Asena.addCommand({pattern: 'wame ?(.*)', fromMe: true, desc: Lang.WAME_DESC}, (async (message, match) => {    
+        if (message.reply_message !== false) {
+            await message.client.sendMessage(message.jid, Lang.WAME.format(message.reply_message.jid.split('@')[0], message.reply_message.jid.replace('@s.whatsapp.net', ' ')), MessageType.text, {
+                quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
+            });
+        } else if (message.mention !== false) {
+            message.mention.map(async user => {
+                await message.client.sendMessage(message.jid, Lang.WAME.format(user.split('@')[0], user.replace('@s.whatsapp.net', ' ')), MessageType.text, {
+                    contextInfo: {mentionedJid: [user.replace('c.us', 's.whatsapp.net')]}
+                }); 
+            });
+        } else {
+            await message.client.sendMessage(message.jid, NEED_USER, MessageType.text);
+        }
+    }));
 }
 else if (Config.WORKTYPE == 'public') {
 
@@ -161,6 +177,22 @@ else if (Config.WORKTYPE == 'public') {
             });
         } else {
             await message.client.sendMessage(message.jid, Lang.JID_CHAT.format(message.jid), MessageType.text);
+        }
+    }));
+
+    Asena.addCommand({pattern: 'wame ?(.*)', fromMe: false, desc: Lang.WAME_DESC}, (async (message, match) => {    
+        if (message.reply_message !== false) {
+            await message.client.sendMessage(message.jid, Lang.WAME.format(message.reply_message.jid.split('@')[0], message.reply_message.jid.replace('@s.whatsapp.net', ' ')), MessageType.text, {
+                quotedMessage: message.reply_message.data, contextInfo: {mentionedJid: [message.reply_message.jid.replace('c.us', 's.whatsapp.net')]}
+            });
+        } else if (message.mention !== false) {
+            message.mention.map(async user => {
+                await message.client.sendMessage(message.jid, Lang.WAME.format(user.split('@')[0], user.replace('@s.whatsapp.net', ' ')), MessageType.text, {
+                    contextInfo: {mentionedJid: [user.replace('c.us', 's.whatsapp.net')]}
+                }); 
+            });
+        } else {
+            await message.client.sendMessage(message.jid, NEED_USER, MessageType.text);
         }
     }));
 }
