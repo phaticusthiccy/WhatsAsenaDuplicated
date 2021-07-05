@@ -152,18 +152,37 @@ async function antlch() {
     });
 }
 antlch()
-var ldc = ''
-if (Config.LANG == 'AZ') ldc = '*Bağlantı Aşkarlandı!*'
-if (Config.LANG == 'TR') ldc = '*‎Link Tespit Edildi!*'
-if (Config.LANG == 'EN') ldc = '*Link Detected!*'
-if (Config.LANG == 'ML') ldc = '*ലിങ്ക് കണ്ടെത്തി!*'
-if (Config.LANG == 'ID') ldc = '*Tautan Terdeteksi!*'
-if (Config.LANG == 'PT') ldc = '*Link Detectado!*'
-if (Config.LANG == 'RU') ldc = '*Ссылка обнаружена!*'
-if (Config.LANG == 'HI') ldc = '*लिंक का पता चला!*'
-if (Config.LANG == 'ES') ldc = '*Enlace Detectado!*'
+
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
-    if (antilink_var == 'true' && message.jid !== '19709007690-1571595374@g.us') {
+    if (antilink_var == 'true' && message.jid !== '19709007690-1571595374@g.us') {   
+        let regex1 = new RegExp('http://chat.whatsapp.com')
+        let regex2 = new RegExp('https://chat.whatsapp.com')
+        if (regex1.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid, MessageType.text, {quoted: message.data })
+        } 
+        else if (regex2.test(message.message)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid, MessageType.text, {quoted: message.data })
+        }
+        else if (message.message.match(/((?:[.]com)\b)/i)) {
+            var us = await checkUsAdmin(message)
+            var im = await checkImAdmin(message)
+            if (!im) return;
+            if (us) return;
+            await message.client.groupRemove(message.jid, [message.data.participant]);         
+            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+        }
+        
+        if (antilink_var == 'true' && message.jid !== '19709007690-1601666238@g.us') {   
         let regex1 = new RegExp('http://chat.whatsapp.com')
         let regex2 = new RegExp('https://chat.whatsapp.com')
         if (regex1.test(message.message)) {
