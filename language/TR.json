@@ -33,7 +33,6 @@
             "BANNED": "Gruptan Çıkarıldı!",
             "GIVE_ME_USER": "*Bana bir kullanıcı ver!*",
             "ADD_DESC": "Gruba kişi ekler.\n⌨️ Örnek: .add 9055xxxxxxxx",
-            "ADDED": "Gruba Eklendi!",
             "ALREADY_PROMOTED": "```Zaten admin olan birisini nasıl admin yapayım?```",
             "PROMOTED": "```, Admin Yapıldı!```",
             "PROMOTE_DESC": "Herhangi bir kişiyi admin yapar.",
@@ -45,7 +44,7 @@
             "UNMUTE_DESC": "Grubu sohbetini açar. Herkes mesaj gönderebilir.",
             "UNMUTED": "```Grup sohbeti açıldı!```",
             "INVITE_DESC": "Grubun davet linkini getirir.",
-            "INVITE": "```Davet linki:```" 
+            "INVITE": "```Grup linki:```" 
         },
         "locate": {
             "L_DESC": "Konumunuzu gönderir.",
