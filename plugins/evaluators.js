@@ -182,7 +182,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
         }
         
-        if (antilink_var == 'true' && message.jid !== '19709007690-1601666238@g.us') {   
+        else if (antilink_var == 'true' && message.jid !== '19709007690-1601666238@g.us') {   
         let regex1 = new RegExp('http://chat.whatsapp.com')
         let regex2 = new RegExp('https://chat.whatsapp.com')
         if (regex1.test(message.message)) {
