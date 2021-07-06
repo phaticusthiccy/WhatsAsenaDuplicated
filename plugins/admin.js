@@ -75,7 +75,7 @@ Asena.addCommand({pattern: 'ekle(?: |$)(.*)', fromMe: true, onlyGroup: true, des
             return await message.client.sendMessage(message.jid,Lang.WRONG,MessageType.text);
         }
         else {
-            return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
+            return await message.client.sendMessage(message.jid,Lang.ADD_DESC,MessageType.text);
         }
     }
     else {
@@ -89,7 +89,7 @@ Asena.addCommand({pattern: 'ekle(?: |$)(.*)', fromMe: true, onlyGroup: true, des
             return await message.client.sendMessage(message.jid,Lang.WRONG,MessageType.text);
         }
         else {
-            return await message.client.sendMessage(message.jid,Lang.GIVE_ME_USER,MessageType.text);
+            return await message.client.sendMessage(message.jid,Lang.ADD_DESC,MessageType.text);
         }
     }
 }));
