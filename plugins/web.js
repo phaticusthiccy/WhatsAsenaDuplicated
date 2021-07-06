@@ -402,7 +402,7 @@ Asena.addCommand({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: La
   var end = new Date().getTime();
 
   await message.client.sendMessage(
-    message.jid,'*Pong!*\n```' + (end - start) + 'ms```', MessageType.text, { quoted: message.data });
+    message.jid,'*Pong!*\n```' + (end - start) + 'ms```', MessageType.text);
 }));
 
 if (Config.WORKTYPE == 'private') {
