@@ -163,7 +163,6 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (!im) return;
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid, MessageType.text, {quoted: message.data })
         } 
         else if (regex2.test(message.message)) {
             var us = await checkUsAdmin(message)
@@ -171,7 +170,6 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (!im) return;
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid, MessageType.text, {quoted: message.data })
         }
         else if (message.message.match(/((?:[.]com)\b)/i)) {
             var us = await checkUsAdmin(message)
@@ -179,7 +177,6 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (!im) return;
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid, MessageType.text, {quoted: message.data })
         }
     }
 }));
