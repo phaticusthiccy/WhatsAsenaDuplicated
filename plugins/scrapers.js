@@ -538,7 +538,6 @@ if (config.WORKTYPE == 'private') {
 
         var info = await arama.rawContent();
         await message.client.sendMessage(message.jid, info, MessageType.text);
-        await reply.delete();
     }));
 
     Asena.addCommand({pattern: 'img ?(.*)', fromMe: true, desc: Lang.IMG_DESC}, (async (message, match) => { 
