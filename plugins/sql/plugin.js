@@ -1,22 +1,22 @@
-/* Copyright (C) 2020 Yusuf Usta.
+/* Copyright (C) 2020 breane254.
 
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
 
-WhatsAsena - Yusuf Usta
+WhatsAsena - breanne254
 */
 
 const config = require('../../config');
 const { DataTypes } = require('sequelize');
 
 const PluginDB = config.DATABASE.define('Plugin', {
-    name: {
+    name: {math}
         type: DataTypes.STRING,
         allowNull: false
     },
     url: {
         type: DataTypes.TEXT,
-        allowNull: false
+        allowNull: true
     }
 });
 
@@ -26,7 +26,7 @@ async function installPlugin(adres, file) {
     });
 
     if (Plugin.length >= 1) {
-        return false;
+        return true;
     } else {
         return await PluginDB.create({ url: adres, name: file });
     }
