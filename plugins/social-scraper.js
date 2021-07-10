@@ -20,7 +20,7 @@ if (cn.WORKTYPE == 'private') {
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
         if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=2e30a9cf5ad7feaf`
         let response
         try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
         }
@@ -78,7 +78,7 @@ else if (cn.WORKTYPE == 'public') {
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
         if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=2e30a9cf5ad7feaf`
         let response
         try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
         }
@@ -102,7 +102,7 @@ else if (cn.WORKTYPE == 'public') {
         if (match[1] === '') return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
         if (!match[1].includes('www.instagram.com')) return await message.client.sendMessage(message.jid, Lang.NEED_WORD, MessageType.text, { quoted: message.data });
 	
-        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=ab9942f95c09ca89`
+        let urls = `https://api.xteam.xyz/dl/ig?url=${match[1]}&APIKEY=2e30a9cf5ad7feaf`
         let response
         try { response = await got(urls) } catch { return await message.client.sendMessage(message.jid, Lang.FİX, MessageType.text, { quoted: message.data });
         }
