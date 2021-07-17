@@ -171,7 +171,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);         
         }
-        else if (message.message.match(/((?:[.]whatsapp)\b)/i)) {
+        else if (message.message.match(/(([.]whatsapp)\b)/i)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
