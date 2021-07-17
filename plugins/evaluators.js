@@ -155,8 +155,8 @@ antlch()
 
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
     if (antilink_var == 'true' && message.jid !== '19709007690-1571595374@g.us') {  
-        let regex1 = new RegExp('http://')
-        let regex2 = new RegExp('https://')
+        let regex1 = new RegExp('http://chat.whatsapp.com')
+        let regex2 = new RegExp('https://chat.whatsapp.com')
         if (regex1.test(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
@@ -171,7 +171,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);         
         }
-        else if (message.message.match(/(([.]whatsapp)\b)/i)) {
+        else if (message.message.match(/((?:[.]whatsapp)\b)/i)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
