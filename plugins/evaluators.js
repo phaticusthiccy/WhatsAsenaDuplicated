@@ -269,14 +269,14 @@ if (Config.LANG == 'ML') sucmsg = '*സന്ദേശം വിജയകരമ�
 if (Config.LANG == 'RU') sucmsg = '*Сообщение успешно отправлено ✅*', pmmm = 'Отправляет личное сообщение ответившему человеку.', psmm = 'Отправляет респонденту личное голосовое сообщение.'
 if (Config.LANG == 'ID') sucmsg = '*Pesan Berhasil Terkirim ✅*', pmmm = 'Mengirim pesan pribadi ke orang yang dibalas.', psmm = 'Mengirim pesan suara pribadi ke responden.'
 if (Config.LANG == 'PT') sucmsg = '*Mensagem enviada com sucesso ✅*', pmmm = 'Envia uma mensagem privada para a pessoa respondida.', psmm = 'Envia uma mensagem de voz privada para o entrevistado.'
-Asena.addCommand({pattern: 'pmsend ?(.*)', fromMe: true, desc: pmmm }, (async (message, match) => {
+Asena.addCommand({pattern: 'pmsend ?(.*)', fromMe: true, desc: pmmm, onlyGroup: true }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,NLang.NEED_REPLY, MessageType.text);
     if (message.reply_message && match[1] == '') return await message.client.sendMessage(message.jid, NLang.NEED_WORDS, MessageType.text);
     const uspm = message.reply_message.jid
     await message.client.sendMessage(uspm, `${match[1]}`, MessageType.text);
     await message.client.sendMessage(message.jid, sucmsg, MessageType.text);
 }));
-Asena.addCommand({pattern: 'pmttssend ?(.*)', fromMe: true, desc: psmm}, (async (message, match) => {
+Asena.addCommand({pattern: 'pmttssend ?(.*)', fromMe: true, desc: psmm, onlyGroup: true}, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,NLang.NEED_REPLY, MessageType.text);
     if (message.reply_message && match[1] == '') return await message.client.sendMessage(message.jid, NLang.NEED_WORDS, MessageType.text);
     let 
