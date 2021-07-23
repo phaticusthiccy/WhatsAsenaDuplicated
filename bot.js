@@ -88,6 +88,7 @@ async function whatsAsena () {
     const WhatsAsenaCN = new WAConnection();
     const Session = new StringSession();
     WhatsAsenaCN.version = [2, 2123, 8]
+    WhatsAsenaCN.setMaxListeners(0);
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
