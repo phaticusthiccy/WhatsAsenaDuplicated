@@ -38,8 +38,8 @@
     <img src="https://img.shields.io/static/v1?label=Author&message=Thiccy&color=purple&style=plastic">
 
   </a>
-  <a href="https://t.me/asenaremaster">
-    <img src="https://img.shields.io/badge/Telegram-Asena%20Remaster-purple&style=plastic">
+  <a href="https://t.me/AsenaSupport">
+    <img src="https://img.shields.io/badge/Telegram-Asena%20Support-purple&style=plastic">
 
   </a>
 </p>
@@ -92,7 +92,7 @@ the user is responsible.
     <br>
         <a href="https://t.me/WHATSASENA">Telegram Channel</a> |
         <a href="https://t.me/AsenaSupport">Telegram Group</a> |      
-        <a href="https://t.me/remasterplugin">New Plugin Channel</a> |
+        <a href="https://t.me/remasterplugin">Plugin Channel</a> |
     <br>
 </p>
 
