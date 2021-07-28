@@ -78,7 +78,13 @@ the user is responsible.
 ```
 
 <div align="center">
-  <img src="https://i.hizliresim.com/mm1NBs.jpg" width="200" height="200">
+
+  ![WhatsAsena Logo](https://media0.giphy.com/media/WzWhxbIKpCCCYfTS3a/giphy.gif?cid=6c09b952ca458f6d0fdd2de872ae4335ca70b7c23958106f&rid=giphy.gif)
+
+<!---
+.mp4 version available on local file
+-->
+
   <h1>🐺 WhatsAsena</h1>
 </div>
 <p align="center">
@@ -164,6 +170,35 @@ WhatsAsena has %5 data of **Eva** to interact with users. Our gan datas stored o
 
 ### 🐺 What does Asena mean?
 [Asena](https://tr.wikipedia.org/wiki/Asena), comes from Turkish mythology. According to Turkish mythology, Asena is a she-wolf that plays an important role.
+
+<details>
+  <summary><h3>Other Questions ❔</h3></summary>
+
+### Data Traffic
+WhatsAsena encrypts all datas while sending messages, receiving messages, updates etc. There is no possible memory leaks.
+
+### Changing Branchs on Local Installation
+WhatsAsena uses always **master** branch. If users cloned other branches, they can't able to install it.
+
+### How Interp Command Works?
+**.interp** command useful for interpolating low frame rate videos. This system, which is the first in the world, is also seen in WhatsAsena, the world's first UserBot. Basically it superimposes the previous frame and produces new frames to replace blank datas. By doing a simple calculation, If we use **.interp 60** to a 300 frame 10 second video, the output will be about 4000-6000 frame.
+
+### My Bot is Very Slowly, What should I do?
+Firstly, you can check your ethernet connection. Your ping, packet loss and bandwidth. WhatsAsena uses phone's ethernet connection (Wi-Fi, Li-Fi, Mobile). So This is not about the WhatsAsena, it's about the device or the internet used.
+
+### Where Can I Find the Number of Users? 
+You can look at the values ​​written under our logo above. This value shows the current number of users.
+
+### Should I Trust Other Bots Like WhatsAsena?
+This choice is yours, There are a lot of fake bots using our codes. Can be dangerous as they are not official. Moreover, since there is no cyber attack protection in fake bots, the device can be easily accessed whenever any vulnerability is found.
+
+### Why Are Updates Coming Late?
+Because I'm the only developer. I need to test every step. I need to check each branch and import it into unique npm package. And I have a social life too :)
+
+### When Will Support Be Cut Off?
+When the WhatsAsena learns to solve all its problems by itself. My first goal is to provide this stuff.
+
+</details>
 
 ##
 
