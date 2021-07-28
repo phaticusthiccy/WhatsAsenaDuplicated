@@ -696,9 +696,9 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         } else {
                             whats = new Message(WhatsAsenaCN, msg);
                         }
-                        if (msg.key.fromMe && command.deleteCommand) { 
+                        if (msg.key.fromMe && command.deleteCommand) {
                             var wrs = WhatsAsenaCN.user.phone.wa_version.split('.')[2]
-                            if (wrs < 11) {
+                            if (wrs < 11 && !msg.key.remoteJid.includes('-')) {
                                 await whats.delete() 
                             }
                         } 
