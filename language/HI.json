@@ -5,11 +5,11 @@
     "AUTHOR": "AsenaDev",
     "STRINGS": {
         "_asena": {
-            "COMMAND": "Command",
-            "DESC": "Description",
-            "EXAMPLE": "Example",
-            "NOT_FOUND": "*I couldnt find a command like this*",
-            "WARN": "Warn"
+            "COMMAND": "විධානය",
+            "DESC": "විස්තර",
+            "EXAMPLE": "උදාහරණ",
+            "NOT_FOUND": "*මට මේ වගේ විධානයක් සොයාගත නොහැකි විය*",
+            "WARN": "අවවාදයයි"
         },
         "_plugin": {
             "INSTALL_DESC": "බාහිර ප්ලගීන ස්ථාපනය කරන්න.",
