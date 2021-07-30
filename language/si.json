@@ -1,0 +1,483 @@
+{
+    "__ASENAJSON__": true,
+    "LANGUAGE": "Sinhala",
+    "LANGCODE": "si",
+    "AUTHOR": "Lasiya",
+    "STRINGS": {
+        "_asena": {
+            "COMMAND": "Command",
+            "DESC": "Description",
+            "EXAMPLE": "Example",
+            "NOT_FOUND": "*එවැනි විධානයක් සොයාගැනීමට නොමැත🤔*",
+            "WARN": "Warn"
+        },
+        "_plugin": {
+            "INSTALL_DESC": "බාහිර  plugins ස්ථාපනය කරන්න. ",
+            "NEED_URL": "කරුණාකර URL එකක් ඇතුළත් කරන්න! උදාහරණයක්:",
+            "INVALID_URL": "```වලංගු URL එක ඇතුලත් කරන්න!```",
+            "INVALID_PLUGIN": "*❌ඔබේ ප්ලගිනය අවලංගුයි!*\n*දෝෂයකි:*",
+            "INSTALLED": "*✅ Plugin සාර්ථකව ස්ථාපනය කර ඇත!*",
+            "PLUGIN_DESC": "ඔබ ස්ථාපනය කර ඇති ප්ලගීන පෙන්වයි.",
+            "INSTALLED_FROM_REMOTE": "*ඔබ බාහිරව ස්ථාපනය කරන ප්ලගීන:*\n",
+            "NO_PLUGIN": "*ඔබ බාහිර ප්ලගීන කිසිවක් ස්ථාපනය කර නැත!*",
+            "REMOVE_DESC": "ප්ලගිනය ඉවත් කරයි.",
+            "NEED_PLUGIN": "```කරුණාකර ප්ලගිනයක් ඇතුළත් කරන්න!උදාහරණයක්: .plugin __test```",
+            "NOT_FOUND_PLUGIN": "```සමහර විට ඔබ එවැනි ප්ලගිනයක් ස්ථාපනය කර ඇති අතර සමහර විට නැත. නමුත් එය දැන් නොමැති බව විශ්වාසයි.```",
+            "DELETED": "*✅ මොඩියුලය සාර්ථකව මකා දමන ලදි!*"
+        },
+        "admin": {
+            "BAN_DESC": "කණ්ඩායමේ කෙනෙකු තහනම් කරන්න. පණිවිඩයට පිළිතුරු දෙන්න හෝ විධානය භාවිතා කිරීමට පුද්ගලයෙකු ටැග් කරන්න.",
+            "IM_NOT_ADMIN": "*මම මෙම කණ්ඩායමේ පරිපාලක නොවේ!*",
+            "BANNED": "කණ්ඩායමෙන් පන්නා දැමුවා!",
+            "GIVE_ME_USER": "*මට පරිශීලකයෙකු දෙන්න!*",
+            "ADD_DESC": "කණ්ඩායමට යමෙකු එකතු කරයි.",
+            "ADDED": "කණ්ඩායමට එකතු කරන ලදි!",
+            "ALREADY_PROMOTED": "```දැනටමත් පරිපාලක ලෙස කටයුතු කරන අයෙකු පරිපාලකයෙකු කරන්නේ කෙසේද?```",
+            "PROMOTED": "```, පරිපාලක භූමිකාව ලබා දෙන ලදි!```",
+            "PROMOTE_DESC": "ඕනෑම පුද්ගලයෙකු පරිපාලකයෙකු කරයි.",
+            "DEMOTE_DESC": "ඕනෑම පරිපාලකයෙකුගේ බලය ගනී.",
+            "ALREADY_NOT_ADMIN": "```දැනටමත් පරිපාලක ලෙස කටයුතු කරන අයෙකු පරිපාලකයෙකු කරන්නේ කෙසේද?```",
+            "DEMOTED": "```, පහත් කර ඇත!```",
+            "MUTE_DESC": "කණ්ඩායම් කතාබස් නිශ්ශබ්ද කරන්න. පණිවිඩයක් යැවිය හැක්කේ පරිපාලකයින්ට පමණි.\n⌨️ Example: .mute & .mute 5m etc",
+            "MUTED": "```කණ්ඩායම් කතාබස් නිශ්ශබ්ද විය!```",
+            "UNMUTE_DESC": "කණ්ඩායම් කතාබස් ඉවත් කරන්න. ඕනෑම කෙනෙකුට පණිවිඩයක් යැවිය හැකිය.",
+            "UNMUTED": "```කණ්ඩායම් කතාබහ නිශ්ශබ්ද වී ඇත!```",
+            "INVITE_DESC": "කණ්ඩායමේ ආරාධනා සබැඳිය සපයයි.",
+            "INVITE": "```ආරාධනා සබැඳිය: ```"
+        },
+        "locate": {
+            "L_DESC": "එය ඔබගේ ස්ථානය යවයි.",
+            "L_WARN": "විධානය භාවිතා කිරීමට පෙර කරුණාකර ඔබේ ස්ථානය විවෘත කරන්න!"
+        },
+        "afk": {
+            "AFK_DESC": "එය ඔබව AFK බවට පත් කරයි - යතුරුපුවරුවෙන් ඉවතට.",
+            "IM_AFK": "*I'm AFK now!*",
+            "IM_AFK_NOMD": "I'm AFK now!",
+            "REASON": "හේතුව",
+            "LAST_SEEN": "අවසන් වරට දැක ඇත",
+            "IM_NOT_AFK": "```I am not AFK anymore!```",
+            "AFK_TEXT": "```බිප් බොප්! මෙය බොට් ය. මගේ හිමිකරු මේ මොහොතේ මෙහි නොමැත.```",
+            "AFK_TEXT_NOMD": "බිප් බොප්! මෙය බොට් ය.",
+            "HOUR": "පැය",
+            "MINUTE": "මිනිත්තු",
+            "SECOND": "තත්පර",
+            "AGO": " පෙර```"
+        },
+        "whois": {
+            "PL_DESC": "කණ්ඩායමේ හෝ පුද්ගලයාගේ තොරතුරු  පෙන්වයි",
+            "SUB": "*කණ්ඩායමේ නම:* ",
+            "DES": "*කණ්ඩායමේ විස්තරය:* ",
+            "OWN": "*නිර්මාතෘ:* ",
+            "COD": "*අද්විතීය කණ්ඩායම් කේතය:* ",
+            "JİD": "*පද්ගල කේතය:* ",
+            "ST": "*පුද්ගල තත්වය:* "
+        },
+        "evaluators": {
+            "TERM_DESC": "සේවාදායකයේ කවචයේ විධානය ක්‍රියාත්මක කිරීමට ඉඩ දෙන්න.",
+            "GIVE_ME_CODE": "*මට කේතයක් දෙන්න!*"
+        },
+        "nekobin": {
+            "NEKO_DESC": "පිළිතුරු දුන් පණිවිඩ nekobin.com වෙත එක් කරනු ඇත.",
+            "NEED_REPLY": "```කරුණාකර පණිවිඩයකට පිළිතුරු දෙන්න!```",
+            "MUST_TEXT": "```කරුණාකර ඕනෑම පණිවිඩයකට පිළිතුරු දෙන්න```"
+        },
+        "heroku": {
+            "RESTART_DESC": "X-Troid නැවත ආරම්භ කරන්න",
+            "RESTART_MSG": "```නැවත ආරම්භ කිරීම...```",
+            "SHUTDOWN_DESC": "වසා දැමීම X-Troid",
+            "SHUTDOWN_MSG": "```වසා දමයි ⛔```",
+            "DYNO_DESC": "හෙරොකු ඩයිනෝ භාවිතය",
+            "DYNO_TOTAL": "```සංපූර්ණ ප්‍රමාණය```",
+            "DYNO_USED": "```බවිතා කල ප්‍රමාණය```",
+            "PERCENTAGE": "```ප්‍රතිශතය```",
+            "DYNO_LEFT": "```ඉතිරි```",
+            "SETVAR_DESC": "config var සෑදීමට",
+            "SET_SUCCESS": "සාර්ථකව එකතු කරන ලදී ```{} ➜ {}```",
+            "KEY_VAL_MISSING": "```යතුර හෝ අගය අස්ථානගත වී ඇත```",
+            "INVALID": "```වැරදි යතුරක් හෝ :වැරදි අගයකි```",
+            "GETVAR_DESC": "config var ලබාගැනීම",
+            "DELVAR_DESC": "config var මකාදැමීම",
+            "DEL_SUCCESS": ```{} සාර්ථකව මකා දමන ලදි```"
+            "NOT_FOUND": "```මෙම යතුර සඳහා ප්රතිපල හමු නොවීය```"           
+        },
+        "filters": {
+            "FILTER_DESC": "එය පෙරනයක් එක් කරයි. කවුරුහරි ඔබේ පෙරණය ලියන්නේ නම්, එය පිළිතුර යවයි. ඔබ .filter ලියන්නේ නම්, එය ඔබගේ පෙරහන් ලැයිස්තුව පෙන්වයි.",
+            "NO_FILTER": "*❌ මෙම සංවාදයේ පෙරහන් නොමැත!*",
+            "FILTERS": "*🔎 මෙම කතාබස් තුළ ඔබගේ පෙරහන් තිබේ:*",
+            "NEED_REPLY": "*❌ කරුණාකර පිළිතුර ටයිප් කරන්න!*\n*Example:*",
+            "FILTERED": "*✅ සාර්ථකව සකසා ඇත* ```{}``` *to filter!*",
+            "STOP_DESC": "ඔබ කලින් එකතු කළ පෙරණය නවත්වයි.",
+            "NEED_FILTER": "*❌ කරුණාකර පෙරනයක් ටයිප් කරන්න!*\n*Example:*",
+            "ALREADY_NO_FILTER": "*❌ දැනටමත් මේ වගේ පෙරනයක් නොමැත!*",
+            "DELETED": "*✅පෙරණය සාර්ථකව මකා දමන ලදි!*"
+        },
+        "greetings": {
+            "WELCOME_DESC": "එය පිළිගැනීමේ පණිවිඩය සකසයි. ඔබ එය හිස්ව තැබුවහොත් එය පිළිගැනීමේ පණිවිඩය පෙන්වයි.",
+            "NOT_SET_WELCOME": "*ඔබ තවමත් පිළිගැනීමේ පණිවිඩය සකසා නැත.!*\n**To set:** ```.welcome hi && hi#how are you?```",
+            "WELCOME_ALREADY_SETTED": "*✅ පිළිගැනීමේ පණිවිඩය දැනටමත් සකසා ඇත!*\n*Message:* ```",
+            "NEED_WELCOME_TEXT": "*පිළිගැනීමේ පණිවිඩය සැකසීමට ඔබ පණිවිඩයක් ලිවිය යුතුය.*\n*Example:* ```.welcome hi && hi#how are you?```",
+            "WELCOME_DELETED": "*✅පිළිගැනීමේ පණිවිඩය සාර්ථකව මකා දමා ඇත!*",
+            "WELCOME_SETTED": "*✅ පිළිගැනීමේ පණිවිඩය සාර්ථකව සකසා ඇත!*",
+            "GOODBYE_DESC": "සමුගැනීමේ පණිවිඩය සකසයි. ඔබ හිස්ව තැබුවහොත්, එය සමුගැනීමේ පණිවිඩය පෙන්වයි.",
+            "NOT_SET_GOODBYE": "*ඔබ සමුගැනීමේ පණිවිඩයක් සකසා නැත!*\n*To set:* ```.goodbye bye && bye#see ya```
+            "GOODBYE_ALREADY_SETTED": "*✅ ආයුබෝවන් පණිවිඩය සකසා ඇත!*\n*Message:* ```",
+            "NEED_GOODBYE_TEXT": "*සමුගැනීමේ පණිවිඩය සැකසීමට ඔබ පණිවිඩයක් ලිවිය යුතුය.*\n*Example:* ```.goodbye bye && bye#see ya```",
+            "GOODBYE_DELETED": "*✅ ආයුබෝවන් පණිවිඩය සාර්ථකව මකා දමා ඇත!*",
+            "GOODBYE_SETTED": "*✅ ආයුබෝවන් පණිවිඩය සාර්ථකව සකසා ඇත!*"
+        },
+        "lydia": {
+            "ADDLYDIA_DESC": "පරිශීලකයා සඳහා ලිඩියා (AI) සක්‍රීය කරයි.",
+            "NEED_REPLY": "```කරුණාකර පරිශීලක පණිවිඩයකට ප්‍රතිචාර දක්වන්න!```",
+            "COFFEEHOUSE": "```ඔබ කෝෆිහවුස් API යතුර නිර්වචනය කර නැත! ```",
+            "ENABLED_LYDIA": "```කෘතීම බුද්ධි සහය සක්‍රීය කරනලදී```\n *Ai asitant enabled to this user*\n _Support  only with an English_",
+            "RMLYDIA_DESC": "```කෘතීම බුද්ධි සහය  අවසන් කරනලදි``` \n *Ai asinstant closed*",
+            "ALREADY_EMPTY": "```ඔබගේ පරිශීලක ලැයිස්තුව දැනටමත් හිස් ය!```",
+            "NOT_ADDED": "```ඔබ දැනටමත් මෙම පරිශීලකයා එකතු කර නැත!```",
+            "DISABLED": "*Ai asinstant වසා ඇත*"
+            
+        },
+        "memes": 
+            "MEMES_DESC": "ඔබ පිළිතුරු දුන් ඡායාරූප මිම්ස්.",
+            "NEED_REPLY": "*ඡායාරූපයකට රිප්ලයිකරන්න!*",
+            "DOWNLOADING": "```meme මාධ්‍ය බාගත කිරීම සහ සෑදීම```"
+        },
+        "ocr": {
+            "OCR_DESC": "ඔබ පිළිතුරු දුන් ඡායාරූපයෙහි පෙළ කියවයි.",
+            "NEED_REPLY": "*Reply to a photo!*",
+            "DOWNLOADING": "```Media is downloading & reading...```",
+            "ERROR: "```I couldn't read this :/```\n*Error:*```{}```",
+            "RESULT": "*Language:* ```{}```\n*Here is what I read:* ```{}```"
+        },
+        "profile": 
+            "KICKME_DESC": "It kicks you from the group you are using it in.",
+            "KICKME": "```Bye bye! I am going 🤠```",
+            "PP_DESC": "Makes the profile photo what photo you reply.",
+            "NEED_PHOTO": "*Give me a photo!*",
+            "PPING": "```Setting profile photo...```",
+            "BLOCK_DESC": "Block user.",
+            "UNBLOCK_DESC": "Unblock user.",
+            "BLOCKED": "blocked",
+            "UNBLOCKED": "unblocked",
+            "BLOCKED_UPPER": "Blocked!",
+            "UNBLOCKED_UPPER": "Unblocked.",
+            "NEED_USER": "Give me a user!",
+            "JID_DESC": "Giving user's JID.",
+            "JID": "```ID of``` @{} ```: {}```",
+            "JID_CHAT": "```Chat's ID : {}```"
+        },
+        "removebg": {
+            "REMOVEBG_DESC": "ඡායාරූපවල පසුබිම ඉවත් කරයි.",
+            "NEED_PHOTO": "*මට ඡායාරූපයක් දෙන්න!*",
+            "NO_API_KEY": "*You don't have an API key!*\nYou can get it here: remove.bg.",
+            "RBGING": "```පසුබිම ඉවත් කිරීම...```"
+        },
+        "scrapers": {
+            "TRANSLATE_DESC": "It translates with Google Translate. You must reply any message.",
+            "TRANSLATE_USAGE": ".trt tr it (From Turkish to Italian)",
+            "NEED_REPLY": "```Please reply to any message!```",
+            "LANG": "Language",
+            "FROM": "Translated Language"
+            "RESULT": "Translate",
+            "TRANSLATE_ERROR": "❌ An error occured while translating!*",
+            "CURRENCY_ERROR": "```Syntax error! Example: .currency 1 TRY USD```",
+            "INVALID_CURRENCY": "```Foreign currency transaction failed. You wrote wrong currency!```",
+            "UNKNOWN_ERROR": "```An error occurred. Foreign currency transaction failed!```",
+            "TTS_DESC": "It converts text to sound.",
+            "TTS_ERROR": "```Error, Speech example of your sentence couldn't be made!```",
+            "SONG_DESC": "Uploads the song you wrote.",
+            "NEED_TEXT_SONG": "*Please write a song!*\n*Example:* ```.song eminem - rap god```",
+            "NO_RESULT": "*I couldn't find anything :(*",
+            "DOWNLOADING_SONG": "```Downloading your song...```"
+            "UPLOADING_SONG": "```Uploading your song...```"
+            "VIDEO_DESC": "Downloads video from YouTube.",
+            "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
+            "DOWNLOADING_VIDEO": "```Downloading your video...```",
+            "UPLOADING_VIDEO": "```Uploading your video...```",
+            "YT_DESC": "It searchs on YouTube.",
+            "NEED_WORDS": "```Please write a few words!```",
+            "GETTING_VIDEOS": "```I'm bringing videos...```",
+            "NOT_FOUND": "*I couldn't find anything :(*",
+            "SEARCHING": "* 🔎 Searching...*",
+            "WIKI_DESC": "Searches query on Wikipedia.",
+            "IMG_DESC": "Searches for related pics on Google.",
+            "IMG": "Uploading photo ```{}``` number ```{} ```..."
+        },
+        "sticker": {
+            "STICKER_DESC": "It converts your replied photo or video to sticker.",
+            "NEED_REPLY": "*Reply to a photo or video!*",
+            "DOWNLOADING": "```Media downloading & converting to sticker...```"
+        },
+        "system_stats": {
+            "ALIVE_DESC": "Does bot work?",
+            "SYSD_DESC": "Shows the system properties."
+        },
+        "tagall": {
+            "TAGALL_DESC": "Tags everyone in the group.",
+            "ADMİN": "*I am not admin in this group!*"
+        },
+        "updater": {
+            "UPDATER_DESC": "Checks the update."
+            "UPDATE": "*✔️Your bot is completely up-to-date!*",
+            "NEW_UPDATE": "*New updates available for X-Troid!*\n\n*Changes:*\n\n```",
+            "UPDATE_NOW_DESC": "It makes updates.",
+            "UPDATING": "_Updating..._",
+            "INVALID_HEROKU": "*❌ Your Heroku information is wrong!*",
+            "UPDATED": "*✅✔️ Successfully Updated!*",
+            "UPDATED_LOCAL": "*✅ Successfully Updated!*",
+            "AFTER_UPDATE": "*💬 X-Troid Restarting ♻️ Automatically!*"
+        },
+        "weather": {
+            "WEATHER_DESC": "Shows the weather."
+            "NEED_LOCATION": * Please write a location!*\n*Example:* ```.weather Bakü```",
+            "LOCATION": "Location🚩",
+            "TEMP": "Temperature🌡️",
+            "DESC": "Description💁‍♂️"
+            "HUMI": "Humidity🍃",
+            "WIND": "Wind Speed🌬️",
+            "CLOUD": "Clouds⛅",
+            "NOT_FOUND": "```I couldn't find a city with this name. 😖```"
+        },
+        "web": {
+            "SPEEDTEST_DESC": "Measures Download and Upload speed."
+            "SPEEDTESTING": "```Running speed test...```",
+            "SPEEDTEST_RESULT": "*Speed ​​test completed!*",
+            "UPLOAD": "Upload",
+            "DOWNLOAD": "Download",
+            "PING_DESC": "Measures your ping.",
+            "URL": "Shorten the long link."
+        },
+        "conventer": {
+            "MP4TOAUDİO_DESC": "Converts video to sound.",
+            "MP4TOAUDİO_NEEDREPLY": "*You Must Reply to a Video!*",
+            "MP4TOAUDİO": "```Converting Video to Audio..```",
+            "STİCKER_DESC": "Converts the sticker to a photo.",
+            "STİCKER_NEEDREPLY": "*You Must Reply to a sticker!*",
+            "STİCKER": "```Converting the sticker to a photo..```",
+            "XMEDİA_DESC": "It is a plugin with more than 25 media tools.",
+            "T_FALSE": "```❌ Incorrect Blend Effect Entered!```\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
+            "T_NOT": "```💭 You Need To Enter Any Blend Effects!\n```🔎 Existing Commands:```\n\n*$dodge* - Applies a pink color filter to the video.\n*$multiply* - Applies a green color filter to the video.\n*$grainmerge* - Increases the contrast of the video.\n*$and* - Applies black lightning effect according to the speed of the video.\n*$or* - Applies a white lightning effect according to the speed of the video.\n*$burn* - Applies green contrast to video.\n*$difference* - Shows the differences by applying green relief to the video.\n*$grainextract* - Shows the differences by applying gray relief to the video.\n*$divide* - Demonstrates the differences by applying a pink relief to the video.\n*$xor* - Applies both green relief and lightning effect to video.\n*$hardmix* - Mixes the colors of the video into a yellow and red tone.\n*$negation* - Turns the dynamics of the video to pink.",
+            "T_DESC": "Applies the selected TBlend effect to videos."
+        },
+        "mute": {
+            "BİRMUTE": "*The group was silenced for 1 minute!*",
+            İKİMUTE": "*The group was silenced for 2 minute!*"
+            "ÜÇMUTE": "*The group was silenced for 3 minute!*",
+            "DÖRTMUTE": "*The group was silenced for 4 minute!*",
+            "BEŞMUTE": "*The group was silenced for 5 minute!*",
+            "ALTIMUTE": "*The group was silenced for 6 minute!*",
+            "YEDİMUTE": "*The group was silenced for 7 minute!*",
+            "SEKİZMUTE": "*The group was silenced for 8 minute!*",
+            "DOKUZMUTE": "*The group was silenced for 9 minute!*",
+            "ONMUTE": "*The group was silenced for 10 minute!*",
+            "ONBİRMUTE": "*The group was silenced for 11 minute!*",
+            "ONİKİMUTE": "*The group was silenced for 12 minute!*",
+            "ONÜÇMUTE": "*The group was silenced for 13 minute!*",
+            "ONDÖRTMUTE": "*The group was silenced for 14 minute!*",
+            "ONBEŞMUTE": "*The group was silenced for 15 minute!*"
+            "ONALTIMUTE": "*The group was silenced for 16 minute!*",
+            "ONYEDİMUTE": "*The group was silenced for 17 minute!*",
+            "ONSEKİZMUTE": "*The group was silenced for 18 minute!*",
+            "ONDOKUZMUTE": "*The group was silenced for 19 minute!*",
+            "YİRMİMUTE": "*The group was silenced for 20 minute!*",
+            "YİRMİBİRMUTE": "*The group was silenced for 21 minute!*",
+            "YİRMİİKİMUTE": "*The group was silenced for 22 minute!*",
+            "YİRMİÜÇMUTE": "*The group was silenced for 23 minute!*",
+            "YİRMİDÖRTMUTE": "*The group was silenced for 24 minute!*",
+            "YİRMİBEŞMUTE": "*The group was silenced for 25 minute!*",
+            "YİRMİALTIMUTE": "*The group was silenced for 26 minute!*",
+            "YİRMİYEDİMUTE": "*The group was silenced for 27 minute!*",
+            "YİRMİSEKİZMUTE": "*The group was silenced for 28 minute!*",
+            "YİRMİDOKUZMUTE": "*The group was silenced for 29 minute!*",
+            "OTUZMUTE": "*The group was silenced for 30 minute!*",
+            "OTUZBİRMUTE": "*The group was silenced for 31 minute!*",
+            "OTUZİKİMUTE": "*The group was silenced for 32 minute!*",
+            "OTUZÜÇMUTE": "*The group was silenced for 33 minute!*",
+            "OTUZDÖRTMUTE": "*The group was silenced for 34 minute!*",
+            "OTUZBEŞMUTE": "*The group was silenced for 35 minute!*",
+            "OTUZALTIMUTE": "*The group was silenced for 36 minute!*",
+            "OTUZYEDİMUTE": "*The group was silenced for 37 minute!*"
+            "OTUZSEKİZMUTE": "*The group was silenced for 38 minute!*",
+            "OTUZDOKUZMUTE": "*The group was silenced for 39 minute!*",
+            "KIRKMUTE": "*The group was silenced for 40 minute!*",
+            "KIRKBİRMUTE": "*The group was silenced for 41 minute!*",
+            "KIRKİKİMUTE": "*The group was silenced for 42 minute!*",
+            "KIRKÜÇMUTE": "*The group was silenced for 43 minute!*",
+            "KIRKDÖRTMUTE": "*The group was silenced for 44 minute!*",
+            "KIRKBEŞMUTE": "*The group was silenced for 45 minute!*",
+            "KIRKALTIMUTE": "*The group was silenced for 46 minute!*",
+            "KIRKYEDİMUTE": "*The group was silenced for 47 minute!*",
+            "KIRKSEKİZMUTE": "*The group was silenced for 48 minute!*",
+            "KIRKDOKUZMUTE": "*The group was silenced for 49 minute!*"
+            "ELLİMUTE": "*The group was silenced for 50 minute!*",
+            "ELLİBİRMUTE": "*The group was silenced for 51 minute!*",
+            "ELLİİKİMUTE": "*The group was silenced for 52 minute!*",
+            "ELLİÜÇMUTE": "*The group was silenced for 53 minute!*",
+            "ELLİDÖRTMUTE": "*The group was silenced for 54 minute!*",
+            "ELLİBEŞMUTE": "*The group was silenced for 55 minute!*",
+            "ELLİALTIMUTE": "*The group was silenced for 56 minute!*",
+            "ELLİYEDİMUTE": "*The group was silenced for 57 minute!*",
+            "ELLİSEKİZMUTE": "*The group was silenced for 58 minute!*",
+            "ELLİDOKUZMUTE": "*The group was silenced for 59 minute!*",
+            "SAATBİRMUTE": "*The group was silenced for 1 hour!*"
+            "SAATİKİMUTE": "*The group was silenced for 2 hour!*",
+            "SAATÜÇMUTE": "*The group was silenced for 3 hour!*",
+            "SAATDÖRTMUTE": "*The group was silenced for 4 hour!*",
+            "SAATBEŞMUTE": "*The group was silenced for 5 hour!*",
+            "SAATALTIMUTE": "*The group was silenced for 6 hour!*",
+            "SAATYEDİMUTE": "*The group was silenced for 7 hour!*"
+            "SAATSEKİZMUTE": "*The group was silenced for 8 hour!*",
+            "SAATDOKUZMUTE": "*The group was silenced for 9 hour!*",
+            "SAATONMUTE": "*The group was silenced for 10 hour!*",
+            "SAATONBİRMUTE": "*The group was silenced for 11 hour!*",
+            "SAATONİKİMUTE": "*The group was silenced for 12 hour!*",
+            "GÜNBİRMUTE": "*The group was silenced for 1 day!*",
+            "GÜNİKİMUTE": "*The group was silenced for 2 day!*",
+            "GÜNÜÇMUTE": "*The group was silenced for 3 day!*",
+            "TÜR": "*Unknown Command!*\n_Minute: 1-59m_\n_Hour: 1-12h_\n_Day: 1d-3d_",
+            MUTE_DESC": "Turns off group chat. Only admins can send messages!",
+            "MUTE_OPEN": "```The group chat has unmuted!```"
+        }
+        "unvoice": {
+            "UV_DESC": "Converts audio to sound recording.",
+            "UV_REPLY": "*You Must Reply to the Audio File!*",
+            "UV_PROC": "```Converting to Sound Recording..```"
+        }
+        "ffmpeg": {
+            "FF_DESC": "Applies the desired ffmpeg filter to the video.\n⌨️ Example: .ffmpeg fade=in:0:30",
+            "FF_PROC": "Applying Effect.."
+        },
+        "spammer": 
+            "SPAM_DESC": "It spam until you stop it.\n⌨️ Example: .spam test",
+            "NEED_WORD": "*Need Some Words!*",
+            "STOP_SPAMDESC": "Stops spam command.",
+            "STOP_SPAM": "✅ *Spam successfully stopped! Please wait a moment.*",
+            "ST_DESC": "Convert the replied photo or video to sticker and send it as spam."
+            "ST_ST": "```Please Don't Reply to Stciker!```\n```Only Reply to Video or Photo!```",
+            "ST_NEED": "```You Must Reply To Any Video Or Photo!```",
+            "AU_DESC": "Sends the replied audio as spam.",
+            "AU_REP": "```Please Only Reply To Audio File!```",
+            "FOTO_DESC": "Sends the replied photo as spam.",
+            "FOTO_FOT": "```Please Reply To Any Picture!```",
+            "VİD_DESC": "Sends the replied video as spam.",
+            "VİD_NEED": "```Please Reply to Any Video!```"
+        },
+        "carbon": {
+            "CARBON_DESC": "Uses carbon.sh for Text-to-Image",
+            "CARBON_NEEDWORD": "*Not enough arguments to translate Text-to-Image!*\nExample: ```.carbon test```\nExample: ```.carbon making#test```",
+            "CARBON_WARN": "Please only type in en and tr character!"
+        },
+        "scam": {
+            "SCAM_DESC": "Creates 5 minutes of fake actions.",
+            "SCAM_NOTFOUND": "*You Must Enter Fake Action!*\nExisting Types: ```typing & recording & online & stop```",
+            "SCAM_NULL": "```Wrong ActionEntered! Please use existing types.```"
+        },
+        "deepai": {
+            "DEEPAI_DESC": "Runs the most powerful artificial intelligence tools using artificial neural networks.",
+            "TEXT": "*You must enter text! Although I am a powerful artificial intelligence, I cannot read your thoughts!*",
+            "URL": "*You must enter the image URL!*\n*Example:* https://i.hizliresim.com/nrg50b.jpg"
+        },
+        "ttp": {
+            "TTP_DESC": "Converts text to plain painting.",
+            "ATTP_DESC": "Adds rainbow effect to the text as a sticker.",
+            "NEED_WORD": "*You must enter words!*",
+            "ANIME_DESC": "It writes the ext inside the banner the anime girl is holding",
+            "TRUMP_DESC": "Converts the text to Trump's tweet.",
+            "CHANGE_DESC": "Turns the text into the change my mind poster.",
+            "GLOW_DESC": "Converts text into neon painting.",
+            "WOOD_DESC": "Make text on wood block",
+            "PUBG_DESC": "Make your own pubg banner",
+            "LOVE_DESC": "Make beautiful name card",
+            "COF_DESC": "Make beautiful Coffee Cup with name",
+            "SKY_DESC": "Make beautiful name card sky shadow",
+            "BT_DESC": "Make your own Battlefield banner",
+            "TTOK_DESC": "make text with tiktok effect"
+            
+        },
+        "wallpaper": {
+            "WP": "It sends high resolution wallpapers."
+        },
+        "webss": {
+            "SS_DESC": "Takes a screenshot from the page in the given link.",
+            "LİNK": "You must enter link!"
+        },
+        "voicy": {
+            "NEED_REPLY": "```Please reply to any message!```",
+            "ONLY_AUDIO":"```Only audio file is accepted.```",
+            "USAGE": "It converts audio to text.",
+            "TEXT": "*Hey! I listened secretly to this voice and heard those!:* \n\n"
+        ,
+        "notes": {
+            "NOTES_USAGE": "Shows all your existing notes.",
+            "NO_SAVED": "You don't have any saved notes.",
+            "SAVED": "Here is your saved messages: ",
+            "SAVE_USAGE": "Reply a message and type .save or just use .save <Your note> without replying",
+            "REPLY": "Please provide a note or reply to a message.",
+            "SUCCESSFULLY_ADDED": "Successfully added new note, check your notes with .notes.",
+            "UNSUCCESSFUL": "Could not add note, please try again later or contact WhatsAsena developers.",
+            "DELETE_USAGE": "Deletes *all your saved notes.",
+            "SUCCESSFULLY_DELETED": "Successfully deleted all your notes."
+        },
+        "instagram": {
+            "NEED_WORD": "*Please enter username of any instagram account.*",
+            "USAGE": ".insta <userName>",
+            "DESC": "Fetches user informations from instagram",
+            "LOADING": "Fetching user data.. please wait.",
+            "USERNAME": "Username",
+            "NAME": "Name",
+            "BIO": "Biography",
+            "FOLLOWERS": "Followers",
+            "FOLLOWS": "Follows",
+            "ACCOUNT": "Account privacy",
+            "PUBLIC": "Public",
+            "HIDDEN": "Hidden",
+            "NOT_FOUND":"User not found: "
+        }
+        "github": {
+            "GİTHUB_DESC": "Collects github information from the given username.\n⌨️ Example: .github SLdevilX",
+            "REPLY": "```You Need To Type Any Username!```",
+            "NOT": "```User not found!```",
+            "FOLLOWERS": "Followers:",
+            "NAME": "Name:",
+            "USERNAME": "Username:",
+            "REPO": "Public Repos:",
+            "BİO": "Biography:",
+            "FOLLOWİNG": "Following:",
+            "COMPANY": "Company:",
+            "BLOG": "Blog:",
+            "MAİL": "Mail Address:",
+            "LOCATİON": "Location:",
+            "GİST": "Public Gists:",
+            "JOİN": "Joining Date:",
+            "HİRE_FALSE": "Cannot Hirable 🚫",
+            "HİRE_TRUE": "Hirable ☑️",
+            "HİRE": "Can s/he Hirable?:"
+            "URL": "Profile URL:",
+            "UPDATE": "Last Update:"
+        },
+        "tiktok": {
+            "TİKTOK": "Downloads videos from Tiktok.",
+            "NEED": "```You Must Enter Any Tiktok Link!``` \n*Example:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
+            "DOWN": "```Video Downloading..```",
+            "CAPTİON": "Title:",
+            "USERNAME": "Username:",
+            "NAME": "Name:",
+            "LİKE": "Likes:",
+            "COMM": "Comments:",
+            "VİEW": "Views:",
+            "SHARE": "Shares:",
+            "MUSİC": "Music:",
+            "M_AUT": "Music Author:"
+        },
+        "lyrics": {
+            "LY_DESC": "Finds the lyrics of the song.",
+            "NEED": "```You Must Write Any Song!```",
+            "SLY": "Lyrics:"
+            "AUT": "Song Owner:",
+            "BUL": "Founded Song:",
+            "ARAT": "Searched Song:"
+        },
+        "covid": 
+            "COV_DESC": "Shows the daily and overall covid table of more than 15 countries.",
+            "NOT": "*🤒 ප්‍රවේශම්වන්න😷*\n\n⚠️ සෙනඟ ගැවසෙන ස්ථාන මගහරින්න\n⚠️මුඛ ආවරණ පළඳින්න\n⚠️නිතර අත සෝදන්න\n\n*ඔබට අවශ්‍ය තොරතුරු දැනගැනීමට*\n WHO නිල whatsapp එක වෙත පිවිසෙන්න.\n wa.me/+41798931892\n\n*ඔබට ඔබේ ජීවිතය මතක් කිරීමකි*\n        💡*දැනුම සමූහය*📚"
+        }
+    }
