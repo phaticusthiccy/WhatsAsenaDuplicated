@@ -148,7 +148,7 @@ async function checkImAdmin(message, user = message.client.user.jid) {
 var antilink_var = ''
 async function antlch() {
     await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        antilink_var = vars.ANTİ_LİNK
+        antilink_var = vars.ANTI_LINK
     });
 }
 antlch()
@@ -171,16 +171,24 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             var im = await checkImAdmin(message)
             if (!im) return;
             if (us) return;
-            await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);     
+            if (Config.ANTILINKMSG !== 'false' && Config.ANTILINKMSG !== 'default') {    
+                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
+            } else if (Config.ANTILINKMSG == 'default') {
+                await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            }
         } 
         else if (regex2.test(message.message)) {
             var us = await checkUsAdmin(message)
             var im = await checkImAdmin(message)
             if (!im) return;
             if (us) return;
-            await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            await message.client.groupRemove(message.jid, [message.data.participant]);      
+            if (Config.ANTILINKMSG !== 'false' && Config.ANTILINKMSG !== 'default') {    
+                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
+            } else if (Config.ANTILINKMSG == 'default') {
+                await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            }         
         }
         else if (message.message.match(/((?:[.]com)\b)/i)) {
             var us = await checkUsAdmin(message)
@@ -188,7 +196,11 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (!im) return;
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);         
-            await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            if (Config.ANTILINKMSG !== 'false' && Config.ANTILINKMSG !== 'default') {    
+                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
+            } else if (Config.ANTILINKMSG == 'default') {
+                await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            }
         }
     }
 }));
