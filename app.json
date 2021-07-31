@@ -21,12 +21,12 @@
             "required": true,
             "value": "TR"
         },
-        "ANTİ_LİNK": {
+        "ANTI_LINK": {
             "description": "Link Engelleme Sistemi. Link Blocking System.",
             "required": true,
             "value": "false"
         },
-        "AUTO_BİO": {
+        "AUTO_BIO": {
             "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
             "required": true,
             "value": "false"
@@ -145,11 +145,6 @@
         },
         "NO_ONLINE": {
             "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
-            "required": false,
-            "value": "true"
-        },
-        "COFFEEHOUSE_API_KEY": {
-            "description": "Pass This Step! - Bu Bölümü Geçin!",
             "required": false,
             "value": "true"
         }
