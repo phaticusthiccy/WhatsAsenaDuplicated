@@ -21,7 +21,7 @@ DEBUG = process.env.DEBUG === undefined ? false : convertToBool(process.env.DEBU
 module.exports = {
     VERSION: 'v1.3.2 Global Stable',
     CHANNEL: 'https://t.me/remasterplugin',
-    SESSION: process.env.ASENA_SESSION === undefined ? 'ASENA;;;eyJjbGllbnRJRCI6ImwySlkyYjBPb0dZT2hrSmVoRFg0WWc9PSIsInNlcnZlclRva2VuIjoiMUBJRXdBREhWN2ZDYUFXd3NJcmVWaHlJb09uNkk3c3JsYm4zZUR2WU52NXZ2dGFhem1uVG9YN0d3a1B0Zm00cTZWQTRNdHI2MkxXQUo1WlE9PSIsImNsaWVudFRva2VuIjoidk00K29EMFlKMmJCRW9maW1tVDJDOGFnWndwc2RQTFVEN3JtNHdvZ3dmST0iLCJlbmNLZXkiOiJ0L2ZkMXIzU1ZGZHZldkN4Y0ZQa3VncnVUbTNWSDFucHZ6REpCRU4yQXBjPSIsIm1hY0tleSI6IjdPSHR4aDdtU3VHMGg5MUoycllwTmVHUXdzSktYbmdEQ3J4b0h5N1NXdHM9In0=' : process.env.ASENA_SESSION,
+    SESSION: process.env.ASENA_SESSION === undefined ? '' : process.env.ASENA_SESSION,
     ANTİLİNK: process.env.ANTİ_LİNK === undefined ? 'false' : process.env.ANTİ_LİNK,
     AUTOBİO: process.env.AUTO_BİO === undefined ? 'false' : process.env.AUTO_BİO,
     GANSTYLE: process.env.GAN_IMAGE === undefined ? 'https://i.hizliresim.com/loUtAb.jpg' : process.env.GAN_IMAGE,
@@ -46,12 +46,12 @@ module.exports = {
     BRANCH: 'master',
     HEROKU: {
         HEROKU: process.env.HEROKU === undefined ? false : convertToBool(process.env.HEROKU),
-        API_KEY: process.env.HEROKU_API_KEY === undefined ? 'aced00cc-ede9-43b6-b45a-d83810812087' : process.env.HEROKU_API_KEY,
-        APP_NAME: process.env.HEROKU_APP_NAME === undefined ? 'lidiya' : process.env.HEROKU_APP_NAME
+        API_KEY: process.env.HEROKU_API_KEY === undefined ? '' : process.env.HEROKU_API_KEY,
+        APP_NAME: process.env.HEROKU_APP_NAME === undefined ? '' : process.env.HEROKU_APP_NAME
     },
     DATABASE_URL: DATABASE_URL,
     DATABASE: DATABASE_URL === './whatsasena.db' ? new Sequelize({ dialect: "sqlite", storage: DATABASE_URL, logging: DEBUG }) : new Sequelize(DATABASE_URL, { dialectOptions: { ssl: { require: true, rejectUnauthorized: false } }, logging: DEBUG }),
-    RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? 'h8ZBELNrasqMrXxuxbwcks4Q' : process.env.REMOVE_BG_API_KEY,
+    RBG_API_KEY: process.env.REMOVE_BG_API_KEY === undefined ? false : process.env.REMOVE_BG_API_KEY,
     NO_ONLINE: process.env.NO_ONLINE === undefined ? true : convertToBool(process.env.NO_ONLINE),
     SUDO: process.env.SUDO === undefined ? false : process.env.SUDO,
     DEBUG: DEBUG,
