@@ -63,7 +63,7 @@
     "sequelize": "^6.5.1",
     "simple-git": "^2.37.0",
     "sozlukjs": "^1.1.0",
-    "spotify-web-api-node": "^5.0.0",
+    "spotify-web-api-node": "^5.0.2",
     "sqlite3": "5.0.0",
     "solenolyrics": "^5.0.0",
     "translatte": "^3.0.0",
