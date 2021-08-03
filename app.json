@@ -2,7 +2,7 @@
     "name": "WhatsAsenaDuplicated",
     "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
     "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
-    "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai"],
+    "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai", "asena", "ai-bot", "AsenaDev", "wabot", "wabot asena", "wp bot"],
     "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
     "website":   "https://t.me/phaticusthiccy",
     "success_url": "https://t.me/AsenaSupport",
@@ -57,7 +57,7 @@
             "value": "true"
         },
         "HEROKU_API_KEY": {
-            "description": "Herokuda API Keyiniz. Heroku API Key.",
+            "description": "Herokuda API Keyiniz. Heroku API Key. ===> https://t.me/herokuapikeyscraper",
             "required": true
         },
         "MUTE_MESSAGE": {
@@ -101,6 +101,10 @@
         },
         "REMOVE_BG_API_KEY": {
             "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
+            "required": false
+        },
+        "DEEPAI_API_KEY": {
+            "description": "DeepAI Komutu İçin API Key. For DeepAI Command ===> https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/DeepAI-API-Key",
             "required": false
         },
         "ALIVE_MESSAGE": {
