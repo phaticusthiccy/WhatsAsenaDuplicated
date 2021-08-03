@@ -407,7 +407,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             });
         }
     }
-    if (match[1] == 'NO_ONLİNE: false' || match[1] == 'NO_ONLİNE: False' || match[1] == 'NO_ONLİNE: FALSE' || match[1] == 'NO_ONLİNE:False' || match[1] == 'NO_ONLİNE:FALSE' || match[1] == 'NO_ONLİNE:fakse' || match[1] == 'NO_ONLİNE: fakse' || match[1] == 'NO_ONLİNE:falde' || match[1] == 'NO_ONLİNE: falde' || match[1] == 'NO_ONLİNE:flase' || match[1] == 'NO_ONLİNE:Flase' || match[1] == 'NO_ONLİNE: flase') {
+    if (match[1] == 'NO_ONLINE: false' || match[1] == 'NO_ONLINE: False' || match[1] == 'NO_ONLINE: FALSE' || match[1] == 'NO_ONLINE:False' || match[1] == 'NO_ONLINE:FALSE' || match[1] == 'NO_ONLINE:fakse' || match[1] == 'NO_ONLINE: fakse' || match[1] == 'NO_ONLINE:falde' || match[1] == 'NO_ONLINE: falde' || match[1] == 'NO_ONLINE:flase' || match[1] == 'NO_ONLINE:Flase' || match[1] == 'NO_ONLINE: flase') {
 
         if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
             await message.client.sendMessage(
@@ -417,7 +417,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['NO_ONLİNE']: 'false'
+                    ['NO_ONLINE']: 'false'
                 }
             });
         }
@@ -429,12 +429,12 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['NO_ONLİNE']: 'false'
+                    ['NO_ONLINE']: 'false'
                 }
             });
         }
     }
-    if (match[1] == 'NO_ONLİNE: true' || match[1] == 'NO_ONLİNE: True' || match[1] == 'NO_ONLİNE: TRUE' || match[1] == 'NO_ONLİNE:True' || match[1] == 'NO_ONLİNE:TRUE' || match[1] == 'NO_ONLİNE:ture' || match[1] == 'NO_ONLİNE: ture' || match[1] == 'NO_ONLİNE:ttue' || match[1] == 'NO_ONLİNE:trie' || match[1] == 'NO_ONLİNE: trie' || match[1] == 'NO_ONLİNE:Trie' || match[1] == 'NO_ONLİNE: Trie') {
+    if (match[1] == 'NO_ONLINE: true' || match[1] == 'NO_ONLINE: True' || match[1] == 'NO_ONLINE: TRUE' || match[1] == 'NO_ONLINE:True' || match[1] == 'NO_ONLINE:TRUE' || match[1] == 'NO_ONLINE:ture' || match[1] == 'NO_ONLINE: ture' || match[1] == 'NO_ONLINE:ttue' || match[1] == 'NO_ONLINE:trie' || match[1] == 'NO_ONLINE: trie' || match[1] == 'NO_ONLINE:Trie' || match[1] == 'NO_ONLINE: Trie') {
 
         if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
             await message.client.sendMessage(
@@ -444,7 +444,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['NO_ONLİNE']: 'true'
+                    ['NO_ONLINE']: 'true'
                 }
             });
         }
@@ -456,7 +456,7 @@ Asena.addCommand({pattern: 'setvar ?(.*)', fromMe: true, desc: Lang.SETVAR_DESC}
             );
             return await heroku.patch(baseURI + '/config-vars', {
                 body: {
-                    ['NO_ONLİNE']: 'true'
+                    ['NO_ONLINE']: 'true'
                 }
             });
         }
