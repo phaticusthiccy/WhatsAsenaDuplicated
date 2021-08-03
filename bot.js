@@ -20,6 +20,7 @@ const {Message, StringSession, Image, Video} = require('./whatsasena/');
 const { DataTypes } = require('sequelize');
 const { GreetingsDB, getMessage } = require("./plugins/sql/greetings");
 const got = require('got');
+const WhatsAsenaStack = require('whatsasena-npm');
 const simpleGit = require('simple-git');
 const git = simpleGit();
 const crypto = require('crypto');
@@ -27,6 +28,8 @@ const nw = '```Blacklist Defected!```'
 const heroku = new Heroku({
     token: config.HEROKU.API_KEY
 });
+const ytdl = require('ytdl-core');
+const ffmpeg = require('fluent-ffmpeg');
 let baseURI = '/apps/' + config.HEROKU.APP_NAME;
 const Language = require('./language');
 const Lang = Language.getString('updater');
@@ -92,54 +95,32 @@ async function whatsAsena () {
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
-        await axios.get('https://gist.githubusercontent.com/phaticusthiccy/d0d1855bd0098d773759b4f3345bd292/raw/').then(async (ann) => {
-            const { infotr, infoen, infoes, infopt, infoid, infoaz, infohi, infoml, inforu} = ann.data.announcements          
-            if (infotr !== '' && config.LANG == 'TR') {
-                while (getGMTh == 19 && getGMTm == 1) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```Günlük Duyurular``` ]\n\n' + infotr.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
+        var ann_msg = await WhatsAsenaStack.daily_announcement(config.LANG)
+        while (getGMTh == 19 && getGMTm == 1) {
+            var ilan = ''
+            if (config.LANG == 'TR') ilan = '[ ```Günlük Duyurular``` ]\n\n'
+            if (config.LANG == 'AZ') ilan = '[ ```Gündəlik Elanlar``` ]\n\n'
+            if (config.LANG == 'EN') ilan = '[ ```Daily Announcements``` ]\n\n'
+            if (config.LANG == 'ES') ilan = '[ ```Anuncios Diarios``` ]\n\n'
+            if (config.LANG == 'PT') ilan = '[ ```Anúncios Diários``` ]\n\n,'
+            if (config.LANG == 'RU') ilan = '[ ```Ежедневные объявления``` ]\n\n'
+            if (config.LANG == 'ML') ilan = '[ ```പ്രതിദിന പ്രഖ്യാപനങ്ങൾ``` ]\n\n'
+            if (config.LANG == 'HI') ilan = '[ ```दैनिक घोषणा``` ]\n\n'
+            if (config.LANG == 'ID') ilan = '[ ```Pengumuman Harian``` ]\n\n'
+            if (config.LANG == 'LK') ilan = '[ ```දෛනික නිවේදන``` ]\n\n'
+            if (ann_msg.includes('{vid}')) {
+                var VID = ann_msg.split('youtu.be')[1].split(' ')[0].replace('/', '')
+                
+                var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
+                yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
+                yt.on('end', async () => {
+                    var rg = new RegExp('https://youtu.be/+?(.*) ')
+                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {caption: ilan + ann_msg.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer).replace('{vid}', '').replace(rg, ''), mimetype: Mimetype.mp4});
+                });
+            } else {
+                return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, ilan + ann_msg.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text)
             }
-            else if (infoaz !== '' && config.LANG == 'AZ') {
-                while (getGMTh == 19 && getGMTm == 1) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```Gündəlik Elanlar``` ]\n\n' + infoaz.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
-            }
-            else if (infoes !== '' && config.LANG == 'ES') {
-                while (getGMTh == 18 && getGMTm == 1) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```Anuncios Diarios``` ]\n\n' + infoes.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
-            }
-            else if (infoen !== '' && config.LANG == 'EN') {
-                while (getGMTh == 19 && getGMTm == 1) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```Daily Announcements``` ]\n\n' + infoen.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
-            }
-            else if (infohi !== '' && config.LANG == 'HI') {
-                while (getGMTh == 21 && getGMTm == 31) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```दैनिक घोषणाएं``` ]\n\n' + infohi.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
-            }
-            else if (infoml !== '' && config.LANG == 'ML') {
-                while (getGMTh == 19 && getGMTm == 1) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```പ്രതിദിന പ്രഖ്യാപനങ്ങൾ``` ]\n\n' + infoml.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
-            }
-            else if (infoid !== '' && config.LANG == 'ID') {
-                while (getGMTh == 23 && getGMTm == 1) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```Pengumuman Harian``` ]\n\n' + infoid.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
-            }
-            else if (inforu !== '' && config.LANG == 'RU') {
-                while (getGMTh == 19 && getGMTm == 1) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```Ежедневные объявления``` ]\n\n' + inforu.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
-            }
-            else if (infopt !== '' && config.LANG == 'PT') {
-                while (getGMTh == 17 && getGMTm == 1) { 
-                    return WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '[ ```Anúncios Diários``` ]\n\n' + infopt.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text) 
-                }
-            }
-        })
+        }
     }, 50000);
     async function asynchronous_ch() {
         execx('sed -n 3p ' + clh.pth_v, async (err, stdout, stderr) => {
