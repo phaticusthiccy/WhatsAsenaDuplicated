@@ -107,7 +107,7 @@ if (Config.WORKTYPE == 'private') {
     }));
     Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
-        var msgdata = await WhatsAsenaStack.mood(match[1], config.DEEPAI)
+        var msgdata = await WhatsAsenaStack.mood(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("sentiment-analysis", {
             text: msgdata,
         });
@@ -156,7 +156,7 @@ if (Config.WORKTYPE == 'private') {
     }));
     Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
-        var msg_tt = await WhatsAsenaStack.tti(match[1], config.DEEPAI)
+        var msg_tt = await WhatsAsenaStack.tti(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("text2img", {
             text: msg_tt,
         });
@@ -206,7 +206,7 @@ if (Config.WORKTYPE == 'private') {
     }));
     Asena.addCommand({pattern: 'textai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
-        var text_ai = await WhatsAsenaStack.text(match[1], config.DEEPAI)
+        var text_ai = await WhatsAsenaStack.text(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("text-generator", {
             text: text_ai
         });
@@ -235,11 +235,6 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
 }
-
-
-
-
-
 else if (Config.WORKTYPE == 'public') {
     Asena.addCommand({pattern: 'deepai$', fromMe: false, deleteCommand: false, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
         if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
@@ -327,7 +322,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
     Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
-        var msgdata = await WhatsAsenaStack.mood(match[1], config.DEEPAI)
+        var msgdata = await WhatsAsenaStack.mood(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("sentiment-analysis", {
             text: msgdata,
         });
@@ -376,7 +371,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
     Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
-        var msg_tt = await WhatsAsenaStack.tti(match[1], config.DEEPAI)
+        var msg_tt = await WhatsAsenaStack.tti(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("text2img", {
             text: msg_tt,
         });
@@ -426,7 +421,7 @@ else if (Config.WORKTYPE == 'public') {
     }));
     Asena.addCommand({pattern: 'textai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
-        var text_ai = await WhatsAsenaStack.text(match[1], config.DEEPAI)
+        var text_ai = await WhatsAsenaStack.text(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("text-generator", {
             text: text_ai
         });
