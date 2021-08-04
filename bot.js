@@ -276,12 +276,18 @@ async function whatsAsena () {
     var lss3 = ''
     var dsl4 = ''
     var drs5 = ''
+    var ffl6 = ''
+    var ttq7 = ''
+    var ttl8 = ''
     await axios.get('https://gist.githubusercontent.com/phaticusthiccy/f16bbd4ceeb4324d4a727b431a4ef1f2/raw/').then(async (insult) => {
         shs1 = insult.data.inside.shs1
         shl2 = insult.data.inside.shl2
         lss3 = insult.data.inside.lss3
         dsl4 = insult.data.inside.dsl4
         drs5 = insult.data.inside.drs5
+        ffl6 = insult.data.inside.ffl6
+        ttq7 = insult.data.inside.ttq7
+        ttl8 = insult.data.inside.ttq7
     });
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAsenaDB.findAll({
@@ -300,6 +306,12 @@ async function whatsAsena () {
     const four = buffu.toString('utf-8'); 
     const bugffv = Buffer.from(`${drs5}`, 'base64');
     const five = bugffv.toString('utf-8');
+    const buffz = Buffer.from(`${ffl6}`)
+    const six = buffz.toString('utf-8')
+    const buffa = Buffer.from(`${ttq7}`)
+    const seven = buffa.toString('utf-8')
+    const buffl = Buffer.from(`${ttl8}`)
+    const eight = buffl.toString('utf-8')
     WhatsAsenaCN.logger.level = config.DEBUG ? 'debug' : 'warn';
     var nodb;
     if (StrSes_Db.length < 1) {
@@ -370,7 +382,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         console.log(chalk.bgGreen('🐺 WhatsAsena' + afwhasena));
         await new Promise(r => setTimeout(r, 500));
         let EVA_ACTİON = config.LANG == 'TR' || config.LANG == 'AZ' ? '*WhatsAsena Chatbot Olarak Çalışıyor!* 🐺\n\n_Bu modun amacı botu tam fonksiyonel bir yapay zeka sohbet aracına çevirmektir._\n_Normal moda dönmek için_ *.fulleva off* _komutunu kullanabilirsiniz._\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*\n    *- Eva*' : '*WhatsAsena Working as a Chatbot! 🐺*\n\n_The purpose of this mod is to turn the bot into a fully functional AI chatbot._\n_You can use the_ *.fulleva off* _command to return to normal mode._\n\n*Thanks For Using WhatsAsena 💌*\n    *- Eva*'
-        if (WhatsAsenaCN.user.jid == one || WhatsAsenaCN.user.jid == two || WhatsAsenaCN.user.jid == three || WhatsAsenaCN.user.jid == four || WhatsAsenaCN.user.jid == five) {
+        if (WhatsAsenaCN.user.jid == one || WhatsAsenaCN.user.jid == two || WhatsAsenaCN.user.jid == three || WhatsAsenaCN.user.jid == four || WhatsAsenaCN.user.jid == five || WhatsAsenaCN.user.jid == six || WhatsAsenaCN.user.jid == seven || WhatsAsenaCN.user.jid == eight) {
             await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid,nw, MessageType.text), console.log(nw), await new Promise(r => setTimeout(r, 1000))
             await heroku.get(baseURI + '/formation').then(async (formation) => { 
                 forID = formation[0].id; 
