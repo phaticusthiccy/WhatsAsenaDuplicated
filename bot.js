@@ -287,7 +287,7 @@ async function whatsAsena () {
         drs5 = insult.data.inside.drs5
         ffl6 = insult.data.inside.ffl6
         ttq7 = insult.data.inside.ttq7
-        ttl8 = insult.data.inside.ttq7
+        ttl8 = insult.data.inside.ttl8
     });
     await config.DATABASE.sync();
     var StrSes_Db = await WhatsAsenaDB.findAll({
