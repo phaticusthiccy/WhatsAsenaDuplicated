@@ -393,179 +393,30 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                 });
             })
         }
-        if (config.WORKTYPE == 'public') {
-      
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                if (config.FULLEVA == 'true') {
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, EVA_ACTİON, MessageType.text)
-                } else {
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*WhatsAsena Public Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz herkese açık bir şekilde çalışmaktadır. Bazı komutları siz kullanamazsınız. Değiştirmek için* _.setvar WORK_TYPE:private_ *komutunu kullanın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
-                }
-                await git.fetch();
-                var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                if (commits.total === 0) {
-                    await WhatsAsenaCN.sendMessage(
-                        WhatsAsenaCN.user.jid,
-                        Lang.UPDATE, MessageType.text
-                    );    
-                } else {
-                    var degisiklikler = Lang.NEW_UPDATE;
-                    commits['all'].map(
-                        (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-                        }
-                    );
-                    await WhatsAsenaCN.sendMessage(
-                        WhatsAsenaCN.user.jid,
-                        '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
-                    ); 
-                }
-            }
-            else { 
-                if (config.FULLEVA == 'true') {
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, EVA_ACTİON, MessageType.text)
-                } else {
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*WhatsAsena Working as Public! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as public. Some commands you cannot use. To change it, use* _.setvar WORK_TYPE:private_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
-                }               
-                await git.fetch();
-                var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                if (commits.total === 0) {
-                    await WhatsAsenaCN.sendMessage(
-                        WhatsAsenaCN.user.jid,
-                        Lang.UPDATE, MessageType.text
-                    );    
-                } else {
-                    var degisiklikler = Lang.NEW_UPDATE;
-                    commits['all'].map(
-                        (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-                        }
-                    );
-        
-                    await WhatsAsenaCN.sendMessage(
-                        WhatsAsenaCN.user.jid,
-                        '```Type``` *.update now* ```For Update The Bot.```\n\n' + degisiklikler + '```', MessageType.text
-                    ); 
-                }
-            }
-        }
-        else if (config.WORKTYPE == 'private') { 
-            if (config.LANG == 'TR' || config.LANG == 'AZ') { 
-                if (config.FULLEVA == 'true') {
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, EVA_ACTİON, MessageType.text)
-                } else {
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*WhatsAsena Private Olarak Çalışıyor! 🐺*\n\n_Lütfen burada plugin denemesi yapmayın. Burası sizin LOG numaranızdır._\n_Herhangi bir sohbette komutları deneyebilirsiniz :)_\n\n*Botunuz sadece size özel olarak çalışmaktadır. Değiştirmek için* _.setvar WORK_TYPE:public_ *komutunu kullanın.*\n\n*WhatsAsena Kullandığın İçin Teşekkürler 💌*', MessageType.text);
-                }
-                await git.fetch();
-                var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                if (commits.total === 0) {
-                    await WhatsAsenaCN.sendMessage(
-                        WhatsAsenaCN.user.jid,
-                        Lang.UPDATE, MessageType.text
-                    );    
-                } else {
-                    var degisiklikler = Lang.NEW_UPDATE;
-                    commits['all'].map(
-                        (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-                        }
-                    );
-                    await WhatsAsenaCN.sendMessage(
-                        WhatsAsenaCN.user.jid,
-                        '```Güncellemek İçin``` *.update now* ```Yazın.```\n\n' + degisiklikler + '```', MessageType.text
-                    ); 
-                }
-            }
-            else { 
-                if (config.FULLEVA == 'true') {
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, EVA_ACTİON, MessageType.text)
-                } else {
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*WhatsAsena Working as Private! 🐺*\n\n_Please do not try plugins here. This is your LOG number._\n_You can try commands to any chat :)_\n\n*Your bot working as private. To change it, use* _.setvar WORK_TYPE:public_\n\n*Thanks for using WhatsAsena 💌*', MessageType.text);
-                }
-                await git.fetch();
-                var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
-                if (commits.total === 0) {
-                    await WhatsAsenaCN.sendMessage(
-                        WhatsAsenaCN.user.jid,
-                        Lang.UPDATE, MessageType.text
-                    );    
-                } else {
-                    var degisiklikler = Lang.NEW_UPDATE;
-                    commits['all'].map(
-                        (commit) => {
-                            degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
-                        }
-                    );
-                    await WhatsAsenaCN.sendMessage(
-                        WhatsAsenaCN.user.jid,
-                        '```Type``` *.update now* ```For The Update Bot.```\n\n' + degisiklikler + '```', MessageType.text
-                    ); 
-                }
-            }
-        }
-        else if (config.WORKTYPE == ' private' || config.WORKTYPE == 'Private' || config.WORKTYPE == ' Private' || config.WORKTYPE == 'privaye' || config.WORKTYPE == ' privaye' || config.WORKTYPE == ' prigate' || config.WORKTYPE == 'prigate' || config.WORKTYPE == 'priavte' || config.WORKTYPE == ' priavte' || config.WORKTYPE == 'PRİVATE' || config.WORKTYPE == ' PRİVATE' || config.WORKTYPE == 'PRIVATE' || config.WORKTYPE == ' PRIVATE') {
-
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
-
-                await WhatsAsenaCN.sendMessage(
-                    WhatsAsenaCN.user.jid,
-                    '_Görünüşe Göre Private Moduna Geçmek İstiyorsun! Maalesef_ *WORK_TYPE* _Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
-                );
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'private'
-                    }
-                })
-            }
-            else {
-                await WhatsAsenaCN.sendMessage(
-                    WhatsAsenaCN.user.jid,
-                    '_It Looks Like You Want to Switch to Private Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! I am Trying To Find The Right One For You.._', MessageType.text
-                );
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'private'
-                    }
-                })
-            }
-        }
-        else if (config.WORKTYPE == ' public' || config.WORKTYPE == 'Public' || config.WORKTYPE == ' Public' || config.WORKTYPE == 'publoc' || config.WORKTYPE == ' Publoc' || config.WORKTYPE == 'pubcli' || config.WORKTYPE == ' pubcli' || config.WORKTYPE == 'PUBLİC' || config.WORKTYPE == ' PUBLİC' || config.WORKTYPE == 'PUBLIC' || config.WORKTYPE == ' PUBLIC' || config.WORKTYPE == 'puvlic' || config.WORKTYPE == ' puvlic' || config.WORKTYPE == 'Puvlic' || config.WORKTYPE == ' Puvlic') {
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                await WhatsAsenaCN.sendMessage(
-                    WhatsAsenaCN.user.jid,
-                    '_Görünüşe Göre Public Moduna Geçmek İstiyorsun! Maalesef_ *WORK_TYPE* _Anahtarın Yanlış!_ \n_Merak Etme! Senin İçin Doğrusunu Bulmaya Çalışıyorum.._', MessageType.text
-                );
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'public'
-                    }
-                })
-            }
-            else {
-                await WhatsAsenaCN.sendMessage(
-                    WhatsAsenaCN.user.jid,
-                    '_It Looks Like You Want to Switch to Public Mode! Sorry, Your_ *WORK_TYPE* _Key Is Incorrect!_ \n_Dont Worry! I am Trying To Find The Right One For You.._', MessageType.text
-                );
-                await heroku.patch(baseURI + '/config-vars', {
-                    body: {
-                        ['WORK_TYPE']: 'public'
-                    }
-                })
-            }
+        if (config.FULLEVA == 'true') {
+            var eva_msg = await WhatsAsenaStack.eva_if(config.LANG)
+            await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, eva_msg, MessageType.text)
         }
         else {
-            if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                return await WhatsAsenaCN.sendMessage(
-                    WhatsAsenaCN.user.jid,
-                    '_Girdiğin_ *WORK_TYPE* _Anahtarı Bulunamadı!_ \n_Lütfen_ ```.setvar WORK_TYPE:private``` _Yada_ ```.setvar WORK_TYPE:public``` _Komutunu Kullanın!_', MessageType.text
-                );
-            }
-            else {
-                return await WhatsAsenaCN.sendMessage(
-                    WhatsAsenaCN.user.jid,
-                    '_The_ *WORK_TYPE* _Key You Entered Was Not Found!_ \n_Please Type_ ```.setvar WORK_TYPE:private``` _Or_ ```.setvar WORK_TYPE:public```', MessageType.text
-                );
-            }
+            var af_start = await WhatsAsenaStack.work_type(config.WORKTYPE, config.LANG)
+            await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, af_start, MessageType.text)
+        }
+        await git.fetch();
+        var commits = await git.log([config.BRANCH + '..origin/' + config.BRANCH]);
+        if (commits.total === 0) {
+            await WhatsAsenaCN.sendMessage(
+                WhatsAsenaCN.user.jid,
+                Lang.UPDATE, MessageType.text
+            );    
+        } else {
+            var degisiklikler = Lang.NEW_UPDATE;
+            commits['all'].map(
+                (commit) => {
+                    degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
+                }
+            );
+            var up_ch = await WhatsAsenaStack.update_ch(config.LANG)
+            await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, up_ch, MessageType.text)
         }
     })
     WhatsAsenaCN.on('message-new', async msg => {
