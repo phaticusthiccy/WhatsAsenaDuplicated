@@ -165,7 +165,7 @@ Yes. WhatsAsena comes with more than 170 internal command. Which including uniqu
 Only original [WhatsAsena](https://github.com/phaticusthiccy/WhatsAsenaDuplicated) do this. It has own unique protection style inside WhatsAsena's database. It protect your phone from WhatApp attacks. Thats mean all fake creations carries a big risk for users privacy.
 
 ### 🧠 What is Eva Neural AI?
-**Eva** is powered with neural networks, artificial brain cells and brain that can remember conversation. **Eva** developed by me for like a virtual assistants. __(Siri, Sam, Tesla etc..)__ 
+**Eva** is powered with neural networks, artificial brain cells and brain that can remember conversation. **Eva** developed by me ( Phaticusthiccy ) for like a virtual assistants. __(Siri, Sam, Tesla etc..)__ 
 WhatsAsena has %5 data of **Eva** to interact with users. Our gan datas stored on Brainshop. If users want to access **Eva**, they must start message with `Eva`
 
 ### 🐺 What does Asena mean?
@@ -184,7 +184,7 @@ WhatsAsena uses always **master** branch. If users cloned other branches, they c
 **.interp** command useful for interpolating low frame rate videos. This system, which is the first in the world, is also seen in WhatsAsena, the world's first UserBot. Basically it superimposes the previous frame and produces new frames to replace blank datas. By doing a simple calculation, If we use **.interp 60** to a 300 frame 10 second video, the output will be about 4000-6000 frame.
 
 ### My Bot is Very Slowly, What should I do?
-Firstly, you can check your ethernet connection. Your ping, packet loss and bandwidth. WhatsAsena uses phone's ethernet connection (Wi-Fi, Li-Fi, Mobile). So This is not about the WhatsAsena, it's about the device or the internet used.
+Firstly, you can check your internet connection. Your ping, packet loss and bandwidth. WhatsAsena uses phone's internet connection (Wi-Fi, Li-Fi, Mobile). So This is not about the WhatsAsena, it's about the device or the internet used.
 
 ### Where Can I Find the Number of Users? 
 You can look at the values ​​written under our logo above. This value shows the current number of users.
@@ -212,7 +212,7 @@ By establishing the Asena, you are deemed to have accepted these responsibilitie
 Your account may be banned for the following reasons:
 - Using .ban command for more than one user.
 - Using fake numbers.
-- Spamming Too Much (If someone complains)
+- Spamming Too Much (If someone complaints)
 ```
 
 ## Developers
