@@ -31,7 +31,7 @@ Project created by <a href="https://github.com/BADBMODER">BADBMODER</a> to make 
 Click WA logo to Join Support Group 👇
     <br>
 <br>
-  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/BT0nNPBthyFI1ejoSr0i7W)
+  [![join](https://github.com/Alien-alfa/PublicBot/blob/main/wlogo.svg.png)](https://chat.whatsapp.com/IpXGo4hJgEE06tgyiQBd6N)
   <div align="center">
        
   [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=BADBMODER&repo=PublicBot&theme=nightowl)](https://github.com/BADBMODER/PublicBot)
