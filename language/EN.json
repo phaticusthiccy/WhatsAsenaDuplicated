@@ -137,7 +137,7 @@
         "memes": {
             "MEMES_DESC": "Photo memes you replied to.",
             "NEED_REPLY": "*Reply to a photo!*",
-            "DOWNLOADING": "```Downloading media & making meme...```"
+            "DOWNLOADING": "........."
         },
         "ocr": {
             "OCR_DESC": "Reads the text on the photo you have replied.",
@@ -185,12 +185,12 @@
             "SONG_DESC": "Uploads the song you wrote.",
             "NEED_TEXT_SONG": "*Please write a song!*\n*Example:* ```.song eminem - rap god```",
             "NO_RESULT": "*I couldn't find anything :(*",
-            "DOWNLOADING_SONG": "```Downloading your song...```",
-            "UPLOADING_SONG": "```Uploading your song...```",
+            "DOWNLOADING_SONG": "......",
+            "UPLOADING_SONG": "........",
             "VIDEO_DESC": "Downloads video from YouTube.",
             "NEED_VIDEO": "*Please write a video link!*\n*Example:* ```.video https://www.youtube.com/watch?v=nAFlVm5qeBc```",
-            "DOWNLOADING_VIDEO": "```Downloading your video...```",
-            "UPLOADING_VIDEO": "```Uploading your video...```",
+            "DOWNLOADING_VIDEO": ".........",
+            "UPLOADING_VIDEO": "............",
             "YT_DESC": "It searchs on YouTube.",
             "NEED_WORDS": "```Please write a few words!```",
             "GETTING_VIDEOS": "```I'm bringing videos...```",
@@ -203,7 +203,7 @@
         "sticker": {
             "STICKER_DESC": "It converts your replied photo or video to sticker.",
             "NEED_REPLY": "*Reply to a photo or video!*",
-            "DOWNLOADING": "```Media downloading & converting to sticker...```"
+            "DOWNLOADING": "......"
         },
         "system_stats": {
             "ALIVE_DESC": "Does bot work?",
@@ -483,7 +483,7 @@
         "tiktok": {
             "TİKTOK": "Downloads videos from Tiktok.",
             "NEED": "```You Must Enter Any Tiktok Link!``` \n*Example:* ```.tiktok https://vm.tiktok.com/ZSJY27ExT/```",
-            "DOWN": "```Downloading Media..```",
+            "DOWN": "........",
             "CAPTİON": "Title:",
             "USERNAME": "Username:",
             "NAME": "Name:",
