@@ -90,12 +90,17 @@ async function whatsAsena () {
     clh.pay = ddd
     const WhatsAsenaCN = new WAConnection();
     const Session = new StringSession();
-    WhatsAsenaCN.version = [2, 2123, 8]
+    WhatsAsenaCN.version = [2, 2126, 14]
     WhatsAsenaCN.setMaxListeners(0);
+    var proxyAgent_var = ''
+    if (config.PROXY.includes('https') || config.PROXY.includes('http')) {
+      WhatsAsenaCN.connectOptions.agent = ProxyAgent (config.PROXY)
+    }
     setInterval(async () => { 
         var getGMTh = new Date().getHours()
         var getGMTm = new Date().getMinutes()
         var ann_msg = await WhatsAsenaStack.daily_announcement(config.LANG)
+        var ann = await WhatsAsenaStack.ann()
         while (getGMTh == 19 && getGMTm == 1) {
             var ilan = ''
             if (config.LANG == 'TR') ilan = '[ ```Günlük Duyurular``` ]\n\n'
@@ -108,17 +113,20 @@ async function whatsAsena () {
             if (config.LANG == 'HI') ilan = '[ ```दैनिक घोषणा``` ]\n\n'
             if (config.LANG == 'ID') ilan = '[ ```Pengumuman Harian``` ]\n\n'
             if (config.LANG == 'LK') ilan = '[ ```දෛනික නිවේදන``` ]\n\n'
-            if (ann_msg.includes('{vid}')) {
-                var VID = ann_msg.split('youtu.be')[1].split(' ')[0].replace('/', '')
-                
+            if (ann.video.includes('http') || ann.video.includes('https')) {
+                var VID = ann.video.split('youtu.be')[1].split(' ')[0].replace('/', '')
                 var yt = ytdl(VID, {filter: format => format.container === 'mp4' && ['720p', '480p', '360p', '240p', '144p'].map(() => true)});
                 yt.pipe(fs.createWriteStream('./' + VID + '.mp4'));
                 yt.on('end', async () => {
-                    var rg = new RegExp('https://youtu.be/+?(.*) ')
-                    await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {caption: ilan + ann_msg.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer).replace('{vid}', '').replace(rg, ''), mimetype: Mimetype.mp4});
+                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid,fs.readFileSync('./' + VID + '.mp4'), MessageType.video, {caption: ilan + ann_msg.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), mimetype: Mimetype.mp4});
                 });
             } else {
-                return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, ilan + ann_msg.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text)
+                if (ann.image.includes('http') || ann.image.includes('https')) {
+                    var imagegen = await axios.get(ann.image, { responseType: 'arraybuffer'})
+                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, Buffer.from(imagegen.data), MessageType.image, { caption: ilan + ann_msg.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer)})
+                } else {
+                    return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, ilan + ann_msg.replace('{user}', WhatsAsenaCN.user.name).replace('{wa_version}', WhatsAsenaCN.user.phone.wa_version).replace('{version}', config.VERSION).replace('{os_version}', WhatsAsenaCN.user.phone.os_version).replace('{device_model}', WhatsAsenaCN.user.phone.device_model).replace('{device_brand}', WhatsAsenaCN.user.phone.device_manufacturer), MessageType.text)
+                }
             }
         }
     }, 50000);
@@ -137,138 +145,12 @@ async function whatsAsena () {
         })
     }
     asynchronous_ch()
-    var biography_var = ''
-    await heroku.get(baseURI + '/config-vars').then(async (vars) => {
-        biography_var = vars.AUTO_BİO
-    });
     setInterval(async () => { 
-        if (biography_var == 'true') {
-            if (WhatsAsenaCN.user.jid.startsWith('90')) { // Turkey
-                var ov_time = new Date().toLocaleString('TR', { timeZone: 'Europe/Istanbul' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('994')) { // Azerbayjan
-                var ov_time = new Date().toLocaleString('AZ', { timeZone: 'Asia/Baku' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('94')) { // Sri Lanka
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('LK', { timeZone: 'Asia/Colombo' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('351')) { // Portugal
-                var ov_time = new Date().toLocaleString('PT', { timeZone: 'Europe/Lisbon' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('7')) { // Russia
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('RU', { timeZone: 'Europe/Kaliningrad' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('91')) { // Indian
-                var ov_time = new Date().toLocaleString('HI', { timeZone: 'Asia/Kolkata' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('62')) { // Indonesia
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('ID', { timeZone: 'Asia/Jakarta' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('49')) { // Germany
-                var ov_time = new Date().toLocaleString('DE', { timeZone: 'Europe/Berlin' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('61')) { // Australia 
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('AU', { timeZone: 'Australia/Lord_Howe' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('55')) { // Brazil
-                var ov_time = new Date().toLocaleString('BR', { timeZone: 'America/Noronha' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('33')) { // France
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('FR', { timeZone: 'Europe/Paris' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('34')) { // Spain
-                var ov_time = new Date().toLocaleString('ES', { timeZone: 'Europe/Madrid' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('44')) { // UK
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('GB', { timeZone: 'Europe/London' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('39')) { // Italy 
-                var ov_time = new Date().toLocaleString('IT', { timeZone: 'Europe/Rome' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('7')) { // Kazakhistan
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('KZ', { timeZone: 'Asia/Almaty' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('998')) { // Uzbekistan 
-                var ov_time = new Date().toLocaleString('UZ', { timeZone: 'Asia/Samarkand' }).split(' ')[1]
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time + '\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else if (WhatsAsenaCN.user.jid.startsWith('993')) { // Turkmenistan
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('TM', { timeZone: 'Asia/Ashgabat' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
-            else {
-                const get_localized_date = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-                var utch = new Date().toLocaleDateString(config.LANG, get_localized_date)
-                var ov_time = new Date().toLocaleString('EN', { timeZone: 'America/New_York' }).split(' ')[1]
-                const biography = '📅 ' + utch + '\n⌚ ' + ov_time +'\n\n🐺 WhatsAsena'
-                await WhatsAsenaCN.setStatus(biography)
-            }
+        if (config.AUTOBIO == 'true') {
+            var timezone_bio = await WhatsAsenaStack.timezone(WhatsAsenaCN.user.jid)
+            var date_bio = await WhatsAsenaStack.datebio(config.LANG)
+            const biography = '📅 ' + date_bio + '\n⌚ ' + timezone_bio
+            await WhatsAsenaCN.setStatus(biography)
         }
     }, 7890);
     var shs1 = ''
@@ -339,7 +221,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
     });
     WhatsAsenaCN.on('credentials-updated', async () => {
         console.log(
-            chalk.green.bold('✅ Login successful!')
+            chalk.green.bold('✅ Login Successful!')
         );
         console.log(
             chalk.blueBright.italic('⬇️ Installing External Plugins...')
@@ -554,17 +436,10 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         }
                         catch (error) {
                             if (config.NOLOG == 'true') return;
+                            var error_report = await WhatsAsenaStack.error(config.LANG)
+                            await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, error_report.replace('{real_error}', error), MessageType.text, {detectLinks: false})
 
                             if (config.LANG == 'TR' || config.LANG == 'AZ') {
-                                await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*-- HATA RAPORU [WHATSASENA] --*' + 
-                                    '\n*WhatsAsena bir hata gerçekleşti!*'+
-                                    '\n_Bu hata logunda numaranız veya karşı bir tarafın numarası olabilir. Lütfen buna dikkat edin!_' +
-                                    '\n_Yardım için Telegram grubumuza yazabilirsiniz._' +
-                                    '\n_Bu mesaj sizin numaranıza (kaydedilen mesajlar) gitmiş olmalıdır._' +
-                                    '\n_Hatayı https://chat.whatsapp.com/ICRTAuAatRyAIB1OkxlPw0 bu gruba iletebilirsiniz._\n\n' +
-                                    '*Gerçekleşen Hata:* ```' + error + '```\n\n'
-                                    , MessageType.text, {detectLinks: false});
-
                                 if (error.message.includes('URL')) {
                                     return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ HATA ÇÖZÜMLEME [WHATSASENA] ⚕️*' + 
                                         '\n========== ```Hata Okundu!``` ==========' +
@@ -690,15 +565,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                 }
                             }
                             else {
-                                await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*-- ERROR REPORT [WHATSASENA] --*' + 
-                                    '\n*WhatsAsena an error has occurred!*'+
-                                    '\n_This error log may include your number or the number of an opponent. Please be careful with it!_' +
-                                    '\n_You can write to our Telegram group for help._' +
-                                    '\n_Aslo you can join our support group:_ https://chat.whatsapp.com/ICRTAuAatRyAIB1OkxlPw0' +
-                                    '\n_This message should have gone to your number (saved messages)._\n\n' +
-                                    '*Error:* ```' + error + '```\n\n'
-                                    , MessageType.text, {detectLinks: false}
-                                );
+                               
                                 if (error.message.includes('URL')) {
                                     return await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, '*⚕️ ERROR ANALYSIS [WHATSASENA] ⚕️*' + 
                                         '\n========== ```Error Resolved!``` ==========' +
@@ -822,7 +689,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                                         , MessageType.text
                                     );
                                 }    
-                            }                      
+                            }
                         }
                     }
                 }
@@ -835,7 +702,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         await WhatsAsenaCN.connect();
     } catch {
         if (!nodb) {
-            console.log(chalk.red.bold('Eski sürüm stringiniz yenileniyor...'))
+            console.log(chalk.red.bold('Loading Old Version Session...'))
             WhatsAsenaCN.loadAuthInfo(Session.deCrypt(config.SESSION)); 
             try {
                 await WhatsAsenaCN.connect();
