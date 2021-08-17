@@ -150,7 +150,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
-                        var unique_ident = message.data.participant.split('@')[0]      
+                        var unique_ident = message.data.participant.split('@')[0] + 'fulleva'     
                         let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
                         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
@@ -189,7 +189,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                 })
             } else if (message.jid.includes('-') && message.reply_message !== false) {
                 if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
-                    var unique_ident = message.data.participant.split('@')[0]      
+                    var unique_ident = message.data.participant.split('@')[0] + 'fulleva'     
                     let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                     var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
                     if (ainame !== 'Asena') return;
@@ -225,7 +225,7 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                     })
                 }
             } else {
-                var unique_ident = message.data.participant.split('@')[0]      
+                var unique_ident = message.data.participant.split('@')[0] + 'fulleva'   
                 let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                 var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
                 if (ainame !== 'Asena') return;
@@ -317,12 +317,14 @@ var already_on = ''
 var already_off = ''
 var succ_on = ''
 var succ_off = ''
+var wr_cmd = ''
 if (conf.LANG == 'TR') {
     fulleva_dsc = 'Tam fonksiyonel Eva özelliklerini aktif eder. Hesabınızı bir chatbota dönüştürün!'
     already_on = 'Eva yapay zekası halihazırda tüm fonksiyonları etkin.'
     already_off = 'Eva yapay zekası halihazırda yarı fonksiyonel çalışıyor.'
     succ_on = 'Eva, Tam Fonksiyonel Olarak Açıldı! Lütfen Biraz Bekleyin! ✅'
     succ_off = 'Eva, Yarı Fonksiyonel Olarak Ayarlandı! Lütfen Biraz Bekleyin! ☑️'
+    wr_cmd = 'Lütfen sadece *off* veya *on* komutunu kullanın.'
 }
 if (conf.LANG == 'EN') {
     fulleva_dsc = 'Activates full functional Eva features. Turn your account into a ai chatbot!'
@@ -330,6 +332,7 @@ if (conf.LANG == 'EN') {
     already_off = 'Eva artificial intelligence is currently running semi-functional.'
     succ_on = 'Eva Opened Fully Functionally! Please wait a bit! ✅'
     succ_off = 'Eva Set to Semi-Functional! Please wait a bit! ☑️'
+    wr_cmd = 'Please just use the *off* or *on* command.'
 }
 if (conf.LANG == 'AZ') {
     fulleva_dsc = 'Tam funksional Eva xüsusiyyətlərini aktivləşdirir. Hesabınızı bir chatbot halına gətirin!'
@@ -337,6 +340,7 @@ if (conf.LANG == 'AZ') {
     already_off = 'Eva AI hazırda yarı funksionaldır.'
     succ_on = 'Eva Tamamilə İşlədi! Xahiş edirəm bir az gözləyin! ✅'
     succ_off = 'Eva Yarı İşləkdir! Xahiş edirəm bir az gözləyin! ☑️'
+    wr_cmd = 'Zəhmət olmasa *off* və ya *on* əmrindən istifadə edin.'
 }
 if (conf.LANG == 'RU') {
     fulleva_dsc = 'Активирует полнофункциональные функции Eva. Превратите свой аккаунт в чат-бота!'
@@ -344,6 +348,7 @@ if (conf.LANG == 'RU') {
     already_off = 'Eva AI в настоящее время частично функционирует'
     succ_on = 'Eva открылась полностью функционально! Подождите немного! ✅'
     succ_off = 'Eva настроена на полуфункциональность! Подождите немного! ☑️'
+    wr_cmd = 'Пожалуйста, просто используйте команду *off* или *on*.'
 }
 if (conf.LANG == 'ES') {
     fulleva_dsc = 'Activa todas las funciones funcionales de Eva. ¡Convierta su cuenta en un chatbot!'
@@ -351,6 +356,7 @@ if (conf.LANG == 'ES') {
     already_off = 'Eva AI es actualmente semi-funcional.'
     succ_on = '¡Eva abrió completamente funcionalmente! ¡Por favor espere un poco! ✅'
     succ_off = '¡Eva se pone semifuncional! ¡Por favor espere un poco! ☑️'
+    wr_cmd = 'Utilice el comando *off* o *on*.'
 }
 if (conf.LANG == 'HI') {
     fulleva_dsc = 'पूरी तरह कार्यात्मक Eva सुविधाओं को सक्रिय करता है। अपने खाते को चैटबॉट में बदलें!'
@@ -358,6 +364,7 @@ if (conf.LANG == 'HI') {
     already_off = 'ईवा एआई वर्तमान में अर्ध-कार्यात्मक है'
     succ_on = 'ईवा पूरी तरह कार्यात्मक रूप से खुल गई! कृपया थोड़ी प्रतीक्षा करें! ✅'
     succ_off = 'अर्ध-कार्यात्मक करने के लिए ईवा सेट! कृपया थोड़ी प्रतीक्षा करें! ☑️'
+    wr_cmd = 'कृपया केवल *on* या *off* कमांड का प्रयोग करें'
 }
 if (conf.LANG == 'ML') {
     fulleva_dsc = 'പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായ Eva സവിശേഷതകൾ സജീവമാക്കുന്നു. നിങ്ങളുടെ അക്കൗണ്ട് ഒരു ചാറ്റ്ബോട്ടാക്കി മാറ്റുക!'
@@ -365,6 +372,7 @@ if (conf.LANG == 'ML') {
     already_off = 'ഇവാ AI നിലവിൽ സെമി-ഫംഗ്ഷണൽ ആണ്.'
     succ_on = 'ഇവ പൂർണ്ണമായും പ്രവർത്തനക്ഷമമായി തുറന്നു! കുറച്ച് കാത്തിരിക്കൂ! ✅'
     succ_off = 'സെമി-ഫങ്ഷണൽ ആയി ഇവാ സജ്ജമാക്കുക! കുറച്ച് കാത്തിരിക്കൂ! ☑️'
+    wr_cmd = 'ദയവായി *on* അല്ലെങ്കിൽ *off* കമാൻഡ് ഉപയോഗിക്കുക.'
 }
 if (conf.LANG == 'PT') {
     fulleva_dsc = 'Ativa recursos Eva totalmente funcionais. Transforme sua conta em um chatbot!'
@@ -372,6 +380,7 @@ if (conf.LANG == 'PT') {
     already_off = 'Eva AI está semi-funcional.'
     succ_on = 'Eva abriu totalmente funcionalmente! Por favor espere um pouco! ✅'
     succ_off = 'Eva definida como semi-funcional! Por favor espere um pouco! ☑️'
+    wr_cmd = 'Use apenas o comando *off* ou *on*'
 }
 if (conf.LANG == 'ID') {
     fulleva_dsc = 'Mengaktifkan fitur Eva yang berfungsi penuh. Ubah akun Anda menjadi chatbot!'
@@ -379,6 +388,7 @@ if (conf.LANG == 'ID') {
     already_off = 'Eva AI saat ini semi-fungsional.'
     succ_on = 'Eva Dibuka Sepenuhnya Secara Fungsional! Harap tunggu sebentar! ✅'
     succ_off = 'Eva Set ke Semi-Fungsional! Mohon tunggu sebentar! ☑️'
+    wr_cmd = 'Silakan gunakan perintah *off* atau *on*.'
 }
 
 Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, usage: '.fulleva on / off' }, (async (message, match) => {
@@ -408,5 +418,7 @@ Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, us
             });
             await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
         }
+    } else {
+        return await message.client.sendMessage(message.jid, , MessageType.text)
     }
 }));
