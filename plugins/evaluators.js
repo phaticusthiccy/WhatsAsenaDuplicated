@@ -172,10 +172,10 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (!im) return;
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);     
-            if (Config.ANTILINKMSG !== 'false' && Config.ANTILINKMSG !== 'default') {    
-                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
-            } else if (Config.ANTILINKMSG == 'default') {
+            if (Config.ANTILINKMSG == 'default') {
                 await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            } else {
+                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
             }
         } 
         else if (regex2.test(message.message)) {
@@ -184,11 +184,11 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (!im) return;
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);      
-            if (Config.ANTILINKMSG !== 'false' && Config.ANTILINKMSG !== 'default') {    
-                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
-            } else if (Config.ANTILINKMSG == 'default') {
+            if (Config.ANTILINKMSG == 'default') {
                 await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
-            }         
+            } else {
+                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
+            }  
         }
         else if (message.message.match(/((?:[.]com)\b)/i)) {
             var us = await checkUsAdmin(message)
@@ -196,10 +196,10 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (!im) return;
             if (us) return;
             await message.client.groupRemove(message.jid, [message.data.participant]);         
-            if (Config.ANTILINKMSG !== 'false' && Config.ANTILINKMSG !== 'default') {    
-                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
-            } else if (Config.ANTILINKMSG == 'default') {
+            if (Config.ANTILINKMSG == 'default') {
                 await message.client.sendMessage(message.jid,ldc, MessageType.text, {quoted: message.data })
+            } else {
+                await message.client.sendMessage(message.jid,Config.ANTILINKMSG, MessageType.text, {quoted: message.data })
             }
         }
     }
