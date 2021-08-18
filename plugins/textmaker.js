@@ -92,6 +92,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t54 = ''
     var t55 = ''
     var t56 = ''
+    var t57 = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Şeytan Temalı Logo Yapar.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Ayı İkonu İçeren Logo Yapar.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
