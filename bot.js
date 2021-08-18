@@ -194,7 +194,25 @@ async function whatsAsena () {
     const seven = buffa.toString('utf-8')
     const buffl = Buffer.from(`${ttl8}`)
     const eight = buffl.toString('utf-8')
-    WhatsAsenaCN.logger.level = config.DEBUG ? 'debug' : 'warn';
+    var logger_levels = ''
+    if (config.DEBUG == 'true') {
+        logger_levels = 'all'
+    } else if (config.DEBUG == 'false') {
+        logger_levels = 'off'
+    } else if (config.DEBUG == 'trace') {
+        logger_levels = 'trace'
+    } else if (config.DEBUG == 'fatal') {
+        logger_levels = 'fatal'
+    } else if (config.DEBUG == 'warn') {
+        logger_levels = 'warn'
+    } else if (config.DEBUG == 'error') {
+        logger_levels = 'error'
+    } else if (config.debug == 'info') {
+        logger_levels = 'info'
+    } else {
+        logger_levels = 'warn'
+    }
+    WhatsAsenaCN.logger.level = logger_levels
     var nodb;
     if (StrSes_Db.length < 1) {
         nodb = true;
