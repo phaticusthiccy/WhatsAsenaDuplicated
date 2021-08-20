@@ -232,5 +232,15 @@ Author, Base, Bug Fixes, Modules | Developer, Base, Bug Fixes, Modules | Bug Fix
 ## License
 This project is protected by `GNU General Public Licence v3.0` license.
 
+## Contributing
+Contributing to the WhatsAsena project, world first UserBot for WhatsApp. 
+Additions and innovations are allowed. Please contribute with these rules:
+- New Features 
+- Fixing Critical Bugs
+- New AI Systems
+- Innovations That Don't Break the Integrity
+In addition to these rules; Unethical additions such as nudity, sexuality, insults, terrorism are not allowed.
+More than 130,000 uses worldwide, and this all-age project demands innovations to match ethnic rules.
+
 ### Disclaimer
 `WhatsApp` name, its variations and the logo are registered trademarks of Facebook. We have nothing to do with the registered trademark
