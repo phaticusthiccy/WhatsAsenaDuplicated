@@ -239,6 +239,7 @@ Additions and innovations are allowed. Please contribute with these rules:
 - Fixing Critical Bugs
 - New AI Systems
 - Innovations That Don't Break the Integrity
+
 In addition to these rules; Unethical additions such as nudity, sexuality, insults, terrorism are not allowed.
 More than 130,000 uses worldwide, and this all-age project demands innovations to match ethnic rules.
 
