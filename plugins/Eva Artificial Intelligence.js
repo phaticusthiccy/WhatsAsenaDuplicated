@@ -419,6 +419,6 @@ Asena.addCommand({ pattern: 'fulleva ?(.*)', desc: fulleva_dsc, fromMe: true, us
             await message.client.sendMessage(message.jid, '*' + succ_off + '*', MessageType.text)
         }
     } else {
-        return await message.client.sendMessage(message.jid, , MessageType.text)
+        return await message.client.sendMessage(message.jid, wr_cmd, MessageType.text)
     }
 }));
