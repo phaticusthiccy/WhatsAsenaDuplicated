@@ -400,7 +400,7 @@
             "CARBON_WARN": "Harap tulis dalam bahasa TR dan EN saja!"
         },
         "scam": {
-            "SCAM_DESC": "Menciptakan 5 menit tindakan palsu.",
+            "SCAM_DESC": "Menghasilkan tindakan palsu.",
             "SCAM_NOTFOUND": "*Anda Harus Melakukan Tindakan Palsu!*\nJenis yang Ada: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Tindakan yang Salah Dimasukkan! Harap gunakan tipe yang ada.```"
         },
