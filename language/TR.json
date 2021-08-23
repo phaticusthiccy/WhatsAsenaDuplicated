@@ -399,7 +399,7 @@
             "CARBON_WARN": "Lütfen sadece tr ve en dilinde yazın!"
         },
         "scam": {
-            "SCAM_DESC": "5 dakikalık sahte eylemler oluşturur.",
+            "SCAM_DESC": "Sahte eylemler oluşturur.",
             "SCAM_NOTFOUND": "*Sahte Eylem Girmelisin!*\nVarolan Türler: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Yanlış Eylem Girildi! Lütfen varolan türleri kullanın.```"
         },
