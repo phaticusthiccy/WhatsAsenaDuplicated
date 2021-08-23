@@ -400,7 +400,7 @@
             "CARBON_WARN": "Por favor, digite apenas os caracteres en e tr!"
         },
         "scam": {
-            "SCAM_DESC": "Cria 5 minutos de ações falsas.",
+            "SCAM_DESC": "Cria ações falsas.",
             "SCAM_NOTFOUND": "*Você deve entrar em ação falsa!*\nTipos Existentes: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Ação incorreta inserida! Use os tipos existentes.```"
         },
