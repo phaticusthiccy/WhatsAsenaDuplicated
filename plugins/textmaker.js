@@ -110,6 +110,14 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t71 = ''
     var t72 = ''
     var t73 = ''
+    var t74 = ''
+    var t75 = ''
+    var t76 = ''
+    var t77 = ''
+    var t78 = ''
+    var t79 = ''
+    var t80 = ''
+    
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Şeytan Temalı Logo Yapar.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Ayı İkonu İçeren Logo Yapar.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
@@ -183,6 +191,13 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t71 = 'Altın Temalı Logo Yapar.' // https://en.ephoto360.com/modern-gold-3-212.html
         t72 = '3. Bir Uzay Temalı Logo Yapar.' // https://en.ephoto360.com/galaxy-text-effect-116.html
         t73 = '3. Bir Alev Temalı Logo Yapar.' // https://en.ephoto360.com/dragon-fire-text-effect-111.html
+        t74 = '5. Bir Graffiti Temalı Logo Yapar.' // https://en.ephoto360.com/graffiti-color-199.html
+        t75 = 'Kar Temalı Logo Yapar.' // https://en.ephoto360.com/snow-on-text-online-107.html
+        t76 = '2. Bir Renk Gradyan Temalı Logo Yapar.' // https://en.ephoto360.com/create-3d-gradient-text-effect-online-600.html
+        t77 = '6. Bir Neon Temalı Logo Yapar.' // https://en.ephoto360.com/create-light-effects-green-neon-online-429.html
+        t78 = 'Sıcak Hava Balonu Temalı Logo Yapar.' // https://en.ephoto360.com/writing-your-name-on-hot-air-balloon-506.html
+        t79 = '2. Bir Altın Temalı Logo Yapar.' // https://en.ephoto360.com/gold-text-effect-pro-271.html
+        t80 = 'Matrix Temalı Logo Yapar.' // https://en.ephoto360.com/matrix-text-effect-154.html
     }
     else {
         t1 = 'Makes Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -257,6 +272,13 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t71 = 'Makes Gold Themed Logo.' // https://en.ephoto360.com/modern-gold-3-212.html
         t72 = 'Makes a Third Space Themed Logo.' // https://en.ephoto360.com/galaxy-text-effect-116.html
         t73 = 'Makes Third Flame Themed Logo.' // https://en.ephoto360.com/dragon-fire-text-effect-111.html 
+        t74 = 'Makes Fifth Graffiti Themed Logo.' // https://en.ephoto360.com/graffiti-color-199.html
+        t75 = 'Makes Snow Themed Logo.' // https://en.ephoto360.com/snow-on-text-online-107.html
+        t76 = 'Makes a Second Color Gradient Themed Logo.' // https://en.ephoto360.com/create-3d-gradient-text-effect-online-600.html
+        t77 = 'Makes a Sixth Neon Themed Logo.' // https://en.ephoto360.com/create-light-effects-green-neon-online-429.html
+        t78 = 'Makes a Hot Air Balloon Themed Logo.' // https://en.ephoto360.com/writing-your-name-on-hot-air-balloon-506.html
+        t79 = 'Makes a Second Gold Themed Logo.' // https://en.ephoto360.com/gold-text-effect-pro-271.html
+        t80 = 'Makes Matrix Themed Logos.' // https://en.ephoto360.com/matrix-text-effect-154.html
     }
     var usage_cmd = ''
     var command_cmd = ''
@@ -279,6 +301,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.text3neon``` \n' + desc_cmd + t18 + '_\n' + usage_cmd + '.text3neon Phaticusthiccy_\n\n' +
         command_cmd + '```.text4neon``` \n' + desc_cmd + t27 + '_\n' + usage_cmd + '.text4neon Phaticusthiccy_\n\n' +
         command_cmd + '```.text5neon``` \n' + desc_cmd + t34 + '_\n' + usage_cmd + '.text5neon Phaticusthiccy_\n\n' +
+        command_cmd + '```.text6neon``` \n' + desc_cmd + t77 + '_\n' + usage_cmd + '.text6neon Phaticusthiccy_\n\n' +
         command_cmd + '```.textlight``` \n' + desc_cmd + t5 + '_\n' + usage_cmd + '.textlight Phaticusthiccy_\n\n' +
         command_cmd + '```.textjoker``` \n' + desc_cmd + t6 + '_\n' + usage_cmd + '.textjoker Phaticusthiccy_\n\n' +
         command_cmd + '```.textninja``` \n' + desc_cmd + t7 + '_\n' + usage_cmd + '.textninja Developer;Phaticusthiccy_\n\n' +
@@ -291,6 +314,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.text2graf``` \n' + desc_cmd + t16 + '_\n' + usage_cmd + '.text2graf Developer;Phaticusthiccy_\n\n' +  
         command_cmd + '```.text3graf``` \n' + desc_cmd + t53 + '_\n' + usage_cmd + '.text3graf Phaticusthiccy_\n\n' +
         command_cmd + '```.text4graf``` \n' + desc_cmd + t67 + '_\n' + usage_cmd + '.text4graf Phaticusthiccy_\n\n' +
+        command_cmd + '```.text5graf``` \n' + desc_cmd + t74 + '_\n' + usage_cmd + '.text5graf Phaticusthiccy_\n\n' +
         command_cmd + '```.textlion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '.textlion Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.textice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '.textice Phaticusthiccy_\n\n' +
         command_cmd + '```.textspace``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '.textspace Developer;Phaticusthiccy_\n\n' +
@@ -307,6 +331,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.textcemetery``` \n' + desc_cmd + t28 + '_\n' + usage_cmd + '.textcemetery Phaticusthiccy_\n\n' +
         command_cmd + '```.textstone``` \n' + desc_cmd + t30 + '_\n' + usage_cmd + '.textstone Phaticusthiccy_\n\n' +
         command_cmd + '```.textgradient``` \n' + desc_cmd + t33 + '_\n' + usage_cmd + '.textgradient Phaticusthiccy_\n\n' +
+        command_cmd + '```.text2gradient``` \n' + desc_cmd + t76 + '_\n' + usage_cmd + '.text2gradient Phaticusthiccy_\n\n' +
         command_cmd + '```.textmagma``` \n' + desc_cmd + t35 + '_\n' + usage_cmd + '.textmagma Phaticusthiccy_\n\n' +
         command_cmd + '```.textbglass``` \n' + desc_cmd + t36 + '_\n' + usage_cmd + '.textbglass Phaticusthiccy_\n\n' +
         command_cmd + '```.textpaper``` \n' + desc_cmd + t37 + '_\n' + usage_cmd + '.textpaper Phaticusthiccy_\n\n' +
@@ -339,7 +364,10 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.textangel``` \n' + desc_cmd + t69 + '_\n' + usage_cmd + '.textangel Phaticusthiccy_\n\n' +
         command_cmd + '```.textleaf``` \n' + desc_cmd + t70 + '_\n' + usage_cmd + '.textleaf Phaticusthiccy_\n\n' +
         command_cmd + '```.textgold``` \n' + desc_cmd + t71 + '_\n' + usage_cmd + '.textgold Phaticusthiccy_\n\n' +
-
+        command_cmd + '```.text2gold``` \n' + desc_cmd + t79 + '_\n' + usage_cmd + '.text2gold Phaticusthiccy_\n\n' +
+        command_cmd + '```.textsnow``` \n' + desc_cmd + t75 + '_\n' + usage_cmd + '.textsnow Phaticusthiccy_\n\n' +
+        command_cmd + '```.textballoon``` \n' + desc_cmd + t78 + '_\n' + usage_cmd + '.textballoon Phaticusthiccy_\n\n' +
+        command_cmd + '```.textmatrix``` \n' + desc_cmd + t80 + '_\n' + usage_cmd + '.textmatrix Phaticusthiccy_\n\n' +
         command_cmd + '```.textglitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.textglitch Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.text2glitch``` \n' + desc_cmd + t31 + '_\n' + usage_cmd + '.text2glitch Developer;Phaticusthiccy_'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
@@ -387,6 +415,36 @@ Asena.addCommand({pattern: 'textleaf ?(.*)', fromMe: wk, dontAddCommandList: tru
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
 }));
+Asena.addCommand({pattern: 'textmatrix ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/matrix-text-effect-154.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
+}));
+Asena.addCommand({pattern: 'text2gradient ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-3d-gradient-text-effect-online-600.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
+}));
+Asena.addCommand({pattern: 'textballoon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/writing-your-name-on-hot-air-balloon-506.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
+}));
+Asena.addCommand({pattern: 'textsnow ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/snow-on-text-online-107.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
+}));
+Asena.addCommand({pattern: 'text2gold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/gold-text-effect-pro-271.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
+}));
+Asena.addCommand({pattern: 'text5graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+  var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/graffiti-color-199.html')
+  var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+  await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
+}));
 Asena.addCommand({pattern: 'text3fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/dragon-fire-text-effect-111.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
@@ -426,6 +484,11 @@ Asena.addCommand({pattern: 'textabear ?(.*)', fromMe: wk, dontAddCommandList: tr
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-funny-animations-of-a-traveling-bear-701.html')
     var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
     await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
+}));
+Asena.addCommand({pattern: 'text6neon ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-light-effects-green-neon-online-429.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image)
 }));
 Asena.addCommand({pattern: 'textheart ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/write-name-on-heart-with-wings-gifs-430.html')
