@@ -400,7 +400,7 @@
             "CARBON_WARN": "Please only type in en and tr character!"
         },
         "scam": {
-            "SCAM_DESC": "Creates 5 minutes of fake actions.",
+            "SCAM_DESC": "Creates fake actions.",
             "SCAM_NOTFOUND": "*You Must Enter Fake Action!*\nExisting Types: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Wrong Action Entered! Please use existing types.```"
         },
