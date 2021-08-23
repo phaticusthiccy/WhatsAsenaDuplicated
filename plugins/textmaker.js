@@ -17,6 +17,7 @@ const fs = require('fs');
 const Config = require('../config')
 const axios = require('axios')
 const request = require('request');
+const WhatsAsenaStack = require('whatsasena-npm');
 const os = require('os');
 var clh = { cd: 'L3Jvb3QvV2hhdHNBc2VuYUR1cGxpY2F0ZWQv', pay: '' }    
 var ggg = Buffer.from(clh.cd, 'base64')
@@ -93,6 +94,22 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
     var t55 = ''
     var t56 = ''
     var t57 = ''
+    var t58 = ''
+    var t59 = ''
+    var t60 = ''
+    var t61 = ''
+    var t62 = ''
+    var t63 = ''
+    var t64 = ''
+    var t65 = ''
+    var t66 = ''
+    var t67 = ''
+    var t68 = ''
+    var t69 = ''
+    var t70 = ''
+    var t71 = ''
+    var t72 = ''
+    var t73 = ''
     if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
         t1 = 'Şeytan Temalı Logo Yapar.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
         t2 = 'Ayı İkonu İçeren Logo Yapar.' // https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
@@ -150,6 +167,22 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t55 = '2. Bir Şeytan Temalı Logo Yapar.' // https://textpro.me/create-green-horror-style-text-effect-online-1036.html
         t56 = 'Retro Temalı Logo Yapar.' // https://textpro.me/video-game-classic-8-bit-text-effect-1037.html
         t57 = 'Bilim Kurgu Temalı Logo Yapar.' // https://textpro.me/create-science-fiction-text-effect-online-free-1038.html
+        t58 = '2. Bir Siyah ve Pembe Temalı Logo Yapar.' // https://en.ephoto360.com/create-a-blackpink-neon-logo-text-effect-online-710.html
+        t59 = 'PUBG Temalı Video Logo Yapar.' // https://en.ephoto360.com/create-pubg-style-glitch-video-avatar-554.html
+        t60 = 'Yol Temalı Logo Yapar.' // https://en.ephoto360.com/create-glowing-text-effects-online-706.html
+        t61 = 'Üzgün Temalı Logo Yapar.' // https://en.ephoto360.com/write-text-on-wet-glass-online-589.html
+        t62 = 'Animasyonlu Ayı Logosu Yapar.' // https://en.ephoto360.com/create-funny-animations-of-a-traveling-bear-701.html
+        t63 = 'Animasyonlu Yavru Köpek Logosu Yapar.' // https://en.ephoto360.com/create-puppy-cute-animated-online-478.html
+        t64 = '2. Bir PUBG Temalı Video Logo Yapar.' // https://en.ephoto360.com/lightning-pubg-video-logo-maker-online-615.html
+        t65 = '3. Bir PUBG Temalı Logo Yapar.' // https://en.ephoto360.com/create-the-cover-game-playerunknown-s-battlegrounds-401.
+        t66 = 'Kalp Animasyonlu Logo Yapar.' // https://en.ephoto360.com/write-name-on-heart-with-wings-gifs-430.html
+        t67 = '4. Bir Graffiti Temalı Logo Yapar.' // https://en.ephoto360.com/text-graffiti-3d-208.html
+        t68 = '2. Bir Uzay Temalı Logo Yapar.' // https://en.ephoto360.com/create-galaxy-style-free-name-logo-438.html
+        t69 = 'Melek Temalı Logo Yapar.' // https://en.ephoto360.com/wings-galaxy-206.html
+        t70 = 'Yaprak Temalı Logo Yapar.' // https://en.ephoto360.com/dark-green-typography-online-359.html
+        t71 = 'Altın Temalı Logo Yapar.' // https://en.ephoto360.com/modern-gold-3-212.html
+        t72 = '3. Bir Uzay Temalı Logo Yapar.' // https://en.ephoto360.com/galaxy-text-effect-116.html
+        t73 = '3. Bir Alev Temalı Logo Yapar.' // https://en.ephoto360.com/dragon-fire-text-effect-111.html
     }
     else {
         t1 = 'Makes Devil Themed Logo.' // https://textpro.me/create-neon-devil-wings-text-effect-online-free-1014.html
@@ -208,6 +241,22 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         t55 = 'Makes a Second Devil-Themed Logo.' // https://textpro.me/create-green-horror-style-text-effect-online-1036.html
         t56 = 'Makes Retro Themed Logo.' // https://textpro.me/video-game-classic-8-bit-text-effect-1037.html
         t57 = 'Makes a Sci-Fi Themed Logo.' // https://textpro.me/create-science-fiction-text-effect-online-free-1038.html
+        t58 = 'Makes a Second Black and Pink Themed Logo.' // https://en.ephoto360.com/create-a-blackpink-neon-logo-text-effect-online-710.html
+        t59 = 'Makes PUBG Themed Video Logo.' // https://en.ephoto360.com/create-pubg-style-glitch-video-avatar-554.html
+        t60 = 'Makes Road Themed Logo.' // https://en.ephoto360.com/create-glowing-text-effects-online-706.html
+        t61 = 'Makes a Sad Themed Logo.' // https://en.ephoto360.com/write-text-on-wet-glass-online-589.html
+        t62 = 'Makes Animated Bear Logo.' // https://en.ephoto360.com/create-funny-animations-of-a-traveling-bear-701.html
+        t63 = 'Makes Animated Puppy Logo.' // https://en.ephoto360.com/create-puppy-cute-animated-online-478.html
+        t64 = 'Makes Second PUBG Themed Video Logo.' // https://en.ephoto360.com/lightning-pubg-video-logo-maker-online-615.html
+        t65 = 'Makes Third PUBG Themed Logo.' // https://en.ephoto360.com/create-the-cover-game-playerunknown-s-battlegrounds-401.html
+        t66 = 'Makes Heart Animated Logo.' // https://en.ephoto360.com/write-name-on-heart-with-wings-gifs-430.html
+        t67 = 'Makes Fourth Graffiti Themed Logo.' // https://en.ephoto360.com/text-graffiti-3d-208.html
+        t68 = 'Makes a Second Space Themed Logo.' // https://en.ephoto360.com/create-galaxy-style-free-name-logo-438.html
+        t69 = 'Makes Angel Themed Logo.' // https://en.ephoto360.com/wings-galaxy-206.html
+        t70 = 'Makes Leaf Themed Logo.' // https://en.ephoto360.com/dark-green-typography-online-359.html
+        t71 = 'Makes Gold Themed Logo.' // https://en.ephoto360.com/modern-gold-3-212.html
+        t72 = 'Makes a Third Space Themed Logo.' // https://en.ephoto360.com/galaxy-text-effect-116.html
+        t73 = 'Makes Third Flame Themed Logo.' // https://en.ephoto360.com/dragon-fire-text-effect-111.html 
     }
     var usage_cmd = ''
     var command_cmd = ''
@@ -221,7 +270,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd = '💻 *Command:* '
         desc_cmd = 'ℹ️ *Description:* _'
     }
-    const msg = command_cmd + '```.textdevil``` \n' + t1 + '_\n' + usage_cmd + '.textdevil Phaticusthiccy_\n\n' +
+    const msg = command_cmd + '```.textdevil``` \n' + desc_cmd + t1 + '_\n' + usage_cmd + '.textdevil Phaticusthiccy_\n\n' +
         command_cmd + '```.text2devil``` \n' + desc_cmd + t55 + '_\n' + usage_cmd + '.text2devil Phaticusthiccy_\n\n' +
         command_cmd + '```.textbear``` \n' + desc_cmd + t2 + '_\n' + usage_cmd + '.textbear Phaticusthiccy_\n\n' +
         command_cmd + '```.textwolf``` \n' + desc_cmd + t10 + '_\n' + usage_cmd + '.textwolf Developer;Phaticusthiccy_\n\n' +
@@ -241,13 +290,17 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.textgraf``` \n' + desc_cmd + t15 + '_\n' + usage_cmd + '.textgraf Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.text2graf``` \n' + desc_cmd + t16 + '_\n' + usage_cmd + '.text2graf Developer;Phaticusthiccy_\n\n' +  
         command_cmd + '```.text3graf``` \n' + desc_cmd + t53 + '_\n' + usage_cmd + '.text3graf Phaticusthiccy_\n\n' +
+        command_cmd + '```.text4graf``` \n' + desc_cmd + t67 + '_\n' + usage_cmd + '.text4graf Phaticusthiccy_\n\n' +
         command_cmd + '```.textlion``` \n' + desc_cmd + t17 + '_\n' + usage_cmd + '.textlion Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.textice``` \n' + desc_cmd + t19 + '_\n' + usage_cmd + '.textice Phaticusthiccy_\n\n' +
         command_cmd + '```.textspace``` \n' + desc_cmd + t20 + '_\n' + usage_cmd + '.textspace Developer;Phaticusthiccy_\n\n' +
+        command_cmd + '```.text2space``` \n' + desc_cmd + t68 + '_\n' + usage_cmd + '.text2space Phaticusthiccy_\n\n' +
+        command_cmd + '```.text3space``` \n' + desc_cmd + t72 + '_\n' + usage_cmd + '.text3space Phaticusthiccy_\n\n' +
         command_cmd + '```.textsmoke``` \n' + desc_cmd + t21 + '_\n' + usage_cmd + '.textsmoke Phaticusthiccy_\n\n' + // Thanks for @Unique_hunter for base.
         command_cmd + '```.textglow``` \n' + desc_cmd + t23 + '_\n' + usage_cmd + '.textglow Phaticusthiccy_\n\n' +
         command_cmd + '```.textfire``` \n' + desc_cmd + t25 + '_\n' + usage_cmd + '.textfire Phaticusthiccy_\n\n' +
         command_cmd + '```.text2fire``` \n' + desc_cmd + t46 + '_\n' + usage_cmd + '.text2fire Phaticusthiccy_\n\n' +
+        command_cmd + '```.text3fire``` \n' + desc_cmd + t73 + '_\n' + usage_cmd + '.text3fire Phaticusthiccy_\n\n' +
         command_cmd + '```.textharry``` \n' + desc_cmd + t26 + '_\n' + usage_cmd + '.textharry Phaticusthiccy_\n\n' +
         command_cmd + '```.text2harry``` \n' + desc_cmd + t32 + '_\n' + usage_cmd + '.text2harry Phaticusthiccy_\n\n' +
         command_cmd + '```.textcup``` \n' + desc_cmd + t29 + '_\n' + usage_cmd + '.textcup Phaticusthiccy_\n\n' +
@@ -266,6 +319,7 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.textblood``` \n' + desc_cmd + t44 + '_\n' + usage_cmd + '.textblood Phaticusthiccy_\n\n' +
         command_cmd + '```.text2blood``` \n' + desc_cmd + t45 + '_\n' + usage_cmd + '.text2blood Phaticusthiccy_\n\n' +
         command_cmd + '```.textpink``` \n' + desc_cmd + t47 + '_\n' + usage_cmd + '.textpink Phaticusthiccy_\n\n' +
+        command_cmd + '```.text2pink``` \n' + desc_cmd + t58 + '_\n' + usage_cmd + '.text2pink Phaticusthiccy_\n\n' +
         command_cmd + '```.textsand``` \n' + desc_cmd + t48 + '_\n' + usage_cmd + '.textsand Phaticusthiccy_\n\n' +
         command_cmd + '```.text2sand``` \n' + desc_cmd + t49 + '_\n' + usage_cmd + '.text2sans Phaticusthiccy_\n\n' +
         command_cmd + '```.text3sand``` \n' + desc_cmd + t50 + '_\n' + usage_cmd + '.text3sand Phaticusthiccy_\n\n' +
@@ -274,6 +328,18 @@ Asena.addCommand({pattern: 'textmaker$', fromMe: wk, desc: desc_msg}, (async (me
         command_cmd + '```.texthub``` \n' + desc_cmd + t54 + '_\n' + usage_cmd + '.texthub Thiccy;Hub_\n\n' +
         command_cmd + '```.textretro``` \n' + desc_cmd + t56 + '_\n' + usage_cmd + '.textretro Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.textsci``` \n' + desc_cmd + t57 + '_\n' + usage_cmd + '.textsci Phaticusthiccy_\n\n' +
+        command_cmd + '```.textpubg``` \n' + desc_cmd + t59 + '_\n' + usage_cmd + '.textpubg Phaticusthiccy_\n\n' +
+        command_cmd + '```.textroad``` \n' + desc_cmd + t60 + '_\n' + usage_cmd + '.textroad Phaticusthiccy_\n\n' +
+        command_cmd + '```.textsad``` \n' + desc_cmd + t61 + '_\n' + usage_cmd + '.textsad Phaticusthiccy_\n\n' +
+        command_cmd + '```.textabear``` \n' + desc_cmd + t62 + '_\n' + usage_cmd + '.textabear Phaticusthiccy_\n\n' +
+        command_cmd + '```.textpuppy``` \n' + desc_cmd + t63 + '_\n' + usage_cmd + '.textpuppy Phaticusthiccy_\n\n' +
+        command_cmd + '```.text2pubg``` \n' + desc_cmd + t64 + '_\n' + usage_cmd + '.text2pubg Phaticusthiccy_\n\n' +
+        command_cmd + '```.text3pubg``` \n' + desc_cmd + t65 + '_\n' + usage_cmd + '.text3pubg Phaticusthiccy_\n\n' +
+        command_cmd + '```.textheart``` \n' + desc_cmd + t66 + '_\n' + usage_cmd + '.textheart Phaticusthiccy_\n\n' +
+        command_cmd + '```.textangel``` \n' + desc_cmd + t69 + '_\n' + usage_cmd + '.textangel Phaticusthiccy_\n\n' +
+        command_cmd + '```.textleaf``` \n' + desc_cmd + t70 + '_\n' + usage_cmd + '.textleaf Phaticusthiccy_\n\n' +
+        command_cmd + '```.textgold``` \n' + desc_cmd + t71 + '_\n' + usage_cmd + '.textgold Phaticusthiccy_\n\n' +
+
         command_cmd + '```.textglitch``` \n' + desc_cmd + t14 + '_\n' + usage_cmd + '.textglitch Developer;Phaticusthiccy_\n\n' +
         command_cmd + '```.text2glitch``` \n' + desc_cmd + t31 + '_\n' + usage_cmd + '.text2glitch Developer;Phaticusthiccy_'
     await message.client.sendMessage(message.jid,msg, MessageType.text, { quoted: message.data })
@@ -315,6 +381,91 @@ Asena.addCommand({pattern: 'textsci ?(.*)', fromMe: wk, dontAddCommandList: true
               console.log(err)
           } 
     });
+}));
+Asena.addCommand({pattern: 'textleaf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/dark-green-typography-online-359.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'text3fire ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/dragon-fire-text-effect-111.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'text2space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-galaxy-style-free-name-logo-438.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena'})
+}));
+Asena.addCommand({pattern: 'text3space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/galaxy-text-effect-116.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'textgold ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/modern-gold-3-212.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'text3space ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/galaxy-text-effect-116.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'textangel ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/wings-galaxy-206.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'text2pink ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-a-blackpink-neon-logo-text-effect-online-710.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'textabear ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-funny-animations-of-a-traveling-bear-701.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
+}));
+Asena.addCommand({pattern: 'textheart ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/write-name-on-heart-with-wings-gifs-430.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
+}));
+Asena.addCommand({pattern: 'text4graf ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/text-graffiti-3d-208.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'textpuppy ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-puppy-cute-animated-online-478.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
+}));
+Asena.addCommand({pattern: 'textroad ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-glowing-text-effects-online-706.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'textsad ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/write-text-on-wet-glass-online-589.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'text3pubg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var img = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-the-cover-game-playerunknown-s-battlegrounds-401.html')
+    var buffer_data = await axios.get(img.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+}));
+Asena.addCommand({pattern: 'textpubg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var vid = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/create-pubg-style-glitch-video-avatar-554.html')
+    var buffer_data = await axios.get(vid.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.mp4 })
+}));
+Asena.addCommand({pattern: 'text2pubg ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
+    var vid = await WhatsAsenaStack.ephoto(match[1], 'https://en.ephoto360.com/lightning-pubg-video-logo-maker-online-615.html')
+    var buffer_data = await axios.get(vid.image, { responseType: 'arraybuffer'})
+    await message.sendMessage(Buffer.from(buffer_data.data), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.mp4 })
 }));
 Asena.addCommand({pattern: 'text2devil ?(.*)', fromMe: wk, dontAddCommandList: true}, (async (message, match) => {
     thiccysapi.textpro("https://textpro.me/create-green-horror-style-text-effect-online-1036.html",
