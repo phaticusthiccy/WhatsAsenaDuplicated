@@ -30,6 +30,7 @@
         "admin": {
             "BAN_DESC": "Ban someone in the group. Reply to message or tag a person to use command.",
             "IM_NOT_ADMIN": "*I am not admin in this group!*",
+            "USER_NOT_ADMIN": "*You are not admin in this group!*",
             "BANNED": "kicked out of the group!",
             "GIVE_ME_USER": "*Give me a user!*",
             "ADD_DESC": "Adds someone to the group.",
