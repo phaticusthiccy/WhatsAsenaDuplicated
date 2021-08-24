@@ -8,9 +8,9 @@ WhatsAsena - Yusuf Usta
 
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
-const speedTest = require('@lh2020/speedtest-net');
 const TinyURL = require('tinyurl');
 const Config = require('../config');
+const WhatsAsenaStack = require('whatsasena-npm')
 
 const Language = require('../language');
 const Lang = Language.getString('web');
@@ -368,32 +368,129 @@ Asena.addCommand({pattern: '?(.*)', fromMe: true, deleteCommand: false, dontAddC
     }
 }));
 */
-// https://github.com/ddsol/speedtest.net/blob/master/bin/index.js#L86
-function speedText(speed) {
-    let bits = speed * 8;
-    const units = ['', 'K', 'M', 'G', 'T'];
-    const places = [0, 1, 2, 3, 3];
-    let unit = 0;
-    while (bits >= 2000 && unit < 4) {
-      unit++;
-      bits /= 1000;
+
+Asena.addCommand({pattern: 'speedtest ?(.*)', fromMe: true, desc: Lang.SPEEDTEST_DESC, usage: 'speedtest user // speedtest server'}, (async (message, match) => {
+    if (match[1] == 'user' || match[1] == 'User') {
+        
+        // Preliminary Message
+        var transition_message = await WhatsAsenaStack.speedtest_once(Config.LANG)
+
+        // Ping
+        var start = new Date().getTime();
+        await message.client.sendMessage(message.jid, transition_message.user_msg, MessageType.text)
+        var end = new Date().getTime();
+
+        // Speedtest Modules
+        var user_download = await WhatsAsenaStack.speedtest_user()
+        var user_upload = await WhatsAsenaStack.uploadtest_user()
+        var auth_message = await WhatsAsenaStack.speedtest_message(Config.LANG)
+        var act_ping = end - start
+        var realping = act_ping.toString()
+
+        // Real Download Speed
+        var realspeed_once = Number(user_download.mbps) / 8
+        var realspeed = realspeed_once.toString()
+        var realspeed_msg = auth_message.download_value.replace('{count}', realspeed)
+
+        // Real Upload Speed
+        var realupload_once = Number(user_upload.mbps) / 8
+        var realupload = realupload_once.toString()
+        var realupload_msg = auth_message.download_value.replace('{count}', realupload)
+
+        // Final Message
+        var payload = auth_message.download + realspeed_msg + '\n' + 
+            auth_message.upload + realupload_msg + '\n' +
+            auth_message.ping + realping + auth_message.ms + '\n' +
+            auth_message.extra + '\n\n' +
+            auth_message.byte_speed_d + user_download.bps + '\n' +
+            auth_message.kb_speed_d + user_download.kbps + '\n' +
+            auth_message.mb_speed_d + user_download.mbps + '\n' +
+            auth_message.gb_speed_d + user_download.gbps
+        
+        await message.client.sendMessage(message.jid, payload, MessageType.text)
+
+    } else if (match[1] == 'server' || match[1] == 'Server') {
+        
+        // Preliminary Message
+        var transition_message = await WhatsAsenaStack.speedtest_once(Config.LANG)
+
+        // Ping
+        var start = new Date().getTime();
+        await message.client.sendMessage(message.jid, transition_message.server_msg, MessageType.text)
+        var end = new Date().getTime();
+
+        // Speedtest Modules
+        var server_download = await WhatsAsenaStack.speedtest_server()
+        var server_upload = await WhatsAsenaStack.uploadtest_server()
+        var auth_message = await WhatsAsenaStack.speedtest_message(Config.LANG)
+        var act_ping = end - start
+       
+        // Simple Way of Checking Heroku Latency
+        var act_ping_then = act_ping / 50 
+        var realping = act_ping_then.toString()
+
+        // Real Download Speed
+        var realspeed_once = Number(server_download.mbps) / 8
+        var realspeed = realspeed_once.toString()
+        var realspeed_msg = auth_message.download_value.replace('{count}', realspeed)
+
+        // Real Upload Speed
+        var realupload_once = Number(server_upload.mbps) / 8
+        var realupload = realupload_once.toString()
+        var realupload_msg = auth_message.download_value.replace('{count}', realupload)
+
+        // Final Message
+        var payload = auth_message.download + realspeed_msg + '\n' + 
+            auth_message.upload + realupload_msg + '\n' +
+            auth_message.ping + realping + auth_message.ms + '\n' +
+            auth_message.extra + '\n\n' +
+            auth_message.byte_speed_d + server_download.bps + '\n' +
+            auth_message.kb_speed_d + server_download.kbps + '\n' +
+            auth_message.mb_speed_d + server_download.mbps + '\n' +
+            auth_message.gb_speed_d + server_download.gbps
+        
+        await message.client.sendMessage(message.jid, payload, MessageType.text)
+    } else {
+        // Preliminary Message
+        var transition_message = await WhatsAsenaStack.speedtest_once(Config.LANG)
+
+        // Ping
+        var start = new Date().getTime();
+        await message.client.sendMessage(message.jid, transition_message.server_msg, MessageType.text)
+        var end = new Date().getTime();
+
+        // Speedtest Modules
+        var server_download = await WhatsAsenaStack.speedtest_server()
+        var server_upload = await WhatsAsenaStack.uploadtest_server()
+        var auth_message = await WhatsAsenaStack.speedtest_message(Config.LANG)
+        var act_ping = end - start
+       
+        // Simple Way of Checking Heroku Latency
+        var act_ping_then = act_ping / 50 
+        var realping = act_ping_then.toString()
+
+        // Real Download Speed
+        var realspeed_once = Number(server_download.mbps) / 8
+        var realspeed = realspeed_once.toString()
+        var realspeed_msg = auth_message.download_value.replace('{count}', realspeed)
+
+        // Real Upload Speed
+        var realupload_once = Number(server_upload.mbps) / 8
+        var realupload = realupload_once.toString()
+        var realupload_msg = auth_message.download_value.replace('{count}', realupload)
+
+        // Final Message
+        var payload = auth_message.download + realspeed_msg + '\n' + 
+            auth_message.upload + realupload_msg + '\n' +
+            auth_message.ping + realping + auth_message.ms + '\n' +
+            auth_message.extra + '\n\n' +
+            auth_message.byte_speed_d + server_download.bps + '\n' +
+            auth_message.kb_speed_d + server_download.kbps + '\n' +
+            auth_message.mb_speed_d + server_download.mbps + '\n' +
+            auth_message.gb_speed_d + server_download.gbps
+        
+        await message.client.sendMessage(message.jid, payload, MessageType.text)
     }
-
-    return `${bits.toFixed(places[unit])} ${units[unit]}bps`;
-}
-
-Asena.addCommand({pattern: 'speedtest', fromMe: true, desc: Lang.SPEEDTEST_DESC}, (async (message, match) => {
-    var msg = await message.reply(Lang.SPEEDTESTING);
-    var st = await speedTest({acceptLicense: true, acceptGdpr: true});
-    
-    await message.client.sendMessage(
-      message.jid,Lang.SPEEDTEST_RESULT + '\n\n' + 
-    '*ISP:* ```' + st.isp + '```\n' +
-    '*Ping:* ```' + st.ping.latency + 'ms```\n' +
-    '*' + Lang.UPLOAD + ':* ```' + speedText(st.upload.bandwidth) + '```\n' +
-    '*' + Lang.DOWNLOAD + ':* ```' + speedText(st.download.bandwidth) + '```\n',MessageType.text
-    );
-    await msg.delete();
 }));
 
 Asena.addCommand({pattern: 'ping$', fromMe: true, deleteCommand: false, desc: Lang.PING_DESC}, (async (message, match) => {
