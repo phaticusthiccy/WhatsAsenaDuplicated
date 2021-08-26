@@ -19,6 +19,12 @@ deepai.setApiKey(Config.DEEPAI); // Users API Key
 
 const Language = require('../language'); 
 const Lang = Language.getString('deepai'); // Language Support
+var noAPI = ''
+if (Config.LANG == 'TR' || Config.LANG == 'AZ') {
+  noAPI = '*DeepAI API Key Bulunamadı!* \n*Lütfen Aşağıdaki Adresten Gerekli Adımları Takip Edin!*' + '\n\n*URL:* https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/DeepAI-API-Key#-deepai-api-key-al%C4%B1c%C4%B1'
+} else {
+  noAPI = '*DeepAI API Key Not Found!* \n*Please Follow the Required Steps at the Address Below!*' + '\n\n*URL:* https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/DeepAI-API-Key#-deepai-api-key-scraper'
+}
 
 if (Config.WORKTYPE == 'private') {
     Asena.addCommand({pattern: 'deepai$', fromMe: true, deleteCommand: false, desc: Lang.DEEPAI_DESC}, (async (message, match) => {
@@ -43,6 +49,7 @@ if (Config.WORKTYPE == 'private') {
         )
     }));
     Asena.addCommand({pattern: 'colorai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Colorizing.. 🎨',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -64,6 +71,7 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'waifuai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {  
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Mixing.. 🧩',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -85,6 +93,7 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'superai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {  
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Enhancing.. 🖌️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -106,6 +115,7 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
         var msgdata = await WhatsAsenaStack.mood(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("sentiment-analysis", {
@@ -113,7 +123,8 @@ if (Config.WORKTYPE == 'private') {
         });
         await message.reply(`*Mood:* ${resp.output}`);
     }));
-    Asena.addCommand({pattern: 'dreamai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'dreamai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {   
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI); 
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Starry Night.. 🌃',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -135,6 +146,7 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'neuraltalkai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {   
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Reading.. 🙇🏻',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -155,6 +167,7 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
         var msg_tt = await WhatsAsenaStack.tti(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("text2img", {
@@ -164,6 +177,7 @@ if (Config.WORKTYPE == 'private') {
         await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
     }));
     Asena.addCommand({pattern: 'toonai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {   
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Tooning.. 🌟',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -185,6 +199,7 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'nudityai$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {  
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Finding NSFW.. 🔥',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -205,6 +220,7 @@ if (Config.WORKTYPE == 'private') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'textai ?(.*)', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
         var text_ai = await WhatsAsenaStack.text(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("text-generator", {
@@ -212,7 +228,8 @@ if (Config.WORKTYPE == 'private') {
         });
         await message.client.sendMessage(message.jid, `*Article:*\n ${resp.output}`, MessageType.text, { quoted: message.data });
     }));
-    Asena.addCommand({pattern: 'ganstyle$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {   
+    Asena.addCommand({pattern: 'ganstyle$', fromMe: true, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {  
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI); 
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Creating.. ♻️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -257,7 +274,8 @@ else if (Config.WORKTYPE == 'public') {
             { mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'}
         )
     }));
-    Asena.addCommand({pattern: 'colorai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+    Asena.addCommand({pattern: 'colorai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => { 
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);   
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Colorizing.. 🎨',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -279,6 +297,7 @@ else if (Config.WORKTYPE == 'public') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'waifuai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {  
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Mixing.. 🧩',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -299,7 +318,8 @@ else if (Config.WORKTYPE == 'public') {
             });
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
-    Asena.addCommand({pattern: 'superai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {  
+    Asena.addCommand({pattern: 'superai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);  
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Enhancing.. 🖌️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -321,6 +341,7 @@ else if (Config.WORKTYPE == 'public') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'moodai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
         var msgdata = await WhatsAsenaStack.mood(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("sentiment-analysis", {
@@ -329,6 +350,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.reply(`*Mood:* ${resp.output}`);
     }));
     Asena.addCommand({pattern: 'dreamai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {    
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Starry Night.. 🌃',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -350,6 +372,7 @@ else if (Config.WORKTYPE == 'public') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'neuraltalkai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {   
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Reading.. 🙇🏻',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -370,6 +393,7 @@ else if (Config.WORKTYPE == 'public') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'ttiai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
         var msg_tt = await WhatsAsenaStack.tti(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("text2img", {
@@ -379,6 +403,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.sendMessage(Buffer.from(respoimage.data), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'})
     }));
     Asena.addCommand({pattern: 'toonai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {   
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Tooning.. 🌟',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -400,6 +425,7 @@ else if (Config.WORKTYPE == 'public') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'nudityai$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {  
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Finding NSFW.. 🔥',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
@@ -420,6 +446,7 @@ else if (Config.WORKTYPE == 'public') {
             return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
     Asena.addCommand({pattern: 'textai ?(.*)', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (match[1] === '') return await message.sendMessage(Lang.TEXT);
         var text_ai = await WhatsAsenaStack.text(match[1], Config.DEEPAI)
         var resp = await deepai.callStandardApi("text-generator", {
@@ -428,6 +455,7 @@ else if (Config.WORKTYPE == 'public') {
         await message.client.sendMessage(message.jid, `*Article:*\n ${resp.output}`, MessageType.text, { quoted: message.data });
     }));
     Asena.addCommand({pattern: 'ganstyle$', fromMe: false, deleteCommand: false, dontAddCommandList: true}, (async (message, match) => {   
+        if (!Config.DEEPAI) return await message.sendMessage(noAPI);
         if (message.reply_message === false) return await message.sendMessage('```Need Photo!```');
         var downloading = await message.client.sendMessage(message.jid,'Creating.. ♻️',MessageType.text);
         var location = await message.client.downloadAndSaveMediaMessage({
