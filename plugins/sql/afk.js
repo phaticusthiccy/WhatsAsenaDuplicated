@@ -3,6 +3,7 @@ Telegram: t.me/phaticusthiccy
 Instagram: www.instagram.com/kyrie.baran
 */
 
+/*
 const config = require('../../config');
 const { DataTypes } = require('sequelize');
 
@@ -51,3 +52,10 @@ module.exports = {
     getStatus: getStatus,
     setStatus: setStatus
 };
+*/
+
+/*
+Changed Status to Inactive
+Some technical issues caused pool connection bugs.
+It will be fixed in new versions.
+*/
