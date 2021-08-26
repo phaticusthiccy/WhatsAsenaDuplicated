@@ -1,3 +1,8 @@
+/* Codded by @phaticusthiccy
+Telegram: t.me/phaticusthiccy
+Instagram: www.instagram.com/kyrie.baran
+*/
+
 const {MessageType, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const Asena = require('../events');
 const Config = require('../config');
