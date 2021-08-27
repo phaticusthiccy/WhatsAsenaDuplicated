@@ -31,16 +31,19 @@ Asena.addCommand({pattern: 'killspam', fromMe: true, desc: Lang.STOP_SPAMDESC}, 
 
 Asena.addCommand({pattern: 'spam ?(.*)', fromMe: true, desc: Lang.SPAM_DESC}, (async (message, match) => {
 
+    var fin = ''
+    if (message.reply_message) {
+        fin = message.reply_message.text
+    } else {
+        if (match[1] === '') {
 
-    if (match[1] === '') {
+            return await message.client.sendMessage(message.jid, Lang.NEED_WORD);
+        } else {
 
-        return await message.client.sendMessage(message.jid, Lang.NEED_WORD);
-
+            var spam = `${match[1]}`
+            fin = spam.replace(/#/g, "\n");
+        }
     }
-
-    var spam = `${match[1]}`
-    var fin = spam.replace(/#/g, "\n");
-
     await message.client.sendMessage(message.jid, fin, MessageType.text);
     
     await message.client.sendMessage(message.jid, fin, MessageType.text);

@@ -95,7 +95,7 @@
             "NOT_FOUND": "```इस key के लिए कोई परिणाम नहीं मिले```",
             "SUCC": "*सफलतापूर्वक सेट अप करें ✅* \n*कृपया थोड़ी देर प्रतीक्षा करें.*",
             "SUCC_AF": "*इसे पुनर्स्थापित करने के लिए* ```default``` *का उपयोग करें*",
-            "DEGİS_NONE": "```कृपया कोई भी मॉड्यूल नाम दर्ज करें!``` \n\n*.degis afk*\n*.degis alive* << *चर* >> \n_{pp}: एक बार इसका इस्तेमाल करना काफी होगा। संदेश में अपना प्रोफ़ाइल फ़ोटो जोड़ता है_ \n_{info}: अपना स्टेटस दिखाता है_ \n_{version}: बॉट का संस्करण दिखाता है_ \n_{plugin}: प्लगइन चैनल दिखाता है_\n*.degis ban*\n*.degis add*\n*.degis welcome* \n*.degis goodbye* \n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```कृपया कोई भी मॉड्यूल नाम दर्ज करें!``` \n\n*.degis afk*\n*.degis alive* << *चर* >> \n_{pp}: एक बार इसका इस्तेमाल करना काफी होगा। संदेश में अपना प्रोफ़ाइल फ़ोटो जोड़ता है_\n_{asenalogo}: एनिमेटेड WhatsAsena लोगो जोड़ता है।_ \n_{info}: अपना स्टेटस दिखाता है_ \n_{version}: बॉट का संस्करण दिखाता है_ \n_{plugin}: प्लगइन चैनल दिखाता है_\n*.degis ban*\n*.degis add*\n*.degis welcome* \n*.degis goodbye* \n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*कृपया लागू होने वाले मॉड्यूल का उपयोग करें!*",
             "DEGİS_DESC": "Alive, afk जैसे मॉड्यूल के टेक्स्ट को बदलें."           
         },
@@ -400,7 +400,7 @@
             "CARBON_WARN": "केवल TR और EN भाषाओं में लिखें!"
         },
         "scam": {
-            "SCAM_DESC": "5 मिनट की नकली क्रिया बनाता है।",
+            "SCAM_DESC": "नकली कार्रवाइयां उत्पन्न करता है।",
             "SCAM_NOTFOUND": "*आपको फेक एक्शन दर्ज करना होगा!*\nमौजूदा प्रकार: ```typing & recording & online & stop```",
             "SCAM_NULL": "```गलत कार्रवाई दर्ज! कृपया मौजूदा प्रकारों का उपयोग करें```"
         },

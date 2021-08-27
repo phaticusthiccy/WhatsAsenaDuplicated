@@ -90,7 +90,7 @@
             "NOT_FOUND": "```tidak ada hasil yang ditemukan untuk kunci ini```",
             "SUCC": "*Berhasil Mengatur ✅* \n*Mohon tunggu sebentar.*",
             "SUCC_AF": "*Gunakan teks* ```default``` *untuk memulihkannya.*",
-            "DEGİS_NONE": "```Harap Masukkan Nama Modul Apa Pun!``` \n\n*.degis afk*\n*.degis alive* << *Variabel* >> \n_{pp}: Ini akan cukup untuk digunakan sekali. Tambahkan foto profil Anda ke pesan. \n_{info}: Menunjukkan status Anda_ \n_{version}: Menampilkan versi bot_ \n_{plugin}: Menunjukkan saluran plugin_\n*.degis ban*\n*.degis add*\n*.degis welcome* \n*.degis goodbye* \n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```Harap Masukkan Nama Modul Apa Pun!``` \n\n*.degis afk*\n*.degis alive* << *Variabel* >> \n_{pp}: Ini akan cukup untuk digunakan sekali. Tambahkan foto profil Anda ke pesan._ \n_{asenalogo}: Menambahkan logo WhatsAsena animasi._\n_{info}: Menunjukkan status Anda_ \n_{version}: Menampilkan versi bot_ \n_{plugin}: Menunjukkan saluran plugin_\n*.degis ban*\n*.degis add*\n*.degis welcome* \n*.degis goodbye* \n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Harap gunakan modul yang sesuai!*",
             "DEGİS_DESC": "Ganti teks modul seperti alive, afk."        
         },
@@ -400,7 +400,7 @@
             "CARBON_WARN": "Harap tulis dalam bahasa TR dan EN saja!"
         },
         "scam": {
-            "SCAM_DESC": "Menciptakan 5 menit tindakan palsu.",
+            "SCAM_DESC": "Menghasilkan tindakan palsu.",
             "SCAM_NOTFOUND": "*Anda Harus Melakukan Tindakan Palsu!*\nJenis yang Ada: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Tindakan yang Salah Dimasukkan! Harap gunakan tipe yang ada.```"
         },

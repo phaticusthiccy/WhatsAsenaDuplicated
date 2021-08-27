@@ -93,7 +93,7 @@
       "DEL_SUCCESS": "{} успешно удален",
       "SUCC": "Успешно установлено ✅ \n*Пожалуйста подождите немного.*",
       "SUCC_AF": "Используйте default, чтобы вернуться.",
-      "DEGİS_NONE": "Пожалуйста, введите любое имя модуля! \n\n*.degis afk*\n*.degis alive* << Переменные >> \n_{pp}: Достаточно один раз использовать. Добавляет фото вашего профиля в сообщение.\n{info}: Приносит ваш статус.\n{version}: Приносит версию бота.\n{plugin}: Приносит канал плагина._\n*.degis ban*\n*.degis welcome*\n*.degis goodbye*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+      "DEGİS_NONE": "Пожалуйста, введите любое имя модуля! \n\n*.degis afk*\n*.degis alive* << *Переменные* >> \n_{pp}: Достаточно один раз использовать. Добавляет фото вашего профиля в сообщение._ \n_{asenalogo}: Добавляет анимированный логотип WhatsAsena._\n_{info}: Приносит ваш статус._\n_{version}: Приносит версию бота._\n_{plugin}: Приносит канал плагина._\n*.degis ban*\n*.degis welcome*\n*.degis goodbye*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
       "WR": "Пожалуйста, используйте действующие модули!",
       "GR_DEL": "Набор Приветственное сообщение!\n*для удаления* .goodbye delete & .welcome delete используйте команду!",
       "DEGİS_DESC": "Изменяет тексты модулей типа Alive, Afk.",
@@ -399,7 +399,7 @@
       "CARBON_WARN": "Lütfen sadece tr ve en dilinde yazın!"
     },
     "scam": {
-      "SCAM_DESC": "Создает 5-минутные фальшивые действия.",
+      "SCAM_DESC": "Создает поддельные действия.",
       "SCAM_NOTFOUND": "*Вы должны совершить поддельное действие!*\nСуществующие виды: ```typing & recording & online & stop```",
       "SCAM_NULL": "```Введено неправильное действие! Пожалуйста, используйте существующие типы.```"
     },

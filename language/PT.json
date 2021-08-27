@@ -95,7 +95,7 @@
             "NOT_FOUND": "```nenhum resultado encontrado para esta chave```",
             "SUCC": "*Configurado com sucesso ✅* \n*Por favor espere um pouco.*",
             "SUCC_AF": "*Use o script* ```default``` *para restaurá-lo.*",
-            "DEGİS_NONE": "```Por favor, digite qualquer nome de módulo!``` \n\n*.degis afk*\n*.degis alive* << *Variáveis* >> \n_{pp}: É suficiente usá-lo uma vez. Anexa sua foto de perfil à mensagem._ \n_{info}: Mostra seu status._ \n_{version}: Mostra a versão do bot._ \n_{plugin}: Mostra o canal do plugin._\n*.degis ban*\n*.degis add*\n*.degis welcome* \n*.degis goodbye*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```Por favor, digite qualquer nome de módulo!``` \n\n*.degis afk*\n*.degis alive* << *Variáveis* >> \n_{pp}: É suficiente usá-lo uma vez. Anexa sua foto de perfil à mensagem._  \n_{asenalogo}: Adiciona logotipo animado do WhatsAsena._\n_{info}: Mostra seu status._ \n_{version}: Mostra a versão do bot._ \n_{plugin}: Mostra o canal do plugin._\n*.degis ban*\n*.degis add*\n*.degis welcome* \n*.degis goodbye*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Use os módulos que se aplicam!*",
             "DEGİS_DESC": "Substitua o texto dos módulos como alive, afk."          
         },
@@ -400,7 +400,7 @@
             "CARBON_WARN": "Por favor, digite apenas os caracteres en e tr!"
         },
         "scam": {
-            "SCAM_DESC": "Cria 5 minutos de ações falsas.",
+            "SCAM_DESC": "Cria ações falsas.",
             "SCAM_NOTFOUND": "*Você deve entrar em ação falsa!*\nTipos Existentes: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Ação incorreta inserida! Use os tipos existentes.```"
         },

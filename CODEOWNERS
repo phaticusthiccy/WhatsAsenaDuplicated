@@ -1,0 +1,41 @@
+# For the syntax of this file, see:
+#
+#    https://docs.gitlab.com/ee/user/project/code_owners.html#the-syntax-of-code-owners-files
+#
+# If more than one rule matches a given file, the latest rule is used.
+# The file should be generally kept sorted, except when it is necessary
+# to use a different order due to the fact above. In that case, use
+# '# sort-order-reset' comment line to reset the sort order.
+# Project maintainers are responsible for clarifying the standards of acceptable
+# behavior and are expected to take appropriate and fair corrective action in
+# response to any instances of unacceptable behavior.
+#
+# Project maintainers have the right and responsibility to remove, edit, or
+# reject comments, commits, code, wiki edits, issues, and other contributions
+# that are not aligned to this Code of Conduct, or to ban temporarily or
+# permanently any contributor for other behaviors that they deem inappropriate,
+# threatening, offensive, or harmful.
+# Instances of abusive, harassing, or otherwise unacceptable behavior may be
+# reported by contacting the project team at AsenaDev. All
+# complaints will be reviewed and investigated and will result in a response that
+# is deemed necessary and appropriate to the circumstances. The project team is
+# obligated to maintain confidentiality with regard to the reporter of an incident.
+# Further details of specific enforcement policies may be posted separately.
+# Contributers:
+* @phaticusthiccy
+# Project maintainers who do not follow or enforce the Code of Conduct in good
+# faith may face temporary or permanent repercussions as determined by other
+# members of the project's leadership.
+# You are not required to accept this License in order to receive or
+# run a copy of the Program.  Ancillary propagation of a covered work
+# occurring solely as a consequence of using peer-to-peer transmission
+# to receive a copy likewise does not require acceptance.  However,
+# nothing other than this License grants you permission to propagate or
+# modify any covered work.  These actions infringe copyright if you do
+# not accept this License.  Therefore, by modifying or propagating a
+# covered work, you indicate your acceptance of this License to do so.
+# Reserved
+# Reserved
+# Reserved
+# Reserved
+# Reserved

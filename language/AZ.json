@@ -95,7 +95,7 @@
             "NOT_FOUND": "```bu açar üçün heç bir nəticə tapılmadı```",
             "SUCC": "*Uğurla qurun! ✅* \n*Xahiş edirəm bir az gözləyin.*",
             "SUCC_AF": "*Bərpa etmək üçün* ```default``` *mətn istifadə edin.*",
-            "DEGİS_NONE": "```Zəhmət olmasa istənilən modul adını daxil edin!``` \n\n*.degis afk*\n*.degis alive* << *Dəyişənlər* >> \n_{pp}: Bir dəfə istifadə etmək kifayətdir. Profil şəklinizi mesaja əlavə edir._\n_{info}: Statusunuzu göstərir._ \n_{version}: Botun versiyasını göstərir._ \n_{plugin}: Plugin kanalını göstərir._\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis welcome* \n*.degis goodbye* \n*.degis kickme*\n*.degis block*\n*.degis unblock*",
+            "DEGİS_NONE": "```Zəhmət olmasa istənilən modul adını daxil edin!``` \n\n*.degis afk*\n*.degis alive* << *Dəyişənlər* >> \n_{pp}: Bir dəfə istifadə etmək kifayətdir. Profil şəklinizi mesaja əlavə edir._ \n_{asenalogo}: Cizgi WhatsAsena loqotipi əlavə edir._\n_{info}: Statusunuzu göstərir._ \n_{version}: Botun versiyasını göstərir._ \n_{plugin}: Plugin kanalını göstərir._\n*.degis ban*\n*.degis add*\n*.degis mute*\n*.degis unmute*\n*.degis promote*\n*.degis demote*\n*.degis welcome* \n*.degis goodbye* \n*.degis kickme*\n*.degis block*\n*.degis unblock*",
             "WR": "*Zəhmət olmasa tətbiq olunan modullardan istifadə edin!*",
             "DEGİS_DESC": "Modulların mətnini alive, afk kimi dəyişdirin."        
         },
@@ -398,7 +398,7 @@
             "CARBON_WARN": "Xahiş edirəm yalnız en və en dillərində yazın!"
         },
         "scam": {
-            "SCAM_DESC": "5 dəqiqəlik saxta hərəkətlər yaradır.",
+            "SCAM_DESC": "Saxta hərəkətlər yaradır.",
             "SCAM_NOTFOUND": "*Saxta Fəaliyyət Yazmalısınız!*\nMövcud Növləri: ```typing & recording & online & stop```",
             "SCAM_NULL": "```Səhv Əməliyyat Girdi! Zəhmət olmasa mövcud növlərdən istifadə edin.```"
         },
