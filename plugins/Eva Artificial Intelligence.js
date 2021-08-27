@@ -54,6 +54,7 @@ const axios = require('axios')
 const axiosdef = require("axios").default;
 const os = require('os')
 const translatte = require('translatte');
+const WhatsAsenaStack = require('whatsasena-npm');
 const LanguageDetect = require('languagedetect');
 const lngDetector = new LanguageDetect();
 const Heroku = require('heroku-client');
@@ -107,22 +108,43 @@ eva_functionality_f()
 
 Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteCommand: false}, (async (message, match) => {
     if (message.message.startsWith('Eva') && eva_functionality !== 'true') {        
-        var unique_ident = message.client.user.jid.split('@')[0]      
+        var unique_ident = ''
+        if (conf.WORKTYPE == 'private') {
+            unique_ident = message.client.user.jid.split('@')[0]
+        } else if (conf.WORKTYPE == 'public') {
+            unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
+        }
         let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
-        let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'
-        var finm = message.message.replace('Eva', '').replace(' ', '')   
+        let aitalk_mode = ''
+        if (message.message.includes('{normal}')) {
+            aitalk_mode = 'raw'
+        } else if (message.message.includes('{humanoid}')) {
+            aitalk_mode = 'human'
+        } else if (message.message.includes('{anime}')) {
+            aitalk_mode = 'waifu'
+        } else if (message.message.includes('{robot}')) {
+            aitalk_mode = 'robo'
+        } else if (message.message.includes('{private}')) {
+            aitalk_mode = 'secret'
+        }
+        var finm = ''
+        if (conf.WORKTYPE == 'private') {
+            finm = message.message.replace('Eva', '').replace(' ', '')
+        } else if (conf.WORKTYPE == 'public') {
+            finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
+        }
         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
         if (ainame !== 'Asena') return;
         var ldet = lngDetector.detect(finm)
         var trmsg = ''
-        try {
+        if (ldet[0][0] !== undefined) {
             if (ldet[0][0] !== 'english') {
                 ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
                 if ('text' in ceviri) {
                     trmsg = ceviri.text
                 }
             } else { trmsg = finm }
-        } catch {
+        } else {
             ceviri = await translatte(finm, {
                 from: 'auto', 
                 to: 'EN'
@@ -131,17 +153,17 @@ Asena.addCommand({on: 'text', fromMe: wk, dontAddCommandList: true, deleteComman
                 trmsg = ceviri.text
             }
         }
-        var uren = encodeURI(trmsg)
-        await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
-            var fins = ''                           
-            if (conf.LANG !== 'EN') {
-                ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                if ('text' in ceviri) {
-                    fins = ceviri.text
-                }
-            } else { fins = response.data.cnt }
-            await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
-        })
+        var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
+        var fins = ''                           
+        if (conf.LANG !== 'EN') {
+            ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+            if ('text' in ceviri) {
+                fins = ceviri.text
+            }
+        } else { 
+            fins = payload_client.result 
+        }
+        await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
     }
 }));
 Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (message, match) => {
@@ -150,22 +172,23 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
             if (message.jid.includes('-') && (message.mention !== false && message.mention.length !== 0)) {
                 message.mention.map(async (jid) => {
                     if (message.client.user.jid.split('@')[0] === jid.split('@')[0]) {
-                        var unique_ident = message.data.participant.split('@')[0] + 'fulleva'     
+                        var unique_ident = ''
+                        unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
                         let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                         let aitalk_mode = message.message.includes('{normal}') ? 'raw' : 'waifu'                       
                         var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
                         if (ainame !== 'Asena') return;
-                        var finm = message.message
+                        var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                         var ldet = lngDetector.detect(finm)
                         var trmsg = ''
-                        try {
+                        if (ldet[0][0] !== undefined) {
                             if (ldet[0][0] !== 'english') {
                                 ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
                                 if ('text' in ceviri) {
                                     trmsg = ceviri.text
                                 }
                             } else { trmsg = finm }
-                        } catch {
+                        } else {
                             ceviri = await translatte(finm, {
                                 from: 'auto', 
                                 to: 'EN'
@@ -174,36 +197,37 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                                 trmsg = ceviri.text
                             }
                         }
-                        var uren = encodeURI(trmsg)
-                        await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
-                            var fins = ''                           
-                            if (conf.LANG !== 'EN') {
-                                ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                                if ('text' in ceviri) {
-                                    fins = ceviri.text
-                                }
-                            } else { fins = response.data.cnt }
-                            await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
-                        })
+                        var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
+                        var fins = ''                           
+                        if (conf.LANG !== 'EN') {
+                            ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+                            if ('text' in ceviri) {
+                                fins = ceviri.text
+                            }
+                        } else { 
+                            fins = payload_client.result 
+                        }
+                        await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
                     }
                 })
             } else if (message.jid.includes('-') && message.reply_message !== false) {
                 if (message.reply_message.jid.split('@')[0] === message.client.user.jid.split('@')[0]) {
-                    var unique_ident = message.data.participant.split('@')[0] + 'fulleva'     
+                    var unique_ident = ''
+                    unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
                     let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                     var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
                     if (ainame !== 'Asena') return;
-                    var finm = message.message
+                    var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                     var ldet = lngDetector.detect(finm)
                     var trmsg = ''
-                    try {
+                    if (ldet[0][0] !== undefined) {
                         if (ldet[0][0] !== 'english') {
                             ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
                             if ('text' in ceviri) {
                                 trmsg = ceviri.text
                             }
                         } else { trmsg = finm }
-                    } catch {
+                    } else {
                         ceviri = await translatte(finm, {
                             from: 'auto', 
                             to: 'EN'
@@ -212,34 +236,35 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                             trmsg = ceviri.text
                         }
                     }
-                    var uren = encodeURI(trmsg)
-                    await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
-                        var fins = ''                           
-                        if (conf.LANG !== 'EN') {
-                            ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                            if ('text' in ceviri) {
-                                fins = ceviri.text
-                            }
-                        } else { fins = response.data.cnt }
-                        await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
-                    })
+                    var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
+                    var fins = ''                           
+                    if (conf.LANG !== 'EN') {
+                        ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+                        if ('text' in ceviri) {
+                            fins = ceviri.text
+                        }
+                    } else { 
+                        fins = payload_client.result 
+                    }
+                    await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
                 }
             } else {
-                var unique_ident = message.data.participant.split('@')[0] + 'fulleva'   
+                var unique_ident = ''
+                unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
                 let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'
                 var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
                 if (ainame !== 'Asena') return;
-                var finm = message.message
+                var finm = message.message.replace('Eva', '').replace(' ', '').replace('@' + message.client.user.jid.split('@')[0], '')
                 var ldet = lngDetector.detect(finm)
                 var trmsg = ''
-                try {
+                if (ldet[0][0] !== undefined) {
                     if (ldet[0][0] !== 'english') {
                         ceviri = await translatte(finm, {from: 'auto', to: 'EN'});
                         if ('text' in ceviri) {
                             trmsg = ceviri.text
                         }
                     } else { trmsg = finm }
-                } catch {
+                } else {
                     ceviri = await translatte(finm, {
                         from: 'auto', 
                         to: 'EN'
@@ -248,20 +273,19 @@ Asena.addCommand({on: 'text', fromMe: false, deleteCommand: false}, (async (mess
                         trmsg = ceviri.text
                     }
                 }
-                var uren = encodeURI(trmsg)
-                await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + uren).then(async (response) => {
-                    var fins = ''                           
-                    if (conf.LANG !== 'EN') {
-                        ceviri = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                        if ('text' in ceviri) {
-                            fins = ceviri.text
-                        }
-                    } else { fins = response.data.cnt }
-                    await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
-                })
+                var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(trmsg), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
+                var fins = ''                           
+                if (conf.LANG !== 'EN') {
+                    ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+                    if ('text' in ceviri) {
+                        fins = ceviri.text
+                    }
+                } else { 
+                    fins = payload_client.result 
+                }
+                await message.client.sendMessage(message.jid,fins, MessageType.text, { quoted: message.data})
             }
         }
-
 }));
 Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (message, match) => {
     if (!message.reply_message) return await message.client.sendMessage(message.jid,reply_eva, MessageType.text, { quoted: message.data }) 
@@ -276,39 +300,42 @@ Asena.addCommand({ pattern: 'vtalk$', desc: vtalk_dsc, fromMe: wk }, (async (mes
         
         convertToWav(file)
             .on('end', async () => {
-                const recognizedText = await recognizeAudio()
-                
+                const recognizedText = await recognizeAudio()           
                 var ssc = ''
                 ceviri = await translatte(recognizedText, {from: 'auto', to: 'EN' });
                 if ('text' in ceviri) {
                     ssc = ceviri.text
                 }
-                var unique_ident = message.client.user.jid.split('@')[0]
+                var unique_ident = ''
+                if (conf.WORKTYPE == 'private') {
+                    unique_ident = message.client.user.jid.split('@')[0]
+                } else if (conf.WORKTYPE == 'public') {
+                    unique_ident = message.client.user.jid.split('@')[0] + 'PUBLIC' + message.data.participant.split('@')[0]
+                }
                 let acc = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0] == 'Asena' ? '7d57838203msh0c5cf65c90a7231p13b461jsn77c8cfa55871' : '7d57838203msh0c582jak19865261js1229n77c8cfa55871'       
                 var ainame = os.userInfo().homedir.split('Whats')[1].split('Duplicated/')[0]
                 if (ainame !== 'Asena') return;
-        
-                var son = encodeURI(ssc)
-                await axios.get('http://api.brainshop.ai/get?bid=157104&key=VzGieV1tp1IvxPl4&uid=' + unique_ident + '&msg=' + son).then(async (response) => {
-                    var trmsg = ''
-                    cevir = await translatte(response.data.cnt, {from: 'auto', to: conf.LANG});
-                    if ('text' in cevir) {
-                        trmsg = cevir.text
+                var payload_client = await WhatsAsenaStack.get_eva_ai(encodeURIComponent(ssc), 'Eva', 'Phaticusthiccy', 'WhatsAsena', unique_ident)
+                var fins = ''                           
+                if (conf.LANG !== 'EN') {
+                    ceviri = await translatte(payload_client.result, {from: 'auto', to: conf.LANG});
+                    if ('text' in ceviri) {
+                        fins = ceviri.text
                     }
-            
-                    let 
-                        LANG = conf.LANG.toLowerCase(),
-                        ttsMessage = trmsg,
-                        SPEED = 1.0
+                } else { 
+                    fins = payload_client.result 
+                }
+                let 
+                    LANG = conf.LANG.toLowerCase(),
+                    ttsMessage = fins,
+                    SPEED = 1.0
                     var buffer = await googleTTS.synthesize({
                         text: ttsMessage,
                         voice: LANG
                     });
             
                     await message.client.sendMessage(message.jid,buffer, MessageType.audio, {mimetype: Mimetype.mp4Audio, ptt: true, quoted: message.data})
-                }).catch(async (error) => {
-	            console.log(error)
-                });
+        
         });
     } catch (err) { console.log(err) }
 }));
