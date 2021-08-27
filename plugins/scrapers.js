@@ -233,7 +233,7 @@ if (config.WORKTYPE == 'private') {
             }
         }
         else if (match[1] == 'off') {
-            if config.ANTI_LINK !== 'true') {
+            if (config.ANTI_LINK !== 'true') {
                 return await message.client.sendMessage(message.jid, '*' + alr_off + '*', MessageType.text)
             }
             else {
