@@ -547,21 +547,21 @@ if (config.WORKTYPE == 'private') {
         var img_list = await WhatsAsenaStack.search_image(match[1])
         await message.client.sendMessage(message.jid, Lang.IMG.format(5, match[1]), MessageType.text);
         var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
-        var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
-        var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
-        var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
-        var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img1.data), MessageType.image)
+        var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img2.data), MessageType.image)
+        var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img3.data), MessageType.image)
+        var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img4.data), MessageType.image)
+        var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img5.data), MessageType.image)
     }));
 
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC, usage: 'github phaticusthiccy // github phaticusthiccy/Emacs-Train' }, (async (message, match) => {
+      var Msg = WhatsAsenaStack.github_message(config.LANG)
       if (match[1].includes('/')) {
-        var data = WhatsAsenaStack.github_repos(match[1])
-        var Msg = WhatsAsenaStack.github_message(config.LANG)
+        var data = await WhatsAsenaStack.github_repos(match[1])     
         if (data.username == undefined) return await message.client.sendMessage(message.jid, Msg.not_found_repo, MessageType.text)
         var payload = Msg.repo.username + data.username + '\n' +
           Msg.repo.repo_name + data.repo_name + '\n' +
@@ -583,8 +583,7 @@ if (config.WORKTYPE == 'private') {
           Msg.repo.branch + data.branch
         await message.client.sendMessage(massage.jid, payload, MessageType.text)
       } else {
-        var data = WhatsAsenaStack.github_user(match[1])
-        var Msg = WhatsAsenaStack.github_message(config.LANG)
+        var data = await WhatsAsenaStack.github_user(match[1])
         if (data.status == false) return await message.client.sendMessage(message.jid, Msg.not_found_user, MassageType.text)
         var payload = Msg.user.username + data.username + '\n' +
           Msg.user.name + data.name == 'null' ? '' + '\n' : data.name + '\n' + 
@@ -1015,24 +1014,25 @@ else if (config.WORKTYPE == 'public') {
     Asena.addCommand({pattern: 'img ?(.*)', fromMe: false, desc: Lang.IMG_DESC}, (async (message, match) => { 
 
         if (match[1] === '') return await message.client.sendMessage(message.jid,Lang.NEED_WORDS,MessageType.text);
+        
         var img_list = await WhatsAsenaStack.search_image(match[1])
         await message.client.sendMessage(message.jid, Lang.IMG.format(5, match[1]), MessageType.text);
         var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
-        var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
-        var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
-        var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
-        var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img1.data), MessageType.image)
+        var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img2.data), MessageType.image)
+        var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img3.data), MessageType.image)
+        var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img4.data), MessageType.image)
+        var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
         await message.sendMessage(Buffer.from(img5.data), MessageType.image)
     }));
 
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC, usage: 'github phaticusthiccy // github phaticusthiccy/Emacs-Train' }, (async (message, match) => {
       if (match[1].includes('/')) {
-        var data = WhatsAsenaStack.github_repos(match[1])
-        var Msg = WhatsAsenaStack.github_message(config.LANG)
+        var data = await WhatsAsenaStack.github_repos(match[1])
+        var Msg = await WhatsAsenaStack.github_message(config.LANG)
         if (data.username == undefined) return await message.client.sendMessage(message.jid, Msg.not_found_repo, MessageType.text)
         var payload = Msg.repo.username + data.username + '\n' +
           Msg.repo.repo_name + data.repo_name + '\n' +
@@ -1054,8 +1054,8 @@ else if (config.WORKTYPE == 'public') {
           Msg.repo.branch + data.branch
         await message.client.sendMessage(massage.jid, payload, MessageType.text)
       } else {
-        var data = WhatsAsenaStack.github_user(match[1])
-        var Msg = WhatsAsenaStack.github_message(config.LANG)
+        var data = await WhatsAsenaStack.github_user(match[1])
+        var Msg = await WhatsAsenaStack.github_message(config.LANG)
         if (data.status == false) return await message.client.sendMessage(message.jid, Msg.not_found_user, MassageType.text)
         var payload = Msg.user.username + data.username + '\n' +
           Msg.user.name + data.name == 'null' ? '' + '\n' : data.name + '\n' + 
