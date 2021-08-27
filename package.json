@@ -15,6 +15,9 @@
     "bot",
     "ai",
     "asena",
+    "api",
+    "unlimited",
+    "asenadev",
     "machine learning",
     "automatic",
     "whatsapp web",
@@ -29,6 +32,6 @@
   },
   "homepage": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme",
   "dependencies": {
-    "whatsasena-npm": "^1.2.1"
+    "whatsasena-npm": "^1.2.8"
   }
 }
