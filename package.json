@@ -32,6 +32,6 @@
   },
   "homepage": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme",
   "dependencies": {
-    "whatsasena-npm": "^1.2.8"
+    "whatsasena-npm": "^1.3.0"
   }
 }
