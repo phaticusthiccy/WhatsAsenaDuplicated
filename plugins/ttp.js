@@ -69,7 +69,7 @@ Asena.addCommand({ pattern: 'ttp ?(.*)', fromMe: wk, dontAddCommandList: true },
     await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.image, { mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena' })
   }
 }));
-Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var uri = encodeURI(text)
@@ -82,7 +82,7 @@ Asena.addCommand({ pattern: 'attp ?(.*)', fromMe: true, dontAddCommandList: true
     await message.client.sendMessage(message.jid,Buffer.from(ttinullimage.data), MessageType.sticker, { mimetype: Mimetype.webp })
   }
 }));
-Asena.addCommand({ pattern: 'wttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'wttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Water?_variations=true&text=', '&_loc=catdynamic')
@@ -115,7 +115,7 @@ Asena.addCommand({ pattern: 'wttp ?(.*)', fromMe: true, dontAddCommandList: true
     })
   }
 }));
-Asena.addCommand({ pattern: 'http ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'http ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Style?_variations=true&text=', '&_loc=catdynamic')
@@ -148,7 +148,7 @@ Asena.addCommand({ pattern: 'http ?(.*)', fromMe: true, dontAddCommandList: true
     })
   }
 }));
-Asena.addCommand({ pattern: 'bttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'bttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Blackbird?_variations=true&text=', '&_loc=catdynamic')
@@ -181,7 +181,7 @@ Asena.addCommand({ pattern: 'bttp ?(.*)', fromMe: true, dontAddCommandList: true
     })
   }
 }));
-Asena.addCommand({ pattern: 'gttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'gttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Fluffy?_variations=true&text=', '&_loc=catdynamic')
@@ -214,7 +214,7 @@ Asena.addCommand({ pattern: 'gttp ?(.*)', fromMe: true, dontAddCommandList: true
     })
   }
 }));
-Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Smurfs?_variations=true&text=', '&_loc=catdynamic')
@@ -247,7 +247,7 @@ Asena.addCommand({ pattern: 'sttp ?(.*)', fromMe: true, dontAddCommandList: true
     })
   }
 }));
-Asena.addCommand({ pattern: 'ettp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'ettp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Electric?_variations=true&text=', '&_loc=catdynamic')
@@ -280,7 +280,7 @@ Asena.addCommand({ pattern: 'ettp ?(.*)', fromMe: true, dontAddCommandList: true
     })
   }
 }));
-Asena.addCommand({ pattern: 'ahttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'ahttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Highlight-Animation?_variations=true&text=', '&_loc=catdynamic')
@@ -313,7 +313,7 @@ Asena.addCommand({ pattern: 'ahttp ?(.*)', fromMe: true, dontAddCommandList: tru
     })
   }
 }));
-Asena.addCommand({ pattern: 'pttp ?(.*)', fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: 'pttp ?(.*)', fromMe: wk, dontAddCommandList: true }, (async (message, match) => {
   if (message.reply_message) {
     var text = message.reply_message.text
     var ttinullimage = await WhatsAsenaStack.ttp(text, 'https://api.flamingtext.com/logo/Design-Memories-Animation?_variations=true&text=', '&_loc=catdynamic')
