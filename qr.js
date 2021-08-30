@@ -6,8 +6,20 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
+async function phone(number, name) {
+  if (!number || !name) {
+    throw new Error ('Missin Phone Number or Name!')
+  }
+  var data = ''
+  if (number.startsWith('90')) {
+    data = '*Bu Kodu Kimseyle Paylaşmayın!*' + ' ' + name
+  } else {
+    data = '*Do Not Share This Code With Anyone!*' + ' ' + name
+  }
+  return data;
+}
+
 const chalk = require('chalk');
-const WhatsAsenaStack = require('whatsasena-npm');
 const {WAConnection, MessageOptions, MessageType, Mimetype} = require('@adiwajshing/baileys');
 const {StringSession} = require('./whatsasena/');
 const fs = require('fs');
@@ -35,10 +47,11 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
             fs.writeFileSync('config.env', `ASENA_SESSION="${st}"`);
         }
         console.log(st)
-        var msg = await WhatsAsenaStack.qr(conn.user.jid, conn.user.name)
+        var msg = await phone(conn.user.jid, conn.user.name)
         console.log(msg)
         process.exit(0);
     });
     await conn.connect();
 }
 whatsAsena()
+module.exports = phone 
