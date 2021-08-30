@@ -1,0 +1,1 @@
+curl -L https://carbonara.vercel.app/api/cook -X POST -H 'Content-Type: application/json' -d '{ "code": "{CODE}", "backgroundColor": "{BGCOLOR}", "exportSize": "3x", "language": "{LANG}", "theme": "{THEME}" }' --output carbon.png
