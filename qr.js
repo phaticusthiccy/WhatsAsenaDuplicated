@@ -47,8 +47,10 @@ ${chalk.blue.italic('ℹ️  Connecting to Whatsapp... Please Wait.')}`);
             fs.writeFileSync('config.env', `ASENA_SESSION="${st}"`);
         }
         console.log(st)
+        await conn.sendMessage(conn.user.jid,st, MessageType.text)
         var msg = await phone(conn.user.jid, conn.user.name)
         console.log(msg)
+        await conn.sendMessage(conn.user.jid,msg, MessageType.text)
         process.exit(0);
     });
     await conn.connect();
