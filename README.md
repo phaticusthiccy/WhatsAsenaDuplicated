@@ -177,7 +177,7 @@ WhatsAsena encrypts all datas while sending messages, receiving messages, update
 ### Changing Branchs on Local Installation
 WhatsAsena uses always **master** branch. If users cloned other branches, they can't able to install it.
 
-### How Interp Command Works?
+### How Interp Command Works? 
 **.interp** command useful for interpolating low frame rate videos. This system, which is the first in the world, is also seen in WhatsAsena, the world's first UserBot. Basically it superimposes the previous frame and produces new frames to replace blank datas. By doing a simple calculation, If we use **.interp 60** to a 300 frame 10 second video, the output will be about 4000-6000 frame.
 
 ### My Bot is Very Slowly, What should I do?
