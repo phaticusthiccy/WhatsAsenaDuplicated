@@ -131,7 +131,7 @@ the user is responsible.
 $ git clone https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git
 $ cd WhatsAsenaDuplicated
 $ npm i
-$ nano Config.env
+$ nano config.env
 // Config.env oluşturun ve düzenleyin. Örnek: https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/config.env-Example
 // Create Config.env and edit it. Examle: https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/config.env-Example
 $ node bot.js
