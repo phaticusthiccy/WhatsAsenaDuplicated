@@ -315,7 +315,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     degisiklikler += '🔸 [' + commit.date.substring(0, 10) + ']: ' + commit.message + ' <' + commit.author_name + '>\n';
                 }
             );
-            var up_ch = await WhatsAsenaStack.update_ch(config.LANG)
+            var up_ch = await WhatsAsenaStack.update(config.LANG)
             await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, up_ch, MessageType.text)
         }
     })
