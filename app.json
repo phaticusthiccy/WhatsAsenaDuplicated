@@ -13,7 +13,7 @@
             "required": true
         },
         "SUDO": {
-            "description": "Kullanıcılara tüm yetkileri verir. It gives all the privileges to the users. => 90xxx,0,90xxx,090xxx...",
+            "description": "Kullanıcılara tüm yetkileri verir. It gives all the privileges to the users. => 90xxx,0,90xxx,0,90xxx...",
             "required": false
         },
         "LANGUAGE": {
