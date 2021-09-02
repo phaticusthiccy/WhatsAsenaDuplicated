@@ -2,7 +2,6 @@
 ### We will always remember you..
 
 - [Yusuf Usta](https://github.com/yusufusta)
-- [@fusufs](https://t.me/fusufs)
 
 <p align="center">
   <a href="https://github.com/phaticusthiccy/WhatsAsenaDuplicated/fork">
