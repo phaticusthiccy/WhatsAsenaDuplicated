@@ -31,7 +31,7 @@
     <img src="https://img.shields.io/github/languages/top/phaticusthiccy/WhatsAsenaDuplicated?color=purple&label=Javascript&style=plastic">
 
   </a>
-  <a href="https://github.com/phaticusthiccy">
+  <a href="https://t.me/thiccyblog">
     <img src="https://img.shields.io/static/v1?label=Author&message=Thiccy&color=purple&style=plastic">
 
   </a>
@@ -153,7 +153,7 @@ This project is open source so all the codes are clear. Neither less nor more; y
 If you are concerned about security, you can install it on your own computer. If you think someone else has captured your data, simply click on **Whatsapp> Three Dots> Whatsapp Web> Logout** from all sessions button.
 
 ### 💵 Is it paid?
-**Of course not.** It will never happen. But you can donate to us. You can reach me via [Telegram](https://t.me/fusuf) .
+**Of course not.** It will never happen.
 
 ### 🌟 Is there enough features?
 Yes. WhatsAsena comes with more than 170 internal command. Which including unique packages, machine learning AIs, fastly tools etc.. Users can add new features their bots. Check our [telegram group](https://t.me/AsenaSupport) .
@@ -190,10 +190,18 @@ You can look at the values ​​written under our logo above. This value shows 
 This choice is yours, There are a lot of fake bots using our codes. Can be dangerous as they are not official. Moreover, since there is no cyber attack protection in fake bots, the device can be easily accessed whenever any vulnerability is found.
 
 ### Why Are Updates Coming Late?
-Because I'm the only developer. I need to test every step. I need to check each branch and import it into unique npm package. And I have a social life too :)
+Because I'm the only developer. I need to test every step. I need to check each branch and import it into unique npm package. 
 
 ### When Will Support Be Cut Off?
 When the WhatsAsena learns to solve all its problems by itself. My first goal is to provide this stuff.
+
+### What is the difference between Public and Private mode?
+When users turn on `public` mode, the bot becomes available to use for `everyone.` Personal commands are not supported for other users. Moreover, the bot owner cannot use public commands.
+
+When users turn on `private` mode, the bot becomes available `only for user.` 
+
+### What is the Kid Mod?
+This mod is available for under certain age. Sexual content is restricted. Extremely simple interface. Lots of explanation and tutorial mode.
 
 </details>
 
@@ -238,7 +246,10 @@ Additions and innovations are allowed. Please contribute with these rules:
 - Innovations That Don't Break the Integrity
 
 In addition to these rules; Unethical additions such as nudity, sexuality, insults, terrorism are not allowed.
-More than 130,000 uses worldwide, and this all-age project demands innovations to match ethnic rules.
+More than 146,000 users worldwide, and this all-age project demands innovations to match ethnic rules.
+
+## Funding
+WhatsAsena project will always remain free. As a developer, we do not carry out any work in the name of donations.
 
 ### Disclaimer
 `WhatsApp` name, its variations and the logo are registered trademarks of Facebook. We have nothing to do with the registered trademark
