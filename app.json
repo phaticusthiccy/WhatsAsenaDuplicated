@@ -91,7 +91,7 @@
             "value": "default"
         },
         "WORK_TYPE": {
-            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "description": "WhatsAsena Working Type => private // public // kid <=",
             "required": true,
             "value": "private"
         },
