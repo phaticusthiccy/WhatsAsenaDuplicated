@@ -442,6 +442,24 @@ go_path()
 {
   cd "$REPO"
 }
+cont () 
+{
+  if [ "$LANGUAGE_SELECT" -eq "$LANGTR" ]; then
+    printf "\n\n\033[0;34m${qq9} \n"
+    sleep 2
+    clear
+    cat whatsasena.ascii
+    printf "\n\n"
+    node qr.js
+  elif [ "$LANGUAGE_SELECT" -eq "$LANGEN" ]; then
+    printf "\n\n\033[0;34m${q9} \n"
+    sleep 2
+    clear
+    cat whatsasena.ascii
+    printf "\n\n"
+    node qr.js
+  fi
+}
 choose ()
 {
   printf "\033[0;36m${lang}\033[1;33m${br}${br2} \nValue: "
@@ -498,13 +516,18 @@ starting ()
     clear
     npm config set loglevel silent
     printf "${prctr} \n${prc2tr} \n"
-    npm install whatsasena-npm -s
+    npm install chalk -s
+    npm install @adiwajshing/baileys@3.4.1 -s
+    clear
   elif [ "$LANGUAGE_SELECT" -eq "$LANGEN" ]; then
     printf "\n\033[0;37m${q} \n"
     sleep 3
     clear
     npm config set loglevel silent
     printf "${prcen} \n${prc2en} \n"
+    npm install chalk -s
+    npm install @adiwajshing/baileys@3.4.1 -s
+    clear
   fi
 }
 
@@ -512,13 +535,14 @@ metadata ()
 {
   if [ "$LANGUAGE_SELECT" -eq "$LANGTR" ]; then
     clear
-    printf "\033[0;34${qq2}\n"
+    printf "\033[0;34 Loading Metadata..\n"
     sleep 3
     clear
     rm -rf WhatsAsenaDuplicated/
     git clone "$clone2"
     cd WhatsAsenaDuplicated/
     clear
+    cat whatsasena.ascii
   elif [ "$LANGUAGE_SELECT" -eq "$LANGEN" ]; then
     clear
     printf "\033[0;34${q2}\n"
@@ -527,6 +551,7 @@ metadata ()
     git clone "$clone2"
     cd WhatsAsenaDuplicated/
     clear
+    cat whatsasena.ascii
   fi
 }
 
@@ -539,4 +564,4 @@ if_meta ()
 choose
 starting
 metadata
-if_meta https://phaticusthiccy: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@github.com/phaticusthiccy/WhatsAsenaDuplicated
+cont
