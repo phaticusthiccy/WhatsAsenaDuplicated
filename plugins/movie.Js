@@ -1,3 +1,4 @@
+/*
 const Asena = require('../events');
 const { MessageType } = require('@adiwajshing/baileys');
 const got = require('got');
@@ -63,3 +64,4 @@ Asena.addCommand({ pattern: 'movie ?(.*)', fromMe: false, desc: "Shows movie inf
 	await message.client.sendMessage(message.jid, msg, MessageType.text, { quoted: message.data });
 }));
 }
+*/
