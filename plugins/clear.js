@@ -1,9 +1,10 @@
 /* Copyright (C) 2020 Yusuf Usta.
 Licensed under the  GPL-3.0 License;
 you may not use this file except in compliance with the License.
-
 WhatsAsena - Yusuf Usta
 */
+
+// Below Commands by TOXIC-DEVIL
 
 const {MessageType, GroupSettingChange, ChatModification, WAConnectionTest} = require('@adiwajshing/baileys');
 const Asena = require('../events');
@@ -42,6 +43,74 @@ Asena.addCommand({pattern: 'clear ?(.*)', fromMe: true, desc: CLR_DESC, usage: '
             await message.client.sendMessage(client_id, payload.Action, MessageType.text);
             await message.client.modifyChat(client_id, ChatModification.delete);
             await message.client.sendMessage(client_id, payload.Finish, MessageType.text);
+        }
+    }
+}));
+
+Asena.addCommand({pattern: 'archive', fromMe: true, desc: Lang.ARC_DESC}, (async (message, match) => {
+    
+    if (message.reply_message) {
+        var client_id = message.reply_message.data.participant
+        await message.client.sendMessage(client_id, Lang.ARC_PROC, MessageType.text);
+        await message.client.modifyChat(client_id, ChatModification.archive);
+        await message.client.sendMessage(client_id, Lang.ARC_DONE, MessageType.text);
+    } else {
+        if (match[1] == '') {
+            var client_id = message.jid
+            await message.client.sendMessage(client_id, Lang.ARC_PROC, MessageType.text);
+            await message.client.modifyChat(client_id, ChatModification.archive);
+            await message.client.sendMessage(client_id, Lang.ARC_DONE, MessageType.text);
+        }
+    }
+}));
+        
+Asena.addCommand({pattern: 'unarchive', fromMe: true, desc: Lang.UNARC_DESC}, (async (message, match) => {
+    
+    if (message.reply_message) {
+        var client_id = message.reply_message.data.participant
+        await message.client.sendMessage(client_id, Lang.UNARC_PROC, MessageType.text);
+        await message.client.modifyChat(client_id, ChatModification.unarchive);
+        await message.client.sendMessage(client_id, Lang.UNARC_DONE, MessageType.text);
+    } else {
+        if (match[1] == '') {
+            var client_id = message.jid
+            await message.client.sendMessage(client_id, Lang.UNARC_PROC, MessageType.text);
+            await message.client.modifyChat(client_id, ChatModification.unarchive);
+            await message.client.sendMessage(client_id, Lang.UNARC_DONE, MessageType.text);
+        }
+    }
+}));
+
+Asena.addCommand({pattern: 'pin', fromMe: true, desc: Lang.PIN_DESC}, (async (message, match) => {
+    
+    if (message.reply_message) {
+        var client_id = message.reply_message.data.participant
+        await message.client.sendMessage(client_id, Lang.PIN_PROC, MessageType.text);
+        await message.client.modifyChat(client_id, ChatModification.pin);
+        await message.client.sendMessage(client_id, Lang.PIN_DONE, MessageType.text);
+    } else {
+        if (match[1] == '') {
+            var client_id = message.jid
+            await message.client.sendMessage(client_id, Lang.PIN_PROC, MessageType.text);
+            await message.client.modifyChat(client_id, ChatModification.pin);
+            await message.client.sendMessage(client_id, Lang.PIN_DONE, MessageType.text);
+        }
+    }
+}));
+        
+Asena.addCommand({pattern: 'unpin', fromMe: true, desc: Lang.UNPIN_DESC}, (async (message, match) => {
+    
+    if (message.reply_message) {
+        var client_id = message.reply_message.data.participant
+        await message.client.sendMessage(client_id, Lang.UNPIN_PROC, MessageType.text);
+        await message.client.modifyChat(client_id, ChatModification.unpin);
+        await message.client.sendMessage(client_id, Lang.UNPIN_DONE, MessageType.text);
+    } else {
+        if (match[1] == '') {
+            var client_id = message.jid
+            await message.client.sendMessage(client_id, Lang.UNPIN_PROC, MessageType.text);
+            await message.client.modifyChat(client_id, ChatModification.unpin);
+            await message.client.sendMessage(client_id, Lang.UNPIN_DONE, MessageType.text);
         }
     }
 }));
