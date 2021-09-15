@@ -5,7 +5,7 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-// Simi Artificial Intelligence Contributed By @TOXIC-DEVIL
+// Simi Artificial Intelligence Contributed By TOXIC DEVIL
 const Asena = require('../events');
 const {MessageType} = require('@adiwajshing/baileys');
 const fs = require('fs');
