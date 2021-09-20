@@ -11,7 +11,7 @@ const request = require('request')
 const fs = require('fs')
 const Axios = require('axios')
 const ffmpeg = require('fluent-ffmpeg')
-const request = require('request')
+// const request = require('request')
 const translatte = require('translatte');
 const exec = require('child_process').exec;
 
