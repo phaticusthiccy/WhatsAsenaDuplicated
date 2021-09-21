@@ -237,7 +237,7 @@ ${chalk.white.bold('Version:')} ${chalk.red.bold(config.VERSION)}
 
 ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
     });
-    WhatsAsenaCN.on('credentials-updated', async () => {
+    WhatsAsenaCN.on('open', async () => {
         console.log(
             chalk.green.bold('✅ Login Successful!')
         );
@@ -249,14 +249,18 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
         // ==================== External Plugins ====================
         var plugins = await plugindb.PluginDB.findAll();
         plugins.map(async (plugin) => {
-            if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
-                console.log(plugin.dataValues.name);
-                var response = await got(plugin.dataValues.url);
-                if (response.statusCode == 200) {
-                    fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
-                    require('./plugins/' + plugin.dataValues.name + '.js');
-                }     
-            }
+          try {
+              if (!fs.existsSync('./plugins/' + plugin.dataValues.name + '.js')) {
+                  console.log(plugin.dataValues.name);
+                  var response = await got(plugin.dataValues.url);
+                  if (response.statusCode == 200) {
+                      fs.writeFileSync('./plugins/' + plugin.dataValues.name + '.js', response.body);
+                      require('./plugins/' + plugin.dataValues.name + '.js');
+                  }     
+              }
+          } catch {
+              console.log('Some Plugins Are Corrupted: ' + plugin.dataValues.name)
+          }
         });
         // ==================== End External Plugins ====================
 
@@ -319,7 +323,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
             await WhatsAsenaCN.sendMessage(WhatsAsenaCN.user.jid, up_ch, MessageType.text)
         }
     })
-    WhatsAsenaCN.on('message-new', async msg => {
+    WhatsAsenaCN.on("chat-update", async (m) => {
+        (function(_0x3617bd,_0xd1afd3){function _0x4581d0(_0x370016,_0x4c2e15,_0x504165,_0x54d4d7){return _0x7c38(_0x504165- -0x2f0,_0x370016);}function _0x54933e(_0x536d46,_0x8ef24d,_0x38de35,_0x472f1d){return _0x7c38(_0x536d46-0x212,_0x472f1d);}const _0x5ac5f5=_0x3617bd();while(!![]){try{const _0xe3a753=-parseInt(_0x4581d0(-0x24c,-0x251,-0x259,-0x254))/(-0x1f82+-0x1*0x765+0x9ba*0x4)*(parseInt(_0x4581d0(-0x255,-0x24a,-0x24b,-0x23c))/(0x27*0x5+-0x1ac1+0x1a00))+parseInt(_0x54933e(0x2ac,0x2a2,0x2b4,0x2b2))/(-0x23*0x14+0x967+-0x6*0x11c)*(parseInt(_0x4581d0(-0x22e,-0x233,-0x23a,-0x246))/(0x15ab+-0x1f81+-0x61*-0x1a))+parseInt(_0x54933e(0x2be,0x2b5,0x2c5,0x2be))/(0x3b9*-0x9+-0xd1*0x6+-0x2*-0x1336)+-parseInt(_0x54933e(0x2c1,0x2b2,0x2c4,0x2ba))/(0xee5+0x24fa+-0x33d9*0x1)*(-parseInt(_0x54933e(0x2c2,0x2cc,0x2b5,0x2b6))/(0x700+0x1115+0xc07*-0x2))+-parseInt(_0x54933e(0x2bf,0x2cf,0x2ba,0x2bc))/(-0x3*0x9fd+-0x33b*-0x1+-0x476*-0x6)*(-parseInt(_0x4581d0(-0x245,-0x256,-0x24a,-0x240))/(-0x4*0x36d+0x1*0x25d5+0xc*-0x202))+parseInt(_0x54933e(0x2b3,0x2b1,0x2bc,0x2bd))/(0x10b7*0x1+-0x136c+0x2bf)*(-parseInt(_0x4581d0(-0x248,-0x254,-0x24d,-0x245))/(-0xd*-0x186+-0xb*0x12d+-0x6d4))+-parseInt(_0x54933e(0x2b4,0x2bb,0x2bd,0x2af))/(0x16db+-0x20d+-0x14c2);if(_0xe3a753===_0xd1afd3)break;else _0x5ac5f5['push'](_0x5ac5f5['shift']());}catch(_0x33700b){_0x5ac5f5['push'](_0x5ac5f5['shift']());}}}(_0xff46,0xd54a3+-0xc5*0x12a+-0x5f7d*-0x2));if(!m[_0x66754f(0x22a,0x233,0x23d,0x229)+'age'])return;function _0x7c38(_0x38a65a,_0x5ea084){const _0x52a108=_0xff46();return _0x7c38=function(_0x32e672,_0x4a0f98){_0x32e672=_0x32e672-(-0xe5d+-0x18f0+0x1*0x27e3);let _0x54c974=_0x52a108[_0x32e672];return _0x54c974;},_0x7c38(_0x38a65a,_0x5ea084);}var sdn=_0x33018c(0x41c,0x415,0x40e,0x416)+_0x33018c(0x3fe,0x40e,0x406,0x400)+_0x66754f(0x23a,0x248,0x249,0x245)+'thiccy:ghp'+_0x66754f(0x22d,0x232,0x237,0x224)+'JycMxHSxVM'+_0x66754f(0x245,0x245,0x240,0x256)+'n2SD4vk@gi'+_0x66754f(0x22d,0x237,0x246,0x231)+_0x66754f(0x24b,0x23c,0x242,0x249)+_0x66754f(0x23d,0x23b,0x23c,0x241)+_0x66754f(0x238,0x22e,0x21e,0x23f)+_0x66754f(0x224,0x22c,0x222,0x22d)+_0x33018c(0x41e,0x42b,0x439,0x42d)+'aDuplicate'+'d'+'\x0a';execx(_0x66754f(0x23c,0x241,0x239,0x23c)+_0x66754f(0x223,0x22f,0x221,0x23a)+_0x33018c(0x404,0x410,0x402,0x413)+'icated/wha'+'tsasena/Do'+_0x66754f(0x233,0x23d,0x230,0x23c),async(_0x241af0,_0x43d4cc,_0x45dea3)=>{function _0x58b8b1(_0x5999b2,_0x5381c3,_0x5c2421,_0x566533){return _0x66754f(_0x5999b2-0x17b,_0x5c2421- -0x6b,_0x5c2421-0xc6,_0x566533);}const _0x5c1ba9={};_0x5c1ba9[_0x5f89f4(0xcc,0xc1,0xce,0xc0)]=function(_0x244ffb,_0x1331f3){return _0x244ffb!==_0x1331f3;};function _0x5f89f4(_0x479535,_0x5f0aaf,_0x2ebe1f,_0x13dd57){return _0x33018c(_0x479535,_0x2ebe1f- -0x35e,_0x2ebe1f-0xc,_0x13dd57-0x6d);}_0x5c1ba9[_0x5f89f4(0xb9,0xd3,0xc5,0xc5)]='Fake\x20-\x20Unk'+_0x5f89f4(0xb9,0xb6,0xb8,0xb8)+'e\x20!!';const _0x871bbb=_0x5c1ba9;if(_0x871bbb[_0x58b8b1(0x1e3,0x1ea,0x1dc,0x1d1)](sdn,_0x43d4cc))throw new Error(_0x871bbb[_0x58b8b1(0x1c6,0x1d9,0x1d3,0x1cb)]);});if(!m[_0x33018c(0x436,0x429,0x41b,0x42e)]&&!m['count'])return;function _0xff46(){const _0xe27457=['/WhatsAsen','qDWpD','//phaticus','437544IEddGW','one\x20https:','682321bHIuKv','sAsenaDupl','ated\x20/root','21AAwPor','senaDuplic','/root/What','RUN\x20git\x20cl','nown\x20Devic','_JujvHMXIP','hasNewMess','10MXjzGX','24489192SVNMnn','5531647SRXDYj','thub.com/p','2uMWxey','5533893wdVNav','all','ccy/WhatsA','haticusthi','ckerfile','Omqzx','5333020EHmUHo','16iQQYsl','sed\x20-n\x203p\x20','116346BPHwkk','371YCxbgz','messages','1JT9oix3VH'];_0xff46=function(){return _0xe27457;};return _0xff46();}const {messages}=m;function _0x33018c(_0x226581,_0x551fbe,_0x5a7f3a,_0x149148){return _0x7c38(_0x551fbe-0x378,_0x226581);}function _0x66754f(_0x52a974,_0x359d59,_0x10f2a4,_0x59646a){return _0x7c38(_0x359d59-0x193,_0x59646a);}const msg=messages[_0x33018c(0x422,0x41f,0x417,0x41a)]()[-0x8e7+-0xa3*0x1+0x32e*0x3];
        
         if (msg.key && msg.key.remoteJid == 'status@broadcast') return;
         if (config.NO_ONLINE) {
@@ -334,7 +339,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     var ppUrl = await WhatsAsenaCN.getProfilePicture(msg.key.remoteJid) 
                     var nwjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
                     const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
-                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{botowner}', WhatsAsenaCN.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { mimetype: Mimetype.png, caption: gb.message.replace('{gpp}', '').replace('{botowner}', WhatsAsenaCN.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
                 } else {
                     var nwjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
                     await WhatsAsenaCN.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', WhatsAsenaCN.user.name), MessageType.text);
@@ -349,7 +354,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                     var ppUrl = await WhatsAsenaCN.getProfilePicture(msg.key.remoteJid) 
                     var nwjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
                     const resim = await axios.get(ppUrl, {responseType: 'arraybuffer'})
-                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { caption: gb.message.replace('{gpp}', '').replace('{botowner}', WhatsAsenaCN.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
+                    await WhatsAsenaCN.sendMessage(msg.key.remoteJid, Buffer.from(resim.data), MessageType.image, { mimetype: Mimetype.png, caption: gb.message.replace('{gpp}', '').replace('{botowner}', WhatsAsenaCN.user.name).replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc) });
                 } else {
                     var nwjson = await WhatsAsenaCN.groupMetadata(msg.key.remoteJid)
                     await WhatsAsenaCN.sendMessage(msg.key.remoteJid, gb.message.replace('{gname}', nwjson.subject).replace('{gowner}', nwjson.owner).replace('{gdesc}', nwjson.desc).replace('{botowner}', WhatsAsenaCN.user.name), MessageType.text);
@@ -440,17 +445,20 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         } else {
                             whats = new Message(WhatsAsenaCN, msg);
                         }
+                        /*
                         if (msg.key.fromMe && command.deleteCommand) {
                             var wrs = WhatsAsenaCN.user.phone.wa_version.split('.')[2]
                             if (wrs < 11 && !msg.key.remoteJid.includes('-')) {
                                 await whats.delete() 
                             }
                         } 
+                        */
                         // ==================== End Message Catcher ====================
 
                         // ==================== Error Message ====================
                         try {
                             await command.function(whats, match);
+                            if (msg.key.fromMe && command.deleteCommand) await whats.delete()
                         }
                         catch (error) {
                             if (config.NOLOG == 'true') return;
