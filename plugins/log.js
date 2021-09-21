@@ -42,13 +42,13 @@ Asena.addCommand({ pattern: 'log', fromMe: true, desc: Lang.LOG, warn: Lang.ANIM
                 message: message.reply_message.data.quotedMessage
             });
             ffmpeg(location)
-            .save('im.jpg')
+            .save('im.png')
             .on('end', async () => {
                 await message.client.sendMessage(
                     message.client.user.jid,
-                    fs.readFileSync('im.jpg'),
+                    fs.readFileSync('im.png'),
                     MessageType.image,
-                    { caption: Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER }
+                    { mimetype: Mimetype.png, caption: Lang.HEAD + meta.id + Lang.FROM + 'wa.me/' + message.reply_message.jid.split('@')[0] + Lang.USER }
                 );
                 await message.client.sendMessage(
                     message.jid,
