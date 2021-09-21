@@ -18,7 +18,7 @@
 
 const fs = require('fs/promises')
 const path = require('path')
-const { MessageType } = require('@adiwajshing/baileys')
+const { MessageType, Mimetype, MessageOptions } = require('@adiwajshing/baileys')
 const Asena = require('../events');
 const { successfullMessage, errorMessage, infoMessage } = require('../helpers');
 const NotesDB = require('./sql/notes');
@@ -46,7 +46,7 @@ Asena.addCommand({ pattern: 'notes', fromMe: true, desc: Lang.NOTES_USAGE }, asy
     _notes.filter(note => note.note.includes('IMG;;;')).forEach(async (note) => {
         const imageName = note.note.replace('IMG;;;', '')
         const image = await fs.readFile(path.resolve('media', imageName))
-        await message.sendMessage(image, MessageType.image)
+        await message.sendMessage(image, MessageType.image, { mimetype: Mimetype.png })
     })
 
 
