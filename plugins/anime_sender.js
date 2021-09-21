@@ -7,6 +7,8 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
+const request = require('request');
+const fs = require('fs');
 const WhatsAsenaStack = require('whatsasena-npm');
 let wk = Config.WORKTYPE == 'public' ? false : true
 var pic = ''
