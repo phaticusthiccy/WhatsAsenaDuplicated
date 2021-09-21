@@ -87,7 +87,7 @@ if (CON.WORKTYPE == 'private') {
                 await message.sendMessage(
                     Buffer.from(resim.data), 
                     MessageType.image, 
-                    {caption: msg }
+                    {caption: msg, mimetype: Mimetype.png}
                 );
             }
         }
@@ -107,7 +107,7 @@ if (CON.WORKTYPE == 'private') {
                 await message.sendMessage(
                     Buffer.from(resimnw.data), 
                     MessageType.image, 
-                    { caption: nwmsg }
+                    { caption: nwmsg, mimetype: Mimetype.png }
                 );
             }       
         }
@@ -173,7 +173,7 @@ else if (CON.WORKTYPE == 'public') {
                 await message.sendMessage(
                     Buffer.from(resim.data), 
                     MessageType.image, 
-                    {caption: msg }
+                    {caption: msg, mimetype: Mimetype.png }
                 );
             }
         }
@@ -193,7 +193,7 @@ else if (CON.WORKTYPE == 'public') {
                 await message.sendMessage(
                     Buffer.from(resimnw.data), 
                     MessageType.image, 
-                    { caption: nwmsg }
+                    { caption: nwmsg, mimetype: Mimetype.png }
                 );
             }       
         }

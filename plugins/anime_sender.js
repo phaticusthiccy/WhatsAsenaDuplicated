@@ -7,6 +7,8 @@ const Asena = require('../events');
 const {MessageType, MessageOptions, Mimetype} = require('@adiwajshing/baileys');
 const axios = require('axios');
 const Config = require('../config');
+const request = require('request');
+const fs = require('fs');
 const WhatsAsenaStack = require('whatsasena-npm');
 let wk = Config.WORKTYPE == 'public' ? false : true
 var pic = ''
@@ -26,11 +28,11 @@ Asena.addCommand({pattern: 'animepic ?(.*)', fromMe: wk, desc: pic, usage: 'anim
   if (match[1] == 'normal') {
     var image_link = await WhatsAsenaStack.anime_wall('normal')
     var image_buffer = await axios.get(image_link, { responseType: 'arraybuffer' })
-    await message.sendMessage(Buffer.from(image_buffer.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+    await message.sendMessage(Buffer.from(image_buffer.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
   } else if (match[1] == 'nsfw') {
     var image_link_nsfw = await WhatsAsenaStack.anime_wall('nsfw')
     var image_buffer_nsfw = await axios.get(image_link_nsfw, { responseType: 'arraybuffer' })
-    await message.sendMessage(Buffer.from(image_buffer_nsfw.data), MessageType.image, { caption: 'Made by WhatsAsena' })
+    await message.sendMessage(Buffer.from(image_buffer_nsfw.data), MessageType.image, { mimetype: Mimetype.png, caption: 'Made by WhatsAsena' })
   } else {
     return await message.client.sendMessage(message.jid,wr_usage,MessageType.text)
   }
@@ -38,12 +40,24 @@ Asena.addCommand({pattern: 'animepic ?(.*)', fromMe: wk, desc: pic, usage: 'anim
 Asena.addCommand({pattern: 'animegif ?(.*)', fromMe: wk, desc: giff, usage: 'animegif normal // animegif nsfw'}, (async (message, match) => {
   if (match[1] == 'normal') {
     var gif_link = await WhatsAsenaStack.anime_gif('normal')
-    var gif_buffer = await axios.get(gif_link, { responseType: 'arraybuffer' })
-    await message.sendMessage(Buffer.from(gif_buffer.data), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(gif_link, '/root/WhatsAsenaDuplicated/pic.mp4', async() => {                          
+      await message.client.sendMessage(message.jid, fs.readFileSync('/root/WhatsAsenaDuplicated/pic.mp4'), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
+    })
   } else if (match[1] == 'nsfw') {
     var gif_link_nsfw = await WhatsAsenaStack.anime_gif('nsfw')
-    var gif_buffer_nsfw = await axios.get(gif_link_nsfw, { responseType: 'arraybuffer' })
-    await message.sendMessage(Buffer.from(gif_buffer_nsfw.data), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
+    var download = async(uri, filename, callback) => {
+      await request.head(uri, async(err, res, body) => {    
+        await request(uri).pipe(fs.createWriteStream(filename)).on('close', callback);
+      });
+    };
+    await download(gif_link_nsfw, '/root/WhatsAsenaDuplicated/picn.mp4', async() => {                          
+      await message.client.sendMessage(message.jid, fs.readFileSync('/root/WhatsAsenaDuplicated/picn.mp4'), MessageType.video, { caption: 'Made by WhatsAsena', mimetype: Mimetype.gif })
+    })
   } else {
     return await message.client.sendMessage(message.jid,wr_usage,MessageType.text)
   }

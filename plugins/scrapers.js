@@ -233,7 +233,7 @@ if (config.WORKTYPE == 'private') {
             }
         }
         else if (match[1] == 'off') {
-            if (config.ANTI_LINK !== 'true') {
+            if (config.ANTILINK !== 'true') {
                 return await message.client.sendMessage(message.jid, '*' + alr_off + '*', MessageType.text)
             }
             else {
@@ -460,7 +460,7 @@ if (config.WORKTYPE == 'private') {
             quality: 'highestaudio',
         });
     
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.png'));
         ffmpeg(stream)
             .audioBitrate(320)
             .save('./' + title + '.mp3')
@@ -470,7 +470,7 @@ if (config.WORKTYPE == 'private') {
                     .setFrame('TPE1', [arama[0].author.name])
                     .setFrame('APIC', {
                         type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
+                        data: fs.readFileSync(title + '.png'),
                         description: arama[0].description
                     });
                 writer.addTag();
@@ -546,16 +546,40 @@ if (config.WORKTYPE == 'private') {
         
         var img_list = await WhatsAsenaStack.search_image(match[1])
         await message.client.sendMessage(message.jid, Lang.IMG.format(5, match[1]), MessageType.text);
-        var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img1.data), MessageType.image)
-        var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img2.data), MessageType.image)
-        var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img3.data), MessageType.image)
-        var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img4.data), MessageType.image)
-        var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img5.data), MessageType.image)
+        try {
+          var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img1.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img2.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img3.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img4.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+      
+        try {
+          var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img5.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
     }));
 
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: true, desc: Glang.GİTHUB_DESC, usage: 'github phaticusthiccy // github phaticusthiccy/Emacs-Train' }, (async (message, match) => {
@@ -617,7 +641,7 @@ if (config.WORKTYPE == 'private') {
 
         var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
 
-        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
+        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut , mimetype: Mimetype.png });
 
     }));
 
@@ -974,7 +998,7 @@ else if (config.WORKTYPE == 'public') {
             }
         }
         else if (match[1] == 'off') {
-            if (config.ANTI_LINK !== 'true') {
+            if (config.ANTILINK !== 'true') {
                 return await message.client.sendMessage(message.jid, '*' + alr_off + '*', MessageType.text)
             }
             else {
@@ -1026,7 +1050,7 @@ else if (config.WORKTYPE == 'public') {
             quality: 'highestaudio',
         });
     
-        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.jpg'));
+        got.stream(arama[0].image).pipe(fs.createWriteStream(title + '.png'));
         ffmpeg(stream)
             .audioBitrate(320)
             .save('./' + title + '.mp3')
@@ -1036,7 +1060,7 @@ else if (config.WORKTYPE == 'public') {
                     .setFrame('TPE1', [arama[0].author.name])
                     .setFrame('APIC', {
                         type: 3,
-                        data: fs.readFileSync(title + '.jpg'),
+                        data: fs.readFileSync(title + '.png'),
                         description: arama[0].description
                     });
                 writer.addTag();
@@ -1112,16 +1136,40 @@ else if (config.WORKTYPE == 'public') {
         
         var img_list = await WhatsAsenaStack.search_image(match[1])
         await message.client.sendMessage(message.jid, Lang.IMG.format(5, match[1]), MessageType.text);
-        var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img1.data), MessageType.image)
-        var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img2.data), MessageType.image)
-        var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img3.data), MessageType.image)
-        var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img4.data), MessageType.image)
-        var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
-        await message.sendMessage(Buffer.from(img5.data), MessageType.image)
+        try {
+          var img1 = await axios.get(img_list.link1, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img1.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img2 = await axios.get(img_list.link2, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img2.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img3 = await axios.get(img_list.link3, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img3.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+
+        try {
+          var img4 = await axios.get(img_list.link4, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img4.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
+      
+        try {
+          var img5 = await axios.get(img_list.link5, {responseType: 'arraybuffer'})
+          await message.sendMessage(Buffer.from(img5.data), MessageType.image, { mimetype: Mimetype.png })
+        } catch {
+          return;
+        }
     }));
 
     Asena.addCommand({ pattern: 'github ?(.*)', fromMe: false, desc: Glang.GİTHUB_DESC, usage: 'github phaticusthiccy // github phaticusthiccy/Emacs-Train' }, (async (message, match) => {
@@ -1184,14 +1232,14 @@ else if (config.WORKTYPE == 'public') {
 
         var buffer = await axios.get(cov, {responseType: 'arraybuffer'});
 
-        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut });
+        await message.client.sendMessage(message.jid, Buffer.from(buffer.data),  MessageType.image, {caption: `*${Slang.ARAT}* ` + '```' + `${match[1]}` + '```' + `\n*${Slang.BUL}* ` + '```' + tit + '```' + `\n*${Slang.AUT}* ` + '```' + son + '```' + `\n*${Slang.SLY}*\n\n` + aut , mimetype: Mimetype.png });
 
     }));
 
     Asena.addCommand({pattern: "covid ?(.*)", fromMe: false, desc: Clang.COV_DESC}, (async (message, match) => {
         if (match[1] === "") {
             try{
-                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json());
+                //const resp = await fetch("https://coronavirus-19-api.herokuapp.com/all").then(r => r.json()); 
                 const respo = await got("https://coronavirus-19-api.herokuapp.com/all").then(async ok => {
                     const resp = JSON.parse(ok.body);
                     await message.reply(`🌍 *World-Wide Results:*\n🌐 *Total Cases:* ${resp.cases}\n☠️ *Total Deaths:* ${resp.deaths}\n⚕️ *Total Recovered:* ${resp.recovered}`);

@@ -380,9 +380,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "hue=s=0"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
         });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -401,9 +401,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "curves=vintage"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -444,9 +444,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "split[original][copy];[copy]scale=ih*16/9:-1,crop=h=iw*9/16,gblur=sigma=20[blurred];[blurred][original]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -571,9 +571,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-filter:v", "edgedetect=low=0.9:high=0.2"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -592,9 +592,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "unsharp=3:3:1.5"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -679,9 +679,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .videoFilters('noise=alls=100:allf=t+u')
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -863,10 +863,10 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "geq=r='X/W*r(X,Y)':g='(1-X/W)*g(X,Y)':b='(H-Y)/H*b(X,Y)"])
-            .videoFilters('eq=brightness=0.5')
-            .save('output.jpg')
+            .videoFilters('eq=brightness=0.6')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -907,9 +907,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "curves=color_negative"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -972,9 +972,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "convolution=-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1037,9 +1037,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.1"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1419,9 +1419,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "hue=s=0"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
         });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1440,9 +1440,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "curves=vintage"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1483,9 +1483,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "split[original][copy];[copy]scale=ih*16/9:-1,crop=h=iw*9/16,gblur=sigma=20[blurred];[blurred][original]overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1610,9 +1610,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-filter:v", "edgedetect=low=0.9:high=0.2"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1631,9 +1631,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "unsharp=3:3:1.5"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1718,9 +1718,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .videoFilters('noise=alls=100:allf=t+u')
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1903,9 +1903,9 @@ else if (Config.WORKTYPE == 'public') {
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "geq=r='X/W*r(X,Y)':g='(1-X/W)*g(X,Y)':b='(H-Y)/H*b(X,Y)"])
             .videoFilters('eq=brightness=0.5')
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -1946,9 +1946,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "curves=color_negative"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -2011,9 +2011,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .outputOptions(["-y", "-vf", "convolution=-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2:-2 -1 0 -1 1 1 0 1 2"])
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -2075,10 +2075,10 @@ else if (Config.WORKTYPE == 'public') {
         });
 
         ffmpeg(location)
-            .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.1"])
-            .save('output.jpg')
+            .outputOptions(["-y", "-vf", "eq=contrast=1.3:saturation=1.5:brightness=-0.2"])
+            .save('output.png')
             .on('end', async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg, caption: 'Made by WhatsAsena'});
+                await message.sendMessage(fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(message.jid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));

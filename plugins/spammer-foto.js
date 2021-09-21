@@ -21,10 +21,10 @@ Asena.addCommand({pattern: 'foto spam$', fromMe: true, desc: Lang.FOTO_DESC}, (a
     });
 
     ffmpeg(location)
-        .save('output.jpg')
+        .save('output.png')
         .on('end', async () => {
             setInterval(async () => {
-                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
+                await message.sendMessage(fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.png});
             }, 200)
         });
 }));

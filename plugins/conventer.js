@@ -99,9 +99,9 @@ if (Config.WORKTYPE == 'private') {
 
         ffmpeg(location)
             .fromFormat('webp_pipe')
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.client.sendMessage(mid, fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
+                await message.client.sendMessage(mid, fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
@@ -164,9 +164,9 @@ else if (Config.WORKTYPE == 'public') {
 
         ffmpeg(location)
             .fromFormat('webp_pipe')
-            .save('output.jpg')
+            .save('output.png')
             .on('end', async () => {
-                await message.client.sendMessage(mid, fs.readFileSync('output.jpg'), MessageType.image, {mimetype: Mimetype.jpg});
+                await message.client.sendMessage(mid, fs.readFileSync('output.png'), MessageType.image, {mimetype: Mimetype.png, caption: 'Made by WhatsAsena'});
             });
         return await message.client.deleteMessage(mid, {id: downloading.key.id, remoteJid: message.jid, fromMe: true})
     }));
