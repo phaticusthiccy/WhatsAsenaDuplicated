@@ -445,11 +445,11 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         } else {
                             whats = new Message(WhatsAsenaCN, msg);
                         }
-                        /*
+                        
                         if (msg.key.fromMe && command.deleteCommand && !msg.key.remoteJid.includes('-')) {
                           await whats.delete()                          
                         } 
-                        */
+                        
                         // ==================== End Message Catcher ====================
 
                         // ==================== Error Message ====================
