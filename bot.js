@@ -446,11 +446,8 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                             whats = new Message(WhatsAsenaCN, msg);
                         }
                         /*
-                        if (msg.key.fromMe && command.deleteCommand) {
-                            var wrs = WhatsAsenaCN.user.phone.wa_version.split('.')[2]
-                            if (wrs < 11 && !msg.key.remoteJid.includes('-')) {
-                                await whats.delete() 
-                            }
+                        if (msg.key.fromMe && command.deleteCommand && !msg.key.remoteJid.includes('-')) {
+                          await whats.delete()                          
                         } 
                         */
                         // ==================== End Message Catcher ====================
@@ -458,7 +455,7 @@ ${chalk.blue.italic('ℹ️ Connecting to WhatsApp... Please Wait.')}`);
                         // ==================== Error Message ====================
                         try {
                             await command.function(whats, match);
-                            if (msg.key.fromMe && command.deleteCommand) await whats.delete()
+                            
                         }
                         catch (error) {
                             if (config.NOLOG == 'true') return;
