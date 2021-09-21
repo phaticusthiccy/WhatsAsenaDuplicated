@@ -8,7 +8,7 @@ Developer & Co-Founder - Phaticusthiccy
 */
 
 const Asena = require('../events');
-const {MessageType} = require('@adiwajshing/baileys');
+const {MessageType, Mimetype, MessageOptions} = require('@adiwajshing/baileys');
 const {spawnSync} = require('child_process');
 const Config = require('../config');
 const chalk = require('chalk');
@@ -32,7 +32,7 @@ if (Config.WORKTYPE == 'private') {
             if (payload.includes('{pp}')) {
                 const ppUrl = await message.client.getProfilePicture() 
                 const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
-                await message.sendMessage(Buffer(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL)});
+                await message.sendMessage(Buffer(resim.data), MessageType.image, { mimetype: Mimetype.png, caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL)});
             }
             else if (payload.includes('{asenalogo}')) {
                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/media/gif/WhatsAsena Animated.mp4'), MessageType.video, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL).replace('{asenalogo}', '')});
@@ -65,7 +65,7 @@ else if (Config.WORKTYPE == 'public') {
             if (payload.includes('{pp}')) {
                 const ppUrl = await message.client.getProfilePicture() 
                 const resim = await Axios.get(ppUrl, {responseType: 'arraybuffer'})
-                await message.sendMessage(Buffer(resim.data), MessageType.image, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL)});
+                await message.sendMessage(Buffer(resim.data), MessageType.image, { mimetype: Mimetype.png, caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL)});
             }
             else if (payload.includes('{asenalogo}')) {
                 await message.client.sendMessage(message.jid,fs.readFileSync('/root/WhatsAsenaDuplicated/media/gif/WhatsAsena Animated.mp4'), MessageType.video, { caption: payload.replace('{version}', Config.VERSION).replace('{pp}', '').replace('{info}', `${status.status}`).replace('{plugin}', Config.CHANNEL).replace('{asenalogo}', '')});
