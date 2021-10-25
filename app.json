@@ -1,117 +1,106 @@
 {
-    "name": "WhatsAsenaDuplicated",
-    "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
-    "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
-    "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai", "asena", "ai-bot", "AsenaDev", "wabot", "wabot asena", "wp bot"],
-    "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
-    "website":   "https://t.me/phaticusthiccy",
-    "success_url": "https://t.me/AsenaSupport",
+    "name": " 🧚‍♂️ꜱʟ ᴀꜱɪᴀᴛᴀ💫 ",
+    "description": " 🧚‍♂️ꜱʟ ᴀꜱɪᴀᴛᴀ project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
+    "logo": "https://telegra.ph/file/76600582eaec8135cbb62.jpg",
+    "keywords": ["whatsapp", "userbot", "Pearl", "Devil", "bot", "api", "ai"],
+    "repository": "https://github.com/Thisan01/WhatsAsenaDuplicated",
+    "website":   "https://chat.whatsapp.com/IfrEWJ30nUd3Cbi3uIvtIb",
+    "success_url": "https://chat.whatsapp.com/IfrEWJ30nUd3Cbi3uIvtIb",
     "stack": "container",
     "env": {
-        "ASENA_SESSION": {
-            "description": "Qr.Js ile oluşturduğunuz özel session kodu. Type here yours Asena Session.",
+        "DEVIL_SESSION": {
+            "description": "QR කේතය ස්කෑන් කර ලබා ගත් කේතය. Type here yours Asena Session.",
             "required": true
         },
         "SUDO": {
-            "description": "Kullanıcılara tüm yetkileri verir. It gives all the privileges to the users. => 90xxx,0,90xxx,0,90xxx...",
+            "description": "Leave blank if you don't know how to use it! Sudo mode; Your number must be an international number. So you should have your number after the country code. Example: 1205xxxxxxxxx (USA number +1)",
             "required": false
         },
         "LANGUAGE": {
-            "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => ID, Español => ES, Portuguese => pt, Russian => ru",
+            "description": "සින්හල භාශාව සදහා TR ලෙස තබන්න..Bot language.  English => en.",
             "required": true,
             "value": "TR"
         },
-        "PROXY": {
-            "description": "Proxy Adresi. Proxy Address => http://some-host:1234",
-            "required": false,
-            "value": "false"
-        },
-        "ANTI_LINK": {
-            "description": "Link Engelleme Sistemi. Link Blocking System.",
+        "ANTİ_LİNK": {
+            "description": "ඔබගේ සමූහයේ ලින්ක් දමන්නන් පලවා හැරීමට. Link Blocking System.",
             "required": true,
             "value": "false"
         },
-        "AUTO_BIO": {
-            "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
+        "AUTO_BİO": {
+            "description": "ඔබගේ බයෝ එක දිනෙන් දින වෙනස් වීමට.. Set true for auto date, time in biography.",
             "required": true,
             "value": "false"
         },
         "HANDLERS": {
-            "description": "Komutlar için. For commands.",
+            "description": "වෙනස් නොකරන්න .❌ DO NOT CHANGE. For commands.",
             "required": true,
             "value": "^[.!;]"
         },
         "FULL_EVA": {
-            "description": "Hesabınızı bir Chatbot'a Çevirin! Turn your account into a chatbot!",
+            "description": "බොට් චැට් බොට් ලෙස ක්‍රියා කරයි ! Turn your account into a chatbot!",
             "required": true,
             "value": "false"
         },
         "NO_LOG": {
-            "description": "Hata logu görmek istemiyorsanız true yapın. Set true if you don't want to see error log.",
+            "description": ". Set true if you don't want to see error log.",
             "required": true,
             "value": "false"
         },
         "SEND_READ": {
-            "description": "Görüldü atmak istiyorsanız true yazın. Write true if you want to throw seen.",
+            "description": "බොට් ලවා පණිවිඩ කියවීමට. මෙලෙසම තබන්න.. Write true if you want to throw seen.",
             "required": true,
             "value": "true"
         },
         "HEROKU": {
-            "description": "Herokuda çalışıyorsa true yazın. If it is running in Heroku, type true.",
+            "description": "DO NOT CHANGE ❌. If it is running in Heroku, type true.",
             "required": true,
             "value": "true"
         },
         "HEROKU_API_KEY": {
-            "description": "Herokuda API Keyiniz. Heroku API Key. ===> https://t.me/herokuapikeyscraper",
+            "description": "හෙරෝකු API කී එක . Heroku API Key.",
             "required": true
         },
         "MUTE_MESSAGE": {
-            "description": "Düzenlenebilir Mute Mesajı. Customizable Mute Message! Use => default, to change back.",
+            "description": " Customizable Mute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "BLOCK_CHAT": {
-            "description": "Choose in which chat the bot won't work there. Ex: 905xxxx && 905xxxx-1xxx or 905xxxx,905xxx...",
+            "description": "Choose in which chat the bot won't work there. Ex: 94xxxx && 94xxxx-1xxx or 94xxxx,905xxx...",
             "required": false,
             "value": "false"
         },
         "UNMUTE_MESSAGE": {
-            "description": "Düzenlenebilir Unmute Mesajı. Customizable Unmute Message! Use => default, to change back.",
+            "description": ". Customizable Unmute Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "BLOCK_MESSAGE": {
-            "description": "Düzenlenebilir Block Mesajı. Customizable Block Message! Use => default, to change back.",
+            "description": ". Customizable Block Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "UNBLOCK_MESSAGE": {
-            "description": "Düzenlenebilir Unblock Mesajı. Customizable Unblock Message! Use => default, to change back.",
+            "description": ". Customizable Unblock Message! Use => default, to change back.",
             "required": false,
             "value": "default"
         },
         "WORK_TYPE": {
-            "description": "WhatsAsena Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
+            "description": " 🧚‍♂️ꜱʟ ᴀꜱɪᴀᴛᴀ💫 Working Type. If you use “public”, everyone can use the bot. Else if you use “private”, only you can use your bot.",
             "required": true,
             "value": "private"
         },
         "HEROKU_APP_NAME": {
-            "description": "Herokuda uygulama adı. App Name ile aynı olmalıdır! Heroku APP Name. Must be the same as the App name!",
+            "description": "ඔබ මුලින්ම යෙදූ ඇප් නාමය.. Heroku APP Name.",
             "required": true
         },
         "DEBUG": {
-            "description": "Geliştiricilere özeldir. For Developers => all, info, warn, fatal, error, debug, off",
+            "description": "DO NOT CHANGE ❌.",
             "required": true,
             "value": "false"
         },
         "REMOVE_BG_API_KEY": {
-            "description": "Fotoğrafların arkaplanını kaldırır. https://remove.bg",
-            "value": "false",
-            "required": false
-        },
-        "DEEPAI_API_KEY": {
-            "description": "DeepAI Komutu İçin API Key. For DeepAI Command ===> https://github.com/phaticusthiccy/WhatsAsenaDuplicated/wiki/DeepAI-API-Key",
-            "value": "false",
+            "description": "REMOVE BG API කේතය. https://remove.bg",
             "required": false
         },
         "ALIVE_MESSAGE": {
@@ -152,10 +141,15 @@
         "GAN_IMAGE": {
             "description": "Gan Style eklentisi için resim bağlantısı yazın. Type image link for Gan Style plugin.",
             "required": true,
-            "value": "https://i.hizliresim.com/loUtAb.jpg"
+            "value": "https://telegra.ph/file/76600582eaec8135cbb62.jpg"
         },
         "NO_ONLINE": {
-            "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
+            "description": "බොට් ඔන්ලයින් තැබීමට. Type true if you don't want to appear online.",
+            "required": false,
+            "value": "true"
+        },
+        "COFFEEHOUSE_API_KEY": {
+            "description": "Pass This Step! - DO NOT CHANGE ❌!",
             "required": false,
             "value": "true"
         }
