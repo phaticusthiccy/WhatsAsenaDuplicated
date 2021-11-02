@@ -14,7 +14,7 @@ const fs = require('fs');
 async function whatsAsena () {
     const conn = new WAConnection();
     const Session = new StringSession();  
-    conn.version = [2, 2126, 14]
+    conn.version = [3, 3234, 9]
     conn.logger.level = 'warn';
     conn.regenerateQRIntervalMs = 50000;
 
