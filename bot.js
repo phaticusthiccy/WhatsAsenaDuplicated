@@ -90,7 +90,11 @@ async function whatsAsena () {
     clh.pay = ddd
     const WhatsAsenaCN = new WAConnection();
     const Session = new StringSession();
-    WhatsAsenaCN.version = [2, 2126, 14]
+    try {
+      WhatsAsenaCN.version = [3, 3234, 9]
+    } catch {
+      console.log(`passed v${WhatsAsenaCN.version}`)
+    }
     WhatsAsenaCN.setMaxListeners(0);
     var proxyAgent_var = ''
     if (config.PROXY.includes('https') || config.PROXY.includes('http')) {
