@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git"
+    "url": "git+https://github.com/Honspencer/WhatsAsenaDuplicated.git"
   },
   "keywords": [
     "whatsapp",
@@ -25,12 +25,12 @@
     "WhatsAsena"
   ],
   "author": "AsenaDev / Yusuf Usta",
-  "developer": "AsenaDev / @phaticusthiccy",
+  "developer": "AsenaDev / @Honspencer",
   "license": "GPL-3.0-or-later",
   "bugs": {
-    "url": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated/issues"
+    "url": "https://github.com/Honspencer/WhatsAsenaDuplicated/issues"
   },
-  "homepage": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme",
+  "homepage": "https://github.com/Honspencer/WhatsAsenaDuplicated#readme",
   "dependencies": {
     "whatsasena-npm": "^1.3.0"
   }
