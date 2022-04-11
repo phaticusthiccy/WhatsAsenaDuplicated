@@ -1,37 +1,57 @@
 {
-  "name": "WhatsAsenaDuplicated",
-  "version": "1.3.6",
-  "description": "WhatsAsena project - a Whatsapp userbot helping to improve your Whatsapp experience.",
-  "main": "./WhatsAsenaDuplicated/bot.js",
-  "scripts": {
-    "start": "supervisor -s bot.js"
+  "name" : " WhatsAsenaDuplicated " ,
+  "sürüm" : " 0.13.0 " ,
+  "description" : " WhatsAsena projesi - Whatsapp deneyiminizi geliştirmeye yardımcı olan bir Whatsapp kullanıcı robotu. " ,
+  "main" : " ./WhatsAsenaDuplicated/bot.js " ,
+  "komut dosyaları" : {
+    "start" : " süpervizör -s bot.js "
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git"
+  "depo" : {
+    "tür" : " git " ,
+    "url" : " git+https://github.com/phaticusthiccy/WhatsAsenaDuplicated.git "
   },
-  "keywords": [
-    "whatsapp",
-    "bot",
-    "ai",
-    "asena",
-    "api",
-    "unlimited",
-    "asenadev",
-    "machine learning",
-    "automatic",
-    "whatsapp web",
-    "whatsapp api",
-    "WhatsAsena"
+  "anahtar kelimeler" : [
+    " whatsapp "
   ],
-  "author": "AsenaDev / Yusuf Usta",
-  "developer": "AsenaDev / @phaticusthiccy",
-  "license": "GPL-3.0-or-later",
-  "bugs": {
-    "url": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated/issues"
+  "yazar" : " AsenaDev / Yusuf Usta " ,
+  "geliştirici" : " AsenaDev / @phaticusthiccy " ,
+  "lisans" : " GPL-3.0 veya üstü " ,
+  "böcekler" : {
+    "url" : " https://github.com/phaticusthiccy/WhatsAsenaDuplicated/issues "
   },
-  "homepage": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme",
-  "dependencies": {
-    "whatsasena-npm": "^1.3.0"
+  "ana sayfa" : " https://github.com/phaticusthiccy/WhatsAsenaDuplicated#readme " ,
+  "bağımlılıklar" : {
+    "@adiwajshing/baileys" : " ^3.4.1 " ,
+    "@lh2020/speedtest-net" : " ^2.1.1 " ,
+    "tarayıcı-id3-yazar" : " ^4.4.0 " ,
+    "tebeşir" : " ^4.1.0 " ,
+    "kahvehane" : " ^1.0.1 " ,
+    "cwebp" : " ^2.0.5 " ,
+    "deep" : " ^1.0.17 " ,
+    "cwebp-bin" : " ^6.1.1 " ,
+    "dotenv" : " ^8.2.0 " ,
+    "exchange-rates-api" : " ^1.0.2 " ,
+    "akıcı-ffmpeg" : " ^2.1.2 " ,
+    "form-data" : " ^3.0.0 " ,
+    "gis" : " ^2.1.6 " ,
+    "google-translate-tts" : " ^0.3.0 " ,
+    "var" : " ^11.8.0 " ,
+    "heroku istemcisi" : " ^3.1.0 " ,
+    "jimp" : " ^0.16.1 " ,
+    "js-ffmpeg" : " 0.0.26 " ,
+    "jsdom" : " ^16.4.0 " ,
+    "langs" : " ^2.0.0 " ,
+    "mem oluşturucu" : " ^2.1.2 " ,
+    "node-tesseract-ocr" : " ^2.0.0 " ,
+    "pg" : " ^8.5.1 " ,
+    "sequelize" : " ^6.3.5 " ,
+    "basit-git" : " ^2.22.0 " ,
+    "sozlukjs" : " ^1.1.0 " ,
+    "spotify-web-api-node" : " ^5.0.0 " ,
+    "sqlite3" : " 5.0.0 " ,
+    "çevir" : " ^3.0.0 " ,
+    "wikijs" : " ^6.0.1 " ,
+    "yt-search" : " ^2.5.0 " ,
+    "ytdl-core" : " ^4.3.0 "
   }
 }
