@@ -1,11 +1,8 @@
 {
-    "name": "WhatsAsenaDuplicated",
-    "description": "WhatsAsena project - Makes it easy and fun to use Whatsapp. World’s first UserBot made for WhatsApp.",
-    "logo": "https://i.hizliresim.com/6Bbj7i.jpg",
+    "name": "ZoraBot",
+    "description": "كل خرا.",
+    "logo": "https://64.media.tumblr.com/d24b8297f7f15f9ff890bb811ac6dda1/121e19b11ef5697a-dc/s400x600/3c29834f63989aa30cdcdb7623431c25bdbc15db.jpg",
     "keywords": ["whatsapp", "userbot", "Asena", "WhatsAsena", "bot", "api", "ai", "asena", "ai-bot", "AsenaDev", "wabot", "wabot asena", "wp bot"],
-    "repository": "https://github.com/phaticusthiccy/WhatsAsenaDuplicated",
-    "website":   "https://t.me/phaticusthiccy",
-    "success_url": "https://t.me/AsenaSupport",
     "stack": "container",
     "env": {
         "ASENA_SESSION": {
@@ -19,7 +16,7 @@
         "LANGUAGE": {
             "description": "Bot language. Azerice => az, English => en, Türkçe => tr, Malayalam => ml, Hindi => HI, Indonesia => ID, Español => ES, Portuguese => pt, Russian => ru",
             "required": true,
-            "value": "TR"
+            "value": "en"
         },
         "PROXY": {
             "description": "Proxy Adresi. Proxy Address => http://some-host:1234",
@@ -32,7 +29,7 @@
             "value": "false"
         },
         "AUTO_BIO": {
-            "description": "Duruma otomatik tarih ve zaman eklemek için true yapın. Set true for auto date, time in biography.",
+            "description": "ZoraBot.",
             "required": true,
             "value": "false"
         },
@@ -152,7 +149,7 @@
         "GAN_IMAGE": {
             "description": "Gan Style eklentisi için resim bağlantısı yazın. Type image link for Gan Style plugin.",
             "required": true,
-            "value": "https://i.hizliresim.com/loUtAb.jpg"
+            "value": "https://64.media.tumblr.com/d24b8297f7f15f9ff890bb811ac6dda1/121e19b11ef5697a-dc/s400x600/3c29834f63989aa30cdcdb7623431c25bdbc15db.jpg"
         },
         "NO_ONLINE": {
             "description": "Çevrimiçi görünmek istemiyorsanız true yazın. Type true if you don't want to appear online.",
