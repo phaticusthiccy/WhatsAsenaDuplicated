@@ -6,7 +6,6 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const {MessageType, Presence, MessageOptions} = require('@adiwajshing/baileys');
 const Base = require('./Base');
 const ReplyMessage = require('./ReplyMessage');
 
@@ -23,6 +22,7 @@ class Message extends Base {
         this.message = data.message.extendedTextMessage === null ? data.message.conversation : data.message.extendedTextMessage.text;
         this.unreadCount = data.unreadCount;
         this.timestamp = typeof(data.messageTimestamp) === 'object' ? data.messageTimestamp.low : data.messageTimestamp;
+        this.key = data.key;
         this.data = data;
         
         if (data.message.hasOwnProperty('extendedTextMessage') &&
@@ -44,24 +44,32 @@ class Message extends Base {
     }
 
     async delete() {
-        return await this.client.deleteMessage(this.jid, {id: this.id, remoteJid: this.jid, fromMe: true})
+        return await this.client.sendMessage(this.jid, {
+          delete: this.key
+        })
     }
 
     async reply(text) {
-        var message = await this.client.sendMessage(this.jid, text, MessageType.text);
+        var message = await this.client.sendMessage(this.jid, {
+          text: text
+        }, { quoted: this.id })
         return new Message(this.client, message)
     }
 
-    async sendMessage(content, type = MessageType.text, options) {
-        return await this.client.sendMessage(this.jid, content, type, options)
+    async sendMessage(jid, content, options) {
+        return await this.client.sendMessage(jid, content, options)
     }
 
     async sendTyping() {
-        return await this.client.updatePresence(this.jid, Presence.composing) ;
+        return await this.client.sendPresenceUpdate('composing', this.jid);
     }
 
-    async sendRead() {
-        return await this.client.chatRead(this.jid);
+    async sendRead(keys) {
+        return await this.client.readMessages(keys || [this.key]);
+    }
+
+    async editMessage(jid, content, options) {
+        return await this.client.e(jid, content, options)
     }
 };
 
