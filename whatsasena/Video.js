@@ -6,7 +6,6 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-const {MessageType, Presence, MessageOptions} = require('@adiwajshing/baileys');
 const Base = require('./Base');
 const Message = require('./Message');
 const ReplyMessage = require('./ReplyMessage');
@@ -28,6 +27,7 @@ class Video extends Base {
         this.height = data.message.videoMessage.height;
         this.width = data.message.videoMessage.width;
         this.mediaKey = data.message.videoMessage.mediaKey;
+        this.key = data.key;
         this.data = data;
         
         if (data.message.videoMessage.hasOwnProperty('contextInfo') && data.message.contextInfo.quotedMessage) { 
@@ -40,24 +40,28 @@ class Video extends Base {
     }
 
     async delete() {
-        return await this.client.deleteMessage(this.jid, {id: this.id, remoteJid: this.jid, fromMe: true})
+        return await this.client.sendMessage(this.jid, {
+          delete: this.key
+        })
     }
 
     async reply(text) {
-        var message = await this.client.sendMessage(this.jid, text, MessageType.text, {quoted: this.data})
+        var message = await this.client.sendMessage(this.jid, {
+          text: text
+        }, { quoted: this.id })
         return new Message(this.client, message)
     }
 
-    async sendMessage(content, type, options) {
-        return await this.client.sendMessage(this.jid, content, type, options)
+    async sendMessage(content, options) {
+        return await this.client.sendMessage(this.jid, content, options)
     }
 
     async sendTyping() {
-        return await this.client.updatePresence(this.jid, Presence.composing) ;
+        return await this.client.sendPresenceUpdate('composing', this.jid);
     }
 
-    async sendRead() {
-        return await this.client.chatRead(this.jid);
+    async sendRead(keys) {
+        return await this.client.readMessages(keys || [this.key]);
     }
 
     async download(location = this.id) {
