@@ -7,26 +7,25 @@ const Lang = Language.getString("_asena");
 Asena.addCommand(
   { pattern: "asena ?(.*)", fromMe: true, dontAddCommandList: true },
   async (message, match_c) => {
-    var CMD_HELP = "";
+    let CMD_HELP = "";
 
-    
     Asena.commands = Asena.commands.sort((a, b) => {
-      var aPattern = a.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2].trim();
-      var bPattern = b.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2].trim();
+      let aPattern = a.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2].trim();
+      let bPattern = b.pattern.toString().match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2].trim();
       return aPattern.localeCompare(bPattern);
     });
 
     Asena.commands.map(async (command) => {
       if (match_c[1] !== "") {
-        var match1 = command.pattern
+        let match1 = command.pattern
           .toString()
           .match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
-        var mmatch1 = command.pattern
+        let mmatch1 = command.pattern
           .toString()
           .match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
           .trim();
         if (mmatch1.toLowerCase() == match_c[1].toLowerCase()) {
-          var HANDLER = "";
+          let HANDLER = "";
 
           if (/\[(\W*)\]/.test(Config.HANDLERS)) {
             HANDLER = Config.HANDLERS.match(/\[(\W*)\]/)[1][0];
@@ -90,15 +89,15 @@ Asena.addCommand(
       } else {
         if (command.dontAddCommandList || command.pattern === undefined) return;
         try {
-          var match = command.pattern
+          let match = command.pattern
             .toString()
             .match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
-          var mmatch = command.pattern
+          let mmatch = command.pattern
             .toString()
             .match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
             .trim();
         } catch {
-          var match = [command.pattern];
+          let match = [command.pattern];
         }
 
         var HANDLER = "";
@@ -162,9 +161,9 @@ Asena.addCommand(
         }
       }
     });
-    CMD_HELP = CMD_HELP.slice(0, -2);
+
     return await message.client.sendMessage(message.jid, {
-      text: CMD_HELP,
+      text: CMD_HELP.trim(),
       edit: message.key,
     });
   }
