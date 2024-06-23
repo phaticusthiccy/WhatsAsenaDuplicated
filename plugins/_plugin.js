@@ -66,7 +66,7 @@ Asena.addCommand({ pattern: 'plugin$', fromMe: true, desc: Lang.PLUGIN_DESC }, (
   }
 }));
 
-Asena.addCommand({ pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC, usage: '{}remove plugin_name' }, (async (message, match) => {
+Asena.addCommand({ pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC, usage: '{}remove <plugin_name>' }, (async (message, match) => {
   if (match[1] === '') return await message.client.sendMessage(message.jid, { text: Lang.NEED_PLUGIN, edit: message.key });
   match[1] = match[1].startsWith('__') ? match[1] : '__' + match[1];
   try {
@@ -92,7 +92,7 @@ Asena.addCommand({ pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE
 }));
 
 // ! This command exlusively for developers!
-Asena.addCommand({pattern: "var ?(.*)", fromMe: true, dontAddCommandList: true }, (async (message, match) => {
+Asena.addCommand({ pattern: "var ?(.*)", fromMe: true, dontAddCommandList: true }, (async (message, match) => {
   var data = await eval(match[1]);
   return console.log(data);
 }))
