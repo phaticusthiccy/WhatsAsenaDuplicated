@@ -21,7 +21,7 @@ const PluginDB = config.DATABASE.define('Plugin', {
 });
 
 async function installPlugin(adres, file) {
-    var Plugin = await PluginDB.findAll({
+    let Plugin = await PluginDB.findAll({
         where: {url: adres}
     });
 
