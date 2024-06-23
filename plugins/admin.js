@@ -12,8 +12,8 @@ const Lang = Language.getString('admin');
  */
 async function checkImAdmin(message, user = message.key.participant) {
   try {
-    var grup = await message.client.groupMetadata(message.jid);
-    var sonuc = grup["participants"].map((member) => {
+    let grup = await message.client.groupMetadata(message.jid);
+    let sonuc = grup["participants"].map((member) => {
       if (
         member.id.split("@")[0] == user.split("@")[0] &&
         member.hasOwnProperty("admin") &&
@@ -29,7 +29,7 @@ async function checkImAdmin(message, user = message.key.participant) {
 }
 
 Asena.addCommand({ pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.BAN_DESC, usage: '{}ban <reply/mention>' }, (async (message, match) => {
-    var admin = await checkImAdmin(message);
+    let admin = await checkImAdmin(message);
     if (!admin) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
 
     if (message.reply_message) {
@@ -45,7 +45,7 @@ Asena.addCommand({ pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: La
 }));
 
 Asena.addCommand({ pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC, usage: '{}add <number/reply>' }, (async (message, match) => {
-    var im = await checkImAdmin(message);
+    let im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
 
     if (match[1] !== '') {
@@ -59,20 +59,20 @@ Asena.addCommand({ pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, des
 }));
 
 Asena.addCommand({ pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.PROMOTE_DESC, usage: '{}promote <reply/mention>' }, (async (message, match) => {    
-    var im = await checkImAdmin(message);
+    let im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
 
     if (message.reply_message) {
-      var checkAlready = await checkImAdmin(message, message.reply_message.data.participant);
+      let checkAlready = await checkImAdmin(message, message.reply_message.data.participant);
       if (checkAlready) {
         return await message.client.sendMessage(message.jid, { text: Lang.ALREADY_PROMOTED, edit: message.key });
       }
       await message.client.sendMessage(message.jid, { text: '@' + message.reply_message.data.participant.split('@')[0] + Lang.PROMOTED, edit: message.key }, { mentions: [message.reply_message.data.participant] });
       await message.client.groupParticipantsUpdate(message.jid, [message.reply_message.data.participant], 'promote');
     } else if (message.mention.length > 0) {
-      var etiketler = '';
+      let etiketler = '';
       message.mention.map(async (user) => {
-        var checkAlready = await checkImAdmin(message, user);
+        let checkAlready = await checkImAdmin(message, user);
         if (checkAlready) {
           return await message.client.sendMessage(message.jid, { text: Lang.ALREADY_PROMOTED, edit: message.key });
         }
@@ -86,20 +86,20 @@ Asena.addCommand({ pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc
 }));
 
 Asena.addCommand({ pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.DEMOTE_DESC, usage: '{}demote <reply/mention>' }, (async (message, match) => {    
-    var im = await checkImAdmin(message);
+    let im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
 
     if (message.reply_message) {
-      var checkAlready = await checkImAdmin(message, message.reply_message.data.participant);
+      let checkAlready = await checkImAdmin(message, message.reply_message.data.participant);
       if (!checkAlready) {
         return await message.client.sendMessage(message.jid, { text: Lang.ALREADY_NOT_ADMIN, edit: message.key });
       }
       await message.client.sendMessage(message.jid, { text: '@' + message.reply_message.data.participant.split('@')[0] + Lang.DEMOTED, edit: message.key }, { mentions: [message.reply_message.data.participant] });
       await message.client.groupParticipantsUpdate(message.jid, [message.reply_message.data.participant], 'demote');
     } else if (message.mention.length > 0) {
-      var etiketler = '';
+      let etiketler = '';
       message.mention.map(async (user) => {
-        var checkAlready = await checkImAdmin(message, user);
+        let checkAlready = await checkImAdmin(message, user);
         if (!checkAlready) {
           return await message.client.sendMessage(message.jid, { text: Lang.ALREADY_NOT_ADMIN, edit: message.key });
         }
@@ -113,12 +113,12 @@ Asena.addCommand({ pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc:
 }));
 
 Asena.addCommand({ pattern: 'mute$', fromMe: true, onlyGroup: true, desc: Lang.MUTE_DESC }, (async (message, match) => {  
-    var im = await checkImAdmin(message);
+    let im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
     await message.client.groupSettingUpdate(message.jid, 'announcement');
     await message.client.sendMessage(message.jid, { text: Lang.MUTED, edit: message.key });
-    var units = { s: 1000, m: 60000, h: 3600000, d: 86400000 };
-    var ms = (time) => parseInt(time.slice(0, -1)) * units[time.slice(-1)];
+    let units = { s: 1000, m: 60000, h: 3600000, d: 86400000 };
+    let ms = (time) => parseInt(time.slice(0, -1)) * units[time.slice(-1)];
 
     if (match[1].match(/^\d+[smhd]$/)) {
       await new Promise(r => setTimeout(r, ms(match[1])));
@@ -128,16 +128,16 @@ Asena.addCommand({ pattern: 'mute$', fromMe: true, onlyGroup: true, desc: Lang.M
 }));
 
 Asena.addCommand({ pattern: 'unmute$', fromMe: true, onlyGroup: true, desc: Lang.UNMUTE_DESC }, (async (message, match) => {    
-    var im = await checkImAdmin(message);
+    let im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
     await message.client.groupSettingUpdate(message.jid, 'not_announcement');
     await message.client.sendMessage(message.jid, { text: Lang.UNMUTED, edit: message.key });
 }));
 
 Asena.addCommand({ pattern: 'invite$', fromMe: true, onlyGroup: true, desc: Lang.INVITE_DESC }, (async (message, match) => {    
-    var im = await checkImAdmin(message);
+    let im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
-    var invite = await message.client.groupInviteCode(message.jid);
+    let invite = await message.client.groupInviteCode(message.jid);
     await message.client.sendMessage(message.jid, { text: Lang.INVITE + ' https://chat.whatsapp.com/' + invite, edit: message.key });
 }));
 
