@@ -25,7 +25,7 @@ const GreetingsDB = config.DATABASE.define('Greeting', {
 });
 
 async function getMessage(jid = null, tip = 'welcome') {
-    var Msg = await GreetingsDB.findAll({
+    let Msg = await GreetingsDB.findAll({
         where: {
             chat: jid,
             type: tip
@@ -40,7 +40,7 @@ async function getMessage(jid = null, tip = 'welcome') {
 }
 
 async function setMessage(jid = null, tip = 'welcome', text = null) {
-    var Msg = await GreetingsDB.findAll({
+    let Msg = await GreetingsDB.findAll({
         where: {
             chat: jid,
             type: tip
@@ -55,7 +55,7 @@ async function setMessage(jid = null, tip = 'welcome', text = null) {
 }
 
 async function deleteMessage(jid = null, tip = 'welcome') {
-    var Msg = await GreetingsDB.findAll({
+    let Msg = await GreetingsDB.findAll({
         where: {
             chat: jid,
             type: tip
