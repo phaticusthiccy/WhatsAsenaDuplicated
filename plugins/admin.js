@@ -28,7 +28,7 @@ async function checkImAdmin(message, user = message.key.participant) {
   }
 }
 
-Asena.addCommand({ pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.BAN_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.BAN_DESC, usage: '{}ban <reply/mention>' }, (async (message, match) => {
     var admin = await checkImAdmin(message);
     if (!admin) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
 
@@ -44,12 +44,12 @@ Asena.addCommand({ pattern: 'ban ?(.*)', fromMe: true, onlyGroup: true, desc: La
     }
 }));
 
-Asena.addCommand({ pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, desc: Lang.ADD_DESC, usage: '{}add <number/reply>' }, (async (message, match) => {
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
 
     if (match[1] !== '') {
-      await message.client.groupParticipantsUpdate(message.jid, match[1].split(' '), 'add');
+      await message.client.groupParticipantsUpdate(message.jid, match[1].split(' ').map((user) => user.replace(/[^0-9]/g, '')), 'add');
       await message.client.sendMessage(message.jid, { text: '```' + user + ' ' + Lang.ADDED + '```', edit: message.key });
     } else if (message.reply_message) {
       await message.client.groupParticipantsUpdate(message.jid, [message.reply_message.data.participant], 'add');
@@ -58,7 +58,7 @@ Asena.addCommand({ pattern: 'add(?: |$)(.*)', fromMe: true, onlyGroup: true, des
     }
 }));
 
-Asena.addCommand({ pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.PROMOTE_DESC }, (async (message, match) => {    
+Asena.addCommand({ pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.PROMOTE_DESC, usage: '{}promote <reply/mention>' }, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
 
@@ -85,7 +85,7 @@ Asena.addCommand({ pattern: 'promote ?(.*)', fromMe: true, onlyGroup: true, desc
     }
 }));
 
-Asena.addCommand({ pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.DEMOTE_DESC }, (async (message, match) => {    
+Asena.addCommand({ pattern: 'demote ?(.*)', fromMe: true, onlyGroup: true, desc: Lang.DEMOTE_DESC, usage: '{}demote <reply/mention>' }, (async (message, match) => {    
     var im = await checkImAdmin(message);
     if (!im) return await message.client.sendMessage(message.jid, { text: Lang.IM_NOT_ADMIN, edit: message.key });
 
