@@ -9,7 +9,7 @@ try {
   fs.rmSync('./config.env', { recursive: true, force: true });
 } catch {}
 
-let store = makeInMemoryStore({
+const store = makeInMemoryStore({
   logger: pino().child({ level: 'silent', stream: 'store' })
 });
 
@@ -48,7 +48,7 @@ async function whatsAsena() {
   );
 
   sock.ev.on("connection.update", async (update) => {
-    var { connection } = update;
+    let { connection } = update;
 
     if (connection == "connecting") {
       console.log(
@@ -56,11 +56,11 @@ async function whatsAsena() {
       );
     } else if (connection == "open") {
       await delay(3000);
-      var credentials = fs.readFileSync(
+      let credentials = fs.readFileSync(
         __dirname + "/whatsasena/session/creds.json",
         "utf8"
       );
-      var st = Session.createStringSession(credentials);
+      let st = Session.createStringSession(credentials);
       console.log(chalk.green.bold("Asena String Code: "), st);
 
       if (!fs.existsSync("config.env")) {
