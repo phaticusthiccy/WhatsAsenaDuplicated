@@ -23,6 +23,7 @@
             "REMOVE_DESC": "Elimina el plugin.",
             "NEED_PLUGIN": "```Introduzca un complemento. Ejemplo: .plugin _ejemplo```",
             "NOT_FOUND_PLUGIN": "```Tal vez haya instalado un complemento de este tipo, o tal vez no. Pero seguro que no ahora mismo.```",
+            "DUPLICATE": "*¡Este complemento ya está instalado!*",
             "DELETED": "*✅ ¡Plugin eliminado correctamente!*"
         },
         "admin": {
