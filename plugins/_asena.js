@@ -17,10 +17,10 @@ Asena.addCommand(
 
     Asena.commands.map(async (command) => {
       if (match_c[1] !== "") {
-        let match1 = command.pattern
+        var match1 = command.pattern
           .toString()
           .match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
-        let mmatch1 = command.pattern
+        var mmatch1 = command.pattern
           .toString()
           .match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
           .trim();
@@ -89,15 +89,15 @@ Asena.addCommand(
       } else {
         if (command.dontAddCommandList || command.pattern === undefined) return;
         try {
-          let match = command.pattern
+          var match = command.pattern
             .toString()
             .match(/(\W*)([A-Za-zğüşıiöç1234567890 ]*)/);
-          let mmatch = command.pattern
+          var mmatch = command.pattern
             .toString()
             .match(/(\W*)([A-Za-züşiğ öç1234567890]*)/)[2]
             .trim();
         } catch {
-          let match = [command.pattern];
+          var match = [command.pattern];
         }
 
         var HANDLER = "";
