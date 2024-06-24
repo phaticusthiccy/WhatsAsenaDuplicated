@@ -23,8 +23,8 @@
             "REMOVE_DESC": "Plugin çıxarır.",
             "NEED_PLUGIN": "```Zəhmət olmasa bir Plugin daxil edin! Nümunə: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Bəlkə belə bir plagin quraşdırmısınız, ya da yox. Ancaq əmin deyil ki, indi deyil.```",
-            "DELETED": "*✅ Modul uğurla silindi!*",
-            "WARN": "Plaginləri yalnız t.me/remasterplugin kanalından əldə edin."
+            "DUPLICATE": "*Bu plagin artıq quraşdırılıb!*",
+            "DELETED": "*✅ Modul uğurla silindi!*"
         },
         "admin": {
             "BAN_DESC": "Grupdan şəxsi banlayır. Cavap verin (reply) yada əmrin yanına şəxs adı yazın",
