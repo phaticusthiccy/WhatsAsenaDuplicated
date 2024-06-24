@@ -23,6 +23,7 @@
             "REMOVE_DESC": "Removes the plugin.",
             "NEED_PLUGIN": "```Please enter a Plugin! Example: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Maybe you have installed such a plugin, or maybe not. But it sure isn't right now.```",
+            "DUPLICATE": "*This plugin is already installed!*",
             "DELETED": "*✅ Module successfully deleted!*"
         },
         "admin": {
