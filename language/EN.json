@@ -52,7 +52,7 @@
         },
         "weather": {
             "WEATHER_DESC": "Shows the weather.",
-            "NEED_LOCATION": "* Please write a location!*\n*Example:* ```.weather Bakü```",
+            "NEED_LOCATION": "*Please write a location!*\n*Example:* ```.weather Bakü```",
             "LOCATION": "Location",
             "TEMP": "Temperature",
             "DESC": "Description",
