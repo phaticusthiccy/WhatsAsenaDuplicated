@@ -41,7 +41,7 @@ function addCommand(info, func) {
     usage:
       info["usage"] === undefined
         ? ""
-        : info["usage"].format(config.HANDLERS[1]),
+        : info["usage"].format(config.HANDLERS[2]),
     dontAddCommandList:
       info["dontAddCommandList"] === undefined
         ? false
