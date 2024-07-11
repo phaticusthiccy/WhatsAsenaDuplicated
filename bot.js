@@ -100,12 +100,12 @@ Array.prototype.remove = function () {
   return this;
 };
 
-let level = config.DEBUG == true ? 'debug' : 'silent';
-const store = makeInMemoryStore({
+var level = config.DEBUG == true ? 'debug' : 'silent';
+var store = makeInMemoryStore({
   logger: pino().child({ level: level, stream: 'store' })
 });
 
-let first_run = true;
+var first_run = true;
 
 /**
  * Initializes the WhatsAsena bot and sets up the necessary event handlers.
@@ -127,10 +127,10 @@ let first_run = true;
  * @returns {Promise<void>} - A Promise that resolves when the bot is fully initialized.
 */
 async function whatsAsena() {
-  let Session = new StringSession();
-  let session = Session.deCrypt(config.SESSION);
-  let { version } = await fetchLatestBaileysVersion();
-  let { state, saveCreds } = await useMultiFileAuthState(
+  var Session = new StringSession();
+  var session = Session.deCrypt(config.SESSION);
+  var { version } = await fetchLatestBaileysVersion();
+  var { state, saveCreds } = await useMultiFileAuthState(
     __dirname + "/whatsasena/session/"
   );
   const sock = makeWASocket({
@@ -162,8 +162,8 @@ async function whatsAsena() {
       return message;
     },
     getMessage: async (key) => {
-      let jid = jidNormalizedUser(key.remoteJid);
-      let msg = await store.loadMessage(jid, key.id);
+      var jid = jidNormalizedUser(key.remoteJid);
+      var msg = await store.loadMessage(jid, key.id);
       return msg?.message || "";
     },
   });
@@ -192,12 +192,12 @@ async function whatsAsena() {
 
     console.log(chalk.blueBright.italic("⬇️ Installing External Plugins..."));
 
-    let plugins = await plugindb.PluginDB.findAll();
+    var plugins = await plugindb.PluginDB.findAll();
     plugins.map(async (plugin) => {
       try {
         if (!fs.existsSync("./plugins/" + plugin.dataValues.name + ".js")) {
           //console.log(plugin.dataValues.name);
-          let response = await got(plugin.dataValues.url);
+          var response = await got(plugin.dataValues.url);
           if (response.statusCode == 200) {
             fs.writeFileSync(
               "./plugins/" + plugin.dataValues.name + ".js",
@@ -240,7 +240,7 @@ async function whatsAsena() {
     }
 
     if (msg.messageStubType === 32 || msg.messageStubType === 28) {
-      let gb = await getMessage(msg.key.remoteJid, "goodbye");
+      var gb = await getMessage(msg.key.remoteJid, "goodbye");
       if (gb !== false) {
         await sock.sendMessage(msg.key.remoteJid, {
           text: gb.message,
@@ -248,7 +248,7 @@ async function whatsAsena() {
       }
       return;
     } else if (msg.messageStubType === 27 || msg.messageStubType === 31) {
-      let gb = await getMessage(msg.key.remoteJid);
+      var gb = await getMessage(msg.key.remoteJid);
       if (gb !== false) {
         await sock.sendMessage(msg.key.remoteJid, {
           text: gb.message,
@@ -258,7 +258,7 @@ async function whatsAsena() {
     }
 
     if (config.BLOCKCHAT !== false) {
-      let chats = config.BLOCKCHAT.split(",");
+      var chats = config.BLOCKCHAT.split(",");
       if (
         msg.key.remoteJid.endsWith("@g.us")
           ? chats.includes(msg.key.remoteJid.split("@")[0])
@@ -311,8 +311,8 @@ async function whatsAsena() {
           (command.pattern === undefined ||
             (command.pattern !== undefined && command.pattern.test(text_msg))))
       ) {
-        let sendMsg = false;
-        let chat = msg.key.remoteJid;
+        var sendMsg = false;
+        var chat = msg.key.remoteJid;
 
         if (
           (config.SUDO !== false &&
@@ -349,7 +349,7 @@ async function whatsAsena() {
             await sock.readMessages(msg.key);
           }
 
-          let match = text_msg.match(command.pattern);
+          var match = text_msg.match(command.pattern);
           if (
             command.on !== undefined &&
             (command.on === "image" || command.on === "photo") &&
