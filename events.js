@@ -6,8 +6,8 @@ you may not use this file except in compliance with the License.
 WhatsAsena - Yusuf Usta
 */
 
-var config = require('./config');
-var Commands = [];
+const config = require('./config');
+const Commands = [];
 
 String.prototype.format = function () {
     var i = 0, args = arguments;
@@ -30,9 +30,9 @@ String.prototype.format = function () {
  * @returns {Object} - The information object for the added command.
  */
 function addCommand(info, func) {
-  var types = ["photo", "image", "text", "message"];
+  let types = ["photo", "image", "text", "message"];
 
-  var infos = {
+  let infos = {
     fromMe: info["fromMe"] === undefined ? true : info["fromMe"],
     onlyGroup: info["onlyGroup"] === undefined ? false : info["onlyGroup"],
     onlyPm: info["onlyPm"] === undefined ? false : info["onlyPm"],
@@ -87,7 +87,7 @@ function addCommand(info, func) {
  * @returns {void}
  */
 function deleteCommand(pattern_toDel) {
-  var fnd = Commands.findIndex(
+  let fnd = Commands.findIndex(
     (obj) =>
       obj.pattern
         .toString()
