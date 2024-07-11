@@ -23,6 +23,7 @@
             "REMOVE_DESC": "Menghapus plugin.",
             "NEED_PLUGIN": "```Harap masukkan sebuah Plugin! Contoh: .plugin __test```",
             "NOT_FOUND_PLUGIN": "```Mungkin Anda telah menginstal plugin seperti itu, atau mungkin belum. Tapi itu pasti tidak sekarang.```",
+            "DUPLICATE": "*Plugin ini sudah terpasang!*",
             "DELETED": "*✅ Plugin berhasil dihapus! Anda harus memulai ulang agar perubahan diterapkan.*"
         },
         "admin": {
