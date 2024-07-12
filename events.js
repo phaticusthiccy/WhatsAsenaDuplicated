@@ -7,7 +7,7 @@ WhatsAsena - Yusuf Usta
 */
 
 const config = require('./config');
-const Commands = [];
+var Commands = [];
 
 String.prototype.format = function () {
     var i = 0, args = arguments;
