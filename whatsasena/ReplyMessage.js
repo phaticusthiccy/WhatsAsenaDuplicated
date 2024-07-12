@@ -63,8 +63,8 @@ class ReplyMessage extends Base {
         return new Message(this.client, message)
     }
 
-    async sendMessage(content, options) {
-        return await this.client.sendMessage(this.jid, content, options)
+    async sendMessage(jid, content, options) {
+        return await this.client.sendMessage(jid, content, options)
     }
 
     async sendTyping() {

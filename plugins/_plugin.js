@@ -6,7 +6,7 @@ const { PluginDB, installPlugin } = require('./sql/plugin');
 const Language = require('../language');
 const Lang = Language.getString('_plugin');
 
-Asena.addCommand({ pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, usage: '{}install https://gist.github.com/.../...' }, (async (message, match) => {
+Asena.addCommand({ pattern: 'install ?(.*)', fromMe: true, desc: Lang.INSTALL_DESC, usage: '{}install <gist_url>' }, (async (message, match) => {
 
 try {
   if (match[1] == '') return await message.client.sendMessage(message.jid, { text: Lang.NEED_URL + '.install https://gist.github.com/phaticusthiccy/4232b1c8c4734e1f06c3d991149c6fbd', edit: message.key });
@@ -67,7 +67,7 @@ Asena.addCommand({ pattern: 'plugin$', fromMe: true, desc: Lang.PLUGIN_DESC }, (
   }
 }));
 
-Asena.addCommand({ pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC, usage: '{}remove plugin_name' }, (async (message, match) => {
+Asena.addCommand({ pattern: 'remove(?: |$)(.*)', fromMe: true, desc: Lang.REMOVE_DESC, usage: '{}remove <plugin_name>' }, (async (message, match) => {
   if (match[1] === '') return await message.client.sendMessage(message.jid, { text: Lang.NEED_PLUGIN, edit: message.key });
   match[1] = match[1].startsWith('__') ? match[1] : '__' + match[1];
   try {

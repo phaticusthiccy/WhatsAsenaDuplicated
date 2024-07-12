@@ -23,6 +23,7 @@
             "REMOVE_DESC": "Plugin kaldırır.",
             "NEED_PLUGIN": "```Lütfen bir Plugin giriniz! Örnek: .plugin test```",
             "NOT_FOUND_PLUGIN": "```Böyle bir plugin belki yüklediniz, belki de yüklemediniz. Ama şu an olmadığı kesin.```",
+            "DUPLICATE": "*Bu eklenti zaten yüklü!*",
             "DELETED": "*✅ Modül başarıyla silindi!*"
         },
         "admin": {

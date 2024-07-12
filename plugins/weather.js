@@ -5,7 +5,7 @@ const Config = require('../config');
 const Language = require('../language');
 const Lang = Language.getString('weather');
 
-Asena.addCommand({ pattern: 'weather ?(.*)', fromMe: true, desc: Lang.WEATHER_DESC }, (async (message, match) => {
+Asena.addCommand({ pattern: 'weather ?(.*)', fromMe: true, desc: Lang.WEATHER_DESC, usage: '{}weather <city>' }, (async (message, match) => {
   if (match[1] === '') return await message.client.sendMessage(message.jid, { text: Lang.NEED_LOCATION, edit: message.key });
 	var url = `http://api.openweathermap.org/data/2.5/weather?q=${match[1]}&units=metric&appid=060a6bcfa19809c2cd4d97a212b19273&language=tr`;
 	try {
